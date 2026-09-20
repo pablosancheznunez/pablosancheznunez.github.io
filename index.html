@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pablo Sánchez-Núñez</title>
+<meta name="description" content="Pablo Sánchez-Núñez — Assistant Professor at Universidad Carlos III de Madrid. Visual communication, UX, digital marketing, informetrics and Open Science.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pablo Sánchez-Núñez">
+<meta property="og:description" content="Assistant Professor at Universidad Carlos III de Madrid, member of the OpenScienceLab research group.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23faf9f6'/%3E%3Ctext x='32' y='44' font-family='Georgia, serif' font-size='36' font-weight='600' fill='%237a5a3a' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf9f6;
+    --ink:#242320;
+    --ink-dim:#5b584f;
+    --muted:#918e83;
+    --hair:#e2dfd5;
+    --accent:#7a5a3a;
+    --side:min(6vw, 56px);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{ color:inherit; }
+  ::selection{ background:#e7ddc9; }
+
+  a:focus-visible,
+  button:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+  }
+
+  h1,h2,h3{
+    font-family:"Source Serif 4", Georgia, serif;
+    font-weight:600;
+    margin:0;
+  }
+
+  .wrap{
+    max-width:1040px;
+    margin:0 auto;
+    padding:0 var(--side);
+  }
+
+  /* ---------- top mark ---------- */
+  .mark{
+    padding:28px var(--side) 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1040px;
+    margin:0 auto;
+    font-size:14px;
+    color:var(--muted);
+  }
+  .mark .initials{
+    font-family:"Source Serif 4", serif;
+    font-weight:600;
+    color:var(--ink-dim);
+    font-size:15px;
+  }
+  .mark nav a{
+    text-decoration:none;
+    color:var(--muted);
+    margin-left:24px;
+  }
+  .mark nav a:hover{ color:var(--ink); }
+
+  /* ---------- hero ---------- */
+  .hero{ padding:56px 0 64px; }
+  .hero h1{
+    font-size:clamp(34px, 5vw, 48px);
+    line-height:1.15;
+  }
+  .hero p.role{
+    margin-top:18px;
+    max-width:52ch;
+    font-size:18px;
+    color:var(--ink-dim);
+  }
+  .hero p.role strong{
+    color:var(--ink);
+    font-weight:500;
+  }
+  .hero p.role a{
+    color:var(--ink);
+    text-decoration:underline;
+    text-decoration-color:var(--hair);
+    text-underline-offset:3px;
+  }
+  .hero p.role a:hover{
+    color:var(--accent);
+    text-decoration-color:var(--accent);
+  }
+
+  /* ---------- section shell ---------- */
+  section{
+    padding:48px 0;
+    border-top:1px solid var(--hair);
+  }
+  .section-label{
+    font-size:13px;
+    color:var(--muted);
+    margin:0 0 20px;
+  }
+  h3.section-label{ margin:0 0 16px; }
+
+  /* ---------- about ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 220px;
+    gap:56px;
+    align-items:start;
+  }
+  .about-grid p{
+    max-width:60ch;
+    color:var(--ink-dim);
+    font-size:17px;
+  }
+  .about-grid p + p{ margin-top:18px; }
+
+  .facts{
+    display:grid;
+    gap:18px;
+    padding-top:2px;
+  }
+  .facts dt{
+    font-size:13px;
+    color:var(--muted);
+  }
+  .facts dd{
+    margin:3px 0 0;
+    font-size:15px;
+    color:var(--ink);
+  }
+  .facts dd a{
+    color:var(--ink);
+    text-decoration:underline;
+    text-decoration-color:var(--hair);
+    text-underline-offset:3px;
+  }
+  .facts dd a:hover{
+    color:var(--accent);
+    text-decoration-color:var(--accent);
+  }
+
+  /* ---------- interests ---------- */
+  .interest-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .interest-list li{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:24px;
+    padding:18px 0;
+    border-top:1px solid var(--hair);
+  }
+  .interest-list li:last-child{ border-bottom:1px solid var(--hair); }
+  .interest-list h3{
+    font-size:18px;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .interest-list p{
+    margin:0;
+    color:var(--ink-dim);
+    max-width:52ch;
+    font-size:15.5px;
+  }
+
+  /* ---------- links ---------- */
+  .link-cols{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+  }
+  .link-cols ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .link-cols a{
+    display:block;
+    text-decoration:none;
+    padding:12px 0;
+    border-top:1px solid var(--hair);
+    font-size:16px;
+    color:var(--ink);
+  }
+  .link-cols ul li:last-child a{ border-bottom:1px solid var(--hair); }
+  .link-cols a:hover{ color:var(--accent); }
+
+  /* ---------- footer ---------- */
+  footer{
+    padding:32px var(--side) 48px;
+    max-width:1040px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    color:var(--muted);
+    font-size:13.5px;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  @media (max-width:700px){
+    .mark nav a{ margin-left:14px; }
+    .about-grid{ grid-template-columns:1fr; gap:28px; }
+    .facts{ border-top:1px solid var(--hair); padding-top:20px; grid-template-columns:1fr 1fr; }
+    .interest-list li{ grid-template-columns:1fr; gap:6px; }
+    .link-cols{ grid-template-columns:1fr; gap:32px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="mark">
+  <span class="initials">Pablo Sánchez-Núñez</span>
+</div>
+
+<main>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Hi, I'm Pablo.</h1>
+    <p class="role">
+      I currently work as an <strong>Assistant Professor</strong> at <a href="https://www.uc3m.es/Home" target="_blank" rel="noopener">Universidad Carlos III de Madrid</a>, and I'm a member of the <a href="https://opensciencelab.uc3m.es/" target="_blank" rel="noopener">OpenScienceLab</a> research group.
+    </p>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2 class="section-label">About</h2>
+      <p>
+        I'm interested in why people behave the way they do with digital products and
+        services, and in helping design better ones.
+      </p>
+      <p>
+        Outside work, I love travelling, meeting interesting people, and learning something
+        new every day. If you want to know me a little better: I make New Year's resolutions
+        I never keep, will always go out of my way for a good curry, and disappear into
+        nature whenever I get the chance.
+      </p>
+    </div>
+    <dl class="facts">
+      <div><dt>Institution</dt><dd>Universidad Carlos III de Madrid</dd></div>
+      <div><dt>Field</dt><dd>Library &amp; Information Science</dd></div>
+      <div><dt>Based in</dt><dd>Madrid, Spain</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="interests">
+  <div class="wrap">
+    <h2 class="section-label">Research interests</h2>
+    <ul class="interest-list">
+      <li>
+        <h3>Visual communication</h3>
+        <p>Shaping how people understand and remember things visually.</p>
+      </li>
+      <li>
+        <h3>User experience</h3>
+        <p>Designing digital interactions that respect people's time and attention.</p>
+      </li>
+      <li>
+        <h3>Digital marketing</h3>
+        <p>Communicating with audiences across digital channels.</p>
+      </li>
+      <li>
+        <h3>Informetrics</h3>
+        <p>Measuring how research moves, spreads, and gets used.</p>
+      </li>
+      <li>
+        <h3>Open Science</h3>
+        <p>Building infrastructure that makes research more transparent and trustworthy.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2 class="section-label">Get in touch</h2>
+    <div class="link-cols">
+      <div>
+        <h3 class="section-label">Academic</h3>
+        <ul>
+          <li><a href="https://orcid.org/0000-0001-7845-9506" target="_blank" rel="noopener">ORCID</a></li>
+          <li><a href="https://scholar.google.es/citations?hl=en&user=yJ1F5SoAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="https://github.com/pablosancheznunez" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="section-label">Contact</h3>
+        <ul>
+          <li><a href="mailto:psnunez@bib.uc3m.es">psnunez@bib.uc3m.es</a></li>
+          <li><a href="https://t.me/pablosancheznunez" target="_blank" rel="noopener">Telegram</a></li>
+          <li><a href="https://wa.me/pablosancheznunez" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span>Pablo Sánchez-Núñez, © <span id="year"></span></span>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
