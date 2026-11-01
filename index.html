@@ -10,6 +10,7 @@
 <meta property="og:title" content="Pablo Sánchez-Núñez">
 <meta property="og:description" content="Assistant Professor at Universidad Carlos III de Madrid, member of the OpenScienceLab research group.">
 <meta property="og:url" content="https://pablosancheznunez.com/">
+<meta property="og:site_name" content="Pablo Sánchez-Núñez">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#ffffff">
 <link rel="manifest" href="manifest.json">
@@ -150,6 +151,12 @@
   .plain-list{ list-style:none; padding-left:0; }
   .plain-list li{ margin-bottom:6px; }
 
+  .projects{ list-style:none; padding-left:0; }
+  .projects li{ margin-bottom:22px; }
+  .projects h3{ font-size:18px; margin:0 0 2px; }
+  .projects p{ margin:0 0 4px; color:var(--ink-dim); }
+  .project-links{ font-size:15px; }
+
   .contact-row{
     display:flex;
     align-items:center;
@@ -231,6 +238,26 @@
       </ul>
     </section>
 
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="projects">
+        <li>
+          <h3><a href="https://pablosancheznunez.com/ixd-lab/">IxD Lab</a></h3>
+          <p>An AI-powered learning and experimentation environment for interaction design: six hands-on labs that run in the browser. Open educational resource.</p>
+          <span class="project-links"><a href="https://pablosancheznunez.com/ixd-lab/">Open the labs</a> · <a href="https://github.com/pablosancheznunez/ixd-lab" target="_blank" rel="noopener">Source code</a></span>
+        </li>
+        <li>
+          <h3><a href="https://pablosancheznunez.com/uxlearn/">uxlearn</a></h3>
+          <p>An R package for learning user experience: usability metrics, simulated studies, case studies and a workbook.</p>
+          <span class="project-links"><a href="https://pablosancheznunez.com/uxlearn/">Documentation</a> · <a href="https://github.com/pablosancheznunez/uxlearn" target="_blank" rel="noopener">Source code</a></span>
+        </li>
+        <li>
+          <h3><a href="https://github.com/pablosancheznunez/repro2impact" target="_blank" rel="noopener">repro2impact</a></h3>
+          <p>Reproducibility indicators for measuring the academic and social impact of research. In development.</p>
+        </li>
+      </ul>
+    </section>
+
     <section id="contact">
       <h2>Get in touch</h2>
       <ul class="plain-list">
@@ -248,8 +275,11 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  // Remove the old offline cache, which kept showing visitors an outdated copy of this page.
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js').catch(() => {});
+    navigator.serviceWorker.getRegistrations().then((regs) => regs.forEach((r) => {
+      if (new URL(r.scope).pathname === '/') r.unregister();
+    })).catch(() => {});
   }
 
   const copyBtn = document.querySelector('.copy-btn');
