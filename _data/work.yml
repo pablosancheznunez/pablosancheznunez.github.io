@@ -4,13 +4,15 @@
 #
 # Fields: name, url (its website), desc (one or two sentences), repo (GitHub
 # repository name), install (R command, packages only), links (extra links),
-# doi (Zenodo DOI, optional).
+# doi (Zenodo DOI, optional), logo (only if it is not at <url>logo.svg, as
+# pkgdown publishes it).
 
 packages:
   - area: Research assessment and careers
     items:
       - name: metascience
         url: /metascience/
+        logo: /assets/logos/metascience.svg
         desc: Catalogue and shared infrastructure for these tools. Tool status, validation of DOI, ORCID iD and ROR identifiers, shared result statuses and provenance manifests.
         repo: metascience
       - name: ORMetrics
@@ -108,6 +110,7 @@ packages:
         doi: 10.5281/zenodo.23863529
       - name: IxD Lab
         url: /ixd-lab/
+        logo: /assets/logos/ixd-lab.svg
         desc: Fifteen hands-on interaction design labs in three modules that run in the browser, with an optional AI tutor. Open educational resource in English and Spanish.
         repo: ixd-lab
         doi: 10.5281/zenodo.23863524

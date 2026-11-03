@@ -40,7 +40,8 @@ layout: default
           {%- for p in g.items %}
           {%- assign install = p.install %}
           {%- unless install %}{% assign install = 'remotes::install_github("pablosancheznunez/' | append: p.repo | append: '")' %}{% endunless %}
-          <li class="item">
+          <li class="item has-logo">
+            <a class="logo" href="{{ p.url }}" tabindex="-1" aria-hidden="true"><img src="{% if p.logo %}{{ p.logo }}{% else %}{{ p.url }}logo.svg{% endif %}" alt="" width="60" height="70" loading="lazy"></a>
             <h4><a href="{{ p.url }}">{{ p.name }}</a></h4>
             <p>{{ p.desc }}</p>
             <p class="links">
