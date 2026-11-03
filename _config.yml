@@ -1,10 +1,10 @@
 # Site settings. The content of the home page lives in _data/work.yml.
 title: Pablo Sánchez-Núñez
+tagline: Assistant Professor, Universidad Carlos III de Madrid
 description: Assistant Professor at Universidad Carlos III de Madrid. Open tools for user experience, visual communication, digital marketing, informetrics and Open Science.
 url: https://pablosancheznunez.com
 lang: en_GB
 logo: /icon-512.png
-image: /og-image.png
 
 author:
   name: Pablo Sánchez-Núñez
@@ -26,3 +26,13 @@ plugins:
 exclude:
   - README.md
   - .github
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /og-image.png
+        width: 1200
+        height: 630
+        alt: Pablo Sánchez-Núñez, Assistant Professor at Universidad Carlos III de Madrid
