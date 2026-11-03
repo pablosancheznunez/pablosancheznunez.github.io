@@ -1,473 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/consent.js"></script>
-<title>Pablo Sánchez-Núñez</title>
-<link rel="canonical" href="https://pablosancheznunez.com/">
-<meta name="description" content="Pablo Sánchez-Núñez — Assistant Professor at Universidad Carlos III de Madrid. Visual communication, UX, digital marketing, informetrics and Open Science.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Pablo Sánchez-Núñez">
-<meta property="og:description" content="Assistant Professor at Universidad Carlos III de Madrid, member of the OpenScienceLab research group.">
-<meta property="og:url" content="https://pablosancheznunez.com/">
-<meta property="og:site_name" content="Pablo Sánchez-Núñez">
-<meta property="og:image" content="https://pablosancheznunez.com/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Pablo Sánchez-Núñez, Assistant Professor at Universidad Carlos III de Madrid">
-<meta property="og:locale" content="en_GB">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
-<link rel="manifest" href="manifest.json">
-<link rel="icon" href="/favicon.ico" sizes="48x48">
-<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Pablo Sánchez-Núñez",
-  "url": "https://pablosancheznunez.com/",
-  "jobTitle": "Assistant Professor",
-  "worksFor": {
-    "@type": "CollegeOrUniversity",
-    "name": "Universidad Carlos III de Madrid",
-    "url": "https://www.uc3m.es/Home"
-  },
-  "memberOf": {
-    "@type": "Organization",
-    "name": "OpenScienceLab",
-    "url": "https://opensciencelab.uc3m.es/"
-  },
-  "email": "mailto:psnunez@bib.uc3m.es",
-  "sameAs": [
-    "https://orcid.org/0000-0001-7845-9506",
-    "https://github.com/pablosancheznunez"
-  ],
-  "knowsAbout": ["User experience", "Interaction design", "Visual communication", "Digital marketing", "Informetrics", "Open Science"]
-}
-</script>
-<style>
-  :root{
-    --bg:#ffffff;
-    --ink:#1a1a1a;
-    --ink-dim:#444444;
-    --muted:#6b6b6b;
-    --hair:#dddddd;
-    --link:#1a4d8f;
-    --link-visited:#5b3a91;
-    --selection:#cfe0f5;
-    --font:Georgia, "Times New Roman", Times, serif;
-    color-scheme:light dark;
-  }
-
-  @media (prefers-color-scheme: dark){
-    :root{
-      --bg:#111111;
-      --ink:#eaeaea;
-      --ink-dim:#c2c2c2;
-      --muted:#9a9a9a;
-      --hair:#333333;
-      --link:#7fb0e8;
-      --link-visited:#b79ce0;
-      --selection:#2a4a73;
-    }
-  }
-
-  @media (prefers-contrast: more){
-    :root{ --ink-dim:var(--ink); --muted:var(--ink); --hair:currentColor; }
-  }
-
-  *{ box-sizing:border-box; }
-
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:var(--font);
-    font-size:18px;
-    line-height:1.6;
-    font-variant-numeric:oldstyle-nums;
-    hyphens:auto;
-  }
-
-  a{
-    color:var(--link);
-    text-underline-offset:2px;
-    text-decoration-thickness:1px;
-  }
-  a:visited{ color:var(--link-visited); }
-  a:hover{ text-decoration-thickness:2px; }
-  ::selection{ background:var(--selection); }
-  .visually-hidden{
-    position:absolute; width:1px; height:1px; overflow:hidden;
-    clip:rect(0 0 0 0); white-space:nowrap;
-  }
-
-  a:focus-visible, button:focus-visible{
-    outline:2px solid var(--link);
-    outline-offset:2px;
-  }
-
-  .skip-link{
-    position:absolute;
-    left:-9999px;
-    top:0;
-    background:var(--ink);
-    color:var(--bg);
-    padding:8px 14px;
-    z-index:10;
-    text-decoration:none;
-    font-size:14px;
-  }
-  .skip-link:focus{ left:12px; top:12px; }
-
-  .wrap{
-    max-width:640px;
-    margin:0 auto;
-    padding:56px 24px 72px;
-  }
-
-  h1{
-    font-size:28px;
-    margin:0 0 6px;
-  }
-
-  .masthead p{
-    margin:2px 0;
-    color:var(--ink-dim);
-    font-size:16px;
-  }
-  .masthead{ margin-bottom:48px; }
-  .orcid-line{
-    display:flex;
-    align-items:center;
-    gap:6px;
-  }
-  .orcid-line svg{ flex-shrink:0; }
-
-  h2{
-    font-size:20px;
-    margin:0 0 16px;
-    padding-top:56px;
-    border-top:1px solid var(--hair);
-  }
-
-  section{ margin-top:0; }
-  section:first-of-type h2{ border-top:none; padding-top:0; }
-
-  p{ margin:0 0 16px; max-width:60ch; widows:2; orphans:2; }
-
-  ul{ margin:0 0 16px; padding-left:24px; list-style:disc; }
-  li{ margin-bottom:9px; }
-  li::marker{ color:var(--muted); }
-  li:last-child{ margin-bottom:0; }
-
-  .plain-list{ list-style:none; padding-left:0; }
-  .plain-list li{ margin-bottom:6px; }
-
-  .projects{ list-style:none; padding-left:0; }
-  .projects li{ margin-bottom:22px; }
-  .projects h4{ font-size:18px; margin:0 0 2px; }
-  h3.group{
-    font-size:14px;
-    font-weight:normal;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-    color:var(--muted);
-    margin:32px 0 12px;
-  }
-  h2 + h3.group, .section-intro + h3.group{ margin-top:8px; }
-  .section-intro{ color:var(--ink-dim); }
-  .projects p{ margin:0 0 4px; color:var(--ink-dim); }
-  .project-links{ font-size:15px; }
-
-  .contact-row{
-    display:flex;
-    align-items:center;
-    gap:12px;
-  }
-  .contact-text{ color:var(--ink); }
-  .copy-btn{
-    background:none;
-    border:1px solid var(--hair);
-    border-radius:3px;
-    padding:2px 10px;
-    font-size:13px;
-    font-family:var(--font);
-    color:var(--muted);
-    cursor:pointer;
-    line-height:1.4;
-  }
-  .copy-btn:hover{ color:var(--link); border-color:var(--link); }
-
-  footer{
-    margin-top:56px;
-    padding-top:24px;
-    border-top:1px solid var(--hair);
-    color:var(--muted);
-    font-size:14px;
-  }
-
-  @media print{
-    a{ color:#000; }
-    a[href^="http"]::after, a[href^="mailto"]::after{
-      content:" (" attr(href) ")";
-      font-size:12px;
-      color:#555;
-    }
-  }
-</style>
-</head>
-<body>
-
-<a href="#main" class="skip-link">Skip to content</a>
-
-<div class="wrap">
-
+---
+layout: default
+redirect_from:
+  - /r-packages/
+---
+{%- assign gh = "https://github.com/" | append: site.author.github -%}
+{%- assign n = 0 -%}{%- for g in site.data.work.packages -%}{%- assign n = n | plus: g.items.size -%}{%- endfor -%}
   <header class="masthead">
     <h1>Pablo Sánchez-Núñez</h1>
-    <p>Assistant Professor</p>
-    <p><a href="https://opensciencelab.uc3m.es/" target="_blank" rel="noopener">OpenScienceLab</a> research group, Library and Information Science Department</p>
-    <p>Universidad Carlos III de Madrid</p>
-    <p class="orcid-line">
-      <svg width="16" height="16" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="128" fill="#A6CE39"/><path fill="#ffffff" d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7 0-21.5-13.7-39.7-43.7-39.7h-23.7v79.4zM78.6 58.4a9.9 9.9 0 1 1 0-19.8 9.9 9.9 0 0 1 0 19.8z"/></svg>
-      <a href="https://orcid.org/0000-0001-7845-9506" target="_blank" rel="noopener me">orcid.org/0000-0001-7845-9506</a>
-    </p>
+    <p class="role">Assistant Professor · <a href="https://opensciencelab.uc3m.es/">OpenScienceLab</a>, Library and Information Science Department, Universidad Carlos III de Madrid</p>
+    <nav class="quick" aria-label="On this page">
+      <a href="#software">R packages</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="https://orcid.org/{{ site.author.orcid }}" rel="me">ORCID</a>
+      <a href="{{ gh }}" rel="me">GitHub</a>
+    </nav>
   </header>
 
   <main id="main">
 
     <section id="about">
-      <h2>About</h2>
-      <p>
-        I'm interested in how people behave when using digital products and services, and
-        how we can make them better.
-      </p>
-      <p>
-        Outside academia, you should know that I love travelling, meeting interesting
-        people, and learning something new every day. I make New Year's resolutions I
-        never keep, always go out of my way for a good curry, and disappear into nature
-        whenever I get the chance.
-      </p>
-    </section>
-
-    <section id="interests">
-      <h2>Research interests</h2>
-      <ul>
-        <li><strong>Visual communication</strong> — how visual choices shape understanding.</li>
-        <li><strong>User experience</strong> — designing digital interactions that respect people's time and attention.</li>
-        <li><strong>Digital marketing</strong> — how organisations communicate with audiences online.</li>
-        <li><strong>Informetrics</strong> — measuring how information moves, spreads and gets used, in academic research and beyond.</li>
-        <li><strong>Open Science</strong> — building infrastructure that makes research more transparent and trustworthy.</li>
-      </ul>
+      <p class="lede">I study how people behave when they use digital products and services, and how to make them better. I build open, documented tools so that others can check, reuse and extend that work.</p>
+      <p class="interests"><span class="label">Research interests</span> Visual communication · User experience · Digital marketing · Informetrics · Open Science</p>
+      <p>Outside academia I love travelling, meeting interesting people and learning something new every day. I make New Year's resolutions I never keep, always go out of my way for a good curry, and disappear into nature whenever I can.</p>
     </section>
 
     <section id="software">
-      <h2>R packages</h2>
-      <p class="section-intro">Open-source R packages for research and teaching. Each has its documentation website with worked examples. <a href="/r-packages/">All packages on one page, with install commands</a>.</p>
-      <h3 class="group">Digital marketing and consumer research</h3>
-      <ul class="projects">
-        <li>
-          <h4><a href="https://pablosancheznunez.com/abfunnel/">abfunnel</a></h4>
-          <p>Design, check and analyse digital marketing experiments (A/B tests) and conversion funnels to research standards: sample size, pre-registration, sample ratio checks and effects with confidence intervals.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/abfunnel/">Documentation</a> · <a href="https://pablosancheznunez.com/abfunnel/example/report.html">Example report</a> · <a href="https://github.com/pablosancheznunez/abfunnel" target="_blank" rel="noopener">Source code</a></span>
-        </li>
-        <li>
-          <h4><a href="https://pablosancheznunez.com/visualbrief/">visualbrief</a></h4>
-          <p>Turn digital campaign data into clear, reusable visual reports: comparisons across audiences with confidence intervals, accessible branded charts and a self-contained report to share.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/visualbrief/">Documentation</a> · <a href="https://pablosancheznunez.com/visualbrief/example/report.html">Example report</a> · <a href="https://github.com/pablosancheznunez/visualbrief" target="_blank" rel="noopener">Source code</a></span>
-        </li>
-        <li>
-          <h4><a href="https://pablosancheznunez.com/neuroconsumer/">neuroconsumer</a></h4>
-          <p>Build the visual stimuli of advertising and consumer experiments from code: declared factors, conditions verified to differ only where intended, deterministic SVG/PNG output and Areas of Interest for eye tracking.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/neuroconsumer/">Documentation</a> · <a href="https://pablosancheznunez.com/neuroconsumer/example/">Example stimulus pack</a> · <a href="https://github.com/pablosancheznunez/neuroconsumer" target="_blank" rel="noopener">Source code</a></span>
-        </li>
-      </ul>
-      <h3 class="group">User experience</h3>
-      <ul class="projects">
-        <li>
-          <h4><a href="https://pablosancheznunez.com/uxlearn/">uxlearn</a></h4>
-          <p>Learn and teach user experience research: usability metrics, simulated usability studies, case studies and a workbook.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/uxlearn/">Documentation</a> · <a href="https://github.com/pablosancheznunez/uxlearn" target="_blank" rel="noopener">Source code</a> · <a href="https://doi.org/10.5281/zenodo.23863529" target="_blank" rel="noopener">DOI</a></span>
-        </li>
-      </ul>
-      <h3 class="group">Science communication</h3>
-      <ul class="projects">
-        <li>
-          <h4><a href="https://pablosancheznunez.com/scicomm/">scicomm</a></h4>
-          <p>Check how a scientific result is communicated to specialists, students and the public: what each version keeps, loses or overstates, with clarity, accessibility and uncertainty indicators in English and Spanish.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/scicomm/">Documentation</a> · <a href="https://pablosancheznunez.com/scicomm/example/report.html">Example report</a> · <a href="https://github.com/pablosancheznunez/scicomm" target="_blank" rel="noopener">Source code</a></span>
-        </li>
-      </ul>
-      <h3 class="group">Photography and visual heritage</h3>
-      <ul class="projects">
-        <li>
-          <h4><a href="https://pablosancheznunez.com/photoarchive/">photoarchive</a></h4>
-          <p>Bring photographs from any digital archive into one table, through IIIF, OAI-PMH, museum APIs, Wikidata, any website or your own folders, with every description, caption and jury comment. Analyse them without downloading them: collections and processes over time, photographers, rights, quality, composition, saliency, colour, tone and texts, with results exported to CSV.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/photoarchive/">Documentation</a> · <a href="https://pablosancheznunez.com/photoarchive/example/report.html">Example report</a> · <a href="https://github.com/pablosancheznunez/photoarchive" target="_blank" rel="noopener">Source code</a></span>
-        </li>
-      </ul>
-      <h3 class="group">Research integrity and assessment</h3>
-      <ul class="projects">
-        <li>
-          <h4><a href="https://pablosancheznunez.com/aitrail/">aitrail</a></h4>
-          <p>Document, verify and disclose the use of AI in research: a log of AI use in each phase of a project, human verification, an audit of oversight gaps, reference checks and disclosure statements in English and Spanish.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/aitrail/">Documentation</a> · <a href="https://pablosancheznunez.com/aitrail/example/report.html">Example report</a> · <a href="https://github.com/pablosancheznunez/aitrail" target="_blank" rel="noopener">Source code</a></span>
-        </li>
-        <li>
-          <h4><a href="https://pablosancheznunez.com/reproimage/">reproimage</a></h4>
-          <p>Integrity, provenance and reproducibility checks for scientific images, in R and Python: finds identical and similar images, including rotated and flipped copies, and records provenance.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/reproimage/">Documentation and example report</a> · <a href="https://github.com/pablosancheznunez/reproimage" target="_blank" rel="noopener">Source code</a> · <a href="https://doi.org/10.5281/zenodo.23881635" target="_blank" rel="noopener">DOI</a></span>
-        </li>
-        <li>
-          <h4><a href="https://pablosancheznunez.com/narrative-cv-crosswalk/r/">narrativecv</a></h4>
-          <p>Map narrative CV sections (Résumé for Researchers, the Spanish CVA) to the evidence ORCID, OpenAlex, DataCite and OpenAIRE hold about a researcher. The R companion of the Narrative CV Crosswalk.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/narrative-cv-crosswalk/r/">Documentation</a> · <a href="https://github.com/pablosancheznunez/narrative-cv-crosswalk" target="_blank" rel="noopener">Source code</a> · <a href="https://doi.org/10.5281/zenodo.23881631" target="_blank" rel="noopener">DOI</a></span>
-        </li>
-        <li>
-          <h4><a href="https://pablosancheznunez.com/academiccareer/">academiccareer</a></h4>
-          <p>Describe how a research career develops over time across outputs, software, data, funding, teaching, supervision, service and knowledge transfer, from ORCID, OpenAlex and DataCite and evidence declared by the researcher. Descriptive profiles, with no ranking or scores.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/academiccareer/">Documentation</a> · <a href="https://pablosancheznunez.com/academiccareer/example/report.html">Example report</a> · <a href="https://github.com/pablosancheznunez/academiccareer" target="_blank" rel="noopener">Source code</a></span>
-        </li>
-        <li>
-          <h4><a href="https://pablosancheznunez.com/reproducibility/">reproducibility</a></h4>
-          <p>Audit the reproducibility of research projects and articles: a checklist with evidence for project directories, transparency detectors for full texts, project templates and a GitHub Action.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/reproducibility/">Documentation</a> · <a href="https://github.com/pablosancheznunez/reproducibility" target="_blank" rel="noopener">Source code</a></span>
-        </li>
-        <li>
-          <h4><a href="https://pablosancheznunez.com/FoSci/">FoSci</a></h4>
-          <p>Forensic scientometrics: integrity signals in publication data, such as retractions, citation stacking and tortured phrases, each with its evidence level and alternative explanations. Never accusations or rankings of people.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/FoSci/">Documentation</a> · <a href="https://github.com/pablosancheznunez/FoSci" target="_blank" rel="noopener">Source code</a></span>
-        </li>
-        <li>
-          <h4><a href="https://pablosancheznunez.com/AIRes/">AIRes</a></h4>
-          <p>Declared use of AI in research: AI-use disclosures in articles and the coding of journal and institutional AI policies. It measures what is declared and never infers AI authorship.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/AIRes/">Documentation</a> · <a href="https://github.com/pablosancheznunez/AIRes" target="_blank" rel="noopener">Source code</a></span>
-        </li>
-        <li>
-          <h4><a href="https://pablosancheznunez.com/openresearchmetrics/r/">ORMetrics</a></h4>
-          <p>Transparent open science indicators for responsible research assessment, from open sources; each indicator stands alone, with no composite score. The R companion of OpenResearchMetrics.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/openresearchmetrics/r/">Documentation</a> · <a href="https://github.com/pablosancheznunez/openresearchmetrics" target="_blank" rel="noopener">Source code</a></span>
-        </li>
-        <li>
-          <h4><a href="https://pablosancheznunez.com/metascience/">metascience</a></h4>
-          <p>Catalogue and shared infrastructure for these tools: status of each tool, validation of DOI, ORCID iD and ROR identifiers, shared result statuses and provenance manifests.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/metascience/">Documentation</a> · <a href="https://github.com/pablosancheznunez/metascience" target="_blank" rel="noopener">Source code</a></span>
-        </li>
-      </ul>
+      <div class="section-head">
+        <h2>R packages</h2>
+        <span class="count" id="count" aria-live="polite">{{ n }} packages</span>
+      </div>
+      <p class="section-intro">Open source, MIT-licensed, each with its own website and worked examples. Install with <code>remotes</code>.</p>
+      <label class="visually-hidden" for="filter">Filter packages</label>
+      <input id="filter" class="filter" type="search" placeholder="Filter: ORCID, images, A/B tests, eye tracking…" autocomplete="off">
+
+      {%- for g in site.data.work.packages %}
+      <div class="group">
+        <h3>{{ g.area }}</h3>
+        <ul class="items">
+          {%- for p in g.items %}
+          {%- assign install = p.install %}
+          {%- unless install %}{% assign install = 'remotes::install_github("pablosancheznunez/' | append: p.repo | append: '")' %}{% endunless %}
+          <li class="item">
+            <h4><a href="{{ p.url }}">{{ p.name }}</a></h4>
+            <p>{{ p.desc }}</p>
+            <p class="links">
+              <a href="{{ p.url }}">Website</a>
+              {%- for l in p.links %}<a href="{{ l.url }}">{{ l.text }}</a>{% endfor -%}
+              <a href="{{ gh }}/{{ p.repo }}">Code</a>
+              {%- if p.doi %}<a href="https://doi.org/{{ p.doi }}">DOI</a>{% endif -%}
+            </p>
+            <div class="install"><code>{{ install }}</code><button type="button" class="copy-btn" data-copy="{{ install | escape }}">Copy</button></div>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+      <p class="empty" id="empty" hidden>No package matches that filter.</p>
     </section>
 
     <section id="projects">
-      <h2>Other projects</h2>
-      <h3 class="group">Web tools</h3>
-      <ul class="projects">
-        <li>
-          <h4><a href="https://pablosancheznunez.com/narrative-cv-crosswalk/">Narrative CV Crosswalk</a></h4>
-          <p>An open, versioned map between narrative CV sections and the evidence held in open research infrastructures. Enter an ORCID iD and see what each section can draw on.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/narrative-cv-crosswalk/">Try it with an ORCID iD</a> · <a href="https://github.com/pablosancheznunez/narrative-cv-crosswalk" target="_blank" rel="noopener">Data and code</a> · <a href="https://doi.org/10.5281/zenodo.23881631" target="_blank" rel="noopener">DOI</a></span>
+      <h2>Projects, web tools and data</h2>
+      <ul class="items">
+        {%- for p in site.data.work.projects %}
+        <li class="item">
+          <h4><a href="{{ p.url }}">{{ p.name }}</a> <span class="kind">{{ p.kind }}</span></h4>
+          <p>{{ p.desc }}</p>
+          <p class="links">
+            <a href="{{ p.url }}">{% if p.kind == "Web tool" %}Try it{% else %}Website{% endif %}</a>
+            {%- unless p.url contains "github.com" %}<a href="{{ gh }}/{{ p.repo }}">Code</a>{% endunless -%}
+            {%- if p.doi %}<a href="https://doi.org/{{ p.doi }}">DOI</a>{% endif -%}
+          </p>
         </li>
-        <li>
-          <h4><a href="https://pablosancheznunez.com/openresearchmetrics/">OpenResearchMetrics</a></h4>
-          <p>Transparent open science indicators for responsible research assessment. Each indicator stands alone, with its evidence and limits; there is no composite score.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/openresearchmetrics/">Try it with an ORCID iD</a> · <a href="https://github.com/pablosancheznunez/openresearchmetrics" target="_blank" rel="noopener">Source code</a> · <a href="https://doi.org/10.5281/zenodo.23881633" target="_blank" rel="noopener">DOI</a></span>
-        </li>
-      </ul>
-      <h3 class="group">Teaching resources and open data</h3>
-      <ul class="projects">
-        <li>
-          <h4><a href="https://pablosancheznunez.com/ixd-lab/">IxD Lab</a></h4>
-          <p>A learning and experimentation environment for interaction design: fifteen hands-on labs in three modules that run in the browser, with an optional AI tutor. Open educational resource, in English and Spanish.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/ixd-lab/">Open the labs</a> · <a href="https://github.com/pablosancheznunez/ixd-lab" target="_blank" rel="noopener">Source code</a></span>
-        </li>
-        <li>
-          <h4><a href="https://pablosancheznunez.com/synthviscom/">SynthVisCom</a></h4>
-          <p>A synthetic dataset for visual communication education and research: 2,000 designs with their images, 1,000 fictitious participants and 20,000 simulated responses, with known generating effects.</p>
-          <span class="project-links"><a href="https://pablosancheznunez.com/synthviscom/">Website and explorer</a> · <a href="https://github.com/pablosancheznunez/synthviscom" target="_blank" rel="noopener">Data and code</a> · <a href="https://doi.org/10.5281/zenodo.23876696" target="_blank" rel="noopener">DOI</a></span>
-        </li>
-      </ul>
-      <h3 class="group">Research projects and infrastructure</h3>
-      <ul class="projects">
-        <li>
-          <h4><a href="https://github.com/pablosancheznunez/repro2impact" target="_blank" rel="noopener">REPRO2IMPACT</a></h4>
-          <p>Research project on reproducibility indicators for measuring the academic and social impact of research. Its open outputs include OpenResearchMetrics, ReproImage and the Narrative CV Crosswalk.</p>
-          <span class="project-links"><a href="https://github.com/pablosancheznunez/repro2impact" target="_blank" rel="noopener">Project page</a></span>
-        </li>
-        <li>
-          <h4><a href="https://github.com/pablosancheznunez/research-tools-ops" target="_blank" rel="noopener">research-tools-ops</a></h4>
-          <p>The shared, automated maintenance that keeps these tools working with minimal human time, while scientific changes always wait for review.</p>
-          <span class="project-links"><a href="https://github.com/pablosancheznunez/research-tools-ops" target="_blank" rel="noopener">Source code</a> · <a href="https://doi.org/10.5281/zenodo.23881629" target="_blank" rel="noopener">DOI</a></span>
-        </li>
+        {%- endfor %}
       </ul>
     </section>
 
     <section id="contact">
       <h2>Get in touch</h2>
-      <ul class="plain-list">
-        <li><span class="contact-row"><span class="contact-text">Email — <a href="mailto:psnunez@bib.uc3m.es">psnunez@bib.uc3m.es</a></span><button type="button" class="copy-btn" data-copy="psnunez@bib.uc3m.es" aria-label="Copy email address">Copy</button><span class="visually-hidden" role="status" id="copy-status"></span></span></li>
-      </ul>
+      <p class="contact-row">
+        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+        <button type="button" class="copy-btn" data-copy="{{ site.author.email }}" aria-label="Copy email address">Copy</button>
+      </p>
+      <p class="muted">Questions or suggestions about a tool are welcome as issues in its repository.</p>
     </section>
 
   </main>
-
-  <footer>
-    Pablo Sánchez-Núñez, © <span id="year"></span> · <button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button> · <a href="/cookies.html">Cookie policy</a>
-  </footer>
-
-</div>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  // Remove the old offline cache, which kept showing visitors an outdated copy of this page.
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then((regs) => regs.forEach((r) => {
-      if (new URL(r.scope).pathname === '/') r.unregister();
-    })).catch(() => {});
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}/",
+    "jobTitle": "Assistant Professor",
+    "worksFor": { "@type": "CollegeOrUniversity", "name": "Universidad Carlos III de Madrid", "url": "https://www.uc3m.es/Home" },
+    "memberOf": { "@type": "Organization", "name": "OpenScienceLab", "url": "https://opensciencelab.uc3m.es/" },
+    "email": "mailto:{{ site.author.email }}",
+    "sameAs": ["https://orcid.org/{{ site.author.orcid }}", "{{ gh }}"],
+    "knowsAbout": ["User experience", "Interaction design", "Visual communication", "Digital marketing", "Informetrics", "Open Science"]
   }
-
-  const copyBtn = document.querySelector('.copy-btn');
-  if (copyBtn) {
-    copyBtn.addEventListener('click', async () => {
-      const text = copyBtn.getAttribute('data-copy');
-      let copied = false;
-
-      if (navigator.clipboard && window.isSecureContext) {
-        try {
-          await navigator.clipboard.writeText(text);
-          copied = true;
-        } catch (err) {
-          copied = false;
-        }
-      }
-
-      if (!copied) {
-        const helper = document.createElement('textarea');
-        helper.value = text;
-        helper.style.position = 'fixed';
-        helper.style.opacity = '0';
-        document.body.appendChild(helper);
-        helper.select();
-        try {
-          copied = document.execCommand('copy');
-        } catch (err) {
-          copied = false;
-        }
-        document.body.removeChild(helper);
-      }
-
-      const original = copyBtn.textContent;
-      copyBtn.textContent = copied ? 'Copied!' : 'Select & copy';
-      const status = document.getElementById('copy-status');
-      if (status) status.textContent = copied ? 'Email address copied' : 'Could not copy; select the address and copy it';
-      setTimeout(() => {
-        copyBtn.textContent = original;
-        if (status) status.textContent = '';
-      }, 1600);
-    });
-  }
-</script>
-
-</body>
-</html>
+  </script>

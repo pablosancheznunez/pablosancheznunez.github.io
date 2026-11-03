@@ -1,0 +1,142 @@
+# Everything listed on the home page. To add a package or project, copy an
+# entry, change the fields and push: the page, the filter and the install
+# commands update themselves.
+#
+# Fields: name, url (its website), desc (one or two sentences), repo (GitHub
+# repository name), install (R command, packages only), links (extra links),
+# doi (Zenodo DOI, optional).
+
+packages:
+  - area: Research assessment and careers
+    items:
+      - name: metascience
+        url: /metascience/
+        desc: Catalogue and shared infrastructure for these tools. Tool status, validation of DOI, ORCID iD and ROR identifiers, shared result statuses and provenance manifests.
+        repo: metascience
+      - name: ORMetrics
+        url: /openresearchmetrics/r/
+        desc: Transparent open science indicators for responsible research assessment. Each indicator stands alone, with its evidence and limits; no composite score.
+        repo: openresearchmetrics
+        install: 'remotes::install_github("pablosancheznunez/openresearchmetrics", subdir = "r")'
+        links:
+          - { text: Web tool, url: /openresearchmetrics/ }
+        doi: 10.5281/zenodo.23881633
+      - name: narrativecv
+        url: /narrative-cv-crosswalk/r/
+        desc: Maps narrative CV sections (Résumé for Researchers, the Spanish CVA) to the evidence held in ORCID, OpenAlex, DataCite and OpenAIRE.
+        repo: narrative-cv-crosswalk
+        install: 'remotes::install_github("pablosancheznunez/narrative-cv-crosswalk", subdir = "r")'
+        links:
+          - { text: Web tool, url: /narrative-cv-crosswalk/ }
+        doi: 10.5281/zenodo.23881631
+      - name: academiccareer
+        url: /academiccareer/
+        desc: Descriptive, evidence-based profiles of academic careers across outputs, software, data, teaching, transfer and service, from ORCID, OpenAlex and DataCite. No rankings or scores.
+        repo: academiccareer
+        links:
+          - { text: Example report, url: /academiccareer/example/report.html }
+
+  - area: Integrity, reproducibility and AI use
+    items:
+      - name: reproducibility
+        url: /reproducibility/
+        desc: Audits the reproducibility of research projects and articles. A checklist with evidence, transparency detectors for full texts, project templates and a GitHub Action.
+        repo: reproducibility
+      - name: reproimage
+        url: /reproimage/
+        desc: Integrity, provenance and reproducibility checks for scientific images, in R and Python. Finds identical and similar images, including rotated and flipped copies.
+        repo: reproimage
+        install: 'remotes::install_github("pablosancheznunez/reproimage", subdir = "r")'
+        doi: 10.5281/zenodo.23881635
+      - name: FoSci
+        url: /FoSci/
+        desc: Forensic scientometrics. Integrity signals in publication data, each with its evidence level and alternative explanations; never accusations or rankings of people.
+        repo: FoSci
+      - name: AIRes
+        url: /AIRes/
+        desc: Declared use of AI in research. AI-use disclosures in articles and the coding of journal and institutional AI policies; never infers AI authorship.
+        repo: AIRes
+      - name: aitrail
+        url: /aitrail/
+        desc: Document, verify and disclose the use of AI in research. An AI-use log by project phase, human verification, reference checks and disclosure statements in English and Spanish.
+        repo: aitrail
+        links:
+          - { text: Example report, url: /aitrail/example/report.html }
+
+  - area: Science communication and visual archives
+    items:
+      - name: scicomm
+        url: /scicomm/
+        desc: Checks how a scientific result is communicated to specialists, students and the public, with clarity, accessibility and uncertainty indicators in English and Spanish.
+        repo: scicomm
+        links:
+          - { text: Example report, url: /scicomm/example/report.html }
+      - name: photoarchive
+        url: /photoarchive/
+        desc: Photographs from any digital archive (IIIF, OAI-PMH, museum APIs, Wikidata, IPTC/XMP) in one table, analysed for collections, quality, composition, colour, tone and texts.
+        repo: photoarchive
+        links:
+          - { text: Example report, url: /photoarchive/example/report.html }
+
+  - area: Digital marketing and consumer research
+    items:
+      - name: abfunnel
+        url: /abfunnel/
+        desc: Design, check and analyse A/B tests and conversion funnels. Sample size, pre-registration, sample ratio checks and effects with confidence intervals.
+        repo: abfunnel
+        links:
+          - { text: Example report, url: /abfunnel/example/report.html }
+      - name: visualbrief
+        url: /visualbrief/
+        desc: Turns campaign data into clear, reusable visual reports, with comparisons across audiences, confidence intervals and accessible branded charts.
+        repo: visualbrief
+        links:
+          - { text: Example report, url: /visualbrief/example/report.html }
+      - name: neuroconsumer
+        url: /neuroconsumer/
+        desc: Controlled visual stimuli for advertising and consumer experiments. Declared factors, verified invariants, deterministic SVG/PNG output and Areas of Interest for eye tracking.
+        repo: neuroconsumer
+        links:
+          - { text: Example stimuli, url: /neuroconsumer/example/ }
+
+  - area: UX and interaction design education
+    items:
+      - name: uxlearn
+        url: /uxlearn/
+        desc: Learn and teach user experience research. Usability metrics, simulated usability studies, case studies and a workbook.
+        repo: uxlearn
+        doi: 10.5281/zenodo.23863529
+      - name: IxD Lab
+        url: /ixd-lab/
+        desc: Fifteen hands-on interaction design labs in three modules that run in the browser, with an optional AI tutor. Open educational resource in English and Spanish.
+        repo: ixd-lab
+        doi: 10.5281/zenodo.23863524
+
+projects:
+  - name: OpenResearchMetrics
+    kind: Web tool
+    url: /openresearchmetrics/
+    desc: Open science indicators for any ORCID iD, each with its evidence and limits.
+    repo: openresearchmetrics
+  - name: Narrative CV Crosswalk
+    kind: Web tool
+    url: /narrative-cv-crosswalk/
+    desc: See which narrative CV sections the open record of an ORCID iD can support.
+    repo: narrative-cv-crosswalk
+  - name: SynthVisCom
+    kind: Open data
+    url: /synthviscom/
+    desc: 2,000 designs, 1,000 fictitious participants and 20,000 simulated responses with known effects, for teaching and research.
+    repo: synthviscom
+    doi: 10.5281/zenodo.23876696
+  - name: REPRO2IMPACT
+    kind: Research project
+    url: /repro2impact/
+    desc: Reproducibility indicators for measuring the academic and social impact of research.
+    repo: repro2impact
+  - name: research-tools-ops
+    kind: Infrastructure
+    url: https://github.com/pablosancheznunez/research-tools-ops
+    desc: Shared, automated maintenance that keeps every tool here working; scientific changes always wait for review.
+    repo: research-tools-ops
+    doi: 10.5281/zenodo.23881629

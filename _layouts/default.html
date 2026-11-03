@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/consent.js"></script>
+{% seo %}
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+{% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body class="{{ page.body_class }}">
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="wrap">
+{{ content }}
+  <footer>
+    <span>{{ site.author.name }}, © {{ site.time | date: "%Y" }}</span>
+    <span><button type="button" class="link-btn" data-cookie-settings>Cookie settings</button> · <a href="/cookies/">Cookie policy</a></span>
+  </footer>
+</div>
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>

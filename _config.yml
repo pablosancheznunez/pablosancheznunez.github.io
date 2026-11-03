@@ -1,0 +1,28 @@
+# Site settings. The content of the home page lives in _data/work.yml.
+title: Pablo Sánchez-Núñez
+description: Assistant Professor at Universidad Carlos III de Madrid. Open tools for user experience, visual communication, digital marketing, informetrics and Open Science.
+url: https://pablosancheznunez.com
+lang: en_GB
+logo: /icon-512.png
+image: /og-image.png
+
+author:
+  name: Pablo Sánchez-Núñez
+  email: psnunez@bib.uc3m.es
+  orcid: 0000-0001-7845-9506
+  github: pablosancheznunez
+
+social:
+  name: Pablo Sánchez-Núñez
+  links:
+    - https://orcid.org/0000-0001-7845-9506
+    - https://github.com/pablosancheznunez
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+exclude:
+  - README.md
+  - .github

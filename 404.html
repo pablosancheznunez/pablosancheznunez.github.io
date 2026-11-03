@@ -1,40 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/consent.js"></script>
-<title>Page not found — Pablo Sánchez-Núñez</title>
-<meta name="robots" content="noindex">
-<link rel="icon" href="/favicon.ico" sizes="48x48">
-<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<style>
-  :root{
-    --bg:#ffffff; --ink:#1a1a1a; --ink-dim:#444444; --hair:#dddddd; --link:#1a4d8f;
-    color-scheme:light dark;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{ --bg:#111111; --ink:#eaeaea; --ink-dim:#c2c2c2; --hair:#333333; --link:#7fb0e8; }
-  }
-  *{ box-sizing:border-box; }
-  body{
-    margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
-    background:var(--bg); color:var(--ink);
-    font-family:Georgia, "Times New Roman", Times, serif;
-    line-height:1.6; text-align:center; padding:24px;
-  }
-  h1{ font-size:26px; margin:0 0 12px; }
-  p{ color:var(--ink-dim); max-width:40ch; margin:0 auto 20px; }
-  a{ color:var(--link); }
-</style>
-</head>
-<body>
-  <div>
-    <h1>Page not found.</h1>
-    <p>Whatever you were looking for isn't here — but you can head back to the homepage.</p>
-    <a href="/">&larr; Back to pablosancheznunez.com</a>
-    <p style="margin-top:16px;font-size:14px"><a href="/cookies.html">Cookie policy</a></p>
-  </div>
-</body>
-</html>
+---
+layout: default
+title: Page not found
+permalink: /404.html
+body_class: page
+noindex: true
+---
+  <main id="main">
+    <h1>Page not found</h1>
+    <p>Whatever you were looking for isn't here. The <a href="/">home page</a> lists every package, tool and project.</p>
+  </main>

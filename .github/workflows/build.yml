@@ -1,0 +1,33 @@
+# Builds the site exactly as GitHub Pages does, so a broken edit shows up as a
+# failed check instead of a broken website. The built site is kept as an
+# artifact for a quick look.
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: .
+          destination: ./_site
+      - name: Check that every package has a website and code link
+        run: |
+          test -f _site/index.html
+          test -f _site/r-packages/index.html
+          test -f _site/cookies/index.html
+          test -f _site/sitemap.xml
+      - uses: actions/upload-artifact@v5
+        with:
+          name: site
+          path: _site
+          retention-days: 7
