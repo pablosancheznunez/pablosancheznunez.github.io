@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/consent.js"></script>
+<title>R packages · Pablo Sánchez-Núñez</title>
+<link rel="canonical" href="https://pablosancheznunez.com/r-packages/">
+<meta name="description" content="Open R packages by Pablo Sánchez-Núñez for research assessment, research integrity and reproducibility, science communication, digital marketing and UX.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="R packages · Pablo Sánchez-Núñez">
+<meta property="og:description" content="Sixteen open R packages for research assessment, integrity, reproducibility, communication, marketing and UX.">
+<meta property="og:url" content="https://pablosancheznunez.com/r-packages/">
+<meta property="og:site_name" content="Pablo Sánchez-Núñez">
+<meta property="og:image" content="https://pablosancheznunez.com/og-image.png">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#1a1a1a;
+    --ink-dim:#444444;
+    --muted:#6b6b6b;
+    --hair:#dddddd;
+    --code-bg:#f5f5f3;
+    --link:#1a4d8f;
+    --link-visited:#5b3a91;
+    --selection:#cfe0f5;
+    --font:Georgia, "Times New Roman", Times, serif;
+    --mono:ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    color-scheme:light dark;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#111111;
+      --ink:#eaeaea;
+      --ink-dim:#c2c2c2;
+      --muted:#9a9a9a;
+      --hair:#333333;
+      --code-bg:#1c1c1c;
+      --link:#7fb0e8;
+      --link-visited:#b79ce0;
+      --selection:#2a4a73;
+    }
+  }
+  @media (prefers-contrast: more){
+    :root{ --ink-dim:var(--ink); --muted:var(--ink); --hair:currentColor; }
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font);
+    font-size:18px;
+    line-height:1.6;
+    font-variant-numeric:oldstyle-nums;
+    hyphens:auto;
+  }
+  a{ color:var(--link); text-underline-offset:2px; text-decoration-thickness:1px; }
+  a:visited{ color:var(--link-visited); }
+  a:hover{ text-decoration-thickness:2px; }
+  ::selection{ background:var(--selection); }
+  a:focus-visible, button:focus-visible, input:focus-visible{ outline:2px solid var(--link); outline-offset:2px; }
+  .skip-link{
+    position:absolute; left:-9999px; top:0;
+    background:var(--ink); color:var(--bg);
+    padding:8px 14px; z-index:10; text-decoration:none; font-size:14px;
+  }
+  .skip-link:focus{ left:12px; top:12px; }
+
+  .wrap{ max-width:680px; margin:0 auto; padding:56px 24px 72px; }
+  .back{ font-size:15px; margin:0 0 32px; }
+  h1{ font-size:28px; margin:0 0 6px; }
+  .lede{ color:var(--ink-dim); max-width:60ch; margin:0 0 24px; }
+  p{ margin:0 0 16px; max-width:60ch; }
+
+  .filter{
+    width:100%;
+    font:inherit; font-size:16px;
+    padding:8px 12px;
+    color:var(--ink); background:var(--bg);
+    border:1px solid var(--hair); border-radius:3px;
+    margin:0 0 8px;
+  }
+  .count{ font-size:14px; color:var(--muted); margin:0 0 8px; }
+
+  h2{
+    font-size:14px; font-weight:normal;
+    letter-spacing:.06em; text-transform:uppercase;
+    color:var(--muted);
+    margin:48px 0 16px; padding-top:24px;
+    border-top:1px solid var(--hair);
+  }
+  .pkgs{ list-style:none; padding:0; margin:0; }
+  .pkg{ margin-bottom:28px; }
+  .pkg h3{ font-size:19px; margin:0 0 2px; display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 10px; }
+  .pkg .ver{ font-size:14px; font-weight:normal; color:var(--muted); font-variant-numeric:lining-nums; }
+  .pkg .tag{
+    font-size:12px; font-weight:normal; color:var(--muted);
+    border:1px solid var(--hair); border-radius:3px; padding:0 6px;
+  }
+  .pkg .title{ font-style:italic; color:var(--ink-dim); margin:0 0 4px; }
+  .pkg p{ color:var(--ink-dim); margin:0 0 6px; }
+  .links{ font-size:15px; margin:0 0 8px; }
+  .links a + a::before{ content:"·"; color:var(--muted); margin:0 8px; display:inline-block; text-decoration:none; }
+
+  .install{
+    display:flex; align-items:stretch; gap:8px;
+    font-size:13px;
+  }
+  .install code{
+    flex:1; min-width:0;
+    font-family:var(--mono);
+    background:var(--code-bg);
+    border:1px solid var(--hair); border-radius:3px;
+    padding:6px 10px;
+    overflow-x:auto; white-space:nowrap;
+  }
+  .copy-btn{
+    background:none;
+    border:1px solid var(--hair); border-radius:3px;
+    padding:2px 10px;
+    font-size:13px; font-family:var(--font);
+    color:var(--muted); cursor:pointer;
+  }
+  .copy-btn:hover{ color:var(--link); border-color:var(--link); }
+
+  .empty{ color:var(--muted); display:none; }
+  footer{
+    margin-top:64px; padding-top:24px;
+    border-top:1px solid var(--hair);
+    font-size:14px; color:var(--muted);
+  }
+  footer p{ margin:0 0 6px; }
+  footer a{ color:var(--muted); }
+  @media (max-width:480px){
+    .wrap{ padding:40px 16px 56px; }
+    body{ font-size:17px; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+<p class="back"><a href="/">← Pablo Sánchez-Núñez</a></p>
+
+<header>
+  <h1>R packages</h1>
+  <p class="lede">Open-source R packages for studying research and for teaching and practising communication, marketing and user experience. All are MIT-licensed, developed in the open on GitHub and installable with <code>remotes</code>.</p>
+</header>
+
+<main id="main">
+  <label for="q" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Filter packages</label>
+  <input id="q" class="filter" type="search" placeholder="Filter by name or topic (e.g. ORCID, eye tracking, A/B)" autocomplete="off">
+  <p class="count" id="count" aria-live="polite"></p>
+
+  <section>
+    <h2>Research assessment and careers</h2>
+    <ul class="pkgs">
+      <li class="pkg">
+        <h3>metascience <span class="ver">0.1.0</span><span class="tag">hub</span></h3>
+        <p class="title">Catalogue and shared infrastructure for open metascience tools</p>
+        <p>Lists the tools in the ecosystem with their maturity and release status, validates DOI, ORCID iD and ROR identifiers, harmonises result statuses so an unverifiable result is never read as a negative one, and writes provenance manifests.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/metascience/">Website</a><a href="https://github.com/pablosancheznunez/metascience">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/metascience")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+      <li class="pkg">
+        <h3>ORMetrics <span class="ver">0.1.0</span></h3>
+        <p class="title">Transparent open science indicators for responsible research assessment</p>
+        <p>The R side of OpenResearchMetrics: open science indicators for a researcher from OpenAlex, DataCite and other open sources. Each indicator stands alone with its evidence and limits; there is no composite score.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/openresearchmetrics/r/">Website</a><a href="https://pablosancheznunez.com/openresearchmetrics/">Web tool</a><a href="https://github.com/pablosancheznunez/openresearchmetrics">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/openresearchmetrics", subdir = "r")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+      <li class="pkg">
+        <h3>narrativecv <span class="ver">0.1.0</span></h3>
+        <p class="title">Map narrative CV sections to evidence in open research infrastructures</p>
+        <p>Applies an open, versioned crosswalk between narrative CV frameworks (R4RI, CVA) and ORCID, OpenAlex, DataCite and OpenAIRE, reporting section by section what evidence exists and what only the narrative can document.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/narrative-cv-crosswalk/r/">Website</a><a href="https://github.com/pablosancheznunez/narrative-cv-crosswalk">GitHub</a><a href="https://doi.org/10.5281/zenodo.23881631">DOI</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/narrative-cv-crosswalk", subdir = "r")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+      <li class="pkg">
+        <h3>academiccareer <span class="ver">0.1.0</span></h3>
+        <p class="title">Descriptive, evidence-based profiles of academic careers</p>
+        <p>Timelines, contributions by period and career transitions across outputs, software, data, teaching, transfer and service, from ORCID, OpenAlex and DataCite. No rankings, scores or journal-based metrics.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/academiccareer/">Website</a><a href="https://pablosancheznunez.com/academiccareer/example/report.html">Example report</a><a href="https://github.com/pablosancheznunez/academiccareer">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/academiccareer")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Research integrity, reproducibility and AI use</h2>
+    <ul class="pkgs">
+      <li class="pkg">
+        <h3>reproducibility <span class="ver">0.1.0</span></h3>
+        <p class="title">Audit the reproducibility of research projects and articles</p>
+        <p>A checklist audit of project directories (documentation, licence, dependencies, containers, data, seeds) and transparency detectors for article full texts, with HTML and JSON reports, project templates and a GitHub Action.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/reproducibility/">Website</a><a href="https://github.com/pablosancheznunez/reproducibility">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/reproducibility")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+      <li class="pkg">
+        <h3>reproimage <span class="ver">0.1.0</span></h3>
+        <p class="title">Integrity, provenance and reproducibility checks for scientific images</p>
+        <p>Finds identical and visually similar images, including rotated, flipped and re-contrasted copies, and records RO-Crate provenance. Shares a written specification and test images with the Python version, so both give identical results.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/reproimage/">Website</a><a href="https://github.com/pablosancheznunez/reproimage">GitHub</a><a href="https://doi.org/10.5281/zenodo.23881635">DOI</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/reproimage", subdir = "r")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+      <li class="pkg">
+        <h3>FoSci <span class="ver">0.1.0</span></h3>
+        <p class="title">Forensic scientometrics: integrity signals in publication data</p>
+        <p>Retraction rates, citation stacking, template titles, tortured phrases and unusual productivity, plus paper mill screening. Every signal carries an evidence level and alternative explanations; it is never presented as proof, and people are not ranked.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/FoSci/">Website</a><a href="https://github.com/pablosancheznunez/FoSci">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/FoSci")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+      <li class="pkg">
+        <h3>AIRes <span class="ver">0.1.0</span></h3>
+        <p class="title">Declared use of artificial intelligence in research publications and policies</p>
+        <p>Detects AI-use disclosure statements in articles and codes journal and institutional AI policies on a documented codebook. It measures declared use only and never tries to infer AI authorship from text.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/AIRes/">Website</a><a href="https://github.com/pablosancheznunez/AIRes">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/AIRes")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+      <li class="pkg">
+        <h3>aitrail <span class="ver">0.1.0</span></h3>
+        <p class="title">Document, verify and disclose the use of AI in research</p>
+        <p>A version-controlled log of AI use by project phase, with human verification, audits of oversight gaps, reference checks against Crossref and DataCite, and disclosure statements in English and Spanish.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/aitrail/">Website</a><a href="https://pablosancheznunez.com/aitrail/example/report.html">Example report</a><a href="https://github.com/pablosancheznunez/aitrail">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/aitrail")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Science communication and visual archives</h2>
+    <ul class="pkgs">
+      <li class="pkg">
+        <h3>scicomm <span class="ver">0.1.0</span></h3>
+        <p class="title">Assess fidelity and audience fit in science communication</p>
+        <p>Checks each version of a finding written for specialists, students and the public against the evidence: causal language, overstated certainty, lost limitations, plus clarity and readability indicators in English and Spanish.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/scicomm/">Website</a><a href="https://pablosancheznunez.com/scicomm/example/report.html">Example report</a><a href="https://github.com/pablosancheznunez/scicomm">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/scicomm")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+      <li class="pkg">
+        <h3>photoarchive <span class="ver">0.2.0</span></h3>
+        <p class="title">Photographs across digital archives: access, harmonisation and analysis</p>
+        <p>Brings photographs from IIIF, OAI-PMH, museum APIs, Wikidata, web pages and embedded IPTC/XMP into one schema, and analyses collections, quality, composition, saliency, colour, tone and texts in memory. Exports to CSV with a data dictionary.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/photoarchive/">Website</a><a href="https://pablosancheznunez.com/photoarchive/example/report.html">Example report</a><a href="https://github.com/pablosancheznunez/photoarchive">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/photoarchive")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Digital marketing and consumer research</h2>
+    <ul class="pkgs">
+      <li class="pkg">
+        <h3>abfunnel <span class="ver">0.1.0</span></h3>
+        <p class="title">Design, check and analyse digital marketing experiments and funnels</p>
+        <p>Sample size and duration planning, pre-registration templates, sample ratio mismatch checks, and effects with confidence intervals for A/B/n tests and every step of a conversion funnel.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/abfunnel/">Website</a><a href="https://pablosancheznunez.com/abfunnel/example/report.html">Example report</a><a href="https://github.com/pablosancheznunez/abfunnel">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/abfunnel")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+      <li class="pkg">
+        <h3>visualbrief <span class="ver">0.1.0</span></h3>
+        <p class="title">Turn campaign data into clear, reusable visual reports</p>
+        <p>Standardises exports from ad platforms, social media and web analytics, compares content across audiences with confidence intervals, and produces accessible branded charts and a self-contained HTML report.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/visualbrief/">Website</a><a href="https://pablosancheznunez.com/visualbrief/example/report.html">Example report</a><a href="https://github.com/pablosancheznunez/visualbrief">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/visualbrief")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+      <li class="pkg">
+        <h3>neuroconsumer <span class="ver">0.1.0</span></h3>
+        <p class="title">Controlled visual experimentation in consumer research</p>
+        <p>Builds visual stimuli for advertising and consumer experiments from declared factors, verifies that conditions differ only where intended, and renders deterministic SVG/PNG with Areas of Interest for eye tracking.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/neuroconsumer/">Website</a><a href="https://pablosancheznunez.com/neuroconsumer/example/">Example</a><a href="https://github.com/pablosancheznunez/neuroconsumer">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/neuroconsumer")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>UX and interaction design education</h2>
+    <ul class="pkgs">
+      <li class="pkg">
+        <h3>uxlearn <span class="ver">0.1.0</span></h3>
+        <p class="title">Tools for learning user experience</p>
+        <p>Usability metrics (task success, time, errors, System Usability Scale), simulated usability studies with reproducible synthetic data, case studies and a workbook for UX courses.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/uxlearn/">Website</a><a href="https://github.com/pablosancheznunez/uxlearn">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/uxlearn")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+      <li class="pkg">
+        <h3>ixdLab <span class="ver">0.2.0</span><span class="tag">Shiny app</span></h3>
+        <p class="title">IxD Lab: a learning and experimentation environment for interaction design</p>
+        <p>Fifteen hands-on labs in three modules (Discover, Design, Evaluate) with quizzes and an optional AI tutor. Also runs in the browser with no installation.</p>
+        <p class="links"><a href="https://pablosancheznunez.com/ixd-lab/">Open in browser</a><a href="https://github.com/pablosancheznunez/ixd-lab">GitHub</a></p>
+        <div class="install"><code>remotes::install_github("pablosancheznunez/ixd-lab")</code><button class="copy-btn" type="button">Copy</button></div>
+      </li>
+    </ul>
+  </section>
+
+  <p class="empty" id="empty">No package matches that filter.</p>
+</main>
+
+<footer>
+  <p>Install any package with <code>install.packages("remotes")</code> first. Code under the MIT licence.</p>
+  <p><a href="https://github.com/pablosancheznunez">github.com/pablosancheznunez</a> · <a href="/">pablosancheznunez.com</a></p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var pkgs = Array.prototype.slice.call(document.querySelectorAll(".pkg"));
+  var sections = Array.prototype.slice.call(document.querySelectorAll("main section"));
+  var q = document.getElementById("q"), count = document.getElementById("count"), empty = document.getElementById("empty");
+
+  function update(){
+    var term = q.value.trim().toLowerCase(), shown = 0;
+    pkgs.forEach(function(li){
+      var hit = !term || li.textContent.toLowerCase().indexOf(term) !== -1;
+      li.hidden = !hit;
+      if (hit) shown++;
+    });
+    sections.forEach(function(s){ s.hidden = !s.querySelector(".pkg:not([hidden])"); });
+    count.textContent = term ? shown + " of " + pkgs.length + " packages" : pkgs.length + " packages";
+    empty.style.display = shown ? "none" : "block";
+  }
+  q.addEventListener("input", update);
+  update();
+
+  document.querySelectorAll(".copy-btn").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var text = btn.previousElementSibling.textContent;
+      var done = function(){ btn.textContent = "Copied"; setTimeout(function(){ btn.textContent = "Copy"; }, 1500); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function(){});
+    });
+  });
+})();
+</script>
+</body>
+</html>
