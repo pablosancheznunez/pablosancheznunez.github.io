@@ -20,7 +20,7 @@ jobs:
         with:
           source: .
           destination: ./_site
-      - name: Check that every package has a website and code link
+      - name: Check that the main pages were built
         run: |
           test -f _site/index.html
           test -f _site/r-packages/index.html

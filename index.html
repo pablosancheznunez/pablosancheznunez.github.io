@@ -2,87 +2,63 @@
 layout: default
 ---
 {%- assign gh = "https://github.com/" | append: site.author.github -%}
-{%- assign n = 0 -%}{%- for g in site.data.work.packages -%}{%- assign n = n | plus: g.items.size -%}{%- endfor -%}
+{%- assign orcid = "https://orcid.org/" | append: site.author.orcid -%}
   <header class="masthead">
     <h1>Pablo Sánchez-Núñez</h1>
     <p class="role">Assistant Professor · <a href="https://opensciencelab.uc3m.es/">OpenScienceLab</a>, Library and Information Science Department, Universidad Carlos III de Madrid</p>
-    <nav class="quick" aria-label="On this page">
-      <a href="#software">R packages</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <span class="sep" aria-hidden="true"></span>
-      <a href="https://orcid.org/{{ site.author.orcid }}" rel="me">ORCID</a>
-      <a href="{{ gh }}" rel="me">GitHub</a>
-    </nav>
   </header>
 
   <main id="main">
 
     <section id="about">
       <p class="lede">I study how people behave when they use digital products and services, and how to make them better. I build open, documented tools so that others can check, reuse and extend that work.</p>
-      <p class="interests"><span class="label">Research interests</span> Visual communication · User experience · Digital marketing · Informetrics · Open Science</p>
       <p>Outside academia I love travelling, meeting interesting people and learning something new every day. I make New Year's resolutions I never keep, always go out of my way for a good curry, and disappear into nature whenever I can.</p>
     </section>
 
-    <section id="software">
-      <div class="section-head">
-        <h2>R packages</h2>
-        <span class="count" id="count" aria-live="polite">{{ n }} packages</span>
-      </div>
-      <p class="section-intro">Open source, MIT-licensed, each with its own website and worked examples. Install with <code>remotes</code>.</p>
-      <label class="visually-hidden" for="filter">Filter packages</label>
-      <input id="filter" class="filter" type="search" placeholder="Filter: ORCID, images, A/B tests, eye tracking…" autocomplete="off">
-
-      {%- for g in site.data.work.packages %}
-      <div class="group">
-        <h3>{{ g.area }}</h3>
-        <ul class="items">
-          {%- for p in g.items %}
-          {%- assign install = p.install %}
-          {%- unless install %}{% assign install = 'remotes::install_github("pablosancheznunez/' | append: p.repo | append: '")' %}{% endunless %}
-          <li class="item has-logo">
-            <a class="logo" href="{{ p.url }}" tabindex="-1" aria-hidden="true"><img src="{% if p.logo %}{{ p.logo }}{% else %}{{ p.url }}logo.svg{% endif %}" alt="" width="60" height="70" loading="lazy"></a>
-            <h4><a href="{{ p.url }}">{{ p.name }}</a></h4>
-            <p>{{ p.desc }}</p>
-            <p class="links">
-              <a href="{{ p.url }}">Website</a>
-              {%- for l in p.links %}<a href="{{ l.url }}">{{ l.text }}</a>{% endfor -%}
-              <a href="{{ gh }}/{{ p.repo }}">Code</a>
-              {%- if p.doi %}<a href="https://doi.org/{{ p.doi }}">DOI</a>{% endif -%}
-            </p>
-            <div class="install"><code>{{ install }}</code><button type="button" class="copy-btn" data-copy="{{ install | escape }}">Copy</button></div>
-          </li>
-          {%- endfor %}
-        </ul>
-      </div>
-      {%- endfor %}
-      <p class="empty" id="empty" hidden>No package matches that filter.</p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects, web tools and data</h2>
-      <ul class="items">
-        {%- for p in site.data.work.projects %}
-        <li class="item">
-          <h4><a href="{{ p.url }}">{{ p.name }}</a> <span class="kind">{{ p.kind }}</span></h4>
-          <p>{{ p.desc }}</p>
-          <p class="links">
-            <a href="{{ p.url }}">{% if p.kind == "Web tool" %}Try it{% else %}Website{% endif %}</a>
-            {%- unless p.url contains "github.com" %}<a href="{{ gh }}/{{ p.repo }}">Code</a>{% endunless -%}
-            {%- if p.doi %}<a href="https://doi.org/{{ p.doi }}">DOI</a>{% endif -%}
-          </p>
-        </li>
-        {%- endfor %}
+    <section id="interests">
+      <h2>Research interests</h2>
+      <ul class="tags">
+        <li>Visual communication</li>
+        <li>User experience</li>
+        <li>Digital marketing</li>
+        <li>Informetrics</li>
+        <li>Open Science</li>
       </ul>
     </section>
 
     <section id="contact">
-      <h2>Get in touch</h2>
-      <p class="contact-row">
-        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-        <button type="button" class="copy-btn" data-copy="{{ site.author.email }}" aria-label="Copy email address">Copy</button>
-      </p>
-      <p class="muted">Questions or suggestions about a tool are welcome as issues in its repository.</p>
+      <h2>Find me online</h2>
+      <ul class="profiles">
+        <li>
+          <a href="{{ gh }}" rel="me">
+            <svg class="icon icon-github" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            <span class="name">GitHub</span>
+            <span class="handle">{{ site.author.github }}</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{ orcid }}" rel="me">
+            <svg class="icon icon-orcid" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="12" fill="#A6CE39"/><g fill="#fff"><circle cx="7.4" cy="6.7" r="1.15"/><rect x="6.5" y="8.6" width="1.8" height="9"/><path fill-rule="evenodd" d="M10.4 8.6h3.4c3.3 0 4.9 2.3 4.9 4.5 0 2.4-1.9 4.5-4.9 4.5h-3.4zm1.8 1.6v5.8h1.5c2.3 0 3.1-1.5 3.1-2.9 0-1.6-1-2.9-3.1-2.9z"/></g></svg>
+            <span class="name">ORCID</span>
+            <span class="handle">{{ site.author.orcid }}</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{ site.author.linkedin }}" rel="me">
+            <svg class="icon icon-linkedin" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span class="name">LinkedIn</span>
+            <span class="handle">pablosancheznunez</span>
+          </a>
+        </li>
+        <li class="email">
+          <a href="mailto:{{ site.author.email }}">
+            <svg class="icon icon-email" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="4.5" width="20" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3 6.5 9 6.5 9-6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <span class="name">Email</span>
+            <span class="handle">{{ site.author.email }}</span>
+          </a>
+          <button type="button" class="copy-btn" data-copy="{{ site.author.email }}" aria-label="Copy email address">Copy</button>
+        </li>
+      </ul>
     </section>
 
   </main>
@@ -96,7 +72,7 @@ layout: default
     "worksFor": { "@type": "CollegeOrUniversity", "name": "Universidad Carlos III de Madrid", "url": "https://www.uc3m.es/Home" },
     "memberOf": { "@type": "Organization", "name": "OpenScienceLab", "url": "https://opensciencelab.uc3m.es/" },
     "email": "mailto:{{ site.author.email }}",
-    "sameAs": ["https://orcid.org/{{ site.author.orcid }}", "{{ gh }}"],
-    "knowsAbout": ["User experience", "Interaction design", "Visual communication", "Digital marketing", "Informetrics", "Open Science"]
+    "sameAs": ["{{ orcid }}", "{{ gh }}", "{{ site.author.linkedin }}"],
+    "knowsAbout": ["Visual communication", "User experience", "Digital marketing", "Informetrics", "Open Science"]
   }
   </script>

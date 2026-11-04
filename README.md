@@ -2,16 +2,14 @@
 
 Personal academic website, built by GitHub Pages with Jekyll.
 
-**To add or change a package or project, edit [`_data/work.yml`](_data/work.yml)** and push. The home page, the package filter, the install commands, the sitemap and the search-engine tags update themselves.
-
 | File | What it holds |
 | --- | --- |
-| `_data/work.yml` | Every package, web tool, dataset and project shown on the home page |
-| `_config.yml` | Name, affiliation, ORCID, email and site description |
-| `index.html` | Home page template |
+| `index.html` | Home page: short bio, research interests and links (GitHub, ORCID, LinkedIn, email) |
+| `_config.yml` | Name, affiliation, ORCID, GitHub, LinkedIn, email and site description |
 | `cookies.html` | Cookie policy |
 | `_layouts/default.html` | Shared head and footer |
-| `assets/css/site.css`, `assets/js/site.js` | Styles and the small script for filtering and copying |
+| `assets/css/site.css`, `assets/js/site.js` | Styles and the small script for copying the email address |
 | `consent.js` | Cookie consent; analytics load only after the visitor accepts |
+| `routes/` | Short addresses (pablosancheznunez.com/<package>/) that redirect to each package's own website |
 
-The *Build* workflow builds the site on every push, so a mistake in the YAML shows up as a failed check.
+The *Build* workflow builds the site on every push, so a mistake shows up as a failed check.

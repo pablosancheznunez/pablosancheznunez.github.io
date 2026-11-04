@@ -1,7 +1,7 @@
-# Site settings. The content of the home page lives in _data/work.yml.
+# Site settings. The home page content lives in index.html.
 title: Pablo Sánchez-Núñez
 tagline: Assistant Professor, Universidad Carlos III de Madrid
-description: Assistant Professor at Universidad Carlos III de Madrid. Open tools for user experience, visual communication, digital marketing, informetrics and Open Science.
+description: Assistant Professor at Universidad Carlos III de Madrid. Research on visual communication, user experience, digital marketing, informetrics and Open Science.
 url: https://pablosancheznunez.com
 lang: en_GB
 logo: /icon-512.png
@@ -11,12 +11,14 @@ author:
   email: psnunez@bib.uc3m.es
   orcid: 0000-0001-7845-9506
   github: pablosancheznunez
+  linkedin: https://www.linkedin.com/in/pablosancheznunez/
 
 social:
   name: Pablo Sánchez-Núñez
   links:
     - https://orcid.org/0000-0001-7845-9506
     - https://github.com/pablosancheznunez
+    - https://www.linkedin.com/in/pablosancheznunez/
 
 plugins:
   - jekyll-seo-tag
