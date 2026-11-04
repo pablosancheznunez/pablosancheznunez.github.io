@@ -73,29 +73,20 @@ h2{ font-size:22px; margin:0 0 16px; }
 .lede{ font-size:20px; line-height:1.55; }
 
 /* Research interests */
-.tags{ list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:10px; }
-.tags li{
-  font:15px var(--sans); color:var(--ink-dim);
-  background:var(--surface); border:1px solid var(--hair); border-radius:999px;
-  padding:5px 14px;
-}
+.interests{ color:var(--ink-dim); }
 
-/* Profiles and contact */
-.profiles{ list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; }
-.profiles li{ display:flex; align-items:center; gap:8px; border:1px solid var(--hair); border-radius:10px; padding:0 12px 0 0; }
-.profiles li:hover{ border-color:var(--accent); }
-.profiles a{
-  flex:1; min-width:0; display:grid; grid-template-columns:28px minmax(0, 1fr); column-gap:14px; align-items:center;
-  padding:14px 0 14px 16px; text-decoration:none; color:var(--ink);
-}
+/* Contact: one line per link, a small icon, the address in plain text */
+.profiles{ list-style:none; padding:0; margin:0; }
+.profiles li{ display:flex; align-items:center; gap:12px; margin:0 0 12px; }
+.profiles a{ display:inline-flex; align-items:center; gap:12px; min-width:0; color:var(--ink); text-decoration:none; }
 .profiles a:visited{ color:var(--ink); }
-.profiles .icon{ grid-row:1 / span 2; width:28px; height:28px; }
-.profiles .name{ font:600 16px var(--sans); }
-.profiles .handle{ font:13px var(--sans); color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.profiles a:hover .name{ color:var(--accent); }
+.profiles .icon{ flex:none; width:20px; height:20px; }
+.profiles .name{ min-width:5.5em; }
+.profiles .handle{ color:var(--muted); font-size:16px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; border-bottom:1px solid var(--hair); }
+.profiles a:hover .handle{ color:var(--accent); border-color:var(--accent); }
 .icon-github{ fill:var(--ink); }
 .icon-linkedin{ fill:#0A66C2; }
-.icon-email{ color:var(--accent); }
+.icon-email{ color:var(--ink); }
 @media (prefers-color-scheme: dark){ .icon-linkedin{ fill:#4A9DE8; } }
 
 .copy-btn, .link-btn{ font:13px var(--sans); cursor:pointer; }
@@ -140,7 +131,9 @@ footer a{ color:var(--muted); }
   .wrap{ padding:40px 16px 40px; }
   body{ font-size:17px; }
   .lede{ font-size:18px; }
-  .profiles{ grid-template-columns:minmax(0, 1fr); }
+  .profiles li, .profiles a{ gap:10px; }
+  .profiles .name{ min-width:4.6em; }
+  .profiles .handle{ font-size:15px; }
 }
 @media print{
   .copy-btn, footer, .skip-link{ display:none; }
