@@ -84,9 +84,7 @@ h2{ font-size:22px; margin:0 0 16px; }
 .profiles .handle{ color:var(--muted); font-size:16px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; border-bottom:1px solid var(--hair); }
 .profiles a:hover .handle{ color:var(--accent); border-color:var(--accent); }
 .icon-github{ fill:var(--ink); }
-.icon-linkedin{ fill:#0A66C2; }
 .icon-email{ color:var(--ink); }
-@media (prefers-color-scheme: dark){ .icon-linkedin{ fill:#4A9DE8; } }
 
 .copy-btn, .link-btn{ font:13px var(--sans); cursor:pointer; }
 .copy-btn{
