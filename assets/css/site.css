@@ -70,7 +70,6 @@ p{ margin:0 0 16px; max-width:62ch; }
 section{ padding-top:40px; margin-top:40px; border-top:1px solid var(--hair); }
 section#about{ border-top:none; padding-top:0; margin-top:0; }
 h2{ font-size:22px; margin:0 0 16px; }
-.lede{ font-size:20px; line-height:1.55; }
 
 /* Research interests */
 .interests{ color:var(--ink-dim); }
@@ -130,7 +129,6 @@ footer a{ color:var(--muted); }
   td:nth-child(4)::before{ content:"Duration: "; color:var(--muted); }
   .wrap{ padding:40px 16px 40px; }
   body{ font-size:17px; }
-  .lede{ font-size:18px; }
   .profiles li, .profiles a{ gap:10px; }
   .profiles .name{ min-width:4.6em; }
   .profiles .handle{ font-size:15px; }
