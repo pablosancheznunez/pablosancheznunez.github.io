@@ -1,27 +1,23 @@
-# Site settings. The home page content lives in index.html.
+# Site settings. The home page content lives in index.html; the search and
+# sharing tags are written by hand in _layouts/default.html.
 title: Pablo Sánchez-Núñez
-tagline: Assistant Professor, Universidad Carlos III de Madrid
-description: Assistant Professor at Universidad Carlos III de Madrid. Interested in how people behave when they use digital products and services, and in how research ecosystems work and evolve.
+tagline: Assistant Professor at Universidad Carlos III de Madrid
+description: Pablo Sánchez-Núñez, PhD, Assistant Professor at Universidad Carlos III de Madrid. How people use digital products and services, and how research ecosystems evolve.
 url: https://pablosancheznunez.com
-lang: en_GB
-logo: /icon-512.png
+locale: en_GB
+image: /og-image.png
+image_alt: Pablo Sánchez-Núñez, PhD, Assistant Professor at Universidad Carlos III de Madrid
 
 author:
   name: Pablo Sánchez-Núñez
+  given_name: Pablo
+  family_name: Sánchez-Núñez
   email: psnunez@bib.uc3m.es
   orcid: 0000-0001-7845-9506
   github: pablosancheznunez
   linkedin: https://www.linkedin.com/in/pablosancheznunez/
 
-social:
-  name: Pablo Sánchez-Núñez
-  links:
-    - https://orcid.org/0000-0001-7845-9506
-    - https://github.com/pablosancheznunez
-    - https://www.linkedin.com/in/pablosancheznunez/
-
 plugins:
-  - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-redirect-from
 
@@ -29,13 +25,3 @@ exclude:
   - README.md
   - routes/README.md
   - .github
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      image:
-        path: /og-image.png
-        width: 1200
-        height: 630
-        alt: Pablo Sánchez-Núñez, Assistant Professor at Universidad Carlos III de Madrid

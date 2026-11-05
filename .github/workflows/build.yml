@@ -26,6 +26,8 @@ jobs:
           test -f _site/r-packages/index.html
           test -f _site/cookies/index.html
           test -f _site/sitemap.xml
+          grep -q "application/ld+json" _site/index.html
+          grep -q "rel=\"canonical\"" _site/index.html
       - uses: actions/upload-artifact@v5
         with:
           name: site

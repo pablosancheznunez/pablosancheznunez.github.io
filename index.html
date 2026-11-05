@@ -60,14 +60,39 @@ layout: default
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "{{ site.author.name }}",
+    "@type": "ProfilePage",
     "url": "{{ site.url }}/",
-    "jobTitle": "Assistant Professor",
-    "worksFor": { "@type": "CollegeOrUniversity", "name": "Universidad Carlos III de Madrid", "url": "https://www.uc3m.es/Home" },
-    "memberOf": { "@type": "Organization", "name": "OpenScienceLab", "url": "https://opensciencelab.uc3m.es/" },
-    "email": "mailto:{{ site.author.email }}",
-    "sameAs": ["{{ orcid }}", "{{ gh }}", "{{ site.author.linkedin }}"],
-    "knowsAbout": ["Visual communication", "User experience", "Digital marketing", "Informetrics", "Open Science"]
+    "name": "{{ site.author.name }}, PhD",
+    "description": "{{ site.description }}",
+    "inLanguage": "en",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#person",
+      "name": "{{ site.author.name }}",
+      "givenName": "{{ site.author.given_name }}",
+      "familyName": "{{ site.author.family_name }}",
+      "alternateName": ["Pablo Sanchez-Nunez", "Pablo Sánchez Núñez"],
+      "honorificSuffix": "PhD",
+      "jobTitle": "Assistant Professor",
+      "url": "{{ site.url }}/",
+      "email": "mailto:{{ site.author.email }}",
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidad Carlos III de Madrid",
+        "url": "https://www.uc3m.es/"
+      },
+      "affiliation": [
+        { "@type": "CollegeOrUniversity", "name": "Universidad Carlos III de Madrid", "url": "https://www.uc3m.es/" },
+        { "@type": "Organization", "name": "OpenScienceLab", "url": "https://opensciencelab.uc3m.es/" }
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "{{ site.author.orcid }}",
+        "url": "{{ orcid }}"
+      },
+      "sameAs": ["{{ orcid }}", "{{ gh }}", "{{ site.author.linkedin }}"],
+      "knowsAbout": ["Visual communication", "User experience", "Digital marketing", "Informetrics", "Open Science", "Research ecosystems", "Science of science"]
+    }
   }
   </script>
