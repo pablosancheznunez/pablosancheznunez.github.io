@@ -72,7 +72,8 @@ section#about{ border-top:none; padding-top:0; margin-top:0; }
 h2{ font-size:22px; margin:0 0 16px; }
 
 /* Research interests */
-.interests{ color:var(--ink-dim); }
+.interests{ list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:8px; }
+.interests li{ font-family:var(--sans); font-size:14px; color:var(--ink-dim); background:var(--surface); border:1px solid var(--hair); border-radius:999px; padding:4px 12px; white-space:nowrap; }
 
 /* Contact: one line per link, a small icon, the address in plain text */
 .profiles{ list-style:none; padding:0; margin:0; }
