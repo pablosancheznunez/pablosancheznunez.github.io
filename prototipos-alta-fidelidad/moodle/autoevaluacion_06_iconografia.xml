@@ -1,0 +1,192 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Alta fidelidad (libro)/Tema 6. Iconografía</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 6. Iconografía · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>La mayoría de los iconos se entienden igual de bien sin etiqueta de texto. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Solo unos pocos iconos muy asentados son casi universales.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 6. Iconografía · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Cuánto se aleja la imagen de un icono de lo que significa se llama distancia ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Distancia semántica, una de las cinco características de McDougall et al.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>semántica</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>semantica</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 6. Iconografía · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Mezclar iconos de varias bibliotecas, aunque cada uno sea correcto, rompe la ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Grosores, terminaciones y detalles distintos se notan.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[accesibilidad]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[coherencia de estilo]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[legibilidad]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 6. Iconografía · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El tamaño mínimo del objetivo táctil en el nivel AA de las WCAG 2.2 es de ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Criterio 2.5.8 de las WCAG 2.2; las guías de plataforma recomiendan más.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[16 × 16 px]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[24 × 24 px]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[64 × 64 px]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 6. Iconografía · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué necesita un botón que solo muestra un icono?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Sin nombre accesible, el lector de pantalla no puede decir qué hace.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Un color llamativo]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Un nombre accesible que lea el lector de pantalla]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Una animación]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 6. Iconografía · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Las flechas de «siguiente» deben invertirse en las interfaces en idiomas que se escriben de derecha a izquierda. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La dirección de lectura cambia el sentido de «adelante» y «atrás».]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

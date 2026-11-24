@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tema 4. La tipografía en el diseño de interfaces – Diseño e interacción en prototipos de alta fidelidad</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./05-color.html" rel="next">
+<link href="./03-transicion.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-fundamentos.html">Temas</a></li><li class="breadcrumb-item"><a href="./04-tipografia.html"><span class="chapter-title">Tema 4. La tipografía en el diseño de interfaces</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Diseño e interacción en prototipos de alta fidelidad</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/prototipos-alta-fidelidad.pdf">
+            Libro en PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/prototipos-alta-fidelidad.epub">
+            Libro en EPUB (lectores de libros electrónicos)
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-r-en-el-libro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Usar R en este libro</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Temas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-fundamentos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 1. Fundamentos del prototipado de alta fidelidad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-maquetas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 2. Las maquetas en el proceso de diseño</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-transicion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 3. De la baja a la alta fidelidad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-tipografia.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Tema 4. La tipografía en el diseño de interfaces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-color.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 5. Uso accesible del color</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-iconografia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 6. Iconografía</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-composicion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 7. Composición y proporción en pantalla</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-espacio.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 8. Espacio negativo y respiración visual</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-sistemas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 9. Bibliotecas y sistemas de diseño</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-critica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 10. Críticas de diseño</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-entrega.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 11. Documentación, entrega y traspaso</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">El paquete UxLearn</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./91-guia-docente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Guía para el profesorado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./92-glosario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glosario</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#lectura-obligatoria" id="toc-lectura-obligatoria" class="nav-link active" data-scroll-target="#lectura-obligatoria">Lectura obligatoria</a>
+  <ul class="collapse">
+  <li><a href="#lecturas-complementarias" id="toc-lecturas-complementarias" class="nav-link" data-scroll-target="#lecturas-complementarias">Lecturas complementarias</a></li>
+  </ul></li>
+  <li><a href="#elegir-la-familia-tipográfica" id="toc-elegir-la-familia-tipográfica" class="nav-link" data-scroll-target="#elegir-la-familia-tipográfica">1. Elegir la familia tipográfica</a></li>
+  <li><a href="#escalas-y-jerarquía" id="toc-escalas-y-jerarquía" class="nav-link" data-scroll-target="#escalas-y-jerarquía">2. Escalas y jerarquía</a></li>
+  <li><a href="#espaciado-y-longitud-de-línea" id="toc-espaciado-y-longitud-de-línea" class="nav-link" data-scroll-target="#espaciado-y-longitud-de-línea">3. Espaciado y longitud de línea</a></li>
+  <li><a href="#legibilidad-y-contraste" id="toc-legibilidad-y-contraste" class="nav-link" data-scroll-target="#legibilidad-y-contraste">4. Legibilidad y contraste</a></li>
+  <li><a href="#práctica-en-r-escalas-tipográficas" id="toc-práctica-en-r-escalas-tipográficas" class="nav-link" data-scroll-target="#práctica-en-r-escalas-tipográficas">Práctica en R: escalas tipográficas</a>
+  <ul class="collapse">
+  <li><a href="#ejercicio-4.1" id="toc-ejercicio-4.1" class="nav-link" data-scroll-target="#ejercicio-4.1">Ejercicio 4.1</a></li>
+  <li><a href="#ejercicio-4.2" id="toc-ejercicio-4.2" class="nav-link" data-scroll-target="#ejercicio-4.2">Ejercicio 4.2</a></li>
+  </ul></li>
+  <li><a href="#reto-t4" id="toc-reto-t4" class="nav-link" data-scroll-target="#reto-t4">Reto evaluable</a></li>
+  <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
+  <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-fundamentos.html">Temas</a></li><li class="breadcrumb-item"><a href="./04-tipografia.html"><span class="chapter-title">Tema 4. La tipografía en el diseño de interfaces</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-tema4" class="quarto-section-identifier"><span class="chapter-title">Tema 4. La tipografía en el diseño de interfaces</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Objetivos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Elegir familias tipográficas adecuadas para interfaces.</li>
+<li>Construir escalas tipográficas y jerarquías coherentes.</li>
+<li>Ajustar el espaciado, la longitud de línea y el contraste para la legibilidad.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Glosario del tema
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="./92-glosario.html#gl-familia">Familia tipográfica</a> · <a href="./92-glosario.html#gl-escala">Escala modular</a> · <a href="./92-glosario.html#gl-interlineado">Interlineado</a> · <a href="./92-glosario.html#gl-longitud">Longitud de línea</a> · <a href="./92-glosario.html#gl-legibilidad">Legibilidad</a> · <a href="./92-glosario.html#gl-altura-x">Altura de la x</a> · <a href="./92-glosario.html#gl-rem">Unidad rem</a></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Descargas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="plantillas/04_tipografia.R" class="btn btn-outline-primary btn-sm" download="04_tipografia.R">Script R del capítulo</a> <a href="plantillas/entrega_reto.qmd" class="btn btn-outline-primary btn-sm" download="entrega_reto.qmd">Plantilla de entrega del reto (.qmd)</a> <a href="plantillas/informe.scss" class="btn btn-outline-primary btn-sm" download="informe.scss">Tema de estilo (.scss)</a></p>
+</div>
+</div>
+<section id="lectura-obligatoria" class="level2">
+<h2 class="anchored" data-anchor-id="lectura-obligatoria">Lectura obligatoria</h2>
+<div class="lectura">
+<p>Dyson, M. C. (2004). <a href="https://doi.org/10.1080/01449290410001715714">How physical text layout affects reading from screen</a>. <em>Behaviour &amp; Information Technology</em>, 23(6), 377-393.</p>
+</div>
+<section id="lecturas-complementarias" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
+<ul>
+<li>Lupton, E. (2024). <em>Pensar con tipos</em> (ed.&nbsp;de D. Giménez). Gustavo Gili. Fundamentos de tipografía (bibliografía complementaria de la asignatura).</li>
+<li>Material Design 3. <a href="https://m3.material.io/styles/typography/overview">Typography</a>. Una escala tipográfica de sistema documentada.</li>
+</ul>
+</section>
+</section>
+<section id="elegir-la-familia-tipográfica" class="level2">
+<h2 class="anchored" data-anchor-id="elegir-la-familia-tipográfica">1. Elegir la familia tipográfica</h2>
+<p>En las interfaces, la tipografía es sobre todo <strong>texto que se lee para hacer algo</strong>: etiquetas, botones, mensajes, contenidos. Para elegir una familia conviene comprobar:</p>
+<ul>
+<li><strong>Legibilidad a tamaños pequeños</strong>: altura de la x generosa (la altura de las minúsculas sin ascendentes), formas abiertas y letras que no se confundan (I, l y 1; O y 0).</li>
+<li><strong>Variedad de pesos y estilos</strong> suficiente para construir la jerarquía sin añadir otras familias.</li>
+<li><strong>Soporte de idiomas</strong>: todos los caracteres que se necesitan (tildes, eñe, otros alfabetos si hay versiones en otras lenguas).</li>
+<li><strong>Rendimiento y licencia</strong>: tipografías del sistema o web con licencia adecuada y un peso de carga razonable.</li>
+</ul>
+<p>En la mayoría de los productos bastan <strong>una o dos familias</strong>: una para el texto y, si acaso, otra para los titulares o los datos.</p>
+</section>
+<section id="escalas-y-jerarquía" class="level2">
+<h2 class="anchored" data-anchor-id="escalas-y-jerarquía">2. Escalas y jerarquía</h2>
+<p>Una <strong>escala modular</strong> fija los tamaños a partir de un tamaño base y una razón constante: cada nivel multiplica el anterior por la razón. Razones habituales: 1,125, 1,2, 1,25, 1,333 o 1,5. Con base de 16 px y razón 1,25 salen 16, 20, 25, 31, 39… Usar una escala evita tamaños arbitrarios y da coherencia.</p>
+<p>La jerarquía no se construye solo con el tamaño: también con el <strong>peso</strong> (regular, semibold, bold), el <strong>color</strong> (texto principal y secundario, siempre con contraste suficiente) y el <strong>espacio</strong> alrededor. Un sistema típico tiene pocos estilos con nombre: título de pantalla, título de sección, cuerpo, cuerpo pequeño, etiqueta, botón.</p>
+<div id="fig-escala" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Seis líneas de texto «Biblioteca» de tamaño creciente, de 12,8 a 48,8 píxeles, con su tamaño en píxeles y en rem a la izquierda. El tamaño de 16 px aparece marcado como texto base.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-escala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figuras/tema4_escala.svg" class="img-fluid figure-img" alt="Seis líneas de texto «Biblioteca» de tamaño creciente, de 12,8 a 48,8 píxeles, con su tamaño en píxeles y en rem a la izquierda. El tamaño de 16 px aparece marcado como texto base.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-escala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Escala modular de base 16 px y razón 1,25: cada paso multiplica el anterior por 1,25. Los tamaños se redondean al aplicarlos.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="espaciado-y-longitud-de-línea" class="level2">
+<h2 class="anchored" data-anchor-id="espaciado-y-longitud-de-línea">3. Espaciado y longitud de línea</h2>
+<ul>
+<li><strong>Interlineado</strong>: para el texto de lectura, en torno a 1,5 veces el tamaño de la letra; los titulares necesitan menos. Las WCAG exigen que el contenido siga funcionando si la persona aumenta el interlineado hasta 1,5 y el espacio entre párrafos hasta 2 veces el tamaño.</li>
+<li><strong>Longitud de línea</strong>: Dyson (2004) revisó la investigación sobre la lectura en pantalla y encontró que las líneas largas se leen algo más rápido, pero que las personas prefieren longitudes moderadas. Como regla práctica de diseño se usan de 45 a 75 caracteres por línea para el texto de lectura.</li>
+<li><strong>Tamaño</strong>: 16 px es el tamaño de referencia del texto de los navegadores; el texto de lectura no debería ser menor en móvil.</li>
+<li><strong>Unidades relativas</strong> (rem): permiten que la interfaz respete el tamaño de letra que la persona ha elegido en su sistema.</li>
+</ul>
+</section>
+<section id="legibilidad-y-contraste" class="level2">
+<h2 class="anchored" data-anchor-id="legibilidad-y-contraste">4. Legibilidad y contraste</h2>
+<p>La legibilidad depende también del <strong>contraste</strong> con el fondo: las WCAG exigen 4,5:1 para el texto normal y 3:1 para el texto grande (desde 24 px, o 18,66 px en negrita). El texto gris claro sobre blanco, tan frecuente, suele incumplirlo (Tema 5). Hay que evitar además el texto justificado en pantalla (crea huecos irregulares), los textos largos en mayúsculas y el texto sobre imágenes sin una capa que asegure el contraste.</p>
+</section>
+<section id="práctica-en-r-escalas-tipográficas" class="level2">
+<h2 class="anchored" data-anchor-id="práctica-en-r-escalas-tipográficas">Práctica en R: escalas tipográficas</h2>
+<p><code>escala_tipografica()</code> calcula los tamaños de una escala, su equivalente en rem y una altura de línea orientativa:</p>
+<div>
+<div id="webr-1" class="exercise-cell">
+
+</div>
+<script type="webr-1-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic291cmNlKFwiZGF0b3MvdXhsZWFybi5SXCIpXG5lc2NhbGFfdGlwb2dyYWZpY2EoYmFzZSA9IDE2LCByYXpvbiA9IDEuMjUsIHBhc29zID0gLTE6NSkifQ==
+</script>
+</div>
+<section id="ejercicio-4.1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-4.1">Ejercicio 4.1</h3>
+<p>Calcula el tamaño del paso 3 de una escala de base 16 px y razón <strong>1,333</strong> (cuarta justa).</p>
+<script type="exercise-setup-t4_escala-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfZXNjYWxhIiwic2V0dXAiOnRydWV9LCJjb2RlIjoic291cmNlKFwiZGF0b3MvdXhsZWFybi5SXCIpIn0=
+</script>
+<div>
+<div id="webr-3" class="exercise-cell">
+
+</div>
+<script type="webr-3-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfZXNjYWxhIn0sImNvZGUiOiJlIDwtIGVzY2FsYV90aXBvZ3JhZmljYShiYXNlID0gMTYsIHJhem9uID0gX19fX19fLCBwYXNvcyA9IDA6MylcbmUkcHhbZSRwYXNvID09IDNdIn0=
+</script>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="t4_escala">
+<p>Escribe la razón con punto decimal: <code>1.333</code>.</p>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t4_escala">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">escala_tipografica</span>(<span class="at">base =</span> <span class="dv">16</span>, <span class="at">razon =</span> <span class="fl">1.333</span>, <span class="at">pasos =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">3</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>e<span class="sc">$</span>px[e<span class="sc">$</span>paso <span class="sc">==</span> <span class="dv">3</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>37,9 px. Con una razón mayor, la escala crece más deprisa: sirve para interfaces con mucho contraste entre titulares y texto; para interfaces densas se prefieren razones menores.</p>
+</div>
+<script type="exercise-check-t4_escala-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ0X2VzY2FsYSJ9LCJjb2RlIjoiaWYgKGlzVFJVRShhbGwuZXF1YWwoYXMubnVtZXJpYygucmVzdWx0KSwgMzcuOSkpKSB7XG4gIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBcIkNvcnJlY3RvOiAxNiDDlyAxLDMzM8KzIOKJiCAzNyw5IHB4LlwiKVxufSBlbHNlIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIlVzYSByYXpvbiA9IDEuMzMzLlwiKVxufSJ9
+</script>
+</section>
+<section id="ejercicio-4.2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-4.2">Ejercicio 4.2</h3>
+<p>¿Cuántos caracteres caben, aproximadamente, en un bloque de 720 px con letra de 18 px? <code>caracteres_por_linea()</code> supone un ancho medio de 0,5 em por carácter. ¿Está dentro del intervalo de 45 a 75?</p>
+<script type="exercise-setup-t4_linea-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfbGluZWEiLCJzZXR1cCI6dHJ1ZX0sImNvZGUiOiJzb3VyY2UoXCJkYXRvcy91eGxlYXJuLlJcIikifQ==
+</script>
+<div>
+<div id="webr-6" class="exercise-cell">
+
+</div>
+<script type="webr-6-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfbGluZWEifSwiY29kZSI6ImNhcmFjdGVyZXNfcG9yX2xpbmVhKGFuY2hvID0gX19fX19fLCB0YW1hbm8gPSAxOCkifQ==
+</script>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="t4_linea">
+<p>El ancho del bloque es 720 px.</p>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t4_linea">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">caracteres_por_linea</span>(<span class="at">ancho =</span> <span class="dv">720</span>, <span class="at">tamano =</span> <span class="dv">18</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>80 caracteres: algo por encima del intervalo cómodo. Habría que estrechar el bloque o aumentar algo el tamaño.</p>
+</div>
+<script type="exercise-check-t4_linea-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ0X2xpbmVhIn0sImNvZGUiOiJpZiAoaWRlbnRpY2FsKGFzLm51bWVyaWMoLnJlc3VsdCksIDgwKSkge1xuICBsaXN0KGNvcnJlY3QgPSBUUlVFLCBtZXNzYWdlID0gXCJDb3JyZWN0bzogdW5vcyA4MCBjYXJhY3RlcmVzLCBhbGdvIGxhcmdvLlwiKVxufSBlbHNlIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkVsIGFuY2hvIGVzIDcyMC5cIilcbn0ifQ==
+</script>
+</section>
+</section>
+<section id="reto-t4" class="level2">
+<h2 class="anchored" data-anchor-id="reto-t4">Reto evaluable</h2>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Reto del Tema 4 · Sistema tipográfico del proyecto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para tu proyecto:</p>
+<ol type="1">
+<li>Elige <strong>una o dos familias</strong> y justifica la elección con los criterios del apartado 1 (incluye una prueba de los caracteres confundibles).</li>
+<li>Define una <strong>escala modular</strong> con <code>escala_tipografica()</code> y los estilos con nombre que usarás (al menos seis), con tamaño, peso, interlineado y uso.</li>
+<li>Comprueba la <strong>longitud de línea</strong> del texto de lectura en escritorio y en móvil.</li>
+<li>Aplica el sistema a dos pantallas y muestra el antes y el después.</li>
+</ol>
+<p><strong>Entrega:</strong> un informe hecho con la <a href="plantillas/entrega_reto.qmd">plantilla de entrega</a>. Se evalúa con la rúbrica que incluye la plantilla. Este reto <strong>no tiene solución en el libro</strong>: cada estudiante trabaja con un proyecto distinto y la corrección la hace el profesorado.</p>
+</div>
+</div>
+</section>
+<section id="autoevaluación" class="level2">
+<h2 class="anchored" data-anchor-id="autoevaluación">Autoevaluación</h2>
+<p>Responde a todas las preguntas y pulsa <strong>Mostrar respuestas</strong>: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.</p>
+<div class="webex-check webex-box">
+<ol type="1">
+<li>En una escala modular, cada tamaño se obtiene multiplicando el anterior por una razón constante. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
+<li>Con base 16 px y razón 1,25, el paso 2 mide <input class="webex-solveme nospaces" size="5" aria-label="Escribe tu respuesta" data-answer="[&quot;25&quot;]"> px.</li>
+<li>Para el texto de lectura se suele recomendar una longitud de línea de <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">20 a 30 caracteres</option><option value="answer">45 a 75 caracteres</option><option value="x">100 a 150 caracteres</option></select></li>
+<li>El texto justificado es recomendable en las interfaces porque ordena los márgenes. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
+<li>¿Por qué se prefieren las unidades rem para el tamaño del texto?</li>
+</ol>
+<p></p><div class="webex-radiogroup" role="radiogroup" aria-label="Opciones de respuesta" id="radio_libro_1"><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>Porque ocupan menos memoria</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="answer"> <span>Porque respetan el tamaño de letra que la persona elige en su sistema</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>Porque son obligatorias en Figma</span></label></div><p></p>
+<ol start="6" type="1">
+<li>Según las WCAG, el texto grande empieza en <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">16 px</option><option value="answer">24 px (o 18,66 px en negrita)</option><option value="x">48 px</option></select></li>
+</ol>
+</div>
+<div class="webex-solution">
+<button>Ver explicaciones</button>
+<ul>
+<li>Esa es la definición de escala modular.</li>
+<li>16 × 1,25 × 1,25 = 25.</li>
+<li>Es la regla práctica habitual para la lectura cómoda.</li>
+<li>Crea huecos irregulares entre palabras que dificultan la lectura.</li>
+<li>Se escalan con la preferencia de tamaño del sistema o del navegador.</li>
+<li>El texto grande tiene un mínimo de contraste más bajo (3:1).</li>
+</ul>
+</div>
+</section>
+<section id="recursos-complementarios" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-complementarios">Recursos complementarios</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Recurso</th>
+<th>Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://m3.material.io/styles/typography/overview">Material Design 3 – Typography</a></td>
+<td>Escala tipográfica de sistema</td>
+</tr>
+<tr class="even">
+<td><a href="https://developer.apple.com/design/human-interface-guidelines/typography">Apple Human Interface Guidelines – Typography</a></td>
+<td>Tipografía en las plataformas de Apple</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html">W3C – Understanding SC 1.4.12: Text spacing</a></td>
+<td>Espaciado de texto ajustable</td>
+</tr>
+<tr class="even">
+<td><a href="https://practicaltypography.com/">Butterick’s Practical Typography</a></td>
+<td>Guía práctica de tipografía</td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="webr-data">
+eyJvcHRpb25zIjp7ImJhc2VVcmwiOiJ3ZWJyLyJ9LCJwYWNrYWdlcyI6eyJwa2dzIjpbImV2YWx1YXRlIiwia25pdHIiLCJodG1sdG9vbHMiXSwicmVwb3MiOlsid2Vici1yZXBvIl19LCJyZW5kZXJfZGYiOiJkZWZhdWx0In0=
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC02IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICAvLyBXYWl0IGZvciBvdXRwdXQgdG8gYmUgd3JpdHRlbiB0byB0aGUgRE9NLCB0aGVuIHRyaWdnZXIgd2lkZ2V0IHJlbmRlcmluZ1xuICBhd2FpdCBfd2Vicl92YWx1ZV82O1xuICBpZiAod2luZG93LkhUTUxXaWRnZXRzKSB7XG4gICAgd2luZG93LkhUTUxXaWRnZXRzLnN0YXRpY1JlbmRlcigpO1xuICB9XG4gIGlmICh3aW5kb3cuUGFnZWRUYWJsZURvYykge1xuICAgIHdpbmRvdy5QYWdlZFRhYmxlRG9jLmluaXRBbGwoKTtcbiAgfVxufVxuIn0seyJjZWxsTmFtZSI6IndlYnItNiIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzYgPSB7XG4gIGNvbnN0IHsgV2ViUkV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici02LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgLy8gRGVmYXVsdCBleGVyY2lzZSBjb25maWd1cmF0aW9uXG4gIGNvbnN0IG9wdGlvbnMgPSBPYmplY3QuYXNzaWduKFxuICAgIHtcbiAgICAgIGlkOiBcIndlYnItNi1jb250ZW50c1wiLFxuICAgICAgZW52aXI6IGBleGVyY2lzZS1lbnYtJHtibG9jay5hdHRyLmV4ZXJjaXNlfWAsXG4gICAgICBlcnJvcjogZmFsc2UsXG4gICAgICBjYXB0aW9uOiAnRXhlcmNpc2UnLFxuICAgIH0sXG4gICAgYmxvY2suYXR0clxuICApO1xuXG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxudmlld29mIF93ZWJyX3ZhbHVlXzYgPSB3ZWJST2pzLnByb2Nlc3MoX3dlYnJfZWRpdG9yXzYsIHt9KTtcbl93ZWJyX2ZlZWRiYWNrXzYgPSB7XG4gIGNvbnN0IHsgV2ViUkdyYWRlciB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3QgZW1wdHlGZWVkYmFjayA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuXG4gIGNvbnN0IGdyYWRlciA9IG5ldyBXZWJSR3JhZGVyKF93ZWJyX3ZhbHVlXzYuZXZhbHVhdG9yKTtcbiAgY29uc3QgZmVlZGJhY2sgPSBhd2FpdCBncmFkZXIuZ3JhZGVFeGVyY2lzZSgpO1xuICBpZiAoIWZlZWRiYWNrKSByZXR1cm4gZW1wdHlGZWVkYmFjaztcbiAgcmV0dXJuIGZlZWRiYWNrO1xufVxuIn0seyJjZWxsTmFtZSI6IndlYnItd2lkZ2V0LTMiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJ7XG4gIC8vIFdhaXQgZm9yIG91dHB1dCB0byBiZSB3cml0dGVuIHRvIHRoZSBET00sIHRoZW4gdHJpZ2dlciB3aWRnZXQgcmVuZGVyaW5nXG4gIGF3YWl0IF93ZWJyX3ZhbHVlXzM7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0zIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfd2Vicl9lZGl0b3JfMyA9IHtcbiAgY29uc3QgeyBXZWJSRXhlcmNpc2VFZGl0b3IsIGI2NERlY29kZSB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ3ZWJyLTMtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICAvLyBEZWZhdWx0IGV4ZXJjaXNlIGNvbmZpZ3VyYXRpb25cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oXG4gICAge1xuICAgICAgaWQ6IFwid2Vici0zLWNvbnRlbnRzXCIsXG4gICAgICBlbnZpcjogYGV4ZXJjaXNlLWVudi0ke2Jsb2NrLmF0dHIuZXhlcmNpc2V9YCxcbiAgICAgIGVycm9yOiBmYWxzZSxcbiAgICAgIGNhcHRpb246ICdFeGVyY2lzZScsXG4gICAgfSxcbiAgICBibG9jay5hdHRyXG4gICk7XG5cbiAgY29uc3QgZWRpdG9yID0gbmV3IFdlYlJFeGVyY2lzZUVkaXRvcih3ZWJST2pzLndlYlJQcm9taXNlLCBibG9jay5jb2RlLCBvcHRpb25zKTtcbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG52aWV3b2YgX3dlYnJfdmFsdWVfMyA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfMywge30pO1xuX3dlYnJfZmVlZGJhY2tfMyA9IHtcbiAgY29uc3QgeyBXZWJSR3JhZGVyIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBlbXB0eUZlZWRiYWNrID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7XG5cbiAgY29uc3QgZ3JhZGVyID0gbmV3IFdlYlJHcmFkZXIoX3dlYnJfdmFsdWVfMy5ldmFsdWF0b3IpO1xuICBjb25zdCBmZWVkYmFjayA9IGF3YWl0IGdyYWRlci5ncmFkZUV4ZXJjaXNlKCk7XG4gIGlmICghZmVlZGJhY2spIHJldHVybiBlbXB0eUZlZWRiYWNrO1xuICByZXR1cm4gZmVlZGJhY2s7XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici13aWRnZXQtMSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMTtcbiAgaWYgKHdpbmRvdy5IVE1MV2lkZ2V0cykge1xuICAgIHdpbmRvdy5IVE1MV2lkZ2V0cy5zdGF0aWNSZW5kZXIoKTtcbiAgfVxuICBpZiAod2luZG93LlBhZ2VkVGFibGVEb2MpIHtcbiAgICB3aW5kb3cuUGFnZWRUYWJsZURvYy5pbml0QWxsKCk7XG4gIH1cbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF93ZWJyX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMS1jb250ZW50c1xcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGJsb2NrID0gSlNPTi5wYXJzZShiNjREZWNvZGUoc2NyaXB0Q29udGVudCkpO1xuXG4gIGNvbnN0IG9wdGlvbnMgPSBPYmplY3QuYXNzaWduKHsgaWQ6IGB3ZWJyLTEtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgV2ViUkV4ZXJjaXNlRWRpdG9yKHdlYlJPanMud2ViUlByb21pc2UsIGJsb2NrLmNvZGUsIG9wdGlvbnMpO1xuXG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxuX3dlYnJfdmFsdWVfMSA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfMSwge30pO1xuIn0seyJjZWxsTmFtZSI6IndlYnItcHJlbHVkZSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IndlYlJPanMgPSB7XG4gIGNvbnN0IHsgV2ViUiwgQ2hhbm5lbFR5cGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWUuV2ViUjtcbiAgY29uc3Qge1xuICAgIFdlYlJFdmFsdWF0b3IsXG4gICAgV2ViUkVudmlyb25tZW50TWFuYWdlcixcbiAgICBzZXR1cFIsXG4gICAgYjY0RGVjb2RlLFxuICAgIGNvbGxhcHNlUGF0aFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gd2ViUiBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ3ZWJyLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBbTGlicm9dIFBlcm1pdGlyIHJ1dGFzIHJlbGF0aXZhcyBwYXJhIGVsIG1vdG9yIHkgZWwgcmVwb3NpdG9yaW8gZGUgcGFxdWV0ZXNcbiAgLy8gKGF1dG9hbG9qYWRvcyBqdW50byBhbCBsaWJybyksIHJlc29sdmnDqW5kb2xhcyByZXNwZWN0byBhIGxhIHDDoWdpbmEuXG4gIGNvbnN0IGFic29sdXRpemUgPSAodSkgPT4gbmV3IFVSTCh1LCBkb2N1bWVudC5iYXNlVVJJKS5ocmVmO1xuICBpZiAoZGF0YS5vcHRpb25zLmJhc2VVcmwpIGRhdGEub3B0aW9ucy5iYXNlVXJsID0gYWJzb2x1dGl6ZShkYXRhLm9wdGlvbnMuYmFzZVVybCk7XG4gIGRhdGEucGFja2FnZXMucmVwb3MgPSBkYXRhLnBhY2thZ2VzLnJlcG9zLm1hcChhYnNvbHV0aXplKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICAvLyBJbml0aWFsaXNlIHdlYlIgYW5kIHNldHVwIGZvciBSIGNvZGUgZXZhbHVhdGlvblxuICBsZXQgd2ViUlByb21pc2UgPSAoYXN5bmMgKHdlYlIpID0+IHtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYERvd25sb2FkaW5nIHdlYlJgO1xuICAgIGF3YWl0IHdlYlIuaW5pdCgpO1xuXG4gICAgLy8gSW5zdGFsbCBwcm92aWRlZCBsaXN0IG9mIHBhY2thZ2VzXG4gICAgLy8gRW5zdXJlIHdlYlIgZGVmYXVsdCByZXBvIGlzIGluY2x1ZGVkXG4gICAgaWYgKGRhdGEucGFja2FnZXMucmVwb3MubGVuZ3RoID09PSAwKSBkYXRhLnBhY2thZ2VzLnJlcG9zLnB1c2goXCJodHRwczovL3JlcG8uci13YXNtLm9yZ1wiKVxuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIHdlYlIuZXZhbFJWb2lkKGBcbiAgICAgICAgd2Vicjo6aW5zdGFsbChwa2csIHJlcG9zID0gcmVwb3MpXG4gICAgICAgIGxpYnJhcnkocGtnLCBjaGFyYWN0ZXIub25seSA9IFRSVUUpXG4gICAgICBgLCB7IGVudjoge1xuICAgICAgICBwa2c6IHBrZyxcbiAgICAgICAgcmVwb3M6IGRhdGEucGFja2FnZXMucmVwb3MsXG4gICAgICB9fSk7XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgY29uc3QgYW5hbHlzaXMgPSBhd2FpdCB3ZWJSLkZTLmFuYWx5emVQYXRoKHBhdGgpO1xuICAgICAgICBpZiAoIWFuYWx5c2lzLmV4aXN0cykge1xuICAgICAgICAgIHRyeSB7XG4gICAgICAgICAgICBhd2FpdCB3ZWJSLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICAgIH0gY2F0Y2ggKGUpIHtcbiAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvcjogXCIke2UubWVzc2FnZX1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHJldHVybiBhd2FpdCB3ZWJSLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluc3RhbGxpbmcgd2ViUiBzaGltc2A7XG4gICAgYXdhaXQgd2ViUi5ldmFsUlZvaWQoYHdlYnI6OnNoaW1faW5zdGFsbCgpYCk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFdlYlIgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUih3ZWJSLCBkYXRhKTtcblxuICAgIHN0YXR1c1RleHQucmVtb3ZlKCk7XG4gICAgaWYgKHN0YXR1c0NvbnRhaW5lci5jaGlsZHJlbi5sZW5ndGggPT0gMCkge1xuICAgICAgc3RhdHVzQ29udGFpbmVyLnBhcmVudE5vZGUucmVtb3ZlKCk7XG4gICAgfVxuICAgIHJldHVybiB3ZWJSO1xuICB9KShuZXcgV2ViUihkYXRhLm9wdGlvbnMpKTtcblxuICAvLyBLZWVwIHRyYWNrIG9mIGluaXRpYWwgT0pTIGJsb2NrIHJlbmRlclxuICBjb25zdCByZW5kZXJlZE9qcyA9IHt9O1xuXG4gIGNvbnN0IHByb2Nlc3MgPSBhc3luYyAoY29udGV4dCwgaW5wdXRzKSA9PiB7XG4gICAgY29uc3Qgd2ViUiA9IGF3YWl0IHdlYlJQcm9taXNlO1xuICAgIGNvbnN0IGV2YWx1YXRvciA9IG5ldyBXZWJSRXZhbHVhdG9yKHdlYlIsIGNvbnRleHQpXG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHJvY2VzcyxcbiAgICB3ZWJSUHJvbWlzZSxcbiAgICByZW5kZXJlZE9qcyxcbiAgfTtcbn1cbiJ9XX0=
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+WyJkYXRvcy91eGxlYXJuLlIiXQ==
+</script>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Mejoras de accesibilidad del libro:
+   - nombre accesible para los editores de código de quarto-live (CodeMirror),
+   - foco de teclado en sus áreas desplazables,
+   - texto alternativo para el icono de ORCID de la portada. */
+(function () {
+  function arreglar(raiz) {
+    raiz.querySelectorAll('.cm-content:not([aria-label])').forEach(function (el) {
+      el.setAttribute('aria-label', 'Editor de código R');
+    });
+    raiz.querySelectorAll('.cm-scroller').forEach(function (el) {
+      if (el.getAttribute('tabindex') !== '0') el.setAttribute('tabindex', '0');
+      if (!el.hasAttribute('aria-label')) el.setAttribute('aria-label', 'Código R');
+    });
+    // controles de Observable (deslizadores y casillas) sin nombre accesible
+    raiz.querySelectorAll('form input:not([aria-label]), form select:not([aria-label])').forEach(function (el) {
+      var form = el.closest('form');
+      var lab = form && form.querySelector('label');
+      if (lab && !(el.id && form.querySelector('label[for="' + el.id + '"]'))) {
+        el.setAttribute('aria-label', lab.textContent.trim() + (el.type === 'number' ? ' (valor)' : ''));
+      }
+    });
+    // menú de descarga de la barra lateral (solo icono)
+    raiz.querySelectorAll('.quarto-navigation-tool.dropdown-toggle').forEach(function (a) {
+      if (a.getAttribute('aria-label')) return;
+      a.setAttribute('aria-label', 'Descargar el libro en PDF o EPUB');
+      a.setAttribute('title', 'Descargar el libro en PDF o EPUB');
+    });
+    raiz.querySelectorAll('.quarto-title-author-orcid').forEach(function (a) {
+      a.setAttribute('aria-label', 'Perfil ORCID de Pablo Sánchez-Núñez');
+      var img = a.querySelector('img');
+      if (img && !img.hasAttribute('alt')) img.setAttribute('alt', 'ORCID');
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () { arreglar(document); });
+  new MutationObserver(function () { arreglar(document); })
+    .observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
+<script src="./consent.js" defer=""></script>
+<style>
+.progreso-capitulo { border: 1px solid var(--bs-border-color, #dee2e6); border-left: 4px solid var(--bs-primary, #000e78);
+  border-radius: .35rem; padding: .6rem .9rem; margin: 0 0 1.4rem; font-size: .92rem; background: rgba(127, 127, 127, .08); color: inherit; }
+.progreso-capitulo progress { width: 100%; height: .6rem; margin: .35rem 0 .2rem; accent-color: var(--bs-primary, #000e78); }
+.progreso-capitulo .progreso-nota { font-size: .82rem; opacity: .85; }
+.progreso-capitulo button, #progreso-resumen button { font-size: .82rem; padding: .05rem .5rem; margin-left: .4rem;
+  border: 1px solid var(--bs-border-color, #ced4da); border-radius: .3rem; background: transparent; color: inherit; }
+#progreso-resumen table { width: 100%; }
+#progreso-resumen { margin-bottom: 1.2rem; }
+#progreso-resumen progress { width: 8rem; height: .55rem; accent-color: var(--bs-primary, #000e78); vertical-align: middle; }
+.sin-conexion-estado { font-size: .85rem; }
+</style>
+<script>
+/* Progreso del estudiante: cuenta los ejercicios de código resueltos y las
+   preguntas de autoevaluación acertadas en cada capítulo. Se guarda solo en
+   el almacenamiento local de este navegador; no se envía a ningún servidor. */
+(function () {
+  var CLAVE = 'progreso-' + (location.pathname.split('/').filter(Boolean)[0] || 'libro') + '-v1';
+  function leer() { try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch (e) { return {}; } }
+  function guardar(d) { try { localStorage.setItem(CLAVE, JSON.stringify(d)); } catch (e) {} }
+  var pagina = location.pathname.split('/').pop() || 'index.html';
+
+  function nombresEjercicios() {
+    var m = {};
+    document.querySelectorAll('script[type^="webr-"][type$="-contents"]').forEach(function (s) {
+      try {
+        var bin = atob(s.textContent.trim());
+        var d = JSON.parse(new TextDecoder().decode(Uint8Array.from(bin, function (c) { return c.charCodeAt(0); })));
+        if (d.attr && d.attr.exercise && !d.attr.setup && !d.attr.check) m[s.type.replace('-contents', '')] = d.attr.exercise;
+      } catch (e) {}
+    });
+    return m;
+  }
+  function preguntas() {
+    return Array.prototype.slice.call(document.querySelectorAll('.webex-check .webex-solveme, .webex-check .webex-select, .webex-check .webex-radiogroup'));
+  }
+
+  function registro(datos) {
+    var r = datos[pagina] || { ej: [], pr: [] };
+    r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
+    r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
+    return r;
+  }
+
+  function pintar(caja, totalEj, totalPr) {
+    var r = registro(leer());
+    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    var partes = [];
+    if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
+    caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
+      '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
+      '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
+      '<button type="button">Borrar el progreso del capítulo</button>';
+    caja.querySelector('button').addEventListener('click', function () {
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+    });
+  }
+
+  function capitulo() {
+    var mapa = nombresEjercicios();
+    var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
+      .filter(function (v, i, a) { return a.indexOf(v) === i; });
+    var lista = preguntas();
+    if (!nombres.length && !lista.length) return;
+
+    var d = leer(); var r = registro(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+
+    var caja = document.createElement('div');
+    caja.className = 'progreso-capitulo';
+    caja.setAttribute('role', 'status');
+    var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
+    if (!cabecera) return;
+    cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
+    pintar(caja, nombres.length, lista.length);
+
+    function anotar(tipo, valor) {
+      var d = leer(); var r = registro(d);
+      if (r[tipo].indexOf(valor) === -1) {
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+      }
+    }
+
+    // Ejercicios de webR: un aviso verde de quarto-live dentro de la celda del ejercicio
+    new MutationObserver(function () {
+      document.querySelectorAll('.exercise-grade.alert-success:not([data-progreso])').forEach(function (a) {
+        a.setAttribute('data-progreso', '1');
+        var el = a;
+        while (el && !(el.id && mapa[el.id])) el = el.parentElement;
+        if (el) anotar('ej', mapa[el.id]);
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+
+    // Preguntas: se anotan al pulsar «Mostrar respuestas»
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('.webex-check-button');
+      if (!b) return;
+      setTimeout(function () {
+        lista.forEach(function (q, i) {
+          if (q.classList.contains('webex-correct') || q.querySelector('.webex-correct')) anotar('pr', i);
+        });
+      }, 0);
+    });
+  }
+
+  function resumen() {
+    var destino = document.getElementById('progreso-resumen');
+    if (!destino) return;
+    var d = leer();
+    var filas = [];
+    document.querySelectorAll('#quarto-sidebar a.sidebar-link').forEach(function (a) {
+      var f = (a.getAttribute('href') || '').split('/').pop().split('#')[0];
+      if (!f || f === 'index.html' || /^9\d-/.test(f) || filas.some(function (x) { return x.f === f; })) return;
+      filas.push({ f: f, t: a.textContent.replace(/\s+/g, ' ').trim(), r: d[f] });
+    });
+    var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
+    filas.forEach(function (x) {
+      var celda = 'Sin empezar';
+      if (x.r && (x.r.totalEj || x.r.totalPr)) {
+        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
+          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      }
+      html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
+    });
+    html += '</tbody></' + 'table><button type="button">Borrar todo mi progreso</button>';
+    destino.innerHTML = html;
+    destino.querySelector('button').addEventListener('click', function () {
+      try { localStorage.removeItem(CLAVE); } catch (e) {}
+      resumen();
+    });
+  }
+
+  function iniciar() { capitulo(); resumen(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar); else iniciar();
+})();
+
+/* Uso sin conexión: un service worker guarda el libro, webR y sus paquetes
+   la primera vez que se visitan. */
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').then(function () {
+      var estado = document.getElementById('sin-conexion-estado');
+      if (estado) estado.textContent = 'Este navegador ya guarda el libro para usarlo sin conexión.';
+    }).catch(function () {});
+  });
+})();
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pablosancheznunez\.com\/prototipos-alta-fidelidad\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./03-transicion.html" class="pagination-link" aria-label="Tema 3. De la baja a la alta fidelidad">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Tema 3. De la baja a la alta fidelidad</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./05-color.html" class="pagination-link" aria-label="Tema 5. Uso accesible del color">
+        <span class="nav-page-text"><span class="chapter-title">Tema 5. Uso accesible del color</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 <a href="https://pablosancheznunez.com">Pablo Sánchez-Núñez</a> · <a href="https://orcid.org/0000-0001-7845-9506">ORCID 0000-0001-7845-9506</a> · Texto bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Universidad Carlos III de Madrid · Hecho con <a href="https://quarto.org">Quarto</a> y <a href="https://docs.r-wasm.org/webr/latest/">webR</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-contrib/webex-1.2.0/webex.js"></script>
+</body></html>

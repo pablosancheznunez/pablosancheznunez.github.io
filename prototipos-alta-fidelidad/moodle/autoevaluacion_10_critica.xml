@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Alta fidelidad (libro)/Tema 10. Críticas de diseño</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 10. Críticas de diseño · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El objetivo de una crítica de diseño es votar qué versión gusta más. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Se trata de comprobar si el diseño cumple sus objetivos.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 10. Críticas de diseño · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>«No me gusta el azul» es un comentario accionable. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Expresa un gusto, no un problema respecto a un objetivo.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 10. Críticas de diseño · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Antes de la crítica, quien presenta debe indicar qué quiere que se comente y qué no: el ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Orienta los comentarios hacia lo que necesita quien presenta.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[registro de decisiones]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[objetivo de la crítica]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[brief]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 10. Críticas de diseño · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Al recibir un comentario, lo primero es ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Escuchar sin defenderse y preguntar para entender.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[defender la decisión tomada]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[preguntar para entenderlo]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[aplicarlo de inmediato]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 10. Críticas de diseño · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué papel controla el tiempo, reconduce los comentarios de gusto y resume las conclusiones? ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El facilitador ayuda a que la sesión cumpla su objetivo.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>facilitador</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>facilitadora</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>facilitación</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 10. Críticas de diseño · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué tienen en común los comentarios útiles?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Mejor empezar por preguntas que por soluciones.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Son breves y positivos]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Son específicos, relacionados con los objetivos y accionables]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Proponen siempre una solución concreta]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

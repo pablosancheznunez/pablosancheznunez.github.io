@@ -1,0 +1,306 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Competencias digitales (libro)/Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un modelo de lenguaje genera texto prediciendo el fragmento más probable que sigue a un texto dado. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Repite esa predicción para escribir la respuesta.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Una respuesta de una IA que parece correcta pero es falsa o inventada se llama ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Respuesta plausible pero falsa.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>alucinación</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>alucinacion</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Si una IA da una referencia con DOI, autores y revista, la referencia existe. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Puede estar inventada: hay que verificarla.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál de estos usos tiene mayor riesgo? ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Walters y Wilder encontraron muchas referencias inventadas.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Revisar la ortografía de tu texto]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Pedir ideas iniciales]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Buscar bibliografía sin verificarla]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Si 3 de 12 referencias generadas por una IA son inventadas, la proporción de inventadas es ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[3 / 12 = 0,25.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[0,12]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[0,25]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[0,33]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[3]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>La generación aumentada por recuperación elimina por completo los errores. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Mejora la actualidad, pero hay que comprobar las fuentes.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones · P7</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Por qué un modelo de lenguaje puede inventar una referencia verosímil?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Produce lo plausible, no lo verdadero; no hay intención.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque copia referencias de una base de datos con errores]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Porque genera texto plausible combinando patrones, sin comprobar que la referencia exista]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque su objetivo es engañar a quien lo usa]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones · P8</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Lo que sabe un modelo de lenguaje depende de sus datos de ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Puede no conocer hechos recientes y heredar sus sesgos.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>entrenamiento</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones · P9</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Hoy existen detectores que distinguen con total fiabilidad el texto generado por IA del humano. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La detección es uno de los retos técnicos abiertos.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones · P10</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Para comprobar si existe una referencia dada por una IA, lo más fiable es ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La IA puede confirmar con seguridad una referencia falsa.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[preguntar a la misma IA si existe]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[buscarla por su DOI o título en Crossref, OpenAlex o una base de datos]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[comprobar que el formato parece correcto]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Baja fidelidad (libro)/Tema 3. Definir el problema de diseño</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 3. Definir el problema de diseño · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>«Los usuarios necesitan una aplicación de reservas» es un buen enunciado del problema. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Contiene ya una solución y no dice para quién ni por qué.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 3. Definir el problema de diseño · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Los problemas que no tienen una formulación definitiva y cambian con cada solución se llaman problemas ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Rittel y Webber los llamaron <em>wicked problems</em>.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[técnicos]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[retorcidos (wicked)]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[domesticados]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 3. Definir el problema de diseño · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Según Dorst, el núcleo del pensamiento de diseño es crear nuevos ____ del problema.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Encuadrar es mirar la situación de una forma que abre soluciones nuevas.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>encuadres</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>encuadre</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>frames</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 3. Definir el problema de diseño · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Una hipótesis de diseño debe incluir una señal que permita saber si se cumple. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Sin señal medible, la hipótesis no se puede comprobar.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 3. Definir el problema de diseño · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué parte del alcance evita con más eficacia que el proyecto crezca sin control?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Escribir lo que queda fuera obliga a decidir y evita añadidos sin fin.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[La lista de lo que entra en el proyecto]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[La lista explícita de lo que no entra]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[El calendario de entregas]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 3. Definir el problema de diseño · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué documento reúne en una página el problema, las personas usuarias, las hipótesis, el alcance y los criterios de éxito? ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El <em>brief</em> es el punto de partida común del equipo.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[El storyboard]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[El brief de diseño]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[El flujo de usuario]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

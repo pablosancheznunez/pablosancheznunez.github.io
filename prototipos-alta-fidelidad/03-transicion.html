@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tema 3. De la baja a la alta fidelidad – Diseño e interacción en prototipos de alta fidelidad</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./04-tipografia.html" rel="next">
+<link href="./02-maquetas.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-fundamentos.html">Temas</a></li><li class="breadcrumb-item"><a href="./03-transicion.html"><span class="chapter-title">Tema 3. De la baja a la alta fidelidad</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Diseño e interacción en prototipos de alta fidelidad</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/prototipos-alta-fidelidad.pdf">
+            Libro en PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/prototipos-alta-fidelidad.epub">
+            Libro en EPUB (lectores de libros electrónicos)
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-r-en-el-libro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Usar R en este libro</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Temas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-fundamentos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 1. Fundamentos del prototipado de alta fidelidad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-maquetas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 2. Las maquetas en el proceso de diseño</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-transicion.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Tema 3. De la baja a la alta fidelidad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-tipografia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 4. La tipografía en el diseño de interfaces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-color.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 5. Uso accesible del color</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-iconografia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 6. Iconografía</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-composicion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 7. Composición y proporción en pantalla</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-espacio.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 8. Espacio negativo y respiración visual</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-sistemas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 9. Bibliotecas y sistemas de diseño</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-critica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 10. Críticas de diseño</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-entrega.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 11. Documentación, entrega y traspaso</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">El paquete UxLearn</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./91-guia-docente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Guía para el profesorado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./92-glosario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glosario</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#lectura-obligatoria" id="toc-lectura-obligatoria" class="nav-link active" data-scroll-target="#lectura-obligatoria">Lectura obligatoria</a>
+  <ul class="collapse">
+  <li><a href="#lecturas-complementarias" id="toc-lecturas-complementarias" class="nav-link" data-scroll-target="#lecturas-complementarias">Lecturas complementarias</a></li>
+  </ul></li>
+  <li><a href="#qué-se-conserva-y-qué-cambia" id="toc-qué-se-conserva-y-qué-cambia" class="nav-link" data-scroll-target="#qué-se-conserva-y-qué-cambia">1. Qué se conserva y qué cambia</a></li>
+  <li><a href="#estrategias-para-subir-la-fidelidad" id="toc-estrategias-para-subir-la-fidelidad" class="nav-link" data-scroll-target="#estrategias-para-subir-la-fidelidad">2. Estrategias para subir la fidelidad</a></li>
+  <li><a href="#trazabilidad-de-las-decisiones" id="toc-trazabilidad-de-las-decisiones" class="nav-link" data-scroll-target="#trazabilidad-de-las-decisiones">3. Trazabilidad de las decisiones</a></li>
+  <li><a href="#microinteracciones" id="toc-microinteracciones" class="nav-link" data-scroll-target="#microinteracciones">4. Microinteracciones</a></li>
+  <li><a href="#práctica" id="toc-práctica" class="nav-link" data-scroll-target="#práctica">Práctica</a></li>
+  <li><a href="#reto-t3" id="toc-reto-t3" class="nav-link" data-scroll-target="#reto-t3">Reto evaluable</a></li>
+  <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
+  <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-fundamentos.html">Temas</a></li><li class="breadcrumb-item"><a href="./03-transicion.html"><span class="chapter-title">Tema 3. De la baja a la alta fidelidad</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-tema3" class="quarto-section-identifier"><span class="chapter-title">Tema 3. De la baja a la alta fidelidad</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Objetivos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Hacer evolucionar los prototipos de baja a alta fidelidad sin perder la intención del diseño.</li>
+<li>Mantener la trazabilidad de las decisiones.</li>
+<li>Diseñar microinteracciones para los prototipos interactivos.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Glosario del tema
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="./92-glosario.html#gl-trazabilidad">Trazabilidad</a> · <a href="./92-glosario.html#gl-intencion">Intención del diseño</a> · <a href="./92-glosario.html#gl-microinteraccion">Microinteracción</a> · <a href="./92-glosario.html#gl-disparador">Disparador</a> · <a href="./92-glosario.html#gl-retroalimentacion">Retroalimentación</a> · <a href="./92-glosario.html#gl-registro">Registro de decisiones</a></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Descargas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="plantillas/entrega_reto.qmd" class="btn btn-outline-primary btn-sm" download="entrega_reto.qmd">Plantilla de entrega del reto (.qmd)</a> <a href="plantillas/informe.scss" class="btn btn-outline-primary btn-sm" download="informe.scss">Tema de estilo (.scss)</a></p>
+</div>
+</div>
+<section id="lectura-obligatoria" class="level2">
+<h2 class="anchored" data-anchor-id="lectura-obligatoria">Lectura obligatoria</h2>
+<div class="lectura">
+<p>Virzi, R. A.; Sokolov, J. L.; Karis, D. (1996). <a href="https://doi.org/10.1145/238386.238516">Usability problem identification using both low- and high-fidelity prototypes</a>. En <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’96)</em> (pp.&nbsp;236-243). ACM.</p>
+</div>
+<section id="lecturas-complementarias" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
+<ul>
+<li>Saffer, D. (2013). <em>Microinteractions: Designing with details</em>. O’Reilly. El modelo de cuatro partes de este tema (bibliografía complementaria de la asignatura).</li>
+<li>Buxton, W. (2007). <em>Sketching user experiences</em>. Elsevier. El paso del boceto al prototipo.</li>
+</ul>
+</section>
+</section>
+<section id="qué-se-conserva-y-qué-cambia" class="level2">
+<h2 class="anchored" data-anchor-id="qué-se-conserva-y-qué-cambia">1. Qué se conserva y qué cambia</h2>
+<p>Virzi, Sokolov y Karis (1996) compararon los problemas de usabilidad detectados con prototipos de baja y de alta fidelidad y encontraron que ambos los detectan en gran medida por igual. Eso tiene una consecuencia práctica: lo validado en baja fidelidad (estructura, flujo, contenido, jerarquía) es una base sólida que <strong>no debe perderse</strong> al pulir el aspecto.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Se conserva de la baja fidelidad</th>
+<th>Se decide en la alta fidelidad</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Flujos y pantallas</td>
+<td>Tipografía, color, iconos</td>
+</tr>
+<tr class="even">
+<td>Jerarquía: qué es lo más importante</td>
+<td>Cómo se expresa visualmente esa jerarquía</td>
+</tr>
+<tr class="odd">
+<td>Etiquetas y contenido validados</td>
+<td>Ajustes de redacción según el espacio real</td>
+</tr>
+<tr class="even">
+<td>Estados identificados</td>
+<td>Diseño detallado de cada estado y microinteracción</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="estrategias-para-subir-la-fidelidad" class="level2">
+<h2 class="anchored" data-anchor-id="estrategias-para-subir-la-fidelidad">2. Estrategias para subir la fidelidad</h2>
+<ul>
+<li><strong>Por capas</strong>: primero la tipografía y el espaciado sobre el esquema, después el color, después los iconos e imágenes. Cada capa se revisa antes de añadir la siguiente.</li>
+<li><strong>Por pantallas clave</strong>: llevar a alta fidelidad una o dos pantallas representativas, extraer de ellas los estilos y componentes, y aplicarlos al resto (lo que da origen al sistema de diseño, Tema 9).</li>
+<li><strong>Fidelidad mixta</strong>: alta fidelidad solo donde la pregunta lo exige (la pantalla de pago) y baja en el resto.</li>
+</ul>
+</section>
+<section id="trazabilidad-de-las-decisiones" class="level2">
+<h2 class="anchored" data-anchor-id="trazabilidad-de-las-decisiones">3. Trazabilidad de las decisiones</h2>
+<p>Al pulir, es fácil que una decisión visual contradiga, sin querer, una decisión validada: un botón principal que pierde protagonismo porque «quedaba mejor» en gris, una etiqueta que se acorta y deja de entenderse. La <strong>trazabilidad</strong> consiste en poder explicar de dónde viene cada decisión. Un <strong>registro de decisiones</strong> sencillo ayuda:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fecha</th>
+<th>Decisión</th>
+<th>Motivo</th>
+<th>Evidencia</th>
+<th>Pantallas afectadas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>12/02</td>
+<td>El horario pasa a la cabecera</td>
+<td>4 de 6 lo buscaban en «Contacto»</td>
+<td>Prueba en papel, ronda 2</td>
+<td>Todas</td>
+</tr>
+<tr class="even">
+<td>19/02</td>
+<td>Botón «Reservar» en color primario sólido</td>
+<td>Acción principal del flujo</td>
+<td>Jerarquía validada en esquemas</td>
+<td>Lista y ficha de sala</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="microinteracciones" class="level2">
+<h2 class="anchored" data-anchor-id="microinteracciones">4. Microinteracciones</h2>
+<p>Una <strong>microinteracción</strong> es un momento de interacción con un solo propósito: marcar un favorito, activar un ajuste, recibir la confirmación de una reserva. Saffer (2013) describe cuatro partes:</p>
+<ol type="1">
+<li><strong>Disparador</strong>: lo que la inicia (una acción de la persona o una condición del sistema).</li>
+<li><strong>Reglas</strong>: qué ocurre y en qué orden.</li>
+<li><strong>Retroalimentación</strong>: cómo se comunica lo que está pasando (visual, sonora, táctil).</li>
+<li><strong>Bucles y modos</strong>: qué cambia si se repite o si hay estados distintos.</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parte</th>
+<th>Ejemplo: «Añadir a mi lista de lecturas»</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Disparador</td>
+<td>Pulsar el icono de marcador en la ficha del libro</td>
+</tr>
+<tr class="even">
+<td>Reglas</td>
+<td>Si hay sesión, se añade; si no, se pide iniciarla y después se añade</td>
+</tr>
+<tr class="odd">
+<td>Retroalimentación</td>
+<td>El icono pasa a relleno y aparece «Añadido a tu lista» con opción «Deshacer»</td>
+</tr>
+<tr class="even">
+<td>Bucles y modos</td>
+<td>Pulsar de nuevo lo quita; el estado se mantiene al volver a la ficha</td>
+</tr>
+</tbody>
+</table>
+<p>Las animaciones de las microinteracciones deben ser breves y útiles, y respetar la preferencia de <strong>movimiento reducido</strong> del sistema: algunas personas sufren mareos o pierden la concentración con el movimiento (criterio de las WCAG sobre animaciones de interacción).</p>
+</section>
+<section id="práctica" class="level2">
+<h2 class="anchored" data-anchor-id="práctica">Práctica</h2>
+<p>Toma una pantalla de un prototipo de baja fidelidad tuyo. Súbela a alta fidelidad por capas (tipografía, color, iconos) y, en cada capa, comprueba con su esquema original que la jerarquía no ha cambiado.</p>
+</section>
+<section id="reto-t3" class="level2">
+<h2 class="anchored" data-anchor-id="reto-t3">Reto evaluable</h2>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Reto del Tema 3 · Evolución trazable y microinteracción
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para tu proyecto:</p>
+<ol type="1">
+<li>Lleva a alta fidelidad <strong>dos pantallas</strong> del flujo principal partiendo de sus esquemas, mostrando las capas intermedias.</li>
+<li>Mantén un <strong>registro de decisiones</strong> con al menos seis entradas, cada una con su evidencia.</li>
+<li>Diseña <strong>una microinteracción</strong> clave con las cuatro partes de Saffer y prototípala, incluida su versión con movimiento reducido.</li>
+</ol>
+<p><strong>Entrega:</strong> un informe hecho con la <a href="plantillas/entrega_reto.qmd">plantilla de entrega</a> con las imágenes y el enlace al prototipo. Se evalúa con la rúbrica que incluye la plantilla. Este reto <strong>no tiene solución en el libro</strong>: cada estudiante trabaja con un proyecto distinto y la corrección la hace el profesorado.</p>
+</div>
+</div>
+</section>
+<section id="autoevaluación" class="level2">
+<h2 class="anchored" data-anchor-id="autoevaluación">Autoevaluación</h2>
+<p>Responde a todas las preguntas y pulsa <strong>Mostrar respuestas</strong>: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.</p>
+<div class="webex-check webex-box">
+<ol type="1">
+<li>Según Virzi et al., los prototipos de baja fidelidad detectan muchos menos problemas que los de alta. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
+<li>Al subir la fidelidad, la jerarquía de la información validada en los esquemas debe <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">rehacerse desde cero</option><option value="answer">conservarse</option><option value="x">decidirse de nuevo según la estética</option></select></li>
+<li>En el modelo de Saffer, pulsar el icono de marcador es el <input class="webex-solveme nospaces ignorecase" size="12" aria-label="Escribe tu respuesta" data-answer="[&quot;disparador&quot;,&quot;trigger&quot;]"> de la microinteracción.</li>
+<li>El cambio del icono a relleno con el mensaje «Añadido a tu lista» es la <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">regla</option><option value="answer">retroalimentación</option><option value="x">bucle</option></select></li>
+<li>Las animaciones de interacción deben respetar la preferencia de movimiento reducido del sistema. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
+<li>¿Para qué sirve el registro de decisiones?</li>
+</ol>
+<p></p><div class="webex-radiogroup" role="radiogroup" aria-label="Opciones de respuesta" id="radio_libro_1"><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>Para documentar las horas dedicadas</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="answer"> <span>Para poder explicar de dónde viene cada decisión y no contradecir sin querer lo ya validado</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>Para sustituir las pruebas con usuarios</span></label></div><p></p>
+</div>
+<div class="webex-solution">
+<button>Ver explicaciones</button>
+<ul>
+<li>Detectaron problemas en gran medida similares.</li>
+<li>Lo validado es la base: el aspecto visual la expresa, no la sustituye.</li>
+<li>El disparador inicia la microinteracción.</li>
+<li>La retroalimentación comunica lo que ha pasado.</li>
+<li>Algunas personas sufren mareos con el movimiento.</li>
+<li>La trazabilidad protege las decisiones validadas.</li>
+</ul>
+</div>
+</section>
+<section id="recursos-complementarios" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-complementarios">Recursos complementarios</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Recurso</th>
+<th>Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html">W3C – Understanding SC 2.3.3: Animation from interactions</a></td>
+<td>Animaciones y movimiento reducido</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.nngroup.com/articles/microinteractions/">Nielsen Norman Group – Microinteractions in user experience</a></td>
+<td>Ejemplos de microinteracciones</td>
+</tr>
+<tr class="odd">
+<td><a href="https://help.figma.com/hc/en-us/articles/360040314193-Guide-to-prototyping-in-Figma">Figma – Guide to prototyping</a></td>
+<td>Interacciones y animaciones en prototipos</td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Mejoras de accesibilidad del libro:
+   - nombre accesible para los editores de código de quarto-live (CodeMirror),
+   - foco de teclado en sus áreas desplazables,
+   - texto alternativo para el icono de ORCID de la portada. */
+(function () {
+  function arreglar(raiz) {
+    raiz.querySelectorAll('.cm-content:not([aria-label])').forEach(function (el) {
+      el.setAttribute('aria-label', 'Editor de código R');
+    });
+    raiz.querySelectorAll('.cm-scroller').forEach(function (el) {
+      if (el.getAttribute('tabindex') !== '0') el.setAttribute('tabindex', '0');
+      if (!el.hasAttribute('aria-label')) el.setAttribute('aria-label', 'Código R');
+    });
+    // controles de Observable (deslizadores y casillas) sin nombre accesible
+    raiz.querySelectorAll('form input:not([aria-label]), form select:not([aria-label])').forEach(function (el) {
+      var form = el.closest('form');
+      var lab = form && form.querySelector('label');
+      if (lab && !(el.id && form.querySelector('label[for="' + el.id + '"]'))) {
+        el.setAttribute('aria-label', lab.textContent.trim() + (el.type === 'number' ? ' (valor)' : ''));
+      }
+    });
+    // menú de descarga de la barra lateral (solo icono)
+    raiz.querySelectorAll('.quarto-navigation-tool.dropdown-toggle').forEach(function (a) {
+      if (a.getAttribute('aria-label')) return;
+      a.setAttribute('aria-label', 'Descargar el libro en PDF o EPUB');
+      a.setAttribute('title', 'Descargar el libro en PDF o EPUB');
+    });
+    raiz.querySelectorAll('.quarto-title-author-orcid').forEach(function (a) {
+      a.setAttribute('aria-label', 'Perfil ORCID de Pablo Sánchez-Núñez');
+      var img = a.querySelector('img');
+      if (img && !img.hasAttribute('alt')) img.setAttribute('alt', 'ORCID');
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () { arreglar(document); });
+  new MutationObserver(function () { arreglar(document); })
+    .observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
+<script src="./consent.js" defer=""></script>
+<style>
+.progreso-capitulo { border: 1px solid var(--bs-border-color, #dee2e6); border-left: 4px solid var(--bs-primary, #000e78);
+  border-radius: .35rem; padding: .6rem .9rem; margin: 0 0 1.4rem; font-size: .92rem; background: rgba(127, 127, 127, .08); color: inherit; }
+.progreso-capitulo progress { width: 100%; height: .6rem; margin: .35rem 0 .2rem; accent-color: var(--bs-primary, #000e78); }
+.progreso-capitulo .progreso-nota { font-size: .82rem; opacity: .85; }
+.progreso-capitulo button, #progreso-resumen button { font-size: .82rem; padding: .05rem .5rem; margin-left: .4rem;
+  border: 1px solid var(--bs-border-color, #ced4da); border-radius: .3rem; background: transparent; color: inherit; }
+#progreso-resumen table { width: 100%; }
+#progreso-resumen { margin-bottom: 1.2rem; }
+#progreso-resumen progress { width: 8rem; height: .55rem; accent-color: var(--bs-primary, #000e78); vertical-align: middle; }
+.sin-conexion-estado { font-size: .85rem; }
+</style>
+<script>
+/* Progreso del estudiante: cuenta los ejercicios de código resueltos y las
+   preguntas de autoevaluación acertadas en cada capítulo. Se guarda solo en
+   el almacenamiento local de este navegador; no se envía a ningún servidor. */
+(function () {
+  var CLAVE = 'progreso-' + (location.pathname.split('/').filter(Boolean)[0] || 'libro') + '-v1';
+  function leer() { try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch (e) { return {}; } }
+  function guardar(d) { try { localStorage.setItem(CLAVE, JSON.stringify(d)); } catch (e) {} }
+  var pagina = location.pathname.split('/').pop() || 'index.html';
+
+  function nombresEjercicios() {
+    var m = {};
+    document.querySelectorAll('script[type^="webr-"][type$="-contents"]').forEach(function (s) {
+      try {
+        var bin = atob(s.textContent.trim());
+        var d = JSON.parse(new TextDecoder().decode(Uint8Array.from(bin, function (c) { return c.charCodeAt(0); })));
+        if (d.attr && d.attr.exercise && !d.attr.setup && !d.attr.check) m[s.type.replace('-contents', '')] = d.attr.exercise;
+      } catch (e) {}
+    });
+    return m;
+  }
+  function preguntas() {
+    return Array.prototype.slice.call(document.querySelectorAll('.webex-check .webex-solveme, .webex-check .webex-select, .webex-check .webex-radiogroup'));
+  }
+
+  function registro(datos) {
+    var r = datos[pagina] || { ej: [], pr: [] };
+    r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
+    r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
+    return r;
+  }
+
+  function pintar(caja, totalEj, totalPr) {
+    var r = registro(leer());
+    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    var partes = [];
+    if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
+    caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
+      '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
+      '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
+      '<button type="button">Borrar el progreso del capítulo</button>';
+    caja.querySelector('button').addEventListener('click', function () {
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+    });
+  }
+
+  function capitulo() {
+    var mapa = nombresEjercicios();
+    var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
+      .filter(function (v, i, a) { return a.indexOf(v) === i; });
+    var lista = preguntas();
+    if (!nombres.length && !lista.length) return;
+
+    var d = leer(); var r = registro(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+
+    var caja = document.createElement('div');
+    caja.className = 'progreso-capitulo';
+    caja.setAttribute('role', 'status');
+    var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
+    if (!cabecera) return;
+    cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
+    pintar(caja, nombres.length, lista.length);
+
+    function anotar(tipo, valor) {
+      var d = leer(); var r = registro(d);
+      if (r[tipo].indexOf(valor) === -1) {
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+      }
+    }
+
+    // Ejercicios de webR: un aviso verde de quarto-live dentro de la celda del ejercicio
+    new MutationObserver(function () {
+      document.querySelectorAll('.exercise-grade.alert-success:not([data-progreso])').forEach(function (a) {
+        a.setAttribute('data-progreso', '1');
+        var el = a;
+        while (el && !(el.id && mapa[el.id])) el = el.parentElement;
+        if (el) anotar('ej', mapa[el.id]);
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+
+    // Preguntas: se anotan al pulsar «Mostrar respuestas»
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('.webex-check-button');
+      if (!b) return;
+      setTimeout(function () {
+        lista.forEach(function (q, i) {
+          if (q.classList.contains('webex-correct') || q.querySelector('.webex-correct')) anotar('pr', i);
+        });
+      }, 0);
+    });
+  }
+
+  function resumen() {
+    var destino = document.getElementById('progreso-resumen');
+    if (!destino) return;
+    var d = leer();
+    var filas = [];
+    document.querySelectorAll('#quarto-sidebar a.sidebar-link').forEach(function (a) {
+      var f = (a.getAttribute('href') || '').split('/').pop().split('#')[0];
+      if (!f || f === 'index.html' || /^9\d-/.test(f) || filas.some(function (x) { return x.f === f; })) return;
+      filas.push({ f: f, t: a.textContent.replace(/\s+/g, ' ').trim(), r: d[f] });
+    });
+    var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
+    filas.forEach(function (x) {
+      var celda = 'Sin empezar';
+      if (x.r && (x.r.totalEj || x.r.totalPr)) {
+        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
+          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      }
+      html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
+    });
+    html += '</tbody></' + 'table><button type="button">Borrar todo mi progreso</button>';
+    destino.innerHTML = html;
+    destino.querySelector('button').addEventListener('click', function () {
+      try { localStorage.removeItem(CLAVE); } catch (e) {}
+      resumen();
+    });
+  }
+
+  function iniciar() { capitulo(); resumen(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar); else iniciar();
+})();
+
+/* Uso sin conexión: un service worker guarda el libro, webR y sus paquetes
+   la primera vez que se visitan. */
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').then(function () {
+      var estado = document.getElementById('sin-conexion-estado');
+      if (estado) estado.textContent = 'Este navegador ya guarda el libro para usarlo sin conexión.';
+    }).catch(function () {});
+  });
+})();
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pablosancheznunez\.com\/prototipos-alta-fidelidad\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./02-maquetas.html" class="pagination-link" aria-label="Tema 2. Las maquetas en el proceso de diseño">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Tema 2. Las maquetas en el proceso de diseño</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./04-tipografia.html" class="pagination-link" aria-label="Tema 4. La tipografía en el diseño de interfaces">
+        <span class="nav-page-text"><span class="chapter-title">Tema 4. La tipografía en el diseño de interfaces</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 <a href="https://pablosancheznunez.com">Pablo Sánchez-Núñez</a> · <a href="https://orcid.org/0000-0001-7845-9506">ORCID 0000-0001-7845-9506</a> · Texto bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Universidad Carlos III de Madrid · Hecho con <a href="https://quarto.org">Quarto</a> y <a href="https://docs.r-wasm.org/webr/latest/">webR</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-contrib/webex-1.2.0/webex.js"></script>
+</body></html>

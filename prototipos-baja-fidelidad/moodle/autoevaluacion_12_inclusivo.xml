@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Baja fidelidad (libro)/Tema 12. Diseño equitativo, inclusivo y accesible</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 12. Diseño equitativo, inclusivo y accesible · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>La accesibilidad solo se puede comprobar cuando el diseño visual está terminado. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Estructura, orden de foco, etiquetas y uso del color se deciden en los esquemas.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 12. Diseño equitativo, inclusivo y accesible · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un brazo ocupado con un bebé es, en el espectro de personas, una limitación ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Situacional: depende de las circunstancias del momento.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[permanente]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[temporal]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[situacional]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 12. Diseño equitativo, inclusivo y accesible · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Las WCAG organizan sus criterios en cuatro principios: perceptible, operable, comprensible y ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Perceptible, operable, comprensible y robusto.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>robusto</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 12. Diseño equitativo, inclusivo y accesible · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El contraste mínimo AA para el texto normal es de ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[4,5:1 para texto normal; 3:1 para texto grande y componentes.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[3:1]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[4,5:1]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[7:1]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 12. Diseño equitativo, inclusivo y accesible · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Distinguir un mensaje de error de uno de éxito solo por el color rojo o verde cumple las WCAG. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El criterio «uso del color» exige otro medio además del color.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 12. Diseño equitativo, inclusivo y accesible · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué evalúa el método GenderMag?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Usa personajes con distintos valores de las cinco facetas.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[La proporción de mujeres en el equipo de diseño]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Si el software funciona bien para todo el espectro de cinco facetas cognitivas, como la autoeficacia o la actitud ante el riesgo]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[El uso de lenguaje no sexista en los textos]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 12. Diseño equitativo, inclusivo y accesible · P7</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>La Directiva (UE) 2019/882 (Acta Europea de Accesibilidad) se aplica desde 2025 a servicios privados como el comercio electrónico. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Desde el 28 de junio de 2025; en España, a través de la Ley 11/2023.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

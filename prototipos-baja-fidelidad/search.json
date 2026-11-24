@@ -1,0 +1,1826 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Esquemas de página y prototipos de baja fidelidad",
+    "section": "",
+    "text": "Presentación\nEste libro acompaña a la asignatura Esquemas de página y prototipos de baja fidelidad (código 19945, 6 ECTS, primer cuatrimestre) del Máster Universitario en Experiencia de Usuario y Análisis de Información Digital de la Universidad Carlos III de Madrid. Recorre los doce temas del programa oficial: de la investigación que da origen a un concepto hasta el prototipo en papel que se pone delante de personas reales, pasando por los flujos, los storyboards, los esquemas de página y los estados de la interfaz.\nEs un libro para diseñar pensando antes de dibujar. En baja fidelidad se decide qué hace la interfaz, para quién y en qué orden, y se descarta pronto lo que no funciona, cuando cambiarlo todavía es barato. Por eso el libro dedica tres temas a lo que debe estar claro antes del primer boceto, y tres más a las responsabilidades de quien diseña: los sesgos, los patrones engañosos, la economía de la atención y el diseño equitativo y accesible.\nAutor: Pablo Sánchez-Núñez (ORCID 0000-0001-7845-9506), Universidad Carlos III de Madrid.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#objetivos-de-la-asignatura",
+    "href": "index.html#objetivos-de-la-asignatura",
+    "title": "Esquemas de página y prototipos de baja fidelidad",
+    "section": "Objetivos de la asignatura",
+    "text": "Objetivos de la asignatura\nAl terminar la asignatura deberías ser capaz de:\n\nAplicar los conceptos y métodos del prototipado de baja fidelidad en el diseño de interacción.\nConvertir los resultados de la investigación con usuarios en conceptos creativos viables y comprobables.\nDefinir problemas de diseño claros e hitos de proyecto medibles.\nDiseñar flujos de usuario coherentes, eficientes y sin barreras.\nCrear esquemas de página (wireframes) y storyboards en papel y en pantalla.\nConstruir prototipos en papel y digitales con estados y transiciones definidos.\nDetectar y evitar sesgos cognitivos, patrones engañosos y daños de la economía de la atención.\nAplicar criterios de diseño equitativo, inclusivo y accesible.\nJustificar las decisiones de diseño en una memoria con análisis crítico.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#cómo-está-organizado-cada-tema",
+    "href": "index.html#cómo-está-organizado-cada-tema",
+    "title": "Esquemas de página y prototipos de baja fidelidad",
+    "section": "Cómo está organizado cada tema",
+    "text": "Cómo está organizado cada tema\nTodos los temas siguen la misma estructura:\n\nObjetivos del tema y glosario con enlaces a las definiciones.\nLectura obligatoria, con enlace a la fuente, y lecturas complementarias.\nContenidos, numerados como en el programa.\nPráctica: actividades de diseño y, en algunos temas, un ejercicio corto en R que se ejecuta en el navegador.\nReto evaluable, una actividad individual para la evaluación continua.\nAutoevaluación con corrección inmediata, que no cuenta para la nota.\nRecursos complementarios.\n\n\n\n\n\n\n\nNota¿Por qué hay R en un libro de prototipado?\n\n\n\nLos esquemas y prototipos se dibujan en papel o con herramientas como Figma. R aparece solo donde ayuda a comprobar y medir: calcular la tasa de éxito de una prueba con cinco personas, ver en qué paso se pierden los usuarios de un flujo, priorizar los hallazgos de una revisión heurística o comprobar si dos colores se distinguen con daltonismo. No hace falta saber programar: el capítulo Usar R en este libro explica lo imprescindible, y todos los ejercicios tienen pistas y solución.\n\n\n\n\n\n\n\n\nTipDescargar el libro\n\n\n\nLibro en PDF Libro en EPUB\nEl PDF sirve para leer o imprimir; el EPUB, para lectores de libros electrónicos y móviles. En los dos, el código aparece sin ejecutar y las preguntas, sin corrección automática; las soluciones y explicaciones van en recuadros.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#tu-progreso-y-uso-sin-conexión",
+    "href": "index.html#tu-progreso-y-uso-sin-conexión",
+    "title": "Esquemas de página y prototipos de baja fidelidad",
+    "section": "Tu progreso y uso sin conexión",
+    "text": "Tu progreso y uso sin conexión\nEl libro anota los ejercicios que resuelves y las preguntas que aciertas. El progreso se guarda solo en este navegador: no se envía a ningún servidor ni lo ve el profesorado.\n\nActiva JavaScript para ver tu progreso.\n\nDespués de la primera visita, el navegador guarda el libro y el motor de R, así que podrás consultar los capítulos que hayas abierto y ejecutar el código sin conexión. Si tu navegador lo permite, se activa al cargar la página.\nUsa el interruptor que hay junto al título del libro, en la barra lateral, para cambiar entre el modo claro y el oscuro. Al principio se respeta la preferencia de tu sistema.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#mapa-del-libro",
+    "href": "index.html#mapa-del-libro",
+    "title": "Esquemas de página y prototipos de baja fidelidad",
+    "section": "Mapa del libro",
+    "text": "Mapa del libro\n\n\n\nBloque\nTemas\nQué se decide\n\n\n\n\nAntes de dibujar\n1, 2, 3, 4\nPara qué sirve la baja fidelidad, qué sabemos de las personas usuarias, qué problema resolvemos y cómo sabremos si lo hemos resuelto\n\n\nEstructura e interacción\n5, 6, 7, 8\nPor dónde pasa el usuario, en qué contexto, qué ve en cada pantalla y cómo cambia la interfaz\n\n\nValidación temprana\n9\nQué aprendemos poniendo el prototipo delante de personas\n\n\nResponsabilidad\n10, 11, 12\nQué decisiones manipulan, explotan la atención o excluyen, y cómo evitarlas",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#relación-con-la-evaluación",
+    "href": "index.html#relación-con-la-evaluación",
+    "title": "Esquemas de página y prototipos de baja fidelidad",
+    "section": "Relación con la evaluación",
+    "text": "Relación con la evaluación\nLa asignatura se evalúa con un examen final (50 %), en el que hay que obtener al menos un 4 sobre 10, y una evaluación continua (50 %): actividades en Aula Global (25 %) y un proyecto final en equipo (25 %) con un flujo de usuario, esquemas funcionales, un prototipo navegable de baja fidelidad y una memoria crítica.\n\nLas autoevaluaciones de cada tema no cuentan para la nota: sirven para comprobar lo que has entendido. Están también en Aula Global como banco de preguntas.\nLos retos evaluables son actividades individuales de evaluación continua. No tienen solución en el libro.\nEl proyecto final integra lo que se trabaja en los retos: los temas 3 a 9 siguen su orden natural.\n\nEsta descripción resume la ficha oficial; en caso de diferencia, prevalece lo que publique la asignatura en Aula Global.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#bibliografía-básica-de-la-asignatura",
+    "href": "index.html#bibliografía-básica-de-la-asignatura",
+    "title": "Esquemas de página y prototipos de baja fidelidad",
+    "section": "Bibliografía básica de la asignatura",
+    "text": "Bibliografía básica de la asignatura\n\nBuxton, W. (2007). Sketching user experiences: Getting the design right and the right design. Elsevier.\nCooper, A. (2014). About face: The essentials of interaction design. Wiley.\nKrug, S. (2006). Don’t make me think!: A common sense approach to web usability. New Riders.\nNorman, D. A. (2013). The design of everyday things. MIT Press.\nSharp, H.; Rogers, Y.; Preece, J. (2023). Interaction design: Beyond human-computer interaction. Wiley.\n\nReferencias tal como aparecen en la ficha de la asignatura.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#autoría-y-cómo-citar",
+    "href": "index.html#autoría-y-cómo-citar",
+    "title": "Esquemas de página y prototipos de baja fidelidad",
+    "section": "Autoría y cómo citar",
+    "text": "Autoría y cómo citar\nLibro escrito por Pablo Sánchez-Núñez (Universidad Carlos III de Madrid). Los textos y las figuras se publican con licencia CC BY 4.0 y el código con licencia MIT. El código fuente está en GitHub.\n\nSánchez-Núñez, P. (2026). Esquemas de página y prototipos de baja fidelidad: guía interactiva. Zenodo.\n\nTodos los datos de los ejercicios son simulados: no proceden de personas reales.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html",
+    "href": "00-r-en-el-libro.html",
+    "title": "Usar R en este libro",
+    "section": "",
+    "text": "Cómo funcionan las celdas\nEn algunos temas hay ejercicios cortos de R que se ejecutan en tu navegador, sin instalar nada. Este capítulo explica lo imprescindible en quince minutos. Si nunca has programado, no te preocupes: los ejercicios son de completar huecos y todos tienen pista y solución.\nCada bloque de código tiene un botón Run Code. Puedes cambiar el código y volver a ejecutarlo tantas veces como quieras; Start Over recupera la versión original. La primera vez que abres una página, el navegador descarga el motor de R (unos segundos); después queda guardado.\nCon &lt;- se guarda un valor en un objeto. Un vector reúne varios valores con c(), y muchas funciones trabajan con él de una vez:\nLa media se dispara por la persona que tardó 120 segundos. Volverás a esto en el Tema 4.",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html#cómo-funcionan-las-celdas",
+    "href": "00-r-en-el-libro.html#cómo-funcionan-las-celdas",
+    "title": "Usar R en este libro",
+    "section": "",
+    "text": "Ejercicio 1\nEn una prueba, 7 de 9 participantes completaron la tarea de reservar una sala. Calcula la proporción de éxito.\n\n\n\n\n\n\n\nSustituye el hueco por el número total de participantes.\n\n\nexitos &lt;- 7\nparticipantes &lt;- 9\nexitos / participantes\nUn 78 % aproximadamente. Con tan pocas personas, esa cifra tiene mucha incertidumbre: lo verás en el Tema 4.",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html#el-paquete-uxlearn",
+    "href": "00-r-en-el-libro.html#el-paquete-uxlearn",
+    "title": "Usar R en este libro",
+    "section": "El paquete UxLearn",
+    "text": "El paquete UxLearn\nLas funciones propias de este libro están en el paquete UxLearn. Dentro del libro se cargan con source(\"datos/uxlearn.R\"); en tu ordenador, se instalan una vez (lo explica el Apéndice A). Por ejemplo, contraste() calcula la relación de contraste entre dos colores según las WCAG:\n\n\n\n\n\n\n\nEjercicio 2\nLas WCAG piden un contraste mínimo de 4,5:1 para el texto normal. Completa el código para comprobar si el gris #999999 sobre blanco lo cumple.\n\n\n\n\n\n\n\n\nEscribe el umbral como número, con punto decimal: 4.5.\n\n\ncontraste(\"#999999\", \"#ffffff\") &gt;= 4.5\nFALSE: su contraste es 2,85:1. Ese gris, tan habitual en los textos de ayuda, no es legible para muchas personas.\n\n\n\n\nEjercicio 3\nLas tablas de datos (data.frame) tienen filas y columnas. sesiones_prueba reúne los resultados simulados de una prueba con prototipos. Completa el código para ver cuántas filas tiene.\n\n\n\n\n\n\n\n\nLa función que cuenta filas se llama como en inglés number of rows: nrow().\n\n\nhead(sesiones_prueba, 3)\nnrow(sesiones_prueba)\n48 filas: 8 participantes × 3 tareas × 2 prototipos.",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html#lo-que-necesitas-recordar",
+    "href": "00-r-en-el-libro.html#lo-que-necesitas-recordar",
+    "title": "Usar R en este libro",
+    "section": "Lo que necesitas recordar",
+    "text": "Lo que necesitas recordar\n\n\n\n\n\n\n\n\nPara…\nEscribe\nEjemplo\n\n\n\n\nGuardar un valor\n&lt;-\nn &lt;- 5\n\n\nCrear un vector\nc()\nc(32, 41, 38)\n\n\nMedia, mediana\nmean(), median()\nmean(tiempos)\n\n\nContar elementos o filas\nlength(), nrow()\nnrow(sesiones_prueba)\n\n\nVer las primeras filas\nhead()\nhead(sesiones_prueba)\n\n\nElegir una columna\n$\nsesiones_prueba$tiempo_s\n\n\nFiltrar filas\nsubset()\nsubset(sesiones_prueba, prototipo == \"papel\")\n\n\nContar por categorías\ntable()\ntable(sesiones_prueba$exito)",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html#autoevaluación",
+    "href": "00-r-en-el-libro.html#autoevaluación",
+    "title": "Usar R en este libro",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nEn R, x &lt;- c(2, 4, 6) crea un vector de tres elementos. VERDADEROFALSO\nPara quedarte con la columna tiempo_s de la tabla sesiones_prueba escribes sesiones_prueba seguido del símbolo \n¿Qué función cuenta las filas de una tabla? length()nrow()sum()table()\nLos ejercicios de este libro necesitan instalar R en el ordenador. VERDADEROFALSO\nCon los tiempos 32, 41, 38, 45 y 120 segundos, ¿qué resumen se ve más afectado por el valor extremo? La mediaLa medianaEl número de valores\n\n\n\nVer explicaciones\n\nc() combina valores en un vector; aquí, tres.\n$ selecciona una columna por su nombre.\nnrow() cuenta filas; length() cuenta los elementos de un vector.\nR se ejecuta en el navegador mediante webR; instalarlo solo hace falta para trabajar fuera del libro.\nLa media (55,2 s) sube mucho por los 120 s; la mediana (41 s) apenas cambia.",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html",
+    "href": "01-fundamentos.html",
+    "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html#lectura-obligatoria",
+    "href": "01-fundamentos.html#lectura-obligatoria",
+    "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
+    "section": "",
+    "text": "Rudd, J.; Stern, K.; Isensee, S. (1996). Low vs. high-fidelity prototyping debate. Interactions, 3(1), 76-85.\n\n\nLecturas complementarias\n\nHoude, S.; Hill, C. (1997). What do prototypes prototype? En Handbook of Human-Computer Interaction (pp. 367-381). Elsevier. El modelo de los tres aspectos que puede explorar un prototipo.\nLim, Y.-K.; Stolterman, E.; Tenenberg, J. (2008). The anatomy of prototypes. ACM Transactions on Computer-Human Interaction, 15(2), 1-27. Los prototipos como filtros que dejan ver unas cualidades del diseño y ocultan otras.\nWalker, M.; Takayama, L.; Landay, J. A. (2002). High-fidelity or low-fidelity, paper or computer? Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 46(5), 661-665. Un experimento que compara qué problemas detecta cada tipo de prototipo.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html#qué-es-un-prototipo",
+    "href": "01-fundamentos.html#qué-es-un-prototipo",
+    "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
+    "section": "1. Qué es un prototipo",
+    "text": "1. Qué es un prototipo\nUn prototipo es una representación de un diseño que se construye para aprender algo sobre él antes de construirlo de verdad. No es una versión pequeña del producto final: es una pregunta hecha objeto. Un prototipo bien planteado sabe qué quiere averiguar.\nHoude y Hill (1997) proponen pensar en tres aspectos que un prototipo puede explorar:\n\n\n\n\n\n\n\n\nAspecto\nPregunta que responde\nEjemplo\n\n\n\n\nPapel (role)\n¿Qué hace el producto en la vida de la persona?\nUn storyboard que muestra cuándo y por qué alguien reserva una sala de estudio\n\n\nApariencia y sensación (look and feel)\n¿Cómo se ve, se oye y se siente al usarlo?\nUn esquema en papel que se manipula como si fuera la pantalla\n\n\nImplementación\n¿Es técnicamente posible y cómo funcionaría?\nUna prueba de concepto que consulta el catálogo real\n\n\n\nLa baja fidelidad trabaja sobre todo el papel del producto y la estructura de la interacción. Deja deliberadamente fuera el aspecto visual definitivo.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html#qué-significa-fidelidad",
+    "href": "01-fundamentos.html#qué-significa-fidelidad",
+    "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
+    "section": "2. Qué significa «fidelidad»",
+    "text": "2. Qué significa «fidelidad»\nLa fidelidad es el grado en que un prototipo se parece al producto final. No es una sola escala: Lim, Stolterman y Tenenberg (2008) describen los prototipos como filtros que muestran unas cualidades del diseño y ocultan otras, y distinguen varias dimensiones que se pueden refinar por separado:\n\nApariencia: tamaño, color, tipografía, imágenes.\nDatos: si el contenido es real o de relleno.\nFuncionalidad: qué partes del sistema funcionan.\nInteractividad: cómo responde a las acciones de la persona.\nEstructura espacial: cómo se organizan los elementos en la pantalla y entre pantallas.\n\nUn esquema de página en escala de grises con textos reales tiene baja fidelidad visual pero alta fidelidad de datos. Esa mezcla es a menudo la mejor elección: con textos de relleno («lorem ipsum») no se puede comprobar si una persona entiende una etiqueta.\n\n\n\n\n\n\nFigura 1: Las cinco dimensiones de fidelidad de Lim et al. (2008) en tres artefactos habituales. La fidelidad no es una sola escala: un esquema puede ser tosco en apariencia y fiel en estructura y datos.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html#para-qué-sirve-la-baja-fidelidad",
+    "href": "01-fundamentos.html#para-qué-sirve-la-baja-fidelidad",
+    "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
+    "section": "3. Para qué sirve la baja fidelidad",
+    "text": "3. Para qué sirve la baja fidelidad\nBuxton (2007) distingue entre bocetar y prototipar. El boceto sirve para explorar y generar alternativas: es rápido, barato, desechable, abundante y ambiguo, y por eso invita a la discusión. El prototipo sirve para comprobar y refinar una idea concreta. Los esquemas y prototipos de baja fidelidad están a medio camino: conservan la rapidez del boceto y ya permiten probar.\nSus ventajas principales son:\n\nCoste y velocidad. Se hacen en minutos y se cambian en segundos. Se pueden explorar varias alternativas en lugar de defender la primera.\nAtención en lo importante. Sin colores ni tipografías, la conversación con el equipo y con los usuarios se centra en la estructura, el contenido y el flujo, y no en si el azul es el adecuado.\nCríticas más sinceras. Un diseño que parece terminado intimida: la gente opina menos sobre algo que parece costoso de cambiar.\nDetección temprana de problemas. Varios estudios han comparado prototipos de baja y alta fidelidad y encontraron que detectan un número similar de problemas de usabilidad (Virzi et al., 1996; Walker et al., 2002).\n\nY sus límites, que Rudd et al. (1996) resumen en su debate:\n\nNo sirven para evaluar el aspecto visual, la legibilidad final ni los tiempos de respuesta.\nRequieren un facilitador que «haga de ordenador», lo que puede introducir sesgos.\nComunican peor el diseño a quien no participó en él, por ejemplo a la dirección o a un cliente.\nNo sirven como especificación para desarrollar: para eso hace falta la alta fidelidad (siguiente asignatura del máster).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html#el-lugar-de-la-baja-fidelidad-en-el-ciclo-de-diseño",
+    "href": "01-fundamentos.html#el-lugar-de-la-baja-fidelidad-en-el-ciclo-de-diseño",
+    "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
+    "section": "4. El lugar de la baja fidelidad en el ciclo de diseño",
+    "text": "4. El lugar de la baja fidelidad en el ciclo de diseño\nLa norma ISO 9241-210 describe el diseño centrado en las personas como un ciclo de cuatro actividades que se repiten: entender el contexto de uso, especificar los requisitos de las personas usuarias, producir soluciones de diseño y evaluarlas. La baja fidelidad es la manera más barata de dar las primeras vueltas a ese ciclo.\n\n\n\n\n\n\n\n\nMomento\nArtefacto típico\nQué se aprende\n\n\n\n\nExploración\nBocetos, storyboards\nQué ideas merece la pena desarrollar\n\n\nEstructura\nFlujos de usuario, esquemas de página\nQué pantallas hacen falta y qué hay en cada una\n\n\nValidación temprana\nPrototipo en papel o digital navegable\nSi las personas entienden el flujo y encuentran lo que buscan\n\n\nRefinamiento\nPrototipo de alta fidelidad\nSi la solución visual e interactiva funciona\n\n\n\nCada vuelta del ciclo es una iteración. La regla práctica es subir la fidelidad solo cuando la pregunta lo exige: no se prueba la tipografía de un flujo que todavía no funciona.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html#práctica",
+    "href": "01-fundamentos.html#práctica",
+    "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
+    "section": "Práctica",
+    "text": "Práctica\nElige una aplicación que uses a diario. Dibuja en papel, en cinco minutos, su pantalla principal sin mirarla. Después compárala con la real y anota qué recordabas (la estructura, los elementos esenciales) y qué no (los detalles visuales). Lo que recuerdas es lo que la baja fidelidad debe capturar.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html#reto-t1",
+    "href": "01-fundamentos.html#reto-t1",
+    "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 1 · Tres prototipos, tres preguntas\n\n\n\nElige una pantalla de un servicio digital real (por ejemplo, la reserva de un espacio en la biblioteca de tu universidad):\n\nFormula tres preguntas de diseño distintas sobre esa pantalla, una por cada aspecto de Houde y Hill (papel, apariencia y sensación, implementación).\nPara cada pregunta, describe o dibuja el prototipo más barato que permitiría responderla y su fidelidad en las cinco dimensiones de Lim et al.\nJustifica cuál harías primero y por qué.\n\nEntrega: un informe hecho con la plantilla de entrega, con las imágenes de tus bocetos. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un servicio distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html#autoevaluación",
+    "href": "01-fundamentos.html#autoevaluación",
+    "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUn prototipo de baja fidelidad sirve para evaluar si la tipografía elegida es legible. VERDADEROFALSO\nSegún Houde y Hill, un storyboard que muestra cuándo y por qué alguien usa un servicio explora sobre todo su papelapariencia y sensaciónimplementación\nUn esquema en escala de grises con los textos definitivos tiene baja fidelidad visual y alta fidelidad de interactividaddatosfuncionalidadapariencia\nVarios estudios encontraron que los prototipos de baja y alta fidelidad detectan un número similar de problemas de usabilidad. VERDADEROFALSO\n¿Cuál de estas características corresponde a un boceto según Buxton?\n\n Preciso y detallado, para especificar el desarrollo Rápido, barato, desechable y ambiguo, para explorar alternativas Interactivo y con datos reales, para medir tiempos\n\nLas cuatro actividades del diseño centrado en las personas de la ISO 9241-210 se hacen una sola vez, en orden. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nLa legibilidad final depende de decisiones visuales que la baja fidelidad deja fuera a propósito.\nEl papel es qué hace el producto en la vida de la persona: justo lo que cuenta un storyboard.\nLos textos reales dan fidelidad de datos aunque el aspecto sea tosco.\nEs la conclusión de Virzi et al. (1996) y Walker et al. (2002).\nLa ambigüedad del boceto invita a discutir y a generar alternativas.\nEs un ciclo: se repite en cada iteración.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html#recursos-complementarios",
+    "href": "01-fundamentos.html#recursos-complementarios",
+    "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – UX prototypes: low fidelity vs. high fidelity\nResumen práctico de cuándo usar cada fidelidad\n\n\nInteraction Design Foundation – Prototyping\nIntroducción y ejemplos\n\n\nKo, A. J. – Design Methods: Prototyping\nCapítulo abierto sobre prototipado\n\n\nISO 9241-210:2019\nNorma de diseño centrado en las personas",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html",
+    "href": "02-investigacion.html",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html#lectura-obligatoria",
+    "href": "02-investigacion.html#lectura-obligatoria",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "",
+    "text": "Nielsen, J.; Molich, R. (1990). Heuristic evaluation of user interfaces. En Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’90) (pp. 249-256). ACM.\n\n\nLecturas complementarias\n\nNielsen, J. (1994). Enhancing the explanatory power of usability heuristics. En CHI ’94 (pp. 152-158). ACM. El origen de las diez heurísticas que se usan hoy.\nRohrer, C. (2022). When to use which user-experience research methods. Nielsen Norman Group. El mapa de métodos que usa este tema.\nSharp, H.; Rogers, Y.; Preece, J. (2023). Interaction design: Beyond human-computer interaction. Wiley. Capítulos sobre recogida y análisis de datos.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html#por-qué-investigar-antes-de-dibujar",
+    "href": "02-investigacion.html#por-qué-investigar-antes-de-dibujar",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "1. Por qué investigar antes de dibujar",
+    "text": "1. Por qué investigar antes de dibujar\nUn esquema de página resuelve un problema; si el problema está mal entendido, el mejor esquema no sirve. La investigación con usuarios reduce la incertidumbre sobre quién usará el producto, qué intenta conseguir, en qué contexto y qué le impide conseguirlo hoy. No se trata de preguntar a la gente qué quiere, sino de entender lo que hace y por qué.\nRohrer (2022) ordena los métodos en dos ejes que ayudan a elegir:\n\nActitudinal o comportamental: lo que las personas dicen (opiniones, intenciones) frente a lo que hacen (conducta observada). Ambas cosas difieren a menudo.\nCualitativo o cuantitativo: entender el porqué y el cómo con pocas personas, frente a medir el cuánto con muchas.\n\n\n\n\n\n\n\nFigura 1: Mapa simplificado de métodos de investigación según Rohrer (2022). La pregunta de investigación decide el cuadrante.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html#métodos-cualitativos",
+    "href": "02-investigacion.html#métodos-cualitativos",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "2. Métodos cualitativos",
+    "text": "2. Métodos cualitativos\nEntrevistas. Conversaciones individuales semiestructuradas, de 30 a 60 minutos, con un guion de temas y no de preguntas cerradas. Funcionan mejor si se pide a la persona que cuente la última vez que hizo algo concreto («cuéntame la última vez que buscaste un libro para un trabajo») que si se le pide que generalice. Se evitan las preguntas que sugieren la respuesta («¿verdad que sería útil…?»).\nObservación contextual. Se observa a la persona en su entorno real mientras hace la tarea, y se le pregunta sobre la marcha. Revela lo que no se cuenta en una entrevista: atajos, notas en papel, trucos para sortear el sistema.\nGrupos de discusión. Útiles para conocer actitudes y vocabulario, pero poco fiables para predecir conducta: la dinámica del grupo influye en lo que se dice.\nCon cinco a ocho entrevistas por perfil suelen aparecer los patrones principales. El análisis más habitual es el diagrama de afinidad: cada observación se escribe en una nota, y las notas se agrupan por similitud hasta que emergen temas.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html#métodos-cuantitativos",
+    "href": "02-investigacion.html#métodos-cuantitativos",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "3. Métodos cuantitativos",
+    "text": "3. Métodos cuantitativos\nEncuestas. Miden actitudes y características en muchas personas. Exigen preguntas neutras, opciones de respuesta exhaustivas y excluyentes, y una muestra que represente a quien interesa. Una encuesta no explica el porqué: suele combinarse con entrevistas.\nAnalítica. Los datos de uso de un producto existente (páginas vistas, búsquedas sin resultados, abandono en un formulario) muestran dónde están los problemas, aunque no por qué ocurren.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html#análisis-de-la-competencia",
+    "href": "02-investigacion.html#análisis-de-la-competencia",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "4. Análisis de la competencia",
+    "text": "4. Análisis de la competencia\nConsiste en revisar de forma sistemática productos que resuelven el mismo problema, directos (otra aplicación de reservas) o indirectos (cómo se reserva hoy por teléfono o en persona). Se compara con una tabla: tareas que permite, cómo las resuelve, puntos fuertes y débiles. El objetivo no es copiar, sino conocer las convenciones que los usuarios ya esperan (Tema 7) y encontrar huecos.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html#revisión-heurística",
+    "href": "02-investigacion.html#revisión-heurística",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "5. Revisión heurística",
+    "text": "5. Revisión heurística\nNielsen y Molich (1990) propusieron que varios evaluadores revisen una interfaz con una lista breve de principios, las heurísticas, y anoten los problemas. Es un método de inspección: no participan usuarios, así que es rápido y barato, pero no sustituye a las pruebas con personas. Sus hallazgos más importantes:\n\nUn evaluador solo encuentra una parte de los problemas; con tres a cinco evaluadores independientes se detecta la mayoría.\nCada evaluador revisa por separado y después se juntan los resultados.\n\nCada problema se valora con una escala de severidad de 0 a 4: 0, no es un problema; 1, cosmético; 2, menor; 3, importante; 4, catástrofe que hay que resolver antes de lanzar. Las diez heurísticas de Nielsen (1994) son:\n\n\n\nN.º\nHeurística\n\n\n\n\n1\nVisibilidad del estado del sistema\n\n\n2\nCorrespondencia entre el sistema y el mundo real\n\n\n3\nControl y libertad del usuario\n\n\n4\nConsistencia y estándares\n\n\n5\nPrevención de errores\n\n\n6\nReconocer mejor que recordar\n\n\n7\nFlexibilidad y eficiencia de uso\n\n\n8\nDiseño estético y minimalista\n\n\n9\nAyudar a reconocer, diagnosticar y recuperarse de errores\n\n\n10\nAyuda y documentación",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html#del-hallazgo-al-concepto-creativo",
+    "href": "02-investigacion.html#del-hallazgo-al-concepto-creativo",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "6. Del hallazgo al concepto creativo",
+    "text": "6. Del hallazgo al concepto creativo\nLos datos no diseñan solos. El paso de la investigación al concepto tiene tres momentos:\n\nHallazgos: lo que se ha observado, con su evidencia («4 de 6 personas buscaban el horario en la página de contacto»).\nConclusiones (insights): la interpretación que explica el hallazgo («para quien no conoce la biblioteca, el horario es información de contacto»).\nOportunidades, formuladas como preguntas «¿Cómo podríamos…?» («¿cómo podríamos hacer que el horario esté donde la gente lo busca?»). Son lo bastante abiertas para admitir varias soluciones y lo bastante concretas para orientar los bocetos.\n\nUn concepto creativo viable responde a una oportunidad con una idea que se puede explicar en una frase y probar con un prototipo de baja fidelidad.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html#práctica-en-r-priorizar-los-hallazgos-de-una-revisión-heurística",
+    "href": "02-investigacion.html#práctica-en-r-priorizar-los-hallazgos-de-una-revisión-heurística",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "Práctica en R: priorizar los hallazgos de una revisión heurística",
+    "text": "Práctica en R: priorizar los hallazgos de una revisión heurística\nTres evaluadores han revisado una aplicación de biblioteca. La tabla hallazgos_heuristicos (datos simulados) recoge cada problema, la heurística afectada y la severidad que le da cada evaluador.\n\n\n\n\n\n\nLa función priorizar_hallazgos() agrupa por problema, calcula la severidad media y cuántos evaluadores lo detectaron, y ordena:\n\n\n\n\n\n\n\nEjercicio 2.1\n¿Cuántos problemas tienen prioridad alta? Completa el código.\n\n\n\n\n\n\n\n\nLas categorías son «alta», «media» y «baja», en minúsculas.\n\n\np &lt;- priorizar_hallazgos(hallazgos_heuristicos)\nsum(p$prioridad == \"alta\")\nDos: el botón «Atrás» que borra el formulario y los mensajes de error genéricos. Son los primeros que hay que resolver en el siguiente esquema.\n\n\n\n\nEjercicio 2.2\nUn problema detectado por un solo evaluador puede ser una opinión personal; uno detectado por todos, casi seguro un problema real. ¿Qué problema detectaron menos evaluadores y a la vez tiene la menor severidad media? Escribe el código que lo muestra.\n\n\n\n\n\n\n\n\nLa tabla está ordenada de mayor a menor severidad: el último es el de la fila número nrow(p).\n\n\np$problema[nrow(p)]\nLa tipografía de 12 px en los avisos legales: dos evaluadores, severidad media 1,5. No se ignora (el Tema 12 explica por qué el tamaño de letra importa), pero va al final de la lista.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html#reto-t2",
+    "href": "02-investigacion.html#reto-t2",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 2 · Plan de investigación y revisión heurística\n\n\n\nElige un servicio digital de una biblioteca, un archivo o un museo:\n\nRedacta tres preguntas de investigación y, para cada una, el método más adecuado según el mapa de Rohrer, justificando el cuadrante.\nEscribe el guion de una entrevista de 30 minutos (máximo diez temas) que evite preguntas sugestivas.\nHaz una revisión heurística del servicio con las diez heurísticas de Nielsen: al menos seis problemas, con captura, heurística y severidad de 0 a 4.\nFormula dos preguntas «¿Cómo podríamos…?» a partir de los problemas más graves.\n\nEntrega: un informe hecho con la plantilla de entrega. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un servicio distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html#autoevaluación",
+    "href": "02-investigacion.html#autoevaluación",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUna encuesta es el mejor método para entender por qué las personas abandonan un formulario. VERDADEROFALSO\nObservar a alguien mientras busca un libro en el catálogo es un método actitudinalcomportamental\nEn una revisión heurística participan usuarios reales. VERDADEROFALSO\nSegún Nielsen y Molich, ¿cuántos evaluadores independientes conviene emplear para detectar la mayoría de los problemas? unode tres a cincomás de veinte\nEn la escala de severidad de Nielsen, un problema que hay que resolver antes del lanzamiento recibe un \n¿Cuál de estas preguntas de entrevista es más adecuada?\n\n ¿Verdad que sería útil reservar salas desde el móvil? ¿Usarías una aplicación de reservas? Cuéntame la última vez que necesitaste una sala de estudio: ¿qué hiciste?\n\n«Para quien no conoce la biblioteca, el horario es información de contacto» es un hallazgoinsight (conclusión)concepto creativo\n\n\n\nVer explicaciones\n\nLa encuesta mide cuánto, pero no explica por qué: para eso hacen falta métodos cualitativos o la observación.\nObservar la conducta es comportamental; preguntar opiniones es actitudinal.\nEs un método de inspección: lo hacen evaluadores con experiencia, sin usuarios.\nUn solo evaluador detecta solo una parte; tres a cinco cubren la mayoría.\n4 es «catástrofe de usabilidad»: imprescindible resolverla.\nPedir un episodio concreto y reciente da información fiable y evita sugerir la respuesta.\nEs la interpretación que explica lo observado; el hallazgo es el dato con su evidencia.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html#recursos-complementarios",
+    "href": "02-investigacion.html#recursos-complementarios",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – 10 usability heuristics\nLas heurísticas con ejemplos actuales\n\n\nNielsen Norman Group – Which UX research methods\nEl mapa de métodos\n\n\nInteraction Design Foundation – User research\nIntroducción a los métodos\n\n\nHanington, B.; Martin, B. (2022). The pocket universal methods of design. Quarto\nFichas breves de métodos (bibliografía complementaria)",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "03-problema.html",
+    "href": "03-problema.html",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "03-problema.html#lectura-obligatoria",
+    "href": "03-problema.html#lectura-obligatoria",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "",
+    "text": "Dorst, K. (2011). The core of ‘design thinking’ and its application. Design Studies, 32(6), 521-532.\n\n\nLecturas complementarias\n\nRittel, H. W. J.; Webber, M. M. (1973). Dilemmas in a general theory of planning. Policy Sciences, 4(2), 155-169. El texto que introdujo los «problemas retorcidos» (wicked problems).\nGoodwin, K. (2009). Designing for the digital age. Wiley. Capítulos sobre la definición de requisitos y objetivos (bibliografía complementaria de la asignatura).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "03-problema.html#por-qué-definir-el-problema",
+    "href": "03-problema.html#por-qué-definir-el-problema",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "1. Por qué definir el problema",
+    "text": "1. Por qué definir el problema\nLos equipos tienden a saltar a la solución: «hagamos una aplicación». Pero una solución solo es buena respecto a un problema, y la mayoría de los proyectos que fracasan resolvieron bien un problema equivocado. Definir el problema es convertir lo aprendido en la investigación (Tema 2) en un enunciado que todo el equipo comparta y que permita decidir qué entra y qué no.\nRittel y Webber (1973) llamaron problemas retorcidos (wicked problems) a los que no tienen una formulación definitiva: entender el problema y diseñar la solución ocurren a la vez, y cada solución cambia el problema. Muchos problemas de diseño de interacción son así. Por eso el enunciado del problema es provisional: se revisa cuando la evidencia lo pide.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "03-problema.html#encuadrar-el-problema",
+    "href": "03-problema.html#encuadrar-el-problema",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "2. Encuadrar el problema",
+    "text": "2. Encuadrar el problema\nDorst (2011) describe el núcleo del pensamiento de diseño como la creación de encuadres (frames): maneras nuevas de mirar una situación que abren soluciones que antes no se veían. En lugar de preguntar «¿cómo hacemos más rápida la reserva de salas?», un encuadre distinto pregunta «¿cómo hacemos que la gente sepa qué salas están libres sin tener que reservar?». El encuadre no sale de la nada: nace de entender los valores y las prácticas de las personas implicadas.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "03-problema.html#el-enunciado-del-problema",
+    "href": "03-problema.html#el-enunciado-del-problema",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "3. El enunciado del problema",
+    "text": "3. El enunciado del problema\nUn buen enunciado del problema está centrado en la persona, describe una necesidad (no una función) y se apoya en evidencia. Una estructura útil:\n\n[Persona usuaria] necesita [necesidad] porque [conclusión de la investigación].\n\n\n\n\n\n\n\n\nDébil\nMejor\n\n\n\n\n«Los usuarios necesitan una aplicación de reservas.»\n«Quien estudia en la biblioteca en época de exámenes necesita saber si encontrará sitio antes de salir de casa, porque llegar y no encontrarlo le hace perder la tarde.»\n\n\n«Hay que mejorar la web.»\n«Quien visita por primera vez la biblioteca necesita encontrar el horario y la ubicación en un solo vistazo, porque lo busca desde el móvil y con prisa.»\n\n\n\nEl enunciado débil contiene ya una solución y no dice a quién ni por qué. El bueno deja abiertas varias soluciones: una aplicación, un indicador de ocupación en la web o un aviso en las pantallas de la facultad.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "03-problema.html#hipótesis-de-diseño",
+    "href": "03-problema.html#hipótesis-de-diseño",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "4. Hipótesis de diseño",
+    "text": "4. Hipótesis de diseño\nUna hipótesis de diseño convierte una idea en algo comprobable. Indica qué creemos, qué resultado esperamos y cómo sabremos si acertamos:\n\nCreemos que [cambio o solución] para [persona usuaria] conseguirá [resultado]. Sabremos que es así cuando [señal medible].\n\nPor ejemplo: «Creemos que mostrar la ocupación en tiempo real en la portada de la web para quien estudia en época de exámenes reducirá los desplazamientos inútiles. Sabremos que es así cuando, en la prueba con el prototipo, al menos 4 de 5 participantes decidan correctamente si ir o no a la biblioteca en menos de 30 segundos». La señal medible conecta con el Tema 4.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "03-problema.html#alcance-y-punto-de-partida-común",
+    "href": "03-problema.html#alcance-y-punto-de-partida-común",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "5. Alcance y punto de partida común",
+    "text": "5. Alcance y punto de partida común\nEl alcance dice qué entra en el proyecto y, sobre todo, qué no entra. Escribirlo evita que el proyecto crezca sin control y que cada miembro del equipo diseñe para un problema distinto. Una tabla sencilla basta:\n\n\n\nDentro\nFuera\n\n\n\n\nConsultar la ocupación de salas y puestos\nGestión de préstamos\n\n\nReserva de salas de trabajo en grupo\nPagos y sanciones\n\n\nVersión móvil\nAplicación nativa\n\n\n\nEl brief de diseño reúne en una página el enunciado del problema, las personas usuarias, las hipótesis, el alcance, las restricciones (plazos, tecnología, normativa de accesibilidad) y los criterios de éxito. Es el punto de partida común del equipo, y el primer documento del proyecto final de la asignatura.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "03-problema.html#práctica",
+    "href": "03-problema.html#práctica",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "Práctica",
+    "text": "Práctica\nEn parejas, cada uno redacta el enunciado del problema a partir de los mismos tres hallazgos de investigación. Comparad los enunciados: ¿proponéis el mismo encuadre? ¿Alguno contiene una solución escondida? Reescribidlos hasta que ninguno la contenga.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "03-problema.html#reto-t3",
+    "href": "03-problema.html#reto-t3",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 3 · Brief de diseño\n\n\n\nA partir de la investigación del reto del Tema 2 (o de otro servicio que elijas), elabora el brief de diseño de un proyecto:\n\nDos encuadres distintos del problema y la justificación del que eliges.\nEl enunciado del problema con la estructura persona-necesidad-conclusión, apoyado en al menos un hallazgo.\nTres hipótesis de diseño con su señal medible.\nLa tabla de alcance (dentro y fuera) y las restricciones del proyecto.\n\nEntrega: un informe de dos páginas como máximo hecho con la plantilla de entrega. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un proyecto distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "03-problema.html#autoevaluación",
+    "href": "03-problema.html#autoevaluación",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\n«Los usuarios necesitan una aplicación de reservas» es un buen enunciado del problema. VERDADEROFALSO\nLos problemas que no tienen una formulación definitiva y cambian con cada solución se llaman problemas técnicosretorcidos (wicked)domesticados\nSegún Dorst, el núcleo del pensamiento de diseño es crear nuevos  del problema.\nUna hipótesis de diseño debe incluir una señal que permita saber si se cumple. VERDADEROFALSO\n¿Qué parte del alcance evita con más eficacia que el proyecto crezca sin control?\n\n La lista de lo que entra en el proyecto La lista explícita de lo que no entra El calendario de entregas\n\n¿Qué documento reúne en una página el problema, las personas usuarias, las hipótesis, el alcance y los criterios de éxito? El storyboardEl brief de diseñoEl flujo de usuario\n\n\n\nVer explicaciones\n\nContiene ya una solución y no dice para quién ni por qué.\nRittel y Webber los llamaron wicked problems.\nEncuadrar es mirar la situación de una forma que abre soluciones nuevas.\nSin señal medible, la hipótesis no se puede comprobar.\nEscribir lo que queda fuera obliga a decidir y evita añadidos sin fin.\nEl brief es el punto de partida común del equipo.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "03-problema.html#recursos-complementarios",
+    "href": "03-problema.html#recursos-complementarios",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nInteraction Design Foundation – Problem statements\nCómo redactar el enunciado del problema\n\n\nNielsen Norman Group – Using «How might we» questions\nDel problema a las oportunidades de diseño\n\n\nDesign Council – Framework for innovation\nEl doble diamante: divergir y converger en el problema y en la solución",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html",
+    "href": "04-metricas.html",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html#lectura-obligatoria",
+    "href": "04-metricas.html#lectura-obligatoria",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "",
+    "text": "Rodden, K.; Hutchinson, H.; Fu, X. (2010). Measuring the user experience on a large scale: User-centered metrics for web applications. En Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’10) (pp. 2395-2398). ACM.\n\n\nLecturas complementarias\n\nBangor, A.; Kortum, P. T.; Miller, J. T. (2008). An empirical evaluation of the System Usability Scale. International Journal of Human-Computer Interaction, 24(6), 574-594. Cómo interpretar las puntuaciones SUS.\nDoran, G. T. (1981). There’s a S.M.A.R.T. way to write management’s goals and objectives. Management Review, 70(11), 35-36. El origen del acrónimo SMART.\nSauro, J.; Lewis, J. R. (2016). Quantifying the user experience: Practical statistics for user research (2.ª ed.). Morgan Kaufmann. La referencia para calcular métricas con muestras pequeñas.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html#objetivos-smart",
+    "href": "04-metricas.html#objetivos-smart",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "1. Objetivos SMART",
+    "text": "1. Objetivos SMART\nUn objetivo vago («que la web sea más fácil de usar») no permite saber si se ha cumplido. El acrónimo SMART, propuesto por Doran (1981) para la gestión y adoptado en el diseño, pide que un objetivo sea:\n\n\n\n\n\n\n\n\nLetra\nCriterio\nPregunta de control\n\n\n\n\nS\nEspecífico\n¿Qué cambia exactamente y para quién?\n\n\nM\nMedible\n¿Con qué dato sabremos que se ha conseguido?\n\n\nA\nAlcanzable\n¿Es realista con el tiempo y los recursos del proyecto?\n\n\nR\nRelevante\n¿Responde al problema definido en el brief?\n\n\nT\nTemporal\n¿Para cuándo?\n\n\n\nEjemplo: «Antes del 15 de diciembre, al menos el 80 % de los participantes de la prueba con el prototipo navegable encontrarán el horario de la biblioteca sin ayuda en menos de 20 segundos».",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html#hitos-verificables",
+    "href": "04-metricas.html#hitos-verificables",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "2. Hitos verificables",
+    "text": "2. Hitos verificables\nUn hito es un punto del proyecto en el que se puede comprobar que algo está terminado. Se define por su resultado, no por la actividad: «flujo principal validado con cinco usuarios» es un hito; «trabajar en el flujo» no lo es. Un calendario de proyecto de baja fidelidad podría ser:\n\nBrief de diseño aprobado por el equipo (Tema 3).\nFlujos principal, alternativos y de error documentados (Tema 5).\nEsquemas de todas las pantallas del flujo principal (Tema 7).\nPrototipo navegable con estados y transiciones (Tema 8).\nPrueba con cinco participantes y lista priorizada de cambios (Tema 9).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html#métricas-de-éxito-el-marco-heart",
+    "href": "04-metricas.html#métricas-de-éxito-el-marco-heart",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "3. Métricas de éxito: el marco HEART",
+    "text": "3. Métricas de éxito: el marco HEART\nRodden, Hutchinson y Fu (2010) propusieron en Google el marco HEART, que agrupa las métricas de la experiencia en cinco categorías:\n\n\n\n\n\n\n\n\nCategoría\nQué mide\nEjemplo\n\n\n\n\nHappiness (satisfacción)\nActitudes\nPuntuación SUS, satisfacción declarada\n\n\nEngagement (implicación)\nIntensidad de uso\nReservas por estudiante y mes\n\n\nAdoption (adopción)\nNuevos usuarios\nEstudiantes que hacen su primera reserva\n\n\nRetention (retención)\nUsuarios que vuelven\nPorcentaje que repite al mes siguiente\n\n\nTask success (éxito en la tarea)\nEficacia y eficiencia\nTasa de éxito, tiempo en la tarea, errores\n\n\n\nPara elegir, el marco propone un proceso de objetivos, señales y métricas: primero el objetivo, después la señal de conducta que indicaría que se cumple y, al final, la métrica que cuantifica esa señal. En baja fidelidad, las categorías útiles son sobre todo el éxito en la tarea y la satisfacción; las demás exigen un producto en uso.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html#medir-con-pocas-personas",
+    "href": "04-metricas.html#medir-con-pocas-personas",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "4. Medir con pocas personas",
+    "text": "4. Medir con pocas personas\nLas pruebas de prototipos se hacen con pocas personas, a menudo cinco. Con muestras así, una cifra sola engaña: «4 de 5 completaron la tarea» es un 80 %, pero el porcentaje real en la población podría estar bastante más abajo. Sauro y Lewis (2016) recomiendan:\n\nTasa de éxito con intervalo de confianza de Wald ajustado: indica entre qué valores está probablemente la tasa real.\nMedia geométrica para los tiempos: con pocas personas y alguna muy lenta, representa mejor el tiempo típico que la media aritmética.\nSUS (System Usability Scale) para la satisfacción: diez afirmaciones con respuesta de 1 a 5 que dan una puntuación de 0 a 100. No es un porcentaje. Bangor et al. (2008) consideran «aceptable» una puntuación desde 70, «marginal» entre 50 y 70, y «no aceptable» por debajo de 50.\n\n\n\n\n\n\n\nFigura 1: Intervalo de confianza al 95 % de una tasa de éxito del 80 % según el número de participantes (Wald ajustado). Con 5 personas, la tasa real podría estar entre el 36 % y el 98 %.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html#práctica-en-r-medir-una-prueba-pequeña",
+    "href": "04-metricas.html#práctica-en-r-medir-una-prueba-pequeña",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "Práctica en R: medir una prueba pequeña",
+    "text": "Práctica en R: medir una prueba pequeña\ntasa_exito() calcula la tasa con su intervalo; tiempo_tipico(), la media geométrica; puntuacion_sus(), el SUS de cada participante.\n\n\n\n\n\n\n\nEjercicio 4.1\nEn la prueba con el prototipo en papel, 3 de 8 participantes reservaron la sala sin ayuda. Calcula el límite superior del intervalo de confianza: ¿es probable que la tasa real llegue al 70 %?\n\n\n\n\n\n\n\n\nn es el número total de participantes.\n\n\nt &lt;- tasa_exito(exitos = 3, n = 8)\nt[\"superior\"]\nEl límite superior es 0,70 (0,696): aun en el mejor caso razonable, la tasa real apenas llegaría al 70 %. Con solo ocho personas ya sabemos lo importante: la tarea necesita cambios antes de seguir.\n\n\n\n\nEjercicio 4.2\nrespuestas_sus contiene las respuestas de 12 participantes a un prototipo navegable. Calcula la mediana de sus puntuaciones SUS.\n\n\n\n\n\n\n\n\nLa función de la mediana es median().\n\n\nsus &lt;- puntuacion_sus(respuestas_sus[, -1])\nmedian(sus)\n75: por encima del umbral de 70 que Bangor et al. consideran aceptable. Con aceptabilidad_sus(sus) puedes ver la categoría de cada participante.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html#reto-t4",
+    "href": "04-metricas.html#reto-t4",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 4 · Plan de hitos y métricas\n\n\n\nPara el proyecto de tu brief (reto del Tema 3):\n\nReescribe tus objetivos como tres objetivos SMART y comprueba cada criterio con la tabla del apartado 1.\nDefine cinco hitos verificables con su fecha y su resultado.\nAplica el proceso objetivos-señales-métricas del marco HEART a dos de tus objetivos.\nPara una métrica de éxito en la tarea, calcula con tasa_exito() el intervalo que obtendrías con 5 y con 15 participantes si el 80 % tuviera éxito, y explica qué implica para tu plan de pruebas.\n\nEntrega: un informe hecho con la plantilla de entrega. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un proyecto distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html#autoevaluación",
+    "href": "04-metricas.html#autoevaluación",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\n«Mejorar la usabilidad de la web» es un objetivo SMART. VERDADEROFALSO\nEn el marco HEART, la letra T corresponde a tiempoéxito en la tarea (task success)tráfico\n«Trabajar en los esquemas» es un hito verificable. VERDADEROFALSO\nUna puntuación SUS de 75 significa que el 75 % de los participantes está satisfecho. VERDADEROFALSO\nSegún Bangor et al. (2008), una puntuación SUS de 62,5 es no aceptablemarginalaceptable\nCon tiempos de 32, 41, 38, 45 y 120 segundos, ¿qué resumen representa mejor el tiempo típico?\n\n La media aritmética (55 s) La media geométrica (49 s) El máximo (120 s)\n\nEn el proceso del marco HEART, ¿qué se define primero? Los objetivosLas señalesLas métricas\n\n\n\nVer explicaciones\n\nNo dice qué, para quién, cómo se mide ni para cuándo.\nTask success: eficacia y eficiencia en las tareas.\nUn hito se define por un resultado comprobable, no por una actividad.\nEl SUS es una puntuación de 0 a 100, no un porcentaje.\nEntre 50 y 70 es «marginal».\nLa media geométrica reduce el peso del participante muy lento.\nObjetivos, después señales y, al final, métricas.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html#recursos-complementarios",
+    "href": "04-metricas.html#recursos-complementarios",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nMeasuringU – Calculadoras de Jeff Sauro\nIntervalos y comparaciones para muestras pequeñas\n\n\nNielsen Norman Group – Success rate: the simplest usability metric\nCómo medir el éxito en la tarea\n\n\nUsability.gov – System Usability Scale\nEl cuestionario SUS y su cálculo",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "05-flujos.html",
+    "href": "05-flujos.html",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
+    "objectID": "05-flujos.html#lectura-obligatoria",
+    "href": "05-flujos.html#lectura-obligatoria",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "",
+    "text": "Kalbach, J. (2021). Mapping experiences: A complete guide to customer alignment through journeys, blueprints, and diagrams (2.ª ed.). O’Reilly. Capítulos sobre los diagramas de alineamiento y los mapas de tareas.\n\n\nLecturas complementarias\n\nNielsen Norman Group. User journeys vs. user flows. Diferencia entre el viaje completo y el flujo de una tarea.\nNielsen Norman Group. Wireflows: A UX deliverable for workflows and apps. Flujos dibujados con esquemas de página.\nNielsen Norman Group. Task analysis: Support users in achieving their goals. Cómo descomponer una tarea.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
+    "objectID": "05-flujos.html#de-la-tarea-al-flujo",
+    "href": "05-flujos.html#de-la-tarea-al-flujo",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "1. De la tarea al flujo",
+    "text": "1. De la tarea al flujo\nAntes de dibujar pantallas hay que entender la tarea: qué quiere conseguir la persona y qué pasos sigue. El análisis de tareas descompone un objetivo en subtareas y pasos. Por ejemplo, «reservar una sala de trabajo en grupo» se descompone en: elegir fecha y franja, ver salas libres, elegir una, identificarse, confirmar y recibir la confirmación.\nUn flujo de usuario representa el recorrido por el sistema para completar una tarea: qué ve la persona, qué decide y adónde la lleva cada decisión. No es lo mismo que un viaje de usuario (user journey), que cubre toda la experiencia, dentro y fuera del producto (enterarse de que existe la sala, desplazarse, usarla), ni que un mapa de tareas, que ordena todas las tareas del servicio sin entrar en pantallas.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
+    "objectID": "05-flujos.html#flujos-principal-alternativo-y-de-error",
+    "href": "05-flujos.html#flujos-principal-alternativo-y-de-error",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "2. Flujos principal, alternativo y de error",
+    "text": "2. Flujos principal, alternativo y de error\nCada tarea tiene varios caminos:\n\nFlujo principal (o «camino feliz»): el recorrido más directo cuando todo va bien.\nFlujos alternativos: caminos válidos distintos (reservar desde el calendario o desde la ficha de la sala; reservar sin haber iniciado sesión).\nFlujos de error: qué pasa cuando algo falla (la sala se ocupa mientras se reserva, la sesión caduca, falta un dato).\n\nLos flujos de error son los que más se olvidan y los que más frustran. Un buen flujo de error explica qué ha pasado, conserva lo que la persona ya había hecho y le ofrece un camino para continuar (heurísticas 3, 5 y 9 de Nielsen, Tema 2).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
+    "objectID": "05-flujos.html#notación",
+    "href": "05-flujos.html#notación",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "3. Notación",
+    "text": "3. Notación\nNo hay una notación única, pero la más extendida, heredada de los diagramas de flujo, usa:\n\n\n\nForma\nSignifica\n\n\n\n\nÓvalo\nInicio o fin del flujo\n\n\nRectángulo\nPantalla o estado que ve la persona\n\n\nRombo\nDecisión (de la persona o del sistema)\n\n\nFlecha\nPaso de un punto a otro, con la acción que lo provoca\n\n\n\n\n\n\n\n\n\nFigura 1: Flujo de reserva de una sala con su camino principal, una alternativa (iniciar sesión) y un flujo de error (la sala se ocupa durante la reserva) que devuelve a la lista sin perder la fecha elegida.\n\n\n\nLos wireflows combinan el flujo con miniaturas de los esquemas de cada pantalla, y son útiles cuando el contenido de la pantalla cambia según la decisión. Se trabajan en los temas 7 y 8.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
+    "objectID": "05-flujos.html#flujos-coherentes-eficientes-y-sin-barreras",
+    "href": "05-flujos.html#flujos-coherentes-eficientes-y-sin-barreras",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "4. Flujos coherentes, eficientes y sin barreras",
+    "text": "4. Flujos coherentes, eficientes y sin barreras\nAl revisar un flujo conviene comprobar:\n\nSin callejones sin salida: desde cualquier punto se puede continuar, volver o salir.\nPocos pasos: cada paso debe aportar algo a la persona, no solo a la organización. Pedir datos que no se necesitan para la tarea añade abandono.\nCoherencia: la misma acción produce el mismo resultado en todo el flujo.\nSin barreras: el flujo se puede completar con teclado, con lector de pantalla y sin depender de la memoria (por ejemplo, sin códigos que haya que copiar de otra pantalla); el Tema 12 lo desarrolla.\nRetroceso seguro: volver atrás no destruye lo que la persona ya había escrito.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
+    "objectID": "05-flujos.html#dónde-se-pierden-los-usuarios",
+    "href": "05-flujos.html#dónde-se-pierden-los-usuarios",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "5. ¿Dónde se pierden los usuarios?",
+    "text": "5. ¿Dónde se pierden los usuarios?\nCuando un flujo ya existe, la analítica muestra cuántas personas llegan a cada paso. Ese recorrido se representa como un embudo: para cada paso, cuántos continúan respecto al paso anterior y respecto al inicio. El paso con menos continuidad señala dónde hay que mirar primero, aunque no explica por qué: para eso se necesita investigación cualitativa (Tema 2).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
+    "objectID": "05-flujos.html#práctica-en-r-el-embudo-de-un-flujo-de-registro",
+    "href": "05-flujos.html#práctica-en-r-el-embudo-de-un-flujo-de-registro",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "Práctica en R: el embudo de un flujo de registro",
+    "text": "Práctica en R: el embudo de un flujo de registro\nflujo_registro contiene los usuarios que llegan a cada paso del registro en una aplicación de biblioteca (datos simulados). La función embudo() calcula la continuidad:\n\n\n\n\n\n\n\nEjercicio 5.1\n¿En qué paso continúan menos personas respecto al paso anterior? Completa el código con la columna adecuada.\n\n\n\n\n\n\n\n\nLa columna que compara con el paso anterior se llama continua.\n\n\ne$paso[which.min(e$continua)]\n«Crear cuenta»: solo continúa el 70 % de quienes llegan a la pantalla de inicio. Es un punto clásico de abandono. Antes de rediseñarlo, conviene averiguar por qué: ¿hace falta una cuenta para lo que la persona quería hacer?\n\n\n\n\nEjercicio 5.2\n¿Qué porcentaje de quienes llegan a la pantalla de inicio termina con la cuenta activa?\n\n\n\n\n\n\n\n\nEl último paso está en la fila número nrow(e).\n\n\ne$acumulado[nrow(e)]\nEl 31,7 %: de cada diez personas que empiezan, solo tres terminan el registro. Quitar pasos que no aporten valor a la persona es la primera hipótesis que habría que probar.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
+    "objectID": "05-flujos.html#reto-t5",
+    "href": "05-flujos.html#reto-t5",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 5 · Flujos de la tarea principal\n\n\n\nPara la tarea principal de tu proyecto:\n\nHaz el análisis de la tarea: objetivo, subtareas y pasos.\nDibuja el flujo principal, al menos dos alternativos y al menos dos de error, con la notación del apartado 3.\nRevisa el flujo con la lista del apartado 4 y documenta los cambios que haces y por qué.\nIndica qué datos de analítica o de prueba usarías para saber dónde se pierden los usuarios.\n\nEntrega: un informe hecho con la plantilla de entrega con los diagramas (en papel fotografiado o en una herramienta digital). Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un proyecto distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
+    "objectID": "05-flujos.html#autoevaluación",
+    "href": "05-flujos.html#autoevaluación",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUn viaje de usuario y un flujo de usuario son lo mismo. VERDADEROFALSO\nEn un diagrama de flujo, una decisión se representa con un óvalorectángulorombo\nQué ocurre cuando la sala se ocupa mientras alguien la reserva se documenta en un flujo principalalternativode error\nVolver atrás en un formulario no debería borrar lo que la persona ya había escrito. VERDADEROFALSO\nEn el embudo de la práctica, ¿qué porcentaje de quienes llegan a «Crear cuenta» pasa a «Datos personales»?  %\nEl embudo indica en qué paso abandonan los usuarios y también por qué lo hacen. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nEl viaje cubre toda la experiencia, también fuera del producto; el flujo, el recorrido por el sistema en una tarea.\nEl rombo es la decisión; el rectángulo, una pantalla; el óvalo, el inicio o el fin.\nEs un fallo que el diseño debe prever.\nEs control y libertad del usuario (heurística 3) y prevención de errores.\n610 / 840 = 72,6 %.\nEl embudo dice dónde, no por qué: para eso hace falta investigación cualitativa.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
+    "objectID": "05-flujos.html#recursos-complementarios",
+    "href": "05-flujos.html#recursos-complementarios",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – User journeys vs. user flows\nDiferencias entre artefactos\n\n\nNielsen Norman Group – Wireflows\nFlujos con esquemas de página\n\n\nNielsen Norman Group – Task analysis\nDescomponer tareas\n\n\nFigma Community\nPlantillas de diagramas de flujo",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html",
+    "href": "06-storyboards.html",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html#lectura-obligatoria",
+    "href": "06-storyboards.html#lectura-obligatoria",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "",
+    "text": "Truong, K. N.; Hayes, G. R.; Abowd, G. D. (2006). Storyboarding: An empirical determination of best practices and effective guidelines. En Proceedings of the 6th Conference on Designing Interactive Systems (DIS ’06) (pp. 12-21). ACM.\n\n\nLecturas complementarias\n\nBuxton, W. (2007). Sketching user experiences. Elsevier. Capítulos sobre los bocetos en secuencia y los guiones visuales.\nNielsen Norman Group. Storyboards help visualize UX ideas. Guía práctica con ejemplos.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html#qué-es-un-storyboard",
+    "href": "06-storyboards.html#qué-es-un-storyboard",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "1. Qué es un storyboard",
+    "text": "1. Qué es un storyboard\nUn storyboard es una secuencia de viñetas que cuenta cómo una persona usa un producto en una situación concreta. Viene del cine y la animación, donde se usa para planificar las escenas antes de rodar. En el diseño de interacción cumple la misma función: imaginar el uso antes de construir nada.\nSu fuerza está en mostrar lo que los esquemas de página no muestran: quién, dónde, cuándo, con qué ánimo y por qué usa alguien el producto. Un esquema enseña una pantalla; un storyboard enseña una vida en la que esa pantalla tiene sentido.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html#tres-tipos-de-storyboard",
+    "href": "06-storyboards.html#tres-tipos-de-storyboard",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "2. Tres tipos de storyboard",
+    "text": "2. Tres tipos de storyboard\n\n\n\n\n\n\n\n\nTipo\nQué cuenta\nCuándo es útil\n\n\n\n\nNarrativo (de escenario)\nLa situación de la persona, su problema y cómo el producto encaja en su día\nAl principio, para comunicar y validar el concepto (papel del producto, Tema 1)\n\n\nDe interacción\nLa secuencia de pantallas y acciones dentro del producto en una tarea\nAl pasar del flujo (Tema 5) a los esquemas (Tema 7)\n\n\nDe proceso\nCómo participan varias personas, canales o sistemas a lo largo del tiempo\nEn servicios con partes digitales y presenciales, como un préstamo interbibliotecario\n\n\n\nUn escenario es la historia escrita que sirve de guion: una persona concreta, con un objetivo, en un contexto, que da una serie de pasos. El storyboard la convierte en imágenes.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html#elementos-de-un-buen-storyboard",
+    "href": "06-storyboards.html#elementos-de-un-buen-storyboard",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "3. Elementos de un buen storyboard",
+    "text": "3. Elementos de un buen storyboard\nTruong, Hayes y Abowd (2006) analizaron storyboards de diseñadores profesionales y estudiaron cómo se perciben. Identificaron cinco elementos que hay que decidir:\n\nNivel de detalle: basta con lo que la historia necesita; el exceso de detalle distrae de la idea.\nTexto: frases breves que expliquen lo que la imagen no puede, sin repetirla.\nPersonas y emociones: mostrar a la persona y cómo se siente (frustración al principio, alivio al final) ayuda a empatizar.\nNúmero de viñetas: pocas, centradas en los momentos que importan; una historia larga se divide.\nPaso del tiempo: indicarlo cuando es relevante (un reloj, «dos días después»).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html#contexto-y-momentos-clave",
+    "href": "06-storyboards.html#contexto-y-momentos-clave",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "4. Contexto y momentos clave",
+    "text": "4. Contexto y momentos clave\nLos storyboards son especialmente útiles para representar:\n\nEl contexto de uso: el entorno físico y social. No es lo mismo buscar un libro sentado en casa que en el autobús, con una mano y con mala cobertura.\nEl detonante: qué hace que la persona necesite el producto en ese momento.\nEl momento clave: el instante en que el producto marca la diferencia. Si el storyboard no tiene un momento clave claro, quizá el concepto tampoco lo tenga.\nEl desenlace: qué ha conseguido la persona y cómo se siente.\n\n\n\n\n\n\n\nFigura 1: Un storyboard narrativo de cuatro viñetas: detonante, búsqueda, momento clave y desenlace. Los dibujos pueden ser tan esquemáticos como estos: lo importante es la historia.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html#no-hace-falta-saber-dibujar",
+    "href": "06-storyboards.html#no-hace-falta-saber-dibujar",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "5. No hace falta saber dibujar",
+    "text": "5. No hace falta saber dibujar\nUn storyboard comunica ideas, no talento artístico. Bastan figuras de palitos, cajas y flechas. Algunos recursos:\n\nPersonas: un círculo y unas líneas; la emoción se dibuja con la boca y las cejas.\nPantallas: un rectángulo con los elementos clave, sin detalle.\nEntornos: un par de objetos que lo sitúen (una mesa y una estantería son una biblioteca).\nEncuadres: alternar planos generales (contexto) y primeros planos (la pantalla o la cara).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html#práctica",
+    "href": "06-storyboards.html#práctica",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "Práctica",
+    "text": "Práctica\nEscribe en cinco líneas un escenario para el proyecto de tu equipo: persona, situación, detonante, uso del producto y desenlace. Después dibújalo en cuatro viñetas en menos de diez minutos con la plantilla en PDF. Enséñaselo a alguien que no conozca el proyecto y pídele que te cuente la historia: si no la entiende sin tu ayuda, revisa el momento clave.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html#reto-t6",
+    "href": "06-storyboards.html#reto-t6",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 6 · Dos storyboards del proyecto\n\n\n\nPara tu proyecto:\n\nEscribe el escenario de la tarea principal (máximo 150 palabras).\nDibuja un storyboard narrativo de cuatro a seis viñetas que muestre el contexto, el detonante, el momento clave y el desenlace.\nDibuja un storyboard de interacción del flujo principal (Tema 5).\nExplica cómo has resuelto los cinco elementos de Truong et al. en cada uno.\n\nEntrega: un informe hecho con la plantilla de entrega con las imágenes de tus storyboards. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un proyecto distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html#autoevaluación",
+    "href": "06-storyboards.html#autoevaluación",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nPara hacer un buen storyboard hace falta saber dibujar bien. VERDADEROFALSO\nUn storyboard que muestra cómo participan la biblioteca de origen, el transporte y la biblioteca de destino en un préstamo interbibliotecario es narrativode interacciónde proceso\nLa historia escrita que sirve de guion a un storyboard se llama \nSegún Truong et al., mostrar a la persona y sus emociones ayuda a empatizar con la historia. VERDADEROFALSO\n¿Qué muestra un storyboard que un esquema de página no muestra?\n\n La jerarquía visual de los elementos de la pantalla Quién usa el producto, dónde, cuándo y por qué Los estados de un botón\n\nEl instante de la historia en el que el producto marca la diferencia es el detonantemomento clavedesenlace\n\n\n\nVer explicaciones\n\nBastan figuras de palitos: comunica la historia, no el dibujo.\nVarias personas y sistemas a lo largo del tiempo: storyboard de proceso.\nEl escenario es el guion escrito.\nEs uno de los cinco elementos que identifican.\nEl contexto y la motivación; la pantalla la detalla el esquema.\nEl detonante crea la necesidad; el momento clave la resuelve.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html#recursos-complementarios",
+    "href": "06-storyboards.html#recursos-complementarios",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – Storyboards help visualize UX ideas\nPasos y ejemplos\n\n\nInteraction Design Foundation – Storyboards\nIntroducción y técnicas",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html",
+    "href": "07-wireframes.html",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#lectura-obligatoria",
+    "href": "07-wireframes.html#lectura-obligatoria",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "",
+    "text": "Garrett, J. J. (2011). The elements of user experience: User-centered design for the web and beyond (2.ª ed.). New Riders. Capítulo dedicado al plano del esqueleto (skeleton plane): diseño de la interfaz, de la navegación y de la información.\n\n\nLecturas complementarias\n\nKrug, S. (2006). Don’t make me think!. New Riders. Por qué las convenciones y la jerarquía visual hacen que una página se entienda de un vistazo.\nNielsen Norman Group. F-shaped pattern for reading web content. Cómo recorren la vista las páginas con mucho texto.\nNielsen Norman Group. Using grids in interface designs. Rejillas de columnas en interfaces.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#qué-es-un-esquema-de-página",
+    "href": "07-wireframes.html#qué-es-un-esquema-de-página",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "1. Qué es un esquema de página",
+    "text": "1. Qué es un esquema de página\nUn esquema de página (wireframe) representa la estructura de una pantalla: qué elementos contiene, dónde están y qué importancia tienen. Deja fuera el estilo visual (color, tipografía definitiva, imágenes) para que la discusión se centre en el contenido y la organización. En el modelo de Garrett (2011), el esquema corresponde al plano del esqueleto: el que concreta la estructura antes de llegar a la superficie visual.\nUn buen esquema responde a tres preguntas: qué hay en la pantalla, qué es lo más importante y qué puede hacer la persona desde ella.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#en-papel-y-en-pantalla",
+    "href": "07-wireframes.html#en-papel-y-en-pantalla",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "2. En papel y en pantalla",
+    "text": "2. En papel y en pantalla\n\n\n\n\n\n\n\n\n\nEn papel\nEn pantalla (Figma u otra herramienta)\n\n\n\n\nVelocidad\nMáxima: segundos por pantalla\nMedia: requiere colocar elementos\n\n\nAlternativas\nMuchas, fáciles de comparar sobre la mesa\nMenos, aunque se duplican fácilmente\n\n\nPrecisión\nBaja: proporciones aproximadas\nAlta: medidas exactas y rejilla\n\n\nColaboración\nPresencial, alrededor de la mesa\nRemota y en tiempo real\n\n\nReutilización\nNula\nComponentes reutilizables y prototipo navegable\n\n\n\nLa práctica habitual es empezar en papel para explorar varias alternativas (de tres a cinco por pantalla clave) y pasar a digital la que se elige. Las plantillas en PDF de este tema traen marcos de móvil y escritorio con una rejilla de puntos.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#jerarquía-visual",
+    "href": "07-wireframes.html#jerarquía-visual",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "3. Jerarquía visual",
+    "text": "3. Jerarquía visual\nLa jerarquía visual indica qué es más importante. En un esquema se construye sin color, con:\n\nTamaño: lo más grande se ve primero.\nPosición: en las culturas que leen de izquierda a derecha, la parte superior izquierda recibe más atención. En páginas con mucho texto, la mirada suele recorrer un patrón en forma de F.\nAgrupación y espacio: los elementos próximos se perciben como relacionados (ley de proximidad de la Gestalt).\nContraste de peso: un bloque relleno destaca frente a uno con solo contorno.\n\nCada pantalla debería tener una acción principal evidente. Si todo destaca, nada destaca.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#rejillas-y-áreas-de-contenido",
+    "href": "07-wireframes.html#rejillas-y-áreas-de-contenido",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "4. Rejillas y áreas de contenido",
+    "text": "4. Rejillas y áreas de contenido\nUna rejilla divide el ancho de la pantalla en columnas separadas por medianiles (gutters) y con márgenes laterales. Los elementos se alinean con las columnas, lo que da orden y coherencia entre pantallas. Las configuraciones habituales son 12 columnas en escritorio, 8 en tableta y 4 en móvil.\nEl ancho de cada columna es: (ancho total − 2 × margen − (columnas − 1) × medianil) / columnas.\nLas áreas de contenido son las zonas que se repiten en todas las pantallas: cabecera, navegación principal, contenido, zona lateral y pie. Se dibujan como cajas con su nombre; el contenido de relleno se indica con líneas (texto) o con una caja cruzada por una X (imagen).\n\n\n\n\n\n\nFigura 1: Anatomía de un esquema de página de escritorio sobre una rejilla de 12 columnas: cabecera con navegación, buscador como acción principal, contenido en 8 columnas, lateral en 4 y pie.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#navegación-formularios-y-elementos-funcionales",
+    "href": "07-wireframes.html#navegación-formularios-y-elementos-funcionales",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "5. Navegación, formularios y elementos funcionales",
+    "text": "5. Navegación, formularios y elementos funcionales\n\nNavegación: menú principal, migas de pan, pestañas, paginación, barra inferior en móvil. Se representan con su etiqueta real: la etiqueta forma parte de la estructura.\nFormularios: una etiqueta visible encima de cada campo (no solo como texto de ayuda dentro del campo), campos agrupados por tema, una sola columna y un botón principal claro. Los campos obligatorios se marcan.\nElementos funcionales: botones, enlaces, buscadores, filtros, avisos. Se distinguen entre sí por la forma, no por el color.\n\nRespetar las convenciones (el logotipo lleva al inicio, la lupa es buscar, el carrito está arriba a la derecha) reduce el esfuerzo de las personas: usan lo que ya saben de otros sitios.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#anotar-los-esquemas",
+    "href": "07-wireframes.html#anotar-los-esquemas",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "6. Anotar los esquemas",
+    "text": "6. Anotar los esquemas\nUn esquema no se explica solo. Las anotaciones numeradas al margen explican el comportamiento que no se ve: qué pasa al pulsar, de dónde sale el contenido, qué reglas se aplican, qué ocurre si no hay resultados. Son la base de la documentación que se entregará al equipo de desarrollo en alta fidelidad.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#práctica-en-r-calcular-una-rejilla",
+    "href": "07-wireframes.html#práctica-en-r-calcular-una-rejilla",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "Práctica en R: calcular una rejilla",
+    "text": "Práctica en R: calcular una rejilla\nrejilla() calcula la posición de cada columna; ancho_bloque(), el ancho de un bloque que ocupa varias columnas; y caracteres_por_linea(), cuántos caracteres caben en una línea (la longitud cómoda de lectura está entre 45 y 75).\n\n\n\n\n\n\n\nEjercicio 7.1\nEn móvil se usan 4 columnas sobre 375 px, con 16 px de medianil y 16 px de margen. ¿Cuánto mide cada columna?\n\n\n\n\n\n\n\n\nLa rejilla de móvil del enunciado tiene 4 columnas.\n\n\nr &lt;- rejilla(ancho = 375, columnas = 4, medianil = 16, margen = 16)\nattr(r, \"ancho_columna\")\n(375 − 32 − 48) / 4 = 73,75 px.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#reto-t7",
+    "href": "07-wireframes.html#reto-t7",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 7 · Del papel a la pantalla\n\n\n\nPara las pantallas del flujo principal de tu proyecto (Tema 5):\n\nDibuja en papel tres alternativas de la pantalla más importante y explica cuál eliges y por qué.\nPasa a digital todas las pantallas del flujo principal en escala de grises, sobre una rejilla que documentes (columnas, medianil, margen).\nSeñala en cada pantalla la acción principal y cómo la destaca la jerarquía visual.\nAñade anotaciones numeradas con el comportamiento que no se ve.\n\nEntrega: un informe hecho con la plantilla de entrega con las fotos de los bocetos y el enlace al archivo digital. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un proyecto distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#autoevaluación",
+    "href": "07-wireframes.html#autoevaluación",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUn esquema de página debe incluir ya los colores definitivos de la marca. VERDADEROFALSO\nLa separación entre columnas de una rejilla se llama \nUna rejilla de 1440 px con 12 columnas, 24 px de medianil y 80 px de margen tiene columnas de unos 72 px84,7 px120 px\nEn un formulario es preferible que la etiqueta de cada campo esté visible encima del campo y no solo dentro como texto de ayuda. VERDADEROFALSO\n¿Qué principio explica que los elementos próximos se perciban como relacionados? ProximidadCierreContinuidad\n¿Para qué sirven las anotaciones de un esquema?\n\n Para indicar los colores y tipografías Para explicar el comportamiento que no se ve en el dibujo Para sustituir la prueba con usuarios\n\n\nVer explicaciones\n\nEl color pertenece a la alta fidelidad; el esquema trabaja la estructura.\nMedianil (gutter).\n(1440 − 160 − 264) / 12 = 84,7 px.\nLa etiqueta dentro del campo desaparece al escribir y obliga a recordar qué se pedía.\nLey de proximidad de la Gestalt.\nExplican interacciones, reglas y casos especiales.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#recursos-complementarios",
+    "href": "07-wireframes.html#recursos-complementarios",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – Using grids in interface designs\nRejillas en interfaces\n\n\nNielsen Norman Group – F-shaped pattern\nPatrones de lectura en pantalla\n\n\nFigma Community\nKits de esquemas de página\n\n\nInteraction Design Foundation – Wireframes\nIntroducción y ejemplos",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html",
+    "href": "08-estados.html",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html#lectura-obligatoria",
+    "href": "08-estados.html#lectura-obligatoria",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "",
+    "text": "Harel, D. (1987). Statecharts: A visual formalism for complex systems. Science of Computer Programming, 8(3), 231-274. Lee la introducción y los primeros ejemplos: son el origen de la notación de estados que se usa hoy en diseño de interacción.\n\n\nLecturas complementarias\n\nCooper, A. (2014). About face: The essentials of interaction design. Wiley. Capítulos sobre el comportamiento de los controles y la retroalimentación.\nNielsen Norman Group. Wireflows. Representar estados y transiciones con esquemas.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html#una-pantalla-no-es-una-imagen-fija",
+    "href": "08-estados.html#una-pantalla-no-es-una-imagen-fija",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "1. Una pantalla no es una imagen fija",
+    "text": "1. Una pantalla no es una imagen fija\nUn esquema dibuja una pantalla en un instante, pero la interfaz cambia: un botón se pulsa, una lista se carga, un formulario muestra un error. Cada situación distinta es un estado, y el paso de uno a otro es una transición. Diseñar solo el estado ideal (la pantalla llena de datos perfectos) deja sin resolver la mayor parte de lo que vivirá la persona.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html#estados-de-los-componentes",
+    "href": "08-estados.html#estados-de-los-componentes",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "2. Estados de los componentes",
+    "text": "2. Estados de los componentes\nLos controles interactivos tienen estados que hay que diseñar y distinguir:\n\n\n\n\n\n\n\n\nEstado\nCuándo ocurre\nQué debe comunicar\n\n\n\n\nReposo\nPor defecto\nQue se puede usar\n\n\nHover\nEl puntero está encima (no existe en pantallas táctiles)\nQue responde a la acción\n\n\nFoco\nSe ha llegado con el teclado (tabulador)\nDónde está el usuario: imprescindible para la accesibilidad\n\n\nPulsado o activo\nMientras se pulsa\nQue la acción se ha recibido\n\n\nSeleccionado\nEn casillas, pestañas, filtros\nQué opción está elegida\n\n\nDesactivado\nLa acción no está disponible\nQue no se puede usar, y a ser posible por qué\n\n\nCargando\nLa acción está en curso\nQue hay que esperar\n\n\n\nEn baja fidelidad no se diseña el aspecto final de cada estado, pero sí se decide qué estados existen y se indican con anotaciones o con variantes simples (contorno grueso para el foco, trama para el desactivado).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html#estados-de-las-pantallas",
+    "href": "08-estados.html#estados-de-las-pantallas",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "3. Estados de las pantallas",
+    "text": "3. Estados de las pantallas\nUna pantalla que muestra datos tiene, como mínimo, estos estados:\n\nVacío: todavía no hay contenido (primera visita, búsqueda sin resultados). Es una oportunidad para orientar: qué hacer a continuación.\nCargando: el contenido está llegando. Si tarda, conviene mostrar su estructura.\nParcial: hay poco contenido, que puede verse descompensado.\nError: algo ha fallado. Hay que explicar qué y cómo seguir.\nIdeal: el contenido esperado.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html#diagramas-de-estados",
+    "href": "08-estados.html#diagramas-de-estados",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "4. Diagramas de estados",
+    "text": "4. Diagramas de estados\nHarel (1987) propuso los statecharts, una notación para describir sistemas que cambian de estado según los eventos. En diseño de interacción se usa una versión simplificada: cada estado es una caja con nombre, cada transición es una flecha con el evento que la provoca y, si hace falta, la condición. Sirve para comprobar que no falta ningún caso: ¿qué pasa si se pulsa «Reservar» dos veces?, ¿y si se pierde la conexión mientras se carga?\n\n\n\n\n\n\nFigura 1: Diagrama de estados del botón «Reservar»: de reposo a cargando al pulsar; de cargando a confirmado si la reserva funciona, o a error si la sala se ha ocupado; el error vuelve a reposo cuando se elige otra sala. Mientras carga, el botón no admite otra pulsación.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html#transiciones-y-enlaces-entre-pantallas",
+    "href": "08-estados.html#transiciones-y-enlaces-entre-pantallas",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "5. Transiciones y enlaces entre pantallas",
+    "text": "5. Transiciones y enlaces entre pantallas\nLas transiciones entre pantallas comunican la relación entre ellas: avanzar en un proceso, abrir un detalle, volver. En baja fidelidad basta con decidir y anotar:\n\nQué desencadena la transición (pulsar, deslizar, enviar, tiempo).\nAdónde lleva y si se puede volver.\nQué se conserva (los datos del formulario, la posición en la lista).\n\nEn un prototipo navegable digital, cada elemento interactivo se enlaza con la pantalla o el estado al que lleva. Para probar un flujo bastan los enlaces del camino principal y de los errores que interesa observar; no hace falta enlazar todo.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html#práctica",
+    "href": "08-estados.html#práctica",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "Práctica",
+    "text": "Práctica\nElige un formulario de una web que uses (por ejemplo, la inscripción en una actividad). Dibuja su diagrama de estados: estados del botón de envío y de la pantalla, con los eventos y las condiciones. Busca al menos un caso que el formulario real no resuelva bien.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html#reto-t8",
+    "href": "08-estados.html#reto-t8",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 8 · Prototipo navegable con estados\n\n\n\nA partir de los esquemas digitales del reto del Tema 7:\n\nDibuja el diagrama de estados de la pantalla más compleja del flujo principal.\nDiseña sus estados vacío, cargando, error e ideal, y los estados de foco y desactivado de sus controles.\nEnlaza las pantallas en un prototipo navegable que recorra el flujo principal y al menos uno de error.\nDocumenta las transiciones: qué las desencadena, adónde llevan y qué se conserva.\n\nEntrega: un informe hecho con la plantilla de entrega con el diagrama y el enlace al prototipo navegable. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un proyecto distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html#autoevaluación",
+    "href": "08-estados.html#autoevaluación",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nEl estado hover existe también en las pantallas táctiles. VERDADEROFALSO\nEl estado que indica dónde está quien navega con el teclado se llama \nUna búsqueda sin resultados muestra el estado cargandovacíoidealdesactivado\nEn un diagrama de estados, las flechas se rotulan con el evento que provoca la transición. VERDADEROFALSO\n¿Qué notación propuso Harel en 1987 para describir sistemas que cambian de estado? Diagramas de afinidadStatechartsWireflows\n¿Qué conviene hacer con el botón «Reservar» mientras la reserva se está procesando?\n\n Dejarlo igual para que se pueda volver a pulsar Mostrar que está cargando e ignorar nuevas pulsaciones Ocultarlo\n\n\nVer explicaciones\n\nSin puntero no hay hover: no se puede confiar en él para comunicar nada esencial.\nSin un foco visible, el teclado no sirve.\nEl estado vacío aparece cuando no hay contenido que mostrar.\nEl evento (y la condición, si la hay) explica por qué cambia el estado.\nLos statecharts son la base de los diagramas de estados actuales.\nAsí se evitan reservas duplicadas y se informa de que hay que esperar.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html#recursos-complementarios",
+    "href": "08-estados.html#recursos-complementarios",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – Wireflows\nEstados y transiciones con esquemas\n\n\nW3C – Understanding SC 2.4.7: Focus visible\nPor qué el foco debe verse\n\n\nFigma – Guide to prototyping\nEnlazar pantallas y estados",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "09-prototipos-papel.html",
+    "href": "09-prototipos-papel.html",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
+    "objectID": "09-prototipos-papel.html#lectura-obligatoria",
+    "href": "09-prototipos-papel.html#lectura-obligatoria",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "",
+    "text": "Rettig, M. (1994). Prototyping for tiny fingers. Communications of the ACM, 37(4), 21-27.\n\n\nLecturas complementarias\n\nVirzi, R. A.; Sokolov, J. L.; Karis, D. (1996). Usability problem identification using both low- and high-fidelity prototypes. En CHI ’96 (pp. 236-243). ACM. Los prototipos en papel detectan problemas similares a los de alta fidelidad.\nNielsen, J.; Landauer, T. K. (1993). A mathematical model of the finding of usability problems. En CHI ’93 (pp. 206-213). ACM. El modelo detrás de la recomendación de probar con pocas personas y repetir.\nNielsen Norman Group. Paper prototyping: Getting user data before you code. Guía práctica.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
+    "objectID": "09-prototipos-papel.html#por-qué-probar-en-papel",
+    "href": "09-prototipos-papel.html#por-qué-probar-en-papel",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "1. Por qué probar en papel",
+    "text": "1. Por qué probar en papel\nRettig (1994) defendía en «Prototyping for tiny fingers» que construir prototipos en papel permite probar un diseño antes de escribir una línea de código, con un coste tan bajo que se pueden hacer varias rondas en un día. Al ver que el prototipo es provisional, las personas critican con más libertad, y el equipo, al no haber invertido mucho, acepta mejor los cambios. Virzi et al. (1996) mostraron que los problemas de usabilidad detectados con prototipos de baja fidelidad son en gran parte los mismos que con alta fidelidad.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
+    "objectID": "09-prototipos-papel.html#construir-el-prototipo",
+    "href": "09-prototipos-papel.html#construir-el-prototipo",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "2. Construir el prototipo",
+    "text": "2. Construir el prototipo\nMateriales: papel o cartulina, rotuladores de dos grosores, notas adhesivas, tijeras, celo y, si se quiere, láminas de acetato para escribir encima. Las plantillas en PDF de este libro sirven como marcos de pantalla.\n\nUna hoja por pantalla, a escala aproximada.\nLas partes que cambian (menús desplegables, mensajes de error, listas de resultados) se dibujan en piezas sueltas que se colocan encima.\nLos campos de texto se cubren con acetato o notas para que la persona escriba.\nSe preparan todos los estados que pueden aparecer en las tareas (Tema 8), incluidos los errores.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
+    "objectID": "09-prototipos-papel.html#roles-en-la-sesión",
+    "href": "09-prototipos-papel.html#roles-en-la-sesión",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "3. Roles en la sesión",
+    "text": "3. Roles en la sesión\n\n\n\n\n\n\n\nRol\nQué hace\n\n\n\n\nFacilitador\nPresenta la sesión, lee las tareas, pide que la persona piense en voz alta y mantiene la neutralidad\n\n\n«Ordenador humano»\nCambia las hojas y piezas según lo que la persona «pulsa», sin hablar ni explicar\n\n\nObservadores\nAnotan lo que ocurre: dónde dudan, qué dicen, qué errores cometen\n\n\n\nEl ordenador humano solo responde a lo que la persona hace, como lo haría el sistema. Si la persona pregunta, el facilitador devuelve la pregunta: «¿Qué crees que pasaría?».",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
+    "objectID": "09-prototipos-papel.html#planificar-la-sesión",
+    "href": "09-prototipos-papel.html#planificar-la-sesión",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "4. Planificar la sesión",
+    "text": "4. Planificar la sesión\n\nObjetivo: qué queremos averiguar (las hipótesis del Tema 3).\nParticipantes: personas que se parezcan a las usuarias reales. Nielsen y Landauer (1993) mostraron que con unas cinco personas aparecen la mayoría de los problemas más frecuentes, y que es más rentable hacer varias rondas pequeñas que una grande.\nEscenarios de tarea: situaciones realistas que dan un objetivo sin decir cómo conseguirlo. Mal: «Pulsa en Reservas y elige la sala 3». Bien: «Mañana tienes que preparar un trabajo con dos compañeros por la tarde. Busca un sitio donde podáis hablar».\nGuion: bienvenida y consentimiento, explicación de que se prueba el diseño y no a la persona, tareas, preguntas finales.\nRegistro: para cada tarea, si se completa, cuánto tarda (aproximado), errores y comentarios.\n\nDurante la sesión se pide a la persona que piense en voz alta: que diga lo que busca, lo que espera y lo que le sorprende. Es la técnica más útil de la usabilidad, porque revela el porqué de los errores.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
+    "objectID": "09-prototipos-papel.html#analizar-y-decidir",
+    "href": "09-prototipos-papel.html#analizar-y-decidir",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "5. Analizar y decidir",
+    "text": "5. Analizar y decidir\nDespués de cada ronda, el equipo junta las observaciones, agrupa los problemas y los prioriza por gravedad y frecuencia (como en la revisión heurística del Tema 2). Los cambios se hacen en el momento, en el propio papel, y se prueban con la siguiente persona. Las métricas del Tema 4 (tasa de éxito con intervalo, tiempo típico) sirven para comparar rondas, siempre recordando su incertidumbre.\n\n\n\n\n\n\nFigura 1: Tasa de éxito por tarea con el prototipo en papel y con el digital de baja fidelidad (datos simulados, 8 participantes por prototipo), con su intervalo al 95 %. «Reservar una sala» es la tarea problemática en los dos.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
+    "objectID": "09-prototipos-papel.html#práctica-en-r-comparar-dos-prototipos",
+    "href": "09-prototipos-papel.html#práctica-en-r-comparar-dos-prototipos",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "Práctica en R: comparar dos prototipos",
+    "text": "Práctica en R: comparar dos prototipos\nsesiones_prueba (datos simulados) recoge, para 8 participantes, si completaron cada tarea con un prototipo en papel y con uno digital de baja fidelidad.\n\n\n\n\n\n\n\nEjercicio 9.1\nCalcula la tasa de éxito con intervalo de confianza de la tarea «Reservar una sala» con el prototipo digital.\n\n\n\n\n\n\n\n\nLos valores de la columna prototipo son «papel» y «digital».\n\n\nd &lt;- subset(sesiones_prueba, prototipo == \"digital\" & tarea == \"Reservar una sala\")\ntasa_exito(sum(d$exito), nrow(d))\n5 de 8 (62,5 %), con un intervalo aproximado del 30 % al 87 %. El intervalo es tan ancho que no permite afirmar que el digital sea mejor que el papel (37,5 %): los dos intervalos se solapan. Lo que sí dicen los datos es que la tarea tiene problemas en los dos.\n\n\n\n\nEjercicio 9.2\nCalcula el tiempo típico (media geométrica) de la tarea «Renovar un préstamo» con el prototipo en papel.\n\n\n\n\n\n\n\n\nLa función de UxLearn para la media geométrica es tiempo_tipico().\n\n\nd &lt;- subset(sesiones_prueba, prototipo == \"papel\" & tarea == \"Renovar un préstamo\")\ntiempo_tipico(d$tiempo_s)\nUnos 65 segundos. En papel los tiempos son orientativos, porque dependen de la rapidez del «ordenador humano»: sirven más para comparar tareas que para fijar objetivos.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
+    "objectID": "09-prototipos-papel.html#reto-t9",
+    "href": "09-prototipos-papel.html#reto-t9",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 9 · Prueba con un prototipo en papel\n\n\n\nCon el flujo principal de tu proyecto:\n\nConstruye un prototipo en papel con todas las pantallas y estados necesarios para dos tareas. Fotografíalo.\nPrepara el plan de la sesión: objetivo, perfil de participantes, dos escenarios de tarea y guion.\nHaz la prueba con tres personas de tu entorno (compañeros de otro equipo, por ejemplo) y registra éxito, tiempo aproximado, errores y comentarios.\nCalcula la tasa de éxito con intervalo de cada tarea y prioriza los problemas encontrados.\nIndica qué cambias en el prototipo y por qué.\n\nEntrega: un informe hecho con la plantilla de entrega. No incluyas datos personales de los participantes. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un proyecto distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
+    "objectID": "09-prototipos-papel.html#autoevaluación",
+    "href": "09-prototipos-papel.html#autoevaluación",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nEn una prueba en papel, el «ordenador humano» explica a la persona qué hace cada botón. VERDADEROFALSO\nPedir a la persona que diga lo que busca, espera y le sorprende es la técnica de entrevistapensamiento en voz altaencuesta\nSegún Nielsen y Landauer, es más rentable hacer varias rondas pequeñas que una sola con muchas personas. VERDADEROFALSO\n¿Cuál es un buen escenario de tarea?\n\n Pulsa en Reservas y elige la sala 3 Mañana tienes que preparar un trabajo en grupo por la tarde: busca un sitio donde podáis hablar Comprueba que el botón Reservar funciona\n\nLos mensajes de error y los desplegables se preparan como hojas nuevas completaspiezas sueltas que se colocan encimano se preparan\nEn la práctica, con 5 de 8 éxitos en digital y 3 de 8 en papel, se puede afirmar que el prototipo digital es mejor. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nSolo reacciona a lo que hace la persona, como lo haría el sistema.\nEl pensamiento en voz alta revela el porqué de los errores.\nCada ronda corrige problemas y la siguiente descubre otros nuevos.\nDa un objetivo realista sin indicar el camino.\nLas piezas sueltas permiten cambiar solo lo que cambia en la pantalla.\nLos intervalos se solapan: con 8 personas, la diferencia puede deberse al azar.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
+    "objectID": "09-prototipos-papel.html#recursos-complementarios",
+    "href": "09-prototipos-papel.html#recursos-complementarios",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – Paper prototyping\nGuía y vídeo\n\n\nNielsen Norman Group – Thinking aloud\nLa técnica del pensamiento en voz alta\n\n\nNielsen Norman Group – Why you only need to test with 5 users\nEl argumento de las rondas pequeñas",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
+    "objectID": "10-sesgos.html",
+    "href": "10-sesgos.html",
+    "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
+    ]
+  },
+  {
+    "objectID": "10-sesgos.html#lectura-obligatoria",
+    "href": "10-sesgos.html#lectura-obligatoria",
+    "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
+    "section": "",
+    "text": "Gray, C. M.; Kou, Y.; Battles, B.; Hoggatt, J.; Toombs, A. L. (2018). The dark (patterns) side of UX design. En Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (pp. 1-14). ACM.\n\n\nLecturas complementarias\n\nMathur, A.; Acar, G.; Friedman, M. J.; Lucherini, E.; Mayer, J.; Chetty, M.; Narayanan, A. (2019). Dark patterns at scale: Findings from a crawl of 11K shopping websites. Proceedings of the ACM on Human-Computer Interaction, 3(CSCW), 1-32. Una medición sistemática en comercio electrónico.\nTversky, A.; Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. Science, 185(4157), 1124-1131. El artículo que fundó el estudio de los sesgos.\nComité Europeo de Protección de Datos (2023). Directrices 03/2022 sobre patrones de diseño engañosos en interfaces de redes sociales. Cómo los patrones engañosos afectan al consentimiento.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
+    ]
+  },
+  {
+    "objectID": "10-sesgos.html#sesgos-cognitivos",
+    "href": "10-sesgos.html#sesgos-cognitivos",
+    "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
+    "section": "1. Sesgos cognitivos",
+    "text": "1. Sesgos cognitivos\nTversky y Kahneman (1974) mostraron que, cuando decidimos con incertidumbre, usamos heurísticos: atajos mentales que suelen funcionar pero que producen errores sistemáticos, los sesgos. El diseño de interfaces influye en las decisiones aunque no lo pretenda. Algunos sesgos especialmente relevantes:\n\n\n\n\n\n\n\n\nSesgo\nQué ocurre\nEjemplo en una interfaz\n\n\n\n\nAnclaje\nLa primera cifra que vemos condiciona las siguientes\nMostrar primero el plan más caro hace que el intermedio parezca barato\n\n\nOpción por defecto\nTendemos a dejar lo que viene marcado\nCasilla del boletín premarcada\n\n\nEncuadre\nLa misma información se valora distinto según cómo se presente\n«95 % de éxito» frente a «5 % de fracaso»\n\n\nAversión a la pérdida\nPerder pesa más que ganar lo mismo\n«No pierdas tus ventajas» al darse de baja\n\n\nPrueba social\nHacemos lo que parecen hacer los demás\n«1.200 personas han reservado hoy»\n\n\n\nQuien diseña también tiene sesgos: el sesgo de confirmación (buscar datos que confirman la idea propia), el falso consenso (creer que los usuarios piensan como el equipo) o el apego a la primera solución. La investigación (Tema 2) y las pruebas (Tema 9) son la defensa.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
+    ]
+  },
+  {
+    "objectID": "10-sesgos.html#de-influir-a-manipular",
+    "href": "10-sesgos.html#de-influir-a-manipular",
+    "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
+    "section": "2. De influir a manipular",
+    "text": "2. De influir a manipular\nToda interfaz es una arquitectura de la decisión: alguna opción aparece primero, otra viene marcada. Influir es inevitable; la pregunta es a favor de quién. Un diseño es manipulador cuando aprovecha los sesgos para que la persona haga algo que no haría si entendiera la situación, en beneficio de otro.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
+    ]
+  },
+  {
+    "objectID": "10-sesgos.html#patrones-engañosos",
+    "href": "10-sesgos.html#patrones-engañosos",
+    "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
+    "section": "3. Patrones engañosos",
+    "text": "3. Patrones engañosos\nEl término dark patterns lo acuñó Harry Brignull en 2010; hoy él mismo y buena parte de la literatura prefieren hablar de diseño engañoso (deceptive design). Son soluciones de interfaz que engañan, presionan o dificultan decidir libremente.\nGray et al. (2018) analizaron ejemplos recogidos por profesionales y propusieron cinco estrategias:\n\n\n\n\n\n\n\nEstrategia\nQué hace\n\n\n\n\nInsistencia (nagging)\nInterrumpe una y otra vez la tarea para pedir algo\n\n\nObstrucción\nPone difícil una acción que interesa a la persona (darse de baja, rechazar)\n\n\nOcultación (sneaking)\nEsconde o retrasa información relevante (costes, condiciones)\n\n\nInterferencia en la interfaz\nManipula la presentación para favorecer una opción\n\n\nAcción forzada\nExige hacer algo que no se busca para poder continuar\n\n\n\nMathur et al. (2019) rastrearon unas 11.000 webs de comercio y encontraron patrones de urgencia (contadores), escasez («quedan dos»), prueba social, desvío (misdirection), además de ocultación, obstrucción y acción forzada. Hallaron algunos de esos mensajes generados de forma engañosa, sin relación con datos reales.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
+    ]
+  },
+  {
+    "objectID": "10-sesgos.html#responsabilidad-y-marco-legal",
+    "href": "10-sesgos.html#responsabilidad-y-marco-legal",
+    "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
+    "section": "4. Responsabilidad y marco legal",
+    "text": "4. Responsabilidad y marco legal\nGray et al. subrayan que los patrones engañosos no suelen nacer de la mala fe de una persona diseñadora, sino de la presión por métricas de negocio a corto plazo. Por eso la responsabilidad ética incluye saber argumentar ante el equipo: los patrones engañosos dañan la confianza, aumentan las reclamaciones y pueden ser ilegales.\n\nEl Reglamento de Servicios Digitales de la UE (Reglamento (UE) 2022/2065, art. 25) prohíbe a las plataformas en línea diseñar sus interfaces de forma que engañen o manipulen a las personas usuarias o limiten su capacidad de decidir libremente.\nEl Reglamento General de Protección de Datos exige que el consentimiento sea libre e informado; el Comité Europeo de Protección de Datos ha descrito cómo los patrones engañosos lo vician.\nLa normativa de prácticas comerciales desleales prohíbe las prácticas engañosas y agresivas con consumidores.\n\nUna pregunta práctica para revisar un diseño: ¿la persona elegiría lo mismo si viera con claridad todas las opciones y sus consecuencias? Si la respuesta es no, hay un problema.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
+    ]
+  },
+  {
+    "objectID": "10-sesgos.html#práctica-en-r-dos-taxonomías",
+    "href": "10-sesgos.html#práctica-en-r-dos-taxonomías",
+    "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
+    "section": "Práctica en R: dos taxonomías",
+    "text": "Práctica en R: dos taxonomías\npatrones_enganosos reúne las categorías de Gray et al. (2018) y Mathur et al. (2019), con un ejemplo inventado de cada una.\n\n\n\n\n\n\n\nEjercicio 10.1\n¿Qué categorías aparecen en las dos taxonomías? intersect() devuelve los elementos comunes a dos vectores.\n\n\n\n\n\n\n\n\nCopia el valor exacto de la columna fuente para el segundo estudio, con el año entre paréntesis.\n\n\ngray   &lt;- g$categoria[g$fuente == \"Gray et al. (2018)\"]\nmathur &lt;- g$categoria[g$fuente == \"Mathur et al. (2019)\"]\nintersect(gray, mathur)\nOcultación, obstrucción y acción forzada. Son los patrones más estables en la literatura; los de urgencia, escasez y prueba social son más propios del comercio electrónico.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
+    ]
+  },
+  {
+    "objectID": "10-sesgos.html#reto-t10",
+    "href": "10-sesgos.html#reto-t10",
+    "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 10 · Auditoría de diseño engañoso\n\n\n\nElige un servicio digital real (una suscripción, una tienda, una red social o una aplicación de reservas):\n\nRecorre el alta y la baja (o la cancelación) y documenta con capturas cada patrón engañoso que encuentres, clasificado con Gray et al. y con Mathur et al.\nIdentifica qué sesgo cognitivo aprovecha cada patrón.\nValora si alguno podría contravenir el art. 25 del Reglamento de Servicios Digitales o las reglas del consentimiento, y explica por qué (sin necesidad de un análisis jurídico completo).\nRediseña en baja fidelidad una pantalla sin el patrón y explica cómo has equilibrado los intereses de la organización y de la persona.\n\nEntrega: un informe hecho con la plantilla de entrega. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un servicio distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
+    ]
+  },
+  {
+    "objectID": "10-sesgos.html#autoevaluación",
+    "href": "10-sesgos.html#autoevaluación",
+    "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUna casilla de suscripción al boletín marcada de antemano aprovecha el sesgo de la prueba socialopción por defectoaversión a la pérdida\nQue darse de baja exija llamar por teléfono cuando el alta fue en línea es un ejemplo de insistenciaobstrucciónescasez\nUn contador que reinicia la «oferta» cada vez que se recarga la página es un patrón de \nSegún Gray et al., los patrones engañosos suelen deberse a la mala fe individual de quien diseña. VERDADEROFALSO\n¿Qué norma de la UE prohíbe a las plataformas en línea diseñar interfaces que engañen o manipulen?\n\n La Directiva de accesibilidad web El Reglamento de Servicios Digitales (Reglamento 2022/2065) La norma ISO 9241-210\n\nMostrar primero el plan más caro para que el intermedio parezca barato aprovecha el efecto de anclajeencuadreconfirmación\nBuscar solo datos que confirmen la idea propia es un sesgo que afecta también a quien diseña. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nTendemos a dejar lo que viene marcado.\nHacer difícil lo que interesa a la persona es obstrucción.\nEs urgencia falsa, documentada por Mathur et al. (2019).\nMás bien de la presión por métricas de negocio; por eso importa saber argumentar.\nEs el art. 25 del Reglamento de Servicios Digitales.\nLa primera cifra sirve de ancla para valorar las demás.\nEl sesgo de confirmación: la investigación y las pruebas lo contrarrestan.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
+    ]
+  },
+  {
+    "objectID": "10-sesgos.html#recursos-complementarios",
+    "href": "10-sesgos.html#recursos-complementarios",
+    "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nDeceptive Design\nCatálogo de tipos y casos (antes Dark Patterns)\n\n\nComité Europeo de Protección de Datos – Directrices 03/2022\nPatrones engañosos y consentimiento\n\n\nReglamento (UE) 2022/2065 de Servicios Digitales\nArt. 25: diseño de las interfaces",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html",
+    "href": "11-atencion.html",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html#lectura-obligatoria",
+    "href": "11-atencion.html#lectura-obligatoria",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "",
+    "text": "Williams, J. (2018). Stand out of our light: Freedom and resistance in the attention economy. Cambridge University Press. Libro en acceso abierto: lee la primera parte.\n\n\nLecturas complementarias\n\nMathur, A. et al. (2019). Dark patterns at scale. Proceedings of the ACM on Human-Computer Interaction, 3(CSCW). Urgencia y escasez como técnicas para captar la atención y precipitar decisiones.\nCenter for Humane Technology. Recursos para tecnología humana. Materiales sobre diseño que respeta la atención.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html#la-atención-como-recurso-escaso",
+    "href": "11-atencion.html#la-atención-como-recurso-escaso",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "1. La atención como recurso escaso",
+    "text": "1. La atención como recurso escaso\nHerbert Simon advirtió en 1971 que la abundancia de información crea pobreza de atención: cuanta más información compite por nosotros, más valiosa se vuelve la atención que podemos darle. Muchos servicios digitales gratuitos se financian con publicidad, y la publicidad se vende por la atención que se consigue: cuanto más tiempo y más a menudo se usa el servicio, más ingresos. Ese es el núcleo de la economía de la atención.\nWilliams (2018), que trabajó en publicidad en Google antes de dedicarse a la filosofía, sostiene que el problema no es solo de productividad. Las tecnologías optimizadas para captar la atención pueden apartar a las personas de sus propios objetivos, de lo que ellas mismas querrían hacer con su tiempo.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html#las-métricas-que-dirigen-el-diseño",
+    "href": "11-atencion.html#las-métricas-que-dirigen-el-diseño",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "2. Las métricas que dirigen el diseño",
+    "text": "2. Las métricas que dirigen el diseño\nLo que se mide se optimiza. Si el éxito de un producto se mide con métricas de implicación (tiempo de uso, sesiones al día, desplazamiento), el diseño evoluciona hacia lo que las aumenta, aunque no ayude a la persona. Una aplicación de biblioteca que «tiene éxito» porque la gente pasa más tiempo buscando probablemente está fallando: lo deseable es que encuentren rápido lo que necesitan.\nPor eso, al definir las métricas de un proyecto (Tema 4), conviene preguntar si miden el valor para la persona (éxito en la tarea, satisfacción) o solo su tiempo.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html#mecanismos-de-captación",
+    "href": "11-atencion.html#mecanismos-de-captación",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "3. Mecanismos de captación",
+    "text": "3. Mecanismos de captación\n\n\n\n\n\n\n\nMecanismo\nCómo funciona\n\n\n\n\nDesplazamiento infinito\nElimina el final de la página: no hay un punto natural en el que parar\n\n\nReproducción automática\nEl siguiente contenido empieza solo; parar exige actuar\n\n\nRefuerzo intermitente\nRecompensas impredecibles (al actualizar, a veces hay algo nuevo), el mecanismo más difícil de abandonar\n\n\nNotificaciones\nInterrumpen desde fuera para devolver a la persona al producto\n\n\nRachas y contadores\nConvierten el uso diario en algo que no se quiere «perder» (aversión a la pérdida, Tema 10)\n\n\nReciprocidad social\n«Te ha escrito», «ha visto tu mensaje»: obligan a responder\n\n\n\nMuchos de estos mecanismos aprovechan los mismos sesgos que los patrones engañosos. La diferencia es de grado y de intención, y no siempre es nítida.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html#diseñar-para-el-bienestar-digital",
+    "href": "11-atencion.html#diseñar-para-el-bienestar-digital",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "4. Diseñar para el bienestar digital",
+    "text": "4. Diseñar para el bienestar digital\nDiseñar a favor de la atención de las personas no significa diseñar productos aburridos, sino alineados con sus objetivos:\n\nSeñales de parada: un final visible de la lista, un resumen al terminar, paginación en lugar de desplazamiento infinito cuando la tarea es encontrar.\nControl de las interrupciones: notificaciones agrupadas, configurables y desactivadas por defecto salvo las imprescindibles.\nValores por defecto protectores: sin reproducción automática, sin rachas.\nTransparencia: mostrar el tiempo de uso si la persona lo pide, explicar por qué se recomienda algo.\nÉxito definido por la tarea: medir si la persona consiguió lo que quería y cuánto tardó.\nAtención a los menores y a las personas más vulnerables, para quienes estos mecanismos tienen más efecto.\n\nEn la Unión Europea, el Reglamento de Servicios Digitales obliga a las plataformas y buscadores de muy gran tamaño a evaluar y mitigar los riesgos sistémicos de sus servicios, entre ellos los efectos negativos sobre el bienestar físico y mental de las personas, y exige medidas de protección de los menores en todas las plataformas.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html#práctica",
+    "href": "11-atencion.html#práctica",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "Práctica",
+    "text": "Práctica\nElige una aplicación que uses a diario y activa durante un día su contador de tiempo de uso (o el del sistema operativo). Anota cada vez que la abres sin haberlo decidido y qué te llevó a hacerlo. Identifica qué mecanismos del apartado 3 intervienen.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html#reto-t11",
+    "href": "11-atencion.html#reto-t11",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 11 · Rediseño para la atención\n\n\n\nElige un servicio digital que use mecanismos de captación de la atención:\n\nIdentifica al menos cuatro mecanismos del apartado 3, con capturas, y explica qué métrica de negocio favorece cada uno.\nPropón para tu propio proyecto dos métricas de éxito centradas en la persona y explica por qué no usas el tiempo de uso.\nRediseña en baja fidelidad dos pantallas del servicio elegido aplicando los criterios del apartado 4.\nValora qué perdería y qué ganaría la organización con tu rediseño.\n\nEntrega: un informe hecho con la plantilla de entrega. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un servicio distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html#autoevaluación",
+    "href": "11-atencion.html#autoevaluación",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nEn la economía de la atención, muchos servicios gratuitos se financian con publicidad que se vende según la atención conseguida. VERDADEROFALSO\nEliminar el final de la página para que no haya un punto natural en el que parar es el refuerzo intermitentedesplazamiento infinitoencuadre\nQue al actualizar «a veces» haya contenido nuevo aprovecha el refuerzo \nPara una aplicación de búsqueda en el catálogo, un aumento del tiempo de uso es siempre una buena señal. VERDADEROFALSO\n¿Cuál de estas decisiones favorece el bienestar digital?\n\n Activar la reproducción automática por defecto Agrupar las notificaciones y dejar desactivadas las no imprescindibles Mostrar una racha de días consecutivos de uso\n\nLas rachas de uso aprovechan sobre todo el sesgo de anclajeaversión a la pérdidaconfirmación\n\n\n\nVer explicaciones\n\nEs el núcleo del modelo: la atención es lo que se vende.\nSin final visible, no hay señal de parada.\nLas recompensas impredecibles son las que más enganchan.\nSi la tarea es encontrar, más tiempo suele significar más dificultad.\nReducir las interrupciones devuelve el control a la persona.\nPerder la racha pesa más que el valor de lo que se hace cada día.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html#recursos-complementarios",
+    "href": "11-atencion.html#recursos-complementarios",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nWilliams, J. (2018), en acceso abierto\nLa lectura obligatoria\n\n\nCenter for Humane Technology\nGuías de diseño que respeta la atención\n\n\nReglamento (UE) 2022/2065 de Servicios Digitales\nRiesgos sistémicos y protección de menores",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html",
+    "href": "12-inclusivo.html",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#lectura-obligatoria",
+    "href": "12-inclusivo.html#lectura-obligatoria",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "",
+    "text": "Burnett, M.; Stumpf, S.; Macbeth, J.; Makri, S.; Beckwith, L.; Kwan, I.; Peters, A.; Jernigan, W. (2016). GenderMag: A method for evaluating software’s gender inclusiveness. Interacting with Computers, 28(6), 760-787.\n\n\nLecturas complementarias\n\nW3C (2023). Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2. La norma de referencia de la accesibilidad web.\nMicrosoft. Inclusive Design. El kit que popularizó el espectro de personas.\nUniversity of Cambridge. Inclusive Design Toolkit. Métodos y herramientas para estimar la exclusión.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#equidad-inclusión-y-accesibilidad",
+    "href": "12-inclusivo.html#equidad-inclusión-y-accesibilidad",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "1. Equidad, inclusión y accesibilidad",
+    "text": "1. Equidad, inclusión y accesibilidad\n\nAccesibilidad: que las personas con discapacidad puedan percibir, entender, navegar e interactuar con el producto. Tiene normas técnicas y obligaciones legales.\nDiseño inclusivo: diseñar teniendo en cuenta toda la diversidad humana (capacidades, edad, género, cultura, idioma, contexto), y no a un usuario «medio» que no existe.\nEquidad: que el diseño no reparta los beneficios y las cargas de forma injusta entre grupos.\n\nEl kit de diseño inclusivo de Microsoft propone el espectro de personas: una limitación puede ser permanente (una persona con un solo brazo), temporal (un brazo escayolado) o situacional (un brazo ocupado con un bebé). Diseñar para la permanente beneficia a muchas más personas.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#perspectiva-de-género",
+    "href": "12-inclusivo.html#perspectiva-de-género",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "2. Perspectiva de género",
+    "text": "2. Perspectiva de género\nBurnett et al. (2016) desarrollaron GenderMag, un método de inspección (parecido a la revisión heurística del Tema 2) que usa personajes para detectar sesgos de género en el software. Se basa en cinco facetas cognitivas en las que la investigación ha encontrado diferencias estadísticas entre grupos de género: la motivación para usar la tecnología, el estilo de procesar la información (completo o selectivo), la autoeficacia con el ordenador, la actitud ante el riesgo y el estilo de aprendizaje (por proceso o probando). El objetivo no es diseñar «para mujeres» y «para hombres», sino que el software funcione bien para todo el espectro de estas facetas.\nEn las decisiones de baja fidelidad, la perspectiva de género aparece también en los formularios (pedir el género solo si hace falta, con opciones inclusivas y no obligatorio), las imágenes y los ejemplos (quién aparece y haciendo qué) y el lenguaje.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#diversidad-funcional-accesibilidad-desde-la-baja-fidelidad",
+    "href": "12-inclusivo.html#diversidad-funcional-accesibilidad-desde-la-baja-fidelidad",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "3. Diversidad funcional: accesibilidad desde la baja fidelidad",
+    "text": "3. Diversidad funcional: accesibilidad desde la baja fidelidad\nLas WCAG 2.2 (W3C, 2023) organizan los requisitos en cuatro principios: el contenido debe ser perceptible, operable, comprensible y robusto. Cada criterio tiene un nivel de conformidad (A, AA, AAA); la normativa europea y española exige el nivel AA:\n\nEl Real Decreto 1112/2018 obliga a los sitios web y aplicaciones del sector público.\nLa Directiva (UE) 2019/882 (Acta Europea de Accesibilidad), transpuesta en España por la Ley 11/2023, se aplica desde el 28 de junio de 2025 a productos y servicios como el comercio electrónico, la banca o los libros electrónicos.\n\nMuchas decisiones de accesibilidad se toman en baja fidelidad:\n\n\n\n\n\n\n\nDecisión en el esquema\nCriterio relacionado\n\n\n\n\nEstructura de encabezados y orden de lectura\nInformación y relaciones; orden significativo\n\n\nOrden de foco con teclado\nOrden del foco; foco visible\n\n\nEtiquetas visibles en los campos\nEtiquetas o instrucciones\n\n\nNo transmitir información solo con el color\nUso del color\n\n\nTamaño de los objetivos táctiles (mínimo 24 × 24 px en WCAG 2.2)\nTamaño del objetivo (mínimo)\n\n\nMensajes de error que dicen qué pasa y cómo corregirlo\nIdentificación de errores; sugerencias",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#color-contraste-y-daltonismo",
+    "href": "12-inclusivo.html#color-contraste-y-daltonismo",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "4. Color: contraste y daltonismo",
+    "text": "4. Color: contraste y daltonismo\nEl contraste mínimo AA es de 4,5:1 para el texto normal, 3:1 para el texto grande y 3:1 para los componentes de interfaz y los gráficos. Cerca del 8 % de los hombres y del 0,5 % de las mujeres de ascendencia europea tienen alguna deficiencia en la visión de los colores, sobre todo en el eje rojo-verde. Por eso un mensaje de error y uno de éxito no pueden distinguirse solo por ser rojo o verde: necesitan además un icono o un texto.\n\n\n\n\n\n\nFigura 1: Cuatro colores de una paleta tal como se ven con visión típica y simulados con protanopía y deuteranopía (modelo de Machado et al., 2009). El rojo de error y el verde de éxito se vuelven casi iguales.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#diversidad-cultural",
+    "href": "12-inclusivo.html#diversidad-cultural",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "5. Diversidad cultural",
+    "text": "5. Diversidad cultural\n\nIdiomas y longitud de los textos: una etiqueta en alemán puede ocupar bastante más espacio que en inglés; los esquemas deben dejar margen.\nDirección de lectura: en árabe o hebreo la interfaz se refleja de derecha a izquierda.\nFormatos: fechas, horas, números y monedas cambian según el país.\nNombres: no todas las culturas tienen «nombre y apellidos»; un único campo «Nombre completo» es más inclusivo.\nIconos y símbolos: su significado no es universal.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#práctica-en-r-comprobar-los-colores",
+    "href": "12-inclusivo.html#práctica-en-r-comprobar-los-colores",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "Práctica en R: comprobar los colores",
+    "text": "Práctica en R: comprobar los colores\n\n\n\n\n\n\n\nEjercicio 12.1\nEl color de acento #f29900 no cumple el contraste para texto sobre blanco. ¿Cumple al menos el mínimo de 3:1 para componentes (un icono, el borde de un campo)?\n\n\n\n\n\n\n\n\nLos tipos posibles son «normal», «grande» y «componente».\n\n\ncumple_wcag(\"#f29900\", \"#ffffff\", tipo = \"componente\")\nFALSE: su contraste es 2,25:1. Ni siquiera sirve como único indicador visual de un control; habría que oscurecerlo o acompañarlo de un borde con más contraste.\n\n\n\n\nEjercicio 12.2\nSimula cómo ve los colores de error y éxito una persona con deuteranopía y calcula la diferencia de luminosidad entre ellos con distinguibles(). Un valor cercano a 1 significa que no se distinguen por luminosidad.\n\n\n\n\n\n\n\n\nLos tipos son «protan», «deutan» y «tritan».\n\n\nd &lt;- simular_daltonismo(paleta_ejemplo[c(\"error\", \"exito\")], tipo = \"deutan\")\nd\ndistinguibles(d[1], d[2])\nAlrededor de 1,3: con deuteranopía, el rojo de error y el verde de éxito se convierten en dos marrones oliva casi iguales, muy lejos del 3:1 que se pide para distinguir componentes. Los mensajes deben llevar icono y texto.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#reto-t12",
+    "href": "12-inclusivo.html#reto-t12",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 12 · Revisión inclusiva del prototipo\n\n\n\nSobre el prototipo de tu proyecto:\n\nRevisa los esquemas con la tabla del apartado 3: estructura de encabezados, orden de foco numerado sobre cada pantalla, etiquetas, uso del color y tamaño de los objetivos. Corrige lo que no cumpla.\nAplica una de las facetas de GenderMag a la tarea principal: ¿cómo la viviría una persona con baja autoeficacia o con aversión al riesgo? Propón un cambio.\nRevisa los formularios y los ejemplos con criterios de perspectiva de género y diversidad cultural.\nSi ya tienes una paleta provisional, comprueba su contraste y su distinción con daltonismo con revisar_paleta() y simular_daltonismo().\n\nEntrega: un informe hecho con la plantilla de entrega. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un proyecto distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#autoevaluación",
+    "href": "12-inclusivo.html#autoevaluación",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nLa accesibilidad solo se puede comprobar cuando el diseño visual está terminado. VERDADEROFALSO\nUn brazo ocupado con un bebé es, en el espectro de personas, una limitación permanentetemporalsituacional\nLas WCAG organizan sus criterios en cuatro principios: perceptible, operable, comprensible y \nEl contraste mínimo AA para el texto normal es de 3:14,5:17:1\nDistinguir un mensaje de error de uno de éxito solo por el color rojo o verde cumple las WCAG. VERDADEROFALSO\n¿Qué evalúa el método GenderMag?\n\n La proporción de mujeres en el equipo de diseño Si el software funciona bien para todo el espectro de cinco facetas cognitivas, como la autoeficacia o la actitud ante el riesgo El uso de lenguaje no sexista en los textos\n\nLa Directiva (UE) 2019/882 (Acta Europea de Accesibilidad) se aplica desde 2025 a servicios privados como el comercio electrónico. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nEstructura, orden de foco, etiquetas y uso del color se deciden en los esquemas.\nSituacional: depende de las circunstancias del momento.\nPerceptible, operable, comprensible y robusto.\n4,5:1 para texto normal; 3:1 para texto grande y componentes.\nEl criterio «uso del color» exige otro medio además del color.\nUsa personajes con distintos valores de las cinco facetas.\nDesde el 28 de junio de 2025; en España, a través de la Ley 11/2023.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#recursos-complementarios",
+    "href": "12-inclusivo.html#recursos-complementarios",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nW3C – WCAG 2.2\nLa norma\n\n\nW3C WAI – Estándares y pautas\nIntroducción a las WCAG\n\n\nGenderMag\nMateriales del método\n\n\nMicrosoft Inclusive Design\nEspectro de personas y kit\n\n\nInclusive Design Toolkit (Cambridge)\nEstimar la exclusión\n\n\nReal Decreto 1112/2018\nAccesibilidad del sector público\n\n\nDirectiva (UE) 2019/882\nActa Europea de Accesibilidad",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "90-uxlearn.html",
+    "href": "90-uxlearn.html",
+    "title": "Apéndice A — El paquete UxLearn",
+    "section": "",
+    "text": "Funciones\nUxLearn es un paquete de R que reúne las funciones y los datos simulados de este libro y de su continuación, Diseño e interacción en prototipos de alta fidelidad. Sirve para comprobar y medir lo que se diseña: no sustituye a las herramientas de diseño.\nDentro del libro se carga con source(\"datos/uxlearn.R\"). En tu ordenador, con RStudio o Positron, instálalo una vez:",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>El paquete UxLearn</span>"
+    ]
+  },
+  {
+    "objectID": "90-uxlearn.html#funciones",
+    "href": "90-uxlearn.html#funciones",
+    "title": "Apéndice A — El paquete UxLearn",
+    "section": "",
+    "text": "Para…\nFunción\nTema\n\n\n\n\nRelación de contraste entre dos colores (WCAG)\ncontraste()\n12\n\n\n¿Cumple el contraste mínimo AA o AAA?\ncumple_wcag()\n12\n\n\nRevisar todos los colores de una paleta\nrevisar_paleta()\n12\n\n\nSimular protanopía, deuteranopía o tritanopía\nsimular_daltonismo()\n12\n\n\n¿Se distinguen dos colores por luminosidad?\ndistinguibles()\n12\n\n\nCalcular una rejilla de columnas\nrejilla(), ancho_bloque()\n7\n\n\nCaracteres por línea\ncaracteres_por_linea()\n7\n\n\nEscala tipográfica modular\nescala_tipografica()\nAlta fidelidad\n\n\nPuntuación SUS y su aceptabilidad\npuntuacion_sus(), aceptabilidad_sus()\n4\n\n\nTasa de éxito con intervalo de confianza\ntasa_exito()\n4, 9\n\n\nTiempo típico (media geométrica)\ntiempo_tipico()\n4, 9\n\n\nAbandono en cada paso de un flujo\nembudo()\n5\n\n\nPriorizar los hallazgos de una revisión heurística\npriorizar_hallazgos()\n2",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>El paquete UxLearn</span>"
+    ]
+  },
+  {
+    "objectID": "90-uxlearn.html#datos-todos-simulados-salvo-las-taxonomías",
+    "href": "90-uxlearn.html#datos-todos-simulados-salvo-las-taxonomías",
+    "title": "Apéndice A — El paquete UxLearn",
+    "section": "Datos (todos simulados, salvo las taxonomías)",
+    "text": "Datos (todos simulados, salvo las taxonomías)\n\n\n\n\n\n\n\nObjeto\nContenido\n\n\n\n\nrespuestas_sus\nRespuestas al SUS de 12 participantes\n\n\nsesiones_prueba\n8 participantes × 3 tareas × prototipo en papel y digital\n\n\nflujo_registro\nUsuarios en cada paso de un registro\n\n\nhallazgos_heuristicos\n6 problemas valorados por 3 evaluadores\n\n\nheuristicas_nielsen\nLas diez heurísticas de Nielsen\n\n\npatrones_enganosos\nCategorías de Gray et al. (2018) y Mathur et al. (2019)\n\n\npaleta_ejemplo\nNueve colores de un sistema de diseño\n\n\n\nPrueba aquí cualquier función:",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>El paquete UxLearn</span>"
+    ]
+  },
+  {
+    "objectID": "90-uxlearn.html#referencias-de-los-métodos",
+    "href": "90-uxlearn.html#referencias-de-los-métodos",
+    "title": "Apéndice A — El paquete UxLearn",
+    "section": "Referencias de los métodos",
+    "text": "Referencias de los métodos\n\nBangor, A.; Kortum, P. T.; Miller, J. T. (2008). An empirical evaluation of the System Usability Scale. International Journal of Human-Computer Interaction, 24(6), 574-594.\nBrooke, J. (1996). SUS: A «quick and dirty» usability scale. En P. W. Jordan et al. (eds.), Usability evaluation in industry (pp. 189-194). Taylor & Francis.\nMachado, G. M.; Oliveira, M. M.; Fernandes, L. A. F. (2009). A physiologically-based model for simulation of color vision deficiency. IEEE Transactions on Visualization and Computer Graphics, 15(6), 1291-1298.\nSauro, J.; Lewis, J. R. (2016). Quantifying the user experience (2.ª ed.). Morgan Kaufmann.\nW3C (2023). Web Content Accessibility Guidelines (WCAG) 2.2.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>El paquete UxLearn</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html",
+    "href": "91-guia-docente.html",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "",
+    "text": "Correspondencia con la ficha de la asignatura\nEsta guía explica cómo está pensado el libro para la docencia de la asignatura y cómo mantenerlo.\nLos doce temas siguen, en el mismo orden, los contenidos de la ficha oficial de Esquemas de página y prototipos de baja fidelidad (19945). Los objetivos de cada tema concretan los objetivos específicos de la ficha.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#correspondencia-con-la-ficha-de-la-asignatura",
+    "href": "91-guia-docente.html#correspondencia-con-la-ficha-de-la-asignatura",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "",
+    "text": "Actividad de evaluación (ficha)\nPeso\nApoyo en el libro\n\n\n\n\nExamen final\n50 %\nContenidos y lecturas obligatorias de los doce temas; las autoevaluaciones sirven de práctica\n\n\nActividades en Aula Global\n25 %\nRetos evaluables (uno por tema) y banco de preguntas en Moodle XML\n\n\nProyecto final en equipo\n25 %\nLos retos 3 a 9 son los pasos del proyecto: brief, métricas, flujos, storyboards, esquemas, prototipo navegable y prueba",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#retos-evaluables",
+    "href": "91-guia-docente.html#retos-evaluables",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Retos evaluables",
+    "text": "Retos evaluables\nCada tema termina con un reto sin pista, solución ni corrección automática. Cada estudiante trabaja con un servicio o un proyecto elegido por él, lo que dificulta copiar. Se entrega con la plantilla entrega_reto.qmd, que lleva una rúbrica común: comprensión del tema (20 %), calidad del trabajo de diseño (30 %), justificación de las decisiones (20 %), ética, inclusión y accesibilidad (15 %) y presentación (15 %). La plantilla genera un HTML con las imágenes dentro, de modo que la entrega es un único fichero. No hace falta saber R para usarla.\nLas soluciones de referencia y los criterios de corrección de los retos no están en el repositorio público.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#autoevaluación-en-aula-global",
+    "href": "91-guia-docente.html#autoevaluación-en-aula-global",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Autoevaluación en Aula Global",
+    "text": "Autoevaluación en Aula Global\nLas preguntas de autoevaluación de cada tema están exportadas a Moodle XML en la carpeta moodle/ del repositorio: un fichero por tema y uno con todo el banco. Se importan desde Banco de preguntas → Importar → Formato Moodle XML. Cada pregunta conserva su explicación como retroalimentación general.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#el-papel-de-r",
+    "href": "91-guia-docente.html#el-papel-de-r",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "El papel de R",
+    "text": "El papel de R\nEl libro usa R lo imprescindible: cinco temas tienen ejercicios breves de completar huecos con funciones del paquete UxLearn (métricas, embudos, priorización de hallazgos, rejillas y color). El capítulo Usar R en este libro basta como preparación. Ningún reto exige programar.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#funciones-del-libro",
+    "href": "91-guia-docente.html#funciones-del-libro",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Funciones del libro",
+    "text": "Funciones del libro\n\nProgreso del estudiante: cada capítulo muestra los ejercicios resueltos y las preguntas acertadas; la presentación resume todos. Se guarda solo en el navegador del estudiante (localStorage): el profesorado no lo ve. Sirve para la autorregulación, no para evaluar.\nUso sin conexión: un service worker (sw.js) guarda las páginas, webR y sus paquetes tras la primera visita.\nModo claro y oscuro, con auditoría de accesibilidad (WCAG 2.1 AA) en los dos.\nPDF y EPUB generados con python3 herramientas/pdf.py.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#mantenimiento",
+    "href": "91-guia-docente.html#mantenimiento",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Mantenimiento",
+    "text": "Mantenimiento\nDesde la raíz del repositorio:\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras y plantillas en PDF\npython3 herramientas/paquete_webr.py ../UxLearn   # funciones de UxLearn para webR\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\nEl flujo .github/workflows/comprobar.yml renderiza el libro y comprueba en un navegador real todos los ejercicios, las preguntas y la accesibilidad en modo claro y oscuro. Al publicar una versión nueva, actualiza version en CITATION.cff y vuelve a ejecutar preparar.py para que los navegadores renueven su copia.\nLos datos de todos los ejercicios son simulados; no hay datos de personas reales.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html",
+    "href": "92-glosario.html",
+    "title": "Apéndice C — Glosario",
+    "section": "",
+    "text": "Tema 1. Fundamentos\nTérminos del libro ordenados por tema. Cada entrada enlaza con el tema donde se explica.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#tema-1.-fundamentos",
+    "href": "92-glosario.html#tema-1.-fundamentos",
+    "title": "Apéndice C — Glosario",
+    "section": "",
+    "text": "Prototipo\nRepresentación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo. → Tema 1\n\n\nFidelidad\nGrado en que un prototipo se parece al producto final. Tiene varias dimensiones independientes: apariencia, datos, funcionalidad, interactividad y estructura espacial. → Tema 1\n\n\nBoceto\nDibujo rápido, barato y ambiguo que sirve para explorar y generar alternativas, no para especificar. → Tema 1\n\n\nEsquema de página\nWireframe. Representación de la estructura de una pantalla: qué elementos contiene, dónde están y qué importancia tienen, sin estilo visual. → Tema 7\n\n\nDiseño centrado en las personas\nEnfoque, descrito en la norma ISO 9241-210, que repite un ciclo de cuatro actividades: entender el contexto de uso, especificar requisitos, producir soluciones y evaluarlas. → Tema 1\n\n\nIteración\nCada vuelta del ciclo de diseño y evaluación. → Tema 1",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#tema-2.-investigación",
+    "href": "92-glosario.html#tema-2.-investigación",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 2. Investigación",
+    "text": "Tema 2. Investigación\n\nInvestigación con usuarios\nConjunto de métodos para entender quién usará un producto, qué intenta conseguir, en qué contexto y qué se lo impide. → Tema 2\n\n\nMétodo actitudinal\nMétodo que recoge lo que las personas dicen: opiniones, intenciones, preferencias. → Tema 2\n\n\nMétodo comportamental\nMétodo que observa lo que las personas hacen. → Tema 2\n\n\nEvaluación heurística\nInspección de una interfaz por varios evaluadores con una lista breve de principios (heurísticas), sin participación de usuarios. → Tema 2\n\n\nSeveridad\nGravedad de un problema de usabilidad, de 0 (no es un problema) a 4 (catástrofe) en la escala de Nielsen. → Tema 2\n\n\nDiagrama de afinidad\nTécnica de análisis que agrupa observaciones escritas en notas según su similitud hasta que emergen temas. → Tema 2\n\n\nHallazgo\nObservación de la investigación con su evidencia. Se distingue de la conclusión (insight), que la interpreta. → Tema 2\n\n\n«¿Cómo podríamos…?»\nHow might we. Forma de convertir una conclusión de la investigación en una oportunidad de diseño abierta a varias soluciones. → Tema 2",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#tema-3.-definir-el-problema",
+    "href": "92-glosario.html#tema-3.-definir-el-problema",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 3. Definir el problema",
+    "text": "Tema 3. Definir el problema\n\nEnunciado del problema\nFrase que describe a quién afecta el problema, qué necesita y por qué, sin incluir una solución. → Tema 3\n\n\nHipótesis de diseño\nAfirmación comprobable sobre el efecto de un cambio de diseño, con la señal que permitirá saber si se cumple. → Tema 3\n\n\nAlcance\nLo que entra y, sobre todo, lo que no entra en un proyecto. → Tema 3\n\n\nProblema retorcido\nWicked problem. Problema sin formulación definitiva en el que entenderlo y resolverlo ocurren a la vez (Rittel y Webber, 1973). → Tema 3\n\n\nEncuadre\nManera de mirar una situación que abre soluciones nuevas; según Dorst (2011), el núcleo del pensamiento de diseño. → Tema 3\n\n\nBrief de diseño\nDocumento breve que reúne el problema, las personas usuarias, las hipótesis, el alcance, las restricciones y los criterios de éxito. → Tema 3",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#tema-4.-métricas",
+    "href": "92-glosario.html#tema-4.-métricas",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 4. Métricas",
+    "text": "Tema 4. Métricas\n\nObjetivo SMART\nObjetivo específico, medible, alcanzable, relevante y con plazo. → Tema 4\n\n\nHito\nPunto del proyecto definido por un resultado comprobable. → Tema 4\n\n\nMarco HEART\nAgrupación de métricas de experiencia en satisfacción, implicación, adopción, retención y éxito en la tarea (Rodden et al., 2010). → Tema 4\n\n\nTasa de éxito\nProporción de participantes que completan una tarea. → Tema 4\n\n\nIntervalo de confianza\nRango de valores entre los que está probablemente el valor real de una métrica. Con muestras pequeñas es ancho. → Tema 4\n\n\nMedia geométrica\nMedia de los logaritmos devuelta a la escala original; representa mejor el tiempo típico cuando hay valores muy altos. → Tema 4\n\n\nSUS\nSystem Usability Scale. Cuestionario de diez afirmaciones que da una puntuación de usabilidad percibida de 0 a 100, que no es un porcentaje. → Tema 4",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#tema-5.-flujos",
+    "href": "92-glosario.html#tema-5.-flujos",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 5. Flujos",
+    "text": "Tema 5. Flujos\n\nFlujo de usuario\nRecorrido por el sistema para completar una tarea, con sus pantallas y decisiones. → Tema 5\n\n\nAnálisis de tareas\nDescomposición de un objetivo en subtareas y pasos. → Tema 5\n\n\nMapa de tareas\nRepresentación ordenada de todas las tareas de un servicio, sin entrar en pantallas. → Tema 5\n\n\nWireflow\nFlujo dibujado con miniaturas de los esquemas de cada pantalla. → Tema 5\n\n\nFlujo de error\nCamino que sigue la persona cuando algo falla. → Tema 5\n\n\nCallejón sin salida\nPunto de un flujo desde el que no se puede continuar, volver ni salir. → Tema 5\n\n\nEmbudo\nRecuento de las personas que llegan a cada paso de un flujo, que muestra dónde se pierden. → Tema 5",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#tema-6.-storyboards",
+    "href": "92-glosario.html#tema-6.-storyboards",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 6. Storyboards",
+    "text": "Tema 6. Storyboards\n\nStoryboard\nSecuencia de viñetas que cuenta cómo una persona usa un producto en una situación concreta. → Tema 6\n\n\nEscenario\nHistoria escrita de una persona concreta que persigue un objetivo en un contexto; sirve de guion al storyboard. → Tema 6\n\n\nContexto de uso\nEntorno físico, social y técnico en el que se usa un producto. → Tema 6\n\n\nMomento clave\nInstante de la historia en el que el producto marca la diferencia. → Tema 6\n\n\nViñeta\nCada uno de los cuadros de un storyboard. → Tema 6",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#tema-7.-esquemas-de-página",
+    "href": "92-glosario.html#tema-7.-esquemas-de-página",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 7. Esquemas de página",
+    "text": "Tema 7. Esquemas de página\n\nJerarquía visual\nOrden de importancia de los elementos, comunicado con el tamaño, la posición, la agrupación y el contraste. → Tema 7\n\n\nRejilla\nDivisión del ancho de la pantalla en columnas, medianiles y márgenes para alinear los elementos. → Tema 7\n\n\nMedianil\nGutter. Separación entre las columnas de una rejilla. → Tema 7\n\n\nÁrea de contenido\nZona de la pantalla que se repite en todas las páginas: cabecera, navegación, contenido, lateral, pie. → Tema 7\n\n\nConvención\nSolución de interfaz que la mayoría de los sitios resuelve igual y que las personas ya esperan. → Tema 7\n\n\nAnotación\nNota numerada en un esquema que explica un comportamiento que el dibujo no muestra. → Tema 7",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#tema-8.-estados-y-transiciones",
+    "href": "92-glosario.html#tema-8.-estados-y-transiciones",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 8. Estados y transiciones",
+    "text": "Tema 8. Estados y transiciones\n\nEstado\nCada situación distinta en la que puede estar un componente o una pantalla. → Tema 8\n\n\nTransición\nPaso de un estado a otro, provocado por un evento. → Tema 8\n\n\nDiagrama de estados\nRepresentación de los estados de un sistema y de las transiciones entre ellos, basada en los statecharts de Harel (1987). → Tema 8\n\n\nEstado vacío\nEstado de una pantalla cuando no hay contenido que mostrar. → Tema 8\n\n\nFoco\nEstado del elemento al que se ha llegado con el teclado; debe ser siempre visible. → Tema 8\n\n\nPrototipo navegable\nConjunto de pantallas enlazadas que se puede recorrer como si fuera el producto. → Tema 8",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#tema-9.-prototipos-en-papel",
+    "href": "92-glosario.html#tema-9.-prototipos-en-papel",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 9. Prototipos en papel",
+    "text": "Tema 9. Prototipos en papel\n\nPrototipo en papel\nPrototipo hecho con hojas y piezas de papel que se manipulan durante una prueba. → Tema 9\n\n\nFacilitador\nPersona que dirige una sesión de prueba, lee las tareas y mantiene la neutralidad. → Tema 9\n\n\n«Ordenador humano»\nPersona que, en una prueba en papel, cambia las hojas según lo que hace el participante, como lo haría el sistema. → Tema 9\n\n\nPensamiento en voz alta\nTécnica en la que el participante dice lo que busca, espera y le sorprende mientras usa el prototipo. → Tema 9\n\n\nEscenario de tarea\nSituación realista que da un objetivo al participante sin decirle cómo conseguirlo. → Tema 9\n\n\nPrueba de usabilidad\nSesión en la que personas representativas realizan tareas con un producto o prototipo mientras se observa qué ocurre. → Tema 9",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#tema-10.-sesgos-y-patrones-engañosos",
+    "href": "92-glosario.html#tema-10.-sesgos-y-patrones-engañosos",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 10. Sesgos y patrones engañosos",
+    "text": "Tema 10. Sesgos y patrones engañosos\n\nSesgo cognitivo\nError sistemático en el juicio que se produce al usar atajos mentales. → Tema 10\n\n\nHeurístico\nAtajo mental para decidir con incertidumbre (Tversky y Kahneman, 1974). No confundir con las heurísticas de usabilidad. → Tema 10\n\n\nEfecto de anclaje\nTendencia a que la primera cifra vista condicione la valoración de las siguientes. → Tema 10\n\n\nOpción por defecto\nLa opción que viene marcada; tendemos a no cambiarla. → Tema 10\n\n\nPatrón engañoso\nDark pattern o diseño engañoso. Solución de interfaz que engaña, presiona o dificulta decidir libremente. → Tema 10\n\n\nSesgo de confirmación\nTendencia a buscar y valorar más los datos que confirman la idea propia. → Tema 10\n\n\nArquitectura de la decisión\nForma en que se presentan las opciones, que influye en lo que se elige. → Tema 10",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#tema-11.-economía-de-la-atención",
+    "href": "92-glosario.html#tema-11.-economía-de-la-atención",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 11. Economía de la atención",
+    "text": "Tema 11. Economía de la atención\n\nEconomía de la atención\nModelo económico en el que la atención de las personas es el recurso que se capta y se vende, sobre todo a anunciantes. → Tema 11\n\n\nMétrica de implicación\nMedida de la intensidad de uso (tiempo, sesiones, desplazamiento) que no indica por sí sola si el producto ayuda a la persona. → Tema 11\n\n\nRefuerzo intermitente\nRecompensa que llega de forma impredecible; es el patrón que más cuesta abandonar. → Tema 11\n\n\nDesplazamiento infinito\nLista que carga contenido sin fin al llegar abajo, sin un punto natural para parar. → Tema 11\n\n\nSeñal de parada\nElemento de diseño que marca un final natural (un final de lista, un resumen). → Tema 11\n\n\nBienestar digital\nRelación con la tecnología alineada con los objetivos y la salud de las personas. → Tema 11",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#tema-12.-diseño-inclusivo-y-accesible",
+    "href": "92-glosario.html#tema-12.-diseño-inclusivo-y-accesible",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 12. Diseño inclusivo y accesible",
+    "text": "Tema 12. Diseño inclusivo y accesible\n\nDiseño inclusivo\nDiseño que tiene en cuenta toda la diversidad humana en lugar de un usuario medio. → Tema 12\n\n\nAccesibilidad\nCondición de un producto que pueden percibir, entender, navegar y usar las personas con discapacidad. → Tema 12\n\n\nWCAG\nPautas de Accesibilidad para el Contenido Web del W3C; la versión actual es la 2.2 (2023). → Tema 12\n\n\nEspectro de personas\nIdea de que una limitación puede ser permanente, temporal o situacional. → Tema 12\n\n\nGenderMag\nMétodo de inspección que detecta sesgos de género con personajes que varían en cinco facetas cognitivas (Burnett et al., 2016). → Tema 12\n\n\nContraste\nRelación entre la luminancia de dos colores, de 1:1 a 21:1. → Tema 12\n\n\nDaltonismo\nDeficiencia en la visión de los colores; la más frecuente afecta al eje rojo-verde. → Tema 12\n\n\nOrden de foco\nSecuencia en la que el teclado recorre los elementos interactivos de una pantalla. → Tema 12",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  }
+]

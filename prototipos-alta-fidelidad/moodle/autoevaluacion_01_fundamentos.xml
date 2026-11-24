@@ -1,0 +1,192 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Alta fidelidad (libro)/Tema 1. Fundamentos del prototipado de alta fidelidad</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 1. Fundamentos del prototipado de alta fidelidad · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un prototipo con aspecto visual definitivo puede tener baja fidelidad funcional. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La fidelidad tiene varias dimensiones independientes (Lim et al., 2008).]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 1. Fundamentos del prototipado de alta fidelidad · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Para comprobar si la gente entiende el flujo de reserva hace falta alta fidelidad. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El flujo se valida antes y más barato en baja fidelidad.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 1. Fundamentos del prototipado de alta fidelidad · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Según Houde y Hill, la alta fidelidad explora sobre todo la ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La alta fidelidad es el terreno de la apariencia y la sensación.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[función del producto en la vida de la persona]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[apariencia y sensación]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[estructura de la base de datos]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 1. Fundamentos del prototipado de alta fidelidad · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Pantallas con el aspecto definitivo pero sin interacción forman una ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Maqueta (<em>mockup</em>): aspecto final, sin interacción.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>maqueta</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>mockup</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 1. Fundamentos del prototipado de alta fidelidad · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál es un riesgo de subir la fidelidad demasiado pronto?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El coste del cambio y las críticas superficiales son los riesgos clásicos.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Que las pruebas detecten demasiados problemas]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Que cambiar el diseño cueste más y las críticas se centren en detalles visuales]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Que el prototipo no se pueda enseñar a la dirección]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 1. Fundamentos del prototipado de alta fidelidad · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Para validar la accesibilidad con lectores de pantalla, el prototipo más adecuado es ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Los lectores de pantalla necesitan el código real para funcionar.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[una maqueta estática]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[un prototipo navegable en una herramienta de diseño]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[un prototipo en código]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

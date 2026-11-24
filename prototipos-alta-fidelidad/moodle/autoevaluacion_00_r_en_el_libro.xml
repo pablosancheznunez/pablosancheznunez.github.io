@@ -1,0 +1,157 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Alta fidelidad (libro)/Usar R en este libro</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Usar R en este libro · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En R, <code>x &lt;- c(2, 4, 6)</code> crea un vector de tres elementos. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>c()</code> combina valores en un vector; aquí, tres.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Usar R en este libro · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Para quedarte con la columna <code>tiempo_s</code> de la tabla <code>sesiones_prueba</code> escribes <code>sesiones_prueba</code> seguido del símbolo ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>$</code> selecciona una columna por su nombre.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>$</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Usar R en este libro · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué función cuenta las filas de una tabla? ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>nrow()</code> cuenta filas; <code>length()</code> cuenta los elementos de un vector.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[length()]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[nrow()]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[sum()]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[table()]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Usar R en este libro · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Los ejercicios de este libro necesitan instalar R en el ordenador. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[R se ejecuta en el navegador mediante webR; instalarlo solo hace falta para trabajar fuera del libro.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Usar R en este libro · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Con los tiempos 32, 41, 38, 45 y 120 segundos, ¿qué resumen se ve más afectado por el valor extremo? ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La media (55,2 s) sube mucho por los 120 s; la mediana (41 s) apenas cambia.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[La media]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[La mediana]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[El número de valores]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

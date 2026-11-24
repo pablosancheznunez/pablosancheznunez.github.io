@@ -1,0 +1,69 @@
+---
+title: "Reto del Tema [N]: [título]"
+subtitle: "Diseño e interacción en prototipos de alta fidelidad · Máster en Experiencia de Usuario (UC3M)"
+author: "[Nombre y apellidos]"
+date: today
+date-format: "D [de] MMMM [de] YYYY"
+lang: es
+format:
+  html:
+    theme: [cosmo, informe.scss]
+    toc: true
+    toc-title: "Contenido"
+    number-sections: true
+    embed-resources: true
+    fig-cap-location: bottom
+---
+
+<!--
+Plantilla de entrega de los retos del libro «Diseño e interacción en prototipos
+de alta fidelidad» (Pablo Sánchez-Núñez, UC3M). Licencia CC BY 4.0.
+
+Cómo usarla:
+1. Guarda este fichero y informe.scss en la misma carpeta, junto con una
+   carpeta imagenes/ con las fotos de tus bocetos o capturas.
+2. Ábrelo en RStudio o Positron y pulsa «Render» (o `quarto render entrega_reto.qmd`).
+   No necesitas saber R: puedes escribir solo texto e imágenes.
+3. Sustituye los textos entre corchetes y borra lo que no necesites.
+4. Entrega el HTML generado (lleva las imágenes dentro).
+-->
+
+::: {.callout-tip collapse="true"}
+## Rúbrica de evaluación de los retos (bórrala antes de entregar)
+
+| Criterio | Peso | Excelente | Aceptable | Insuficiente |
+|---|---|---|---|---|
+| **Comprensión del tema** | 20 % | Usa con precisión los conceptos y modelos del tema y de la lectura obligatoria | Usa los conceptos con algún error | No aplica los conceptos del tema |
+| **Calidad del trabajo de diseño** | 30 % | Maquetas, prototipos o documentación completos, cuidados y coherentes con el problema | Completos pero con incoherencias o huecos | Incompletos o sin relación con el problema |
+| **Justificación de las decisiones** | 20 % | Cada decisión se explica con evidencia (investigación, prueba, norma o lectura) | Decisiones explicadas sin evidencia | Decisiones sin explicar |
+| **Ética, inclusión y accesibilidad** | 15 % | Considera explícitamente a personas diversas y evita patrones engañosos | Lo menciona de forma genérica | No lo considera |
+| **Presentación** | 15 % | Texto claro y breve, imágenes legibles con pie, referencias completas | Algunos fallos de forma | Desordenado o ilegible |
+:::
+
+::: {.callout-note appearance="minimal"}
+**Tema:** [1-11] · **Servicio o proyecto:** [nombre] · **Fecha de la prueba o revisión, si la hay:** [fecha]
+:::
+
+# Contexto
+
+[Qué servicio o proyecto trabajas y qué pregunta quieres responder, en dos o tres frases.]
+
+# Trabajo realizado
+
+[Desarrolla aquí cada punto del enunciado del reto, con un apartado por punto.]
+
+![[Pie de figura: qué muestra la imagen y qué hay que mirar en ella.]](imagenes/boceto1.jpg){fig-alt="[Descripción de la imagen para quien no puede verla]"}
+
+# Decisiones y justificación
+
+| Decisión | Por qué | Evidencia |
+|---|---|---|
+| [Qué has decidido] | [Razón] | [Hallazgo, prueba, norma o lectura] |
+
+# Reflexión crítica
+
+[Qué funciona, qué no y qué harías en la siguiente iteración. Incluye las limitaciones de lo que has hecho.]
+
+# Referencias
+
+[Lectura obligatoria del tema y otras fuentes citadas.]

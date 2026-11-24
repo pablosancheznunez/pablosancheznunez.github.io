@@ -1,0 +1,183 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Baja fidelidad (libro)/Tema 5. Flujos de usuario: modelado y representación</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 5. Flujos de usuario: modelado y representación · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un viaje de usuario y un flujo de usuario son lo mismo. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El viaje cubre toda la experiencia, también fuera del producto; el flujo, el recorrido por el sistema en una tarea.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 5. Flujos de usuario: modelado y representación · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En un diagrama de flujo, una decisión se representa con un ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El rombo es la decisión; el rectángulo, una pantalla; el óvalo, el inicio o el fin.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[óvalo]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[rectángulo]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[rombo]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 5. Flujos de usuario: modelado y representación · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Qué ocurre cuando la sala se ocupa mientras alguien la reserva se documenta en un flujo ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Es un fallo que el diseño debe prever.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[principal]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[alternativo]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[de error]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 5. Flujos de usuario: modelado y representación · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Volver atrás en un formulario no debería borrar lo que la persona ya había escrito. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Es control y libertad del usuario (heurística 3) y prevención de errores.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 5. Flujos de usuario: modelado y representación · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En el embudo de la práctica, ¿qué porcentaje de quienes llegan a «Crear cuenta» pasa a «Datos personales»? ____ %</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[610 / 840 = 72,6 %.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>72.6</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>72,6</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 5. Flujos de usuario: modelado y representación · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El embudo indica en qué paso abandonan los usuarios y también por qué lo hacen. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El embudo dice dónde, no por qué: para eso hace falta investigación cualitativa.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

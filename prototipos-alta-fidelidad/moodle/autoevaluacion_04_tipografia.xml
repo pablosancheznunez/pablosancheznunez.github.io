@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Alta fidelidad (libro)/Tema 4. La tipografía en el diseño de interfaces</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 4. La tipografía en el diseño de interfaces · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En una escala modular, cada tamaño se obtiene multiplicando el anterior por una razón constante. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Esa es la definición de escala modular.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 4. La tipografía en el diseño de interfaces · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Con base 16 px y razón 1,25, el paso 2 mide ____ px.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[16 × 1,25 × 1,25 = 25.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>25</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 4. La tipografía en el diseño de interfaces · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Para el texto de lectura se suele recomendar una longitud de línea de ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Es la regla práctica habitual para la lectura cómoda.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[20 a 30 caracteres]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[45 a 75 caracteres]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[100 a 150 caracteres]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 4. La tipografía en el diseño de interfaces · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El texto justificado es recomendable en las interfaces porque ordena los márgenes. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Crea huecos irregulares entre palabras que dificultan la lectura.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 4. La tipografía en el diseño de interfaces · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Por qué se prefieren las unidades rem para el tamaño del texto?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Se escalan con la preferencia de tamaño del sistema o del navegador.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque ocupan menos memoria]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Porque respetan el tamaño de letra que la persona elige en su sistema]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque son obligatorias en Figma]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 4. La tipografía en el diseño de interfaces · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Según las WCAG, el texto grande empieza en ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El texto grande tiene un mínimo de contraste más bajo (3:1).]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[16 px]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[24 px (o 18,66 px en negrita)]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[48 px]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

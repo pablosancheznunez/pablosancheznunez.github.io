@@ -1,0 +1,992 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Competencias digitales para el uso de la información",
+    "section": "",
+    "text": "Presentación\nEste libro acompaña a la asignatura Competencias digitales para el uso de la información (código 19408, 3 ECTS, primer curso, segundo cuatrimestre) del Grado en Gestión de la Información y Contenidos Digitales de la Universidad Carlos III de Madrid. Su objetivo es que aprendas a encontrar, evaluar y usar la información de forma fiable y ética, también cuando la produce una inteligencia artificial.\nEl libro recorre los cuatro bloques del programa oficial: la evaluación de la credibilidad de la información digital, la búsqueda y organización de la información, su uso ético (incluidas las referencias bibliográficas y el plagio) y la inteligencia artificial generativa para crear contenidos.\nAutor: Pablo Sánchez-Núñez (ORCID 0000-0001-7845-9506), Universidad Carlos III de Madrid.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#objetivos-de-la-asignatura",
+    "href": "index.html#objetivos-de-la-asignatura",
+    "title": "Competencias digitales para el uso de la información",
+    "section": "Objetivos de la asignatura",
+    "text": "Objetivos de la asignatura\nAl terminar la asignatura deberías ser capaz de:\n\nReconocer la sobrecarga informativa y la desinformación, y usar la información digital de forma crítica.\nIdentificar, seleccionar y evaluar fuentes de información, incluidas las redes sociales como fuente de información científica.\nDiseñar estrategias de búsqueda en plataformas generales y especializadas, y organizar lo que encuentras.\nUsar la información de forma ética, respetando la propiedad intelectual y evitando el plagio.\nCrear y gestionar referencias bibliográficas con un estilo de citación.\nEntender cómo funciona la inteligencia artificial generativa, para qué sirve, cuáles son sus límites y qué dicen la ética y la regulación sobre su uso.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#cómo-está-organizado-cada-capítulo",
+    "href": "index.html#cómo-está-organizado-cada-capítulo",
+    "title": "Competencias digitales para el uso de la información",
+    "section": "Cómo está organizado cada capítulo",
+    "text": "Cómo está organizado cada capítulo\nCada capítulo empieza con objetivos y glosario, propone una lectura obligatoria y otras complementarias, desarrolla los contenidos del programa, plantea una práctica, un reto evaluable y termina con una autoevaluación de corrección inmediata y recursos complementarios.\n\n\n\n\n\n\nNotaUn poco de R\n\n\n\nEn cuatro capítulos hay ejercicios muy breves de R, que se ejecutan en el navegador sin instalar nada, para ver por dentro cómo funcionan algunas herramientas: los operadores booleanos de un buscador, el formato de una referencia, la detección de coincidencias en un texto o la verificación de referencias generadas por una IA. No hace falta saber programar: el capítulo Usar R en este libro explica lo imprescindible y todos los ejercicios tienen pista y solución.\n\n\n\n\n\n\n\n\nTipDescargar el libro\n\n\n\nLibro en PDF Libro en EPUB\nEl PDF sirve para leer o imprimir; el EPUB, para lectores de libros electrónicos y móviles.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#tu-progreso-y-uso-sin-conexión",
+    "href": "index.html#tu-progreso-y-uso-sin-conexión",
+    "title": "Competencias digitales para el uso de la información",
+    "section": "Tu progreso y uso sin conexión",
+    "text": "Tu progreso y uso sin conexión\nEl libro anota los ejercicios que resuelves y las preguntas que aciertas. El progreso se guarda solo en este navegador: no se envía a ningún servidor ni lo ve el profesorado.\n\nActiva JavaScript para ver tu progreso.\n\nDespués de la primera visita, el navegador guarda el libro y el motor de R, así que podrás consultar los capítulos que hayas abierto sin conexión. Si tu navegador lo permite, se activa al cargar la página.\nUsa el interruptor que hay junto al título del libro, en la barra lateral, para cambiar entre el modo claro y el oscuro.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#mapa-del-libro",
+    "href": "index.html#mapa-del-libro",
+    "title": "Competencias digitales para el uso de la información",
+    "section": "Mapa del libro",
+    "text": "Mapa del libro\n\n\n\nBloque\nCapítulo\nUnidades del programa\n\n\n\n\nCredibilidad de la información\nFuentes de información\n1\n\n\nBúsqueda y organización\nRecuperación de información\n2\n\n\nUso ético\nUso ético de la información y plagio, Referencias bibliográficas\n3, 4 y 5\n\n\nIA generativa\nFundamentos y aplicaciones, Ética, autoría y regulación\n6 a 9",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#relación-con-la-evaluación",
+    "href": "index.html#relación-con-la-evaluación",
+    "title": "Competencias digitales para el uso de la información",
+    "section": "Relación con la evaluación",
+    "text": "Relación con la evaluación\nLa asignatura es presencial y de evaluación continua (100 %): trabajos prácticos y presentaciones (70 %) y una prueba final el último día de clase (30 %), en la que hay que obtener al menos un 4. La asistencia y la participación pueden contar. El plagio o la copia en cualquier actividad supone perder la nota de esa actividad.\n\nLos retos evaluables de cada capítulo están pensados como trabajos prácticos.\nLas autoevaluaciones no cuentan para la nota y preparan la prueba final; también están en Aula Global.\n\nEsta descripción resume la ficha oficial; en caso de diferencia, prevalece lo que publique la asignatura en Aula Global.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#bibliografía-básica-de-la-asignatura",
+    "href": "index.html#bibliografía-básica-de-la-asignatura",
+    "title": "Competencias digitales para el uso de la información",
+    "section": "Bibliografía básica de la asignatura",
+    "text": "Bibliografía básica de la asignatura\n\nBobish, G.; Jacobson, T. (eds.) (2014). The information literacy user’s guide: An open, online textbook. Open SUNY Textbooks.\nCordón García, J. A. et al. (2016). Las nuevas fuentes de información: la búsqueda informativa, documental y de investigación en el ámbito digital. Pirámide.\nCruz Gil, C. (2015). Modelos de búsqueda y recuperación de la información. Trea.\nDorner, D. G.; Gorman, G. E.; Calvert, P. J. (2015). Information needs analysis: Principles and practice in information organizations. Facet.\nPacios Lozano, A. R. (coord.) (2013). Técnicas de búsqueda y uso de la información. Ramón Areces.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#autoría-y-cómo-citar",
+    "href": "index.html#autoría-y-cómo-citar",
+    "title": "Competencias digitales para el uso de la información",
+    "section": "Autoría y cómo citar",
+    "text": "Autoría y cómo citar\nLibro escrito por Pablo Sánchez-Núñez (Universidad Carlos III de Madrid). Los textos y las figuras se publican con licencia CC BY 4.0 y el código con licencia MIT. El código fuente está en GitHub.\n\nSánchez-Núñez, P. (2026). Competencias digitales para el uso de la información: guía interactiva. Zenodo.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html",
+    "href": "00-r-en-el-libro.html",
+    "title": "Usar R en este libro",
+    "section": "",
+    "text": "Cómo funcionan las celdas\nAlgunos capítulos tienen ejercicios cortos de R que se ejecutan en tu navegador. No vas a aprender a programar: vas a usar R como una calculadora potente para ver por dentro cómo funcionan algunas herramientas de información. Este capítulo te explica lo justo en diez minutos.\nCada bloque de código tiene un botón Run Code. Puedes cambiar el código y volver a ejecutarlo; Start Over recupera la versión original. La primera vez que abres una página, el navegador descarga el motor de R (unos segundos).\nCon &lt;- se guarda un valor en un objeto. Un vector reúne varios valores con c(). Los textos van entre comillas:",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html#cómo-funcionan-las-celdas",
+    "href": "00-r-en-el-libro.html#cómo-funcionan-las-celdas",
+    "title": "Usar R en este libro",
+    "section": "",
+    "text": "Ejercicio 1\nUna búsqueda devuelve 480 resultados y, tras revisarlos, 24 son pertinentes. Calcula la proporción de resultados pertinentes (la precisión de la búsqueda).\n\n\n\n\n\n\n\nSustituye el hueco por el número total de resultados.\n\n\npertinentes &lt;- 24\nresultados &lt;- 480\npertinentes / resultados\n0,05: solo uno de cada veinte resultados sirve. En el capítulo de recuperación verás cómo mejorar la precisión.\n\n\n\n\nEjercicio 2\nComprueba si «Dialnet» está en el vector fuentes.\n\n\n\n\n\n\n\n\nEscribe el nombre exactamente igual, con mayúscula inicial.\n\n\n\"Dialnet\" %in% fuentes\nTRUE. Si escribes «dialnet» en minúsculas, R dice FALSE: distingue mayúsculas y minúsculas, como algunos buscadores.",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html#autoevaluación",
+    "href": "00-r-en-el-libro.html#autoevaluación",
+    "title": "Usar R en este libro",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nEn R, los textos se escriben entre comillas. VERDADEROFALSO\nPara crear un vector con varios valores se usa la función length()c()toupper()\nlength(c(\"a\", \"b\", \"c\")) devuelve \nPara hacer los ejercicios del libro hay que instalar R en el ordenador. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nSin comillas, R buscaría un objeto con ese nombre.\nc() combina valores en un vector.\nTres elementos.\nSe ejecutan en el navegador con webR.",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "01-fuentes.html",
+    "href": "01-fuentes.html",
+    "title": "Unidad 1. Introducción. Fuentes de información",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Unidad 1. Introducción. Fuentes de información</span>"
+    ]
+  },
+  {
+    "objectID": "01-fuentes.html#lectura-obligatoria",
+    "href": "01-fuentes.html#lectura-obligatoria",
+    "title": "Unidad 1. Introducción. Fuentes de información",
+    "section": "",
+    "text": "Metzger, M. J.; Flanagin, A. J. (2013). Credibility and trust of information in online environments: The use of cognitive heuristics. Journal of Pragmatics, 59, 210-220.\n\n\nLecturas complementarias\n\nBawden, D.; Robinson, L. (2009). The dark side of information: Overload, anxiety and other paradoxes and pathologies. Journal of Information Science, 35(2), 180-191. La sobrecarga informativa y sus efectos.\nPennycook, G.; Rand, D. G. (2021). The psychology of fake news. Trends in Cognitive Sciences, 25(5), 388-402. Por qué creemos y compartimos noticias falsas.\nSugimoto, C. R.; Work, S.; Larivière, V.; Haustein, S. (2017). Scholarly use of social media and altmetrics: A review of the literature. Journal of the Association for Information Science and Technology, 68(9), 2037-2062.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Unidad 1. Introducción. Fuentes de información</span>"
+    ]
+  },
+  {
+    "objectID": "01-fuentes.html#información-sobrecarga-y-desinformación",
+    "href": "01-fuentes.html#información-sobrecarga-y-desinformación",
+    "title": "Unidad 1. Introducción. Fuentes de información",
+    "section": "1. Información, sobrecarga y desinformación",
+    "text": "1. Información, sobrecarga y desinformación\nNunca ha sido tan fácil acceder a información, y nunca ha sido tan difícil saber cuál es fiable. Bawden y Robinson (2009) describen el «lado oscuro» de la información: la sobrecarga informativa (más información de la que se puede procesar), la ansiedad que provoca y otros efectos paradójicos, como sentirse peor informado cuanta más información se recibe.\nEn el terreno de la información falsa conviene distinguir:\n\n\n\n\n\n\n\n\nTipo\nQué es\nEjemplo\n\n\n\n\nInformación errónea (misinformation)\nFalsa, pero se comparte sin intención de engañar\nReenviar un remedio casero ineficaz creyendo que funciona\n\n\nDesinformación (disinformation)\nFalsa y creada o difundida para engañar\nUna campaña con datos inventados para influir en unas elecciones\n\n\nInformación maliciosa (malinformation)\nVerdadera, pero usada para causar daño\nDifundir datos personales reales de alguien\n\n\n\nPennycook y Rand (2021) muestran que mucha gente comparte información falsa no tanto por sesgo ideológico como por falta de atención: no se para a pensar si es verdad antes de compartirla. Una pausa breve mejora el juicio.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Unidad 1. Introducción. Fuentes de información</span>"
+    ]
+  },
+  {
+    "objectID": "01-fuentes.html#uso-crítico-reflexivo-y-proactivo",
+    "href": "01-fuentes.html#uso-crítico-reflexivo-y-proactivo",
+    "title": "Unidad 1. Introducción. Fuentes de información",
+    "section": "2. Uso crítico, reflexivo y proactivo",
+    "text": "2. Uso crítico, reflexivo y proactivo\nMetzger y Flanagin (2013) explican que, en línea, las personas no evalúan la credibilidad de forma sistemática, sino con atajos mentales (heurísticos): la reputación (una marca conocida parece fiable), el respaldo de otros (muchas reseñas o «me gusta»), la coherencia (lo que se repite en varios sitios), la violación de expectativas (un diseño descuidado o errores hacen desconfiar) y la intención persuasiva (si parece que quieren vender algo, desconfiamos). Esos atajos son útiles, pero se pueden explotar: una web falsa puede imitar una marca conocida y las reseñas se pueden comprar.\nUn uso crítico de la información consiste en sustituir, cuando importa, el atajo por la comprobación. Para eso funciona mejor la lectura lateral que la lectura vertical: en lugar de analizar a fondo la página (que puede estar diseñada para parecer fiable), se abren otras pestañas para averiguar qué dicen otros sobre esa fuente y esa afirmación. Es lo que hacen los verificadores profesionales.\nEl método SIFT, propuesto por Mike Caulfield, resume la lectura lateral en cuatro pasos:\n\nPara (Stop): antes de leer o compartir, pregúntate si conoces la fuente.\nInvestiga la fuente (Investigate the source): quién está detrás y qué intereses tiene.\nBusca mejor cobertura (Find better coverage): qué dicen otras fuentes fiables sobre lo mismo.\nRastrea hasta el original (Trace claims): busca la fuente primaria de la afirmación, la cita o la imagen.\n\n\n\n\n\n\n\nFigura 1: Lectura vertical frente a lectura lateral. La lateral sale de la página para comprobar la fuente y la afirmación en otras fuentes.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Unidad 1. Introducción. Fuentes de información</span>"
+    ]
+  },
+  {
+    "objectID": "01-fuentes.html#identificar-seleccionar-y-evaluar-fuentes",
+    "href": "01-fuentes.html#identificar-seleccionar-y-evaluar-fuentes",
+    "title": "Unidad 1. Introducción. Fuentes de información",
+    "section": "3. Identificar, seleccionar y evaluar fuentes",
+    "text": "3. Identificar, seleccionar y evaluar fuentes\nLas fuentes se suelen clasificar en primarias (información original: un artículo de investigación, unos datos, una ley, una entrevista), secundarias (analizan o resumen las primarias: una revisión, un libro de texto, una noticia sobre un estudio) y terciarias (ayudan a encontrar las anteriores: catálogos, bases de datos, enciclopedias).\nPara seleccionarlas, la pregunta clave es qué necesito: una definición, datos actualizados, la evidencia científica sobre un tema, la normativa vigente. Para evaluarlas, una lista útil es:\n\n\n\n\n\n\n\nCriterio\nPreguntas\n\n\n\n\nAutoría\n¿Quién lo firma? ¿Tiene conocimiento del tema? ¿Hay una organización responsable?\n\n\nPropósito\n¿Informa, opina, vende, persuade?\n\n\nActualidad\n¿Cuándo se publicó o se actualizó? ¿Importa la fecha para tu tema?\n\n\nExactitud\n¿Cita sus fuentes? ¿Se puede comprobar? ¿Coincide con otras fuentes fiables?\n\n\nRevisión\n¿Ha pasado una revisión por pares, una edición profesional o ningún control?",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Unidad 1. Introducción. Fuentes de información</span>"
+    ]
+  },
+  {
+    "objectID": "01-fuentes.html#las-redes-sociales-como-fuente-de-información-científica",
+    "href": "01-fuentes.html#las-redes-sociales-como-fuente-de-información-científica",
+    "title": "Unidad 1. Introducción. Fuentes de información",
+    "section": "4. Las redes sociales como fuente de información científica",
+    "text": "4. Las redes sociales como fuente de información científica\nLas redes sociales se usan cada vez más para difundir y comentar la ciencia. Sugimoto et al. (2017) revisan cómo las usan los investigadores y cómo se miden esas menciones (altmetría). Para una estudiante, las redes pueden servir para descubrir investigaciones y debates recientes, pero no son la fuente: hay que llegar al artículo original. Conviene recordar que:\n\nUna publicación viral sobre un estudio puede exagerar o malinterpretar sus resultados.\nLas menciones en redes miden atención, no calidad ni veracidad.\nLos preprints (versiones previas a la revisión por pares) se difunden mucho en redes y pueden cambiar o no publicarse.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Unidad 1. Introducción. Fuentes de información</span>"
+    ]
+  },
+  {
+    "objectID": "01-fuentes.html#práctica",
+    "href": "01-fuentes.html#práctica",
+    "title": "Unidad 1. Introducción. Fuentes de información",
+    "section": "Práctica",
+    "text": "Práctica\nElige una afirmación llamativa que hayas visto esta semana en redes sociales. Aplica los cuatro pasos de SIFT y anota cuánto tiempo te ha llevado y qué has encontrado en cada paso. Compáralo con lo que habrías concluido leyendo solo la publicación.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Unidad 1. Introducción. Fuentes de información</span>"
+    ]
+  },
+  {
+    "objectID": "01-fuentes.html#reto-u1",
+    "href": "01-fuentes.html#reto-u1",
+    "title": "Unidad 1. Introducción. Fuentes de información",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto de la unidad 1 · Verificar una afirmación científica\n\n\n\nElige una afirmación relacionada con la ciencia o la salud que circule en redes sociales o en medios:\n\nAplica el método SIFT y documenta cada paso con capturas y enlaces.\nLocaliza la fuente primaria (el estudio, el informe o los datos originales) y compara lo que dice con lo que se afirma.\nEvalúa tres fuentes que hayas usado con la tabla de criterios del apartado 3.\nConcluye si la afirmación es verdadera, falsa, exagerada o no comprobable, y explica por qué.\n\nEntrega: un informe hecho con la plantilla de entrega. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante elige una afirmación distinta y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Unidad 1. Introducción. Fuentes de información</span>"
+    ]
+  },
+  {
+    "objectID": "01-fuentes.html#autoevaluación",
+    "href": "01-fuentes.html#autoevaluación",
+    "title": "Unidad 1. Introducción. Fuentes de información",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nReenviar un remedio casero ineficaz creyendo que funciona es un caso de desinformacióninformación erróneainformación maliciosa\nSegún Pennycook y Rand, mucha gente comparte noticias falsas sobre todo por falta de \nLa lectura lateral consiste en analizar a fondo la propia página antes de salir de ella. VERDADEROFALSO\nEl último paso de SIFT, rastrear hasta el original, busca la fuente terciariaprimariasecundaria\n¿Qué heurístico usamos cuando confiamos en una web porque tiene muchas reseñas positivas? ReputaciónRespaldoIntención persuasiva\nUn artículo de revisión que resume muchos estudios es una fuente primariasecundariaterciaria\n¿Qué miden las menciones de un artículo en redes sociales?\n\n La calidad científica del artículo La atención que recibe Si sus resultados son verdaderos\n\nDifundir datos personales reales de alguien para perjudicarle es información erróneadesinformacióninformación maliciosa\nUna ley publicada en el BOE es una fuente primariasecundariaterciaria\nUn preprint ya ha superado la revisión por pares. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nEs falsa, pero sin intención de engañar.\nUna pausa para pensar mejora el juicio.\nEs la lectura vertical; la lateral sale de la página para contrastarla.\nLa fuente original de la afirmación.\nEl respaldo de otros: reseñas, «me gusta», recomendaciones.\nResume y analiza fuentes primarias.\nLa altmetría mide atención, no calidad ni veracidad.\nEs verdadera, pero se usa para causar daño.\nEs el texto original de la norma.\nEs una versión previa a la revisión.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Unidad 1. Introducción. Fuentes de información</span>"
+    ]
+  },
+  {
+    "objectID": "01-fuentes.html#recursos-complementarios",
+    "href": "01-fuentes.html#recursos-complementarios",
+    "title": "Unidad 1. Introducción. Fuentes de información",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nCaulfield, M. – SIFT (The four moves)\nEl método SIFT explicado por su autor\n\n\nACRL – Framework for Information Literacy\nMarco de la alfabetización informacional\n\n\nMaldita.es y Newtral\nVerificadores españoles\n\n\nIFCN – Código de principios\nRed internacional de verificadores\n\n\nThe information literacy user’s guide\nManual abierto de la bibliografía básica",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Unidad 1. Introducción. Fuentes de información</span>"
+    ]
+  },
+  {
+    "objectID": "02-recuperacion.html",
+    "href": "02-recuperacion.html",
+    "title": "Unidad 2. Recuperación de información",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unidad 2. Recuperación de información</span>"
+    ]
+  },
+  {
+    "objectID": "02-recuperacion.html#lectura-obligatoria",
+    "href": "02-recuperacion.html#lectura-obligatoria",
+    "title": "Unidad 2. Recuperación de información",
+    "section": "",
+    "text": "Bates, M. J. (1989). The design of browsing and berrypicking techniques for the online search interface. Online Review, 13(5), 407-424.\n\n\nLecturas complementarias\n\nMarchionini, G. (2006). Exploratory search: From finding to understanding. Communications of the ACM, 49(4), 41-46. La búsqueda como aprendizaje.\nCruz Gil, C. (2015). Modelos de búsqueda y recuperación de la información. Trea (bibliografía básica de la asignatura).\nPacios Lozano, A. R. (coord.) (2013). Técnicas de búsqueda y uso de la información. Ramón Areces (bibliografía básica).",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unidad 2. Recuperación de información</span>"
+    ]
+  },
+  {
+    "objectID": "02-recuperacion.html#de-la-necesidad-a-la-estrategia",
+    "href": "02-recuperacion.html#de-la-necesidad-a-la-estrategia",
+    "title": "Unidad 2. Recuperación de información",
+    "section": "1. De la necesidad a la estrategia",
+    "text": "1. De la necesidad a la estrategia\nToda búsqueda empieza por una necesidad de información: qué quieres saber y para qué. Antes de escribir nada en un buscador conviene:\n\nFormular la pregunta en una frase: «¿Cómo afecta el uso del móvil al rendimiento académico de los universitarios?».\nIdentificar los conceptos: uso del móvil, rendimiento académico, universitarios.\nBuscar sinónimos y términos relacionados de cada concepto, en español y en inglés (smartphone, mobile phone; academic performance, achievement; university students, undergraduates).\nDecidir los límites: idioma, fechas, tipo de documento.\n\nBates (1989) mostró que la búsqueda real no es una consulta única que devuelve el conjunto perfecto, sino un proceso que llamó berrypicking (recolección de bayas): la necesidad cambia a medida que se lee, se recogen piezas útiles en cada paso y se usan técnicas variadas (seguir las referencias de un artículo, buscar a un autor, revisar una revista). Marchionini (2006) llama búsqueda exploratoria a la que sirve para aprender sobre un tema, frente a la que solo busca un dato.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unidad 2. Recuperación de información</span>"
+    ]
+  },
+  {
+    "objectID": "02-recuperacion.html#operadores-y-técnicas",
+    "href": "02-recuperacion.html#operadores-y-técnicas",
+    "title": "Unidad 2. Recuperación de información",
+    "section": "2. Operadores y técnicas",
+    "text": "2. Operadores y técnicas\n\n\n\n\n\n\n\n\nTécnica\nQué hace\nEjemplo\n\n\n\n\nY (AND)\nTodos los términos: reduce resultados\nmóvil AND rendimiento\n\n\nO (OR)\nCualquiera de los términos: amplía (sinónimos)\nmóvil OR smartphone\n\n\nNO (NOT)\nExcluye un término\nrendimiento NOT deportivo\n\n\nParéntesis\nAgrupan y ordenan las operaciones\n(móvil OR smartphone) AND rendimiento\n\n\nComillas\nFrase exacta\n\"rendimiento académico\"\n\n\nTruncamiento\nVariantes de una raíz\nuniversitari* encuentra universitario, universitaria, universitarios…\n\n\nBúsqueda por campos\nSolo en título, autor, resumen…\ntitle:(smartphone) según la plataforma\n\n\n\nCada plataforma tiene su sintaxis; la ayuda de cada buscador explica la suya. Además, muchas bases de datos usan un vocabulario controlado (tesauros, encabezamientos de materia): términos normalizados que agrupan los sinónimos y mejoran los resultados.\n\n\n\n\n\n\nFigura 1: Los operadores booleanos como conjuntos. Y se queda con la intersección; O, con la unión; NO, con la diferencia.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unidad 2. Recuperación de información</span>"
+    ]
+  },
+  {
+    "objectID": "02-recuperacion.html#precisión-y-exhaustividad",
+    "href": "02-recuperacion.html#precisión-y-exhaustividad",
+    "title": "Unidad 2. Recuperación de información",
+    "section": "3. Precisión y exhaustividad",
+    "text": "3. Precisión y exhaustividad\nDos medidas clásicas describen una búsqueda:\n\nPrecisión: de lo que he encontrado, ¿qué proporción me sirve?\nExhaustividad (recall): de todo lo que me serviría, ¿qué proporción he encontrado?\n\nSuelen moverse en direcciones opuestas: añadir sinónimos con O aumenta la exhaustividad y baja la precisión; añadir conceptos con Y aumenta la precisión y baja la exhaustividad. Un trabajo de clase necesita sobre todo precisión; una revisión de la literatura necesita exhaustividad.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unidad 2. Recuperación de información</span>"
+    ]
+  },
+  {
+    "objectID": "02-recuperacion.html#plataformas-generales-y-especializadas",
+    "href": "02-recuperacion.html#plataformas-generales-y-especializadas",
+    "title": "Unidad 2. Recuperación de información",
+    "section": "4. Plataformas generales y especializadas",
+    "text": "4. Plataformas generales y especializadas\n\n\n\nTipo\nEjemplos\nPara qué\n\n\n\n\nBuscadores generales\nGoogle, Bing\nInformación general, webs institucionales, noticias\n\n\nBuscadores académicos\nGoogle Académico, BASE, OpenAlex\nLiteratura científica de todas las áreas\n\n\nCatálogos de bibliotecas\nCatálogo de la biblioteca de la UC3M\nLibros y recursos suscritos por la universidad\n\n\nBases de datos multidisciplinares\nWeb of Science, Scopus (con acceso de la universidad), Dialnet\nArtículos revisados, con filtros y vocabulario controlado; Dialnet, para la producción en español\n\n\nBases de datos especializadas\nPubMed (biomedicina), ERIC (educación), LISTA (biblioteconomía)\nBúsqueda exhaustiva en un área\n\n\nRepositorios\nRecolecta, repositorios institucionales\nVersiones en acceso abierto\n\n\n\nAlgunos recursos requieren identificarse con la cuenta de la universidad o usar la VPN desde fuera del campus.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unidad 2. Recuperación de información</span>"
+    ]
+  },
+  {
+    "objectID": "02-recuperacion.html#organizar-la-información",
+    "href": "02-recuperacion.html#organizar-la-información",
+    "title": "Unidad 2. Recuperación de información",
+    "section": "5. Organizar la información",
+    "text": "5. Organizar la información\nEncontrar es la mitad del trabajo: la otra mitad es no perder lo encontrado. Conviene:\n\nGuardar la estrategia de búsqueda (dónde, con qué términos, cuándo y cuántos resultados), para poder repetirla y explicarla.\nUsar un gestor de referencias (Unidad 4) para guardar los documentos con sus datos.\nCrear alertas en las bases de datos para recibir las novedades.\nTomar notas con la referencia completa desde el principio, para no tener que buscarla después.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unidad 2. Recuperación de información</span>"
+    ]
+  },
+  {
+    "objectID": "02-recuperacion.html#práctica-en-r-los-operadores-booleanos-por-dentro",
+    "href": "02-recuperacion.html#práctica-en-r-los-operadores-booleanos-por-dentro",
+    "title": "Unidad 2. Recuperación de información",
+    "section": "Práctica en R: los operadores booleanos por dentro",
+    "text": "Práctica en R: los operadores booleanos por dentro\nUn buscador trata cada término como el conjunto de documentos que lo contienen. En R, intersect() es Y, union() es O y setdiff() es NO:\n\n\n\n\n\n\n\nEjercicio 2.1\n¿Cuántos documentos devuelve (móvil OR smartphone) AND rendimiento?\n\n\n\n\n\n\n\n\nEl tercer concepto es rendimiento.\n\n\nr &lt;- intersect(union(movil, smartphone), rendimiento)\nlength(r)\nSeis documentos: 1, 2, 8, 13, 4 y 16. Sin el sinónimo smartphone solo habrías encontrado cuatro: añadir sinónimos con O aumenta la exhaustividad.\n\n\n\n\nEjercicio 2.2\nHas revisado los seis resultados y solo cuatro te sirven. Calcula la precisión de la búsqueda.\n\n\n\n\n\n\n\nLa precisión es pertinentes entre resultados.\n\n\npertinentes &lt;- 4\nresultados &lt;- 6\npertinentes / resultados\n0,67: dos de cada tres resultados sirven.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unidad 2. Recuperación de información</span>"
+    ]
+  },
+  {
+    "objectID": "02-recuperacion.html#reto-u2",
+    "href": "02-recuperacion.html#reto-u2",
+    "title": "Unidad 2. Recuperación de información",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto de la unidad 2 · Estrategia de búsqueda documentada\n\n\n\nElige un tema de tu interés relacionado con el grado:\n\nFormula la pregunta, identifica los conceptos y haz una tabla de términos con sinónimos en español y en inglés.\nConstruye la ecuación de búsqueda con operadores, paréntesis, comillas y truncamiento.\nEjecútala en tres plataformas de tipos distintos (un buscador académico, una base de datos y un catálogo o repositorio), adaptando la sintaxis. Anota los resultados de cada una.\nSelecciona los cinco documentos más pertinentes, explica por qué y calcula la precisión de la primera página de resultados de cada plataforma.\n\nEntrega: un informe hecho con la plantilla de entrega. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante elige un tema distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unidad 2. Recuperación de información</span>"
+    ]
+  },
+  {
+    "objectID": "02-recuperacion.html#autoevaluación",
+    "href": "02-recuperacion.html#autoevaluación",
+    "title": "Unidad 2. Recuperación de información",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nPara ampliar una búsqueda con sinónimos se usa el operador ANDORNOT\nuniversitari* es un ejemplo de \nAñadir conceptos con AND suele aumentar la precisión y reducir la exhaustividad. VERDADEROFALSO\nSegún Bates, la búsqueda real es una única consulta que devuelve el conjunto perfecto de documentos. VERDADEROFALSO\nSi encuentro 20 documentos y 5 me sirven, la precisión es 0,200,250,504\n¿Para qué sirven las comillas en una búsqueda?\n\n Para excluir un término Para buscar una frase exacta Para buscar solo en el título\n\nPara buscar literatura biomédica de forma exhaustiva, la plataforma más adecuada es un buscador generalPubMedun repositorio institucional\nLa proporción de todos los documentos pertinentes que recupera una búsqueda es la precisiónexhaustividadpertinencia\nUn tesauro es un ejemplo de vocabulario \nEn (móvil OR smartphone) AND rendimiento, los paréntesis hacen que la O se resuelva antes que la Y. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nOR suma conjuntos: cualquiera de los términos.\nEl asterisco recupera todas las terminaciones de la raíz.\nCada AND exige un concepto más: menos resultados, más pertinentes.\nEs un proceso de recolección de bayas que cambia a medida que se lee.\n5 / 20 = 0,25.\nLas comillas fijan la frase completa y en orden.\nPubMed es la base de datos especializada en biomedicina.\nTambién se llama recall.\nNormaliza los términos y agrupa sinónimos.\nIgual que en una operación aritmética.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unidad 2. Recuperación de información</span>"
+    ]
+  },
+  {
+    "objectID": "02-recuperacion.html#recursos-complementarios",
+    "href": "02-recuperacion.html#recursos-complementarios",
+    "title": "Unidad 2. Recuperación de información",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nOpenAlex\nÍndice abierto de la literatura científica\n\n\nBASE\nBuscador de documentos académicos en acceso abierto\n\n\nDialnet\nLiteratura científica en español\n\n\nRecolecta\nRepositorios españoles de acceso abierto\n\n\nThe information literacy user’s guide, capítulos de búsqueda\nManual abierto",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unidad 2. Recuperación de información</span>"
+    ]
+  },
+  {
+    "objectID": "03-etica-plagio.html",
+    "href": "03-etica-plagio.html",
+    "title": "Unidad 3. Uso ético de la información y plagio",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unidad 3. Uso ético de la información y plagio</span>"
+    ]
+  },
+  {
+    "objectID": "03-etica-plagio.html#lectura-obligatoria",
+    "href": "03-etica-plagio.html#lectura-obligatoria",
+    "title": "Unidad 3. Uso ético de la información y plagio",
+    "section": "",
+    "text": "Pecorari, D.; Petrić, B. (2014). Plagiarism in second-language writing. Language Teaching, 47(3), 269-302.\n\n\nLecturas complementarias\n\nReal Decreto Legislativo 1/1996, Ley de Propiedad Intelectual. Texto consolidado; el art. 32 regula las citas.\nCreative Commons. Licencias. Qué permite cada licencia.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unidad 3. Uso ético de la información y plagio</span>"
+    ]
+  },
+  {
+    "objectID": "03-etica-plagio.html#ética-de-la-información",
+    "href": "03-etica-plagio.html#ética-de-la-información",
+    "title": "Unidad 3. Uso ético de la información y plagio",
+    "section": "1. Ética de la información",
+    "text": "1. Ética de la información\nUsar información de forma ética significa reconocer el trabajo de los demás, respetar sus derechos y no engañar a quien lee el propio trabajo. En la universidad, ese compromiso se llama integridad académica: honestidad, confianza, justicia, respeto y responsabilidad en el estudio y la investigación.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unidad 3. Uso ético de la información y plagio</span>"
+    ]
+  },
+  {
+    "objectID": "03-etica-plagio.html#propiedad-intelectual",
+    "href": "03-etica-plagio.html#propiedad-intelectual",
+    "title": "Unidad 3. Uso ético de la información y plagio",
+    "section": "2. Propiedad intelectual",
+    "text": "2. Propiedad intelectual\nEn España, la Ley de Propiedad Intelectual (Real Decreto Legislativo 1/1996) protege las creaciones originales (textos, imágenes, música, programas…) desde el momento de su creación, sin necesidad de registro. Distingue:\n\nDerechos morales: reconocimiento de la autoría e integridad de la obra. Son irrenunciables.\nDerechos de explotación (patrimoniales): reproducción, distribución, comunicación pública y transformación. Duran, con carácter general, toda la vida del autor y 70 años después de su muerte; después la obra pasa al dominio público.\n\nEl derecho de cita (art. 32) permite incluir fragmentos de obras ajenas sin pedir permiso cuando se hace a título de cita o para su análisis, comentario o juicio crítico, con fines docentes o de investigación, en la medida justificada por ese fin, e indicando la fuente y el nombre del autor.\nLas licencias Creative Commons permiten a los autores autorizar de antemano ciertos usos. Se combinan cuatro condiciones: BY (reconocimiento, presente en todas), SA (compartir igual), NC (no comercial) y ND (sin obras derivadas). Este libro, por ejemplo, tiene licencia CC BY 4.0.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unidad 3. Uso ético de la información y plagio</span>"
+    ]
+  },
+  {
+    "objectID": "03-etica-plagio.html#qué-es-el-plagio",
+    "href": "03-etica-plagio.html#qué-es-el-plagio",
+    "title": "Unidad 3. Uso ético de la información y plagio",
+    "section": "3. Qué es el plagio",
+    "text": "3. Qué es el plagio\nPlagiar es presentar como propio el trabajo, las ideas o las palabras de otra persona sin reconocerlo. Pecorari y Petrić (2014) distinguen el plagio intencionado del que nace de no saber escribir con fuentes, sobre todo al aprender a escribir en otro idioma o en un nuevo género académico. Los dos son plagio, pero el segundo se previene aprendiendo.\n\n\n\n\n\n\n\nTipo\nQué es\n\n\n\n\nCopia literal\nCopiar texto sin comillas ni cita\n\n\nEscritura en mosaico (patchwriting)\nCopiar cambiando algunas palabras o el orden, manteniendo la estructura del original\n\n\nParáfrasis sin cita\nReformular bien las ideas ajenas, pero sin citar la fuente\n\n\nPlagio de ideas\nUsar el argumento, los datos o la estructura de otro sin reconocerlo\n\n\nAutoplagio\nReutilizar un trabajo propio ya evaluado o publicado sin indicarlo\n\n\nTrabajo hecho por otros\nEntregar un trabajo encargado a otra persona o generado por una IA como si fuera propio\n\n\n\nEn esta asignatura, el plagio o la copia en cualquier actividad supone perder la nota de esa actividad.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unidad 3. Uso ético de la información y plagio</span>"
+    ]
+  },
+  {
+    "objectID": "03-etica-plagio.html#cómo-escribir-con-fuentes-sin-plagiar",
+    "href": "03-etica-plagio.html#cómo-escribir-con-fuentes-sin-plagiar",
+    "title": "Unidad 3. Uso ético de la información y plagio",
+    "section": "4. Cómo escribir con fuentes sin plagiar",
+    "text": "4. Cómo escribir con fuentes sin plagiar\n\nCita textual: las palabras exactas, entre comillas, con la referencia (y la página, si la hay). Para frases que importan por su forma exacta.\nParáfrasis: la idea del autor con tus palabras y tu estructura, con la referencia. Truco: lee, cierra el texto, escribe lo que has entendido y después comprueba que no se parece demasiado al original.\nResumen: las ideas principales de un texto largo, más breves, con la referencia.\nIdeas propias: no necesitan cita, pero deben distinguirse con claridad de las ajenas.\nConocimiento común (hechos ampliamente conocidos y fáciles de comprobar): no necesita cita. En caso de duda, cita.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unidad 3. Uso ético de la información y plagio</span>"
+    ]
+  },
+  {
+    "objectID": "03-etica-plagio.html#práctica-en-r-así-detecta-coincidencias-un-programa",
+    "href": "03-etica-plagio.html#práctica-en-r-así-detecta-coincidencias-un-programa",
+    "title": "Unidad 3. Uso ético de la información y plagio",
+    "section": "Práctica en R: así detecta coincidencias un programa",
+    "text": "Práctica en R: así detecta coincidencias un programa\nLos programas de detección de coincidencias comparan fragmentos de palabras consecutivas. Una forma sencilla es dividir los textos en grupos de tres palabras (trigramas) y calcular qué proporción comparten (similitud de Jaccard: comunes / total distintos):\n\n\n\n\n\n\n\nEjercicio 3.1\nCalcula la similitud entre el original y una copia literal (el mismo texto). ¿Qué valor esperas?\n\n\n\n\n\n\n\n\nCompara el original con el objeto copia.\n\n\ncopia &lt;- original\nsimilitud(original, copia)\n1: todos los trigramas coinciden. La escritura en mosaico da un valor intermedio y la paráfrasis bien hecha, casi 0. Por eso estos programas detectan bien la copia, peor el mosaico y casi nada la paráfrasis o la traducción: no sustituyen al juicio de quien corrige.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unidad 3. Uso ético de la información y plagio</span>"
+    ]
+  },
+  {
+    "objectID": "03-etica-plagio.html#reto-u3",
+    "href": "03-etica-plagio.html#reto-u3",
+    "title": "Unidad 3. Uso ético de la información y plagio",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto de la unidad 3 · Escribir con fuentes\n\n\n\nElige un artículo académico o de divulgación de tu interés:\n\nEscribe un resumen de unas 150 palabras, una paráfrasis de un párrafo y una cita textual breve, cada uno con su referencia.\nEscribe a propósito una versión en mosaico del mismo párrafo y explica por qué sería plagio.\nIdentifica la licencia del artículo y explica qué usos permite.\nReflexiona sobre qué situaciones de tu experiencia escolar o universitaria podrían haber sido plagio sin que lo supieras.\n\nEntrega: un informe hecho con la plantilla de entrega. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un texto distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unidad 3. Uso ético de la información y plagio</span>"
+    ]
+  },
+  {
+    "objectID": "03-etica-plagio.html#autoevaluación",
+    "href": "03-etica-plagio.html#autoevaluación",
+    "title": "Unidad 3. Uso ético de la información y plagio",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUna paráfrasis bien escrita no necesita cita porque usa palabras propias. VERDADEROFALSO\nCopiar cambiando algunas palabras pero manteniendo la estructura del original se llama escritura en \nLos derechos morales de autor son irrenunciables. VERDADEROFALSO\nEn una licencia Creative Commons, la condición que impide el uso comercial es BYSANCND\nSegún la Ley de Propiedad Intelectual, con carácter general los derechos de explotación duran la vida del autor y 20 años más50 años más70 años más\nEntregar como propio un trabajo generado por una IA es una forma de plagio. VERDADEROFALSO\n¿Por qué un programa de detección de coincidencias no basta para decidir si hay plagio?\n\n Porque solo funciona con textos en inglés Porque detecta bien la copia, pero peor el mosaico y casi nada la paráfrasis o la traducción, y no sabe si hay cita Porque siempre da falsos positivos\n\nReutilizar un trabajo propio ya evaluado sin indicarlo se llama \nLa condición de Creative Commons presente en todas las licencias es BYSANCND\nLos hechos de conocimiento común, ampliamente conocidos y fáciles de comprobar, no necesitan cita. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nLa idea sigue siendo ajena: hay que citarla aunque las palabras sean propias.\nPatchwriting: cambiar palabras sin cambiar la estructura.\nEl reconocimiento de la autoría no se puede ceder.\nNC, no comercial.\n70 años tras la muerte del autor, con carácter general.\nEs presentar como propio un trabajo que no lo es.\nMide coincidencias de texto, no si el uso de la fuente es correcto.\nTambién es una forma de plagio.\nReconocimiento de la autoría.\nEn caso de duda, mejor citar.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unidad 3. Uso ético de la información y plagio</span>"
+    ]
+  },
+  {
+    "objectID": "03-etica-plagio.html#recursos-complementarios",
+    "href": "03-etica-plagio.html#recursos-complementarios",
+    "title": "Unidad 3. Uso ético de la información y plagio",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nLey de Propiedad Intelectual (BOE)\nTexto consolidado\n\n\nCreative Commons – Licencias\nElegir y entender una licencia\n\n\nThe information literacy user’s guide, capítulo sobre ética\nManual abierto",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unidad 3. Uso ético de la información y plagio</span>"
+    ]
+  },
+  {
+    "objectID": "04-referencias.html",
+    "href": "04-referencias.html",
+    "title": "Unidades 4 y 5. Referencias bibliográficas",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unidades 4 y 5. Referencias bibliográficas</span>"
+    ]
+  },
+  {
+    "objectID": "04-referencias.html#lectura-obligatoria",
+    "href": "04-referencias.html#lectura-obligatoria",
+    "title": "Unidades 4 y 5. Referencias bibliográficas",
+    "section": "",
+    "text": "Gilmour, R.; Cobus-Kuo, L. (2011). Reference management software: A comparative analysis of four products. Issues in Science and Technology Librarianship, 66.\n\n\nLecturas complementarias\n\nFoltýnek, T. et al. (2020). Testing of support tools for plagiarism detection. International Journal of Educational Technology in Higher Education, 17, 46. Qué detectan y qué no las herramientas de originalidad.\nAmerican Psychological Association. APA Style. Guía oficial del estilo APA 7.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unidades 4 y 5. Referencias bibliográficas</span>"
+    ]
+  },
+  {
+    "objectID": "04-referencias.html#por-qué-citar",
+    "href": "04-referencias.html#por-qué-citar",
+    "title": "Unidades 4 y 5. Referencias bibliográficas",
+    "section": "1. Por qué citar",
+    "text": "1. Por qué citar\nCitar sirve para reconocer el trabajo ajeno, demostrar en qué se apoya lo que dices, permitir a quien lee encontrar las fuentes y distinguir tus ideas de las de otros. En un trabajo académico hay dos elementos relacionados:\n\nLa cita en el texto: una marca breve donde usas la fuente, como (Bates, 1989) o [3].\nLa referencia bibliográfica: la descripción completa de la fuente en la lista final.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unidades 4 y 5. Referencias bibliográficas</span>"
+    ]
+  },
+  {
+    "objectID": "04-referencias.html#estilos-de-citación",
+    "href": "04-referencias.html#estilos-de-citación",
+    "title": "Unidades 4 y 5. Referencias bibliográficas",
+    "section": "2. Estilos de citación",
+    "text": "2. Estilos de citación\nUn estilo fija qué datos se incluyen, en qué orden y con qué puntuación. Hay dos grandes sistemas:\n\n\n\n\n\n\n\n\n\nSistema\nCita en el texto\nOrden de la lista\nEstilos\n\n\n\n\nAutor-fecha\n(Metzger y Flanagin, 2013)\nAlfabético por apellido\nAPA 7, Harvard, Chicago autor-fecha\n\n\nNumérico\n[1] o superíndice\nPor orden de aparición\nVancouver, IEEE, ISO 690 numérico\n\n\n\nEn este grado se usa con frecuencia APA 7.ª edición. Lo importante es elegir un estilo, aplicarlo de forma coherente y seguir el que indique cada profesor o revista.\n\n\n\n\n\n\nFigura 1: Anatomía de una referencia de artículo en estilo APA 7: autores, año, título del artículo, revista en cursiva, volumen en cursiva, número, páginas y DOI como enlace.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unidades 4 y 5. Referencias bibliográficas</span>"
+    ]
+  },
+  {
+    "objectID": "04-referencias.html#referencias-de-los-tipos-de-documento-más-frecuentes-apa-7",
+    "href": "04-referencias.html#referencias-de-los-tipos-de-documento-más-frecuentes-apa-7",
+    "title": "Unidades 4 y 5. Referencias bibliográficas",
+    "section": "3. Referencias de los tipos de documento más frecuentes (APA 7)",
+    "text": "3. Referencias de los tipos de documento más frecuentes (APA 7)\n\n\n\n\n\n\n\nTipo\nPatrón\n\n\n\n\nArtículo de revista\nApellido, I. (Año). Título del artículo. Revista, volumen(número), páginas. https://doi.org/…\n\n\nLibro\nApellido, I. (Año). Título del libro (ed.). Editorial.\n\n\nCapítulo de libro\nApellido, I. (Año). Título del capítulo. En I. Apellido (Ed.), Título del libro (pp. x-y). Editorial.\n\n\nPágina web\nAutor u organización. (Año, día mes). Título. Sitio web. URL\n\n\nLey\nTítulo de la ley. Boletín Oficial del Estado, número, fecha. URL\n\n\n\nEl DOI (Digital Object Identifier) es un identificador permanente de un documento digital. Si existe, se incluye como enlace https://doi.org/…: aunque la web de la revista cambie, el DOI seguirá llevando al documento.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unidades 4 y 5. Referencias bibliográficas</span>"
+    ]
+  },
+  {
+    "objectID": "04-referencias.html#gestores-de-referencias",
+    "href": "04-referencias.html#gestores-de-referencias",
+    "title": "Unidades 4 y 5. Referencias bibliográficas",
+    "section": "4. Gestores de referencias",
+    "text": "4. Gestores de referencias\nUn gestor de referencias guarda los documentos con sus datos, los organiza, inserta las citas en el procesador de textos y genera la bibliografía en cualquier estilo. Gilmour y Cobus-Kuo (2011) compararon varios gestores y encontraron que todos cometen errores al generar las referencias (mayúsculas, datos que faltan, formatos de nombres), así que siempre hay que revisarlas. Los más usados son Zotero (libre y gratuito), Mendeley y EndNote.\nUn flujo de trabajo recomendado:\n\nCapturar la referencia desde la base de datos o el navegador (con el conector del gestor).\nComprobar y completar los datos.\nOrganizar en colecciones y etiquetas.\nCitar desde el procesador de textos con el complemento del gestor.\nRevisar la bibliografía final.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unidades 4 y 5. Referencias bibliográficas</span>"
+    ]
+  },
+  {
+    "objectID": "04-referencias.html#herramientas-de-análisis-de-originalidad",
+    "href": "04-referencias.html#herramientas-de-análisis-de-originalidad",
+    "title": "Unidades 4 y 5. Referencias bibliográficas",
+    "section": "5. Herramientas de análisis de originalidad",
+    "text": "5. Herramientas de análisis de originalidad\nLas universidades usan programas que comparan los trabajos con grandes bases de textos y señalan las coincidencias. Foltýnek et al. (2020) evaluaron muchas de estas herramientas y concluyeron que detectan bien la copia literal, pero tienen dificultades con las modificaciones (paráfrasis, sinónimos, traducciones) y que ninguna es perfecta. El informe de coincidencias es un indicio, no un veredicto: una cita bien hecha coincide con su fuente y no es plagio, y una paráfrasis sin cita puede no coincidir y sí serlo.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unidades 4 y 5. Referencias bibliográficas</span>"
+    ]
+  },
+  {
+    "objectID": "04-referencias.html#práctica-en-r-componer-y-ordenar-referencias",
+    "href": "04-referencias.html#práctica-en-r-componer-y-ordenar-referencias",
+    "title": "Unidades 4 y 5. Referencias bibliográficas",
+    "section": "Práctica en R: componer y ordenar referencias",
+    "text": "Práctica en R: componer y ordenar referencias\npaste0() une textos. Con ella se puede ver cómo un gestor compone una referencia a partir de sus datos:\n\n\n\n\n\n\n\nEjercicio 4.1\nEn el estilo APA, la lista se ordena alfabéticamente por el apellido del primer autor. Ordena estas referencias con sort() y escribe cuál queda en primer lugar.\n\n\n\n\n\n\n\n\nLa función que ordena un vector es sort().\n\n\nordenadas &lt;- sort(refs)\nordenadas[1]\nBates (1989): «Bat» va antes que «Baw». Los gestores ordenan así, letra a letra.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unidades 4 y 5. Referencias bibliográficas</span>"
+    ]
+  },
+  {
+    "objectID": "04-referencias.html#reto-u4",
+    "href": "04-referencias.html#reto-u4",
+    "title": "Unidades 4 y 5. Referencias bibliográficas",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto de las unidades 4 y 5 · Bibliografía con gestor\n\n\n\nCon los documentos de tu reto de la unidad 2 (u otros diez sobre un tema que elijas):\n\nCaptúralos en Zotero (o en otro gestor) y organízalos en una colección.\nGenera la bibliografía en APA 7 y revisa cada referencia: documenta todos los errores que corriges.\nIncluye al menos un artículo con DOI, un libro, un capítulo, una página web y una ley.\nEscribe un párrafo con tres citas en el texto y explica la diferencia entre el sistema autor-fecha y el numérico con tu propio ejemplo.\n\nEntrega: un informe hecho con la plantilla de entrega. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con documentos distintos y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unidades 4 y 5. Referencias bibliográficas</span>"
+    ]
+  },
+  {
+    "objectID": "04-referencias.html#autoevaluación",
+    "href": "04-referencias.html#autoevaluación",
+    "title": "Unidades 4 y 5. Referencias bibliográficas",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nEn el sistema autor-fecha, la lista de referencias se ordena por orden de apariciónalfabéticamente por el apellido del primer autorpor año\nVancouver e IEEE son estilos del sistema autor-fechanumérico\nEl identificador permanente de un documento digital que se incluye como enlace en la referencia es el \nLas referencias que genera un gestor bibliográfico son siempre correctas. VERDADEROFALSO\nEn APA 7, el título de la revista se escribe en cursiva. VERDADEROFALSO\nUn informe de coincidencias del 0 % garantiza que el trabajo no tiene plagio. VERDADEROFALSO\n¿Cuál es la diferencia entre cita y referencia?\n\n Son lo mismo con distinto nombre La cita es la marca breve en el texto; la referencia, la descripción completa en la lista final La cita va al final y la referencia en el texto\n\nEn APA 7, una obra de tres o más autores se cita en el texto con «et al.» desde la primera cita. VERDADEROFALSO\n¿Qué gestor de referencias es libre y gratuito? EndNoteZoteroWeb of Science\nEn un sistema numérico, la lista de referencias se ordena por apellidoañoorden de aparición en el texto\n\n\n\nVer explicaciones\n\nPor apellido del primer autor.\nNumeran las citas por orden de aparición.\nDigital Object Identifier, permanente aunque cambie la web.\nGilmour y Cobus-Kuo encontraron errores en todos: hay que revisarlas.\nRevista y volumen van en cursiva.\nUna paráfrasis sin cita puede no coincidir y seguir siendo plagio.\nLa cita remite a la referencia completa.\nDesde la primera vez, a diferencia de APA 6.\nZotero es software libre.\nEl número corresponde al orden de cita.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unidades 4 y 5. Referencias bibliográficas</span>"
+    ]
+  },
+  {
+    "objectID": "04-referencias.html#recursos-complementarios",
+    "href": "04-referencias.html#recursos-complementarios",
+    "title": "Unidades 4 y 5. Referencias bibliográficas",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nAPA Style\nGuía oficial del estilo APA 7\n\n\nZotero\nGestor de referencias libre\n\n\nCrossref\nRegistro de DOI y búsqueda de metadatos\n\n\nApéndice: guía rápida de citas\nEjemplos en APA 7 de este libro",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unidades 4 y 5. Referencias bibliográficas</span>"
+    ]
+  },
+  {
+    "objectID": "05-ia-fundamentos.html",
+    "href": "05-ia-fundamentos.html",
+    "title": "Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones</span>"
+    ]
+  },
+  {
+    "objectID": "05-ia-fundamentos.html#lectura-obligatoria",
+    "href": "05-ia-fundamentos.html#lectura-obligatoria",
+    "title": "Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones",
+    "section": "",
+    "text": "Walters, W. H.; Wilder, E. I. (2023). Fabrication and errors in the bibliographic citations generated by ChatGPT. Scientific Reports, 13, 14045.\n\n\nLecturas complementarias\n\nKasneci, E. et al. (2023). ChatGPT for good? On opportunities and challenges of large language models for education. Learning and Individual Differences, 103, 102274.\nBender, E. M.; Gebru, T.; McMillan-Major, A.; Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? En Proceedings of FAccT ’21 (pp. 610-623). ACM.\n\n\n\n\n\n\n\nEl bloque de IA generativa ocupa las unidades 6 a 9 del programa. Este capítulo cubre los fundamentos, las aplicaciones y los retos técnicos (unidades 6 y 7); el siguiente, la ética, la autoría y la regulación (unidades 8 y 9).",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones</span>"
+    ]
+  },
+  {
+    "objectID": "05-ia-fundamentos.html#qué-es-la-ia-generativa",
+    "href": "05-ia-fundamentos.html#qué-es-la-ia-generativa",
+    "title": "Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones",
+    "section": "1. Qué es la IA generativa",
+    "text": "1. Qué es la IA generativa\nLa inteligencia artificial generativa produce contenido nuevo (texto, imágenes, audio, código) a partir de patrones aprendidos de grandes cantidades de datos. Los asistentes conversacionales se basan en modelos de lenguaje: sistemas entrenados con enormes colecciones de textos para predecir la palabra (en realidad, el fragmento de palabra) más probable que sigue a un texto dado. Repitiendo esa predicción una y otra vez, el modelo escribe respuestas fluidas.\nDe ahí se siguen tres consecuencias importantes:\n\nEl modelo produce lo plausible, no necesariamente lo verdadero. Bender et al. (2021) los llamaron, de forma crítica, «loros estocásticos»: combinan formas lingüísticas sin acceso propio al significado ni a los hechos.\nLo que sabe depende de sus datos de entrenamiento: puede no conocer hechos recientes y reproducir los sesgos de esos datos.\nLa forma de pedir importa: una instrucción (prompt) clara, con contexto, objetivo y formato, da mejores resultados.\n\nAlgunos sistemas combinan el modelo con un buscador o una base de documentos y responden a partir de lo que recuperan (generación aumentada por recuperación). Mejora la actualidad y permite enlazar fuentes, pero no elimina los errores: hay que comprobar que la fuente dice lo que el sistema afirma.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones</span>"
+    ]
+  },
+  {
+    "objectID": "05-ia-fundamentos.html#aplicaciones-innovadoras-y-retos-técnicos",
+    "href": "05-ia-fundamentos.html#aplicaciones-innovadoras-y-retos-técnicos",
+    "title": "Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones",
+    "section": "2. Aplicaciones innovadoras y retos técnicos",
+    "text": "2. Aplicaciones innovadoras y retos técnicos\nLa IA generativa se usa ya para redactar y traducir textos, resumir documentos, escribir y revisar código, crear imágenes, audio y vídeo, apoyar la atención al público con asistentes conversacionales o ayudar a buscar y organizar información. En el ámbito de la información y la documentación aparecen aplicaciones como la descripción automática de colecciones, la transcripción de documentos históricos o los buscadores que responden en lenguaje natural citando sus fuentes.\nSus retos técnicos marcan las líneas de investigación abiertas:\n\n\n\n\n\n\n\nReto\nEn qué consiste\n\n\n\n\nVeracidad\nReducir las alucinaciones y anclar las respuestas en fuentes comprobables\n\n\nActualidad\nIncorporar información posterior al entrenamiento sin reentrenar todo el modelo\n\n\nExplicabilidad\nEntender por qué el modelo produce una respuesta concreta\n\n\nSesgos\nDetectar y mitigar los sesgos heredados de los datos\n\n\nEficiencia\nReducir el consumo de energía y el coste de entrenar y usar los modelos\n\n\nEvaluación\nMedir de forma fiable qué saben hacer y dónde fallan\n\n\nDetección\nDistinguir contenido generado de contenido humano, algo que hoy no se consigue con fiabilidad",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones</span>"
+    ]
+  },
+  {
+    "objectID": "05-ia-fundamentos.html#alucinaciones",
+    "href": "05-ia-fundamentos.html#alucinaciones",
+    "title": "Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones",
+    "section": "3. Alucinaciones",
+    "text": "3. Alucinaciones\nUna alucinación es una respuesta que parece correcta pero es falsa o inventada. En el trabajo académico, la más peligrosa es la referencia inventada: un artículo con autores, título, revista y DOI verosímiles que no existe. Walters y Wilder (2023) pidieron a ChatGPT revisiones bibliográficas breves y comprobaron cada referencia: una gran parte de las citas de GPT-3.5 eran inventadas, y con GPT-4 seguía habiendo una proporción menor pero apreciable; además, muchas referencias reales tenían errores.\n\n\n\n\n\n\nFigura 1: Cómo surge una referencia inventada. El modelo combina piezas plausibles (un autor real, una revista real, un título del tema) en una referencia que no existe; solo la verificación en una base de datos lo detecta.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones</span>"
+    ]
+  },
+  {
+    "objectID": "05-ia-fundamentos.html#usos-responsables-en-el-estudio",
+    "href": "05-ia-fundamentos.html#usos-responsables-en-el-estudio",
+    "title": "Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones",
+    "section": "4. Usos responsables en el estudio",
+    "text": "4. Usos responsables en el estudio\nKasneci et al. (2023) revisan oportunidades (explicaciones adaptadas, apoyo a la escritura, práctica personalizada) y riesgos (dependencia, errores, sesgos, plagio). Un criterio práctico es distinguir los usos según lo que delegas:\n\n\n\n\n\n\n\n\nUso\nRiesgo\nBuenas prácticas\n\n\n\n\nPedir que te explique un concepto\nMedio\nContrastar con un manual o una fuente fiable\n\n\nGenerar ideas o un esquema inicial\nBajo-medio\nUsarlo como punto de partida, no como resultado\n\n\nRevisar la ortografía y la claridad de tu texto\nBajo\nRevisar cada cambio; el texto sigue siendo tuyo\n\n\nBuscar bibliografía\nAlto\nVerificar cada referencia en una base de datos\n\n\nResumir un documento\nMedio\nLeer el original; el resumen puede omitir o inventar\n\n\nEscribir el trabajo por ti\nInaceptable\nEs presentar como propio un trabajo ajeno (Unidad 3)\n\n\n\nAntes de usar IA en una asignatura, comprueba qué permite el profesorado y declara su uso cuando sea necesario (lo verás en el capítulo siguiente).",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones</span>"
+    ]
+  },
+  {
+    "objectID": "05-ia-fundamentos.html#cómo-verificar-lo-que-produce-una-ia",
+    "href": "05-ia-fundamentos.html#cómo-verificar-lo-que-produce-una-ia",
+    "title": "Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones",
+    "section": "5. Cómo verificar lo que produce una IA",
+    "text": "5. Cómo verificar lo que produce una IA\n\nReferencias: busca cada una por su DOI (en doi.org o Crossref) o por su título en Google Académico, OpenAlex o la base de datos de tu área. Comprueba autores, año y revista.\nDatos y hechos: aplica la lectura lateral y SIFT (Unidad 1).\nCitas atribuidas: localiza la frase en la fuente original.\nContenido: comprueba que la fuente real dice lo que la IA afirma que dice.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones</span>"
+    ]
+  },
+  {
+    "objectID": "05-ia-fundamentos.html#práctica-en-r-verificar-referencias-contra-una-base-de-datos",
+    "href": "05-ia-fundamentos.html#práctica-en-r-verificar-referencias-contra-una-base-de-datos",
+    "title": "Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones",
+    "section": "Práctica en R: verificar referencias contra una base de datos",
+    "text": "Práctica en R: verificar referencias contra una base de datos\nEl operador %in% comprueba qué elementos de un vector están en otro. Imagina que una IA te ha dado cinco DOI y tienes una lista con los DOI que existen en una base de datos:\n\n\n\n\n\n\n\nEjercicio 6.1\nCalcula la proporción de referencias inventadas (las que no están en la base de datos). Recuerda que ! invierte un valor lógico y que mean() de un vector lógico da la proporción de TRUE.\n\n\n\n\n\n\n\n\nCompara con el vector base_datos.\n\n\nmean(!(doi_ia %in% base_datos))\n0,4: dos de las cinco referencias no aparecen. En la práctica, que un DOI no esté en una lista no prueba que no exista: hay que buscarlo en doi.org. Pero un DOI con un formato extraño o que no resuelve es una señal clara de referencia inventada.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones</span>"
+    ]
+  },
+  {
+    "objectID": "05-ia-fundamentos.html#reto-u5",
+    "href": "05-ia-fundamentos.html#reto-u5",
+    "title": "Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto de las unidades 6 y 7 · Auditar las referencias de una IA\n\n\n\n\nPide a un asistente de IA generativa una lista de diez referencias académicas sobre un tema de tu interés. Guarda la instrucción y la respuesta completas.\nVerifica cada referencia: ¿existe? ¿son correctos los autores, el año, el título, la revista y el DOI? ¿El contenido corresponde al tema?\nClasifica cada una como correcta, real con errores o inventada, y calcula las proporciones.\nRepite la búsqueda en una base de datos (Unidad 2) y compara la calidad de los resultados y el tiempo empleado.\n\nEntrega: un informe hecho con la plantilla de entrega. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con un tema distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones</span>"
+    ]
+  },
+  {
+    "objectID": "05-ia-fundamentos.html#autoevaluación",
+    "href": "05-ia-fundamentos.html#autoevaluación",
+    "title": "Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUn modelo de lenguaje genera texto prediciendo el fragmento más probable que sigue a un texto dado. VERDADEROFALSO\nUna respuesta de una IA que parece correcta pero es falsa o inventada se llama \nSi una IA da una referencia con DOI, autores y revista, la referencia existe. VERDADEROFALSO\n¿Cuál de estos usos tiene mayor riesgo? Revisar la ortografía de tu textoPedir ideas inicialesBuscar bibliografía sin verificarla\nSi 3 de 12 referencias generadas por una IA son inventadas, la proporción de inventadas es 0,120,250,333\nLa generación aumentada por recuperación elimina por completo los errores. VERDADEROFALSO\n¿Por qué un modelo de lenguaje puede inventar una referencia verosímil?\n\n Porque copia referencias de una base de datos con errores Porque genera texto plausible combinando patrones, sin comprobar que la referencia exista Porque su objetivo es engañar a quien lo usa\n\nLo que sabe un modelo de lenguaje depende de sus datos de \nHoy existen detectores que distinguen con total fiabilidad el texto generado por IA del humano. VERDADEROFALSO\nPara comprobar si existe una referencia dada por una IA, lo más fiable es preguntar a la misma IA si existebuscarla por su DOI o título en Crossref, OpenAlex o una base de datoscomprobar que el formato parece correcto\n\n\n\nVer explicaciones\n\nRepite esa predicción para escribir la respuesta.\nRespuesta plausible pero falsa.\nPuede estar inventada: hay que verificarla.\nWalters y Wilder encontraron muchas referencias inventadas.\n3 / 12 = 0,25.\nMejora la actualidad, pero hay que comprobar las fuentes.\nProduce lo plausible, no lo verdadero; no hay intención.\nPuede no conocer hechos recientes y heredar sus sesgos.\nLa detección es uno de los retos técnicos abiertos.\nLa IA puede confirmar con seguridad una referencia falsa.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones</span>"
+    ]
+  },
+  {
+    "objectID": "05-ia-fundamentos.html#recursos-complementarios",
+    "href": "05-ia-fundamentos.html#recursos-complementarios",
+    "title": "Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nCrossref\nComprobar DOI y metadatos\n\n\nOpenAlex\nBuscar si un artículo existe\n\n\nUNESCO – Guidance for generative AI in education and research (Miao y Holmes, 2023)\nOrientaciones internacionales",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Unidades 6 y 7. Inteligencia artificial generativa: fundamentos y aplicaciones</span>"
+    ]
+  },
+  {
+    "objectID": "06-ia-etica.html",
+    "href": "06-ia-etica.html",
+    "title": "Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación</span>"
+    ]
+  },
+  {
+    "objectID": "06-ia-etica.html#lectura-obligatoria",
+    "href": "06-ia-etica.html#lectura-obligatoria",
+    "title": "Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación",
+    "section": "",
+    "text": "Floridi, L.; Cowls, J. (2019). A unified framework of five principles for AI in society. Harvard Data Science Review, 1(1).\n\n\nLecturas complementarias\n\nReglamento (UE) 2024/1689, de Inteligencia Artificial. Diario Oficial de la Unión Europea.\nBender, E. M. et al. (2021). On the dangers of stochastic parrots. Costes ambientales y sesgos de los grandes modelos.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación</span>"
+    ]
+  },
+  {
+    "objectID": "06-ia-etica.html#principios-éticos-de-la-ia",
+    "href": "06-ia-etica.html#principios-éticos-de-la-ia",
+    "title": "Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación",
+    "section": "1. Principios éticos de la IA",
+    "text": "1. Principios éticos de la IA\nFloridi y Cowls (2019) compararon las principales declaraciones internacionales sobre ética de la IA y las resumieron en cinco principios:\n\n\n\n\n\n\n\nPrincipio\nQué significa\n\n\n\n\nBeneficencia\nPromover el bienestar de las personas y del planeta\n\n\nNo maleficencia\nEvitar daños: privacidad, seguridad, mal uso\n\n\nAutonomía\nQue las personas conserven la capacidad de decidir\n\n\nJusticia\nRepartir beneficios, evitar la discriminación\n\n\nExplicabilidad\nQue se pueda entender cómo funciona y quién responde\n\n\n\nLos cuatro primeros vienen de la bioética; el quinto es específico de la IA y hace posibles los demás.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación</span>"
+    ]
+  },
+  {
+    "objectID": "06-ia-etica.html#riesgos-éticos-en-el-uso-cotidiano",
+    "href": "06-ia-etica.html#riesgos-éticos-en-el-uso-cotidiano",
+    "title": "Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación",
+    "section": "2. Riesgos éticos en el uso cotidiano",
+    "text": "2. Riesgos éticos en el uso cotidiano\n\nSesgos: los modelos reproducen los sesgos de sus datos de entrenamiento (de género, de origen, de idioma). Una respuesta puede ser neutral en apariencia y sesgada en el fondo.\nConsentimiento, privacidad y autodeterminación informativa: la autodeterminación informativa es el derecho de cada persona a decidir qué se hace con sus datos personales; en España, el Tribunal Constitucional lo reconoce como derecho fundamental a la protección de datos. Los modelos se entrenan a menudo con datos recogidos de internet sin el consentimiento de sus autores, y lo que escribes en un asistente puede almacenarse y, según el servicio, usarse para entrenar modelos. No introduzcas datos personales propios ni ajenos, ni documentos confidenciales, y revisa la configuración de privacidad del servicio.\nAutoría y propiedad intelectual: un texto generado no es tuyo; además, los modelos se entrenan con obras protegidas, un debate jurídico abierto.\nDependencia y aprendizaje: delegar en la IA lo que la asignatura quiere que aprendas te impide aprenderlo.\nCoste ambiental: entrenar y usar grandes modelos consume mucha energía y agua (Bender et al., 2021).",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación</span>"
+    ]
+  },
+  {
+    "objectID": "06-ia-etica.html#responsabilidad-autoría-y-transparencia",
+    "href": "06-ia-etica.html#responsabilidad-autoría-y-transparencia",
+    "title": "Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación",
+    "section": "3. Responsabilidad, autoría y transparencia",
+    "text": "3. Responsabilidad, autoría y transparencia\nEn el trabajo académico, la regla general es la transparencia: si usas IA, dilo, explica para qué y asume la responsabilidad del resultado. Las editoriales científicas y el comité COPE coinciden en que una IA no puede ser autora, porque no puede responsabilizarse del trabajo.\nUna declaración útil indica qué herramienta (y versión), para qué se usó, en qué partes y cómo se revisó el resultado. Por ejemplo:\n\nDeclaración de uso de IA: he usado [herramienta, versión] para revisar la ortografía y la claridad de los apartados 2 y 3, y para proponer sinónimos en la tabla de términos de búsqueda. He revisado y aceptado o rechazado cada propuesta. Las búsquedas, la selección de documentos y las conclusiones son mías. No he introducido datos personales.\n\nSi la IA influye en el contenido, APA recomienda además citarla en el texto y en las referencias, indicando la instrucción usada en el apéndice o en el texto.\n\n\n\n\n\n\nFigura 1: Del uso a la declaración: qué herramienta, para qué, en qué partes y cómo se revisó.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación</span>"
+    ]
+  },
+  {
+    "objectID": "06-ia-etica.html#el-marco-normativo-europeo",
+    "href": "06-ia-etica.html#el-marco-normativo-europeo",
+    "title": "Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación",
+    "section": "4. El marco normativo europeo",
+    "text": "4. El marco normativo europeo\nEl Reglamento (UE) 2024/1689 de Inteligencia Artificial (AI Act) es la primera ley integral sobre IA. Sigue un enfoque basado en el riesgo:\n\n\n\n\n\n\n\n\nNivel de riesgo\nEjemplos\nConsecuencia\n\n\n\n\nInaceptable\nPuntuación social, manipulación que cause daño\nProhibido\n\n\nAlto\nIA en educación para evaluar o admitir estudiantes, en empleo, en servicios esenciales\nRequisitos estrictos: gestión de riesgos, datos de calidad, supervisión humana\n\n\nTransparencia\nAsistentes conversacionales, contenido generado (deepfakes)\nInformar de que se interactúa con una IA o de que el contenido es artificial\n\n\nMínimo\nFiltros de correo no deseado, videojuegos\nSin obligaciones específicas\n\n\n\nAdemás, el reglamento regula los modelos de IA de uso general (los que están detrás de los asistentes) y obliga a quienes despliegan sistemas de IA a procurar que su personal tenga un nivel suficiente de alfabetización en IA. Sus obligaciones se aplican de forma escalonada desde 2025. Otras normas, como el Reglamento General de Protección de Datos, siguen aplicándose a la IA.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación</span>"
+    ]
+  },
+  {
+    "objectID": "06-ia-etica.html#práctica",
+    "href": "06-ia-etica.html#práctica",
+    "title": "Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación",
+    "section": "Práctica",
+    "text": "Práctica\nBusca la política de uso de IA de la UC3M o de la asignatura y la política sobre IA de una revista de tu área. Compáralas: ¿qué permiten, qué prohíben y qué piden declarar?",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación</span>"
+    ]
+  },
+  {
+    "objectID": "06-ia-etica.html#reto-u6",
+    "href": "06-ia-etica.html#reto-u6",
+    "title": "Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto de las unidades 8 y 9 · Caso ético y declaración de uso\n\n\n\n\nElige un caso real de uso de IA generativa con problemas éticos (en educación, periodismo, ciencia o cultura), documentado en al menos dos fuentes fiables.\nAnalízalo con los cinco principios de Floridi y Cowls.\nSitúalo en los niveles de riesgo del Reglamento europeo de IA y explica qué obligaciones se aplicarían.\nRedacta la declaración de uso de IA de tu propio informe (aunque no hayas usado ninguna, explícitalo).\n\nEntrega: un informe hecho con la plantilla de entrega. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante analiza un caso distinto y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación</span>"
+    ]
+  },
+  {
+    "objectID": "06-ia-etica.html#autoevaluación",
+    "href": "06-ia-etica.html#autoevaluación",
+    "title": "Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nEl principio que Floridi y Cowls añaden a los cuatro de la bioética es la \nUna IA puede figurar como coautora de un artículo científico si ha escrito buena parte del texto. VERDADEROFALSO\nSegún el Reglamento europeo de IA, un sistema de IA usado para evaluar a estudiantes es de riesgo mínimode transparenciaaltoinaceptable\nLa puntuación social de las personas está permitida con supervisiónprohibidasujeta solo a transparencia\nEs buena práctica introducir datos personales de compañeros en un asistente de IA para que redacte un trabajo de grupo. VERDADEROFALSO\nEl Reglamento europeo de IA sigue un enfoque basado en el tamaño del modeloriesgosector económico\n¿Qué debe incluir una declaración de uso de IA?\n\n Solo el nombre de la herramienta Qué herramienta, para qué, en qué partes y cómo se revisó el resultado La conversación completa con la IA en todos los casos\n\nEl derecho de cada persona a decidir sobre el uso de sus datos personales se llama autodeterminación \nInformar de que un contenido ha sido generado por IA es una obligación del nivel de riesgo mínimode transparenciainaceptable\nSi declaras el uso de IA, dejas de ser responsable de los errores que contenga el trabajo. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nHace posibles los otros cuatro principios.\nLa autoría exige responsabilidad, y una IA no puede asumirla.\nLa educación y la evaluación de estudiantes son ámbitos de alto riesgo.\nEs una práctica prohibida.\nPone en riesgo la privacidad de otras personas.\nLas obligaciones crecen con el riesgo.\nAsí quien lee sabe qué es tuyo y qué no.\nBase del derecho a la protección de datos.\nAfecta a asistentes y contenidos sintéticos.\nLa responsabilidad sigue siendo de quien firma.",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación</span>"
+    ]
+  },
+  {
+    "objectID": "06-ia-etica.html#recursos-complementarios",
+    "href": "06-ia-etica.html#recursos-complementarios",
+    "title": "Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nReglamento (UE) 2024/1689\nTexto oficial del Reglamento de IA\n\n\nCOPE – Authorship and AI tools\nPosición sobre IA y autoría\n\n\nAPA Style – How to cite ChatGPT\nCitar contenido generado por IA\n\n\nUNESCO – Recomendación sobre la ética de la IA\nMarco ético internacional",
+    "crumbs": [
+      "Unidades",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Unidades 8 y 9. Inteligencia artificial generativa: ética, autoría y regulación</span>"
+    ]
+  },
+  {
+    "objectID": "90-citas.html",
+    "href": "90-citas.html",
+    "title": "Apéndice A — Guía rápida de citas en APA 7",
+    "section": "",
+    "text": "Citas en el texto\nEjemplos de referencias en estilo APA, 7.ª edición, con documentos que aparecen en este libro. Para los casos que no estén aquí, consulta la guía oficial de APA Style y lo que indique cada profesor.\nEn español se usa «y» entre dos autores; en inglés, «&» dentro del paréntesis y «and» en la cita narrativa. Las citas textuales de menos de 40 palabras van entre comillas; las más largas, en un bloque sangrado sin comillas.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía rápida de citas en APA 7</span>"
+    ]
+  },
+  {
+    "objectID": "90-citas.html#citas-en-el-texto",
+    "href": "90-citas.html#citas-en-el-texto",
+    "title": "Apéndice A — Guía rápida de citas en APA 7",
+    "section": "",
+    "text": "Caso\nCita parentética\nCita narrativa\n\n\n\n\nUn autor\n(Bates, 1989)\nBates (1989)\n\n\nDos autores\n(Metzger y Flanagin, 2013)\nMetzger y Flanagin (2013)\n\n\nTres o más\n(Sugimoto et al., 2017)\nSugimoto et al. (2017)\n\n\nOrganización\n(American Psychological Association, 2020)\nAmerican Psychological Association (2020)\n\n\nCita textual\n(Bates, 1989, p. 410)\nBates (1989, p. 410)\n\n\nVarias obras\n(Bates, 1989; Marchionini, 2006)\n—",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía rápida de citas en APA 7</span>"
+    ]
+  },
+  {
+    "objectID": "90-citas.html#referencias",
+    "href": "90-citas.html#referencias",
+    "title": "Apéndice A — Guía rápida de citas en APA 7",
+    "section": "Referencias",
+    "text": "Referencias\nArtículo de revista con DOI\nMetzger, M. J., y Flanagin, A. J. (2013). Credibility and trust of information in online environments: The use of cognitive heuristics. Journal of Pragmatics, 59, 210-220. https://doi.org/10.1016/j.pragma.2013.07.012\nArtículo con número de artículo en lugar de páginas\nWalters, W. H., y Wilder, E. I. (2023). Fabrication and errors in the bibliographic citations generated by ChatGPT. Scientific Reports, 13, Artículo 14045. https://doi.org/10.1038/s41598-023-41032-5\nLibro\nCruz Gil, C. (2015). Modelos de búsqueda y recuperación de la información. Trea.\nLibro editado, en línea\nBobish, G., y Jacobson, T. (Eds.). (2014). The information literacy user’s guide: An open, online textbook. Open SUNY Textbooks. https://milnepublishing.geneseo.edu/the-information-literacy-users-guide-an-open-online-textbook/\nComunicación en actas de congreso\nBender, E. M., Gebru, T., McMillan-Major, A., y Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? En Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (pp. 610-623). ACM. https://doi.org/10.1145/3442188.3445922\nLey\nReal Decreto Legislativo 1/1996, de 12 de abril, por el que se aprueba el texto refundido de la Ley de Propiedad Intelectual. Boletín Oficial del Estado, 97, de 22 de abril de 1996. https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930\nNorma europea\nReglamento (UE) 2024/1689 del Parlamento Europeo y del Consejo, de 13 de junio de 2024, por el que se establecen normas armonizadas en materia de inteligencia artificial. Diario Oficial de la Unión Europea, L, 12 de julio de 2024. https://eur-lex.europa.eu/eli/reg/2024/1689/oj\nPágina web\nCaulfield, M. (2019, 19 de junio). SIFT (The four moves). Hapgood. https://hapgood.us/2019/06/19/sift-the-four-moves/\nHerramienta de IA generativa (cuando su resultado se incorpora al trabajo)\nEmpresa. (Año). Nombre de la herramienta (versión) [Modelo de lenguaje de gran tamaño]. URL\nIncluye la instrucción usada en el texto o en un apéndice, ya que la conversación no es recuperable por quien lee.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía rápida de citas en APA 7</span>"
+    ]
+  },
+  {
+    "objectID": "90-citas.html#reglas-que-más-se-olvidan",
+    "href": "90-citas.html#reglas-que-más-se-olvidan",
+    "title": "Apéndice A — Guía rápida de citas en APA 7",
+    "section": "Reglas que más se olvidan",
+    "text": "Reglas que más se olvidan\n\nLa lista se ordena alfabéticamente por el apellido del primer autor; dos obras del mismo autor, por año.\nSangría francesa (la primera línea de cada referencia sobresale) y doble espacio en los trabajos formales.\nEl título del artículo va en redonda y solo con mayúscula inicial; la revista y el volumen, en cursiva; el número, entre paréntesis y en redonda.\nEl DOI se escribe como enlace completo: https://doi.org/…, sin «DOI:» delante.\nHasta 20 autores se escriben todos en la referencia; en la cita del texto, con tres o más se usa «et al.» desde la primera vez.\nToda cita del texto tiene su referencia en la lista, y toda referencia de la lista se cita en el texto.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía rápida de citas en APA 7</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html",
+    "href": "91-guia-docente.html",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "",
+    "text": "Correspondencia con la ficha de la asignatura\nEsta guía explica cómo está pensado el libro para la docencia de la asignatura y cómo mantenerlo.\nLos seis capítulos siguen, en el mismo orden, los cuatro bloques y las nueve unidades del programa oficial de Competencias digitales para el uso de la información (19408).",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#correspondencia-con-la-ficha-de-la-asignatura",
+    "href": "91-guia-docente.html#correspondencia-con-la-ficha-de-la-asignatura",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "",
+    "text": "Capítulo\nUnidades\nBloque\n\n\n\n\nFuentes de información\n1\nIntroducción. Fuentes de información\n\n\nRecuperación de información\n2\nRecuperación y uso ético\n\n\nUso ético de la información y plagio\n3\nRecuperación y uso ético\n\n\nReferencias bibliográficas\n4 y 5\nReferencias bibliográficas\n\n\nIA generativa: fundamentos y aplicaciones\n6 y 7\nInteligencia artificial generativa\n\n\nIA generativa: ética, autoría y regulación\n8 y 9\nInteligencia artificial generativa\n\n\n\n\n\n\n\n\n\n\n\nActividad de evaluación (ficha)\nPeso\nApoyo en el libro\n\n\n\n\nTrabajos prácticos y presentaciones\n70 %\nRetos evaluables (uno por capítulo)\n\n\nPrueba final (mínimo 4)\n30 %\nContenidos y lecturas obligatorias; las autoevaluaciones y el banco de preguntas en Moodle XML sirven de práctica\n\n\nRecuperación (prueba tipo test 50 % y trabajo práctico 50 %)\n—\nBanco de preguntas y cualquiera de los retos",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#retos-evaluables",
+    "href": "91-guia-docente.html#retos-evaluables",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Retos evaluables",
+    "text": "Retos evaluables\nCada capítulo termina con un reto sin pista, solución ni corrección automática. Cada estudiante elige su tema, su afirmación o su caso, lo que dificulta copiar. Los retos 2 y 4 se encadenan: los documentos encontrados en la estrategia de búsqueda se gestionan después en Zotero. Se entregan con la plantilla entrega_reto.qmd, que lleva una rúbrica común: búsqueda y selección de fuentes (25 %), evaluación crítica (25 %), uso ético y citación (20 %), argumentación (20 %) y presentación (10 %). La plantilla genera un HTML con las imágenes dentro, de modo que la entrega es un único fichero; también puede entregarse en el formato que indique el profesorado. No hace falta saber R para usarla.\nLas soluciones de referencia y los criterios de corrección de los retos no están en el repositorio público.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#autoevaluación-en-aula-global",
+    "href": "91-guia-docente.html#autoevaluación-en-aula-global",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Autoevaluación en Aula Global",
+    "text": "Autoevaluación en Aula Global\nLas preguntas de autoevaluación de cada capítulo están exportadas a Moodle XML en la carpeta moodle/ del repositorio: un fichero por capítulo y uno con todo el banco. Se importan desde Banco de preguntas → Importar → Formato Moodle XML. Cada pregunta conserva su explicación como retroalimentación general, y el banco sirve para preparar la prueba final y la prueba de recuperación.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#el-papel-de-r",
+    "href": "91-guia-docente.html#el-papel-de-r",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "El papel de R",
+    "text": "El papel de R\nEl libro usa R lo imprescindible: cuatro capítulos tienen un ejercicio breve de completar huecos que muestra por dentro una herramienta (operadores booleanos, orden de referencias, detección de coincidencias, verificación de DOI). El capítulo Usar R en este libro basta como preparación. Ningún reto exige programar.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#funciones-del-libro",
+    "href": "91-guia-docente.html#funciones-del-libro",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Funciones del libro",
+    "text": "Funciones del libro\n\nProgreso del estudiante: cada capítulo muestra los ejercicios resueltos y las preguntas acertadas; la presentación resume todos. Se guarda solo en el navegador del estudiante (localStorage): el profesorado no lo ve.\nUso sin conexión: un service worker (sw.js) guarda las páginas y el motor de R tras la primera visita.\nModo claro y oscuro, con auditoría de accesibilidad (WCAG 2.1 AA) en los dos.\nPDF y EPUB generados con python3 herramientas/pdf.py.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#mantenimiento",
+    "href": "91-guia-docente.html#mantenimiento",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Mantenimiento",
+    "text": "Mantenimiento\nDesde la raíz del repositorio:\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\nEl flujo .github/workflows/comprobar.yml renderiza el libro y comprueba en un navegador real todos los ejercicios, las preguntas y la accesibilidad en modo claro y oscuro, y una vez por semana revisa los enlaces externos. Al publicar una versión nueva, actualiza version en CITATION.cff y vuelve a ejecutar preparar.py para que los navegadores renueven su copia.\nLos datos de los ejercicios son inventados con fines didácticos; no hay datos de personas reales.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html",
+    "href": "92-glosario.html",
+    "title": "Apéndice C — Glosario",
+    "section": "",
+    "text": "Fuentes de información\nTérminos del libro ordenados por capítulo. Cada entrada enlaza con el capítulo donde se explica.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#fuentes-de-información",
+    "href": "92-glosario.html#fuentes-de-información",
+    "title": "Apéndice C — Glosario",
+    "section": "",
+    "text": "Sobrecarga informativa\nSituación en la que se recibe más información de la que se puede procesar, con efectos como la ansiedad o la sensación de estar peor informado. → Unidad 1\n\n\nDesinformación\nDisinformation. Información falsa creada o difundida con intención de engañar. → Unidad 1\n\n\nInformación errónea\nMisinformation. Información falsa que se comparte sin intención de engañar. → Unidad 1\n\n\nCredibilidad\nGrado en que una fuente o un mensaje se percibe como digno de confianza. En línea se juzga a menudo con atajos mentales (heurísticos) como la reputación o el respaldo de otros. → Unidad 1\n\n\nLectura lateral\nEstrategia de verificación que consiste en salir de la página y consultar otras fuentes sobre ella y sobre lo que afirma, en lugar de analizarla solo por dentro. → Unidad 1\n\n\nMétodo SIFT\nMétodo de Mike Caulfield para verificar información en cuatro pasos: parar, investigar la fuente, buscar mejor cobertura y rastrear hasta el original. → Unidad 1\n\n\nFuente primaria\nFuente que contiene información original: un artículo de investigación, unos datos, una ley o una entrevista. Las secundarias la analizan o resumen; las terciarias ayudan a encontrarla. → Unidad 1\n\n\nRevisión por pares\nEvaluación de un trabajo por especialistas del área antes de su publicación. → Unidad 1\n\n\nAltmetría\nMedición de las menciones de las publicaciones científicas en redes sociales, noticias y otras fuentes en línea. Mide atención, no calidad. → Unidad 1",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#recuperación-de-información",
+    "href": "92-glosario.html#recuperación-de-información",
+    "title": "Apéndice C — Glosario",
+    "section": "Recuperación de información",
+    "text": "Recuperación de información\n\nNecesidad de información\nLo que una persona quiere saber y para qué; es el punto de partida de toda búsqueda. → Unidad 2\n\n\nOperador booleano\nPalabra que combina términos de búsqueda como conjuntos: Y (AND) exige todos, O (OR) admite cualquiera y NO (NOT) excluye. → Unidad 2\n\n\nTruncamiento\nUso de un símbolo, normalmente el asterisco, para recuperar todas las terminaciones de una raíz. → Unidad 2\n\n\nBúsqueda por campos\nBúsqueda limitada a una parte del registro, como el título, el autor o el resumen. → Unidad 2\n\n\nPrecisión\nProporción de los resultados recuperados que son pertinentes. → Unidad 2\n\n\nExhaustividad\nRecall. Proporción de todos los documentos pertinentes que la búsqueda recupera. → Unidad 2\n\n\nRecolección de bayas\nBerrypicking. Modelo de Marcia Bates según el cual la búsqueda es un proceso que cambia a medida que se lee, recogiendo información útil en cada paso. → Unidad 2\n\n\nVocabulario controlado\nConjunto de términos normalizados (tesauro, encabezamientos de materia) que una base de datos usa para describir los documentos y agrupar los sinónimos. → Unidad 2",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#uso-ético-de-la-información-y-plagio",
+    "href": "92-glosario.html#uso-ético-de-la-información-y-plagio",
+    "title": "Apéndice C — Glosario",
+    "section": "Uso ético de la información y plagio",
+    "text": "Uso ético de la información y plagio\n\nPropiedad intelectual\nConjunto de derechos de los autores sobre sus creaciones originales: derechos morales (irrenunciables) y de explotación. → Unidad 3\n\n\nDerecho de cita\nLímite de la propiedad intelectual que permite incluir fragmentos de obras ajenas para su análisis o comentario con fines docentes o de investigación, indicando la fuente y el autor. → Unidad 3\n\n\nDominio público\nSituación de una obra cuyos derechos de explotación han expirado y puede usarse libremente, respetando los derechos morales. → Unidad 3\n\n\nLicencia Creative Commons\nLicencia con la que el autor autoriza de antemano ciertos usos de su obra, combinando las condiciones BY, SA, NC y ND. → Unidad 3\n\n\nPlagio\nPresentar como propio el trabajo, las ideas o las palabras de otra persona sin reconocerlo. → Unidad 3\n\n\nParáfrasis\nExpresión de las ideas de un autor con palabras y estructura propias, acompañada de su cita. → Unidad 3\n\n\nEscritura en mosaico\nPatchwriting. Copiar un texto cambiando algunas palabras o su orden, pero manteniendo su estructura. Es una forma de plagio. → Unidad 3\n\n\nIntegridad académica\nCompromiso con la honestidad, la confianza, la justicia, el respeto y la responsabilidad en el estudio y la investigación. → Unidad 3",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#referencias-bibliográficas",
+    "href": "92-glosario.html#referencias-bibliográficas",
+    "title": "Apéndice C — Glosario",
+    "section": "Referencias bibliográficas",
+    "text": "Referencias bibliográficas\n\nCita\nMarca breve en el texto que remite a la fuente usada, como (Bates, 1989) o [3]. → Unidades 4 y 5\n\n\nReferencia bibliográfica\nDescripción completa de una fuente en la lista final de un trabajo. → Unidades 4 y 5\n\n\nEstilo de citación\nConjunto de normas que fija qué datos incluyen las citas y las referencias, en qué orden y con qué puntuación (APA, Vancouver, ISO 690…). → Unidades 4 y 5\n\n\nSistema autor-fecha\nSistema de citación que identifica la fuente en el texto por el apellido y el año, y ordena la lista alfabéticamente. → Unidades 4 y 5\n\n\nSistema numérico\nSistema de citación que identifica la fuente con un número y ordena la lista por orden de aparición. → Unidades 4 y 5\n\n\nDOI\nDigital Object Identifier. Identificador permanente de un documento digital que se resuelve en https://doi.org/. → Unidades 4 y 5\n\n\nGestor de referencias\nPrograma que guarda y organiza referencias, inserta citas en el procesador de textos y genera la bibliografía en un estilo. → Unidades 4 y 5\n\n\nHerramienta de originalidad\nPrograma que compara un texto con grandes colecciones de documentos y señala las coincidencias. Su informe es un indicio, no un veredicto de plagio. → Unidades 4 y 5",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#inteligencia-artificial-generativa",
+    "href": "92-glosario.html#inteligencia-artificial-generativa",
+    "title": "Apéndice C — Glosario",
+    "section": "Inteligencia artificial generativa",
+    "text": "Inteligencia artificial generativa\n\nInteligencia artificial generativa\nIA que produce contenido nuevo (texto, imágenes, audio, código) a partir de patrones aprendidos de grandes cantidades de datos. → Unidades 6 y 7\n\n\nModelo de lenguaje\nSistema entrenado con grandes colecciones de textos para predecir el fragmento más probable que sigue a un texto dado. → Unidades 6 y 7\n\n\nInstrucción\nPrompt. Texto con el que se pide algo a un sistema de IA generativa. → Unidades 6 y 7\n\n\nAlucinación\nRespuesta de una IA que parece correcta pero es falsa o inventada, como una referencia bibliográfica inexistente. → Unidades 6 y 7\n\n\nDatos de entrenamiento\nColección de datos con la que se entrena un modelo; determina lo que sabe y los sesgos que reproduce. → Unidades 6 y 7\n\n\nGeneración aumentada por recuperación\nRAG. Técnica que combina un modelo de lenguaje con un buscador o una colección de documentos para responder a partir de lo recuperado. → Unidades 6 y 7\n\n\nSesgo algorítmico\nError sistemático de un sistema automático que favorece o perjudica a ciertos grupos, a menudo heredado de los datos. → Unidades 8 y 9\n\n\nDeclaración de uso de IA\nTexto que indica qué herramienta de IA se ha usado en un trabajo, para qué, en qué partes y cómo se ha revisado el resultado. → Unidades 8 y 9\n\n\nReglamento de IA\nAI Act. Reglamento (UE) 2024/1689, que regula la IA en la Unión Europea con un enfoque basado en el riesgo. → Unidades 8 y 9\n\n\nAlfabetización en IA\nConocimientos y capacidades para usar la IA de forma informada y comprender sus oportunidades, riesgos y posibles daños. → Unidades 8 y 9\n\n\nExplicabilidad\nPrincipio ético según el cual debe poder entenderse cómo funciona un sistema de IA y quién responde de él. → Unidades 8 y 9\n\n\nDatos personales\nCualquier información sobre una persona física identificada o identificable. → Unidades 8 y 9\n\n\nAutodeterminación informativa\nDerecho de cada persona a decidir sobre el uso de sus datos personales. → Unidades 8 y 9",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  }
+]

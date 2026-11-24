@@ -1,0 +1,37 @@
+# Tema 2. La investigación como base del concepto creativo
+# Esquemas de página y prototipos de baja fidelidad
+# Pablo Sánchez-Núñez (UC3M)
+# Licencia del código: MIT · Libro: https://pablosancheznunez.com/prototipos-baja-fidelidad/
+#
+# Script con todo el código del capítulo, para ejecutarlo en RStudio o Positron.
+# Los ejercicios tienen huecos (______): complétalos y compara con el libro.
+
+# Funciones del paquete UxLearn (instálalo una vez):
+# remotes::install_github("pablosancheznunez/UxLearn")
+library(UxLearn)
+
+
+# ----------------------------------------------------------------------
+# Práctica en R: priorizar los hallazgos de una revisión heurística
+# ----------------------------------------------------------------------
+hallazgos_heuristicos
+
+priorizar_hallazgos(hallazgos_heuristicos)
+
+
+# ----------------------------------------------------------------------
+# Ejercicio 2.1
+# ----------------------------------------------------------------------
+# EJERCICIO: completa los huecos ______
+p <- priorizar_hallazgos(hallazgos_heuristicos)
+sum(p$prioridad == "______")
+
+
+# ----------------------------------------------------------------------
+# Ejercicio 2.2
+# ----------------------------------------------------------------------
+# (preparación del ejercicio)
+p <- priorizar_hallazgos(hallazgos_heuristicos)
+
+# EJERCICIO: completa los huecos ______
+p$problema[nrow(______)]
