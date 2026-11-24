@@ -84,7 +84,6 @@ h2{ font-size:22px; margin:0 0 16px; }
 .profiles .name{ min-width:5.5em; }
 .profiles .handle{ color:var(--muted); font-size:16px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; border-bottom:1px solid var(--hair); }
 .profiles a:hover .handle{ color:var(--accent); border-color:var(--accent); }
-.icon-github{ fill:var(--ink); }
 .icon-email{ color:var(--ink); }
 
 .copy-btn, .link-btn{ font:13px var(--sans); cursor:pointer; }
