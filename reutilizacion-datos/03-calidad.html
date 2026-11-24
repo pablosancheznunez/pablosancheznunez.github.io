@@ -139,6 +139,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Reutilización de datos abiertos y documentos</a> 
+        <div class="sidebar-tools-main">
+    <a href="./pdf/reutilizacion-datos-abiertos.pdf" title="Descargar el libro en PDF" class="quarto-navigation-tool px-1" aria-label="Descargar el libro en PDF"><i class="bi bi-file-earmark-pdf"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -257,6 +260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#paso-6.-valores-numéricos" id="toc-paso-6.-valores-numéricos" class="nav-link" data-scroll-target="#paso-6.-valores-numéricos">Paso 6. Valores numéricos</a></li>
   <li><a href="#ejercicio-3.5" id="toc-ejercicio-3.5" class="nav-link" data-scroll-target="#ejercicio-3.5">Ejercicio 3.5</a></li>
   <li><a href="#ejercicio-3.6" id="toc-ejercicio-3.6" class="nav-link" data-scroll-target="#ejercicio-3.6">Ejercicio 3.6</a></li>
+  <li><a href="#resultado-de-la-limpieza" id="toc-resultado-de-la-limpieza" class="nav-link" data-scroll-target="#resultado-de-la-limpieza">Resultado de la limpieza</a></li>
   <li><a href="#paso-7.-publicar-el-resultado-con-metadatos-apartados-3-y-5" id="toc-paso-7.-publicar-el-resultado-con-metadatos-apartados-3-y-5" class="nav-link" data-scroll-target="#paso-7.-publicar-el-resultado-con-metadatos-apartados-3-y-5">Paso 7. Publicar el resultado con metadatos (apartados 3 y 5)</a></li>
   <li><a href="#ejercicio-3.7" id="toc-ejercicio-3.7" class="nav-link" data-scroll-target="#ejercicio-3.7">Ejercicio 3.7</a></li>
   <li><a href="#paso-8.-comprobar-la-integridad-de-los-ficheros-apartado-6" id="toc-paso-8.-comprobar-la-integridad-de-los-ficheros-apartado-6" class="nav-link" data-scroll-target="#paso-8.-comprobar-la-integridad-de-los-ficheros-apartado-6">Paso 8. Comprobar la integridad de los ficheros (apartado 6)</a></li>
@@ -489,6 +493,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>En el laboratorio calcularás dos métricas de completitud y corregirás problemas de conformidad y exactitud en el CSV de práctica.</p>
+<div id="fig-completitud" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Barras horizontales del porcentaje de celdas completas por columna, eje de 0 a 100. id, biblioteca, municipio y fecha: 100 %. prestamos: 97,4 %. usuarios_activos: 84,2 %.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-completitud-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figuras/tema3_completitud.svg" class="img-fluid figure-img" alt="Barras horizontales del porcentaje de celdas completas por columna, eje de 0 a 100. id, biblioteca, municipio y fecha: 100 %. prestamos: 97,4 %. usuarios_activos: 84,2 %.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-completitud-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.1: Completitud por columna del CSV de práctica: las columnas descriptivas están completas, pero faltan datos en préstamos y, sobre todo, en usuarios activos.
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="publicación-de-conjuntos-de-datos" class="level2">
 <h2 class="anchored" data-anchor-id="publicación-de-conjuntos-de-datos">5. Publicación de conjuntos de datos</h2>
@@ -784,6 +798,20 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDNfcmF0aW8ifSwiY29k
 <p>¿Por qué se usan solo las filas con ambos valores? Si sumaras todos los préstamos pero solo los usuarios conocidos, la ratio de los municipios con más ausentes saldría inflada. Es un ejemplo de cómo la completitud afecta a los indicadores que se derivan de los datos.</p>
 </div>
 </div>
+</div>
+</section>
+<section id="resultado-de-la-limpieza" class="level3">
+<h3 class="anchored" data-anchor-id="resultado-de-la-limpieza">Resultado de la limpieza</h3>
+<p>Con los datos ya depurados se puede, por fin, comparar municipios. Los huecos de las líneas son los meses en que el dato era ausente o negativo: la limpieza no los inventa, los deja a la vista.</p>
+<div id="fig-prestamos" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de líneas de enero a junio. Getafe se mantiene entre unos 4.800 y 5.300 préstamos. Fuenlabrada ronda los 1.700-2.100; Leganés, Móstoles y Alcorcón entre unos 1.000 y 1.750. Leganés y Alcorcón no tienen dato en febrero.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-prestamos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figuras/tema3_prestamos_municipio.svg" class="img-fluid figure-img" alt="Gráfico de líneas de enero a junio. Getafe se mantiene entre unos 4.800 y 5.300 préstamos. Fuenlabrada ronda los 1.700-2.100; Leganés, Móstoles y Alcorcón entre unos 1.000 y 1.750. Leganés y Alcorcón no tienen dato en febrero.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-prestamos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.2: Préstamos mensuales por municipio tras la limpieza, enero a junio de 2025 (datos sintéticos). Getafe suma dos bibliotecas; el resto, una.
+</figcaption>
+</figure>
 </div>
 </section>
 <section id="paso-7.-publicar-el-resultado-con-metadatos-apartados-3-y-5" class="level3">
