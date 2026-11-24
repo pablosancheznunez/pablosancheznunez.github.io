@@ -151,3 +151,22 @@ casos <- c(
 )
 respuesta <- c(______, ______, ______, ______)
 respuesta
+
+
+# ----------------------------------------------------------------------
+# Reto del Tema 0 · Auditoría de apertura
+# ----------------------------------------------------------------------
+source("datos/datareuseR.R")
+auditoria <- data.frame(
+  conjunto         = c("", "", ""),
+  url              = c("", "", ""),
+  licencia_abierta = c(NA, NA, NA),
+  estructurado     = c(NA, NA, NA),
+  no_propietario   = c(NA, NA, NA),
+  usa_uri          = c(NA, NA, NA),
+  enlazado         = c(NA, NA, NA)
+)
+# Cuando completes la tabla con TRUE y FALSE, quita los # de las líneas siguientes:
+# auditoria$estrellas <- mapply(estrellas, auditoria$licencia_abierta, auditoria$estructurado,
+#                               auditoria$no_propietario, auditoria$usa_uri, auditoria$enlazado)
+# auditoria[, c("conjunto", "estrellas")]

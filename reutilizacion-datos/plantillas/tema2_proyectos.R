@@ -6,6 +6,9 @@
 # Script limpio con todo el código del capítulo, para ejecutarlo en RStudio o Positron.
 # Los ejercicios tienen huecos (______): complétalos y compara con el libro.
 
+# Paquete necesario (solo la primera vez):
+# install.packages("jsonlite")
+
 # Descarga del CSV de práctica a la carpeta datos/
 url_csv <- "https://pablosancheznunez.com/reutilizacion-datos/datos/prestamos_bibliotecas_practica.csv"
 dir.create("datos", showWarnings = FALSE)
@@ -132,3 +135,67 @@ registro_web <- list(
   procedencia_documentada = ______
 )
 sum(evaluar_fair(registro_web))
+
+
+# ----------------------------------------------------------------------
+# Ejercicio 2.5
+# ----------------------------------------------------------------------
+# (preparación del ejercicio)
+casos <- data.frame(
+  usuario = c("Desarrolladores", "Empresas", "Ciudadanía", "Empresas", "Investigadores", "Desarrolladores",
+              "Empresas", "Periodistas", "Administraciones", "Ciudadanía", "Investigadores", "Administraciones"),
+  ambito = c("Local", "Local", "Local", "Nacional", "Nacional", "Local",
+             "Nacional", "Nacional", "Autonómico", "Local", "Europeo", "Autonómico")
+)
+
+# EJERCICIO: completa los huecos ______
+names(which.max(table(casos$______)))
+
+
+# ----------------------------------------------------------------------
+# Paso 4. Consultar el catálogo nacional en directo (apartado 1)
+# ----------------------------------------------------------------------
+url_api <- "https://datos.gob.es/apidata/catalog/dataset/title/bibliotecas.json?_pageSize=50"
+respuesta <- tryCatch({
+  con <- url(url_api, encoding = "UTF-8")
+  texto <- paste(readLines(con, warn = FALSE), collapse = "\n")
+  close(con)
+  jsonlite::fromJSON(texto, simplifyVector = FALSE)
+}, error = function(e) NULL)
+if (is.null(respuesta)) {
+  message("Sin conexión con datos.gob.es: uso la copia del 24/11/2026.")
+  respuesta <- jsonlite::fromJSON("datos/datosgob_bibliotecas.json", simplifyVector = FALSE)
+}
+items <- respuesta$result$items
+length(items)
+str(items[[1]][c("title", "publisher")], max.level = 2)
+
+source("datos/datareuseR.R")
+tabla <- tabla_datosgob(items)
+head(tabla[, c("titulo", "formatos")], 8)
+sort(table(unlist(lapply(items, formatos_de))), decreasing = TRUE)
+
+
+# ----------------------------------------------------------------------
+# Ejercicio 2.6
+# ----------------------------------------------------------------------
+# (preparación del ejercicio)
+source("datos/datareuseR.R")
+items <- consultar_datosgob("bibliotecas", n = 50)
+
+# EJERCICIO: completa los huecos ______
+tiene_csv <- sapply(items, function(it) "______" %in% formatos_de(it))
+sum(tiene_csv)
+
+
+# ----------------------------------------------------------------------
+# Reto del Tema 2 · Radiografía de un tema en el catálogo nacional
+# ----------------------------------------------------------------------
+source("datos/datareuseR.R")
+palabra <- "archivos"   # cámbiala por tu tema
+items <- consultar_datosgob(palabra, n = 50, copia = FALSE)
+tabla <- tabla_datosgob(items)
+length(items)
+head(sort(table(tabla$publicador), decreasing = TRUE))
+formatos <- sort(table(unlist(lapply(items, formatos_de))), decreasing = TRUE)
+barplot(formatos, las = 2, col = "#2a78d6", border = NA, ylab = "Conjuntos")

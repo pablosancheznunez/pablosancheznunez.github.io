@@ -39,6 +39,17 @@ nrow(bib)
 
 
 # ----------------------------------------------------------------------
+# Ejercicio C.4
+# ----------------------------------------------------------------------
+# (preparación del ejercicio)
+source("datos/datareuseR.R")
+
+# EJERCICIO: completa los huecos ______
+bib2 <- leer_csv_abierto("datos/bibliotecas_madrid_2026-11-24.csv")
+attr(bib2, "______")$encoding
+
+
+# ----------------------------------------------------------------------
 # Columnas vacías y completitud
 # ----------------------------------------------------------------------
 vacia <- function(x) is.na(x) | trimws(as.character(x)) == ""
@@ -73,6 +84,16 @@ op <- par(mar = c(4, 11, 1, 1))
 barplot(rev(por_distrito), horiz = TRUE, las = 1, col = "#2a78d6", border = NA,
         cex.names = 0.7, xlab = "Bibliotecas públicas municipales")
 par(op)
+
+
+# ----------------------------------------------------------------------
+# Ejercicio C.5
+# ----------------------------------------------------------------------
+# (preparación del ejercicio)
+bib <- read.csv("datos/bibliotecas_madrid_2026-11-24.csv", sep = ";", fileEncoding = "latin1")
+
+# EJERCICIO: completa los huecos ______
+names(which.max(table(bib$______)))
 
 
 # ----------------------------------------------------------------------

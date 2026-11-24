@@ -297,3 +297,17 @@ ex:taller_datos skos:related ex:alfabetizacion
 # EJERCICIO: completa los huecos ______
 especificos <- subset(skos, propiedad == "skos:broader" & valor == "______")$concepto
 subset(skos, propiedad == "skos:prefLabel" & concepto %in% ______)$valor
+
+
+# ----------------------------------------------------------------------
+# Reto del Tema 4 · Publicar como datos enlazados
+# ----------------------------------------------------------------------
+a_jsonld <- function(fila) {
+  list("@context" = "https://schema.org/",
+       "@type" = "Library",                 # cámbialo según tus datos
+       "name" = fila$nombre,
+       "address" = list("@type" = "PostalAddress", "addressLocality" = fila$municipio),
+       "containedInPlace" = list("@id" = "https://www.wikidata.org/entity/Q8802"))  # Q8802 = Getafe
+}
+ejemplo <- data.frame(nombre = "Biblioteca Municipal Centro", municipio = "Getafe")
+cat(jsonlite::toJSON(a_jsonld(ejemplo[1, ]), auto_unbox = TRUE, pretty = TRUE))

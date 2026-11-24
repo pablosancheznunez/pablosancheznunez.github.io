@@ -177,3 +177,19 @@ obligaciones <- function(fuentes) {
 # EJERCICIO: completa los huecos ______
 o <- obligaciones(c("CC BY 4.0", "ODbL 1.0", ______))
 o[["______"]]
+
+
+# ----------------------------------------------------------------------
+# Reto del Tema 5 · Propuesta de un servicio infomediario
+# ----------------------------------------------------------------------
+source("datos/datareuseR.R")
+fuentes <- c("CC BY 4.0", "ODbL 1.0")   # las licencias de tus fuentes
+obligaciones(fuentes)
+escenarios <- data.frame(
+  escenario  = c("pesimista", "base", "optimista"),
+  conversion = c(0.02, 0.04, 0.06),
+  precio     = c(9, 9, 12),
+  costes_mes = c(3000, 2700, 2700)
+)
+escenarios$usuarios_necesarios <- with(escenarios, punto_equilibrio(costes_mes, conversion, precio))
+escenarios

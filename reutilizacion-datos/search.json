@@ -14,7 +14,17 @@
     "href": "index.html#objetivos-de-la-asignatura",
     "title": "Reutilización de datos abiertos y documentos",
     "section": "Objetivos de la asignatura",
-    "text": "Objetivos de la asignatura\nSegún la ficha de la asignatura, al terminar el curso deberías:\n\nConocer los principios jurídicos y éticos, y la legislación, que sustentan la reutilización de la información.\nConocer las principales iniciativas y proyectos de reutilización de información del sector público en distintos ámbitos administrativos y geográficos.\nSer capaz de plantear un proyecto de reutilización de información y documentos.\nAplicar normas y herramientas que favorecen la normalización y la interoperabilidad de datos y documentos.\nConocer los principios de los datos abiertos.\n\n\n\n\n\n\n\nTipVersión en PDF\n\n\n\nDescargar el libro en PDF\nPara leer o imprimir sin conexión. El código aparece sin ejecutar y las preguntas, sin corrección automática; las soluciones y explicaciones van en recuadros. También puedes descargarlo con el icono del PDF de la barra lateral.",
+    "text": "Objetivos de la asignatura\nSegún la ficha de la asignatura, al terminar el curso deberías:\n\nConocer los principios jurídicos y éticos, y la legislación, que sustentan la reutilización de la información.\nConocer las principales iniciativas y proyectos de reutilización de información del sector público en distintos ámbitos administrativos y geográficos.\nSer capaz de plantear un proyecto de reutilización de información y documentos.\nAplicar normas y herramientas que favorecen la normalización y la interoperabilidad de datos y documentos.\nConocer los principios de los datos abiertos.\n\n\n\n\n\n\n\nTipDescargar el libro\n\n\n\nLibro en PDF Libro en EPUB\nEl PDF sirve para leer o imprimir; el EPUB, para lectores de libros electrónicos y móviles, porque el texto se adapta a la pantalla. En los dos el código aparece sin ejecutar y las preguntas, sin corrección automática; las soluciones y explicaciones van en recuadros. También puedes descargarlos desde el icono de descarga de la barra lateral.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#tu-progreso-y-uso-sin-conexión",
+    "href": "index.html#tu-progreso-y-uso-sin-conexión",
+    "title": "Reutilización de datos abiertos y documentos",
+    "section": "Tu progreso y uso sin conexión",
+    "text": "Tu progreso y uso sin conexión\nEl libro anota los ejercicios de código que resuelves y las preguntas que aciertas. El progreso se guarda solo en este navegador: no se envía a ningún servidor ni lo ve el profesorado, y se pierde si borras los datos del navegador o cambias de dispositivo.\n\nActiva JavaScript para ver tu progreso.\n\nDespués de la primera visita, el navegador guarda el libro y el motor de R. Podrás leer los capítulos que ya hayas abierto y ejecutar el código sin conexión; solo la consulta en directo a datos.gob.es del Tema 2 necesita red (sin ella, usa una copia guardada). Si tu navegador lo permite, se activa al cargar la página.\nUsa el interruptor que hay junto al título del libro, en la barra lateral, para cambiar entre el modo claro y el oscuro. Al principio se respeta la preferencia de tu sistema.",
     "crumbs": [
       "Presentación"
     ]
@@ -64,7 +74,7 @@
     "href": "index.html#autoría-y-cómo-citar",
     "title": "Reutilización de datos abiertos y documentos",
     "section": "Autoría y cómo citar",
-    "text": "Autoría y cómo citar\nAutor: Pablo Sánchez-Núñez, profesor de Biblioteconomía y Documentación en la Universidad Carlos III de Madrid (grupo OpenScienceLab). ORCID: 0000-0001-7845-9506 · Web: pablosancheznunez.com\n\nSánchez-Núñez, P. (2026). Reutilización de datos abiertos y documentos: tutoriales interactivos en R (webR). Universidad Carlos III de Madrid. Zenodo. https://doi.org/10.5281/zenodo.24500934\n\nDOI de todas las versiones: 10.5281/zenodo.24500934; apunta siempre a la última edición. Cada edición tiene además su propio DOI, que encontrarás en la ficha de Zenodo.",
+    "text": "Autoría y cómo citar\nAutor: Pablo Sánchez-Núñez (ORCID 0000-0001-7845-9506), Universidad Carlos III de Madrid. DOI: 10.5281/zenodo.24500934. ORCID: 0000-0001-7845-9506 · Web: pablosancheznunez.com\n\nSánchez-Núñez, P. (2026). Reutilización de datos abiertos y documentos: tutoriales interactivos en R (webR). Universidad Carlos III de Madrid. Zenodo. https://doi.org/10.5281/zenodo.24500934\n\nDOI de todas las versiones: 10.5281/zenodo.24500934; apunta siempre a la última edición. Cada edición tiene además su propio DOI, que encontrarás en la ficha de Zenodo.",
     "crumbs": [
       "Presentación"
     ]
@@ -124,7 +134,7 @@
     "href": "00a-primeros-pasos.html#tablas-de-datos-data-frames",
     "title": "Primeros pasos con R en el navegador",
     "section": "Tablas de datos (data frames)",
-    "text": "Tablas de datos (data frames)\nUn data frame es una tabla: cada columna es un vector. Con $ se accede a una columna.\n\n\n\n\n\n\nPara quedarse con algunas filas se usa subset():",
+    "text": "Tablas de datos (data frames)\nUn data frame es una tabla: cada columna es un vector. Con $ se accede a una columna.\n\n\n\n\n\n\nPara quedarse con algunas filas se usa subset():\n\n\n\n\n\n\n\nEjercicio 4\n¿Cuántos préstamos suman las dos bibliotecas de Getafe? Combina subset(), $ y sum().\n\n\n\n\n\n\n\n\nEl nombre del municipio es un texto: va entre comillas.\n\n\nsum(subset(bibliotecas, municipio == \"Getafe\")$prestamos)",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Primeros pasos con R en el navegador</span>"
     ]
@@ -134,7 +144,7 @@
     "href": "00a-primeros-pasos.html#leer-un-fichero-csv",
     "title": "Primeros pasos con R en el navegador",
     "section": "Leer un fichero CSV",
-    "text": "Leer un fichero CSV\nEl CSV de práctica está disponible en la carpeta datos. read.csv() lo convierte en un data frame; head() muestra las primeras filas y str() describe las columnas.\n\n\n\n\n\n\nFíjate en str(): la columna prestamos aparece como chr (texto), no como número. Algo en el fichero impide que R la reconozca como numérica. Lo resolverás en el Tema 3.\n\nEjercicio 3\n¿Cuántas filas tiene el CSV de práctica?\n\n\n\n\n\n\n\n\nLo usaste unas líneas más arriba con la tabla bibliotecas.\n\n\nnrow(prestamos_df)",
+    "text": "Leer un fichero CSV\nEl CSV de práctica está disponible en la carpeta datos. read.csv() lo convierte en un data frame; head() muestra las primeras filas y str() describe las columnas.\n\n\n\n\n\n\nFíjate en str(): la columna prestamos aparece como chr (texto), no como número. Algo en el fichero impide que R la reconozca como numérica. Lo resolverás en el Tema 3.\n\nEjercicio 3\n¿Cuántas filas tiene el CSV de práctica?\n\n\n\n\n\n\n\n\nLo usaste unas líneas más arriba con la tabla bibliotecas.\n\n\nnrow(prestamos_df)\n\n\n\n\nEjercicio 5\n¿Cuántas bibliotecas distintas aparecen en el CSV de práctica? unique() elimina los valores repetidos de un vector; después, cuenta sus elementos.\n\n\n\n\n\n\n\n\nPara contar los elementos de un vector usaste length().\n\n\nlength(unique(prestamos_df$biblioteca))\nSeis bibliotecas, cada una con varios meses de datos.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Primeros pasos con R en el navegador</span>"
     ]
@@ -282,6 +292,17 @@
     ]
   },
   {
+    "objectID": "00-datos-abiertos.html#reto-t0",
+    "href": "00-datos-abiertos.html#reto-t0",
+    "title": "Tema 0. Introducción a los datos abiertos y la reutilización de la información",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 0 · Auditoría de apertura\n\n\n\nElige en datos.gob.es tres conjuntos de datos de tres publicadores distintos: uno en formato propietario (XLS o PDF), uno en CSV y uno que ofrezca RDF, una API o un SPARQL. Para cada uno:\n\nIdentifica la licencia y explica qué permite y qué exige.\nCalcula sus estrellas con la función estrellas() y justifica cada criterio.\nPropón un cambio concreto y viable que le haría subir una estrella.\nCierra con un párrafo comparando los tres: ¿qué publicador facilita más la reutilización y por qué?\n\nEntrega: un informe hecho con la plantilla de informe, renderizado a HTML o PDF, con el código visible y el conjunto de datos citado. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con datos distintos y la corrección la hace el profesorado.\n\n\nEspacio de trabajo (no se corrige automáticamente):",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 0. Introducción a los datos abiertos y la reutilización de la información</span>"
+    ]
+  },
+  {
     "objectID": "00-datos-abiertos.html#autoevaluación",
     "href": "00-datos-abiertos.html#autoevaluación",
     "title": "Tema 0. Introducción a los datos abiertos y la reutilización de la información",
@@ -297,7 +318,7 @@
     "href": "00-datos-abiertos.html#para-practicar-fuera-del-libro",
     "title": "Tema 0. Introducción a los datos abiertos y la reutilización de la información",
     "section": "Para practicar fuera del libro",
-    "text": "Para practicar fuera del libro\nRepite la auditoría con un conjunto de datos de bibliotecas de datos.gob.es o de un portal autonómico: anota su licencia y su formato, y aplica estrellas().",
+    "text": "Para practicar fuera del libro\n\n\n\n\n\n\nEn tu ordenador tienes las funciones de este tema en el paquete datareuseR: leer_csv_abierto() y estrellas().\n\n\n\nRepite la auditoría con un conjunto de datos de bibliotecas de datos.gob.es o de un portal autonómico: anota su licencia y su formato, y aplica estrellas().",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 0. Introducción a los datos abiertos y la reutilización de la información</span>"
@@ -425,6 +446,17 @@
     ]
   },
   {
+    "objectID": "01-risp.html#reto-t1",
+    "href": "01-risp.html#reto-t1",
+    "title": "Tema 1. Reutilización de la información del sector público (RISP)",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 1 · Una solicitud de reutilización\n\n\n\nBusca una información del sector público que te interese profesionalmente y que no esté publicada como datos abiertos (por ejemplo, las estadísticas de préstamo por sucursal de la red de bibliotecas de tu municipio). Prepara, sin enviarla, la solicitud de reutilización:\n\nRedacta la solicitud con los elementos que exige el art. 10 de la Ley 37/2007: identificación, información pedida, finalidad y formato preferido.\nIdentifica el órgano competente y justifica que la información es reutilizable (y no está excluida por el art. 3).\nCalcula con sumar_habiles() la fecha límite de resolución, descontando los festivos nacionales, autonómicos y locales reales de tu municipio, y la fecha si el plazo se ampliara.\nIndica qué condiciones de reutilización esperarías (licencia, tarifas) y por qué.\n\nEntrega: un informe hecho con la plantilla de informe, renderizado a HTML o PDF, con el código visible y el conjunto de datos citado. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con datos distintos y la corrección la hace el profesorado.\n\n\nEspacio de trabajo (no se corrige automáticamente):",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 1. Reutilización de la información del sector público (RISP)</span>"
+    ]
+  },
+  {
     "objectID": "01-risp.html#autoevaluación",
     "href": "01-risp.html#autoevaluación",
     "title": "Tema 1. Reutilización de la información del sector público (RISP)",
@@ -440,7 +472,7 @@
     "href": "01-risp.html#para-practicar-fuera-del-libro",
     "title": "Tema 1. Reutilización de la información del sector público (RISP)",
     "section": "Para practicar fuera del libro",
-    "text": "Para practicar fuera del libro\nRedacta una solicitud de acceso a un dato bibliotecario que no esté publicado y busca en el Consejo de Transparencia y Buen Gobierno una resolución sobre un caso parecido. Calcula con el código de este capítulo hasta cuándo tendrías para reclamar si la solicitud se desestima por silencio.",
+    "text": "Para practicar fuera del libro\n\n\n\n\n\n\nEn tu ordenador tienes las funciones de este tema en el paquete datareuseR: sumar_habiles(), que además descuenta festivos.\n\n\n\nRedacta una solicitud de acceso a un dato bibliotecario que no esté publicado y busca en el Consejo de Transparencia y Buen Gobierno una resolución sobre un caso parecido. Calcula con el código de este capítulo hasta cuándo tendrías para reclamar si la solicitud se desestima por silencio.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 1. Reutilización de la información del sector público (RISP)</span>"
@@ -561,7 +593,18 @@
     "href": "02-proyectos.html#práctica-en-r",
     "title": "Tema 2. Proyectos relevantes de reutilización de datos abiertos",
     "section": "Práctica en R",
-    "text": "Práctica en R\n\nPaso 1. Clasificar casos de reutilización (apartado 4)\nLa tabla siguiente recoge doce casos ilustrativos (inventados para el ejercicio, aunque inspirados en tipos de proyecto frecuentes) ya clasificados con las dimensiones de Safarov et al.\n\n\n\n\n\n\n\n\n\n\n\n\nFigura 1: Los doce casos ilustrativos por tipo de usuario y efecto. En esta muestra inventada, el valor económico procede solo de empresas, y el buen gobierno, de periodistas, administraciones y ciudadanía.\n\n\n\nLa figura se ha hecho con estos mismos datos; en el paso siguiente aprenderás a obtener los recuentos con R.\n\n\nPaso 2. Contar con table()\ntable() cuenta cuántas veces aparece cada valor; prop.table() lo convierte en proporciones.\n\n\n\n\n\n\nCon dos variables, table() construye una tabla de contingencia:\n\n\n\n\n\n\nY barplot() la dibuja:\n\n\n\n\n\n\n\n\nEjercicio 2.1\n¿Qué porcentaje de los casos tiene un efecto de tipo económico? Redondea a un decimal.\n\n\n\n\n\n\n\n\nPuedes seleccionar un elemento de una tabla por su nombre, entre comillas.\n\n\nporcentajes &lt;- round(100 * prop.table(table(casos$efecto)), 1)\nporcentajes[[\"Económico\"]]\nTres de doce casos: un 25 %.\n\n\n\n\nEjercicio 2.2\n¿Cuántos casos tienen como usuarios a empresas y como efecto el valor económico? Usa subset() y nrow().\n\n\n\n\n\n\n\n\nLas dos condiciones deben cumplirse a la vez: el operador «y» es &.\n\n\nnrow(subset(casos, usuario == \"Empresas\" & efecto == \"Económico\"))\n\n\n\n\nEjercicio 2.3 (sin corrección automática, apartado 2)\nAbre la ficha de España del Open Data Maturity 2025, anota las puntuaciones de España y de la media europea en las cuatro dimensiones y calcula la diferencia. ¿En qué dimensión está España más lejos de la media? Este resultado lo necesitarás en el cuestionario del Tema 2 de Aula Global.\n\n\n\n\n\n\n\n\nPaso 3. Autoevaluación FAIR de un registro de datos (apartado 6)\nUna lista de comprobación muy simplificada para un conjunto de datos de investigación depositado en un repositorio:\n\n\n\n\n\n\n\n\nEjercicio 2.4\nUn grupo de investigación publica sus datos en su web en un fichero CSV, sin DOI, sin licencia y sin descripción de cómo se obtuvieron (sí tiene metadatos descriptivos y usa un vocabulario común). Completa el registro y ejecuta la evaluación. ¿Cuántos de los cuatro principios cumple?\n\n\n\n\n\n\n\n\nLos tres huecos describen lo que no tiene el conjunto de datos.\n\n\nregistro_web &lt;- list(\n  identificador_persistente = FALSE,\n  metadatos_descriptivos = TRUE,\n  acceso_por_protocolo_abierto = TRUE,\n  formato_abierto = TRUE,\n  vocabulario_comun = TRUE,\n  licencia_declarada = FALSE,\n  procedencia_documentada = FALSE\n)\nsum(evaluar_fair(registro_web))\nCumple dos principios (A e I). Falla F, por no tener identificador persistente, y R, por no tener licencia ni procedencia. Depositarlo en un repositorio con DOI y licencia CC BY 4.0 lo arreglaría casi todo.",
+    "text": "Práctica en R\n\nPaso 1. Clasificar casos de reutilización (apartado 4)\nLa tabla siguiente recoge doce casos ilustrativos (inventados para el ejercicio, aunque inspirados en tipos de proyecto frecuentes) ya clasificados con las dimensiones de Safarov et al.\n\n\n\n\n\n\n\n\n\n\n\n\nFigura 1: Los doce casos ilustrativos por tipo de usuario y efecto. En esta muestra inventada, el valor económico procede solo de empresas, y el buen gobierno, de periodistas, administraciones y ciudadanía.\n\n\n\nLa figura se ha hecho con estos mismos datos; en el paso siguiente aprenderás a obtener los recuentos con R.\n\n\nPaso 2. Contar con table()\ntable() cuenta cuántas veces aparece cada valor; prop.table() lo convierte en proporciones.\n\n\n\n\n\n\nCon dos variables, table() construye una tabla de contingencia:\n\n\n\n\n\n\nY barplot() la dibuja:\n\n\n\n\n\n\n\n\nEjercicio 2.1\n¿Qué porcentaje de los casos tiene un efecto de tipo económico? Redondea a un decimal.\n\n\n\n\n\n\n\n\nPuedes seleccionar un elemento de una tabla por su nombre, entre comillas.\n\n\nporcentajes &lt;- round(100 * prop.table(table(casos$efecto)), 1)\nporcentajes[[\"Económico\"]]\nTres de doce casos: un 25 %.\n\n\n\n\nEjercicio 2.2\n¿Cuántos casos tienen como usuarios a empresas y como efecto el valor económico? Usa subset() y nrow().\n\n\n\n\n\n\n\n\nLas dos condiciones deben cumplirse a la vez: el operador «y» es &.\n\n\nnrow(subset(casos, usuario == \"Empresas\" & efecto == \"Económico\"))\n\n\n\n\nEjercicio 2.3 (sin corrección automática, apartado 2)\nAbre la ficha de España del Open Data Maturity 2025, anota las puntuaciones de España y de la media europea en las cuatro dimensiones y calcula la diferencia. ¿En qué dimensión está España más lejos de la media? Este resultado lo necesitarás en el cuestionario del Tema 2 de Aula Global.\n\n\n\n\n\n\n\n\nPaso 3. Autoevaluación FAIR de un registro de datos (apartado 6)\nUna lista de comprobación muy simplificada para un conjunto de datos de investigación depositado en un repositorio:\n\n\n\n\n\n\n\n\nEjercicio 2.4\nUn grupo de investigación publica sus datos en su web en un fichero CSV, sin DOI, sin licencia y sin descripción de cómo se obtuvieron (sí tiene metadatos descriptivos y usa un vocabulario común). Completa el registro y ejecuta la evaluación. ¿Cuántos de los cuatro principios cumple?\n\n\n\n\n\n\n\n\nLos tres huecos describen lo que no tiene el conjunto de datos.\n\n\nregistro_web &lt;- list(\n  identificador_persistente = FALSE,\n  metadatos_descriptivos = TRUE,\n  acceso_por_protocolo_abierto = TRUE,\n  formato_abierto = TRUE,\n  vocabulario_comun = TRUE,\n  licencia_declarada = FALSE,\n  procedencia_documentada = FALSE\n)\nsum(evaluar_fair(registro_web))\nCumple dos principios (A e I). Falla F, por no tener identificador persistente, y R, por no tener licencia ni procedencia. Depositarlo en un repositorio con DOI y licencia CC BY 4.0 lo arreglaría casi todo.\n\n\n\n\nEjercicio 2.5\n¿Qué ámbito territorial es el más frecuente entre los doce casos? which.max() devuelve la posición del valor más alto de una tabla y names(), su etiqueta.\n\n\n\n\n\n\n\n\nLa columna del ámbito territorial se llama ambito, sin tilde.\n\n\nnames(which.max(table(casos$ambito)))\nEl ámbito local: cinco de los doce casos. Los servicios más cercanos a la ciudadanía (horarios, wifi, rutas) se apoyan sobre todo en datos municipales.\n\n\n\n\nPaso 4. Consultar el catálogo nacional en directo (apartado 1)\ndatos.gob.es tiene una API: una dirección web que, en lugar de una página para personas, devuelve datos para programas. Esta consulta pide los 50 primeros conjuntos de datos con «bibliotecas» en el título:\nhttps://datos.gob.es/apidata/catalog/dataset/title/bibliotecas.json?_pageSize=50\nLa respuesta llega en JSON. R la lee con url() y readLines(), y jsonlite::fromJSON() la convierte en listas. La consulta es en directo: el resultado puede cambiar de un día a otro. Si el portal no responde, el código usa una copia guardada el 24 de noviembre de 2026.\n\n\n\n\n\n\nCada elemento describe un conjunto con el vocabulario DCAT que verás en el Tema 4: título (en varios idiomas), publicador y distribuciones, cada una con su formato. Para no repetir este trabajo en cada consulta, el paquete datareuseR reúne unas funciones auxiliares. Aquí las cargamos con source():\n\n\n\n\n\n\nLos formatos no vienen escritos igual: unos publicadores usan el vocabulario de tipos de fichero de la UE (.../file-type/CSV) y otros, tipos MIME (text/csv). formatos_de() los unifica con normalizar_formato(). Es un problema de interoperabilidad semántica que retomarás en el Tema 4.\n\n\nEjercicio 2.6\n¿Cuántos de los conjuntos devueltos ofrecen al menos una distribución en CSV? Completa la etiqueta de formato.\n\n\n\n\n\n\n\n\nformatos_de() devuelve etiquetas en mayúsculas, como \"JSON\" o \"XLS\".\n\n\ntiene_csv &lt;- sapply(items, function(it) \"CSV\" %in% formatos_de(it))\nsum(tiene_csv)\nCon la copia del 24 de noviembre de 2026, 46 de 50. La cifra puede variar si la consulta es en directo. Que casi todos ofrezcan CSV no quiere decir que todos tengan la misma calidad: muchos son estadísticas en formato PC-Axis convertidas.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 2. Proyectos relevantes de reutilización de datos abiertos</span>"
+    ]
+  },
+  {
+    "objectID": "02-proyectos.html#reto-t2",
+    "href": "02-proyectos.html#reto-t2",
+    "title": "Tema 2. Proyectos relevantes de reutilización de datos abiertos",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 2 · Radiografía de un tema en el catálogo nacional\n\n\n\nElige una palabra relacionada con tu interés profesional que no sea «bibliotecas» (por ejemplo, archivos, museos, patrimonio o lectura) y consulta en directo la API de datos.gob.es:\n\n¿Cuántos conjuntos devuelve y qué publicadores concentran la oferta? Resúmelo en una tabla.\n¿Qué formatos predominan? Haz un gráfico y comenta qué dice del nivel de apertura (Tema 0).\nLocaliza en la sección de aplicaciones y empresas de datos.gob.es tres reutilizaciones reales relacionadas con tu tema y clasifícalas con las dimensiones de Safarov et al. (usuario, utilización, efecto).\nConcluye: ¿qué conjunto de datos falta para que surja una reutilización de valor en tu tema?\n\nEntrega: un informe hecho con la plantilla de informe, renderizado a HTML o PDF, con el código visible y el conjunto de datos citado. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con datos distintos y la corrección la hace el profesorado.\n\n\nEspacio de trabajo (no se corrige automáticamente; necesita conexión):",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 2. Proyectos relevantes de reutilización de datos abiertos</span>"
@@ -583,7 +626,7 @@
     "href": "02-proyectos.html#para-practicar-fuera-del-libro",
     "title": "Tema 2. Proyectos relevantes de reutilización de datos abiertos",
     "section": "Para practicar fuera del libro",
-    "text": "Para practicar fuera del libro\nElige un caso español y uno internacional de las fuentes anteriores y descríbelos con las cuatro dimensiones. Añádelos como filas nuevas a casos con rbind() y repite las tablas.",
+    "text": "Para practicar fuera del libro\n\n\n\n\n\n\nEn tu ordenador tienes las funciones de este tema en el paquete datareuseR: consultar_datosgob(), tabla_datosgob() y evaluar_fair().\n\n\n\nElige un caso español y uno internacional de las fuentes anteriores y descríbelos con las cuatro dimensiones. Añádelos como filas nuevas a casos con rbind() y repite las tablas.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 2. Proyectos relevantes de reutilización de datos abiertos</span>"
@@ -700,6 +743,17 @@
     ]
   },
   {
+    "objectID": "03-calidad.html#reto-t3",
+    "href": "03-calidad.html#reto-t3",
+    "title": "Tema 3. Gestión documental y open data",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 3 · Limpieza documentada de un conjunto real\n\n\n\nElige en un portal de datos abiertos un CSV de al menos 100 filas y 6 columnas que no se use en este libro. Trabaja en tu ordenador con el paquete datareuseR:\n\nLéelo con leer_csv_abierto() y documenta la codificación y el separador detectados.\nMide su calidad con informe_calidad() antes de tocarlo.\nAplica al menos tres tipos de corrección distintos (duplicados, variantes de texto con clave_agrupacion(), fechas, números, valores imposibles…) y justifica cada decisión en una tabla: problema, dimensión de calidad, corrección y número de filas afectadas.\nVuelve a medir la calidad y compara el antes y el después.\nDescribe el conjunto depurado con metadatos DCAT, incluida su procedencia (dct:source).\n\nEntrega: un informe hecho con la plantilla de informe, renderizado a HTML o PDF, con el código visible y el conjunto de datos citado. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con datos distintos y la corrección la hace el profesorado.\n\n\nEspacio de trabajo, con el CSV de práctica para probar el código antes de usarlo con tus datos (no se corrige automáticamente):",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 3. Gestión documental y *open data*</span>"
+    ]
+  },
+  {
     "objectID": "03-calidad.html#autoevaluación",
     "href": "03-calidad.html#autoevaluación",
     "title": "Tema 3. Gestión documental y open data",
@@ -716,6 +770,17 @@
     "title": "Tema 3. Gestión documental y open data",
     "section": "Resumen de problemas encontrados",
     "text": "Resumen de problemas encontrados\n\n\n\n\n\n\n\n\nProblema\nCaracterística de Vetrò et al.\nCorrección\n\n\n\n\nAusentes como vacío y como \"n/d\"\nCompletitud y conformidad\nCodificar todos como NA\n\n\nVariantes del mismo municipio\nConformidad\nClave normalizada y tabla de equivalencias\n\n\nFechas en dos formatos\nConformidad\nConvertir a ISO 8601 (AAAA-MM-DD)\n\n\nPréstamos negativos\nExactitud\nMarcar como ausente y documentarlo\n\n\nFilas duplicadas\nExactitud\nEliminar duplicados",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 3. Gestión documental y *open data*</span>"
+    ]
+  },
+  {
+    "objectID": "03-calidad.html#para-practicar-fuera-del-libro",
+    "href": "03-calidad.html#para-practicar-fuera-del-libro",
+    "title": "Tema 3. Gestión documental y open data",
+    "section": "Para practicar fuera del libro",
+    "text": "Para practicar fuera del libro\n\n\n\n\n\n\nEn tu ordenador tienes las funciones de este tema en el paquete datareuseR: informe_calidad(), completitud() y clave_agrupacion().",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 3. Gestión documental y *open data*</span>"
@@ -832,6 +897,17 @@
     ]
   },
   {
+    "objectID": "04-interoperabilidad.html#reto-t4",
+    "href": "04-interoperabilidad.html#reto-t4",
+    "title": "Tema 4. Normalización e interoperabilidad",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 4 · Publicar como datos enlazados\n\n\n\nParte del conjunto que depuraste en el reto del Tema 3 (o de otro conjunto abierto que describa entidades: bibliotecas, archivos, museos, centros culturales…):\n\nConvierte al menos diez registros a JSON-LD con el tipo de schema.org más adecuado y justifica la elección de cada propiedad.\nEnlaza al menos una propiedad con un identificador externo (por ejemplo, el municipio con su URI de Wikidata).\nComprueba el resultado en el validador de schema.org y corrige los avisos.\nDescribe el conjunto con DCAT-AP: título, descripción, publicador, licencia, cobertura temporal y una distribución con su formato del vocabulario de tipos de fichero de la UE.\nExplica qué gana un reutilizador con esta versión frente al CSV original.\n\nEntrega: un informe hecho con la plantilla de informe, renderizado a HTML o PDF, con el código visible y el conjunto de datos citado. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con datos distintos y la corrección la hace el profesorado.\n\n\nEspacio de trabajo (no se corrige automáticamente):",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 4. Normalización e interoperabilidad</span>"
+    ]
+  },
+  {
     "objectID": "04-interoperabilidad.html#autoevaluación",
     "href": "04-interoperabilidad.html#autoevaluación",
     "title": "Tema 4. Normalización e interoperabilidad",
@@ -847,7 +923,7 @@
     "href": "04-interoperabilidad.html#para-practicar-fuera-del-libro",
     "title": "Tema 4. Normalización e interoperabilidad",
     "section": "Para practicar fuera del libro",
-    "text": "Para practicar fuera del libro\n\nCopia en el JSON-LD Playground el JSON-LD de todas las bibliotecas (lapply(split(bibliotecas, seq_len(nrow(bibliotecas))), a_jsonld)) y comprueba que es válido.\nEn el Wikidata Query Service lanza una consulta real de bibliotecas de una provincia. Los resultados cambian cada día porque Wikidata se edita continuamente: por eso los ejercicios de este capítulo usan un grafo fijo.",
+    "text": "Para practicar fuera del libro\n\n\n\n\n\n\nEn tu ordenador tienes las funciones de este tema en el paquete datareuseR: normalizar_formato() y tabla_datosgob().\n\n\n\n\nCopia en el JSON-LD Playground el JSON-LD de todas las bibliotecas (lapply(split(bibliotecas, seq_len(nrow(bibliotecas))), a_jsonld)) y comprueba que es válido.\nEn el Wikidata Query Service lanza una consulta real de bibliotecas de una provincia. Los resultados cambian cada día porque Wikidata se edita continuamente: por eso los ejercicios de este capítulo usan un grafo fijo.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 4. Normalización e interoperabilidad</span>"
@@ -964,6 +1040,17 @@
     ]
   },
   {
+    "objectID": "05-infomediarias.html#reto-t5",
+    "href": "05-infomediarias.html#reto-t5",
+    "title": "Tema 5. Empresas infomediarias y oportunidades de negocio",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del Tema 5 · Propuesta de un servicio infomediario\n\n\n\nDiseña un servicio de valor añadido para bibliotecas, archivos o su público que combine al menos dos fuentes de datos abiertos con licencias distintas:\n\nDescribe el servicio, sus usuarios y el valor que añade frente a consultar directamente las fuentes.\nIdentifica las licencias y calcula con obligaciones() qué exige y qué permite el servicio resultante.\nElige un modelo de negocio y calcula con punto_equilibrio() los usuarios necesarios en tres escenarios (pesimista, base y optimista). Justifica los supuestos.\nAnaliza los riesgos: dependencia del publicador, actualización de los datos, calidad y cambios de licencia.\n\nEntrega: un informe hecho con la plantilla de informe, renderizado a HTML o PDF, con el código visible y el conjunto de datos citado. Se evalúa con la rúbrica que incluye la plantilla. Este reto no tiene solución en el libro: cada estudiante trabaja con datos distintos y la corrección la hace el profesorado.\n\n\nEspacio de trabajo (no se corrige automáticamente):",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 5. Empresas infomediarias y oportunidades de negocio</span>"
+    ]
+  },
+  {
     "objectID": "05-infomediarias.html#autoevaluación",
     "href": "05-infomediarias.html#autoevaluación",
     "title": "Tema 5. Empresas infomediarias y oportunidades de negocio",
@@ -979,7 +1066,7 @@
     "href": "05-infomediarias.html#para-practicar-fuera-del-libro",
     "title": "Tema 5. Empresas infomediarias y oportunidades de negocio",
     "section": "Para practicar fuera del libro",
-    "text": "Para practicar fuera del libro\nEn grupo, idead un servicio que combine al menos dos conjuntos de datos abiertos. Describidlo con los seis componentes del marco 6-V, calculad su punto de equilibrio con la función ingresos_mensuales() y comprobad las obligaciones de licencia con obligaciones(). Presentadlo en 5 minutos.",
+    "text": "Para practicar fuera del libro\n\n\n\n\n\n\nEn tu ordenador tienes las funciones de este tema en el paquete datareuseR: punto_equilibrio() y obligaciones().\n\n\n\nEn grupo, idead un servicio que combine al menos dos conjuntos de datos abiertos. Describidlo con los seis componentes del marco 6-V, calculad su punto de equilibrio con la función ingresos_mensuales() y comprobad las obligaciones de licencia con obligaciones(). Presentadlo en 5 minutos.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 5. Empresas infomediarias y oportunidades de negocio</span>"
@@ -1023,7 +1110,7 @@
     "href": "06-caso-practico.html#tema-0.-auditar-el-conjunto",
     "title": "Caso práctico: las bibliotecas públicas municipales de Madrid",
     "section": "Tema 0. Auditar el conjunto",
-    "text": "Tema 0. Auditar el conjunto\n\nLeerlo… y fallar\nLo primero que hace cualquier reutilizador es abrir el fichero. Si lo leemos como el CSV de práctica, el resultado no tiene sentido:\n\n\n\n\n\n\nR ha leído una sola columna: el separador no es la coma, sino el punto y coma, algo habitual en los portales españoles porque la coma es el separador decimal. Además, el fichero no está en UTF-8, sino en Latin-1 (ISO-8859-1): sin indicarlo, las tildes se estropean.\n\n\n\n\n\n\n\n\nEjercicio C.1\n¿Cuántas bibliotecas incluye el conjunto? Lee el fichero correctamente y cuenta las filas.\n\n\n\n\n\n\n\nEl separador es el punto y coma. La codificación se llama \"latin1\" en R.\n\n\nbib &lt;- read.csv(\"datos/bibliotecas_madrid_2026-11-24.csv\", sep = \";\", fileEncoding = \"latin1\")\nnrow(bib)\n\n\n\n\nValoración\n\n\n\n\n\n\n\nCriterio\nValoración\n\n\n\n\nLicencia\nCC BY 4.0: abierta según la Open Definition\n\n\nFormato\nCSV: estructurado y no propietario\n\n\nEstrellas\n★★★ (las URI de CONTENT-URL son páginas web, no identificadores de las bibliotecas como entidades)\n\n\nFAIR\nLocalizable y accesible en el portal; la reutilización mejoraría con un diccionario de datos legible por máquina",
+    "text": "Tema 0. Auditar el conjunto\n\nLeerlo… y fallar\nLo primero que hace cualquier reutilizador es abrir el fichero. Si lo leemos como el CSV de práctica, el resultado no tiene sentido:\n\n\n\n\n\n\nR ha leído una sola columna: el separador no es la coma, sino el punto y coma, algo habitual en los portales españoles porque la coma es el separador decimal. Además, el fichero no está en UTF-8, sino en Latin-1 (ISO-8859-1): sin indicarlo, las tildes se estropean.\n\n\n\n\n\n\n\n\nEjercicio C.1\n¿Cuántas bibliotecas incluye el conjunto? Lee el fichero correctamente y cuenta las filas.\n\n\n\n\n\n\n\nEl separador es el punto y coma. La codificación se llama \"latin1\" en R.\n\n\nbib &lt;- read.csv(\"datos/bibliotecas_madrid_2026-11-24.csv\", sep = \";\", fileEncoding = \"latin1\")\nnrow(bib)\n\n\n\n\nEjercicio C.4\nEl paquete datareuseR incluye leer_csv_abierto(), que detecta la codificación y el separador antes de leer y guarda lo que ha detectado en el atributo \"lectura\". ¿Qué codificación detecta en el fichero de Madrid?\n\n\n\n\n\n\n\n\nEl atributo se llama como el verbo del que viene: leer.\n\n\nbib2 &lt;- leer_csv_abierto(\"datos/bibliotecas_madrid_2026-11-24.csv\")\nattr(bib2, \"lectura\")$encoding\n\"latin1\": la función ha comprobado que el texto no es UTF-8 válido. Detectar lo que antes resolviste a mano es útil, pero conviene documentarlo, como hace el atributo.\n\n\n\n\nValoración\n\n\n\n\n\n\n\nCriterio\nValoración\n\n\n\n\nLicencia\nCC BY 4.0: abierta según la Open Definition\n\n\nFormato\nCSV: estructurado y no propietario\n\n\nEstrellas\n★★★ (las URI de CONTENT-URL son páginas web, no identificadores de las bibliotecas como entidades)\n\n\nFAIR\nLocalizable y accesible en el portal; la reutilización mejoraría con un diccionario de datos legible por máquina",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Caso práctico: las bibliotecas públicas municipales de Madrid</span>"
@@ -1056,7 +1143,7 @@
     "href": "06-caso-practico.html#tema-3.-calidad-y-metadatos",
     "title": "Caso práctico: las bibliotecas públicas municipales de Madrid",
     "section": "Tema 3. Calidad y metadatos",
-    "text": "Tema 3. Calidad y metadatos\n\nColumnas vacías y completitud\n\n\n\n\n\n\nTres columnas (PLANTA, PUERTA, ESCALERAS) están completamente vacías: forman parte de un modelo de datos genérico de equipamientos que, para las bibliotecas, no se rellena.\n\n\nEjercicio C.2\nCalcula el porcentaje de celdas completas del conjunto, redondeado a dos decimales, con la misma métrica de Vetrò et al. que en el Tema 3.\n\n\n\n\n\n\n\n\nCeldas totales = filas × columnas.\n\n\nceldas_vacias &lt;- sum(sapply(bib, function(col) sum(vacia(col))))\nceldas_totales &lt;- nrow(bib) * ncol(bib)\nround(100 * (celdas_totales - celdas_vacias) / celdas_totales, 2)\n\n\n\n\nCódigos sin explicar\n\n\n\n\n\n\nLa columna ACCESIBILIDAD contiene códigos («1,6», «1,5,6»…) cuyo significado no está en el propio fichero, sino en un documento PDF del portal («Equipamientos. Contenido y estructura del fichero»). Es un problema de comprensibilidad: los datos son abiertos, pero no se entienden sin documentación externa. Un diccionario de datos legible por máquina (por ejemplo, con CSV on the Web o Frictionless) lo resolvería.\n\n\nBibliotecas por distrito\n\n\n\n\n\n\n\n\nMetadatos del conjunto derivado\nSi publicáramos nuestra versión depurada, deberíamos describirla y declarar su procedencia con dct:source:",
+    "text": "Tema 3. Calidad y metadatos\n\nColumnas vacías y completitud\n\n\n\n\n\n\nTres columnas (PLANTA, PUERTA, ESCALERAS) están completamente vacías: forman parte de un modelo de datos genérico de equipamientos que, para las bibliotecas, no se rellena.\n\n\nEjercicio C.2\nCalcula el porcentaje de celdas completas del conjunto, redondeado a dos decimales, con la misma métrica de Vetrò et al. que en el Tema 3.\n\n\n\n\n\n\n\n\nCeldas totales = filas × columnas.\n\n\nceldas_vacias &lt;- sum(sapply(bib, function(col) sum(vacia(col))))\nceldas_totales &lt;- nrow(bib) * ncol(bib)\nround(100 * (celdas_totales - celdas_vacias) / celdas_totales, 2)\n\n\n\n\nCódigos sin explicar\n\n\n\n\n\n\nLa columna ACCESIBILIDAD contiene códigos («1,6», «1,5,6»…) cuyo significado no está en el propio fichero, sino en un documento PDF del portal («Equipamientos. Contenido y estructura del fichero»). Es un problema de comprensibilidad: los datos son abiertos, pero no se entienden sin documentación externa. Un diccionario de datos legible por máquina (por ejemplo, con CSV on the Web o Frictionless) lo resolvería.\n\n\nBibliotecas por distrito\n\n\n\n\n\n\n\n\nEjercicio C.5\n¿Qué distrito tiene más bibliotecas públicas municipales?\n\n\n\n\n\n\n\n\nLa columna se llama igual que la variable: DISTRITO, en mayúsculas.\n\n\nnames(which.max(table(bib$DISTRITO)))\nPuente de Vallecas, con cinco. Para valorar la cobertura habría que relacionarlo con la población de cada distrito, que está en otro conjunto del mismo portal.\n\n\n\n\nMetadatos del conjunto derivado\nSi publicáramos nuestra versión depurada, deberíamos describirla y declarar su procedencia con dct:source:",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Caso práctico: las bibliotecas públicas municipales de Madrid</span>"
@@ -1100,7 +1187,7 @@
     "href": "06-caso-practico.html#para-practicar-fuera-del-libro",
     "title": "Caso práctico: las bibliotecas públicas municipales de Madrid",
     "section": "Para practicar fuera del libro",
-    "text": "Para practicar fuera del libro\nRepite el caso con el conjunto de bibliotecas de otro portal (tu comunidad autónoma o tu ayuntamiento) y redacta el resultado con la plantilla de informe. Compara: ¿qué portal publica mejor sus datos, y por qué?",
+    "text": "Para practicar fuera del libro\n\n\n\n\n\n\nEn tu ordenador tienes las funciones de este tema en el paquete datareuseR: leer_csv_abierto(), informe_calidad() y el conjunto bibliotecas_madrid.\n\n\n\nRepite el caso con el conjunto de bibliotecas de otro portal (tu comunidad autónoma o tu ayuntamiento) y redacta el resultado con la plantilla de informe. Compara: ¿qué portal publica mejor sus datos, y por qué?",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Caso práctico: las bibliotecas públicas municipales de Madrid</span>"
@@ -1111,7 +1198,18 @@
     "href": "90-chuleta-r.html",
     "title": "Apéndice A — Chuleta de R",
     "section": "",
-    "text": "Todas las funciones que usa el libro, en una página.\n\n\n\n\n\n\n\n\nPara…\nFunción\nEjemplo\n\n\n\n\nGuardar un valor\n&lt;-\nx &lt;- 5\n\n\nCrear un vector\nc()\nc(1, 2, 3)\n\n\nContar elementos\nlength()\nlength(x)\n\n\nSumar, media, máximo\nsum(), mean(), max()\nsum(x, na.rm = TRUE)\n\n\nRedondear\nround()\nround(3.14159, 2)\n\n\n¿Está en la lista?\n%in%\n\"CC BY 4.0\" %in% abiertas\n\n\nY / O / NO\n&, |, !\nx &gt; 1 & x &lt; 5\n\n\nCrear una tabla\ndata.frame()\ndata.frame(a = 1:3, b = c(\"x\", \"y\", \"z\"))\n\n\nLeer un CSV\nread.csv()\nread.csv(\"datos/fichero.csv\")\n\n\nGuardar un CSV\nwrite.csv()\nwrite.csv(df, \"salida.csv\", row.names = FALSE)\n\n\nDimensiones\nnrow(), ncol(), dim()\nnrow(df)\n\n\nVer el principio\nhead()\nhead(df, 10)\n\n\nEstructura\nstr()\nstr(df)\n\n\nUna columna\n$\ndf$municipio\n\n\nFiltrar filas\nsubset()\nsubset(df, municipio == \"Getafe\")\n\n\nOrdenar\norder()\ndf[order(df$fecha), ]\n\n\nValores únicos\nunique()\nunique(df$municipio)\n\n\nContar valores\ntable()\ntable(df$municipio)\n\n\nProporciones\nprop.table()\nprop.table(table(df$efecto))\n\n\nSumar por grupos\naggregate()\naggregate(prestamos ~ municipio, data = df, FUN = sum)\n\n\nUnir tablas\nmerge()\nmerge(tabla1, tabla2)\n\n\nDuplicados\nduplicated()\ndf[!duplicated(df), ]\n\n\nAusentes\nis.na()\nsum(is.na(df$prestamos))\n\n\nQuitar espacios\ntrimws()\ntrimws(\" Getafe \")\n\n\nMinúsculas\ntolower()\ntolower(\"GETAFE\")\n\n\nSustituir caracteres\nchartr()\nchartr(\"áé\", \"ae\", \"Leganés\")\n\n\n¿Contiene un patrón?\ngrepl()\ngrepl(\"/\", \"01/03/2025\")\n\n\nTexto a fecha\nas.Date()\nas.Date(\"01/03/2025\", format = \"%d/%m/%Y\")\n\n\nSecuencia de fechas\nseq()\nseq(fecha, by = \"1 month\", length.out = 2)\n\n\nRellenar plantilla\nsprintf()\nsprintf(\"Hola, %s\", \"Getafe\")\n\n\nLista a JSON\njsonlite::toJSON()\njsonlite::toJSON(lista, auto_unbox = TRUE, pretty = TRUE)\n\n\nGráfico de barras\nbarplot()\nbarplot(table(df$usuario))\n\n\n\nPrueba cualquiera de ellas aquí:",
+    "text": "El paquete datareuseR\nTodas las funciones que usa el libro, en una página.\nPrueba cualquiera de ellas aquí:\ndatareuseR reúne los datos y las funciones auxiliares del libro para que repitas las prácticas en tu ordenador, con RStudio o Positron, y las apliques a tus propios datos. Dentro del libro se carga con source(\"datos/datareuseR.R\"); en tu ordenador, instálalo una vez y cárgalo con library():\nDatos incluidos: prestamos_practica (el CSV de práctica, sin limpiar), bibliotecas_madrid (copia del 24 de noviembre de 2026, CC BY 4.0, Ayuntamiento de Madrid), casos_reutilizacion (los doce casos del Tema 2) y licencias (la tabla del Tema 5).\nPrueba el paquete aquí:",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta de R</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta-r.html#sec-datareuser",
+    "href": "90-chuleta-r.html#sec-datareuser",
+    "title": "Apéndice A — Chuleta de R",
+    "section": "",
+    "text": "install.packages(\"remotes\")\nremotes::install_github(\"pablosancheznunez/reutilizacion-datos\", subdir = \"datareuseR\")\nlibrary(datareuseR)\nvignette(\"datareuseR\")   # guía rápida\n\n\n\n\n\n\n\n\nPara…\nFunción\nTema\n\n\n\n\nLeer un CSV con codificación y separador desconocidos\nleer_csv_abierto()\n0, 3\n\n\nEstrellas del esquema de cinco estrellas\nestrellas()\n0\n\n\nPlazos en días hábiles, con festivos\nsumar_habiles()\n1\n\n\nEvaluación FAIR simplificada\nevaluar_fair()\n2\n\n\nConsultar la API de datos.gob.es (con copia sin conexión)\nconsultar_datosgob()\n2\n\n\nTítulo, formatos y tabla de los resultados\ntitulo_es(), formatos_de(), tabla_datosgob()\n2, 4\n\n\nUnificar etiquetas de formato (URI de la UE y tipos MIME)\nnormalizar_formato()\n4\n\n\nCeldas vacías y completitud (Vetrò et al.)\ncelda_vacia(), completitud()\n3\n\n\nInforme rápido de calidad\ninforme_calidad()\n3\n\n\nClave de agrupación al estilo de OpenRefine\nclave_agrupacion()\n3\n\n\nIngresos y punto de equilibrio freemium\ningresos_mensuales(), punto_equilibrio()\n5\n\n\nObligaciones al combinar licencias\nobligaciones()\n5",
     "crumbs": [
       "Apéndices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta de R</span>"
@@ -1206,6 +1304,39 @@
     ]
   },
   {
+    "objectID": "91-guia-docente.html#retos-evaluables",
+    "href": "91-guia-docente.html#retos-evaluables",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Retos evaluables",
+    "text": "Retos evaluables\nCada tema termina con un reto evaluable pensado para la evaluación continua en Aula Global. A diferencia de los ejercicios, no tiene pista, solución ni corrección automática, y cada estudiante trabaja con datos distintos (un portal, una palabra de búsqueda o un conjunto elegido por él), lo que dificulta copiar. La entrega es un informe hecho con la plantilla informe_practica.qmd y se corrige con su rúbrica (pesos 15/25/20/20/10/10).\n\n\n\n\n\n\n\n\nTema\nReto\nFunciones de datareuseR\n\n\n\n\n0\nAuditoría de apertura de tres conjuntos de publicadores distintos\nestrellas()\n\n\n1\nSolicitud de reutilización con cálculo de plazos y festivos reales\nsumar_habiles()\n\n\n2\nRadiografía de un tema en datos.gob.es con la API en directo\nconsultar_datosgob(), tabla_datosgob()\n\n\n3\nLimpieza documentada de un CSV real (≥100 filas)\nleer_csv_abierto(), informe_calidad(), clave_agrupacion()\n\n\n4\nPublicación de diez registros como JSON-LD y del conjunto con DCAT-AP\n—\n\n\n5\nPropuesta de servicio infomediario con tres escenarios\nobligaciones(), punto_equilibrio()\n\n\n\nLas soluciones de referencia y los criterios de corrección de cada reto no están en el repositorio público: se entregan aparte al profesorado. Si las guardas en el repositorio, hazlo en una rama o un repositorio privado.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#progreso-uso-sin-conexión-y-modo-oscuro",
+    "href": "91-guia-docente.html#progreso-uso-sin-conexión-y-modo-oscuro",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Progreso, uso sin conexión y modo oscuro",
+    "text": "Progreso, uso sin conexión y modo oscuro\n\nProgreso del estudiante (progreso.html): cada capítulo muestra cuántos ejercicios ha resuelto y cuántas preguntas ha acertado el estudiante, y la presentación resume todos los capítulos. Se guarda en el almacenamiento local del navegador (localStorage), sin cookies ni envío a ningún servidor: el profesorado no lo ve. Sirve de autorregulación, no de evaluación.\nUso sin conexión (sw.js): un service worker guarda las páginas, webR y sus paquetes la primera vez que se visitan. Las páginas se piden primero a la red y, si no hay conexión, se sirven desde la copia; el resto, al revés. Al publicar una versión nueva, cambia VERSION en sw.js.\nModo claro y oscuro: el interruptor junto al título, en la barra lateral, cambia entre los dos; por defecto se respeta la preferencia del sistema. El tema oscuro está en estilos-oscuro.scss y también se audita con axe-core.\nPDF y EPUB: python3 herramientas/pdf.py genera los dos formatos; el EPUB lleva portada, metadatos (DOI, licencia) y la misma ficha del libro que el PDF.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#el-paquete-datareuser",
+    "href": "91-guia-docente.html#el-paquete-datareuser",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "El paquete datareuseR",
+    "text": "El paquete datareuseR\nLa carpeta datareuseR/ contiene un paquete de R con los datos y las funciones auxiliares del libro, documentado y con pruebas (R CMD check --as-cran sin errores ni avisos). El libro no puede instalarlo dentro de webR, así que python3 herramientas/datareuser_webr.py genera datos/datareuseR.R con sus funciones, y los capítulos lo cargan con source(). Si cambias el paquete, vuelve a ejecutar ese script. Los estudiantes pueden instalarlo con remotes::install_github(\"pablosancheznunez/reutilizacion-datos\", subdir = \"datareuseR\"); para publicarlo en CRAN basta con enviar la carpeta del paquete.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
     "objectID": "91-guia-docente.html#publicar-y-actualizar-el-libro",
     "href": "91-guia-docente.html#publicar-y-actualizar-el-libro",
     "title": "Apéndice B — Guía para el profesorado",
@@ -1221,7 +1352,7 @@
     "href": "91-guia-docente.html#mantenimiento",
     "title": "Apéndice B — Guía para el profesorado",
     "section": "Mantenimiento",
-    "text": "Mantenimiento\n\nDatos que cambian cada año: el Tema 2 remite a la ficha del Open Data Maturity 2025 y el Tema 5 al informe de ASEDIE. El libro no incluye esas cifras, solo los enlaces; basta con actualizar los enlaces cuando salga una nueva edición.\nDCAT-AP-ES y NTI-RISP: antes de cada curso, comprueba si la NTI modificada se ha publicado en el BOE y ajusta el párrafo del Tema 3.\nVersión de webR: quarto-live carga webR desde su CDN. Para actualizarlo, ejecuta quarto update r-wasm/quarto-live en la carpeta del proyecto.",
+    "text": "Mantenimiento\n\nDatos que cambian cada año: el Tema 2 remite a la ficha del Open Data Maturity 2025 y el Tema 5 al informe de ASEDIE. El libro no incluye esas cifras, solo los enlaces; basta con actualizar los enlaces cuando salga una nueva edición.\nDCAT-AP-ES y NTI-RISP: antes de cada curso, comprueba si la NTI modificada se ha publicado en el BOE y ajusta el párrafo del Tema 3.\nVersión de webR: el libro sirve webR 0.6.0 desde su propia carpeta webr/ y los paquetes desde webr-repo/, sin depender de servidores externos. Para actualizarlo, sustituye esas carpetas por la nueva distribución de webR y los binarios correspondientes, y cambia VERSION en sw.js para que los navegadores renueven su copia.\nFuentes externas: el flujo .github/workflows/semanal.yml comprueba cada lunes los enlaces del libro, el CSV de bibliotecas de Madrid y la API de datos.gob.es, y comprueba el paquete datareuseR con la consulta en directo. Si algo falla, abre una incidencia en GitHub con el informe; también puedes ejecutarlo a mano con python3 herramientas/comprobar_fuentes.py.",
     "crumbs": [
       "Apéndices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
@@ -1276,7 +1407,7 @@
     "href": "92-glosario.html#gl-tema2",
     "title": "Apéndice C — Glosario",
     "section": "Tema 2. Proyectos de reutilización",
-    "text": "Tema 2. Proyectos de reutilización\n\nPortal de datos abiertos\nSitio web que cataloga y da acceso a conjuntos de datos abiertos, como datos.gob.es o data.europa.eu. → Tema 2\n\n\nFederación de catálogos\nRecolección automática de los metadatos de varios portales en un catálogo común. datos.gob.es federa portales estatales, autonómicos, locales y universitarios. → Tema 2\n\n\nOpen Data Maturity\nInforme anual que compara la madurez en datos abiertos de 36 países europeos en cuatro dimensiones: políticas, impacto, portal y calidad. → Tema 2\n\n\nCaso de uso\nProyecto concreto que reutiliza datos. Conviene describirlo con las dimensiones de Safarov et al.: tipo de utilización, condiciones, efectos y usuarios. → Tema 2\n\n\nB2G\nBusiness-to-government: intercambio de datos de empresas con administraciones para fines de interés general. → Tema 2\n\n\nAltruismo de datos\nCesión voluntaria de datos por ciudadanos o empresas para fines de interés general, regulada por el Reglamento de Gobernanza de Datos. → Tema 2\n\n\nCiencia abierta\nPráctica de la investigación que hace accesibles publicaciones, datos, código y métodos para que puedan comprobarse y reutilizarse. → Tema 2\n\n\nRepositorio de datos\nServicio que deposita, describe, preserva y da acceso a conjuntos de datos con un identificador persistente (Zenodo, e-Archivo). re3data es el registro mundial de repositorios. → Tema 2\n\n\nData paper\nArtículo científico que describe un conjunto de datos —origen, método y estructura— para facilitar su reutilización. → Tema 2",
+    "text": "Tema 2. Proyectos de reutilización\n\nPortal de datos abiertos\nSitio web que cataloga y da acceso a conjuntos de datos abiertos, como datos.gob.es o data.europa.eu. → Tema 2\n\n\nFederación de catálogos\nRecolección automática de los metadatos de varios portales en un catálogo común. datos.gob.es federa portales estatales, autonómicos, locales y universitarios. → Tema 2\n\n\nOpen Data Maturity\nInforme anual que compara la madurez en datos abiertos de 36 países europeos en cuatro dimensiones: políticas, impacto, portal y calidad. → Tema 2\n\n\nCaso de uso\nProyecto concreto que reutiliza datos. Conviene describirlo con las dimensiones de Safarov et al.: tipo de utilización, condiciones, efectos y usuarios. → Tema 2\n\n\nB2G\nBusiness-to-government: intercambio de datos de empresas con administraciones para fines de interés general. → Tema 2\n\n\nAltruismo de datos\nCesión voluntaria de datos por ciudadanos o empresas para fines de interés general, regulada por el Reglamento de Gobernanza de Datos. → Tema 2\n\n\nCiencia abierta\nPráctica de la investigación que hace accesibles publicaciones, datos, código y métodos para que puedan comprobarse y reutilizarse. → Tema 2\n\n\nRepositorio de datos\nServicio que deposita, describe, preserva y da acceso a conjuntos de datos con un identificador persistente (Zenodo, e-Archivo). re3data es el registro mundial de repositorios. → Tema 2\n\n\nData paper\nArtículo científico que describe un conjunto de datos —origen, método y estructura— para facilitar su reutilización. → Tema 2\n\n\nAPI\nInterfaz de programación de aplicaciones: una dirección web que devuelve datos estructurados (normalmente JSON o XML) para que los use un programa, no una persona. datos.gob.es ofrece una para consultar su catálogo. → Tema 2",
     "crumbs": [
       "Apéndices",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
@@ -1298,7 +1429,7 @@
     "href": "92-glosario.html#gl-tema4",
     "title": "Apéndice C — Glosario",
     "section": "Tema 4. Normalización e interoperabilidad",
-    "text": "Tema 4. Normalización e interoperabilidad\n\nEstándar abierto\nEspecificación pública, desarrollada en un proceso abierto e implementable sin pagar derechos. → Tema 4\n\n\nInteroperabilidad\nCapacidad de sistemas y organizaciones para intercambiar información y usarla. El EIF distingue cuatro niveles: jurídico, organizativo, semántico y técnico. → Tema 4\n\n\nENI\nEsquema Nacional de Interoperabilidad: criterios que deben seguir las administraciones españolas para que sus sistemas interoperen. Se desarrolla en Normas Técnicas de Interoperabilidad (NTI). → Tema 4\n\n\nURI\nIdentificador uniforme de recursos: cadena que identifica algo de forma única en la Web, como http://www.wikidata.org/entity/Q8802. → Tema 4\n\n\nRDF\nModelo del W3C que representa la información como tripletas sujeto–predicado–objeto. Se escribe en sintaxis como Turtle, RDF/XML o JSON-LD. → Tema 4\n\n\nTripleta\nUnidad mínima de RDF: un sujeto, un predicado y un objeto, por ejemplo «biblioteca — está en — Getafe». → Tema 4\n\n\nTurtle\nSintaxis compacta y legible de RDF, con prefijos para abreviar las URI. → Tema 4\n\n\nJSON-LD\nJSON con un @context que asigna a cada clave una URI de un vocabulario: RDF con aspecto de JSON. → Tema 4\n\n\nLinked Open Data\nDatos enlazados publicados con licencia abierta: las cinco estrellas del modelo de Berners-Lee. → Tema 4\n\n\nSPARQL\nLenguaje de consulta del W3C para datos RDF, basado en patrones de tripletas. → Tema 4\n\n\nVocabulario\nConjunto de clases y propiedades con URI para describir datos (schema.org, Dublin Core, DCAT). → Tema 4\n\n\nOntología\nVocabulario con una semántica formal más rica (jerarquías, restricciones, reglas de inferencia), expresado en RDFS u OWL. → Tema 4\n\n\nSKOS\nVocabulario del W3C para publicar tesauros y clasificaciones en la Web, con relaciones como skos:broader y skos:narrower. → Tema 4",
+    "text": "Tema 4. Normalización e interoperabilidad\n\nEstándar abierto\nEspecificación pública, desarrollada en un proceso abierto e implementable sin pagar derechos. → Tema 4\n\n\nInteroperabilidad\nCapacidad de sistemas y organizaciones para intercambiar información y usarla. El EIF distingue cuatro niveles: jurídico, organizativo, semántico y técnico. → Tema 4\n\n\nENI\nEsquema Nacional de Interoperabilidad: criterios que deben seguir las administraciones españolas para que sus sistemas interoperen. Se desarrolla en Normas Técnicas de Interoperabilidad (NTI). → Tema 4\n\n\nURI\nIdentificador uniforme de recursos: cadena que identifica algo de forma única en la Web, como http://www.wikidata.org/entity/Q8802. → Tema 4\n\n\nRDF\nModelo del W3C que representa la información como tripletas sujeto–predicado–objeto. Se escribe en sintaxis como Turtle, RDF/XML o JSON-LD. → Tema 4\n\n\nTripleta\nUnidad mínima de RDF: un sujeto, un predicado y un objeto, por ejemplo «biblioteca — está en — Getafe». → Tema 4\n\n\nTurtle\nSintaxis compacta y legible de RDF, con prefijos para abreviar las URI. → Tema 4\n\n\nJSON-LD\nJSON con un @context que asigna a cada clave una URI de un vocabulario: RDF con aspecto de JSON. → Tema 4\n\n\nLinked Open Data\nDatos enlazados publicados con licencia abierta: las cinco estrellas del modelo de Berners-Lee. → Tema 4\n\n\nSPARQL\nLenguaje de consulta del W3C para datos RDF, basado en patrones de tripletas. → Tema 4\n\n\nVocabulario\nConjunto de clases y propiedades con URI para describir datos (schema.org, Dublin Core, DCAT). → Tema 4\n\n\nOntología\nVocabulario con una semántica formal más rica (jerarquías, restricciones, reglas de inferencia), expresado en RDFS u OWL. → Tema 4\n\n\nSKOS\nVocabulario del W3C para publicar tesauros y clasificaciones en la Web, con relaciones como skos:broader y skos:narrower. → Tema 4\n\n\nTipo MIME\nEtiqueta normalizada que indica el formato de un fichero en internet, como text/csv o application/json. Convive en los catálogos con el vocabulario de tipos de fichero de la UE, lo que obliga a normalizar. → Tema 2, Tema 4",
     "crumbs": [
       "Apéndices",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
@@ -1320,7 +1451,7 @@
     "href": "92-glosario.html#gl-herramientas",
     "title": "Apéndice C — Glosario",
     "section": "Herramientas",
-    "text": "Herramientas\n\nR\nLenguaje y entorno libre para análisis estadístico y de datos. → Primeros pasos\n\n\nwebR\nVersión de R compilada a WebAssembly que se ejecuta en el navegador, sin instalación. → Presentación\n\n\nQuarto\nSistema de publicación científica de código abierto que combina texto y código para generar libros, artículos, presentaciones y webs. → Presentación\n\n\nData frame\nTabla de datos en R: cada columna es un vector del mismo tamaño. → Primeros pasos\n\n\nOpenRefine\nHerramienta libre para limpiar y transformar datos, con agrupación (clustering) de valores similares. → Tema 3",
+    "text": "Herramientas\n\nR\nLenguaje y entorno libre para análisis estadístico y de datos. → Primeros pasos\n\n\nwebR\nVersión de R compilada a WebAssembly que se ejecuta en el navegador, sin instalación. → Presentación\n\n\nQuarto\nSistema de publicación científica de código abierto que combina texto y código para generar libros, artículos, presentaciones y webs. → Presentación\n\n\nData frame\nTabla de datos en R: cada columna es un vector del mismo tamaño. → Primeros pasos\n\n\nOpenRefine\nHerramienta libre para limpiar y transformar datos, con agrupación (clustering) de valores similares. → Tema 3\n\n\nPaquete de R\nConjunto de funciones, datos y documentación de R que se instala y se carga con library(). El paquete datareuseR reúne las funciones y los datos de este libro. → Apéndice A\n\n\nService worker\nPrograma que el navegador ejecuta en segundo plano para una web. En este libro guarda las páginas y el motor de R para que funcionen sin conexión después de la primera visita. → Presentación",
     "crumbs": [
       "Apéndices",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"

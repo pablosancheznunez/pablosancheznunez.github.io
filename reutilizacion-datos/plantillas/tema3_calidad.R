@@ -271,3 +271,16 @@ suma_publicada <- unname(tools::md5sum("datos/prestamos_bibliotecas_practica.csv
 # EJERCICIO: completa los huecos ______
 suma_descarga <- unname(tools::md5sum("______"))
 suma_descarga ______ suma_publicada
+
+
+# ----------------------------------------------------------------------
+# Reto del Tema 3 · Limpieza documentada de un conjunto real
+# ----------------------------------------------------------------------
+source("datos/datareuseR.R")
+datos <- leer_csv_abierto("datos/prestamos_bibliotecas_practica.csv", colClasses = "character")
+attr(datos, "lectura")
+informe_calidad(datos)
+# 1. Duplicados:        datos <- datos[!duplicated(datos), ]
+# 2. Variantes de texto: table(clave_agrupacion(datos$municipio))
+# 3. Fechas y números:  ...
+# informe_calidad(datos)

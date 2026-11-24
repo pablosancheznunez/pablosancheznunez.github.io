@@ -143,3 +143,14 @@ sumar_habiles(as.Date("2026-03-02"), ______)
 # EJERCICIO: completa los huecos ______
 infraccion <- c(tipo = "______", multa_maxima = "______")
 infraccion
+
+
+# ----------------------------------------------------------------------
+# Reto del Tema 1 · Una solicitud de reutilización
+# ----------------------------------------------------------------------
+source("datos/datareuseR.R")
+presentacion <- as.Date("2026-02-02")   # cámbiala por la fecha en que presentarías la solicitud
+festivos <- as.Date(c())                # añade los festivos del periodo, p. ej. "2026-04-02"
+ordinario <- sumar_habiles(presentacion, 20, festivos)
+ampliado  <- sumar_habiles(ordinario, 20, festivos)
+c(ordinario = ordinario, ampliado = ampliado)

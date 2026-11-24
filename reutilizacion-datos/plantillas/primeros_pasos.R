@@ -86,6 +86,20 @@ subset(bibliotecas, municipio == "Getafe")
 
 
 # ----------------------------------------------------------------------
+# Ejercicio 4
+# ----------------------------------------------------------------------
+# (preparación del ejercicio)
+bibliotecas <- data.frame(
+  nombre = c("Centro", "Sur", "Norte"),
+  municipio = c("Getafe", "Getafe", "Leganés"),
+  prestamos = c(14839, 15319, 7547)
+)
+
+# EJERCICIO: completa los huecos ______
+sum(subset(bibliotecas, municipio == ______)$prestamos)
+
+
+# ----------------------------------------------------------------------
 # Leer un fichero CSV
 # ----------------------------------------------------------------------
 prestamos_df <- read.csv("datos/prestamos_bibliotecas_practica.csv")
@@ -101,3 +115,13 @@ prestamos_df <- read.csv("datos/prestamos_bibliotecas_practica.csv")
 
 # EJERCICIO: completa los huecos ______
 ______(prestamos_df)
+
+
+# ----------------------------------------------------------------------
+# Ejercicio 5
+# ----------------------------------------------------------------------
+# (preparación del ejercicio)
+prestamos_df <- read.csv("datos/prestamos_bibliotecas_practica.csv")
+
+# EJERCICIO: completa los huecos ______
+______(unique(prestamos_df$biblioteca))
