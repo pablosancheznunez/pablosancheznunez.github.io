@@ -1,0 +1,85 @@
+---
+title: "Informe de práctica: [título]"
+subtitle: "Reutilización de datos abiertos y documentos · Máster en Bibliotecas, Archivos y Continuidad Digital (UC3M)"
+author: "[Nombre y apellidos]"
+date: today
+date-format: "D [de] MMMM [de] YYYY"
+lang: es
+format:
+  html:
+    theme: [cosmo, informe.scss]
+    toc: true
+    toc-title: "Contenido"
+    number-sections: true
+    embed-resources: true
+    code-fold: show
+    code-tools: true
+    df-print: paged
+execute:
+  echo: true
+  warning: false
+---
+
+<!--
+Plantilla de informe para las prácticas opcionales del libro
+«Reutilización de datos abiertos y documentos» (Pablo Sánchez-Núñez, UC3M,
+https://doi.org/10.5281/zenodo.24500934). Licencia CC BY 4.0.
+
+Cómo usarla:
+1. Guarda este fichero y informe.scss en la misma carpeta.
+2. Ábrelo en RStudio o Positron y pulsa «Render» (o `quarto render informe_practica.qmd`).
+3. Sustituye los textos entre corchetes y borra lo que no necesites.
+-->
+
+::: {.callout-note appearance="minimal"}
+**Tema:** [0-5] · **Conjunto de datos:** [nombre y portal] · **Licencia de los datos:** [p. ej. CC BY 4.0]
+:::
+
+# Objetivo
+
+[Qué pregunta quieres responder o qué servicio quieres prototipar, en dos o tres frases.]
+
+# Datos
+
+```{r}
+#| label: datos
+url_csv <- "https://pablosancheznunez.com/reutilizacion-datos/datos/prestamos_bibliotecas_practica.csv"
+datos <- read.csv(url_csv)
+str(datos)
+```
+
+| Elemento | Descripción |
+|---|---|
+| Fuente | [Portal y organismo publicador] |
+| URL | [Enlace al conjunto de datos] |
+| Licencia | [Licencia y obligaciones] |
+| Formato y estrellas | [Formato; nivel en el modelo de cinco estrellas] |
+| Periodo y ámbito | [Cobertura temporal y geográfica] |
+
+# Método
+
+[Pasos seguidos: limpieza, transformaciones, cálculos. Indica las limitaciones de los datos y del método.]
+
+```{r}
+#| label: limpieza
+# Tu código de limpieza aquí
+```
+
+# Resultados
+
+```{r}
+#| label: fig-resultado
+#| fig-cap: "[Título de la figura]"
+# Tu gráfico aquí, por ejemplo:
+# barplot(table(datos$municipio))
+```
+
+[Interpretación de los resultados.]
+
+# Conclusiones
+
+[Qué has aprendido sobre los datos y sobre su reutilización. ¿Qué mejorarías en la publicación original?]
+
+# Referencias
+
+[Lectura obligatoria del tema y otras fuentes citadas.]

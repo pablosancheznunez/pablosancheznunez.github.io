@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Reutilización de datos abiertos y documentos",
     "section": "",
-    "text": "Presentación\nEste libro acompaña a la asignatura Reutilización de datos abiertos y documentos (código 17300) del Máster Universitario en Bibliotecas, Archivos y Continuidad Digital Online de la Universidad Carlos III de Madrid: optativa de 3 ECTS, primer curso, segundo cuatrimestre.\nCada capítulo corresponde a un tema de la asignatura y combina tres cosas:",
+    "text": "Presentación\nEste libro acompaña a la asignatura Reutilización de datos abiertos y documentos (código 17300) del Máster Universitario en Bibliotecas, Archivos y Continuidad Digital Online de la Universidad Carlos III de Madrid: optativa de 3 ECTS, primer curso, segundo cuatrimestre.\nCada capítulo corresponde a un tema de la asignatura y combina tres cosas:\nCada capítulo enlaza además a su parte del glosario y ofrece descargas: el script .R del capítulo, una plantilla de informe .qmd y su tema de estilo .scss.",
     "crumbs": [
       "Presentación"
     ]
@@ -64,7 +64,7 @@
     "href": "index.html#autoría-y-cómo-citar",
     "title": "Reutilización de datos abiertos y documentos",
     "section": "Autoría y cómo citar",
-    "text": "Autoría y cómo citar\nAutor: Pablo Sánchez-Núñez, profesor de Biblioteconomía y Documentación en la Universidad Carlos III de Madrid (grupo OpenScienceLab). ORCID: 0000-0001-7845-9506 · Web: pablosancheznunez.com\n\nSánchez-Núñez, P. (2026). Reutilización de datos abiertos y documentos: tutoriales interactivos en R (webR). Universidad Carlos III de Madrid. Zenodo. https://doi.org/10.5281/zenodo.24500934\n\nDOI de todas las versiones: 10.5281/zenodo.24500934 (apunta siempre a la última). DOI de esta edición (v1.0.0): 10.5281/zenodo.24500935.",
+    "text": "Autoría y cómo citar\nAutor: Pablo Sánchez-Núñez, profesor de Biblioteconomía y Documentación en la Universidad Carlos III de Madrid (grupo OpenScienceLab). ORCID: 0000-0001-7845-9506 · Web: pablosancheznunez.com\n\nSánchez-Núñez, P. (2026). Reutilización de datos abiertos y documentos: tutoriales interactivos en R (webR). Universidad Carlos III de Madrid. Zenodo. https://doi.org/10.5281/zenodo.24500934\n\nDOI de todas las versiones: 10.5281/zenodo.24500934; apunta siempre a la última edición. Cada edición tiene además su propio DOI, que encontrarás en la ficha de Zenodo.",
     "crumbs": [
       "Presentación"
     ]
@@ -134,7 +134,17 @@
     "href": "00a-primeros-pasos.html#leer-un-fichero-csv",
     "title": "Primeros pasos con R en el navegador",
     "section": "Leer un fichero CSV",
-    "text": "Leer un fichero CSV\nEl CSV de práctica está disponible en la carpeta datos. read.csv() lo convierte en un data frame; head() muestra las primeras filas y str() describe las columnas.\n\n\n\n\n\n\nFíjate en str(): la columna prestamos aparece como chr (texto), no como número. Algo en el fichero impide que R la reconozca como numérica. Lo resolverás en el Tema 3.\n\nEjercicio 3\n¿Cuántas filas tiene el CSV de práctica?\n\n\n\n\n\n\n\n\nLo usaste unas líneas más arriba con la tabla bibliotecas.\n\n\nnrow(prestamos_df)\n\n\n\n\n\n\n\n\nNotaPara seguir\n\n\n\nEl Apéndice A reúne en una página todas las funciones que usa el libro.",
+    "text": "Leer un fichero CSV\nEl CSV de práctica está disponible en la carpeta datos. read.csv() lo convierte en un data frame; head() muestra las primeras filas y str() describe las columnas.\n\n\n\n\n\n\nFíjate en str(): la columna prestamos aparece como chr (texto), no como número. Algo en el fichero impide que R la reconozca como numérica. Lo resolverás en el Tema 3.\n\nEjercicio 3\n¿Cuántas filas tiene el CSV de práctica?\n\n\n\n\n\n\n\n\nLo usaste unas líneas más arriba con la tabla bibliotecas.\n\n\nnrow(prestamos_df)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Primeros pasos con R en el navegador</span>"
+    ]
+  },
+  {
+    "objectID": "00a-primeros-pasos.html#autoevaluación",
+    "href": "00a-primeros-pasos.html#autoevaluación",
+    "title": "Primeros pasos con R en el navegador",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nEn R, x &lt;- 5 guarda el valor 5 en un objeto llamado x. VERDADEROFALSO\n¿Qué devuelve length(c(3, 8, 1))? \nPara leer un fichero CSV se usa la función write.csv()read.csv()csv()open()\nCompleta el código para contar los meses con más de 2500 préstamos: sum(prestamos  2500)\n¿Qué operador selecciona una columna de un data frame?\n\n @ $ # %in%\n\n\nVer explicaciones\n\n&lt;- asigna; el valor queda guardado con ese nombre.\nlength() cuenta los elementos del vector: 3.\nread.csv() lee; write.csv() escribe.\nLa comparación &gt; devuelve TRUE/FALSE y sum() cuenta los TRUE.\ndf$columna devuelve la columna como vector.\n\n\n\n\n\n\n\n\nNotaPara seguir\n\n\n\nEl Apéndice A reúne en una página todas las funciones que usa el libro.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Primeros pasos con R en el navegador</span>"
     ]
@@ -266,6 +276,17 @@
     "title": "Tema 0. Introducción a los datos abiertos y la reutilización de la información",
     "section": "Práctica en R: audita el CSV de práctica",
     "text": "Práctica en R: audita el CSV de práctica\n\nPaso 1. Cargar y describir el fichero\n\n\n\n\n\n\n\n\nPaso 2. Comprobar la licencia\nSupongamos que el portal municipal que publica el CSV declara la licencia CC BY 4.0. Guardamos en un vector las licencias conformes con la Open Definition y comprobamos:\n\n\n\n\n\n\n\n\nPaso 3. Calcular las estrellas\nLa función estrellas() aplica la escala del apartado 5 de forma acumulativa: si falla un nivel, no se sigue contando.\n\n\n\n\n\n\n\n\nEjercicio 0.1\nCompleta los argumentos para el CSV de práctica (licencia CC BY 4.0, formato CSV, sin URI ni enlaces).\n\n\n\n\n\n\n\n\nCada argumento es TRUE o FALSE. Un CSV es estructurado y no propietario, pero no identifica las bibliotecas con URI.\n\n\nestrellas(TRUE, TRUE, TRUE, FALSE, FALSE)\nEl CSV tiene tres estrellas. Para llegar a cuatro habría que identificar cada biblioteca (y cada municipio) con una URI y publicarlo en RDF, algo que harás en el Tema 4.\n\n\n\n\nPaso 4. Auditar un catálogo\nUn portal ficticio publica estos ocho conjuntos de datos de bibliotecas:\n\n\n\n\n\n\n\n\nEjercicio 0.2\n¿Cuántos conjuntos del catálogo tienen una licencia conforme con la Open Definition? Usa licencias_abiertas y %in%.\n\n\n\n\n\n\n\n\n%in% devuelve TRUE/FALSE para cada fila; sum() cuenta los TRUE.\n\n\nsum(catalogo$licencia %in% licencias_abiertas)\nCinco conjuntos. «Sin licencia» no es abierto: sin licencia expresa, la reutilización no está autorizada de forma clara.\n\n\n\n\nEjercicio 0.3\nAhora filtra el catálogo para quedarte con los conjuntos que tienen licencia abierta y formato CSV, JSON o RDF (tres estrellas o más). Devuelve solo la columna conjunto.\n\n\n\n\n\n\n\n\nEl hueco es un vector con los tres formatos: c(\"CSV\", ...).\n\n\nseleccion &lt;- subset(catalogo,\n                    licencia %in% licencias_abiertas & formato %in% c(\"CSV\", \"JSON\", \"RDF\"))\nseleccion$conjunto\n\n\n\n\nPaso 5. Formatos abiertos y propietarios\nUna tabla de referencia con los formatos del apartado 8:\n\n\n\n\n\n\n\n\nEjercicio 0.4\nCon la tabla formatos, obtén los nombres de los formatos que son a la vez abiertos y legibles por máquina.\n\n\n\n\n\n\n\n\nSe tienen que cumplir las dos condiciones: el operador «y» es &.\n\n\nsubset(formatos, abierto & legible_maquina)$formato\n\n\n\n\nPaso 6. ¿Público, abierto o ambas cosas?\n\n\nEjercicio 0.5\nClasifica cada caso en una de las cuatro casillas del apartado 7. Escribe para cada uno \"publico_abierto\", \"publico_no_abierto\", \"privado_abierto\" o \"privado_no_abierto\".\n\n\n\n\n\n\n\nLos datos personales que custodia una administración son información pública en sentido amplio, pero no pueden abrirse. OpenStreetMap lo mantiene una comunidad y una fundación, no una administración.\n\n\nrespuesta &lt;- c(\"publico_abierto\", \"publico_no_abierto\", \"privado_abierto\", \"privado_no_abierto\")",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 0. Introducción a los datos abiertos y la reutilización de la información</span>"
+    ]
+  },
+  {
+    "objectID": "00-datos-abiertos.html#autoevaluación",
+    "href": "00-datos-abiertos.html#autoevaluación",
+    "title": "Tema 0. Introducción a los datos abiertos y la reutilización de la información",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUn conjunto de datos con licencia CC BY-NC 4.0 es abierto según la Open Definition. VERDADEROFALSO\nLos datos FAIR son siempre datos abiertos. VERDADEROFALSO\nUn CSV con licencia abierta, sin URI ni enlaces, tiene  estrellas.\nInternet es la red de redes; la World Wide Web es otro nombre de Internetun servicio de documentos enlazados que funciona sobre Internetun protocolo de correo\n¿Cuál de estos formatos es abierto y legible por máquina?\n\n PDF escaneado XLS (Excel antiguo) JSON Imagen JPG de una tabla\n\nCompleta el código para contar las licencias abiertas de un catálogo: sum(catalogo$licencia  licencias_abiertas)\n\n\n\nVer explicaciones\n\nNC prohíbe el uso comercial, así que no cumple la Open Definition.\nFAIR se refiere a cómo se describen y gestionan los datos; pueden ser FAIR con acceso restringido.\nLicencia abierta (★), estructurado (★★) y formato no propietario (★★★); la cuarta exige URI.\nLa Web (URI, HTTP, HTML) es uno de los servicios de Internet, junto al correo o la transferencia de ficheros.\nJSON tiene especificación pública y se procesa automáticamente; el PDF escaneado y la imagen no son legibles por máquina, y XLS es propietario.\n%in% comprueba si cada licencia está en la lista de licencias abiertas.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 0. Introducción a los datos abiertos y la reutilización de la información</span>"
@@ -404,6 +425,17 @@
     ]
   },
   {
+    "objectID": "01-risp.html#autoevaluación",
+    "href": "01-risp.html#autoevaluación",
+    "title": "Tema 1. Reutilización de la información del sector público (RISP)",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nTener derecho de acceso a un documento garantiza poder reutilizarlo. VERDADEROFALSO\nPlazo ordinario para resolver una solicitud de reutilización según la Ley 37/2007 (en días): \nSi la administración no resuelve en plazo una solicitud de acceso (Ley 19/2013), la solicitud se entiende estimadadesestimadaarchivada\nLa Directiva (UE) 2019/1024 se transpuso en España mediante el Real Decreto 1495/2011Real Decreto-ley 24/2021Ley 18/2015\n¿Cuál de estas no es una categoría de datos de alto valor del Reglamento de Ejecución (UE) 2023/138?\n\n Meteorológicos Movilidad Préstamos bibliotecarios Sociedades y propiedad de sociedades\n\nNo citar la fuente al reutilizar con licencia tipo es una infracción levegravemuy grave\nCompleta el código para sumar un mes a una fecha: seq(recepcion, by = \"1  \", length.out = 2)[2]\n\n\n\nVer explicaciones\n\nEl acceso permite conocer el documento; la reutilización puede estar limitada, por ejemplo, por derechos de terceros.\nArt. 10 de la Ley 37/2007: veinte días, ampliables otros veinte.\nArt. 20.4 de la Ley 19/2013: silencio negativo.\nEl RDL 24/2021 modificó la Ley 37/2007; la Ley 18/2015 transpuso la Directiva 2013/37/UE.\nLas seis categorías son geoespaciales, observación de la Tierra y medio ambiente, meteorológicos, estadísticos, sociedades y movilidad.\nArt. 11.3 de la Ley 37/2007: multa de 1.000 a 10.000 €.\nby = \"1 month\" avanza un mes natural.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 1. Reutilización de la información del sector público (RISP)</span>"
+    ]
+  },
+  {
     "objectID": "01-risp.html#para-practicar-fuera-del-libro",
     "href": "01-risp.html#para-practicar-fuera-del-libro",
     "title": "Tema 1. Reutilización de la información del sector público (RISP)",
@@ -536,6 +568,17 @@
     ]
   },
   {
+    "objectID": "02-proyectos.html#autoevaluación",
+    "href": "02-proyectos.html#autoevaluación",
+    "title": "Tema 2. Proyectos relevantes de reutilización de datos abiertos",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\ndatos.gob.es solo publica datos de la Administración General del Estado. VERDADEROFALSO\nEl Open Data Maturity compara  países europeos.\nEn el marco de Safarov et al., «la licencia y la calidad de los datos» corresponden a la dimensión de efectoscondicionesusuariostipo de utilización\n¿Qué es re3data?\n\n Un portal de datos abiertos de la UE Un registro internacional de repositorios de datos de investigación Un repositorio de software libre Un concurso de reutilización\n\nLos Desafíos Aporta se siguen convocando cada año. VERDADEROFALSO\nCompleta el código para calcular proporciones a partir de una tabla de frecuencias:  (table(casos$efecto))\n\n\n\nVer explicaciones\n\nEs el catálogo nacional y federa portales estatales, autonómicos, locales y universitarios.\nEl informe de 2025 compara 36 países en cuatro dimensiones.\nLas condiciones son lo que facilita o frena el uso: calidad, licencia, formatos, competencias.\nre3data registra repositorios de datos de investigación de todo el mundo.\nLa última edición fue la de 2021.\nprop.table() divide cada frecuencia entre el total.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 2. Proyectos relevantes de reutilización de datos abiertos</span>"
+    ]
+  },
+  {
     "objectID": "02-proyectos.html#para-practicar-fuera-del-libro",
     "href": "02-proyectos.html#para-practicar-fuera-del-libro",
     "title": "Tema 2. Proyectos relevantes de reutilización de datos abiertos",
@@ -651,6 +694,17 @@
     "title": "Tema 3. Gestión documental y open data",
     "section": "Práctica en R: laboratorio de calidad (apartados 3 a 6)",
     "text": "Práctica en R: laboratorio de calidad (apartados 3 a 6)\nEl fichero tiene errores introducidos a propósito. El objetivo es detectarlos, medirlos y corregirlos. Cada paso indica la operación equivalente en OpenRefine, la herramienta que usarás en el cuestionario de Aula Global.\n\nPaso 1. Leer todo como texto\nLeemos todas las columnas como texto (colClasses = \"character\") para que R no transforme nada antes de que lo veamos.\n\n\n\n\n\n\n\n\nPaso 2. Valores ausentes y completitud\nLos ausentes aparecen de dos formas: celdas vacías y el texto \"n/d\". Una matriz lógica marca cuáles lo son:\n\n\n\n\n\n\nLas dos métricas de completitud de Vetrò et al. son:\n\nPorcentaje de celdas completas = celdas no vacías / celdas totales × 100.\nPorcentaje de filas completas = filas sin ningún ausente / filas totales × 100.\n\n\n\nEjercicio 3.1\nCalcula el porcentaje de celdas completas del fichero original, redondeado a dos decimales.\n\n\n\n\n\n\n\n\nResta el número total de celdas ausentes: sum(ausente).\n\n\nceldas_totales &lt;- nrow(bruto) * ncol(bruto)\nceldas_completas &lt;- celdas_totales - sum(ausente)\nround(100 * celdas_completas / celdas_totales, 2)\n\n\n\n\nEjercicio 3.2\nCalcula ahora el porcentaje de filas completas (dos decimales). Una fila es completa si no tiene ningún ausente.\n\n\n\n\n\n\n\n\nfila_con_ausente vale TRUE en las filas incompletas. Necesitas lo contrario: el operador de negación es !.\n\n\nfila_con_ausente &lt;- rowSums(ausente) &gt; 0\nfilas_completas &lt;- sum(!fila_con_ausente)\nround(100 * filas_completas / nrow(bruto), 2)\n\n\n\n\nPaso 3. Filas duplicadas\nEn OpenRefine: ordenar, «Blank down» y eliminar las filas en blanco, o facetar por duplicados.\nduplicated() marca las filas idénticas a otra anterior.\n\n\n\n\n\n\n\n\nEjercicio 3.3\n¿Cuántas filas duplicadas hay? Después, crea sin_dup sin ellas y comprueba cuántas filas quedan.\n\n\n\n\n\n\n\n\nQuieres las filas que no están duplicadas: !duplicated(bruto).\n\n\nn_dup &lt;- sum(duplicated(bruto))\nsin_dup &lt;- bruto[!duplicated(bruto), ]\nc(duplicadas = n_dup, filas_restantes = nrow(sin_dup))\n\n\n\n\nPaso 4. Normalizar los municipios\nEn OpenRefine: «Edit cells → Common transforms → Trim whitespace» y «Cluster and edit» con el método key collision / fingerprint.\n\n\n\n\n\n\nEl mismo municipio aparece escrito de varias formas. Construimos una clave como hace el método fingerprint de OpenRefine: quitar espacios sobrantes, pasar a minúsculas y eliminar tildes.\n\n\n\n\n\n\nDespués asignamos a cada clave su forma correcta con un vector con nombres (una tabla de equivalencias):\n\n\n\n\n\n\n\n\nEjercicio 3.4\n¿Cuántas formas distintas de escribir el municipio había en el fichero original y cuántos municipios hay realmente? Devuelve un vector con los dos números.\n\n\n\n\n\n\n\n\nAplica la función clave() a la columna antes de contar los valores únicos.\n\n\nc(variantes  = length(unique(bruto$municipio)),\n  municipios = length(unique(clave(bruto$municipio))))\n\n\n\n\nPaso 5. Unificar las fechas\nEn OpenRefine: «Edit cells → Transform» con una expresión GREL que detecte el formato, o «To date» con varios formatos.\n\n\n\n\n\n\nConvertimos cada formato con su patrón y combinamos el resultado:\n\n\n\n\n\n\n\n\nPaso 6. Valores numéricos\nEn OpenRefine: «To number», facetas numéricas para localizar valores no numéricos y negativos.\n\n\n\n\n\n\nUn número de préstamos negativo es imposible: es un error de exactitud. Sin acceso a la fuente no podemos saber el valor correcto (¿un signo menos erróneo?), así que lo marcamos como ausente y lo documentamos.\n\n\n\n\n\n\n\n\nEjercicio 3.5\nCon el fichero limpio, calcula el total de préstamos de Getafe entre enero y junio. Ten en cuenta que puede haber NA.\n\n\n\n\n\n\n\n\nEl primer hueco es el nombre del municipio entre comillas; el segundo, el valor lógico que indica a sum() que ignore los NA.\n\n\ngetafe &lt;- subset(limpio, municipio == \"Getafe\")\nsum(getafe$prestamos, na.rm = TRUE)\n\n\n\n\nEjercicio 3.6\n¿Cuántos préstamos por usuario activo tuvo cada municipio? Calcula la ratio con aggregate() (que suma por grupos) y ordénala de mayor a menor. Este ejercicio no tiene una única respuesta: interpreta el resultado.\n\n\n\n\n\n\n\n\n\n\n\n\n\n¿Por qué se usan solo las filas con ambos valores? Si sumaras todos los préstamos pero solo los usuarios conocidos, la ratio de los municipios con más ausentes saldría inflada. Es un ejemplo de cómo la completitud afecta a los indicadores que se derivan de los datos.\n\n\n\n\n\nPaso 7. Publicar el resultado con metadatos (apartados 3 y 5)\nGuardamos el fichero limpio y lo describimos con propiedades DCAT. jsonlite convierte una lista de R en JSON.\n\n\n\n\n\n\n\n\nEjercicio 3.7\nCompleta la distribución en JSON del mismo conjunto: su tipo MIME es application/json. Y su licencia es CC0 1.0, cuya URI es https://creativecommons.org/publicdomain/zero/1.0/.\n\n\n\n\n\n\n\ndistribucion &lt;- list(\n  \"@type\" = \"dcat:Distribution\",\n  \"dcat:downloadURL\" = \"https://ejemplo.org/datos/prestamos_limpio.json\",\n  \"dcat:mediaType\" = \"application/json\",\n  \"dct:license\" = \"https://creativecommons.org/publicdomain/zero/1.0/\"\n)\n\n\n\n\nPaso 8. Comprobar la integridad de los ficheros (apartado 6)\ntools::md5sum() calcula la suma de control MD5 de un fichero. Si dos ficheros tienen la misma suma, su contenido es idéntico; si cambia un solo carácter, la suma cambia por completo.\n\n\n\n\n\n\nUn registro de versiones mínimo combina la fecha, la descripción del cambio y la suma de control:\n\n\n\n\n\n\n\n\nEjercicio 3.8\nUn reutilizador descarga el fichero original y quiere comprobar que no se ha alterado. Compara la suma de control del fichero con la que publica el portal (suma_publicada). El resultado debe ser TRUE o FALSE.\n\n\n\n\n\n\n\n\nEl primer hueco es la ruta del CSV original (datos/...). El segundo, el operador que compara si dos valores son iguales.\n\n\nsuma_descarga &lt;- unname(tools::md5sum(\"datos/prestamos_bibliotecas_practica.csv\"))\nsuma_descarga == suma_publicada\nTRUE: el fichero está íntegro. Si comparas con prestamos_limpio.csv obtendrás FALSE, porque el contenido es distinto.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 3. Gestión documental y *open data*</span>"
+    ]
+  },
+  {
+    "objectID": "03-calidad.html#autoevaluación",
+    "href": "03-calidad.html#autoevaluación",
+    "title": "Tema 3. Gestión documental y open data",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUn número de préstamos negativo es un problema de completitudexactitudtrazabilidadcomprensibilidad\nQue las fechas aparezcan en dos formatos distintos afecta a la conformidadactualidadexpiración\nEn DCAT, cada fichero descargable de un conjunto de datos es una \nEl tipo MIME de un fichero CSV es \nSi la suma de control MD5 de un fichero descargado coincide con la publicada, el fichero no ha cambiado. VERDADEROFALSO\n¿Qué norma ISO describe el modelo de referencia OAIS para archivos digitales?\n\n ISO 15489 ISO/IEC 25012 ISO 14721 ISO 30301\n\nCompleta el código para quedarte solo con las filas no duplicadas: bruto[  , ]\n\n\n\nVer explicaciones\n\nUn valor imposible es un error de exactitud.\nLa conformidad mide si los valores siguen el formato esperado.\ndcat:Distribution describe cada forma de obtener el conjunto: un CSV, un JSON, una API.\ntext/csv es el tipo MIME registrado para CSV.\nLa suma cambia si cambia un solo carácter del fichero.\nISO 14721 es OAIS; ISO 15489 es gestión de documentos; ISO/IEC 25012 es calidad de datos; ISO 30301 es sistemas de gestión para los documentos.\nduplicated() marca las repeticiones y ! las excluye.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 3. Gestión documental y *open data*</span>"
@@ -778,6 +832,17 @@
     ]
   },
   {
+    "objectID": "04-interoperabilidad.html#autoevaluación",
+    "href": "04-interoperabilidad.html#autoevaluación",
+    "title": "Tema 4. Normalización e interoperabilidad",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUsar el mismo vocabulario (por ejemplo, schema:Library) resuelve la interoperabilidad técnicasemánticajurídicaorganizativa\nEl ENI está previsto en el artículo 156 de la Ley 40/2015. VERDADEROFALSO\nEn JSON-LD, la clave que asigna a cada término una URI de un vocabulario es \n¿Cuál de estos es el cuarto principio de Linked Data?\n\n Usar formatos propietarios Publicar solo en PDF Incluir enlaces a otras URI Evitar los identificadores\n\nLa propiedad SKOS que apunta a un concepto más general es skos: \nUna ontología es un vocabulario con semántica formal que permite inferencias. VERDADEROFALSO\nCompleta la tripleta Turtle: &lt;https://ejemplo.org/biblioteca/centro&gt;  schema:Library .\n\n\n\nVer explicaciones\n\nLa interoperabilidad semántica asegura que los datos signifiquen lo mismo para todos.\nAsí es: el ENI se regula en el Real Decreto 4/2010.\n@context convierte las claves JSON en URI.\nLos cuatro principios: URI, URI HTTP, información útil con estándares y enlaces a otras URI.\nskos:broader apunta al concepto general; skos:narrower, al específico.\nRDFS y OWL permiten expresar jerarquías y restricciones de las que se deduce información nueva.\nEn Turtle, a abrevia rdf:type.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 4. Normalización e interoperabilidad</span>"
+    ]
+  },
+  {
     "objectID": "04-interoperabilidad.html#para-practicar-fuera-del-libro",
     "href": "04-interoperabilidad.html#para-practicar-fuera-del-libro",
     "title": "Tema 4. Normalización e interoperabilidad",
@@ -899,6 +964,17 @@
     ]
   },
   {
+    "objectID": "05-infomediarias.html#autoevaluación",
+    "href": "05-infomediarias.html#autoevaluación",
+    "title": "Tema 5. Empresas infomediarias y oportunidades de negocio",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nCombinar una fuente CC BY 4.0 con otra CC BY-NC 4.0 permite vender el servicio resultante. VERDADEROFALSO\nUn servicio con un nivel gratuito y funciones avanzadas de pago sigue el patrón premiumfreemiumahorro de costesmaquinilla y cuchillas\nCon costes fijos de 3.000 € al mes, una conversión del 5 % y un precio de 10 €, el punto de equilibrio es de  usuarios gratuitos.\n¿Qué componente del marco 6-V responde a «¿con qué socios, proveedores y clientes se crea el valor?»?\n\n Propuesta de valor Captura de valor Red de valor Gestión del valor\n\nCruzar los préstamos con la población para obtener préstamos por cada 1.000 habitantes es un servicio de agregaciónenriquecimientoalertas\nCompleta el código: los préstamos por cada 1.000 habitantes se calculan como prestamos / habitantes * \n\n\n\nVer explicaciones\n\nUna sola fuente no comercial impide el uso comercial del conjunto.\nFreemium combina un nivel gratuito y otro de pago.\n3000 / (0,05 × 10) = 6.000 usuarios.\nLa red de valor reúne a los socios, proveedores y clientes.\nEnriquecer es cruzar con otras fuentes para obtener información nueva.\nSe multiplica el cociente por 1000.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 5. Empresas infomediarias y oportunidades de negocio</span>"
+    ]
+  },
+  {
     "objectID": "05-infomediarias.html#para-practicar-fuera-del-libro",
     "href": "05-infomediarias.html#para-practicar-fuera-del-libro",
     "title": "Tema 5. Empresas infomediarias y oportunidades de negocio",
@@ -965,6 +1041,17 @@
     ]
   },
   {
+    "objectID": "91-guia-docente.html#glosario-descargas-y-autoevaluación",
+    "href": "91-guia-docente.html#glosario-descargas-y-autoevaluación",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Glosario, descargas y autoevaluación",
+    "text": "Glosario, descargas y autoevaluación\n\nGlosario (92-glosario.qmd): términos agrupados por tema, cada uno con un ancla #gl-.... Cada capítulo tiene un recuadro «Glosario del tema» con enlaces a sus términos. Para añadir uno, crea un encabezado ### Término {#gl-termino} en la sección del tema y enlázalo como [Término](92-glosario.qmd#gl-termino).\nDescargas (carpeta plantillas/): un script .R limpio por capítulo, la plantilla de informe informe_practica.qmd y su tema informe.scss. Los scripts se generan a partir de los bloques {webr} de cada capítulo con python3 herramientas/extraer_r.py .; vuelve a ejecutarlo si cambias el código de un capítulo.\nAutoevaluación: preguntas con el formato de webexercises, mediante la extensión local _extensions/webex/, que genera el mismo marcado sin necesidad de R al renderizar:\n\n::: {.webex-check .webex-box}\n1. Pregunta de verdadero o falso {{&lt; torf true &gt;}}\n2. Desplegable: {{&lt; mcq \"*correcta\" \"incorrecta\" \"incorrecta\" &gt;}}\n3. Hueco: {{&lt; fitb \"respuesta\" \"alternativa\" ignorecase=true &gt;}}\n4. Opciones en lista:\n\n{{&lt; longmcq \"incorrecta\" \"*correcta\" &gt;}}\n:::\n\n::: {.webex-solution boton=\"Ver explicaciones\"}\nTexto que se despliega con el botón.\n:::\nEl asterisco marca la opción correcta. Los huecos no pueden ir dentro de código en línea: escribe el código antes y después, por ejemplo `sum(x` {{&lt; fitb \"&gt;\" &gt;}} `2)`.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
     "objectID": "91-guia-docente.html#publicar-y-actualizar-el-libro",
     "href": "91-guia-docente.html#publicar-y-actualizar-el-libro",
     "title": "Apéndice B — Guía para el profesorado",
@@ -995,6 +1082,94 @@
     "crumbs": [
       "Apéndices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html",
+    "href": "92-glosario.html",
+    "title": "Apéndice C — Glosario",
+    "section": "",
+    "text": "Tema 0. Datos abiertos\nTérminos técnicos del libro, agrupados por tema. Cada capítulo enlaza aquí desde su recuadro «Glosario del tema», y desde cada término puedes volver al capítulo donde se explica. Usa el buscador del libro (arriba a la izquierda) para localizar cualquier término.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#gl-tema0",
+    "href": "92-glosario.html#gl-tema0",
+    "title": "Apéndice C — Glosario",
+    "section": "",
+    "text": "Datos abiertos\nDatos que cualquiera puede usar, modificar y compartir libremente para cualquier fin, con como mucho la obligación de citar la fuente o de compartir en las mismas condiciones. → Tema 0\n\n\nOpen Definition\nDefinición de «abierto» de la Open Knowledge Foundation (versión 2.1). Exige licencia abierta, acceso completo y formato legible por máquina y abierto. → Tema 0\n\n\nDatos públicos\nInformación producida o custodiada por el sector público. No toda es abierta: puede incluir datos personales o protegidos. → Tema 0\n\n\nGobierno abierto\nForma de gobernar basada en la transparencia, la participación y la colaboración. Los datos abiertos son una de sus herramientas. → Tema 0\n\n\nModelo de cinco estrellas\nEscala acumulativa de Tim Berners-Lee para valorar la publicación de datos: de un documento con licencia abierta (★) a datos enlazados (★★★★★). → Tema 0\n\n\nPrincipios FAIR\nDatos localizables (Findable), accesibles (Accessible), interoperables (Interoperable) y reutilizables (Reusable). No equivale a «abierto». → Tema 0\n\n\nFormato abierto\nFormato con especificación pública que cualquiera puede implementar sin pagar ni pedir permiso (CSV, JSON, XML, ODS). Su contrario es el formato propietario. → Tema 0\n\n\nLegible por máquina\nFormato del que un programa puede extraer los datos sin intervención humana. Un PDF escaneado no lo es; un CSV sí. → Tema 0\n\n\nLicencia abierta\nLicencia que permite usar, redistribuir y modificar para cualquier fin. Puede exigir atribución (CC BY) o compartir igual (CC BY-SA, ODbL), pero no prohibir el uso comercial (NC) ni las obras derivadas (ND). → Tema 0\n\n\nWeb Semántica\nExtensión de la Web en la que los datos tienen un significado explícito y enlazado que las máquinas pueden procesar. → Tema 0, Tema 4",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#gl-tema1",
+    "href": "92-glosario.html#gl-tema1",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 1. Reutilización de la información del sector público",
+    "text": "Tema 1. Reutilización de la información del sector público\n\nReutilización\nUso de documentos del sector público con fines comerciales o no comerciales distintos del propósito inicial para el que se produjeron (Ley 37/2007). → Tema 1\n\n\nRISP\nReutilización de la información del sector público. Nombre del marco normativo europeo y español sobre la materia. → Tema 1\n\n\nDerecho de acceso\nDerecho de cualquier persona a solicitar y conocer la información pública (Ley 19/2013). Es previo a la reutilización, pero no la garantiza. → Tema 1\n\n\nPublicidad activa\nInformación que las administraciones deben publicar sin que nadie la pida: organización, contratos, subvenciones, presupuestos. → Tema 1\n\n\nSilencio administrativo negativo\nSi la administración no resuelve en plazo, la solicitud se entiende desestimada. Rige tanto en el derecho de acceso como en las solicitudes de reutilización. → Tema 1\n\n\nLicencia tipo\nTexto de licencia estándar, igual para todos los reutilizadores, publicado en el aviso legal de un portal. → Tema 1\n\n\nConjuntos de datos de alto valor\nDatos con gran beneficio social y económico, que deben ofrecerse gratis, por API y con licencia abierta. Seis categorías: geoespaciales, observación de la Tierra y medio ambiente, meteorológicos, estadísticos, sociedades y movilidad. → Tema 1\n\n\nDatos dinámicos\nDatos que se actualizan con frecuencia o en tiempo real, como los de tráfico o sensores. Deben ofrecerse mediante API. → Tema 1\n\n\nTransposición\nIncorporación de una directiva europea al derecho de un Estado miembro mediante una norma propia. Los reglamentos, en cambio, se aplican directamente. → Tema 1\n\n\nAgente infomediario\nReutilizador que crea productos o servicios de valor añadido a partir de información, sobre todo pública. → Tema 1, Tema 5",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#gl-tema2",
+    "href": "92-glosario.html#gl-tema2",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 2. Proyectos de reutilización",
+    "text": "Tema 2. Proyectos de reutilización\n\nPortal de datos abiertos\nSitio web que cataloga y da acceso a conjuntos de datos abiertos, como datos.gob.es o data.europa.eu. → Tema 2\n\n\nFederación de catálogos\nRecolección automática de los metadatos de varios portales en un catálogo común. datos.gob.es federa portales estatales, autonómicos, locales y universitarios. → Tema 2\n\n\nOpen Data Maturity\nInforme anual que compara la madurez en datos abiertos de 36 países europeos en cuatro dimensiones: políticas, impacto, portal y calidad. → Tema 2\n\n\nCaso de uso\nProyecto concreto que reutiliza datos. Conviene describirlo con las dimensiones de Safarov et al.: tipo de utilización, condiciones, efectos y usuarios. → Tema 2\n\n\nB2G\nBusiness-to-government: intercambio de datos de empresas con administraciones para fines de interés general. → Tema 2\n\n\nAltruismo de datos\nCesión voluntaria de datos por ciudadanos o empresas para fines de interés general, regulada por el Reglamento de Gobernanza de Datos. → Tema 2\n\n\nCiencia abierta\nPráctica de la investigación que hace accesibles publicaciones, datos, código y métodos para que puedan comprobarse y reutilizarse. → Tema 2\n\n\nRepositorio de datos\nServicio que deposita, describe, preserva y da acceso a conjuntos de datos con un identificador persistente (Zenodo, e-Archivo). re3data es el registro mundial de repositorios. → Tema 2\n\n\nData paper\nArtículo científico que describe un conjunto de datos —origen, método y estructura— para facilitar su reutilización. → Tema 2",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#gl-tema3",
+    "href": "92-glosario.html#gl-tema3",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 3. Gestión documental y open data",
+    "text": "Tema 3. Gestión documental y open data\n\nGestión documental\nConjunto de procesos para controlar la creación, clasificación, valoración, conservación y eliminación de documentos (ISO 15489). → Tema 3\n\n\nCiclo de vida de los datos\nSecuencia de fases por las que pasan los datos, desde su creación hasta su reutilización, preservación o eliminación (modelo del DCC). → Tema 3\n\n\nMetadatos\nDatos que describen otros datos: qué son, quién los publica, con qué licencia, cómo están estructurados y cómo se conservan. → Tema 3\n\n\nDCAT\nVocabulario del W3C para describir catálogos, conjuntos de datos (dcat:Dataset) y distribuciones (dcat:Distribution). DCAT-AP y DCAT-AP-ES son sus perfiles europeo y español. → Tema 3\n\n\nDistribución\nCada forma concreta de obtener un conjunto de datos: un fichero CSV, un JSON, una API. → Tema 3\n\n\nCompletitud\nCaracterística de calidad que mide la proporción de celdas o filas sin valores ausentes. → Tema 3\n\n\nConformidad\nCaracterística de calidad que mide si los valores siguen el formato esperado (fechas, códigos, unidades). → Tema 3\n\n\nExactitud\nCaracterística de calidad que mide si los valores son correctos y plausibles. Un número de préstamos negativo es un error de exactitud. → Tema 3\n\n\nValor ausente\nCelda sin dato. En R se representa con NA; en los ficheros aparece de muchas formas («», «n/d», «-»), lo que conviene unificar. → Tema 3\n\n\nSuma de control (checksum)\nHuella numérica de un fichero (MD5, SHA-256) que permite comprobar que no ha cambiado ni se ha corrompido. → Tema 3\n\n\nOAIS\nModelo de referencia para archivos digitales que deben preservar información a largo plazo (ISO 14721). → Tema 3\n\n\nIdentificador persistente\nIdentificador que no cambia aunque cambie la ubicación del recurso, como un DOI, un ORCID o un Handle. → Tema 3",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#gl-tema4",
+    "href": "92-glosario.html#gl-tema4",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 4. Normalización e interoperabilidad",
+    "text": "Tema 4. Normalización e interoperabilidad\n\nEstándar abierto\nEspecificación pública, desarrollada en un proceso abierto e implementable sin pagar derechos. → Tema 4\n\n\nInteroperabilidad\nCapacidad de sistemas y organizaciones para intercambiar información y usarla. El EIF distingue cuatro niveles: jurídico, organizativo, semántico y técnico. → Tema 4\n\n\nENI\nEsquema Nacional de Interoperabilidad: criterios que deben seguir las administraciones españolas para que sus sistemas interoperen. Se desarrolla en Normas Técnicas de Interoperabilidad (NTI). → Tema 4\n\n\nURI\nIdentificador uniforme de recursos: cadena que identifica algo de forma única en la Web, como http://www.wikidata.org/entity/Q8802. → Tema 4\n\n\nRDF\nModelo del W3C que representa la información como tripletas sujeto–predicado–objeto. Se escribe en sintaxis como Turtle, RDF/XML o JSON-LD. → Tema 4\n\n\nTripleta\nUnidad mínima de RDF: un sujeto, un predicado y un objeto, por ejemplo «biblioteca — está en — Getafe». → Tema 4\n\n\nTurtle\nSintaxis compacta y legible de RDF, con prefijos para abreviar las URI. → Tema 4\n\n\nJSON-LD\nJSON con un @context que asigna a cada clave una URI de un vocabulario: RDF con aspecto de JSON. → Tema 4\n\n\nLinked Open Data\nDatos enlazados publicados con licencia abierta: las cinco estrellas del modelo de Berners-Lee. → Tema 4\n\n\nSPARQL\nLenguaje de consulta del W3C para datos RDF, basado en patrones de tripletas. → Tema 4\n\n\nVocabulario\nConjunto de clases y propiedades con URI para describir datos (schema.org, Dublin Core, DCAT). → Tema 4\n\n\nOntología\nVocabulario con una semántica formal más rica (jerarquías, restricciones, reglas de inferencia), expresado en RDFS u OWL. → Tema 4\n\n\nSKOS\nVocabulario del W3C para publicar tesauros y clasificaciones en la Web, con relaciones como skos:broader y skos:narrower. → Tema 4",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#gl-tema5",
+    "href": "92-glosario.html#gl-tema5",
+    "title": "Apéndice C — Glosario",
+    "section": "Tema 5. Infomediarios y negocio",
+    "text": "Tema 5. Infomediarios y negocio\n\nSector infomediario\nConjunto de empresas que crean productos y servicios de valor añadido a partir de información, en buena parte pública. → Tema 5\n\n\nMarco 6-V\nSeis componentes para describir cómo un negocio crea y captura valor con datos abiertos: propuesta de valor, proceso de creación, valor obtenido, captura, gestión y red de valor (Ahmadi Zeleti et al.). → Tema 5\n\n\nFreemium\nModelo de negocio con un servicio básico gratuito y funciones avanzadas de pago. → Tema 5\n\n\nPunto de equilibrio\nVolumen de actividad a partir del cual los ingresos cubren los costes. → Tema 5\n\n\nServicio de valor añadido\nProducto que transforma los datos en algo más útil: agregación, limpieza, enriquecimiento, análisis, visualización o API. → Tema 5\n\n\nCompartir igual (share-alike)\nCláusula de licencia que obliga a distribuir las obras o bases de datos derivadas con la misma licencia (CC BY-SA, ODbL). → Tema 5\n\n\nMinería de textos y datos\nAnálisis automatizado de textos y datos para extraer patrones. La Directiva (UE) 2019/790 regula sus excepciones de derechos de autor. → Tema 5\n\n\nEspacio de datos\nEntorno de confianza para compartir datos, también privados, entre organizaciones de un sector con reglas comunes. → Tema 5\n\n\nDatos sintéticos\nDatos generados artificialmente que imitan la estructura de los reales sin corresponder a casos reales. El CSV de este libro es un ejemplo. → Tema 5",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#gl-herramientas",
+    "href": "92-glosario.html#gl-herramientas",
+    "title": "Apéndice C — Glosario",
+    "section": "Herramientas",
+    "text": "Herramientas\n\nR\nLenguaje y entorno libre para análisis estadístico y de datos. → Primeros pasos\n\n\nwebR\nVersión de R compilada a WebAssembly que se ejecuta en el navegador, sin instalación. → Presentación\n\n\nQuarto\nSistema de publicación científica de código abierto que combina texto y código para generar libros, artículos, presentaciones y webs. → Presentación\n\n\nData frame\nTabla de datos en R: cada columna es un vector del mismo tamaño. → Primeros pasos\n\n\nOpenRefine\nHerramienta libre para limpiar y transformar datos, con agrupación (clustering) de valores similares. → Tema 3",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   }
 ]

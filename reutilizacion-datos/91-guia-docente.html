@@ -65,6 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./92-glosario.html" rel="next">
 <link href="./90-chuleta-r.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -217,6 +218,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <a href="./91-guia-docente.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Guía para el profesorado</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./92-glosario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glosario</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -231,6 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#cómo-encaja-el-libro-con-aula-global" id="toc-cómo-encaja-el-libro-con-aula-global" class="nav-link active" data-scroll-target="#cómo-encaja-el-libro-con-aula-global">Cómo encaja el libro con Aula Global</a></li>
   <li><a href="#el-conjunto-de-datos-de-práctica" id="toc-el-conjunto-de-datos-de-práctica" class="nav-link" data-scroll-target="#el-conjunto-de-datos-de-práctica">El conjunto de datos de práctica</a></li>
+  <li><a href="#glosario-descargas-y-autoevaluación" id="toc-glosario-descargas-y-autoevaluación" class="nav-link" data-scroll-target="#glosario-descargas-y-autoevaluación">Glosario, descargas y autoevaluación</a></li>
   <li><a href="#publicar-y-actualizar-el-libro" id="toc-publicar-y-actualizar-el-libro" class="nav-link" data-scroll-target="#publicar-y-actualizar-el-libro">Publicar y actualizar el libro</a></li>
   <li><a href="#mantenimiento" id="toc-mantenimiento" class="nav-link" data-scroll-target="#mantenimiento">Mantenimiento</a></li>
   <li><a href="#añadir-un-ejercicio" id="toc-añadir-un-ejercicio" class="nav-link" data-scroll-target="#añadir-un-ejercicio">Añadir un ejercicio</a></li>
@@ -318,11 +325,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>La tabla de equivalencias de municipios (<code>forma_correcta</code>, en los Temas 3, 4 y 5) y la tabla de población ficticia del Tema 5 debe incluir todos los municipios del fichero.</li>
 </ul>
 </section>
+<section id="glosario-descargas-y-autoevaluación" class="level2">
+<h2 class="anchored" data-anchor-id="glosario-descargas-y-autoevaluación">Glosario, descargas y autoevaluación</h2>
+<ul>
+<li><strong>Glosario</strong> (<code>92-glosario.qmd</code>): términos agrupados por tema, cada uno con un ancla <code>#gl-...</code>. Cada capítulo tiene un recuadro «Glosario del tema» con enlaces a sus términos. Para añadir uno, crea un encabezado <code>### Término {#gl-termino}</code> en la sección del tema y enlázalo como <code>[Término](92-glosario.qmd#gl-termino)</code>.</li>
+<li><strong>Descargas</strong> (carpeta <code>plantillas/</code>): un script <code>.R</code> limpio por capítulo, la plantilla de informe <code>informe_practica.qmd</code> y su tema <code>informe.scss</code>. Los scripts se generan a partir de los bloques <code>{webr}</code> de cada capítulo con <code>python3 herramientas/extraer_r.py .</code>; vuelve a ejecutarlo si cambias el código de un capítulo.</li>
+<li><strong>Autoevaluación</strong>: preguntas con el formato de <a href="https://github.com/PsyTeachR/webexercises">webexercises</a>, mediante la extensión local <code>_extensions/webex/</code>, que genera el mismo marcado sin necesidad de R al renderizar:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>::: {.webex-check .webex-box}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Pregunta de verdadero o falso {{&lt; torf true &gt;}}</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Desplegable: {{&lt; mcq "*correcta" "incorrecta" "incorrecta" &gt;}}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Hueco: {{&lt; fitb "respuesta" "alternativa" ignorecase=true &gt;}}</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Opciones en lista:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>{{&lt; longmcq "incorrecta" "*correcta" &gt;}}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>::: {.webex-solution boton="Ver explicaciones"}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Texto que se despliega con el botón.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>El asterisco marca la opción correcta. Los huecos no pueden ir dentro de código en línea: escribe el código antes y después, por ejemplo <code>`sum(x` {{&lt; fitb "&gt;" &gt;}} `2)`</code>.</p>
+</section>
 <section id="publicar-y-actualizar-el-libro" class="level2">
 <h2 class="anchored" data-anchor-id="publicar-y-actualizar-el-libro">Publicar y actualizar el libro</h2>
 <p>El libro es un proyecto de <a href="https://quarto.org">Quarto</a> con la extensión <a href="https://r-wasm.github.io/quarto-live/">quarto-live</a>, que ya va incluida en la carpeta <code>_extensions/</code>. Los capítulos usan <code>engine: markdown</code>, así que para renderizar no hace falta R instalado: el código se ejecuta en el navegador del estudiante.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview          <span class="co"># vista previa local</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render           <span class="co"># genera el sitio en _book/</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview          <span class="co"># vista previa local</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render           <span class="co"># genera el sitio en _book/</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Opciones de publicación:</p>
 <ul>
 <li><strong>GitHub Pages</strong>: el repositorio incluye <code>.github/workflows/publicar.yml</code>, que renderiza y publica el libro en cada <em>push</em> a <code>main</code>. En <em>Settings → Pages</em>, elige <em>GitHub Actions</em> como origen.</li>
@@ -340,30 +368,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="añadir-un-ejercicio" class="level2">
 <h2 class="anchored" data-anchor-id="añadir-un-ejercicio">Añadir un ejercicio</h2>
 <p>Un ejercicio autocorregido tiene hasta cuatro bloques con la misma etiqueta <code>exercise</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{webr}</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| exercise: mi_ejercicio</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| setup: true</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">datos &lt;- read.csv("datos/prestamos_bibliotecas_practica.csv")</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{webr}</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="in">#| exercise: mi_ejercicio</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="in">nrow(______)</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>::: {.solution exercise="mi_ejercicio"}</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in">`nrow(datos)`</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="in">```{webr}</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="in">#| exercise: mi_ejercicio</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="in">#| check: true</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="in">if (identical(.result, nrow(read.csv("datos/prestamos_bibliotecas_practica.csv")))) {</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="in">  list(correct = TRUE, message = "Correcto")</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="in">} else {</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="in">  list(correct = FALSE, message = "Revisa el objeto que cuentas")</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{webr}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| exercise: mi_ejercicio</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| setup: true</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="in">datos &lt;- read.csv("datos/prestamos_bibliotecas_practica.csv")</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{webr}</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="in">#| exercise: mi_ejercicio</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="in">nrow(______)</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>::: {.solution exercise="mi_ejercicio"}</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="in">`nrow(datos)`</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="in">```{webr}</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="in">#| exercise: mi_ejercicio</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="in">#| check: true</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="in">if (identical(.result, nrow(read.csv("datos/prestamos_bibliotecas_practica.csv")))) {</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="in">  list(correct = TRUE, message = "Correcto")</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="in">} else {</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="in">  list(correct = FALSE, message = "Revisa el objeto que cuentas")</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>En el bloque <code>check</code>, <code>.result</code> es el valor de la última línea del código del estudiante y <code>.user_code</code> es el texto del código. La <a href="https://r-wasm.github.io/quarto-live/exercises/grading.html">documentación de quarto-live</a> explica más opciones.</p>
 
 
@@ -807,6 +835,9 @@ window._ojs.runtime.interpretFromScriptTags();
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./92-glosario.html" class="pagination-link" aria-label="Glosario">
+        <span class="nav-page-text"><span class="chapter-title">Glosario</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
