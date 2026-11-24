@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tema 4. Normalización e interoperabilidad – Reutilización de datos abiertos y documentos</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./05-infomediarias.html" rel="next">
+<link href="./03-calidad.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-29bccce83f8da9471d73d280c8ef785e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./00-datos-abiertos.html">Temas</a></li><li class="breadcrumb-item"><a href="./04-interoperabilidad.html"><span class="chapter-title">Tema 4. Normalización e interoperabilidad</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Reutilización de datos abiertos y documentos</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00a-primeros-pasos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Primeros pasos con R en el navegador</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Temas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-datos-abiertos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 0. Introducción a los datos abiertos y la reutilización de la información</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-risp.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 1. Reutilización de la información del sector público (RISP)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-proyectos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 2. Proyectos relevantes de reutilización de datos abiertos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-calidad.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 3. Gestión documental y <em>open data</em></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-interoperabilidad.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Tema 4. Normalización e interoperabilidad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-infomediarias.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 5. Empresas infomediarias y oportunidades de negocio</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./90-chuleta-r.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Chuleta de R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./91-guia-docente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Guía para el profesorado</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#lectura-obligatoria" id="toc-lectura-obligatoria" class="nav-link active" data-scroll-target="#lectura-obligatoria">Lectura obligatoria</a></li>
+  <li><a href="#estándares-abiertos" id="toc-estándares-abiertos" class="nav-link" data-scroll-target="#estándares-abiertos">1. Estándares abiertos</a></li>
+  <li><a href="#interoperabilidad-técnica-semántica-y-organizativa" id="toc-interoperabilidad-técnica-semántica-y-organizativa" class="nav-link" data-scroll-target="#interoperabilidad-técnica-semántica-y-organizativa">2. Interoperabilidad técnica, semántica y organizativa</a></li>
+  <li><a href="#esquema-nacional-de-interoperabilidad" id="toc-esquema-nacional-de-interoperabilidad" class="nav-link" data-scroll-target="#esquema-nacional-de-interoperabilidad">3. Esquema Nacional de Interoperabilidad</a></li>
+  <li><a href="#formatos-de-intercambio-csv-xml-json-y-rdf" id="toc-formatos-de-intercambio-csv-xml-json-y-rdf" class="nav-link" data-scroll-target="#formatos-de-intercambio-csv-xml-json-y-rdf">4. Formatos de intercambio: CSV, XML, JSON y RDF</a></li>
+  <li><a href="#linked-open-data" id="toc-linked-open-data" class="nav-link" data-scroll-target="#linked-open-data">5. Linked Open Data</a></li>
+  <li><a href="#vocabularios-y-ontologías" id="toc-vocabularios-y-ontologías" class="nav-link" data-scroll-target="#vocabularios-y-ontologías">6. Vocabularios y ontologías</a></li>
+  <li><a href="#práctica-en-r" id="toc-práctica-en-r" class="nav-link" data-scroll-target="#práctica-en-r">Práctica en R</a>
+  <ul class="collapse">
+  <li><a href="#paso-1.-generar-xml-apartado-4" id="toc-paso-1.-generar-xml-apartado-4" class="nav-link" data-scroll-target="#paso-1.-generar-xml-apartado-4">Paso 1. Generar XML (apartado 4)</a></li>
+  <li><a href="#ejercicio-4.1" id="toc-ejercicio-4.1" class="nav-link" data-scroll-target="#ejercicio-4.1">Ejercicio 4.1</a></li>
+  <li><a href="#paso-2.-de-csv-a-json-apartado-4" id="toc-paso-2.-de-csv-a-json-apartado-4" class="nav-link" data-scroll-target="#paso-2.-de-csv-a-json-apartado-4">Paso 2. De CSV a JSON (apartado 4)</a></li>
+  <li><a href="#paso-3.-json-ld-con-schema.org-apartados-4-y-6" id="toc-paso-3.-json-ld-con-schema.org-apartados-4-y-6" class="nav-link" data-scroll-target="#paso-3.-json-ld-con-schema.org-apartados-4-y-6">Paso 3. JSON-LD con schema.org (apartados 4 y 6)</a></li>
+  <li><a href="#paso-4.-turtle-apartado-5" id="toc-paso-4.-turtle-apartado-5" class="nav-link" data-scroll-target="#paso-4.-turtle-apartado-5">Paso 4. Turtle (apartado 5)</a></li>
+  <li><a href="#ejercicio-4.2" id="toc-ejercicio-4.2" class="nav-link" data-scroll-target="#ejercicio-4.2">Ejercicio 4.2</a></li>
+  <li><a href="#paso-5.-consultas-sobre-un-grafo-apartado-5" id="toc-paso-5.-consultas-sobre-un-grafo-apartado-5" class="nav-link" data-scroll-target="#paso-5.-consultas-sobre-un-grafo-apartado-5">Paso 5. Consultas sobre un grafo (apartado 5)</a></li>
+  <li><a href="#ejercicio-4.3" id="toc-ejercicio-4.3" class="nav-link" data-scroll-target="#ejercicio-4.3">Ejercicio 4.3</a></li>
+  <li><a href="#ejercicio-4.4" id="toc-ejercicio-4.4" class="nav-link" data-scroll-target="#ejercicio-4.4">Ejercicio 4.4</a></li>
+  <li><a href="#paso-6.-un-vocabulario-controlado-en-skos-apartado-6" id="toc-paso-6.-un-vocabulario-controlado-en-skos-apartado-6" class="nav-link" data-scroll-target="#paso-6.-un-vocabulario-controlado-en-skos-apartado-6">Paso 6. Un vocabulario controlado en SKOS (apartado 6)</a></li>
+  <li><a href="#ejercicio-4.5" id="toc-ejercicio-4.5" class="nav-link" data-scroll-target="#ejercicio-4.5">Ejercicio 4.5</a></li>
+  </ul></li>
+  <li><a href="#para-practicar-fuera-del-libro" id="toc-para-practicar-fuera-del-libro" class="nav-link" data-scroll-target="#para-practicar-fuera-del-libro">Para practicar fuera del libro</a></li>
+  <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./00-datos-abiertos.html">Temas</a></li><li class="breadcrumb-item"><a href="./04-interoperabilidad.html"><span class="chapter-title">Tema 4. Normalización e interoperabilidad</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-tema4" class="quarto-section-identifier"><span class="chapter-title">Tema 4. Normalización e interoperabilidad</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Objetivos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Conocer los principales estándares utilizados en la publicación de datos abiertos.</li>
+<li>Comprender los fundamentos de la interoperabilidad técnica y semántica.</li>
+</ul>
+</div>
+</div>
+<section id="lectura-obligatoria" class="level2">
+<h2 class="anchored" data-anchor-id="lectura-obligatoria">Lectura obligatoria</h2>
+<div class="lectura">
+<p>Bizer, C.; Heath, T.; Berners-Lee, T. (2009). <a href="https://doi.org/10.4018/jswis.2009081901">Linked Data – The Story So Far</a>. <em>International Journal on Semantic Web and Information Systems</em>, 5(3), 1-22. Acceso por suscripción a través de la Biblioteca UC3M.</p>
+</div>
+</section>
+<section id="estándares-abiertos" class="level2">
+<h2 class="anchored" data-anchor-id="estándares-abiertos">1. Estándares abiertos</h2>
+<p>Un <strong>estándar</strong> (o norma) es una especificación acordada que permite que productos y sistemas distintos funcionen juntos. Es <strong>abierto</strong> cuando su especificación es pública y gratuita, se ha desarrollado en un proceso abierto a todas las partes interesadas y puede implementarse sin pagar derechos ni pedir permiso. No hay que confundirlo con el software libre: un estándar abierto puede implementarse en software privativo.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Organismo</th>
+<th>Estándares relevantes para datos abiertos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>W3C</strong> (World Wide Web Consortium)</td>
+<td>HTML, XML, RDF, SPARQL, OWL, SKOS, DCAT, JSON-LD, CSV on the Web</td>
+</tr>
+<tr class="even">
+<td><strong>IETF</strong> (Internet Engineering Task Force)</td>
+<td>HTTP, URI, CSV (RFC 4180), JSON (RFC 8259)</td>
+</tr>
+<tr class="odd">
+<td><strong>ISO</strong></td>
+<td>Dublin Core (ISO 15836), OAIS (ISO 14721), PDF (ISO 32000), códigos de país y lengua</td>
+</tr>
+<tr class="even">
+<td><strong>OGC</strong> (Open Geospatial Consortium)</td>
+<td>Servicios de mapas (WMS, WFS), GeoPackage</td>
+</tr>
+<tr class="odd">
+<td><strong>Ámbito bibliotecario</strong> (Library of Congress, IFLA, OCLC)</td>
+<td>MARC 21, BIBFRAME, IFLA LRM, Z39.50, OAI-PMH</td>
+</tr>
+</tbody>
+</table>
+<p>Los estándares de facto (los que se imponen por uso, como un formato de un fabricante dominante) pueden ser útiles, pero no garantizan acceso ni continuidad.</p>
+</section>
+<section id="interoperabilidad-técnica-semántica-y-organizativa" class="level2">
+<h2 class="anchored" data-anchor-id="interoperabilidad-técnica-semántica-y-organizativa">2. Interoperabilidad técnica, semántica y organizativa</h2>
+<p>La <strong>interoperabilidad</strong> es la capacidad de los sistemas y las organizaciones de intercambiar información y usarla. El <a href="https://interoperable-europe.ec.europa.eu">Marco Europeo de Interoperabilidad</a> (EIF, revisado en 2017) distingue cuatro niveles; publicar en un formato abierto resuelve solo uno de ellos:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nivel</th>
+<th>Pregunta</th>
+<th>Ejemplo en bibliotecas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Jurídico</strong></td>
+<td>¿Las normas y licencias permiten combinar los datos?</td>
+<td>Licencias compatibles entre dos portales</td>
+</tr>
+<tr class="even">
+<td><strong>Organizativo</strong></td>
+<td>¿Los procesos y responsabilidades están alineados?</td>
+<td>Acuerdo entre la red de bibliotecas y el portal autonómico para actualizar cada mes</td>
+</tr>
+<tr class="odd">
+<td><strong>Semántico</strong></td>
+<td>¿Los datos significan lo mismo para todos?</td>
+<td>Usar <code>schema:Library</code> y la misma definición de «préstamo»</td>
+</tr>
+<tr class="even">
+<td><strong>Técnico</strong></td>
+<td>¿Los sistemas pueden intercambiar datos?</td>
+<td>API, formatos, protocolos</td>
+</tr>
+</tbody>
+</table>
+<p>El Reglamento (UE) 2024/903, conocido como <strong>Ley sobre la Europa Interoperable</strong>, convierte desde 2024 la interoperabilidad de los servicios públicos transfronterizos en una obligación con estructuras de gobernanza propias.</p>
+</section>
+<section id="esquema-nacional-de-interoperabilidad" class="level2">
+<h2 class="anchored" data-anchor-id="esquema-nacional-de-interoperabilidad">3. Esquema Nacional de Interoperabilidad</h2>
+<p>En España, el <strong>Esquema Nacional de Interoperabilidad (ENI)</strong>, previsto en el artículo 156 de la Ley 40/2015 y regulado por el Real Decreto 4/2010, fija los criterios que deben seguir las administraciones para que sus sistemas interoperen. Se desarrolla en <strong>Normas Técnicas de Interoperabilidad (NTI)</strong>, entre ellas:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>NTI</th>
+<th>Qué regula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Documento electrónico</td>
+<td>Componentes, formato y metadatos mínimos del documento</td>
+</tr>
+<tr class="even">
+<td>Expediente electrónico</td>
+<td>Estructura e índice del expediente</td>
+</tr>
+<tr class="odd">
+<td>Digitalización y copiado auténtico</td>
+<td>Requisitos de imágenes y copias</td>
+</tr>
+<tr class="even">
+<td>Política de gestión de documentos electrónicos</td>
+<td>Procesos de gestión documental (Tema 3)</td>
+</tr>
+<tr class="odd">
+<td>Catálogo de estándares</td>
+<td>Formatos y estándares admitidos en la administración</td>
+</tr>
+<tr class="even">
+<td><strong>Reutilización de recursos de información (NTI-RISP)</strong></td>
+<td>Identificación con URI, metadatos, formatos y condiciones de uso para publicar datos (Temas 1 y 3)</td>
+</tr>
+</tbody>
+</table>
+<p>El texto del ENI y de sus normas está en el <a href="https://administracionelectronica.gob.es/ctt/eni">Portal de Administración Electrónica</a>. El ENI tiene su paralelo en el <strong>Esquema Nacional de Seguridad</strong>, que regula la seguridad de los mismos sistemas.</p>
+</section>
+<section id="formatos-de-intercambio-csv-xml-json-y-rdf" class="level2">
+<h2 class="anchored" data-anchor-id="formatos-de-intercambio-csv-xml-json-y-rdf">4. Formatos de intercambio: CSV, XML, JSON y RDF</h2>
+<p>El mismo registro, en los cuatro formatos:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">CSV</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">XML</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">JSON</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">RDF (Turtle)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<pre><code>biblioteca,municipio,prestamos
+Biblioteca Municipal Centro,Getafe,2637</code></pre>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">biblioteca</span>&gt;</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">nombre</span>&gt;Biblioteca Municipal Centro&lt;/<span class="kw">nombre</span>&gt;</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">municipio</span>&gt;Getafe&lt;/<span class="kw">municipio</span>&gt;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">prestamos</span>&gt;2637&lt;/<span class="kw">prestamos</span>&gt;</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">biblioteca</span>&gt;</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">"biblioteca"</span><span class="fu">:</span> <span class="st">"Biblioteca Municipal Centro"</span><span class="fu">,</span> <span class="dt">"municipio"</span><span class="fu">:</span> <span class="st">"Getafe"</span><span class="fu">,</span> <span class="dt">"prestamos"</span><span class="fu">:</span> <span class="dv">2637</span><span class="fu">}</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<pre class="turtle"><code>&lt;https://ejemplo.org/biblioteca/centro&gt; a schema:Library ;
+    schema:name "Biblioteca Municipal Centro" ;
+    schema:containedInPlace wd:Q8802 .</code></pre>
+</div>
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Formato</th>
+<th>Característica principal</th>
+<th>Puntos fuertes</th>
+<th>Limitaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CSV</td>
+<td>Tabla en texto plano</td>
+<td>Sencillo; lo abre cualquier programa</td>
+<td>Sin tipos ni significado; problemas de separadores y codificación</td>
+</tr>
+<tr class="even">
+<td>XML</td>
+<td>Elementos jerárquicos con etiquetas</td>
+<td>Validación con esquemas (XSD); estándar en metadatos bibliográficos (MARCXML, Dublin Core, METS)</td>
+<td>Verboso</td>
+</tr>
+<tr class="odd">
+<td>JSON</td>
+<td>Objetos de clave y valor anidados</td>
+<td>Formato habitual de las API; ligero</td>
+<td>Sin esquema obligatorio ni semántica</td>
+</tr>
+<tr class="even">
+<td>RDF (Turtle, RDF/XML, JSON-LD)</td>
+<td>Tripletas sujeto–predicado–objeto con URI</td>
+<td>Significado explícito; enlazable</td>
+<td>Curva de aprendizaje mayor</td>
+</tr>
+</tbody>
+</table>
+<p>JSON-LD es JSON con un <code>@context</code> que asigna a cada clave una URI de un vocabulario: es RDF con aspecto de JSON.</p>
+</section>
+<section id="linked-open-data" class="level2">
+<h2 class="anchored" data-anchor-id="linked-open-data">5. Linked Open Data</h2>
+<p>Bizer, Heath y Berners-Lee recogen los cuatro principios de <em>Linked Data</em>:</p>
+<ol type="1">
+<li>Usar URI para nombrar las cosas.</li>
+<li>Usar URI HTTP, para que cualquiera pueda consultarlas.</li>
+<li>Al consultar una URI, ofrecer información útil con estándares (RDF, SPARQL).</li>
+<li>Incluir enlaces a otras URI, para descubrir más cosas.</li>
+</ol>
+<p><strong>Linked Open Data</strong> (LOD) son datos enlazados publicados con licencia abierta: las cinco estrellas del Tema 0. La <a href="https://lod-cloud.net">nube LOD</a> muestra los conjuntos que se enlazan entre sí, con Wikidata y DBpedia en el centro. En bibliotecas, <a href="https://datos.bne.es">datos.bne.es</a>, VIAF o id.loc.gov publican autoridades y registros como datos enlazados. Los datos RDF se consultan con <strong>SPARQL</strong>, el lenguaje de consulta del W3C.</p>
+</section>
+<section id="vocabularios-y-ontologías" class="level2">
+<h2 class="anchored" data-anchor-id="vocabularios-y-ontologías">6. Vocabularios y ontologías</h2>
+<p>Para que los datos signifiquen lo mismo para todos (interoperabilidad semántica) no se inventan propiedades: se <strong>reutilizan vocabularios</strong> existentes.</p>
+<ul>
+<li>Un <strong>vocabulario</strong> define un conjunto de clases y propiedades con URI (por ejemplo, <code>schema:Library</code> o <code>dct:title</code>).</li>
+<li>Una <strong>ontología</strong> es un vocabulario con una semántica formal más rica: jerarquías de clases, restricciones y reglas que permiten inferir información nueva. Se expresa en <strong>RDFS</strong> u <strong>OWL</strong>.</li>
+<li>Un <strong>sistema de organización del conocimiento</strong> (tesauro, clasificación, lista de encabezamientos) se publica en la Web con <strong>SKOS</strong>, que modela conceptos y sus relaciones (<code>skos:broader</code>, <code>skos:narrower</code>, <code>skos:related</code>, <code>skos:prefLabel</code>).</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Vocabulario u ontología</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dublin Core (<code>dct:</code>)</td>
+<td>Metadatos descriptivos básicos</td>
+</tr>
+<tr class="even">
+<td>DCAT</td>
+<td>Catálogos y conjuntos de datos</td>
+</tr>
+<tr class="odd">
+<td>schema.org</td>
+<td>Descripción general de entidades en la Web (lo usan los buscadores)</td>
+</tr>
+<tr class="even">
+<td>FOAF</td>
+<td>Personas y relaciones</td>
+</tr>
+<tr class="odd">
+<td>SKOS</td>
+<td>Tesauros y clasificaciones (EuroVoc, LCSH, tesauros de la BNE)</td>
+</tr>
+<tr class="even">
+<td>BIBFRAME, IFLA LRM / RDA</td>
+<td>Descripción bibliográfica en datos enlazados</td>
+</tr>
+<tr class="odd">
+<td>Vocabularios básicos de SEMIC</td>
+<td>Personas, organizaciones, direcciones y servicios públicos en la UE</td>
+</tr>
+</tbody>
+</table>
+<p>Para encontrar el vocabulario adecuado se usa <a href="https://lov.linkeddata.es/dataset/lov">Linked Open Vocabularies (LOV)</a>.</p>
+</section>
+<section id="práctica-en-r" class="level2">
+<h2 class="anchored" data-anchor-id="práctica-en-r">Práctica en R</h2>
+<section id="paso-1.-generar-xml-apartado-4" class="level3">
+<h3 class="anchored" data-anchor-id="paso-1.-generar-xml-apartado-4">Paso 1. Generar XML (apartado 4)</h3>
+<p>Partimos del CSV limpio y escribimos cada fila como un elemento <code>&lt;registro&gt;</code> con <code>sprintf()</code>:</p>
+<div>
+<div id="webr-1" class="exercise-cell">
+
+</div>
+<script type="webr-1-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiY2FyZ2FyX2xpbXBpbyA8LSBmdW5jdGlvbigpIHtcbiAgYiA8LSByZWFkLmNzdihcImRhdG9zL3ByZXN0YW1vc19iaWJsaW90ZWNhc19wcmFjdGljYS5jc3ZcIiwgY29sQ2xhc3NlcyA9IFwiY2hhcmFjdGVyXCIpXG4gIGIgPC0gYlshZHVwbGljYXRlZChiKSwgXVxuICBjbGF2ZSA8LSBjaGFydHIoXCLDocOpw63Ds8O6w7zDsVwiLCBcImFlaW91dW5cIiwgdG9sb3dlcih0cmltd3MoYiRtdW5pY2lwaW8pKSlcbiAgYiRtdW5pY2lwaW8gPC0gdW5uYW1lKGMoZ2V0YWZlID0gXCJHZXRhZmVcIiwgbGVnYW5lcyA9IFwiTGVnYW7DqXNcIiwgYWxjb3Jjb24gPSBcIkFsY29yY8OzblwiLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBtb3N0b2xlcyA9IFwiTcOzc3RvbGVzXCIsIGZ1ZW5sYWJyYWRhID0gXCJGdWVubGFicmFkYVwiKVtjbGF2ZV0pXG4gIGVzX2RteSA8LSBncmVwbChcIi9cIiwgYiRmZWNoYSlcbiAgZiA8LSBhcy5EYXRlKGIkZmVjaGEsIFwiJVktJW0tJWRcIik7IGZbZXNfZG15XSA8LSBhcy5EYXRlKGIkZmVjaGFbZXNfZG15XSwgXCIlZC8lbS8lWVwiKVxuICBiJGZlY2hhIDwtIGZvcm1hdChmKVxuICBmb3IgKHYgaW4gYyhcInByZXN0YW1vc1wiLCBcInVzdWFyaW9zX2FjdGl2b3NcIikpXG4gICAgYltbdl1dIDwtIGFzLm51bWVyaWMoaWZlbHNlKGJbW3ZdXSAlaW4lIGMoXCJcIiwgXCJuL2RcIiksIE5BLCBiW1t2XV0pKVxuICBiJHByZXN0YW1vc1t3aGljaChiJHByZXN0YW1vcyA8IDApXSA8LSBOQVxuICBiXG59XG5saW1waW8gPC0gY2FyZ2FyX2xpbXBpbygpXG5cbmFfeG1sIDwtIGZ1bmN0aW9uKGQpIHtcbiAgZmlsYXMgPC0gc3ByaW50ZihcbiAgICAnICA8cmVnaXN0cm8+XFxuICAgIDxiaWJsaW90ZWNhPiVzPC9iaWJsaW90ZWNhPlxcbiAgICA8bXVuaWNpcGlvPiVzPC9tdW5pY2lwaW8+XFxuICAgIDxmZWNoYT4lczwvZmVjaGE+XFxuICAgIDxwcmVzdGFtb3M+JXM8L3ByZXN0YW1vcz5cXG4gIDwvcmVnaXN0cm8+JyxcbiAgICBkJGJpYmxpb3RlY2EsIGQkbXVuaWNpcGlvLCBkJGZlY2hhLCBpZmVsc2UoaXMubmEoZCRwcmVzdGFtb3MpLCBcIlwiLCBkJHByZXN0YW1vcykpXG4gIHBhc3RlMCgnPD94bWwgdmVyc2lvbj1cIjEuMFwiIGVuY29kaW5nPVwiVVRGLThcIj8+XFxuPHByZXN0YW1vc19iaWJsaW90ZWNhcz5cXG4nLFxuICAgICAgICAgcGFzdGUoZmlsYXMsIGNvbGxhcHNlID0gXCJcXG5cIiksICdcXG48L3ByZXN0YW1vc19iaWJsaW90ZWNhcz4nKVxufVxueG1sIDwtIGFfeG1sKGxpbXBpbylcbmNhdChzdWJzdHIoeG1sLCAxLCA1MjApKSJ9
+</script>
+</div>
+<p>Un documento XML está <strong>bien formado</strong> si tiene un único elemento raíz y cada etiqueta que se abre se cierra. Contar etiquetas de apertura y cierre es una comprobación rápida:</p>
+<div>
+<div id="webr-2" class="exercise-cell">
+
+</div>
+<script type="webr-2-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiY29udGFyIDwtIGZ1bmN0aW9uKHRleHRvLCBwYXRyb24pIGxlbmd0aHMocmVnbWF0Y2hlcyh0ZXh0bywgZ3JlZ2V4cHIocGF0cm9uLCB0ZXh0bywgZml4ZWQgPSBUUlVFKSkpXG5jKGFicmVuID0gY29udGFyKHhtbCwgXCI8cmVnaXN0cm8+XCIpLCBjaWVycmFuID0gY29udGFyKHhtbCwgXCI8L3JlZ2lzdHJvPlwiKSkifQ==
+</script>
+</div>
+</section>
+<section id="ejercicio-4.1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-4.1">Ejercicio 4.1</h3>
+<p>¿Cuántos elementos <code>&lt;prestamos&gt;</code> <strong>vacíos</strong> (sin valor, porque el dato era ausente o erróneo) hay en el XML? Busca la cadena exacta de un elemento vacío.</p>
+<script type="exercise-setup-t4_xml-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfeG1sIiwic2V0dXAiOnRydWV9LCJjb2RlIjoiYiA8LSByZWFkLmNzdihcImRhdG9zL3ByZXN0YW1vc19iaWJsaW90ZWNhc19wcmFjdGljYS5jc3ZcIiwgY29sQ2xhc3NlcyA9IFwiY2hhcmFjdGVyXCIpXG5iIDwtIGJbIWR1cGxpY2F0ZWQoYiksIF1cbnAgPC0gc3VwcHJlc3NXYXJuaW5ncyhhcy5udW1lcmljKGlmZWxzZShiJHByZXN0YW1vcyAlaW4lIGMoXCJcIiwgXCJuL2RcIiksIE5BLCBiJHByZXN0YW1vcykpKVxucFt3aGljaChwIDwgMCldIDwtIE5BXG54bWwgPC0gcGFzdGUwKFwiPHByZXN0YW1vc19iaWJsaW90ZWNhcz5cIixcbiAgICAgICAgICAgICAgcGFzdGUwKFwiPHJlZ2lzdHJvPjxwcmVzdGFtb3M+XCIsIGlmZWxzZShpcy5uYShwKSwgXCJcIiwgcCksIFwiPC9wcmVzdGFtb3M+PC9yZWdpc3Rybz5cIiwgY29sbGFwc2UgPSBcIlwiKSxcbiAgICAgICAgICAgICAgXCI8L3ByZXN0YW1vc19iaWJsaW90ZWNhcz5cIilcbmNvbnRhciA8LSBmdW5jdGlvbih0ZXh0bywgcGF0cm9uKSBsZW5ndGhzKHJlZ21hdGNoZXModGV4dG8sIGdyZWdleHByKHBhdHJvbiwgdGV4dG8sIGZpeGVkID0gVFJVRSkpKSJ9
+</script>
+<div>
+<div id="webr-4" class="exercise-cell">
+
+</div>
+<script type="webr-4-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfeG1sIn0sImNvZGUiOiJjb250YXIoeG1sLCBcIl9fX19fX1wiKSJ9
+</script>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="t4_xml">
+<p>Un elemento vacío es la etiqueta de apertura seguida inmediatamente de la de cierre: <code>&lt;prestamos&gt;&lt;/prestamos&gt;</code>.</p>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t4_xml">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">contar</span>(xml, <span class="st">"&lt;prestamos&gt;&lt;/prestamos&gt;"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Dos: el «n/d» y el valor negativo que marcamos como ausente en el Tema 3. En XML también podría omitirse el elemento o marcarse con el atributo <code>xsi:nil="true"</code>.</p>
+</div>
+<script type="exercise-check-t4_xml-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ0X3htbCJ9LCJjb2RlIjoiYiA8LSByZWFkLmNzdihcImRhdG9zL3ByZXN0YW1vc19iaWJsaW90ZWNhc19wcmFjdGljYS5jc3ZcIiwgY29sQ2xhc3NlcyA9IFwiY2hhcmFjdGVyXCIpXG5iIDwtIGJbIWR1cGxpY2F0ZWQoYiksIF1cbnAgPC0gc3VwcHJlc3NXYXJuaW5ncyhhcy5udW1lcmljKGlmZWxzZShiJHByZXN0YW1vcyAlaW4lIGMoXCJcIiwgXCJuL2RcIiksIE5BLCBiJHByZXN0YW1vcykpKVxucFt3aGljaChwIDwgMCldIDwtIE5BXG5lc3AgPC0gc3VtKGlzLm5hKHApKVxuaWYgKGlzVFJVRShhbGwuZXF1YWwoYXMubnVtZXJpYygucmVzdWx0KSwgZXNwKSkpIHtcbiAgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IHBhc3RlMChcIkNvcnJlY3RvOiBcIiwgZXNwLCBcIiBlbGVtZW50b3MgdmFjw61vcywgcXVlIGNvcnJlc3BvbmRlbiBhIGxvcyBwcsOpc3RhbW9zIGF1c2VudGVzIG8gZXJyw7NuZW9zLlwiKSlcbn0gZWxzZSB7XG4gIGxpc3QoY29ycmVjdCA9IEZBTFNFLCBtZXNzYWdlID0gXCJCdXNjYSBsYSBjYWRlbmEgY29tcGxldGEgPHByZXN0YW1vcz48L3ByZXN0YW1vcz4sIHNpbiBlc3BhY2lvcy5cIilcbn0ifQ==
+</script>
+</section>
+<section id="paso-2.-de-csv-a-json-apartado-4" class="level3">
+<h3 class="anchored" data-anchor-id="paso-2.-de-csv-a-json-apartado-4">Paso 2. De CSV a JSON (apartado 4)</h3>
+<p><code>jsonlite::toJSON()</code> convierte cada fila en un objeto JSON:</p>
+<div>
+<div id="webr-6" class="exercise-cell">
+
+</div>
+<script type="webr-6-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiY2F0KGpzb25saXRlOjp0b0pTT04oaGVhZChsaW1waW8sIDIpLCBwcmV0dHkgPSBUUlVFKSkifQ==
+</script>
+</div>
+<p>El JSON es más fácil de consumir desde una API, pero <code>"municipio": "Getafe"</code> sigue siendo solo una cadena de texto: ¿qué Getafe? (en Filipinas hay otro). Ahí entran las URI.</p>
+</section>
+<section id="paso-3.-json-ld-con-schema.org-apartados-4-y-6" class="level3">
+<h3 class="anchored" data-anchor-id="paso-3.-json-ld-con-schema.org-apartados-4-y-6">Paso 3. JSON-LD con schema.org (apartados 4 y 6)</h3>
+<p>Asignamos a cada municipio su URI de Wikidata y describimos las bibliotecas como <code>schema:Library</code>.</p>
+<div>
+<div id="webr-7" class="exercise-cell">
+
+</div>
+<script type="webr-7-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoid2lraWRhdGEgPC0gYyhHZXRhZmUgPSBcIlE4ODAyXCIsIFwiTGVnYW7DqXNcIiA9IFwiUTc3NDMzXCIsIFwiQWxjb3Jjw7NuXCIgPSBcIlExMDM3MlwiLFxuICAgICAgICAgICAgICBcIk3Ds3N0b2xlc1wiID0gXCJRMTg3ODI2XCIsIEZ1ZW5sYWJyYWRhID0gXCJRNTQ5MDJcIilcblxuYmlibGlvdGVjYXMgPC0gdW5pcXVlKGxpbXBpb1ssIGMoXCJiaWJsaW90ZWNhXCIsIFwibXVuaWNpcGlvXCIpXSlcbmJpYmxpb3RlY2FzJGlkIDwtIHBhc3RlMChcImh0dHBzOi8vZWplbXBsby5vcmcvYmlibGlvdGVjYS9cIixcbiAgICAgICAgICAgICAgICAgICAgICAgICBnc3ViKFwiIFwiLCBcIi1cIiwgdG9sb3dlcihzdWIoXCJCaWJsaW90ZWNhIE11bmljaXBhbCBcIiwgXCJcIiwgYmlibGlvdGVjYXMkYmlibGlvdGVjYSkpKSlcbmJpYmxpb3RlY2FzIn0=
+</script>
+</div>
+<div>
+<div id="webr-8" class="exercise-cell">
+
+</div>
+<script type="webr-8-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiYV9qc29ubGQgPC0gZnVuY3Rpb24oZmlsYSkge1xuICBsaXN0KFxuICAgIFwiQGNvbnRleHRcIiA9IFwiaHR0cHM6Ly9zY2hlbWEub3JnL1wiLFxuICAgIFwiQHR5cGVcIiA9IFwiTGlicmFyeVwiLFxuICAgIFwiQGlkXCIgPSBmaWxhJGlkLFxuICAgIFwibmFtZVwiID0gZmlsYSRiaWJsaW90ZWNhLFxuICAgIFwiY29udGFpbmVkSW5QbGFjZVwiID0gbGlzdChcbiAgICAgIFwiQGlkXCIgPSBwYXN0ZTAoXCJodHRwOi8vd3d3Lndpa2lkYXRhLm9yZy9lbnRpdHkvXCIsIHdpa2lkYXRhW1tmaWxhJG11bmljaXBpb11dKSxcbiAgICAgIFwibmFtZVwiID0gZmlsYSRtdW5pY2lwaW9cbiAgICApXG4gIClcbn1cbmNhdChqc29ubGl0ZTo6dG9KU09OKGFfanNvbmxkKGJpYmxpb3RlY2FzWzEsIF0pLCBhdXRvX3VuYm94ID0gVFJVRSwgcHJldHR5ID0gVFJVRSkpIn0=
+</script>
+</div>
+<p>El <code>@context</code> dice que <code>name</code> significa <code>https://schema.org/name</code> y <code>Library</code> significa <code>https://schema.org/Library</code>. Copia el resultado en el <a href="https://json-ld.org/playground/">JSON-LD Playground</a> y mira la pestaña <em>N-Quads</em>: son las tripletas RDF.</p>
+</section>
+<section id="paso-4.-turtle-apartado-5" class="level3">
+<h3 class="anchored" data-anchor-id="paso-4.-turtle-apartado-5">Paso 4. Turtle (apartado 5)</h3>
+<p>La misma información en Turtle. <code>sprintf()</code> rellena una plantilla de texto con valores:</p>
+<div>
+<div id="webr-9" class="exercise-cell">
+
+</div>
+<script type="webr-9-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoicGxhbnRpbGxhIDwtICdAcHJlZml4IHNjaGVtYTogPGh0dHBzOi8vc2NoZW1hLm9yZy8+IC5cbkBwcmVmaXggd2Q6IDxodHRwOi8vd3d3Lndpa2lkYXRhLm9yZy9lbnRpdHkvPiAuXG5cbjwlcz4gYSBzY2hlbWE6TGlicmFyeSA7XG4gICAgc2NoZW1hOm5hbWUgXCIlc1wiQGVzIDtcbiAgICBzY2hlbWE6Y29udGFpbmVkSW5QbGFjZSB3ZDolcyAuJ1xuXG5iIDwtIGJpYmxpb3RlY2FzWzEsIF1cbmNhdChzcHJpbnRmKHBsYW50aWxsYSwgYiRpZCwgYiRiaWJsaW90ZWNhLCB3aWtpZGF0YVtbYiRtdW5pY2lwaW9dXSkpIn0=
+</script>
+</div>
+</section>
+<section id="ejercicio-4.2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-4.2">Ejercicio 4.2</h3>
+<p>Completa el Turtle de la Biblioteca Municipal Norte, de Leganés: falta la clase de schema.org y la entidad de Wikidata del municipio (está en el vector <code>wikidata</code>).</p>
+<script type="exercise-setup-t4_turtle-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfdHVydGxlIiwic2V0dXAiOnRydWV9LCJjb2RlIjoid2lraWRhdGEgPC0gYyhHZXRhZmUgPSBcIlE4ODAyXCIsIFwiTGVnYW7DqXNcIiA9IFwiUTc3NDMzXCIsIFwiQWxjb3Jjw7NuXCIgPSBcIlExMDM3MlwiLFxuICAgICAgICAgICAgICBcIk3Ds3N0b2xlc1wiID0gXCJRMTg3ODI2XCIsIEZ1ZW5sYWJyYWRhID0gXCJRNTQ5MDJcIikifQ==
+</script>
+<div>
+<div id="webr-11" class="exercise-cell">
+
+</div>
+<script type="webr-11-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfdHVydGxlIn0sImNvZGUiOiJ0dGwgPC0gJ0BwcmVmaXggc2NoZW1hOiA8aHR0cHM6Ly9zY2hlbWEub3JnLz4gLlxuQHByZWZpeCB3ZDogPGh0dHA6Ly93d3cud2lraWRhdGEub3JnL2VudGl0eS8+IC5cblxuPGh0dHBzOi8vZWplbXBsby5vcmcvYmlibGlvdGVjYS9ub3J0ZT4gYSBzY2hlbWE6X19fX19fIDtcbiAgICBzY2hlbWE6bmFtZSBcIkJpYmxpb3RlY2EgTXVuaWNpcGFsIE5vcnRlXCJAZXMgO1xuICAgIHNjaGVtYTpjb250YWluZWRJblBsYWNlIHdkOl9fX19fXyAuJ1xuY2F0KHR0bClcbnR0bCJ9
+</script>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="t4_turtle">
+<p>La clase es la misma que en el ejemplo. Para la entidad, escribe <code>wikidata[["Leganés"]]</code> en otra línea para consultarla.</p>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t4_turtle">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ttl <span class="ot">&lt;-</span> <span class="st">'@prefix schema: &lt;https://schema.org/&gt; .</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="st">@prefix wd: &lt;http://www.wikidata.org/entity/&gt; .</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;https://ejemplo.org/biblioteca/norte&gt; a schema:Library ;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="st">    schema:name "Biblioteca Municipal Norte"@es ;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="st">    schema:containedInPlace wd:Q77433 .'</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<script type="exercise-check-t4_turtle-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ0X3R1cnRsZSJ9LCJjb2RlIjoidCA8LSBpZiAoaXMuY2hhcmFjdGVyKC5yZXN1bHQpKSAucmVzdWx0IGVsc2UgXCJcIlxuaWYgKCFncmVwbChcImEgc2NoZW1hOkxpYnJhcnkgO1wiLCB0LCBmaXhlZCA9IFRSVUUpKSB7XG4gIGxpc3QoY29ycmVjdCA9IEZBTFNFLCBtZXNzYWdlID0gXCJMYSBjbGFzZSBkZWJlIHNlciBzY2hlbWE6TGlicmFyeS5cIilcbn0gZWxzZSBpZiAoIWdyZXBsKFwid2Q6UTc3NDMzIC5cIiwgdCwgZml4ZWQgPSBUUlVFKSkge1xuICBsaXN0KGNvcnJlY3QgPSBGQUxTRSwgbWVzc2FnZSA9IFwiTGEgZW50aWRhZCBkZSBMZWdhbsOpcyBlbiBXaWtpZGF0YSBlcyBvdHJhOiBjb25zw7psdGFsYSBjb24gd2lraWRhdGFbW1xcXCJMZWdhbsOpc1xcXCJdXS5cIilcbn0gZWxzZSB7XG4gIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBcIkNvcnJlY3RvOiBhaG9yYSBsYSBiaWJsaW90ZWNhIGVzdMOhIGVubGF6YWRhIChjdWFydG8gcHJpbmNpcGlvKSBjb24gdW5hIGVudGlkYWQgcXVlIG90cm9zIHRhbWJpw6luIHVzYW4uXCIpXG59In0=
+</script>
+</section>
+<section id="paso-5.-consultas-sobre-un-grafo-apartado-5" class="level3">
+<h3 class="anchored" data-anchor-id="paso-5.-consultas-sobre-un-grafo-apartado-5">Paso 5. Consultas sobre un grafo (apartado 5)</h3>
+<p>Un grafo RDF es, en el fondo, una tabla de tres columnas: sujeto, predicado y objeto. Este pequeño grafo describe las bibliotecas y sus actividades culturales:</p>
+<div>
+<div id="webr-13" class="exercise-cell">
+
+</div>
+<script type="webr-13-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZ3JhZm8gPC0gcmVhZC50YWJsZShoZWFkZXIgPSBUUlVFLCBzdHJpbmdzQXNGYWN0b3JzID0gRkFMU0UsIHRleHQgPSAnXG5zICAgICAgICAgICAgICAgIHAgICAgICAgICAgICAgICAgICAgICAgICAgIG9cbmV4OmNlbnRybyAgICAgICAgcmRmOnR5cGUgICAgICAgICAgICAgICAgICAgc2NoZW1hOkxpYnJhcnlcbmV4OmNlbnRybyAgICAgICAgc2NoZW1hOmNvbnRhaW5lZEluUGxhY2UgICAgd2Q6UTg4MDJcbmV4OnN1ciAgICAgICAgICAgcmRmOnR5cGUgICAgICAgICAgICAgICAgICAgc2NoZW1hOkxpYnJhcnlcbmV4OnN1ciAgICAgICAgICAgc2NoZW1hOmNvbnRhaW5lZEluUGxhY2UgICAgd2Q6UTg4MDJcbmV4Om5vcnRlICAgICAgICAgcmRmOnR5cGUgICAgICAgICAgICAgICAgICAgc2NoZW1hOkxpYnJhcnlcbmV4Om5vcnRlICAgICAgICAgc2NoZW1hOmNvbnRhaW5lZEluUGxhY2UgICAgd2Q6UTc3NDMzXG5leDpwYXJxdWUgICAgICAgIHJkZjp0eXBlICAgICAgICAgICAgICAgICAgIHNjaGVtYTpMaWJyYXJ5XG5leDpwYXJxdWUgICAgICAgIHNjaGVtYTpjb250YWluZWRJblBsYWNlICAgIHdkOlExMDM3MlxuZXg6YWN0MSAgICAgICAgICByZGY6dHlwZSAgICAgICAgICAgICAgICAgICBzY2hlbWE6RXZlbnRcbmV4OmFjdDEgICAgICAgICAgc2NoZW1hOmxvY2F0aW9uICAgICAgICAgICAgZXg6Y2VudHJvXG5leDphY3QxICAgICAgICAgIHNjaGVtYTphYm91dCAgICAgICAgICAgICAgIFwiQ2x1YiBkZSBsZWN0dXJhXCJcbmV4OmFjdDIgICAgICAgICAgcmRmOnR5cGUgICAgICAgICAgICAgICAgICAgc2NoZW1hOkV2ZW50XG5leDphY3QyICAgICAgICAgIHNjaGVtYTpsb2NhdGlvbiAgICAgICAgICAgIGV4OmNlbnRyb1xuZXg6YWN0MiAgICAgICAgICBzY2hlbWE6YWJvdXQgICAgICAgICAgICAgICBcIlRhbGxlciBkZSBkYXRvcyBhYmllcnRvc1wiXG5leDphY3QzICAgICAgICAgIHJkZjp0eXBlICAgICAgICAgICAgICAgICAgIHNjaGVtYTpFdmVudFxuZXg6YWN0MyAgICAgICAgICBzY2hlbWE6bG9jYXRpb24gICAgICAgICAgICBleDpzdXJcbmV4OmFjdDMgICAgICAgICAgc2NoZW1hOmFib3V0ICAgICAgICAgICAgICAgXCJDdWVudGFjdWVudG9zXCJcbmV4OmFjdDQgICAgICAgICAgcmRmOnR5cGUgICAgICAgICAgICAgICAgICAgc2NoZW1hOkV2ZW50XG5leDphY3Q0ICAgICAgICAgIHNjaGVtYTpsb2NhdGlvbiAgICAgICAgICAgIGV4Om5vcnRlXG5leDphY3Q0ICAgICAgICAgIHNjaGVtYTphYm91dCAgICAgICAgICAgICAgIFwiQ2x1YiBkZSBsZWN0dXJhXCJcbmV4OmFjdDUgICAgICAgICAgcmRmOnR5cGUgICAgICAgICAgICAgICAgICAgc2NoZW1hOkV2ZW50XG5leDphY3Q1ICAgICAgICAgIHNjaGVtYTpsb2NhdGlvbiAgICAgICAgICAgIGV4OmNlbnRyb1xuZXg6YWN0NSAgICAgICAgICBzY2hlbWE6YWJvdXQgICAgICAgICAgICAgICBcIkFsZmFiZXRpemFjacOzbiBkaWdpdGFsXCJcbmV4OmFjdDYgICAgICAgICAgcmRmOnR5cGUgICAgICAgICAgICAgICAgICAgc2NoZW1hOkV2ZW50XG5leDphY3Q2ICAgICAgICAgIHNjaGVtYTpsb2NhdGlvbiAgICAgICAgICAgIGV4OnBhcnF1ZVxuZXg6YWN0NiAgICAgICAgICBzY2hlbWE6YWJvdXQgICAgICAgICAgICAgICBcIlRhbGxlciBkZSBkYXRvcyBhYmllcnRvc1wiXG4nKVxuZ3JhZm8ifQ==
+</script>
+</div>
+<p>Una consulta SPARQL busca tripletas que encajen con un <strong>patrón</strong>. Por ejemplo, «¿qué bibliotecas están en Getafe?»:</p>
+<pre class="sparql"><code>PREFIX schema: &lt;https://schema.org/&gt;
+PREFIX wd: &lt;http://www.wikidata.org/entity/&gt;
+SELECT ?biblioteca WHERE {
+  ?biblioteca a schema:Library ;
+              schema:containedInPlace wd:Q8802 .
+}</code></pre>
+<p>En R, el mismo patrón es un filtro sobre la tabla de tripletas:</p>
+<div>
+<div id="webr-14" class="exercise-cell">
+
+</div>
+<script type="webr-14-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic3Vic2V0KGdyYWZvLCBwID09IFwic2NoZW1hOmNvbnRhaW5lZEluUGxhY2VcIiAmIG8gPT0gXCJ3ZDpRODgwMlwiKSRzIn0=
+</script>
+</div>
+<p>Cuando el patrón tiene dos tripletas encadenadas por una variable, la operación equivalente es una <strong>unión</strong> (<code>merge()</code>). «¿Qué actividades hay en bibliotecas de Getafe?»:</p>
+<pre class="sparql"><code>SELECT ?actividad ?tema WHERE {
+  ?actividad schema:location ?biblioteca ;
+             schema:about ?tema .
+  ?biblioteca schema:containedInPlace wd:Q8802 .
+}</code></pre>
+<div>
+<div id="webr-15" class="exercise-cell">
+
+</div>
+<script type="webr-15-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibHVnYXIgPC0gc3Vic2V0KGdyYWZvLCBwID09IFwic2NoZW1hOmxvY2F0aW9uXCIpWywgYyhcInNcIiwgXCJvXCIpXVxubmFtZXMobHVnYXIpIDwtIGMoXCJhY3RpdmlkYWRcIiwgXCJiaWJsaW90ZWNhXCIpXG50ZW1hIDwtIHN1YnNldChncmFmbywgcCA9PSBcInNjaGVtYTphYm91dFwiKVssIGMoXCJzXCIsIFwib1wiKV1cbm5hbWVzKHRlbWEpIDwtIGMoXCJhY3RpdmlkYWRcIiwgXCJ0ZW1hXCIpXG5lbl9nZXRhZmUgPC0gZGF0YS5mcmFtZShiaWJsaW90ZWNhID0gc3Vic2V0KGdyYWZvLCBwID09IFwic2NoZW1hOmNvbnRhaW5lZEluUGxhY2VcIiAmIG8gPT0gXCJ3ZDpRODgwMlwiKSRzKVxuXG5yZXN1bHRhZG8gPC0gbWVyZ2UobWVyZ2UobHVnYXIsIHRlbWEpLCBlbl9nZXRhZmUpXG5yZXN1bHRhZG8ifQ==
+</script>
+</div>
+</section>
+<section id="ejercicio-4.3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-4.3">Ejercicio 4.3</h3>
+<p>¿Cuántas filas devuelve esta consulta? Resuélvela en R.</p>
+<pre class="sparql"><code>SELECT ?actividad WHERE {
+  ?actividad schema:location ex:centro .
+}</code></pre>
+<script type="exercise-setup-t4_centro-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfY2VudHJvIiwic2V0dXAiOnRydWV9LCJjb2RlIjoiZ3JhZm8gPC0gcmVhZC50YWJsZShoZWFkZXIgPSBUUlVFLCBzdHJpbmdzQXNGYWN0b3JzID0gRkFMU0UsIHRleHQgPSAnXG5zIHAgb1xuZXg6Y2VudHJvIHJkZjp0eXBlIHNjaGVtYTpMaWJyYXJ5XG5leDpjZW50cm8gc2NoZW1hOmNvbnRhaW5lZEluUGxhY2Ugd2Q6UTg4MDJcbmV4OnN1ciByZGY6dHlwZSBzY2hlbWE6TGlicmFyeVxuZXg6c3VyIHNjaGVtYTpjb250YWluZWRJblBsYWNlIHdkOlE4ODAyXG5leDpub3J0ZSByZGY6dHlwZSBzY2hlbWE6TGlicmFyeVxuZXg6bm9ydGUgc2NoZW1hOmNvbnRhaW5lZEluUGxhY2Ugd2Q6UTc3NDMzXG5leDpwYXJxdWUgcmRmOnR5cGUgc2NoZW1hOkxpYnJhcnlcbmV4OnBhcnF1ZSBzY2hlbWE6Y29udGFpbmVkSW5QbGFjZSB3ZDpRMTAzNzJcbmV4OmFjdDEgcmRmOnR5cGUgc2NoZW1hOkV2ZW50XG5leDphY3QxIHNjaGVtYTpsb2NhdGlvbiBleDpjZW50cm9cbmV4OmFjdDEgc2NoZW1hOmFib3V0IFwiQ2x1YiBkZSBsZWN0dXJhXCJcbmV4OmFjdDIgcmRmOnR5cGUgc2NoZW1hOkV2ZW50XG5leDphY3QyIHNjaGVtYTpsb2NhdGlvbiBleDpjZW50cm9cbmV4OmFjdDIgc2NoZW1hOmFib3V0IFwiVGFsbGVyIGRlIGRhdG9zIGFiaWVydG9zXCJcbmV4OmFjdDMgcmRmOnR5cGUgc2NoZW1hOkV2ZW50XG5leDphY3QzIHNjaGVtYTpsb2NhdGlvbiBleDpzdXJcbmV4OmFjdDMgc2NoZW1hOmFib3V0IFwiQ3VlbnRhY3VlbnRvc1wiXG5leDphY3Q0IHJkZjp0eXBlIHNjaGVtYTpFdmVudFxuZXg6YWN0NCBzY2hlbWE6bG9jYXRpb24gZXg6bm9ydGVcbmV4OmFjdDQgc2NoZW1hOmFib3V0IFwiQ2x1YiBkZSBsZWN0dXJhXCJcbmV4OmFjdDUgcmRmOnR5cGUgc2NoZW1hOkV2ZW50XG5leDphY3Q1IHNjaGVtYTpsb2NhdGlvbiBleDpjZW50cm9cbmV4OmFjdDUgc2NoZW1hOmFib3V0IFwiQWxmYWJldGl6YWNpw7NuIGRpZ2l0YWxcIlxuZXg6YWN0NiByZGY6dHlwZSBzY2hlbWE6RXZlbnRcbmV4OmFjdDYgc2NoZW1hOmxvY2F0aW9uIGV4OnBhcnF1ZVxuZXg6YWN0NiBzY2hlbWE6YWJvdXQgXCJUYWxsZXIgZGUgZGF0b3MgYWJpZXJ0b3NcIlxuJykifQ==
+</script>
+<div>
+<div id="webr-17" class="exercise-cell">
+
+</div>
+<script type="webr-17-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfY2VudHJvIn0sImNvZGUiOiJucm93KHN1YnNldChncmFmbywgcCA9PSBcIl9fX19fX1wiICYgbyA9PSBcIl9fX19fX1wiKSkifQ==
+</script>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t4_centro">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(<span class="fu">subset</span>(grafo, p <span class="sc">==</span> <span class="st">"schema:location"</span> <span class="sc">&amp;</span> o <span class="sc">==</span> <span class="st">"ex:centro"</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<script type="exercise-check-t4_centro-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ0X2NlbnRybyJ9LCJjb2RlIjoiaWYgKGlkZW50aWNhbChhcy5pbnRlZ2VyKC5yZXN1bHQpLCAzTCkpIHtcbiAgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IFwiQ29ycmVjdG86IHRyZXMgYWN0aXZpZGFkZXMgKGFjdDEsIGFjdDIgeSBhY3Q1KS5cIilcbn0gZWxzZSB7XG4gIGxpc3QoY29ycmVjdCA9IEZBTFNFLCBtZXNzYWdlID0gXCJFbCBwcmVkaWNhZG8gZXMgc2NoZW1hOmxvY2F0aW9uIHkgZWwgb2JqZXRvLCBleDpjZW50cm8uXCIpXG59In0=
+</script>
+</section>
+<section id="ejercicio-4.4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-4.4">Ejercicio 4.4</h3>
+<p>¿En cuántas bibliotecas <strong>distintas</strong> se celebra un «Taller de datos abiertos»? Equivale a <code>SELECT (COUNT(DISTINCT ?biblioteca) AS ?n)</code>.</p>
+<script type="exercise-setup-t4_taller-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfdGFsbGVyIiwic2V0dXAiOnRydWV9LCJjb2RlIjoiZ3JhZm8gPC0gcmVhZC50YWJsZShoZWFkZXIgPSBUUlVFLCBzdHJpbmdzQXNGYWN0b3JzID0gRkFMU0UsIHRleHQgPSAnXG5zIHAgb1xuZXg6Y2VudHJvIHNjaGVtYTpjb250YWluZWRJblBsYWNlIHdkOlE4ODAyXG5leDpzdXIgc2NoZW1hOmNvbnRhaW5lZEluUGxhY2Ugd2Q6UTg4MDJcbmV4Om5vcnRlIHNjaGVtYTpjb250YWluZWRJblBsYWNlIHdkOlE3NzQzM1xuZXg6cGFycXVlIHNjaGVtYTpjb250YWluZWRJblBsYWNlIHdkOlExMDM3MlxuZXg6YWN0MSBzY2hlbWE6bG9jYXRpb24gZXg6Y2VudHJvXG5leDphY3QxIHNjaGVtYTphYm91dCBcIkNsdWIgZGUgbGVjdHVyYVwiXG5leDphY3QyIHNjaGVtYTpsb2NhdGlvbiBleDpjZW50cm9cbmV4OmFjdDIgc2NoZW1hOmFib3V0IFwiVGFsbGVyIGRlIGRhdG9zIGFiaWVydG9zXCJcbmV4OmFjdDMgc2NoZW1hOmxvY2F0aW9uIGV4OnN1clxuZXg6YWN0MyBzY2hlbWE6YWJvdXQgXCJDdWVudGFjdWVudG9zXCJcbmV4OmFjdDQgc2NoZW1hOmxvY2F0aW9uIGV4Om5vcnRlXG5leDphY3Q0IHNjaGVtYTphYm91dCBcIkNsdWIgZGUgbGVjdHVyYVwiXG5leDphY3Q1IHNjaGVtYTpsb2NhdGlvbiBleDpjZW50cm9cbmV4OmFjdDUgc2NoZW1hOmFib3V0IFwiQWxmYWJldGl6YWNpw7NuIGRpZ2l0YWxcIlxuZXg6YWN0NiBzY2hlbWE6bG9jYXRpb24gZXg6cGFycXVlXG5leDphY3Q2IHNjaGVtYTphYm91dCBcIlRhbGxlciBkZSBkYXRvcyBhYmllcnRvc1wiXG4nKVxubHVnYXIgPC0gc3Vic2V0KGdyYWZvLCBwID09IFwic2NoZW1hOmxvY2F0aW9uXCIpWywgYyhcInNcIiwgXCJvXCIpXVxubmFtZXMobHVnYXIpIDwtIGMoXCJhY3RpdmlkYWRcIiwgXCJiaWJsaW90ZWNhXCIpXG50ZW1hIDwtIHN1YnNldChncmFmbywgcCA9PSBcInNjaGVtYTphYm91dFwiKVssIGMoXCJzXCIsIFwib1wiKV1cbm5hbWVzKHRlbWEpIDwtIGMoXCJhY3RpdmlkYWRcIiwgXCJ0ZW1hXCIpIn0=
+</script>
+<div>
+<div id="webr-20" class="exercise-cell">
+
+</div>
+<script type="webr-20-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfdGFsbGVyIn0sImNvZGUiOiJhY3RpdmlkYWRlcyA8LSBtZXJnZShsdWdhciwgdGVtYSlcbnRhbGxlcmVzIDwtIHN1YnNldChhY3RpdmlkYWRlcywgdGVtYSA9PSBcIl9fX19fX1wiKVxubGVuZ3RoKHVuaXF1ZSh0YWxsZXJlcyRfX19fX18pKSJ9
+</script>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="t4_taller">
+<p>Primero filtra por el tema exacto; después cuenta los valores únicos de la columna <code>biblioteca</code>.</p>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t4_taller">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>actividades <span class="ot">&lt;-</span> <span class="fu">merge</span>(lugar, tema)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>talleres <span class="ot">&lt;-</span> <span class="fu">subset</span>(actividades, tema <span class="sc">==</span> <span class="st">"Taller de datos abiertos"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(<span class="fu">unique</span>(talleres<span class="sc">$</span>biblioteca))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<script type="exercise-check-t4_taller-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ0X3RhbGxlciJ9LCJjb2RlIjoiaWYgKGlkZW50aWNhbChhcy5pbnRlZ2VyKC5yZXN1bHQpLCAyTCkpIHtcbiAgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IFwiQ29ycmVjdG86IGRvcyBiaWJsaW90ZWNhcyAoZXg6Y2VudHJvIHkgZXg6cGFycXVlKS5cIilcbn0gZWxzZSB7XG4gIGxpc3QoY29ycmVjdCA9IEZBTFNFLCBtZXNzYWdlID0gXCJDb21wcnVlYmEgcXVlIGVsIHRlbWEgZXN0w6EgZXNjcml0byBleGFjdGFtZW50ZSBpZ3VhbCwgY29uIG1hecO6c2N1bGEgaW5pY2lhbC5cIilcbn0ifQ==
+</script>
+</section>
+<section id="paso-6.-un-vocabulario-controlado-en-skos-apartado-6" class="level3">
+<h3 class="anchored" data-anchor-id="paso-6.-un-vocabulario-controlado-en-skos-apartado-6">Paso 6. Un vocabulario controlado en SKOS (apartado 6)</h3>
+<p>Un pequeño esquema de conceptos para clasificar las actividades de las bibliotecas. <code>skos:broader</code> apunta al concepto más general:</p>
+<div>
+<div id="webr-22" class="exercise-cell">
+
+</div>
+<script type="webr-22-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic2tvcyA8LSByZWFkLnRhYmxlKGhlYWRlciA9IFRSVUUsIHN0cmluZ3NBc0ZhY3RvcnMgPSBGQUxTRSwgdGV4dCA9ICdcbmNvbmNlcHRvICAgICAgICAgICAgICAgICBwcm9waWVkYWQgICAgICAgIHZhbG9yXG5leDphY3RpdmlkYWRlcyAgICAgICAgICAgc2tvczpwcmVmTGFiZWwgICBcIkFjdGl2aWRhZGVzIGN1bHR1cmFsZXNcIlxuZXg6Zm9tZW50b19sZWN0dXJhICAgICAgIHNrb3M6cHJlZkxhYmVsICAgXCJGb21lbnRvIGRlIGxhIGxlY3R1cmFcIlxuZXg6Zm9tZW50b19sZWN0dXJhICAgICAgIHNrb3M6YnJvYWRlciAgICAgZXg6YWN0aXZpZGFkZXNcbmV4OmNsdWJfbGVjdHVyYSAgICAgICAgICBza29zOnByZWZMYWJlbCAgIFwiQ2x1YiBkZSBsZWN0dXJhXCJcbmV4OmNsdWJfbGVjdHVyYSAgICAgICAgICBza29zOmJyb2FkZXIgICAgIGV4OmZvbWVudG9fbGVjdHVyYVxuZXg6Y3VlbnRhY3VlbnRvcyAgICAgICAgIHNrb3M6cHJlZkxhYmVsICAgXCJDdWVudGFjdWVudG9zXCJcbmV4OmN1ZW50YWN1ZW50b3MgICAgICAgICBza29zOmJyb2FkZXIgICAgIGV4OmZvbWVudG9fbGVjdHVyYVxuZXg6Zm9ybWFjaW9uICAgICAgICAgICAgIHNrb3M6cHJlZkxhYmVsICAgXCJGb3JtYWNpw7NuXCJcbmV4OmZvcm1hY2lvbiAgICAgICAgICAgICBza29zOmJyb2FkZXIgICAgIGV4OmFjdGl2aWRhZGVzXG5leDphbGZhYmV0aXphY2lvbiAgICAgICAgc2tvczpwcmVmTGFiZWwgICBcIkFsZmFiZXRpemFjacOzbiBkaWdpdGFsXCJcbmV4OmFsZmFiZXRpemFjaW9uICAgICAgICBza29zOmJyb2FkZXIgICAgIGV4OmZvcm1hY2lvblxuZXg6dGFsbGVyX2RhdG9zICAgICAgICAgIHNrb3M6cHJlZkxhYmVsICAgXCJUYWxsZXIgZGUgZGF0b3MgYWJpZXJ0b3NcIlxuZXg6dGFsbGVyX2RhdG9zICAgICAgICAgIHNrb3M6YnJvYWRlciAgICAgZXg6Zm9ybWFjaW9uXG5leDp0YWxsZXJfZGF0b3MgICAgICAgICAgc2tvczpyZWxhdGVkICAgICBleDphbGZhYmV0aXphY2lvblxuJylcbnN1YnNldChza29zLCBwcm9waWVkYWQgPT0gXCJza29zOmJyb2FkZXJcIikifQ==
+</script>
+</div>
+<p>En SPARQL, los conceptos específicos de «Formación» serían:</p>
+<pre class="sparql"><code>SELECT ?concepto WHERE { ?concepto skos:broader ex:formacion . }</code></pre>
+</section>
+<section id="ejercicio-4.5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-4.5">Ejercicio 4.5</h3>
+<p>Obtén las <strong>etiquetas</strong> (<code>skos:prefLabel</code>) de los conceptos cuyo concepto general es <code>ex:fomento_lectura</code>. Necesitas dos pasos: localizar los conceptos y buscar sus etiquetas.</p>
+<script type="exercise-setup-t4_skos-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfc2tvcyIsInNldHVwIjp0cnVlfSwiY29kZSI6InNrb3MgPC0gcmVhZC50YWJsZShoZWFkZXIgPSBUUlVFLCBzdHJpbmdzQXNGYWN0b3JzID0gRkFMU0UsIHRleHQgPSAnXG5jb25jZXB0byBwcm9waWVkYWQgdmFsb3JcbmV4OmFjdGl2aWRhZGVzIHNrb3M6cHJlZkxhYmVsIFwiQWN0aXZpZGFkZXMgY3VsdHVyYWxlc1wiXG5leDpmb21lbnRvX2xlY3R1cmEgc2tvczpwcmVmTGFiZWwgXCJGb21lbnRvIGRlIGxhIGxlY3R1cmFcIlxuZXg6Zm9tZW50b19sZWN0dXJhIHNrb3M6YnJvYWRlciBleDphY3RpdmlkYWRlc1xuZXg6Y2x1Yl9sZWN0dXJhIHNrb3M6cHJlZkxhYmVsIFwiQ2x1YiBkZSBsZWN0dXJhXCJcbmV4OmNsdWJfbGVjdHVyYSBza29zOmJyb2FkZXIgZXg6Zm9tZW50b19sZWN0dXJhXG5leDpjdWVudGFjdWVudG9zIHNrb3M6cHJlZkxhYmVsIFwiQ3VlbnRhY3VlbnRvc1wiXG5leDpjdWVudGFjdWVudG9zIHNrb3M6YnJvYWRlciBleDpmb21lbnRvX2xlY3R1cmFcbmV4OmZvcm1hY2lvbiBza29zOnByZWZMYWJlbCBcIkZvcm1hY2nDs25cIlxuZXg6Zm9ybWFjaW9uIHNrb3M6YnJvYWRlciBleDphY3RpdmlkYWRlc1xuZXg6YWxmYWJldGl6YWNpb24gc2tvczpwcmVmTGFiZWwgXCJBbGZhYmV0aXphY2nDs24gZGlnaXRhbFwiXG5leDphbGZhYmV0aXphY2lvbiBza29zOmJyb2FkZXIgZXg6Zm9ybWFjaW9uXG5leDp0YWxsZXJfZGF0b3Mgc2tvczpwcmVmTGFiZWwgXCJUYWxsZXIgZGUgZGF0b3MgYWJpZXJ0b3NcIlxuZXg6dGFsbGVyX2RhdG9zIHNrb3M6YnJvYWRlciBleDpmb3JtYWNpb25cbmV4OnRhbGxlcl9kYXRvcyBza29zOnJlbGF0ZWQgZXg6YWxmYWJldGl6YWNpb25cbicpIn0=
+</script>
+<div>
+<div id="webr-24" class="exercise-cell">
+
+</div>
+<script type="webr-24-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfc2tvcyJ9LCJjb2RlIjoiZXNwZWNpZmljb3MgPC0gc3Vic2V0KHNrb3MsIHByb3BpZWRhZCA9PSBcInNrb3M6YnJvYWRlclwiICYgdmFsb3IgPT0gXCJfX19fX19cIikkY29uY2VwdG9cbnN1YnNldChza29zLCBwcm9waWVkYWQgPT0gXCJza29zOnByZWZMYWJlbFwiICYgY29uY2VwdG8gJWluJSBfX19fX18pJHZhbG9yIn0=
+</script>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="t4_skos">
+<p>El primer hueco es la URI abreviada del concepto general; el segundo, el vector que acabas de crear.</p>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t4_skos">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>especificos <span class="ot">&lt;-</span> <span class="fu">subset</span>(skos, propiedad <span class="sc">==</span> <span class="st">"skos:broader"</span> <span class="sc">&amp;</span> valor <span class="sc">==</span> <span class="st">"ex:fomento_lectura"</span>)<span class="sc">$</span>concepto</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(skos, propiedad <span class="sc">==</span> <span class="st">"skos:prefLabel"</span> <span class="sc">&amp;</span> concepto <span class="sc">%in%</span> especificos)<span class="sc">$</span>valor</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<script type="exercise-check-t4_skos-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ0X3Nrb3MifSwiY29kZSI6ImlmIChzZXRlcXVhbCgucmVzdWx0LCBjKFwiQ2x1YiBkZSBsZWN0dXJhXCIsIFwiQ3VlbnRhY3VlbnRvc1wiKSkpIHtcbiAgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IFwiQ29ycmVjdG86IMKrQ2x1YiBkZSBsZWN0dXJhwrsgeSDCq0N1ZW50YWN1ZW50b3PCuy4gQXPDrSBmdW5jaW9uYSBsYSBuYXZlZ2FjacOzbiBqZXLDoXJxdWljYSBkZSB1biB0ZXNhdXJvIHB1YmxpY2FkbyBlbiBTS09TLlwiKVxufSBlbHNlIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkZpbHRyYSBwcmltZXJvIHBvciBza29zOmJyb2FkZXIgY29uIHZhbG9yIGV4OmZvbWVudG9fbGVjdHVyYSB5IHVzYSBlc2UgcmVzdWx0YWRvIGNvbiAlaW4lLlwiKVxufSJ9
+</script>
+</section>
+</section>
+<section id="para-practicar-fuera-del-libro" class="level2">
+<h2 class="anchored" data-anchor-id="para-practicar-fuera-del-libro">Para practicar fuera del libro</h2>
+<ul>
+<li>Copia en el <a href="https://json-ld.org/playground/">JSON-LD Playground</a> el JSON-LD de todas las bibliotecas (<code>lapply(split(bibliotecas, seq_len(nrow(bibliotecas))), a_jsonld)</code>) y comprueba que es válido.</li>
+<li>En el <a href="https://query.wikidata.org">Wikidata Query Service</a> lanza una consulta real de bibliotecas de una provincia. Los resultados cambian cada día porque Wikidata se edita continuamente: por eso los ejercicios de este capítulo usan un grafo fijo.</li>
+</ul>
+</section>
+<section id="recursos-complementarios" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-complementarios">Recursos complementarios</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Recurso</th>
+<th>Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://administracionelectronica.gob.es/ctt/eni">Esquema Nacional de Interoperabilidad (PAe)</a></td>
+<td>ENI y sus normas técnicas</td>
+</tr>
+<tr class="even">
+<td><a href="https://interoperable-europe.ec.europa.eu">Interoperable Europe (SEMIC)</a></td>
+<td>EIF, DCAT-AP y vocabularios básicos</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.w3.org/TR/vocab-dcat-3/">W3C DCAT 3</a></td>
+<td>Vocabulario de catálogos de datos</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.w3.org/TR/tabular-data-primer/">W3C CSV on the Web</a></td>
+<td>Metadatos para publicar CSV interoperables</td>
+</tr>
+<tr class="odd">
+<td><a href="https://lov.linkeddata.es/dataset/lov">Linked Open Vocabularies</a></td>
+<td>Buscador de vocabularios RDF</td>
+</tr>
+<tr class="even">
+<td><a href="https://schema.org">schema.org</a></td>
+<td>Vocabulario usado en el capítulo</td>
+</tr>
+<tr class="odd">
+<td><a href="https://query.wikidata.org">Wikidata Query Service</a></td>
+<td>Consultas SPARQL sobre Wikidata</td>
+</tr>
+<tr class="even">
+<td><a href="https://lod-cloud.net">The Linked Open Data Cloud</a></td>
+<td>Mapa de conjuntos de datos enlazados</td>
+</tr>
+<tr class="odd">
+<td><a href="https://datos.bne.es">datos.bne.es</a></td>
+<td>Datos enlazados de la BNE</td>
+</tr>
+<tr class="even">
+<td><a href="https://json-ld.org/playground/">JSON-LD Playground</a></td>
+<td>Validar y convertir JSON-LD</td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="webr-data">
+eyJvcHRpb25zIjp7ImJhc2VVcmwiOiJ3ZWJyLyJ9LCJwYWNrYWdlcyI6eyJwa2dzIjpbImV2YWx1YXRlIiwia25pdHIiLCJodG1sdG9vbHMiLCJqc29ubGl0ZSJdLCJyZXBvcyI6WyJ3ZWJyLXJlcG8iXX0sInJlbmRlcl9kZiI6ImRlZmF1bHQifQ==
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0yNCIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMjQ7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0yNCIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzI0ID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMjQtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICAvLyBEZWZhdWx0IGV4ZXJjaXNlIGNvbmZpZ3VyYXRpb25cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oXG4gICAge1xuICAgICAgaWQ6IFwid2Vici0yNC1jb250ZW50c1wiLFxuICAgICAgZW52aXI6IGBleGVyY2lzZS1lbnYtJHtibG9jay5hdHRyLmV4ZXJjaXNlfWAsXG4gICAgICBlcnJvcjogZmFsc2UsXG4gICAgICBjYXB0aW9uOiAnRXhlcmNpc2UnLFxuICAgIH0sXG4gICAgYmxvY2suYXR0clxuICApO1xuXG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxudmlld29mIF93ZWJyX3ZhbHVlXzI0ID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl8yNCwge30pO1xuX3dlYnJfZmVlZGJhY2tfMjQgPSB7XG4gIGNvbnN0IHsgV2ViUkdyYWRlciB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3QgZW1wdHlGZWVkYmFjayA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuXG4gIGNvbnN0IGdyYWRlciA9IG5ldyBXZWJSR3JhZGVyKF93ZWJyX3ZhbHVlXzI0LmV2YWx1YXRvcik7XG4gIGNvbnN0IGZlZWRiYWNrID0gYXdhaXQgZ3JhZGVyLmdyYWRlRXhlcmNpc2UoKTtcbiAgaWYgKCFmZWVkYmFjaykgcmV0dXJuIGVtcHR5RmVlZGJhY2s7XG4gIHJldHVybiBmZWVkYmFjaztcbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0yMiIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMjI7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0yMiIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzIyID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMjItY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICBjb25zdCBvcHRpb25zID0gT2JqZWN0LmFzc2lnbih7IGlkOiBgd2Vici0yMi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fd2Vicl92YWx1ZV8yMiA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfMjIsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0yMCIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMjA7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0yMCIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzIwID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMjAtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICAvLyBEZWZhdWx0IGV4ZXJjaXNlIGNvbmZpZ3VyYXRpb25cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oXG4gICAge1xuICAgICAgaWQ6IFwid2Vici0yMC1jb250ZW50c1wiLFxuICAgICAgZW52aXI6IGBleGVyY2lzZS1lbnYtJHtibG9jay5hdHRyLmV4ZXJjaXNlfWAsXG4gICAgICBlcnJvcjogZmFsc2UsXG4gICAgICBjYXB0aW9uOiAnRXhlcmNpc2UnLFxuICAgIH0sXG4gICAgYmxvY2suYXR0clxuICApO1xuXG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxudmlld29mIF93ZWJyX3ZhbHVlXzIwID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl8yMCwge30pO1xuX3dlYnJfZmVlZGJhY2tfMjAgPSB7XG4gIGNvbnN0IHsgV2ViUkdyYWRlciB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3QgZW1wdHlGZWVkYmFjayA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuXG4gIGNvbnN0IGdyYWRlciA9IG5ldyBXZWJSR3JhZGVyKF93ZWJyX3ZhbHVlXzIwLmV2YWx1YXRvcik7XG4gIGNvbnN0IGZlZWRiYWNrID0gYXdhaXQgZ3JhZGVyLmdyYWRlRXhlcmNpc2UoKTtcbiAgaWYgKCFmZWVkYmFjaykgcmV0dXJuIGVtcHR5RmVlZGJhY2s7XG4gIHJldHVybiBmZWVkYmFjaztcbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xNyIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMTc7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0xNyIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzE3ID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMTctY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICAvLyBEZWZhdWx0IGV4ZXJjaXNlIGNvbmZpZ3VyYXRpb25cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oXG4gICAge1xuICAgICAgaWQ6IFwid2Vici0xNy1jb250ZW50c1wiLFxuICAgICAgZW52aXI6IGBleGVyY2lzZS1lbnYtJHtibG9jay5hdHRyLmV4ZXJjaXNlfWAsXG4gICAgICBlcnJvcjogZmFsc2UsXG4gICAgICBjYXB0aW9uOiAnRXhlcmNpc2UnLFxuICAgIH0sXG4gICAgYmxvY2suYXR0clxuICApO1xuXG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxudmlld29mIF93ZWJyX3ZhbHVlXzE3ID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl8xNywge30pO1xuX3dlYnJfZmVlZGJhY2tfMTcgPSB7XG4gIGNvbnN0IHsgV2ViUkdyYWRlciB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3QgZW1wdHlGZWVkYmFjayA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuXG4gIGNvbnN0IGdyYWRlciA9IG5ldyBXZWJSR3JhZGVyKF93ZWJyX3ZhbHVlXzE3LmV2YWx1YXRvcik7XG4gIGNvbnN0IGZlZWRiYWNrID0gYXdhaXQgZ3JhZGVyLmdyYWRlRXhlcmNpc2UoKTtcbiAgaWYgKCFmZWVkYmFjaykgcmV0dXJuIGVtcHR5RmVlZGJhY2s7XG4gIHJldHVybiBmZWVkYmFjaztcbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xNSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMTU7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0xNSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzE1ID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMTUtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICBjb25zdCBvcHRpb25zID0gT2JqZWN0LmFzc2lnbih7IGlkOiBgd2Vici0xNS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fd2Vicl92YWx1ZV8xNSA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfMTUsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xNCIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMTQ7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0xNCIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzE0ID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMTQtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICBjb25zdCBvcHRpb25zID0gT2JqZWN0LmFzc2lnbih7IGlkOiBgd2Vici0xNC1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fd2Vicl92YWx1ZV8xNCA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfMTQsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xMyIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMTM7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0xMyIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzEzID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMTMtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICBjb25zdCBvcHRpb25zID0gT2JqZWN0LmFzc2lnbih7IGlkOiBgd2Vici0xMy1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fd2Vicl92YWx1ZV8xMyA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfMTMsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xMSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMTE7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0xMSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzExID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMTEtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICAvLyBEZWZhdWx0IGV4ZXJjaXNlIGNvbmZpZ3VyYXRpb25cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oXG4gICAge1xuICAgICAgaWQ6IFwid2Vici0xMS1jb250ZW50c1wiLFxuICAgICAgZW52aXI6IGBleGVyY2lzZS1lbnYtJHtibG9jay5hdHRyLmV4ZXJjaXNlfWAsXG4gICAgICBlcnJvcjogZmFsc2UsXG4gICAgICBjYXB0aW9uOiAnRXhlcmNpc2UnLFxuICAgIH0sXG4gICAgYmxvY2suYXR0clxuICApO1xuXG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxudmlld29mIF93ZWJyX3ZhbHVlXzExID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl8xMSwge30pO1xuX3dlYnJfZmVlZGJhY2tfMTEgPSB7XG4gIGNvbnN0IHsgV2ViUkdyYWRlciB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3QgZW1wdHlGZWVkYmFjayA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuXG4gIGNvbnN0IGdyYWRlciA9IG5ldyBXZWJSR3JhZGVyKF93ZWJyX3ZhbHVlXzExLmV2YWx1YXRvcik7XG4gIGNvbnN0IGZlZWRiYWNrID0gYXdhaXQgZ3JhZGVyLmdyYWRlRXhlcmNpc2UoKTtcbiAgaWYgKCFmZWVkYmFjaykgcmV0dXJuIGVtcHR5RmVlZGJhY2s7XG4gIHJldHVybiBmZWVkYmFjaztcbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC05IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICAvLyBXYWl0IGZvciBvdXRwdXQgdG8gYmUgd3JpdHRlbiB0byB0aGUgRE9NLCB0aGVuIHRyaWdnZXIgd2lkZ2V0IHJlbmRlcmluZ1xuICBhd2FpdCBfd2Vicl92YWx1ZV85O1xuICBpZiAod2luZG93LkhUTUxXaWRnZXRzKSB7XG4gICAgd2luZG93LkhUTUxXaWRnZXRzLnN0YXRpY1JlbmRlcigpO1xuICB9XG4gIGlmICh3aW5kb3cuUGFnZWRUYWJsZURvYykge1xuICAgIHdpbmRvdy5QYWdlZFRhYmxlRG9jLmluaXRBbGwoKTtcbiAgfVxufVxuIn0seyJjZWxsTmFtZSI6IndlYnItOSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzkgPSB7XG4gIGNvbnN0IHsgV2ViUkV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici05LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHdlYnItOS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fd2Vicl92YWx1ZV85ID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl85LCB7fSk7XG4ifSx7ImNlbGxOYW1lIjoid2Vici13aWRnZXQtOCIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfODtcbiAgaWYgKHdpbmRvdy5IVE1MV2lkZ2V0cykge1xuICAgIHdpbmRvdy5IVE1MV2lkZ2V0cy5zdGF0aWNSZW5kZXIoKTtcbiAgfVxuICBpZiAod2luZG93LlBhZ2VkVGFibGVEb2MpIHtcbiAgICB3aW5kb3cuUGFnZWRUYWJsZURvYy5pbml0QWxsKCk7XG4gIH1cbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLTgiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF93ZWJyX2VkaXRvcl84ID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItOC1jb250ZW50c1xcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGJsb2NrID0gSlNPTi5wYXJzZShiNjREZWNvZGUoc2NyaXB0Q29udGVudCkpO1xuXG4gIGNvbnN0IG9wdGlvbnMgPSBPYmplY3QuYXNzaWduKHsgaWQ6IGB3ZWJyLTgtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgV2ViUkV4ZXJjaXNlRWRpdG9yKHdlYlJPanMud2ViUlByb21pc2UsIGJsb2NrLmNvZGUsIG9wdGlvbnMpO1xuXG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxuX3dlYnJfdmFsdWVfOCA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfOCwge30pO1xuIn0seyJjZWxsTmFtZSI6IndlYnItd2lkZ2V0LTciLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJ7XG4gIC8vIFdhaXQgZm9yIG91dHB1dCB0byBiZSB3cml0dGVuIHRvIHRoZSBET00sIHRoZW4gdHJpZ2dlciB3aWRnZXQgcmVuZGVyaW5nXG4gIGF3YWl0IF93ZWJyX3ZhbHVlXzc7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici03IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfd2Vicl9lZGl0b3JfNyA9IHtcbiAgY29uc3QgeyBXZWJSRXhlcmNpc2VFZGl0b3IsIGI2NERlY29kZSB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ3ZWJyLTctY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICBjb25zdCBvcHRpb25zID0gT2JqZWN0LmFzc2lnbih7IGlkOiBgd2Vici03LWNvbnRlbnRzYCB9LCBibG9jay5hdHRyKTtcbiAgY29uc3QgZWRpdG9yID0gbmV3IFdlYlJFeGVyY2lzZUVkaXRvcih3ZWJST2pzLndlYlJQcm9taXNlLCBibG9jay5jb2RlLCBvcHRpb25zKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl93ZWJyX3ZhbHVlXzcgPSB3ZWJST2pzLnByb2Nlc3MoX3dlYnJfZWRpdG9yXzcsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC02IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICAvLyBXYWl0IGZvciBvdXRwdXQgdG8gYmUgd3JpdHRlbiB0byB0aGUgRE9NLCB0aGVuIHRyaWdnZXIgd2lkZ2V0IHJlbmRlcmluZ1xuICBhd2FpdCBfd2Vicl92YWx1ZV82O1xuICBpZiAod2luZG93LkhUTUxXaWRnZXRzKSB7XG4gICAgd2luZG93LkhUTUxXaWRnZXRzLnN0YXRpY1JlbmRlcigpO1xuICB9XG4gIGlmICh3aW5kb3cuUGFnZWRUYWJsZURvYykge1xuICAgIHdpbmRvdy5QYWdlZFRhYmxlRG9jLmluaXRBbGwoKTtcbiAgfVxufVxuIn0seyJjZWxsTmFtZSI6IndlYnItNiIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzYgPSB7XG4gIGNvbnN0IHsgV2ViUkV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici02LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHdlYnItNi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fd2Vicl92YWx1ZV82ID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl82LCB7fSk7XG4ifSx7ImNlbGxOYW1lIjoid2Vici13aWRnZXQtNCIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfNDtcbiAgaWYgKHdpbmRvdy5IVE1MV2lkZ2V0cykge1xuICAgIHdpbmRvdy5IVE1MV2lkZ2V0cy5zdGF0aWNSZW5kZXIoKTtcbiAgfVxuICBpZiAod2luZG93LlBhZ2VkVGFibGVEb2MpIHtcbiAgICB3aW5kb3cuUGFnZWRUYWJsZURvYy5pbml0QWxsKCk7XG4gIH1cbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLTQiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF93ZWJyX2VkaXRvcl80ID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItNC1jb250ZW50c1xcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGJsb2NrID0gSlNPTi5wYXJzZShiNjREZWNvZGUoc2NyaXB0Q29udGVudCkpO1xuXG4gIC8vIERlZmF1bHQgZXhlcmNpc2UgY29uZmlndXJhdGlvblxuICBjb25zdCBvcHRpb25zID0gT2JqZWN0LmFzc2lnbihcbiAgICB7XG4gICAgICBpZDogXCJ3ZWJyLTQtY29udGVudHNcIixcbiAgICAgIGVudmlyOiBgZXhlcmNpc2UtZW52LSR7YmxvY2suYXR0ci5leGVyY2lzZX1gLFxuICAgICAgZXJyb3I6IGZhbHNlLFxuICAgICAgY2FwdGlvbjogJ0V4ZXJjaXNlJyxcbiAgICB9LFxuICAgIGJsb2NrLmF0dHJcbiAgKTtcblxuICBjb25zdCBlZGl0b3IgPSBuZXcgV2ViUkV4ZXJjaXNlRWRpdG9yKHdlYlJPanMud2ViUlByb21pc2UsIGJsb2NrLmNvZGUsIG9wdGlvbnMpO1xuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbnZpZXdvZiBfd2Vicl92YWx1ZV80ID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl80LCB7fSk7XG5fd2Vicl9mZWVkYmFja180ID0ge1xuICBjb25zdCB7IFdlYlJHcmFkZXIgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IGVtcHR5RmVlZGJhY2sgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcblxuICBjb25zdCBncmFkZXIgPSBuZXcgV2ViUkdyYWRlcihfd2Vicl92YWx1ZV80LmV2YWx1YXRvcik7XG4gIGNvbnN0IGZlZWRiYWNrID0gYXdhaXQgZ3JhZGVyLmdyYWRlRXhlcmNpc2UoKTtcbiAgaWYgKCFmZWVkYmFjaykgcmV0dXJuIGVtcHR5RmVlZGJhY2s7XG4gIHJldHVybiBmZWVkYmFjaztcbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0yIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICAvLyBXYWl0IGZvciBvdXRwdXQgdG8gYmUgd3JpdHRlbiB0byB0aGUgRE9NLCB0aGVuIHRyaWdnZXIgd2lkZ2V0IHJlbmRlcmluZ1xuICBhd2FpdCBfd2Vicl92YWx1ZV8yO1xuICBpZiAod2luZG93LkhUTUxXaWRnZXRzKSB7XG4gICAgd2luZG93LkhUTUxXaWRnZXRzLnN0YXRpY1JlbmRlcigpO1xuICB9XG4gIGlmICh3aW5kb3cuUGFnZWRUYWJsZURvYykge1xuICAgIHdpbmRvdy5QYWdlZFRhYmxlRG9jLmluaXRBbGwoKTtcbiAgfVxufVxuIn0seyJjZWxsTmFtZSI6IndlYnItMiIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzIgPSB7XG4gIGNvbnN0IHsgV2ViUkV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici0yLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHdlYnItMi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fd2Vicl92YWx1ZV8yID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl8yLCB7fSk7XG4ifSx7ImNlbGxOYW1lIjoid2Vici13aWRnZXQtMSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMTtcbiAgaWYgKHdpbmRvdy5IVE1MV2lkZ2V0cykge1xuICAgIHdpbmRvdy5IVE1MV2lkZ2V0cy5zdGF0aWNSZW5kZXIoKTtcbiAgfVxuICBpZiAod2luZG93LlBhZ2VkVGFibGVEb2MpIHtcbiAgICB3aW5kb3cuUGFnZWRUYWJsZURvYy5pbml0QWxsKCk7XG4gIH1cbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF93ZWJyX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMS1jb250ZW50c1xcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGJsb2NrID0gSlNPTi5wYXJzZShiNjREZWNvZGUoc2NyaXB0Q29udGVudCkpO1xuXG4gIGNvbnN0IG9wdGlvbnMgPSBPYmplY3QuYXNzaWduKHsgaWQ6IGB3ZWJyLTEtY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgV2ViUkV4ZXJjaXNlRWRpdG9yKHdlYlJPanMud2ViUlByb21pc2UsIGJsb2NrLmNvZGUsIG9wdGlvbnMpO1xuXG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxuX3dlYnJfdmFsdWVfMSA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfMSwge30pO1xuIn0seyJjZWxsTmFtZSI6IndlYnItcHJlbHVkZSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IndlYlJPanMgPSB7XG4gIGNvbnN0IHsgV2ViUiwgQ2hhbm5lbFR5cGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWUuV2ViUjtcbiAgY29uc3Qge1xuICAgIFdlYlJFdmFsdWF0b3IsXG4gICAgV2ViUkVudmlyb25tZW50TWFuYWdlcixcbiAgICBzZXR1cFIsXG4gICAgYjY0RGVjb2RlLFxuICAgIGNvbGxhcHNlUGF0aFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gd2ViUiBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ3ZWJyLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBbTGlicm9dIFBlcm1pdGlyIHJ1dGFzIHJlbGF0aXZhcyBwYXJhIGVsIG1vdG9yIHkgZWwgcmVwb3NpdG9yaW8gZGUgcGFxdWV0ZXNcbiAgLy8gKGF1dG9hbG9qYWRvcyBqdW50byBhbCBsaWJybyksIHJlc29sdmnDqW5kb2xhcyByZXNwZWN0byBhIGxhIHDDoWdpbmEuXG4gIGNvbnN0IGFic29sdXRpemUgPSAodSkgPT4gbmV3IFVSTCh1LCBkb2N1bWVudC5iYXNlVVJJKS5ocmVmO1xuICBpZiAoZGF0YS5vcHRpb25zLmJhc2VVcmwpIGRhdGEub3B0aW9ucy5iYXNlVXJsID0gYWJzb2x1dGl6ZShkYXRhLm9wdGlvbnMuYmFzZVVybCk7XG4gIGRhdGEucGFja2FnZXMucmVwb3MgPSBkYXRhLnBhY2thZ2VzLnJlcG9zLm1hcChhYnNvbHV0aXplKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICAvLyBJbml0aWFsaXNlIHdlYlIgYW5kIHNldHVwIGZvciBSIGNvZGUgZXZhbHVhdGlvblxuICBsZXQgd2ViUlByb21pc2UgPSAoYXN5bmMgKHdlYlIpID0+IHtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYERvd25sb2FkaW5nIHdlYlJgO1xuICAgIGF3YWl0IHdlYlIuaW5pdCgpO1xuXG4gICAgLy8gSW5zdGFsbCBwcm92aWRlZCBsaXN0IG9mIHBhY2thZ2VzXG4gICAgLy8gRW5zdXJlIHdlYlIgZGVmYXVsdCByZXBvIGlzIGluY2x1ZGVkXG4gICAgaWYgKGRhdGEucGFja2FnZXMucmVwb3MubGVuZ3RoID09PSAwKSBkYXRhLnBhY2thZ2VzLnJlcG9zLnB1c2goXCJodHRwczovL3JlcG8uci13YXNtLm9yZ1wiKVxuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIHdlYlIuZXZhbFJWb2lkKGBcbiAgICAgICAgd2Vicjo6aW5zdGFsbChwa2csIHJlcG9zID0gcmVwb3MpXG4gICAgICAgIGxpYnJhcnkocGtnLCBjaGFyYWN0ZXIub25seSA9IFRSVUUpXG4gICAgICBgLCB7IGVudjoge1xuICAgICAgICBwa2c6IHBrZyxcbiAgICAgICAgcmVwb3M6IGRhdGEucGFja2FnZXMucmVwb3MsXG4gICAgICB9fSk7XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgY29uc3QgYW5hbHlzaXMgPSBhd2FpdCB3ZWJSLkZTLmFuYWx5emVQYXRoKHBhdGgpO1xuICAgICAgICBpZiAoIWFuYWx5c2lzLmV4aXN0cykge1xuICAgICAgICAgIHRyeSB7XG4gICAgICAgICAgICBhd2FpdCB3ZWJSLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICAgIH0gY2F0Y2ggKGUpIHtcbiAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvcjogXCIke2UubWVzc2FnZX1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHJldHVybiBhd2FpdCB3ZWJSLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluc3RhbGxpbmcgd2ViUiBzaGltc2A7XG4gICAgYXdhaXQgd2ViUi5ldmFsUlZvaWQoYHdlYnI6OnNoaW1faW5zdGFsbCgpYCk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFdlYlIgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUih3ZWJSLCBkYXRhKTtcblxuICAgIHN0YXR1c1RleHQucmVtb3ZlKCk7XG4gICAgaWYgKHN0YXR1c0NvbnRhaW5lci5jaGlsZHJlbi5sZW5ndGggPT0gMCkge1xuICAgICAgc3RhdHVzQ29udGFpbmVyLnBhcmVudE5vZGUucmVtb3ZlKCk7XG4gICAgfVxuICAgIHJldHVybiB3ZWJSO1xuICB9KShuZXcgV2ViUihkYXRhLm9wdGlvbnMpKTtcblxuICAvLyBLZWVwIHRyYWNrIG9mIGluaXRpYWwgT0pTIGJsb2NrIHJlbmRlclxuICBjb25zdCByZW5kZXJlZE9qcyA9IHt9O1xuXG4gIGNvbnN0IHByb2Nlc3MgPSBhc3luYyAoY29udGV4dCwgaW5wdXRzKSA9PiB7XG4gICAgY29uc3Qgd2ViUiA9IGF3YWl0IHdlYlJQcm9taXNlO1xuICAgIGNvbnN0IGV2YWx1YXRvciA9IG5ldyBXZWJSRXZhbHVhdG9yKHdlYlIsIGNvbnRleHQpXG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHJvY2VzcyxcbiAgICB3ZWJSUHJvbWlzZSxcbiAgICByZW5kZXJlZE9qcyxcbiAgfTtcbn1cbiJ9XX0=
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+WyJkYXRvcy9wcmVzdGFtb3NfYmlibGlvdGVjYXNfcHJhY3RpY2EuY3N2Il0=
+</script>
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pablosancheznunez\.com\/reutilizacion-datos\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./03-calidad.html" class="pagination-link" aria-label="Tema 3. Gestión documental y *open data*">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Tema 3. Gestión documental y <em>open data</em></span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./05-infomediarias.html" class="pagination-link" aria-label="Tema 5. Empresas infomediarias y oportunidades de negocio">
+        <span class="nav-page-text"><span class="chapter-title">Tema 5. Empresas infomediarias y oportunidades de negocio</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 <a href="https://pablosancheznunez.com">Pablo Sánchez-Núñez</a> · <a href="https://orcid.org/0000-0001-7845-9506">ORCID 0000-0001-7845-9506</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Universidad Carlos III de Madrid · Hecho con <a href="https://quarto.org">Quarto</a> y <a href="https://docs.r-wasm.org/webr/latest/">webR</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tema 5. Empresas infomediarias y oportunidades de negocio – Reutilización de datos abiertos y documentos</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./90-chuleta-r.html" rel="next">
+<link href="./04-interoperabilidad.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-29bccce83f8da9471d73d280c8ef785e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./00-datos-abiertos.html">Temas</a></li><li class="breadcrumb-item"><a href="./05-infomediarias.html"><span class="chapter-title">Tema 5. Empresas infomediarias y oportunidades de negocio</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Reutilización de datos abiertos y documentos</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00a-primeros-pasos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Primeros pasos con R en el navegador</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Temas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-datos-abiertos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 0. Introducción a los datos abiertos y la reutilización de la información</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-risp.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 1. Reutilización de la información del sector público (RISP)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-proyectos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 2. Proyectos relevantes de reutilización de datos abiertos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-calidad.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 3. Gestión documental y <em>open data</em></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-interoperabilidad.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 4. Normalización e interoperabilidad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-infomediarias.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Tema 5. Empresas infomediarias y oportunidades de negocio</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./90-chuleta-r.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Chuleta de R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./91-guia-docente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Guía para el profesorado</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#lectura-obligatoria" id="toc-lectura-obligatoria" class="nav-link active" data-scroll-target="#lectura-obligatoria">Lectura obligatoria</a></li>
+  <li><a href="#el-sector-infomediario" id="toc-el-sector-infomediario" class="nav-link" data-scroll-target="#el-sector-infomediario">1. El sector infomediario</a></li>
+  <li><a href="#modelos-de-negocio-basados-en-datos-abiertos" id="toc-modelos-de-negocio-basados-en-datos-abiertos" class="nav-link" data-scroll-target="#modelos-de-negocio-basados-en-datos-abiertos">2. Modelos de negocio basados en datos abiertos</a></li>
+  <li><a href="#servicios-de-valor-añadido" id="toc-servicios-de-valor-añadido" class="nav-link" data-scroll-target="#servicios-de-valor-añadido">3. Servicios de valor añadido</a></li>
+  <li><a href="#emprendimiento-e-innovación" id="toc-emprendimiento-e-innovación" class="nav-link" data-scroll-target="#emprendimiento-e-innovación">4. Emprendimiento e innovación</a>
+  <ul class="collapse">
+  <li><a href="#licencias-al-combinar-fuentes" id="toc-licencias-al-combinar-fuentes" class="nav-link" data-scroll-target="#licencias-al-combinar-fuentes">Licencias al combinar fuentes</a></li>
+  </ul></li>
+  <li><a href="#inteligencia-artificial-y-reutilización-de-datos" id="toc-inteligencia-artificial-y-reutilización-de-datos" class="nav-link" data-scroll-target="#inteligencia-artificial-y-reutilización-de-datos">5. Inteligencia artificial y reutilización de datos</a></li>
+  <li><a href="#tendencias-de-futuro" id="toc-tendencias-de-futuro" class="nav-link" data-scroll-target="#tendencias-de-futuro">6. Tendencias de futuro</a></li>
+  <li><a href="#práctica-en-r" id="toc-práctica-en-r" class="nav-link" data-scroll-target="#práctica-en-r">Práctica en R</a>
+  <ul class="collapse">
+  <li><a href="#paso-1.-un-servicio-de-valor-añadido-enriquecer-los-préstamos-apartado-3" id="toc-paso-1.-un-servicio-de-valor-añadido-enriquecer-los-préstamos-apartado-3" class="nav-link" data-scroll-target="#paso-1.-un-servicio-de-valor-añadido-enriquecer-los-préstamos-apartado-3">Paso 1. Un servicio de valor añadido: enriquecer los préstamos (apartado 3)</a></li>
+  <li><a href="#ejercicio-5.1" id="toc-ejercicio-5.1" class="nav-link" data-scroll-target="#ejercicio-5.1">Ejercicio 5.1</a></li>
+  <li><a href="#paso-2.-es-viable-un-servicio-freemium-apartados-2-y-4" id="toc-paso-2.-es-viable-un-servicio-freemium-apartados-2-y-4" class="nav-link" data-scroll-target="#paso-2.-es-viable-un-servicio-freemium-apartados-2-y-4">Paso 2. ¿Es viable un servicio <em>freemium</em>? (apartados 2 y 4)</a></li>
+  <li><a href="#ejercicio-5.2" id="toc-ejercicio-5.2" class="nav-link" data-scroll-target="#ejercicio-5.2">Ejercicio 5.2</a></li>
+  <li><a href="#ejercicio-5.3" id="toc-ejercicio-5.3" class="nav-link" data-scroll-target="#ejercicio-5.3">Ejercicio 5.3</a></li>
+  <li><a href="#paso-3.-obligaciones-al-combinar-licencias-apartado-4" id="toc-paso-3.-obligaciones-al-combinar-licencias-apartado-4" class="nav-link" data-scroll-target="#paso-3.-obligaciones-al-combinar-licencias-apartado-4">Paso 3. Obligaciones al combinar licencias (apartado 4)</a></li>
+  <li><a href="#ejercicio-5.4" id="toc-ejercicio-5.4" class="nav-link" data-scroll-target="#ejercicio-5.4">Ejercicio 5.4</a></li>
+  <li><a href="#ejercicio-5.5" id="toc-ejercicio-5.5" class="nav-link" data-scroll-target="#ejercicio-5.5">Ejercicio 5.5</a></li>
+  </ul></li>
+  <li><a href="#para-practicar-fuera-del-libro" id="toc-para-practicar-fuera-del-libro" class="nav-link" data-scroll-target="#para-practicar-fuera-del-libro">Para practicar fuera del libro</a></li>
+  <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./00-datos-abiertos.html">Temas</a></li><li class="breadcrumb-item"><a href="./05-infomediarias.html"><span class="chapter-title">Tema 5. Empresas infomediarias y oportunidades de negocio</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-tema5" class="quarto-section-identifier"><span class="chapter-title">Tema 5. Empresas infomediarias y oportunidades de negocio</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Objetivos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Analizar el ecosistema económico de la reutilización de datos.</li>
+<li>Identificar oportunidades de innovación y emprendimiento basadas en datos abiertos.</li>
+</ul>
+</div>
+</div>
+<section id="lectura-obligatoria" class="level2">
+<h2 class="anchored" data-anchor-id="lectura-obligatoria">Lectura obligatoria</h2>
+<div class="lectura">
+<p>Ahmadi Zeleti, F.; Ojo, A.; Curry, E. (2016). <a href="https://doi.org/10.1016/j.giq.2016.01.008">Exploring the economic value of open government data</a>. <em>Government Information Quarterly</em>, 33(3), 535-551. <a href="https://mural.maynoothuniversity.ie/12848/1/AO_exploring.pdf">Versión en acceso abierto (MURAL)</a>.</p>
+</div>
+</section>
+<section id="el-sector-infomediario" class="level2">
+<h2 class="anchored" data-anchor-id="el-sector-infomediario">1. El sector infomediario</h2>
+<p>Las empresas <strong>infomediarias</strong> crean productos y servicios de valor añadido a partir de información, en buena parte del sector público, para venderlos a terceros. Se agrupan por el tipo de información que reutilizan: geográfica y cartográfica, económica, financiera y mercantil, jurídica, de mercado y consumo, meteorológica, de movilidad y transporte, sociodemográfica, cultural…</p>
+<p>En España, el estudio oficial más reciente de caracterización del sector es el del ONTSI de 2016. Para cifras actuales se usa el informe anual de <a href="https://www.asedie.es/es/informes-anuales">ASEDIE</a>, la asociación del sector, cuya 14.ª edición se presentó en abril de 2026 con datos a 31 de diciembre de 2024. Consulta las cifras en el <a href="https://datos.gob.es/es/noticias/asi-evoluciona-el-ecosistema-infomediario-en-espana-segun-asedie">resumen de datos.gob.es</a>: te harán falta en el cuestionario de Aula Global. Ten en cuenta que los dos estudios no usan la misma metodología, así que sus cifras no son directamente comparables.</p>
+<p>El ecosistema no lo forman solo empresas: también participan administraciones que publican, intermediarios de datos, comunidades de desarrolladores, medios de comunicación, centros de investigación y, como mediadoras de la información, las bibliotecas.</p>
+</section>
+<section id="modelos-de-negocio-basados-en-datos-abiertos" class="level2">
+<h2 class="anchored" data-anchor-id="modelos-de-negocio-basados-en-datos-abiertos">2. Modelos de negocio basados en datos abiertos</h2>
+<p>Ahmadi Zeleti et al.&nbsp;proponen el marco <strong>6-V</strong> para describir cómo un negocio crea y captura valor con datos abiertos:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Componente</th>
+<th>Pregunta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Propuesta de valor</td>
+<td>¿Qué se ofrece y a quién?</td>
+</tr>
+<tr class="even">
+<td>Proceso de creación de valor</td>
+<td>¿Qué se hace con los datos para generar ese valor?</td>
+</tr>
+<tr class="odd">
+<td>Valor obtenido (<em>value in return</em>)</td>
+<td>¿Qué recibe la organización a cambio?</td>
+</tr>
+<tr class="even">
+<td>Captura de valor</td>
+<td>¿Cómo se convierte ese valor en ingresos o beneficios?</td>
+</tr>
+<tr class="odd">
+<td>Gestión del valor</td>
+<td>¿Cómo se mantiene y se protege el valor en el tiempo?</td>
+</tr>
+<tr class="even">
+<td>Red de valor</td>
+<td>¿Con qué socios, proveedores y clientes se crea?</td>
+</tr>
+</tbody>
+</table>
+<p>A partir de ellos agrupan los modelos de negocio en <strong>patrones</strong>, entre ellos <em>freemium</em> (servicio básico gratis y funciones avanzadas de pago), <em>premium</em> (todo de pago, con valor añadido alto), <strong>ahorro de costes</strong> (los datos abiertos reducen gastos propios), <strong>beneficio indirecto</strong> (los datos se usan para apoyar otro negocio o la reputación) y <strong>«maquinilla y cuchillas»</strong> (algo barato o gratuito que genera ventas recurrentes de otra cosa).</p>
+</section>
+<section id="servicios-de-valor-añadido" class="level2">
+<h2 class="anchored" data-anchor-id="servicios-de-valor-añadido">3. Servicios de valor añadido</h2>
+<p>Los datos abiertos son materia prima: el valor está en lo que se hace con ellos. Los servicios de valor añadido más habituales son:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo de servicio</th>
+<th>Qué añade</th>
+<th>Ejemplo con datos de bibliotecas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Agregación</strong></td>
+<td>Reunir fuentes dispersas en un solo lugar</td>
+<td>Panel con los préstamos de todos los municipios de una comunidad</td>
+</tr>
+<tr class="even">
+<td><strong>Normalización y limpieza</strong></td>
+<td>Datos homogéneos y fiables</td>
+<td>Series depuradas como las del Tema 3</td>
+</tr>
+<tr class="odd">
+<td><strong>Enriquecimiento</strong></td>
+<td>Cruzar con otras fuentes</td>
+<td>Préstamos por cada 1.000 habitantes con datos de población</td>
+</tr>
+<tr class="even">
+<td><strong>Análisis y predicción</strong></td>
+<td>Indicadores, tendencias, modelos</td>
+<td>Previsión de demanda para planificar compras</td>
+</tr>
+<tr class="odd">
+<td><strong>Visualización</strong></td>
+<td>Mapas, gráficos, cuadros de mando</td>
+<td>Mapa de cobertura bibliotecaria</td>
+</tr>
+<tr class="even">
+<td><strong>Acceso programático</strong></td>
+<td>API estables y documentadas</td>
+<td>API que sirve los préstamos en JSON</td>
+</tr>
+<tr class="odd">
+<td><strong>Alertas y personalización</strong></td>
+<td>Información a medida</td>
+<td>Aviso de novedades o actividades por barrio</td>
+</tr>
+<tr class="even">
+<td><strong>Consultoría</strong></td>
+<td>Interpretación experta</td>
+<td>Informe para la renovación de un servicio municipal</td>
+</tr>
+</tbody>
+</table>
+<p>La cadena de valor va de los <strong>datos</strong> (publicados por la administración) a la <strong>información</strong> (datos depurados y combinados) y al <strong>conocimiento</strong> (indicadores y decisiones), una vuelta a la sociedad del conocimiento del Tema 0.</p>
+</section>
+<section id="emprendimiento-e-innovación" class="level2">
+<h2 class="anchored" data-anchor-id="emprendimiento-e-innovación">4. Emprendimiento e innovación</h2>
+<p>Emprender con datos abiertos exige lo mismo que cualquier proyecto (un problema real, unos clientes, un modelo sostenible) y algo más: confianza en que los datos seguirán publicándose y se podrán usar legalmente.</p>
+<ul>
+<li><strong>Herramientas de diseño</strong>: el lienzo de modelo de negocio (<em>Business Model Canvas</em>) o su variante <em>Lean Canvas</em> ayudan a ordenar la propuesta; el marco 6-V la adapta a los datos.</li>
+<li><strong>Vías de impulso</strong>: retos y concursos (como los Desafíos Aporta, 2017-2021), <em>hackatones</em>, incubadoras y aceleradoras, compra pública de innovación y programas europeos.</li>
+<li><strong>Innovación abierta</strong>: administraciones y empresas colaboran con comunidades externas para resolver problemas con datos.</li>
+<li><strong>Riesgos que hay que gestionar</strong>: discontinuidad o cambios en las fuentes, calidad desigual, dependencia de un único publicador y, sobre todo, licencias.</li>
+</ul>
+<section id="licencias-al-combinar-fuentes" class="level3">
+<h3 class="anchored" data-anchor-id="licencias-al-combinar-fuentes">Licencias al combinar fuentes</h3>
+<p>Un servicio infomediario suele combinar varias fuentes, y sus obligaciones se acumulan:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Licencia</th>
+<th>Atribución</th>
+<th>Compartir igual</th>
+<th>Uso comercial</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CC0 1.0</td>
+<td>No</td>
+<td>No</td>
+<td>Sí</td>
+</tr>
+<tr class="even">
+<td>CC BY 4.0</td>
+<td>Sí</td>
+<td>No</td>
+<td>Sí</td>
+</tr>
+<tr class="odd">
+<td>CC BY-SA 4.0</td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Sí</td>
+</tr>
+<tr class="even">
+<td>ODbL 1.0</td>
+<td>Sí</td>
+<td>Sí (base de datos derivada que se distribuya)</td>
+<td>Sí</td>
+</tr>
+<tr class="odd">
+<td>CC BY-NC 4.0</td>
+<td>Sí</td>
+<td>No</td>
+<td><strong>No</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Dos matices: la cláusula «compartir igual» de ODbL afecta a la base de datos derivada, no necesariamente a un producto creado a partir de ella (por ejemplo, un mapa impreso); y dos licencias con «compartir igual» distintas pueden ser incompatibles entre sí, por lo que no siempre es posible combinarlas.</p>
+</section>
+</section>
+<section id="inteligencia-artificial-y-reutilización-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="inteligencia-artificial-y-reutilización-de-datos">5. Inteligencia artificial y reutilización de datos</h2>
+<p>La relación funciona en los dos sentidos.</p>
+<p><strong>Los datos abiertos alimentan la IA.</strong> Son una fuente de datos de entrenamiento y evaluación de modelos. Antes de usarlos hay que revisar:</p>
+<ul>
+<li>La <strong>licencia</strong> de cada fuente y sus obligaciones (atribución, compartir igual, no comercial).</li>
+<li>Las excepciones de <strong>minería de textos y datos</strong> de la Directiva (UE) 2019/790 sobre derechos de autor, y la posibilidad de que los titulares se hayan reservado ese uso.</li>
+<li>La presencia de <strong>datos personales</strong> (RGPD), incluso en conjuntos aparentemente anónimos.</li>
+<li>Las obligaciones del <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=es">Reglamento (UE) 2024/1689 de IA</a>: transparencia frente a los usuarios en ciertos sistemas y, para los modelos de uso general, documentación técnica y un resumen público del contenido usado para el entrenamiento.</li>
+<li>La <strong>calidad</strong> y los <strong>sesgos</strong> de los datos: un recomendador entrenado con préstamos solo de algunas sedes reproducirá sus patrones.</li>
+</ul>
+<p><strong>La IA facilita la reutilización.</strong> Ayuda a generar y mejorar metadatos, detectar errores, clasificar, traducir y consultar datos en lenguaje natural. A cambio, exige verificar los resultados: un modelo puede inventar cifras o referencias.</p>
+</section>
+<section id="tendencias-de-futuro" class="level2">
+<h2 class="anchored" data-anchor-id="tendencias-de-futuro">6. Tendencias de futuro</h2>
+<p>Algunas líneas que ya están en marcha y marcarán los próximos años:</p>
+<ul>
+<li><strong>Datos de alto valor y API</strong>: obligación de publicar datos clave gratis, por API y en tiempo casi real.</li>
+<li><strong>Espacios comunes europeos de datos</strong>: entornos de confianza para compartir datos, también privados, por sectores (patrimonio cultural, sanidad, movilidad…). El <a href="https://dssc.eu">Data Spaces Support Centre</a> los acompaña.</li>
+<li><strong>Ley de Datos</strong>: acceso de usuarios y terceros a los datos generados por productos conectados, aplicable desde septiembre de 2025.</li>
+<li><strong>Altruismo de datos e intermediarios de datos</strong>, regulados por el Reglamento de Gobernanza de Datos.</li>
+<li><strong>IA generativa como interfaz</strong> para encontrar y consultar datos, y como nuevo gran consumidor de datos abiertos.</li>
+<li><strong>Datos sintéticos</strong> para compartir información sensible protegiendo la privacidad (como el CSV de este libro, a pequeña escala).</li>
+<li><strong>Medición del impacto</strong>: cada vez se exige más demostrar el valor económico y social de la apertura (dimensión «impacto» del Open Data Maturity).</li>
+</ul>
+</section>
+<section id="práctica-en-r" class="level2">
+<h2 class="anchored" data-anchor-id="práctica-en-r">Práctica en R</h2>
+<section id="paso-1.-un-servicio-de-valor-añadido-enriquecer-los-préstamos-apartado-3" class="level3">
+<h3 class="anchored" data-anchor-id="paso-1.-un-servicio-de-valor-añadido-enriquecer-los-préstamos-apartado-3">Paso 1. Un servicio de valor añadido: enriquecer los préstamos (apartado 3)</h3>
+<p>Cruzamos el CSV limpio con una tabla de población para calcular <strong>préstamos por cada 1.000 habitantes</strong>, un indicador que ninguna de las dos fuentes ofrece por separado.</p>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Las cifras de población son <strong>ficticias y redondeadas</strong>, inventadas para el ejercicio. En un servicio real se usarían las del Padrón continuo del INE.</p>
+</div>
+</div>
+</div>
+<div>
+<div id="webr-1" class="exercise-cell">
+
+</div>
+<script type="webr-1-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiYiA8LSByZWFkLmNzdihcImRhdG9zL3ByZXN0YW1vc19iaWJsaW90ZWNhc19wcmFjdGljYS5jc3ZcIiwgY29sQ2xhc3NlcyA9IFwiY2hhcmFjdGVyXCIpXG5iIDwtIGJbIWR1cGxpY2F0ZWQoYiksIF1cbmNsYXZlIDwtIGNoYXJ0cihcIsOhw6nDrcOzw7rDvMOxXCIsIFwiYWVpb3V1blwiLCB0b2xvd2VyKHRyaW13cyhiJG11bmljaXBpbykpKVxuYiRtdW5pY2lwaW8gPC0gdW5uYW1lKGMoZ2V0YWZlID0gXCJHZXRhZmVcIiwgbGVnYW5lcyA9IFwiTGVnYW7DqXNcIiwgYWxjb3Jjb24gPSBcIkFsY29yY8OzblwiLFxuICAgICAgICAgICAgICAgICAgICAgICAgbW9zdG9sZXMgPSBcIk3Ds3N0b2xlc1wiLCBmdWVubGFicmFkYSA9IFwiRnVlbmxhYnJhZGFcIilbY2xhdmVdKVxuYiRwcmVzdGFtb3MgPC0gYXMubnVtZXJpYyhpZmVsc2UoYiRwcmVzdGFtb3MgJWluJSBjKFwiXCIsIFwibi9kXCIpLCBOQSwgYiRwcmVzdGFtb3MpKVxuYiRwcmVzdGFtb3Nbd2hpY2goYiRwcmVzdGFtb3MgPCAwKV0gPC0gTkFcbmxpbXBpbyA8LSBiXG5cbnBvYmxhY2lvbiA8LSBkYXRhLmZyYW1lKFxuICBtdW5pY2lwaW8gPSBjKFwiR2V0YWZlXCIsIFwiTGVnYW7DqXNcIiwgXCJBbGNvcmPDs25cIiwgXCJNw7NzdG9sZXNcIiwgXCJGdWVubGFicmFkYVwiKSxcbiAgaGFiaXRhbnRlcyA9IGMoMTg1MDAwLCAxOTAwMDAsIDE3MDAwMCwgMjEwMDAwLCAxOTAwMDApICAgIyBmaWN0aWNpYXNcbilcblxucG9yX211bmkgPC0gYWdncmVnYXRlKHByZXN0YW1vcyB+IG11bmljaXBpbywgZGF0YSA9IGxpbXBpbywgRlVOID0gc3VtKVxuZW5yaXF1ZWNpZG8gPC0gbWVyZ2UocG9yX211bmksIHBvYmxhY2lvbilcbmVucmlxdWVjaWRvIn0=
+</script>
+</div>
+</section>
+<section id="ejercicio-5.1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-5.1">Ejercicio 5.1</h3>
+<p>Añade a <code>enriquecido</code> la columna <code>por_mil</code> (préstamos por cada 1.000 habitantes, redondeada a un decimal) y devuelve la tabla ordenada de mayor a menor.</p>
+<script type="exercise-setup-t5_valor-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDVfdmFsb3IiLCJzZXR1cCI6dHJ1ZX0sImNvZGUiOiJiIDwtIHJlYWQuY3N2KFwiZGF0b3MvcHJlc3RhbW9zX2JpYmxpb3RlY2FzX3ByYWN0aWNhLmNzdlwiLCBjb2xDbGFzc2VzID0gXCJjaGFyYWN0ZXJcIilcbmIgPC0gYlshZHVwbGljYXRlZChiKSwgXVxuY2xhdmUgPC0gY2hhcnRyKFwiw6HDqcOtw7PDusO8w7FcIiwgXCJhZWlvdXVuXCIsIHRvbG93ZXIodHJpbXdzKGIkbXVuaWNpcGlvKSkpXG5iJG11bmljaXBpbyA8LSB1bm5hbWUoYyhnZXRhZmUgPSBcIkdldGFmZVwiLCBsZWdhbmVzID0gXCJMZWdhbsOpc1wiLCBhbGNvcmNvbiA9IFwiQWxjb3Jjw7NuXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICBtb3N0b2xlcyA9IFwiTcOzc3RvbGVzXCIsIGZ1ZW5sYWJyYWRhID0gXCJGdWVubGFicmFkYVwiKVtjbGF2ZV0pXG5iJHByZXN0YW1vcyA8LSBhcy5udW1lcmljKGlmZWxzZShiJHByZXN0YW1vcyAlaW4lIGMoXCJcIiwgXCJuL2RcIiksIE5BLCBiJHByZXN0YW1vcykpXG5iJHByZXN0YW1vc1t3aGljaChiJHByZXN0YW1vcyA8IDApXSA8LSBOQVxucG9ibGFjaW9uIDwtIGRhdGEuZnJhbWUoXG4gIG11bmljaXBpbyA9IGMoXCJHZXRhZmVcIiwgXCJMZWdhbsOpc1wiLCBcIkFsY29yY8OzblwiLCBcIk3Ds3N0b2xlc1wiLCBcIkZ1ZW5sYWJyYWRhXCIpLFxuICBoYWJpdGFudGVzID0gYygxODUwMDAsIDE5MDAwMCwgMTcwMDAwLCAyMTAwMDAsIDE5MDAwMClcbilcbmVucmlxdWVjaWRvIDwtIG1lcmdlKGFnZ3JlZ2F0ZShwcmVzdGFtb3MgfiBtdW5pY2lwaW8sIGRhdGEgPSBiLCBGVU4gPSBzdW0pLCBwb2JsYWNpb24pIn0=
+</script>
+<div>
+<div id="webr-3" class="exercise-cell">
+
+</div>
+<script type="webr-3-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDVfdmFsb3IifSwiY29kZSI6ImVucmlxdWVjaWRvJHBvcl9taWwgPC0gcm91bmQoZW5yaXF1ZWNpZG8kcHJlc3RhbW9zIC8gZW5yaXF1ZWNpZG8kaGFiaXRhbnRlcyAqIF9fX19fXywgMSlcbmVucmlxdWVjaWRvW29yZGVyKGVucmlxdWVjaWRvJHBvcl9taWwsIGRlY3JlYXNpbmcgPSBUUlVFKSwgXSJ9
+</script>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="t5_valor">
+<p>«Por cada 1.000 habitantes»: multiplica el cociente por 1000.</p>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t5_valor">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>enriquecido<span class="sc">$</span>por_mil <span class="ot">&lt;-</span> <span class="fu">round</span>(enriquecido<span class="sc">$</span>prestamos <span class="sc">/</span> enriquecido<span class="sc">$</span>habitantes <span class="sc">*</span> <span class="dv">1000</span>, <span class="dv">1</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>enriquecido[<span class="fu">order</span>(enriquecido<span class="sc">$</span>por_mil, <span class="at">decreasing =</span> <span class="cn">TRUE</span>), ]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Getafe queda en cabeza, pero tiene dos bibliotecas en la muestra y los demás municipios una. Un buen servicio de valor añadido debe explicar estas limitaciones a sus clientes.</p>
+</div>
+<script type="exercise-check-t5_valor-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ1X3ZhbG9yIn0sImNvZGUiOiJyIDwtIC5yZXN1bHRcbmlmICghaXMuZGF0YS5mcmFtZShyKSB8fCAhXCJwb3JfbWlsXCIgJWluJSBuYW1lcyhyKSkge1xuICBsaXN0KGNvcnJlY3QgPSBGQUxTRSwgbWVzc2FnZSA9IFwiTGEgw7psdGltYSBsw61uZWEgZGViZSBkZXZvbHZlciBsYSB0YWJsYSBjb24gbGEgY29sdW1uYSBwb3JfbWlsLlwiKVxufSBlbHNlIHtcbiAgZXNwIDwtIHJvdW5kKHIkcHJlc3RhbW9zIC8gciRoYWJpdGFudGVzICogMTAwMCwgMSlcbiAgaWYgKGlzVFJVRShhbGwuZXF1YWwociRwb3JfbWlsLCBlc3ApKSAmJiAhaXMudW5zb3J0ZWQocmV2KHIkcG9yX21pbCkpKSB7XG4gICAgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IHBhc3RlMChcIkNvcnJlY3RvOiBcIiwgciRtdW5pY2lwaW9bMV0sIFwiIGVuY2FiZXphIGxhIGxpc3RhIGNvbiBcIiwgZm9ybWF0KHIkcG9yX21pbFsxXSwgZGVjaW1hbC5tYXJrID0gXCIsXCIpLCBcIiBwcsOpc3RhbW9zIHBvciBjYWRhIDEuMDAwIGhhYml0YW50ZXMuXCIpKVxuICB9IGVsc2UgaWYgKCFpc1RSVUUoYWxsLmVxdWFsKHIkcG9yX21pbCwgZXNwKSkpIHtcbiAgICBsaXN0KGNvcnJlY3QgPSBGQUxTRSwgbWVzc2FnZSA9IFwiUmV2aXNhIGVsIGZhY3RvcjogZGViZSBzZXIgMTAwMC5cIilcbiAgfSBlbHNlIHtcbiAgICBsaXN0KGNvcnJlY3QgPSBGQUxTRSwgbWVzc2FnZSA9IFwiT3JkZW5hIGRlIG1heW9yIGEgbWVub3IgY29uIGRlY3JlYXNpbmcgPSBUUlVFLlwiKVxuICB9XG59In0=
+</script>
+</section>
+<section id="paso-2.-es-viable-un-servicio-freemium-apartados-2-y-4" class="level3">
+<h3 class="anchored" data-anchor-id="paso-2.-es-viable-un-servicio-freemium-apartados-2-y-4">Paso 2. ¿Es viable un servicio <em>freemium</em>? (apartados 2 y 4)</h3>
+<p>Imagina una empresa que ofrece a las bibliotecas un panel con sus préstamos comparados con los de otros municipios, a partir de datos abiertos. La versión básica es gratuita; la avanzada cuesta una cuota mensual.</p>
+<div>
+<div id="webr-5" class="exercise-cell">
+
+</div>
+<script type="webr-5-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW5ncmVzb3NfbWVuc3VhbGVzIDwtIGZ1bmN0aW9uKHVzdWFyaW9zLCBjb252ZXJzaW9uLCBwcmVjaW8pIHtcbiAgdXN1YXJpb3MgKiBjb252ZXJzaW9uICogcHJlY2lvXG59XG51c3VhcmlvcyAgIDwtIDUwMDAgICAgIyBiaWJsaW90ZWNhcyB5IHByb2Zlc2lvbmFsZXMgcXVlIHVzYW4gbGEgdmVyc2nDs24gZ3JhdHVpdGFcbmNvbnZlcnNpb24gPC0gMC4wNCAgICAjIDQgJSBwYXNhIGEgbGEgdmVyc2nDs24gZGUgcGFnb1xucHJlY2lvICAgICA8LSA5ICAgICAgICMgZXVyb3MgYWwgbWVzXG5jb3N0ZXNfZmlqb3MgPC0gMjcwMCAgIyBldXJvcyBhbCBtZXMgKHNlcnZpZG9yZXMsIG1hbnRlbmltaWVudG8sIGFjdHVhbGl6YWNpw7NuIGRlIGRhdG9zKVxuXG5pbmdyZXNvcyA8LSBpbmdyZXNvc19tZW5zdWFsZXModXN1YXJpb3MsIGNvbnZlcnNpb24sIHByZWNpbylcbmMoaW5ncmVzb3MgPSBpbmdyZXNvcywgY29zdGVzID0gY29zdGVzX2Zpam9zLCByZXN1bHRhZG8gPSBpbmdyZXNvcyAtIGNvc3Rlc19maWpvcykifQ==
+</script>
+</div>
+<p>¿Cómo cambia el resultado con el número de usuarios? Prueba otros valores de conversión y precio:</p>
+<div>
+<div id="webr-6" class="exercise-cell">
+
+</div>
+<script type="webr-6-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWUsImZpZy1oZWlnaHQiOjR9LCJjb2RlIjoidSA8LSBzZXEoMCwgMTIwMDAsIGJ5ID0gNTAwKVxucGxvdCh1LCBpbmdyZXNvc19tZW5zdWFsZXModSwgY29udmVyc2lvbiwgcHJlY2lvKSwgdHlwZSA9IFwibFwiLCBsd2QgPSAyLCBjb2wgPSBcIiMwMDBlNzhcIixcbiAgICAgeGxhYiA9IFwiVXN1YXJpb3MgZGUgbGEgdmVyc2nDs24gZ3JhdHVpdGFcIiwgeWxhYiA9IFwiRXVyb3MgYWwgbWVzXCIsXG4gICAgIG1haW4gPSBcIkluZ3Jlc29zIGZyZW50ZSBhIGNvc3RlcyBmaWpvc1wiKVxuYWJsaW5lKGggPSBjb3N0ZXNfZmlqb3MsIGx0eSA9IDIsIGNvbCA9IFwiZmlyZWJyaWNrXCIpXG5sZWdlbmQoXCJ0b3BsZWZ0XCIsIGMoXCJJbmdyZXNvc1wiLCBcIkNvc3RlcyBmaWpvc1wiKSwgbHR5ID0gYygxLCAyKSwgY29sID0gYyhcIiMwMDBlNzhcIiwgXCJmaXJlYnJpY2tcIiksIGJ0eSA9IFwiblwiKSJ9
+</script>
+</div>
+</section>
+<section id="ejercicio-5.2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-5.2">Ejercicio 5.2</h3>
+<p>¿Cuántos usuarios de la versión gratuita necesita la empresa para cubrir los costes fijos (punto de equilibrio)? Despeja de <code>usuarios × conversión × precio = costes fijos</code>.</p>
+<script type="exercise-setup-t5_equilibrio-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDVfZXF1aWxpYnJpbyIsInNldHVwIjp0cnVlfSwiY29kZSI6ImNvbnZlcnNpb24gPC0gMC4wNFxucHJlY2lvIDwtIDlcbmNvc3Rlc19maWpvcyA8LSAyNzAwIn0=
+</script>
+<div>
+<div id="webr-8" class="exercise-cell">
+
+</div>
+<script type="webr-8-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDVfZXF1aWxpYnJpbyJ9LCJjb2RlIjoiY29zdGVzX2Zpam9zIC8gKF9fX19fXyAqIF9fX19fXykifQ==
+</script>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="t5_equilibrio">
+<p>Lo que aporta cada usuario gratuito, de media, es la conversión por el precio.</p>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t5_equilibrio">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>costes_fijos <span class="sc">/</span> (conversion <span class="sc">*</span> precio)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>7.500 usuarios. Cada usuario gratuito aporta de media 0,36 € al mes.</p>
+</div>
+<script type="exercise-check-t5_equilibrio-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ1X2VxdWlsaWJyaW8ifSwiY29kZSI6ImlmIChpc1RSVUUoYWxsLmVxdWFsKGFzLm51bWVyaWMoLnJlc3VsdCksIDc1MDApKSkge1xuICBsaXN0KGNvcnJlY3QgPSBUUlVFLCBtZXNzYWdlID0gXCJDb3JyZWN0bzogNy41MDAgdXN1YXJpb3MuIENvbiA1LjAwMCBsYSBlbXByZXNhIHBpZXJkZSBkaW5lcm86IMK/cXXDqSBwYWxhbmNhIG1vdmVyw61hcywgbGEgY29udmVyc2nDs24gbyBlbCBwcmVjaW8/XCIpXG59IGVsc2Uge1xuICBsaXN0KGNvcnJlY3QgPSBGQUxTRSwgbWVzc2FnZSA9IFwiRGl2aWRlIGxvcyBjb3N0ZXMgZmlqb3MgZW50cmUgbG8gcXVlIGFwb3J0YSBjYWRhIHVzdWFyaW86IGNvbnZlcnNpb24gKiBwcmVjaW8uXCIpXG59In0=
+</script>
+</section>
+<section id="ejercicio-5.3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-5.3">Ejercicio 5.3</h3>
+<p>La empresa mejora la versión de pago y consigue una <strong>conversión del 6 %</strong> manteniendo el precio. ¿Cuál es ahora el resultado mensual (ingresos menos costes) con 5.000 usuarios?</p>
+<script type="exercise-setup-t5_conversion-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDVfY29udmVyc2lvbiIsInNldHVwIjp0cnVlfSwiY29kZSI6ImluZ3Jlc29zX21lbnN1YWxlcyA8LSBmdW5jdGlvbih1c3VhcmlvcywgY29udmVyc2lvbiwgcHJlY2lvKSB1c3VhcmlvcyAqIGNvbnZlcnNpb24gKiBwcmVjaW9cbmNvc3Rlc19maWpvcyA8LSAyNzAwIn0=
+</script>
+<div>
+<div id="webr-11" class="exercise-cell">
+
+</div>
+<script type="webr-11-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDVfY29udmVyc2lvbiJ9LCJjb2RlIjoiaW5ncmVzb3NfbWVuc3VhbGVzKHVzdWFyaW9zID0gNTAwMCwgY29udmVyc2lvbiA9IF9fX19fXywgcHJlY2lvID0gOSkgLSBjb3N0ZXNfZmlqb3MifQ==
+</script>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t5_conversion">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ingresos_mensuales</span>(<span class="at">usuarios =</span> <span class="dv">5000</span>, <span class="at">conversion =</span> <span class="fl">0.06</span>, <span class="at">precio =</span> <span class="dv">9</span>) <span class="sc">-</span> costes_fijos</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<script type="exercise-check-t5_conversion-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ1X2NvbnZlcnNpb24ifSwiY29kZSI6ImlmIChpc1RSVUUoYWxsLmVxdWFsKGFzLm51bWVyaWMoLnJlc3VsdCksIDApKSkge1xuICBsaXN0KGNvcnJlY3QgPSBUUlVFLCBtZXNzYWdlID0gXCJDb3JyZWN0bzogMCDigqwuIENvbiB1biA2ICUgZGUgY29udmVyc2nDs24sIDUuMDAwIHVzdWFyaW9zIGVzIGp1c3RvIGVsIHB1bnRvIGRlIGVxdWlsaWJyaW8uXCIpXG59IGVsc2UgaWYgKGlzVFJVRShhbGwuZXF1YWwoYXMubnVtZXJpYygucmVzdWx0KSwgMjY3MzAwKSkpIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkhhcyBlc2NyaXRvIDYgZW4gbHVnYXIgZGUgMC4wNjogbGEgY29udmVyc2nDs24gZXMgdW5hIHByb3BvcmNpw7NuLlwiKVxufSBlbHNlIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkVzY3JpYmUgbGEgY29udmVyc2nDs24gY29tbyBwcm9wb3JjacOzbjogNiAlID0gMC4wNi5cIilcbn0ifQ==
+</script>
+</section>
+<section id="paso-3.-obligaciones-al-combinar-licencias-apartado-4" class="level3">
+<h3 class="anchored" data-anchor-id="paso-3.-obligaciones-al-combinar-licencias-apartado-4">Paso 3. Obligaciones al combinar licencias (apartado 4)</h3>
+<p>Codificamos la tabla de licencias como un <em>data frame</em> y escribimos una función que, dadas varias fuentes, acumula sus obligaciones.</p>
+<div>
+<div id="webr-13" class="exercise-cell">
+
+</div>
+<script type="webr-13-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibGljZW5jaWFzIDwtIGRhdGEuZnJhbWUoXG4gIGxpY2VuY2lhICAgICAgICA9IGMoXCJDQzAgMS4wXCIsIFwiQ0MgQlkgNC4wXCIsIFwiQ0MgQlktU0EgNC4wXCIsIFwiT0RiTCAxLjBcIiwgXCJDQyBCWS1OQyA0LjBcIiksXG4gIGF0cmlidWNpb24gICAgICA9IGMoRkFMU0UsIFRSVUUsIFRSVUUsIFRSVUUsIFRSVUUpLFxuICBjb21wYXJ0aXJfaWd1YWwgPSBjKEZBTFNFLCBGQUxTRSwgVFJVRSwgVFJVRSwgRkFMU0UpLFxuICB1c29fY29tZXJjaWFsICAgPSBjKFRSVUUsIFRSVUUsIFRSVUUsIFRSVUUsIEZBTFNFKVxuKVxuXG5vYmxpZ2FjaW9uZXMgPC0gZnVuY3Rpb24oZnVlbnRlcykge1xuICBsIDwtIGxpY2VuY2lhc1tsaWNlbmNpYXMkbGljZW5jaWEgJWluJSBmdWVudGVzLCBdXG4gIGMoYXRyaWJ1Y2lvbiAgICAgID0gYW55KGwkYXRyaWJ1Y2lvbiksXG4gICAgY29tcGFydGlyX2lndWFsID0gYW55KGwkY29tcGFydGlyX2lndWFsKSxcbiAgICB1c29fY29tZXJjaWFsICAgPSBhbGwobCR1c29fY29tZXJjaWFsKSlcbn1cblxub2JsaWdhY2lvbmVzKGMoXCJDQzAgMS4wXCIsIFwiQ0MgQlkgNC4wXCIpKSJ9
+</script>
+</div>
+<p><code>any()</code> es <code>TRUE</code> si al menos una fuente lo exige; <code>all()</code> es <code>TRUE</code> solo si todas lo permiten.</p>
+</section>
+<section id="ejercicio-5.4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-5.4">Ejercicio 5.4</h3>
+<p>Un servicio combina el padrón municipal (CC BY 4.0) con datos de OpenStreetMap (ODbL 1.0). Calcula sus obligaciones.</p>
+<script type="exercise-setup-t5_licencias-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDVfbGljZW5jaWFzIiwic2V0dXAiOnRydWV9LCJjb2RlIjoibGljZW5jaWFzIDwtIGRhdGEuZnJhbWUoXG4gIGxpY2VuY2lhICAgICAgICA9IGMoXCJDQzAgMS4wXCIsIFwiQ0MgQlkgNC4wXCIsIFwiQ0MgQlktU0EgNC4wXCIsIFwiT0RiTCAxLjBcIiwgXCJDQyBCWS1OQyA0LjBcIiksXG4gIGF0cmlidWNpb24gICAgICA9IGMoRkFMU0UsIFRSVUUsIFRSVUUsIFRSVUUsIFRSVUUpLFxuICBjb21wYXJ0aXJfaWd1YWwgPSBjKEZBTFNFLCBGQUxTRSwgVFJVRSwgVFJVRSwgRkFMU0UpLFxuICB1c29fY29tZXJjaWFsICAgPSBjKFRSVUUsIFRSVUUsIFRSVUUsIFRSVUUsIEZBTFNFKVxuKVxub2JsaWdhY2lvbmVzIDwtIGZ1bmN0aW9uKGZ1ZW50ZXMpIHtcbiAgbCA8LSBsaWNlbmNpYXNbbGljZW5jaWFzJGxpY2VuY2lhICVpbiUgZnVlbnRlcywgXVxuICBjKGF0cmlidWNpb24gPSBhbnkobCRhdHJpYnVjaW9uKSwgY29tcGFydGlyX2lndWFsID0gYW55KGwkY29tcGFydGlyX2lndWFsKSwgdXNvX2NvbWVyY2lhbCA9IGFsbChsJHVzb19jb21lcmNpYWwpKVxufSJ9
+</script>
+<div>
+<div id="webr-15" class="exercise-cell">
+
+</div>
+<script type="webr-15-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDVfbGljZW5jaWFzIn0sImNvZGUiOiJvYmxpZ2FjaW9uZXMoYyhcIl9fX19fX1wiLCBcIl9fX19fX1wiKSkifQ==
+</script>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="t5_licencias">
+<p>Escribe los nombres de las licencias exactamente como aparecen en la tabla <code>licencias</code>.</p>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t5_licencias">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">obligaciones</span>(<span class="fu">c</span>(<span class="st">"CC BY 4.0"</span>, <span class="st">"ODbL 1.0"</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Hay que atribuir ambas fuentes y, si se distribuye la base de datos derivada, hacerlo con ODbL. El uso comercial está permitido.</p>
+</div>
+<script type="exercise-check-t5_licencias-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ1X2xpY2VuY2lhcyJ9LCJjb2RlIjoiZXNwIDwtIGMoYXRyaWJ1Y2lvbiA9IFRSVUUsIGNvbXBhcnRpcl9pZ3VhbCA9IFRSVUUsIHVzb19jb21lcmNpYWwgPSBUUlVFKVxuaWYgKGlkZW50aWNhbCgucmVzdWx0LCBlc3ApICYmIGdyZXBsKFwiT0RiTCAxLjBcIiwgLnVzZXJfY29kZSwgZml4ZWQgPSBUUlVFKSAmJiBncmVwbChcIkNDIEJZIDQuMFwiLCAudXNlcl9jb2RlLCBmaXhlZCA9IFRSVUUpKSB7XG4gIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBcIkNvcnJlY3RvOiBhdHJpYnVjacOzbiB5IGNvbXBhcnRpciBpZ3VhbCAocG9yIE9EYkwpLCBjb24gdXNvIGNvbWVyY2lhbCBwZXJtaXRpZG8uXCIpXG59IGVsc2Uge1xuICBsaXN0KGNvcnJlY3QgPSBGQUxTRSwgbWVzc2FnZSA9IFwiQ29tcHJ1ZWJhIHF1ZSBsb3Mgbm9tYnJlcyBjb2luY2lkZW4gZXhhY3RhbWVudGUgY29uIGxvcyBkZSBsYSB0YWJsYSwgcG9yIGVqZW1wbG8gXFxcIk9EYkwgMS4wXFxcIi5cIilcbn0ifQ==
+</script>
+</section>
+<section id="ejercicio-5.5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-5.5">Ejercicio 5.5</h3>
+<p>Si se añade una tercera fuente con licencia <strong>CC BY-NC 4.0</strong>, ¿puede la empresa vender el servicio? Devuelve solo el valor de <code>uso_comercial</code>.</p>
+<script type="exercise-setup-t5_nc-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDVfbmMiLCJzZXR1cCI6dHJ1ZX0sImNvZGUiOiJsaWNlbmNpYXMgPC0gZGF0YS5mcmFtZShcbiAgbGljZW5jaWEgICAgICAgID0gYyhcIkNDMCAxLjBcIiwgXCJDQyBCWSA0LjBcIiwgXCJDQyBCWS1TQSA0LjBcIiwgXCJPRGJMIDEuMFwiLCBcIkNDIEJZLU5DIDQuMFwiKSxcbiAgYXRyaWJ1Y2lvbiAgICAgID0gYyhGQUxTRSwgVFJVRSwgVFJVRSwgVFJVRSwgVFJVRSksXG4gIGNvbXBhcnRpcl9pZ3VhbCA9IGMoRkFMU0UsIEZBTFNFLCBUUlVFLCBUUlVFLCBGQUxTRSksXG4gIHVzb19jb21lcmNpYWwgICA9IGMoVFJVRSwgVFJVRSwgVFJVRSwgVFJVRSwgRkFMU0UpXG4pXG5vYmxpZ2FjaW9uZXMgPC0gZnVuY3Rpb24oZnVlbnRlcykge1xuICBsIDwtIGxpY2VuY2lhc1tsaWNlbmNpYXMkbGljZW5jaWEgJWluJSBmdWVudGVzLCBdXG4gIGMoYXRyaWJ1Y2lvbiA9IGFueShsJGF0cmlidWNpb24pLCBjb21wYXJ0aXJfaWd1YWwgPSBhbnkobCRjb21wYXJ0aXJfaWd1YWwpLCB1c29fY29tZXJjaWFsID0gYWxsKGwkdXNvX2NvbWVyY2lhbCkpXG59In0=
+</script>
+<div>
+<div id="webr-18" class="exercise-cell">
+
+</div>
+<script type="webr-18-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDVfbmMifSwiY29kZSI6Im8gPC0gb2JsaWdhY2lvbmVzKGMoXCJDQyBCWSA0LjBcIiwgXCJPRGJMIDEuMFwiLCBfX19fX18pKVxub1tbXCJfX19fX19cIl1dIn0=
+</script>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t5_nc">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>o <span class="ot">&lt;-</span> <span class="fu">obligaciones</span>(<span class="fu">c</span>(<span class="st">"CC BY 4.0"</span>, <span class="st">"ODbL 1.0"</span>, <span class="st">"CC BY-NC 4.0"</span>))</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>o[[<span class="st">"uso_comercial"</span>]]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>FALSE</code>: basta una fuente no comercial para que el servicio no pueda venderse. Por eso CC BY-NC no es una licencia abierta según la Open Definition (Tema 0).</p>
+</div>
+<script type="exercise-check-t5_nc-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ1X25jIn0sImNvZGUiOiJpZiAoaWRlbnRpY2FsKC5yZXN1bHQsIEZBTFNFKSAmJiBncmVwbChcIkNDIEJZLU5DIDQuMFwiLCAudXNlcl9jb2RlLCBmaXhlZCA9IFRSVUUpKSB7XG4gIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBcIkNvcnJlY3RvOiBGQUxTRS4gVW5hIHNvbGEgZnVlbnRlIE5DIGltcGlkZSBlbCB1c28gY29tZXJjaWFsIGRlbCBjb25qdW50by5cIilcbn0gZWxzZSB7XG4gIGxpc3QoY29ycmVjdCA9IEZBTFNFLCBtZXNzYWdlID0gXCJBw7FhZGUgXFxcIkNDIEJZLU5DIDQuMFxcXCIgYSBsYXMgZnVlbnRlcyB5IHNlbGVjY2lvbmEgZWwgZWxlbWVudG8gXFxcInVzb19jb21lcmNpYWxcXFwiLlwiKVxufSJ9
+</script>
+</section>
+</section>
+<section id="para-practicar-fuera-del-libro" class="level2">
+<h2 class="anchored" data-anchor-id="para-practicar-fuera-del-libro">Para practicar fuera del libro</h2>
+<p>En grupo, idead un servicio que combine al menos dos conjuntos de datos abiertos. Describidlo con los seis componentes del marco 6-V, calculad su punto de equilibrio con la función <code>ingresos_mensuales()</code> y comprobad las obligaciones de licencia con <code>obligaciones()</code>. Presentadlo en 5 minutos.</p>
+</section>
+<section id="recursos-complementarios" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-complementarios">Recursos complementarios</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Recurso</th>
+<th>Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://www.asedie.es/es/informes-anuales">ASEDIE – Informes anuales</a></td>
+<td>Informe anual del sector infomediario</td>
+</tr>
+<tr class="even">
+<td><a href="https://datos.gob.es/es/noticias/asi-evoluciona-el-ecosistema-infomediario-en-espana-segun-asedie">datos.gob.es – Así evoluciona el ecosistema infomediario según ASEDIE</a></td>
+<td>Cifras de la 14.ª edición</td>
+</tr>
+<tr class="odd">
+<td><a href="https://datos.gob.es/sites/default/files/doc/file/estudio_de_caracterizacion_del_sector_infomediario_2016_0.pdf">Estudio de caracterización del sector infomediario 2016 (ONTSI)</a></td>
+<td>Último estudio oficial</td>
+</tr>
+<tr class="even">
+<td><a href="https://datos.gob.es/es/empresas">datos.gob.es – Empresas reutilizadoras</a></td>
+<td>Directorio de empresas españolas</td>
+</tr>
+<tr class="odd">
+<td><a href="https://datos.gob.es/es/desafios-aporta">Desafíos Aporta</a></td>
+<td>Ideas y productos premiados (2017-2021)</td>
+</tr>
+<tr class="even">
+<td><a href="https://theodi.org">Open Data Institute</a></td>
+<td>Modelos de negocio y ecosistemas de datos</td>
+</tr>
+<tr class="odd">
+<td><a href="https://data.europa.eu/sites/default/files/report/open-data-business-models-value-disciplines.pdf">data.europa.eu – Open data business models</a></td>
+<td>Informe europeo sobre modelos de negocio</td>
+</tr>
+<tr class="even">
+<td><a href="https://dssc.eu">Data Spaces Support Centre</a></td>
+<td>Espacios de datos europeos</td>
+</tr>
+<tr class="odd">
+<td><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=es">Reglamento (UE) 2024/1689 de IA</a></td>
+<td>Obligaciones de transparencia y datos</td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="webr-data">
+eyJvcHRpb25zIjp7ImJhc2VVcmwiOiJ3ZWJyLyJ9LCJwYWNrYWdlcyI6eyJwa2dzIjpbImV2YWx1YXRlIiwia25pdHIiLCJodG1sdG9vbHMiLCJqc29ubGl0ZSJdLCJyZXBvcyI6WyJ3ZWJyLXJlcG8iXX0sInJlbmRlcl9kZiI6ImRlZmF1bHQifQ==
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xOCIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMTg7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0xOCIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzE4ID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMTgtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICAvLyBEZWZhdWx0IGV4ZXJjaXNlIGNvbmZpZ3VyYXRpb25cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oXG4gICAge1xuICAgICAgaWQ6IFwid2Vici0xOC1jb250ZW50c1wiLFxuICAgICAgZW52aXI6IGBleGVyY2lzZS1lbnYtJHtibG9jay5hdHRyLmV4ZXJjaXNlfWAsXG4gICAgICBlcnJvcjogZmFsc2UsXG4gICAgICBjYXB0aW9uOiAnRXhlcmNpc2UnLFxuICAgIH0sXG4gICAgYmxvY2suYXR0clxuICApO1xuXG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxudmlld29mIF93ZWJyX3ZhbHVlXzE4ID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl8xOCwge30pO1xuX3dlYnJfZmVlZGJhY2tfMTggPSB7XG4gIGNvbnN0IHsgV2ViUkdyYWRlciB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3QgZW1wdHlGZWVkYmFjayA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuXG4gIGNvbnN0IGdyYWRlciA9IG5ldyBXZWJSR3JhZGVyKF93ZWJyX3ZhbHVlXzE4LmV2YWx1YXRvcik7XG4gIGNvbnN0IGZlZWRiYWNrID0gYXdhaXQgZ3JhZGVyLmdyYWRlRXhlcmNpc2UoKTtcbiAgaWYgKCFmZWVkYmFjaykgcmV0dXJuIGVtcHR5RmVlZGJhY2s7XG4gIHJldHVybiBmZWVkYmFjaztcbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xNSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMTU7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0xNSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzE1ID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMTUtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICAvLyBEZWZhdWx0IGV4ZXJjaXNlIGNvbmZpZ3VyYXRpb25cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oXG4gICAge1xuICAgICAgaWQ6IFwid2Vici0xNS1jb250ZW50c1wiLFxuICAgICAgZW52aXI6IGBleGVyY2lzZS1lbnYtJHtibG9jay5hdHRyLmV4ZXJjaXNlfWAsXG4gICAgICBlcnJvcjogZmFsc2UsXG4gICAgICBjYXB0aW9uOiAnRXhlcmNpc2UnLFxuICAgIH0sXG4gICAgYmxvY2suYXR0clxuICApO1xuXG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxudmlld29mIF93ZWJyX3ZhbHVlXzE1ID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl8xNSwge30pO1xuX3dlYnJfZmVlZGJhY2tfMTUgPSB7XG4gIGNvbnN0IHsgV2ViUkdyYWRlciB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3QgZW1wdHlGZWVkYmFjayA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuXG4gIGNvbnN0IGdyYWRlciA9IG5ldyBXZWJSR3JhZGVyKF93ZWJyX3ZhbHVlXzE1LmV2YWx1YXRvcik7XG4gIGNvbnN0IGZlZWRiYWNrID0gYXdhaXQgZ3JhZGVyLmdyYWRlRXhlcmNpc2UoKTtcbiAgaWYgKCFmZWVkYmFjaykgcmV0dXJuIGVtcHR5RmVlZGJhY2s7XG4gIHJldHVybiBmZWVkYmFjaztcbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xMyIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMTM7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0xMyIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzEzID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMTMtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICBjb25zdCBvcHRpb25zID0gT2JqZWN0LmFzc2lnbih7IGlkOiBgd2Vici0xMy1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fd2Vicl92YWx1ZV8xMyA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfMTMsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xMSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMTE7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0xMSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzExID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMTEtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICAvLyBEZWZhdWx0IGV4ZXJjaXNlIGNvbmZpZ3VyYXRpb25cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oXG4gICAge1xuICAgICAgaWQ6IFwid2Vici0xMS1jb250ZW50c1wiLFxuICAgICAgZW52aXI6IGBleGVyY2lzZS1lbnYtJHtibG9jay5hdHRyLmV4ZXJjaXNlfWAsXG4gICAgICBlcnJvcjogZmFsc2UsXG4gICAgICBjYXB0aW9uOiAnRXhlcmNpc2UnLFxuICAgIH0sXG4gICAgYmxvY2suYXR0clxuICApO1xuXG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxudmlld29mIF93ZWJyX3ZhbHVlXzExID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl8xMSwge30pO1xuX3dlYnJfZmVlZGJhY2tfMTEgPSB7XG4gIGNvbnN0IHsgV2ViUkdyYWRlciB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3QgZW1wdHlGZWVkYmFjayA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuXG4gIGNvbnN0IGdyYWRlciA9IG5ldyBXZWJSR3JhZGVyKF93ZWJyX3ZhbHVlXzExLmV2YWx1YXRvcik7XG4gIGNvbnN0IGZlZWRiYWNrID0gYXdhaXQgZ3JhZGVyLmdyYWRlRXhlcmNpc2UoKTtcbiAgaWYgKCFmZWVkYmFjaykgcmV0dXJuIGVtcHR5RmVlZGJhY2s7XG4gIHJldHVybiBmZWVkYmFjaztcbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC04IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICAvLyBXYWl0IGZvciBvdXRwdXQgdG8gYmUgd3JpdHRlbiB0byB0aGUgRE9NLCB0aGVuIHRyaWdnZXIgd2lkZ2V0IHJlbmRlcmluZ1xuICBhd2FpdCBfd2Vicl92YWx1ZV84O1xuICBpZiAod2luZG93LkhUTUxXaWRnZXRzKSB7XG4gICAgd2luZG93LkhUTUxXaWRnZXRzLnN0YXRpY1JlbmRlcigpO1xuICB9XG4gIGlmICh3aW5kb3cuUGFnZWRUYWJsZURvYykge1xuICAgIHdpbmRvdy5QYWdlZFRhYmxlRG9jLmluaXRBbGwoKTtcbiAgfVxufVxuIn0seyJjZWxsTmFtZSI6IndlYnItOCIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzggPSB7XG4gIGNvbnN0IHsgV2ViUkV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici04LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgLy8gRGVmYXVsdCBleGVyY2lzZSBjb25maWd1cmF0aW9uXG4gIGNvbnN0IG9wdGlvbnMgPSBPYmplY3QuYXNzaWduKFxuICAgIHtcbiAgICAgIGlkOiBcIndlYnItOC1jb250ZW50c1wiLFxuICAgICAgZW52aXI6IGBleGVyY2lzZS1lbnYtJHtibG9jay5hdHRyLmV4ZXJjaXNlfWAsXG4gICAgICBlcnJvcjogZmFsc2UsXG4gICAgICBjYXB0aW9uOiAnRXhlcmNpc2UnLFxuICAgIH0sXG4gICAgYmxvY2suYXR0clxuICApO1xuXG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxudmlld29mIF93ZWJyX3ZhbHVlXzggPSB3ZWJST2pzLnByb2Nlc3MoX3dlYnJfZWRpdG9yXzgsIHt9KTtcbl93ZWJyX2ZlZWRiYWNrXzggPSB7XG4gIGNvbnN0IHsgV2ViUkdyYWRlciB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3QgZW1wdHlGZWVkYmFjayA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuXG4gIGNvbnN0IGdyYWRlciA9IG5ldyBXZWJSR3JhZGVyKF93ZWJyX3ZhbHVlXzguZXZhbHVhdG9yKTtcbiAgY29uc3QgZmVlZGJhY2sgPSBhd2FpdCBncmFkZXIuZ3JhZGVFeGVyY2lzZSgpO1xuICBpZiAoIWZlZWRiYWNrKSByZXR1cm4gZW1wdHlGZWVkYmFjaztcbiAgcmV0dXJuIGZlZWRiYWNrO1xufVxuIn0seyJjZWxsTmFtZSI6IndlYnItd2lkZ2V0LTYiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJ7XG4gIC8vIFdhaXQgZm9yIG91dHB1dCB0byBiZSB3cml0dGVuIHRvIHRoZSBET00sIHRoZW4gdHJpZ2dlciB3aWRnZXQgcmVuZGVyaW5nXG4gIGF3YWl0IF93ZWJyX3ZhbHVlXzY7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici02IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfd2Vicl9lZGl0b3JfNiA9IHtcbiAgY29uc3QgeyBXZWJSRXhlcmNpc2VFZGl0b3IsIGI2NERlY29kZSB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ3ZWJyLTYtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICBjb25zdCBvcHRpb25zID0gT2JqZWN0LmFzc2lnbih7IGlkOiBgd2Vici02LWNvbnRlbnRzYCB9LCBibG9jay5hdHRyKTtcbiAgY29uc3QgZWRpdG9yID0gbmV3IFdlYlJFeGVyY2lzZUVkaXRvcih3ZWJST2pzLndlYlJQcm9taXNlLCBibG9jay5jb2RlLCBvcHRpb25zKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl93ZWJyX3ZhbHVlXzYgPSB3ZWJST2pzLnByb2Nlc3MoX3dlYnJfZWRpdG9yXzYsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC01IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICAvLyBXYWl0IGZvciBvdXRwdXQgdG8gYmUgd3JpdHRlbiB0byB0aGUgRE9NLCB0aGVuIHRyaWdnZXIgd2lkZ2V0IHJlbmRlcmluZ1xuICBhd2FpdCBfd2Vicl92YWx1ZV81O1xuICBpZiAod2luZG93LkhUTUxXaWRnZXRzKSB7XG4gICAgd2luZG93LkhUTUxXaWRnZXRzLnN0YXRpY1JlbmRlcigpO1xuICB9XG4gIGlmICh3aW5kb3cuUGFnZWRUYWJsZURvYykge1xuICAgIHdpbmRvdy5QYWdlZFRhYmxlRG9jLmluaXRBbGwoKTtcbiAgfVxufVxuIn0seyJjZWxsTmFtZSI6IndlYnItNSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzUgPSB7XG4gIGNvbnN0IHsgV2ViUkV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici01LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHdlYnItNS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fd2Vicl92YWx1ZV81ID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl81LCB7fSk7XG4ifSx7ImNlbGxOYW1lIjoid2Vici13aWRnZXQtMyIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMztcbiAgaWYgKHdpbmRvdy5IVE1MV2lkZ2V0cykge1xuICAgIHdpbmRvdy5IVE1MV2lkZ2V0cy5zdGF0aWNSZW5kZXIoKTtcbiAgfVxuICBpZiAod2luZG93LlBhZ2VkVGFibGVEb2MpIHtcbiAgICB3aW5kb3cuUGFnZWRUYWJsZURvYy5pbml0QWxsKCk7XG4gIH1cbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLTMiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF93ZWJyX2VkaXRvcl8zID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMy1jb250ZW50c1xcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGJsb2NrID0gSlNPTi5wYXJzZShiNjREZWNvZGUoc2NyaXB0Q29udGVudCkpO1xuXG4gIC8vIERlZmF1bHQgZXhlcmNpc2UgY29uZmlndXJhdGlvblxuICBjb25zdCBvcHRpb25zID0gT2JqZWN0LmFzc2lnbihcbiAgICB7XG4gICAgICBpZDogXCJ3ZWJyLTMtY29udGVudHNcIixcbiAgICAgIGVudmlyOiBgZXhlcmNpc2UtZW52LSR7YmxvY2suYXR0ci5leGVyY2lzZX1gLFxuICAgICAgZXJyb3I6IGZhbHNlLFxuICAgICAgY2FwdGlvbjogJ0V4ZXJjaXNlJyxcbiAgICB9LFxuICAgIGJsb2NrLmF0dHJcbiAgKTtcblxuICBjb25zdCBlZGl0b3IgPSBuZXcgV2ViUkV4ZXJjaXNlRWRpdG9yKHdlYlJPanMud2ViUlByb21pc2UsIGJsb2NrLmNvZGUsIG9wdGlvbnMpO1xuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbnZpZXdvZiBfd2Vicl92YWx1ZV8zID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl8zLCB7fSk7XG5fd2Vicl9mZWVkYmFja18zID0ge1xuICBjb25zdCB7IFdlYlJHcmFkZXIgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IGVtcHR5RmVlZGJhY2sgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcblxuICBjb25zdCBncmFkZXIgPSBuZXcgV2ViUkdyYWRlcihfd2Vicl92YWx1ZV8zLmV2YWx1YXRvcik7XG4gIGNvbnN0IGZlZWRiYWNrID0gYXdhaXQgZ3JhZGVyLmdyYWRlRXhlcmNpc2UoKTtcbiAgaWYgKCFmZWVkYmFjaykgcmV0dXJuIGVtcHR5RmVlZGJhY2s7XG4gIHJldHVybiBmZWVkYmFjaztcbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICAvLyBXYWl0IGZvciBvdXRwdXQgdG8gYmUgd3JpdHRlbiB0byB0aGUgRE9NLCB0aGVuIHRyaWdnZXIgd2lkZ2V0IHJlbmRlcmluZ1xuICBhd2FpdCBfd2Vicl92YWx1ZV8xO1xuICBpZiAod2luZG93LkhUTUxXaWRnZXRzKSB7XG4gICAgd2luZG93LkhUTUxXaWRnZXRzLnN0YXRpY1JlbmRlcigpO1xuICB9XG4gIGlmICh3aW5kb3cuUGFnZWRUYWJsZURvYykge1xuICAgIHdpbmRvdy5QYWdlZFRhYmxlRG9jLmluaXRBbGwoKTtcbiAgfVxufVxuIn0seyJjZWxsTmFtZSI6IndlYnItMSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzEgPSB7XG4gIGNvbnN0IHsgV2ViUkV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHdlYnItMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fd2Vicl92YWx1ZV8xID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl8xLCB7fSk7XG4ifSx7ImNlbGxOYW1lIjoid2Vici1wcmVsdWRlIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoid2ViUk9qcyA9IHtcbiAgY29uc3QgeyBXZWJSLCBDaGFubmVsVHlwZSB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZS5XZWJSO1xuICBjb25zdCB7XG4gICAgV2ViUkV2YWx1YXRvcixcbiAgICBXZWJSRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoXG4gIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHN0YXR1c0NvbnRhaW5lciA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwiZXhlcmNpc2UtbG9hZGluZy1zdGF0dXNcIik7XG4gIGNvbnN0IGluZGljYXRvckNvbnRhaW5lciA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwiZXhlcmNpc2UtbG9hZGluZy1pbmRpY2F0b3JcIik7XG4gIGluZGljYXRvckNvbnRhaW5lci5jbGFzc0xpc3QucmVtb3ZlKFwiZC1ub25lXCIpO1xuXG4gIGxldCBzdGF0dXNUZXh0ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudChcImRpdlwiKVxuICBzdGF0dXNUZXh0LmNsYXNzTGlzdCA9IFwiZXhlcmNpc2UtbG9hZGluZy1kZXRhaWxzXCI7XG4gIHN0YXR1c1RleHQgPSBzdGF0dXNDb250YWluZXIuYXBwZW5kQ2hpbGQoc3RhdHVzVGV4dCk7XG4gIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgSW5pdGlhbGlzZWA7XG5cbiAgLy8gSG9pc3QgaW5kaWNhdG9yIG91dCBmcm9tIGZpbmFsIHNsaWRlIHdoZW4gcnVubmluZyB1bmRlciByZXZlYWxcbiAgY29uc3QgcmV2ZWFsU3RhdHVzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXZlYWwgLmV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpZiAocmV2ZWFsU3RhdHVzKSB7XG4gICAgcmV2ZWFsU3RhdHVzLnJlbW92ZSgpO1xuICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsID4gLnNsaWRlc1wiKS5hcHBlbmRDaGlsZChyZXZlYWxTdGF0dXMpO1xuICB9XG5cbiAgLy8gTWFrZSBhbnkgcmV2ZWFsIHNsaWRlcyB3aXRoIGxpdmUgY2VsbHMgc2Nyb2xsYWJsZVxuICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKFwiLnJldmVhbCAuZXhlcmNpc2UtY2VsbFwiKS5mb3JFYWNoKChlbCkgPT4ge1xuICAgIGVsLmNsb3Nlc3QoJ3NlY3Rpb24uc2xpZGUnKS5jbGFzc0xpc3QuYWRkKFwic2Nyb2xsYWJsZVwiKTtcbiAgfSlcblxuICAvLyB3ZWJSIHN1cHBsZW1lbnRhbCBkYXRhIGFuZCBvcHRpb25zXG4gIGNvbnN0IGRhdGFDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItZGF0YVxcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGRhdGEgPSBKU09OLnBhcnNlKGI2NERlY29kZShkYXRhQ29udGVudCkpO1xuXG4gIC8vIFtMaWJyb10gUGVybWl0aXIgcnV0YXMgcmVsYXRpdmFzIHBhcmEgZWwgbW90b3IgeSBlbCByZXBvc2l0b3JpbyBkZSBwYXF1ZXRlc1xuICAvLyAoYXV0b2Fsb2phZG9zIGp1bnRvIGFsIGxpYnJvKSwgcmVzb2x2acOpbmRvbGFzIHJlc3BlY3RvIGEgbGEgcMOhZ2luYS5cbiAgY29uc3QgYWJzb2x1dGl6ZSA9ICh1KSA9PiBuZXcgVVJMKHUsIGRvY3VtZW50LmJhc2VVUkkpLmhyZWY7XG4gIGlmIChkYXRhLm9wdGlvbnMuYmFzZVVybCkgZGF0YS5vcHRpb25zLmJhc2VVcmwgPSBhYnNvbHV0aXplKGRhdGEub3B0aW9ucy5iYXNlVXJsKTtcbiAgZGF0YS5wYWNrYWdlcy5yZXBvcyA9IGRhdGEucGFja2FnZXMucmVwb3MubWFwKGFic29sdXRpemUpO1xuXG4gIC8vIEdyYWIgbGlzdCBvZiByZXNvdXJjZXMgdG8gYmUgZG93bmxvYWRlZFxuICBjb25zdCBmaWxlc0NvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwidmZzLWZpbGVcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBmaWxlcyA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKGZpbGVzQ29udGVudCkpO1xuXG4gIC8vIEluaXRpYWxpc2Ugd2ViUiBhbmQgc2V0dXAgZm9yIFIgY29kZSBldmFsdWF0aW9uXG4gIGxldCB3ZWJSUHJvbWlzZSA9IChhc3luYyAod2ViUikgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgd2ViUmA7XG4gICAgYXdhaXQgd2ViUi5pbml0KCk7XG5cbiAgICAvLyBJbnN0YWxsIHByb3ZpZGVkIGxpc3Qgb2YgcGFja2FnZXNcbiAgICAvLyBFbnN1cmUgd2ViUiBkZWZhdWx0IHJlcG8gaXMgaW5jbHVkZWRcbiAgICBpZiAoZGF0YS5wYWNrYWdlcy5yZXBvcy5sZW5ndGggPT09IDApIGRhdGEucGFja2FnZXMucmVwb3MucHVzaChcImh0dHBzOi8vcmVwby5yLXdhc20ub3JnXCIpXG4gICAgYXdhaXQgZGF0YS5wYWNrYWdlcy5wa2dzLm1hcCgocGtnKSA9PiAoKSA9PiB7XG4gICAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYERvd25sb2FkaW5nIHBhY2thZ2U6ICR7cGtnfWA7XG4gICAgICByZXR1cm4gd2ViUi5ldmFsUlZvaWQoYFxuICAgICAgICB3ZWJyOjppbnN0YWxsKHBrZywgcmVwb3MgPSByZXBvcylcbiAgICAgICAgbGlicmFyeShwa2csIGNoYXJhY3Rlci5vbmx5ID0gVFJVRSlcbiAgICAgIGAsIHsgZW52OiB7XG4gICAgICAgIHBrZzogcGtnLFxuICAgICAgICByZXBvczogZGF0YS5wYWNrYWdlcy5yZXBvcyxcbiAgICAgIH19KTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcblxuICAgIC8vIERvd25sb2FkIGFuZCBpbnN0YWxsIHJlc291cmNlc1xuICAgIGF3YWl0IGZpbGVzLm1hcCgoZmlsZSkgPT4gYXN5bmMgKCkgPT4ge1xuICAgICAgY29uc3QgbmFtZSA9IGZpbGUuc3Vic3RyaW5nKGZpbGUubGFzdEluZGV4T2YoJy8nKSArIDEpO1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyByZXNvdXJjZTogJHtuYW1lfWA7XG4gICAgICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGZldGNoKGZpbGUpO1xuICAgICAgaWYgKCFyZXNwb25zZS5vaykge1xuICAgICAgICB0aHJvdyBuZXcgRXJyb3IoYENhbid0IGRvd25sb2FkIFxcYCR7ZmlsZX1cXGAuIEVycm9yICR7cmVzcG9uc2Uuc3RhdHVzfTogXCIke3Jlc3BvbnNlLnN0YXR1c1RleHR9XCIuYCk7XG4gICAgICB9XG4gICAgICBjb25zdCBkYXRhID0gYXdhaXQgcmVzcG9uc2UuYXJyYXlCdWZmZXIoKTtcblxuICAgICAgLy8gU3RvcmUgVVJMcyBpbiB0aGUgY3dkIHdpdGhvdXQgYW55IHN1YmRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGlmIChmaWxlLmluY2x1ZGVzKFwiOi8vXCIpKSB7XG4gICAgICAgIGZpbGUgPSBuYW1lO1xuICAgICAgfVxuXG4gICAgICAvLyBDb2xsYXBzZSBoaWdoZXIgZGlyZWN0b3J5IHN0cnVjdHVyZVxuICAgICAgZmlsZSA9IGNvbGxhcHNlUGF0aChmaWxlKTtcblxuICAgICAgLy8gQ3JlYXRlIGRpcmVjdG9yeSB0cmVlLCBpZ25vcmluZyBcImRpcmVjdG9yeSBleGlzdHNcIiBWRlMgZXJyb3JzXG4gICAgICBjb25zdCBwYXJ0cyA9IGZpbGUuc3BsaXQoJy8nKS5zbGljZSgwLCAtMSk7XG4gICAgICBsZXQgcGF0aCA9ICcnO1xuICAgICAgd2hpbGUgKHBhcnRzLmxlbmd0aCA+IDApIHtcbiAgICAgICAgcGF0aCArPSBwYXJ0cy5zaGlmdCgpICsgJy8nO1xuICAgICAgICBjb25zdCBhbmFseXNpcyA9IGF3YWl0IHdlYlIuRlMuYW5hbHl6ZVBhdGgocGF0aCk7XG4gICAgICAgIGlmICghYW5hbHlzaXMuZXhpc3RzKSB7XG4gICAgICAgICAgdHJ5IHtcbiAgICAgICAgICAgIGF3YWl0IHdlYlIuRlMubWtkaXIocGF0aCk7XG4gICAgICAgICAgfSBjYXRjaCAoZSkge1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yOiBcIiR7ZS5tZXNzYWdlfVwiLmApO1xuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgfVxuXG4gICAgICAvLyBXcml0ZSB0aGlzIGZpbGUgdG8gdGhlIFZGU1xuICAgICAgcmV0dXJuIGF3YWl0IHdlYlIuRlMud3JpdGVGaWxlKGZpbGUsIG5ldyBVaW50OEFycmF5KGRhdGEpKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcblxuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgSW5zdGFsbGluZyB3ZWJSIHNoaW1zYDtcbiAgICBhd2FpdCB3ZWJSLmV2YWxSVm9pZChgd2Vicjo6c2hpbV9pbnN0YWxsKClgKTtcblxuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgV2ViUiBlbnZpcm9ubWVudCBzZXR1cGA7XG4gICAgYXdhaXQgc2V0dXBSKHdlYlIsIGRhdGEpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHdlYlI7XG4gIH0pKG5ldyBXZWJSKGRhdGEub3B0aW9ucykpO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCB3ZWJSID0gYXdhaXQgd2ViUlByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFdlYlJFdmFsdWF0b3Iod2ViUiwgY29udGV4dClcbiAgICBhd2FpdCBldmFsdWF0b3IucHJvY2VzcyhpbnB1dHMpO1xuICAgIHJldHVybiBldmFsdWF0b3IuY29udGFpbmVyO1xuICB9XG5cbiAgcmV0dXJuIHtcbiAgICBwcm9jZXNzLFxuICAgIHdlYlJQcm9taXNlLFxuICAgIHJlbmRlcmVkT2pzLFxuICB9O1xufVxuIn1dfQ==
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+WyJkYXRvcy9wcmVzdGFtb3NfYmlibGlvdGVjYXNfcHJhY3RpY2EuY3N2Il0=
+</script>
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pablosancheznunez\.com\/reutilizacion-datos\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./04-interoperabilidad.html" class="pagination-link" aria-label="Tema 4. Normalización e interoperabilidad">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Tema 4. Normalización e interoperabilidad</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./90-chuleta-r.html" class="pagination-link" aria-label="Chuleta de R">
+        <span class="nav-page-text"><span class="chapter-title">Chuleta de R</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 <a href="https://pablosancheznunez.com">Pablo Sánchez-Núñez</a> · <a href="https://orcid.org/0000-0001-7845-9506">ORCID 0000-0001-7845-9506</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Universidad Carlos III de Madrid · Hecho con <a href="https://quarto.org">Quarto</a> y <a href="https://docs.r-wasm.org/webr/latest/">webR</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
