@@ -100,11 +100,11 @@
     ]
   },
   {
-    "objectID": "00-r-en-el-libro.html#el-paquete-uxlearn",
-    "href": "00-r-en-el-libro.html#el-paquete-uxlearn",
+    "objectID": "00-r-en-el-libro.html#las-funciones-del-libro",
+    "href": "00-r-en-el-libro.html#las-funciones-del-libro",
     "title": "Usar R en este libro",
-    "section": "El paquete UxLearn",
-    "text": "El paquete UxLearn\nLas funciones propias de este libro están en el paquete UxLearn. Dentro del libro se cargan con source(\"datos/uxlearn.R\"); en tu ordenador, se instalan una vez (lo explica el Apéndice A). Por ejemplo, contraste() calcula la relación de contraste entre dos colores según las WCAG:\n\n\n\n\n\n\n\nEjercicio 2\nLas WCAG piden un contraste mínimo de 4,5:1 para el texto normal. Completa el código para comprobar si el gris #999999 sobre blanco lo cumple.\n\n\n\n\n\n\n\n\nEscribe el umbral como número, con punto decimal: 4.5.\n\n\ncontraste(\"#999999\", \"#ffffff\") &gt;= 4.5\nFALSE: su contraste es 2,85:1. Ese gris, tan habitual en los textos de ayuda, no es legible para muchas personas.\n\n\n\n\nEjercicio 3\nLas tablas de datos (data.frame) tienen filas y columnas. sesiones_prueba reúne los resultados simulados de una prueba con prototipos. Completa el código para ver cuántas filas tiene.\n\n\n\n\n\n\n\n\nLa función que cuenta filas se llama como en inglés number of rows: nrow().\n\n\nhead(sesiones_prueba, 3)\nnrow(sesiones_prueba)\n48 filas: 8 participantes × 3 tareas × 2 prototipos.",
+    "section": "Las funciones del libro",
+    "text": "Las funciones del libro\nLas funciones propias de este libro están en el fichero funciones_ux.R. Dentro del libro se cargan con source(\"datos/funciones_ux.R\"); para usarlas en tu ordenador, descárgalo (lo explica el Apéndice A). Por ejemplo, contraste() calcula la relación de contraste entre dos colores según las WCAG:\n\n\n\n\n\n\n\nEjercicio 2\nLas WCAG piden un contraste mínimo de 4,5:1 para el texto normal. Completa el código para comprobar si el gris #999999 sobre blanco lo cumple.\n\n\n\n\n\n\n\n\nEscribe el umbral como número, con punto decimal: 4.5.\n\n\ncontraste(\"#999999\", \"#ffffff\") &gt;= 4.5\nFALSE: su contraste es 2,85:1. Ese gris, tan habitual en los textos de ayuda, no es legible para muchas personas.\n\n\n\n\nEjercicio 3\nLas tablas de datos (data.frame) tienen filas y columnas. sesiones_prueba reúne los resultados simulados de una prueba con prototipos. Completa el código para ver cuántas filas tiene.\n\n\n\n\n\n\n\n\nLa función que cuenta filas se llama como en inglés number of rows: nrow().\n\n\nhead(sesiones_prueba, 3)\nnrow(sesiones_prueba)\n48 filas: 8 participantes × 3 tareas × 2 prototipos.",
     "crumbs": [
       "Usar R en este libro"
     ]
@@ -1179,7 +1179,7 @@
     "href": "09-prototipos-papel.html#práctica-en-r-comparar-dos-prototipos",
     "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
     "section": "Práctica en R: comparar dos prototipos",
-    "text": "Práctica en R: comparar dos prototipos\nsesiones_prueba (datos simulados) recoge, para 8 participantes, si completaron cada tarea con un prototipo en papel y con uno digital de baja fidelidad.\n\n\n\n\n\n\n\nEjercicio 9.1\nCalcula la tasa de éxito con intervalo de confianza de la tarea «Reservar una sala» con el prototipo digital.\n\n\n\n\n\n\n\n\nLos valores de la columna prototipo son «papel» y «digital».\n\n\nd &lt;- subset(sesiones_prueba, prototipo == \"digital\" & tarea == \"Reservar una sala\")\ntasa_exito(sum(d$exito), nrow(d))\n5 de 8 (62,5 %), con un intervalo aproximado del 30 % al 87 %. El intervalo es tan ancho que no permite afirmar que el digital sea mejor que el papel (37,5 %): los dos intervalos se solapan. Lo que sí dicen los datos es que la tarea tiene problemas en los dos.\n\n\n\n\nEjercicio 9.2\nCalcula el tiempo típico (media geométrica) de la tarea «Renovar un préstamo» con el prototipo en papel.\n\n\n\n\n\n\n\n\nLa función de UxLearn para la media geométrica es tiempo_tipico().\n\n\nd &lt;- subset(sesiones_prueba, prototipo == \"papel\" & tarea == \"Renovar un préstamo\")\ntiempo_tipico(d$tiempo_s)\nUnos 65 segundos. En papel los tiempos son orientativos, porque dependen de la rapidez del «ordenador humano»: sirven más para comparar tareas que para fijar objetivos.",
+    "text": "Práctica en R: comparar dos prototipos\nsesiones_prueba (datos simulados) recoge, para 8 participantes, si completaron cada tarea con un prototipo en papel y con uno digital de baja fidelidad.\n\n\n\n\n\n\n\nEjercicio 9.1\nCalcula la tasa de éxito con intervalo de confianza de la tarea «Reservar una sala» con el prototipo digital.\n\n\n\n\n\n\n\n\nLos valores de la columna prototipo son «papel» y «digital».\n\n\nd &lt;- subset(sesiones_prueba, prototipo == \"digital\" & tarea == \"Reservar una sala\")\ntasa_exito(sum(d$exito), nrow(d))\n5 de 8 (62,5 %), con un intervalo aproximado del 30 % al 87 %. El intervalo es tan ancho que no permite afirmar que el digital sea mejor que el papel (37,5 %): los dos intervalos se solapan. Lo que sí dicen los datos es que la tarea tiene problemas en los dos.\n\n\n\n\nEjercicio 9.2\nCalcula el tiempo típico (media geométrica) de la tarea «Renovar un préstamo» con el prototipo en papel.\n\n\n\n\n\n\n\n\nLa función del libro para la media geométrica es tiempo_tipico().\n\n\nd &lt;- subset(sesiones_prueba, prototipo == \"papel\" & tarea == \"Renovar un préstamo\")\ntiempo_tipico(d$tiempo_s)\nUnos 65 segundos. En papel los tiempos son orientativos, porque dependen de la rapidez del «ordenador humano»: sirven más para comparar tareas que para fijar objetivos.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
@@ -1562,45 +1562,45 @@
   {
     "objectID": "90-uxlearn.html",
     "href": "90-uxlearn.html",
-    "title": "Apéndice A — El paquete UxLearn",
+    "title": "Apéndice A — Las funciones del libro",
     "section": "",
-    "text": "Funciones\nUxLearn es un paquete de R que reúne las funciones y los datos simulados de este libro y de su continuación, Diseño e interacción en prototipos de alta fidelidad. Sirve para comprobar y medir lo que se diseña: no sustituye a las herramientas de diseño.\nDentro del libro se carga con source(\"datos/uxlearn.R\"). En tu ordenador, con RStudio o Positron, instálalo una vez:",
+    "text": "Funciones\nEl fichero funciones_ux.R reúne las funciones y los datos simulados de este libro y de su continuación, Diseño e interacción en prototipos de alta fidelidad. Sirve para comprobar y medir lo que se diseña: no sustituye a las herramientas de diseño.\nDentro del libro se carga con source(\"datos/funciones_ux.R\"). Para usarlo en tu ordenador, con RStudio o Positron, descárgalo en la carpeta de tu proyecto y cárgalo igual; no hace falta instalar nada:\nDescargar funciones_ux.R",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>El paquete UxLearn</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "90-uxlearn.html#funciones",
     "href": "90-uxlearn.html#funciones",
-    "title": "Apéndice A — El paquete UxLearn",
+    "title": "Apéndice A — Las funciones del libro",
     "section": "",
     "text": "Para…\nFunción\nTema\n\n\n\n\nRelación de contraste entre dos colores (WCAG)\ncontraste()\n12\n\n\n¿Cumple el contraste mínimo AA o AAA?\ncumple_wcag()\n12\n\n\nRevisar todos los colores de una paleta\nrevisar_paleta()\n12\n\n\nSimular protanopía, deuteranopía o tritanopía\nsimular_daltonismo()\n12\n\n\n¿Se distinguen dos colores por luminosidad?\ndistinguibles()\n12\n\n\nCalcular una rejilla de columnas\nrejilla(), ancho_bloque()\n7\n\n\nCaracteres por línea\ncaracteres_por_linea()\n7\n\n\nEscala tipográfica modular\nescala_tipografica()\nAlta fidelidad\n\n\nPuntuación SUS y su aceptabilidad\npuntuacion_sus(), aceptabilidad_sus()\n4\n\n\nTasa de éxito con intervalo de confianza\ntasa_exito()\n4, 9\n\n\nTiempo típico (media geométrica)\ntiempo_tipico()\n4, 9\n\n\nAbandono en cada paso de un flujo\nembudo()\n5\n\n\nPriorizar los hallazgos de una revisión heurística\npriorizar_hallazgos()\n2",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>El paquete UxLearn</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "90-uxlearn.html#datos-todos-simulados-salvo-las-taxonomías",
     "href": "90-uxlearn.html#datos-todos-simulados-salvo-las-taxonomías",
-    "title": "Apéndice A — El paquete UxLearn",
+    "title": "Apéndice A — Las funciones del libro",
     "section": "Datos (todos simulados, salvo las taxonomías)",
     "text": "Datos (todos simulados, salvo las taxonomías)\n\n\n\n\n\n\n\nObjeto\nContenido\n\n\n\n\nrespuestas_sus\nRespuestas al SUS de 12 participantes\n\n\nsesiones_prueba\n8 participantes × 3 tareas × prototipo en papel y digital\n\n\nflujo_registro\nUsuarios en cada paso de un registro\n\n\nhallazgos_heuristicos\n6 problemas valorados por 3 evaluadores\n\n\nheuristicas_nielsen\nLas diez heurísticas de Nielsen\n\n\npatrones_enganosos\nCategorías de Gray et al. (2018) y Mathur et al. (2019)\n\n\npaleta_ejemplo\nNueve colores de un sistema de diseño\n\n\n\nPrueba aquí cualquier función:",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>El paquete UxLearn</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "90-uxlearn.html#referencias-de-los-métodos",
     "href": "90-uxlearn.html#referencias-de-los-métodos",
-    "title": "Apéndice A — El paquete UxLearn",
+    "title": "Apéndice A — Las funciones del libro",
     "section": "Referencias de los métodos",
     "text": "Referencias de los métodos\n\nBangor, A.; Kortum, P. T.; Miller, J. T. (2008). An empirical evaluation of the System Usability Scale. International Journal of Human-Computer Interaction, 24(6), 574-594.\nBrooke, J. (1996). SUS: A «quick and dirty» usability scale. En P. W. Jordan et al. (eds.), Usability evaluation in industry (pp. 189-194). Taylor & Francis.\nMachado, G. M.; Oliveira, M. M.; Fernandes, L. A. F. (2009). A physiologically-based model for simulation of color vision deficiency. IEEE Transactions on Visualization and Computer Graphics, 15(6), 1291-1298.\nSauro, J.; Lewis, J. R. (2016). Quantifying the user experience (2.ª ed.). Morgan Kaufmann.\nW3C (2023). Web Content Accessibility Guidelines (WCAG) 2.2.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>El paquete UxLearn</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
@@ -1652,7 +1652,7 @@
     "href": "91-guia-docente.html#el-papel-de-r",
     "title": "Apéndice B — Guía para el profesorado",
     "section": "El papel de R",
-    "text": "El papel de R\nEl libro usa R lo imprescindible: cinco temas tienen ejercicios breves de completar huecos con funciones del paquete UxLearn (métricas, embudos, priorización de hallazgos, rejillas y color). El capítulo Usar R en este libro basta como preparación. Ningún reto exige programar.",
+    "text": "El papel de R\nEl libro usa R lo imprescindible: cinco temas tienen ejercicios breves de completar huecos con funciones del libro (métricas, embudos, priorización de hallazgos, rejillas y color). El capítulo Usar R en este libro basta como preparación. Ningún reto exige programar.",
     "crumbs": [
       "Apéndices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
@@ -1674,7 +1674,7 @@
     "href": "91-guia-docente.html#mantenimiento",
     "title": "Apéndice B — Guía para el profesorado",
     "section": "Mantenimiento",
-    "text": "Mantenimiento\nDesde la raíz del repositorio:\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras y plantillas en PDF\npython3 herramientas/paquete_webr.py ../UxLearn   # funciones de UxLearn para webR\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\nEl flujo .github/workflows/comprobar.yml renderiza el libro y comprueba en un navegador real todos los ejercicios, las preguntas y la accesibilidad en modo claro y oscuro. Al publicar una versión nueva, actualiza version en CITATION.cff y vuelve a ejecutar preparar.py para que los navegadores renueven su copia.\nLos datos de todos los ejercicios son simulados; no hay datos de personas reales.",
+    "text": "Mantenimiento\nDesde la raíz del repositorio:\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras y plantillas en PDF\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\nEl flujo .github/workflows/comprobar.yml renderiza el libro y comprueba en un navegador real todos los ejercicios, las preguntas y la accesibilidad en modo claro y oscuro. Al publicar una versión nueva, actualiza version en CITATION.cff y vuelve a ejecutar preparar.py para que los navegadores renueven su copia.\nLos datos de todos los ejercicios son simulados; no hay datos de personas reales.",
     "crumbs": [
       "Apéndices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"

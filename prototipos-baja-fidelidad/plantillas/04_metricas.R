@@ -6,14 +6,11 @@
 # Script con todo el código del capítulo, para ejecutarlo en RStudio o Positron.
 # Los ejercicios tienen huecos (______): complétalos y compara con el libro.
 
-# Funciones del paquete UxLearn (instálalo una vez):
-# remotes::install_github("pablosancheznunez/UxLearn")
-library(UxLearn)
-
 
 # ----------------------------------------------------------------------
 # Práctica en R: medir una prueba pequeña
 # ----------------------------------------------------------------------
+source("datos/funciones_ux.R")
 tasa_exito(exitos = 4, n = 5)
 tiempos <- c(32, 41, 38, 45, 120)
 c(media = mean(tiempos), media_geometrica = tiempo_tipico(tiempos))
@@ -22,6 +19,9 @@ c(media = mean(tiempos), media_geometrica = tiempo_tipico(tiempos))
 # ----------------------------------------------------------------------
 # Ejercicio 4.1
 # ----------------------------------------------------------------------
+# (preparación del ejercicio)
+source("datos/funciones_ux.R")
+
 # EJERCICIO: completa los huecos ______
 t <- tasa_exito(exitos = 3, n = ______)
 t["superior"]
@@ -30,6 +30,9 @@ t["superior"]
 # ----------------------------------------------------------------------
 # Ejercicio 4.2
 # ----------------------------------------------------------------------
+# (preparación del ejercicio)
+source("datos/funciones_ux.R")
+
 # EJERCICIO: completa los huecos ______
 sus <- puntuacion_sus(respuestas_sus[, -1])   # [, -1] quita la columna del participante
 ______(sus)

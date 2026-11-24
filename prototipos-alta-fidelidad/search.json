@@ -84,7 +84,7 @@
     "href": "00-r-en-el-libro.html",
     "title": "Usar R en este libro",
     "section": "",
-    "text": "Cómo funcionan las celdas\nEn algunos temas hay ejercicios cortos de R que se ejecutan en tu navegador, sin instalar nada. Este capítulo explica lo imprescindible en quince minutos. Si nunca has programado, no te preocupes: los ejercicios son de completar huecos y todos tienen pista y solución.\nCada bloque de código tiene un botón Run Code. Puedes cambiar el código y volver a ejecutarlo tantas veces como quieras; Start Over recupera la versión original. La primera vez que abres una página, el navegador descarga el motor de R (unos segundos); después queda guardado.\nCon &lt;- se guarda un valor en un objeto. Un vector reúne varios valores con c(), y muchas funciones trabajan con él de una vez:\nLa media se dispara por la persona que tardó 120 segundos: por eso en las pruebas con usuarios se prefiere la media geométrica (tiempo_tipico() en UxLearn).",
+    "text": "Cómo funcionan las celdas\nEn algunos temas hay ejercicios cortos de R que se ejecutan en tu navegador, sin instalar nada. Este capítulo explica lo imprescindible en quince minutos. Si nunca has programado, no te preocupes: los ejercicios son de completar huecos y todos tienen pista y solución.\nCada bloque de código tiene un botón Run Code. Puedes cambiar el código y volver a ejecutarlo tantas veces como quieras; Start Over recupera la versión original. La primera vez que abres una página, el navegador descarga el motor de R (unos segundos); después queda guardado.\nCon &lt;- se guarda un valor en un objeto. Un vector reúne varios valores con c(), y muchas funciones trabajan con él de una vez:\nLa media se dispara por la persona que tardó 120 segundos: por eso en las pruebas con usuarios se prefiere la media geométrica (tiempo_tipico() en las funciones del libro).",
     "crumbs": [
       "Usar R en este libro"
     ]
@@ -100,11 +100,11 @@
     ]
   },
   {
-    "objectID": "00-r-en-el-libro.html#el-paquete-uxlearn",
-    "href": "00-r-en-el-libro.html#el-paquete-uxlearn",
+    "objectID": "00-r-en-el-libro.html#las-funciones-del-libro",
+    "href": "00-r-en-el-libro.html#las-funciones-del-libro",
     "title": "Usar R en este libro",
-    "section": "El paquete UxLearn",
-    "text": "El paquete UxLearn\nLas funciones propias de este libro están en el paquete UxLearn. Dentro del libro se cargan con source(\"datos/uxlearn.R\"); en tu ordenador, se instalan una vez (lo explica el Apéndice A). Por ejemplo, contraste() calcula la relación de contraste entre dos colores según las WCAG:\n\n\n\n\n\n\n\nEjercicio 2\nLas WCAG piden un contraste mínimo de 4,5:1 para el texto normal. Completa el código para comprobar si el gris #999999 sobre blanco lo cumple.\n\n\n\n\n\n\n\n\nEscribe el umbral como número, con punto decimal: 4.5.\n\n\ncontraste(\"#999999\", \"#ffffff\") &gt;= 4.5\nFALSE: su contraste es 2,85:1. Ese gris, tan habitual en los textos de ayuda, no es legible para muchas personas: lo verás en el Tema 5.\n\n\n\n\nEjercicio 3\nLas tablas de datos (data.frame) tienen filas y columnas. sesiones_prueba reúne los resultados simulados de una prueba con prototipos. Completa el código para ver cuántas filas tiene.\n\n\n\n\n\n\n\n\nLa función que cuenta filas se llama como en inglés number of rows: nrow().\n\n\nhead(sesiones_prueba, 3)\nnrow(sesiones_prueba)\n48 filas: 8 participantes × 3 tareas × 2 prototipos.",
+    "section": "Las funciones del libro",
+    "text": "Las funciones del libro\nLas funciones propias de este libro están en el fichero funciones_ux.R. Dentro del libro se cargan con source(\"datos/funciones_ux.R\"); para usarlas en tu ordenador, descárgalo (lo explica el Apéndice A). Por ejemplo, contraste() calcula la relación de contraste entre dos colores según las WCAG:\n\n\n\n\n\n\n\nEjercicio 2\nLas WCAG piden un contraste mínimo de 4,5:1 para el texto normal. Completa el código para comprobar si el gris #999999 sobre blanco lo cumple.\n\n\n\n\n\n\n\n\nEscribe el umbral como número, con punto decimal: 4.5.\n\n\ncontraste(\"#999999\", \"#ffffff\") &gt;= 4.5\nFALSE: su contraste es 2,85:1. Ese gris, tan habitual en los textos de ayuda, no es legible para muchas personas: lo verás en el Tema 5.\n\n\n\n\nEjercicio 3\nLas tablas de datos (data.frame) tienen filas y columnas. sesiones_prueba reúne los resultados simulados de una prueba con prototipos. Completa el código para ver cuántas filas tiene.\n\n\n\n\n\n\n\n\nLa función que cuenta filas se llama como en inglés number of rows: nrow().\n\n\nhead(sesiones_prueba, 3)\nnrow(sesiones_prueba)\n48 filas: 8 participantes × 3 tareas × 2 prototipos.",
     "crumbs": [
       "Usar R en este libro"
     ]
@@ -1353,45 +1353,45 @@
   {
     "objectID": "90-uxlearn.html",
     "href": "90-uxlearn.html",
-    "title": "Apéndice A — El paquete UxLearn",
+    "title": "Apéndice A — Las funciones del libro",
     "section": "",
-    "text": "Funciones\nUxLearn es un paquete de R que reúne las funciones y los datos simulados de este libro y del de la asignatura anterior, Esquemas de página y prototipos de baja fidelidad. Sirve para comprobar y medir lo que se diseña: no sustituye a las herramientas de diseño.\nDentro del libro se carga con source(\"datos/uxlearn.R\"). En tu ordenador, con RStudio o Positron, instálalo una vez:",
+    "text": "Funciones\nEl fichero funciones_ux.R reúne las funciones y los datos simulados de este libro y del de la asignatura anterior, Esquemas de página y prototipos de baja fidelidad. Sirve para comprobar y medir lo que se diseña: no sustituye a las herramientas de diseño.\nDentro del libro se carga con source(\"datos/funciones_ux.R\"). Para usarlo en tu ordenador, con RStudio o Positron, descárgalo en la carpeta de tu proyecto y cárgalo igual; no hace falta instalar nada:\nDescargar funciones_ux.R",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>El paquete UxLearn</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "90-uxlearn.html#funciones",
     "href": "90-uxlearn.html#funciones",
-    "title": "Apéndice A — El paquete UxLearn",
+    "title": "Apéndice A — Las funciones del libro",
     "section": "",
     "text": "Para…\nFunción\nLibro y tema\n\n\n\n\nRelación de contraste entre dos colores (WCAG)\ncontraste()\nTema 5\n\n\n¿Cumple el contraste mínimo AA o AAA?\ncumple_wcag()\nTema 5\n\n\nRevisar todos los colores de una paleta\nrevisar_paleta()\nTema 5\n\n\nSimular protanopía, deuteranopía o tritanopía\nsimular_daltonismo()\nTema 5\n\n\n¿Se distinguen dos colores por luminosidad?\ndistinguibles()\nTema 5\n\n\nCalcular una rejilla de columnas\nrejilla(), ancho_bloque()\nTema 7\n\n\nCaracteres por línea\ncaracteres_por_linea()\nTema 4\n\n\nEscala tipográfica modular\nescala_tipografica()\nTema 4\n\n\nPuntuación SUS y su aceptabilidad\npuntuacion_sus(), aceptabilidad_sus()\nBaja fidelidad, Tema 4\n\n\nTasa de éxito con intervalo de confianza\ntasa_exito()\nBaja fidelidad, temas 4 y 9\n\n\nTiempo típico (media geométrica)\ntiempo_tipico()\nBaja fidelidad, temas 4 y 9\n\n\nAbandono en cada paso de un flujo\nembudo()\nBaja fidelidad, Tema 5\n\n\nPriorizar los hallazgos de una revisión heurística\npriorizar_hallazgos()\nBaja fidelidad, Tema 2",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>El paquete UxLearn</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "90-uxlearn.html#datos-todos-simulados-salvo-las-taxonomías",
     "href": "90-uxlearn.html#datos-todos-simulados-salvo-las-taxonomías",
-    "title": "Apéndice A — El paquete UxLearn",
+    "title": "Apéndice A — Las funciones del libro",
     "section": "Datos (todos simulados, salvo las taxonomías)",
     "text": "Datos (todos simulados, salvo las taxonomías)\n\n\n\n\n\n\n\nObjeto\nContenido\n\n\n\n\nrespuestas_sus\nRespuestas al SUS de 12 participantes\n\n\nsesiones_prueba\n8 participantes × 3 tareas × prototipo en papel y digital\n\n\nflujo_registro\nUsuarios en cada paso de un registro\n\n\nhallazgos_heuristicos\n6 problemas valorados por 3 evaluadores\n\n\nheuristicas_nielsen\nLas diez heurísticas de Nielsen\n\n\npatrones_enganosos\nCategorías de Gray et al. (2018) y Mathur et al. (2019)\n\n\npaleta_ejemplo\nNueve colores de un sistema de diseño\n\n\n\nPrueba aquí cualquier función:",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>El paquete UxLearn</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "90-uxlearn.html#referencias-de-los-métodos",
     "href": "90-uxlearn.html#referencias-de-los-métodos",
-    "title": "Apéndice A — El paquete UxLearn",
+    "title": "Apéndice A — Las funciones del libro",
     "section": "Referencias de los métodos",
     "text": "Referencias de los métodos\n\nBangor, A.; Kortum, P. T.; Miller, J. T. (2008). An empirical evaluation of the System Usability Scale. International Journal of Human-Computer Interaction, 24(6), 574-594.\nBrooke, J. (1996). SUS: A «quick and dirty» usability scale. En P. W. Jordan et al. (eds.), Usability evaluation in industry (pp. 189-194). Taylor & Francis.\nMachado, G. M.; Oliveira, M. M.; Fernandes, L. A. F. (2009). A physiologically-based model for simulation of color vision deficiency. IEEE Transactions on Visualization and Computer Graphics, 15(6), 1291-1298.\nSauro, J.; Lewis, J. R. (2016). Quantifying the user experience (2.ª ed.). Morgan Kaufmann.\nW3C (2023). Web Content Accessibility Guidelines (WCAG) 2.2.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>El paquete UxLearn</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
@@ -1443,7 +1443,7 @@
     "href": "91-guia-docente.html#el-papel-de-r",
     "title": "Apéndice B — Guía para el profesorado",
     "section": "El papel de R",
-    "text": "El papel de R\nEl libro usa R lo imprescindible: tres temas tienen ejercicios breves de completar huecos con funciones del paquete UxLearn (escala tipográfica y longitud de línea, contraste y daltonismo, rejillas). El capítulo Usar R en este libro basta como preparación. Ningún reto exige programar.",
+    "text": "El papel de R\nEl libro usa R lo imprescindible: tres temas tienen ejercicios breves de completar huecos con funciones del libro (escala tipográfica y longitud de línea, contraste y daltonismo, rejillas). El capítulo Usar R en este libro basta como preparación. Ningún reto exige programar.",
     "crumbs": [
       "Apéndices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
@@ -1465,7 +1465,7 @@
     "href": "91-guia-docente.html#mantenimiento",
     "title": "Apéndice B — Guía para el profesorado",
     "section": "Mantenimiento",
-    "text": "Mantenimiento\nDesde la raíz del repositorio:\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras\npython3 herramientas/paquete_webr.py ../UxLearn   # funciones de UxLearn para webR\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\nEl flujo .github/workflows/comprobar.yml renderiza el libro y comprueba en un navegador real todos los ejercicios, las preguntas y la accesibilidad en modo claro y oscuro. Al publicar una versión nueva, actualiza version en CITATION.cff y vuelve a ejecutar preparar.py para que los navegadores renueven su copia.\nLos datos de todos los ejercicios son simulados; no hay datos de personas reales.",
+    "text": "Mantenimiento\nDesde la raíz del repositorio:\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\nEl flujo .github/workflows/comprobar.yml renderiza el libro y comprueba en un navegador real todos los ejercicios, las preguntas y la accesibilidad en modo claro y oscuro. Al publicar una versión nueva, actualiza version en CITATION.cff y vuelve a ejecutar preparar.py para que los navegadores renueven su copia.\nLos datos de todos los ejercicios son simulados; no hay datos de personas reales.",
     "crumbs": [
       "Apéndices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"

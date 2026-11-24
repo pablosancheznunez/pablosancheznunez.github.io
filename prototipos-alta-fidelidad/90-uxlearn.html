@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Apéndice A — El paquete UxLearn – Diseño e interacción en prototipos de alta fidelidad</title>
+<title>Apéndice A — Las funciones del libro – Diseño e interacción en prototipos de alta fidelidad</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -297,7 +297,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./90-uxlearn.html">Apéndices</a></li><li class="breadcrumb-item"><a href="./90-uxlearn.html"><span class="chapter-title">El paquete UxLearn</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./90-uxlearn.html">Apéndices</a></li><li class="breadcrumb-item"><a href="./90-uxlearn.html"><span class="chapter-title">Las funciones del libro</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -429,7 +429,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">El paquete UxLearn</span></a>
+  <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -464,9 +464,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./90-uxlearn.html">Apéndices</a></li><li class="breadcrumb-item"><a href="./90-uxlearn.html"><span class="chapter-title">El paquete UxLearn</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./90-uxlearn.html">Apéndices</a></li><li class="breadcrumb-item"><a href="./90-uxlearn.html"><span class="chapter-title">Las funciones del libro</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-uxlearn" class="quarto-section-identifier">Apéndice A — El paquete UxLearn</span></h1>
+<h1 class="title"><span id="sec-uxlearn" class="quarto-section-identifier">Apéndice A — Las funciones del libro</span></h1>
 </div>
 
 
@@ -483,12 +483,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><strong>UxLearn</strong> es un paquete de R que reúne las funciones y los datos simulados de este libro y del de la asignatura anterior, <em>Esquemas de página y prototipos de baja fidelidad</em>. Sirve para <strong>comprobar y medir</strong> lo que se diseña: no sustituye a las herramientas de diseño.</p>
-<p>Dentro del libro se carga con <code>source("datos/uxlearn.R")</code>. En tu ordenador, con RStudio o Positron, instálalo una vez:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"pablosancheznunez/UxLearn"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(UxLearn)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">vignette</span>(<span class="st">"UxLearn"</span>)   <span class="co"># guía rápida</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>El fichero <strong><code>funciones_ux.R</code></strong> reúne las funciones y los datos simulados de este libro y del de la asignatura anterior, <em>Esquemas de página y prototipos de baja fidelidad</em>. Sirve para <strong>comprobar y medir</strong> lo que se diseña: no sustituye a las herramientas de diseño.</p>
+<p>Dentro del libro se carga con <code>source("datos/funciones_ux.R")</code>. Para usarlo en tu ordenador, con RStudio o Positron, descárgalo en la carpeta de tu proyecto y cárgalo igual; no hace falta instalar nada:</p>
+<p><a href="datos/funciones_ux.R" class="btn btn-outline-primary btn-sm" download="funciones_ux.R">Descargar funciones_ux.R</a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"funciones_ux.R"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">revisar_paleta</span>(paleta_ejemplo)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="funciones" class="level2">
 <h2 class="anchored" data-anchor-id="funciones">Funciones</h2>
 <table class="caption-top table">
@@ -623,7 +622,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </div>
 <script type="webr-1-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic291cmNlKFwiZGF0b3MvdXhsZWFybi5SXCIpXG5yZXZpc2FyX3BhbGV0YShjKG1hcmNhID0gXCIjMDAwZTc4XCIsIGF2aXNvID0gXCIjYzI0MTBjXCIsIGdyaXMgPSBcIiM2YjcyODBcIikpIn0=
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic291cmNlKFwiZGF0b3MvZnVuY2lvbmVzX3V4LlJcIilcbnJldmlzYXJfcGFsZXRhKGMobWFyY2EgPSBcIiMwMDBlNzhcIiwgYXZpc28gPSBcIiNjMjQxMGNcIiwgZ3JpcyA9IFwiIzZiNzI4MFwiKSkifQ==
 </script>
 </div>
 </section>
@@ -653,7 +652,7 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xIiwiaW5saW5lIjpmYWxzZSwibWV0
 </div>
 </div>
 <script type="vfs-file">
-WyJkYXRvcy91eGxlYXJuLlIiXQ==
+WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 </script>
 </section>
 

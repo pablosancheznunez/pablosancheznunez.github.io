@@ -6,14 +6,11 @@
 # Script con todo el código del capítulo, para ejecutarlo en RStudio o Positron.
 # Los ejercicios tienen huecos (______): complétalos y compara con el libro.
 
-# Funciones del paquete UxLearn (instálalo una vez):
-# remotes::install_github("pablosancheznunez/UxLearn")
-library(UxLearn)
-
 
 # ----------------------------------------------------------------------
 # Práctica en R: el embudo de un flujo de registro
 # ----------------------------------------------------------------------
+source("datos/funciones_ux.R")
 e <- embudo(flujo_registro$paso, flujo_registro$usuarios)
 e
 
@@ -22,6 +19,7 @@ e
 # Ejercicio 5.1
 # ----------------------------------------------------------------------
 # (preparación del ejercicio)
+source("datos/funciones_ux.R")
 e <- embudo(flujo_registro$paso, flujo_registro$usuarios)
 
 # EJERCICIO: completa los huecos ______
@@ -32,6 +30,7 @@ e$paso[which.min(e$______)]
 # Ejercicio 5.2
 # ----------------------------------------------------------------------
 # (preparación del ejercicio)
+source("datos/funciones_ux.R")
 e <- embudo(flujo_registro$paso, flujo_registro$usuarios)
 
 # EJERCICIO: completa los huecos ______

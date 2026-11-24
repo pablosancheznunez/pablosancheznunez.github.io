@@ -435,7 +435,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">El paquete UxLearn</span></a>
+  <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -464,7 +464,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#ejercicio-1" id="toc-ejercicio-1" class="nav-link" data-scroll-target="#ejercicio-1">Ejercicio 1</a></li>
   </ul></li>
-  <li><a href="#el-paquete-uxlearn" id="toc-el-paquete-uxlearn" class="nav-link" data-scroll-target="#el-paquete-uxlearn">El paquete UxLearn</a>
+  <li><a href="#las-funciones-del-libro" id="toc-las-funciones-del-libro" class="nav-link" data-scroll-target="#las-funciones-del-libro">Las funciones del libro</a>
   <ul class="collapse">
   <li><a href="#ejercicio-2" id="toc-ejercicio-2" class="nav-link" data-scroll-target="#ejercicio-2">Ejercicio 2</a></li>
   <li><a href="#ejercicio-3" id="toc-ejercicio-3" class="nav-link" data-scroll-target="#ejercicio-3">Ejercicio 3</a></li>
@@ -511,7 +511,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Ejecutar y modificar código de R en el navegador.</li>
 <li>Guardar valores en objetos y hacer cálculos con vectores.</li>
-<li>Usar funciones del paquete UxLearn para medir decisiones de diseño.</li>
+<li>Usar funciones del libro para medir decisiones de diseño.</li>
 </ul>
 </div>
 </div>
@@ -561,22 +561,22 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InJf
 </script>
 </section>
 </section>
-<section id="el-paquete-uxlearn" class="level2">
-<h2 class="anchored" data-anchor-id="el-paquete-uxlearn">El paquete UxLearn</h2>
-<p>Las funciones propias de este libro están en el paquete <strong>UxLearn</strong>. Dentro del libro se cargan con <code>source("datos/uxlearn.R")</code>; en tu ordenador, se instalan una vez (lo explica el <a href="./90-uxlearn.html">Apéndice A</a>). Por ejemplo, <code>contraste()</code> calcula la relación de contraste entre dos colores según las WCAG:</p>
+<section id="las-funciones-del-libro" class="level2">
+<h2 class="anchored" data-anchor-id="las-funciones-del-libro">Las funciones del libro</h2>
+<p>Las funciones propias de este libro están en el fichero <code>funciones_ux.R</code>. Dentro del libro se cargan con <code>source("datos/funciones_ux.R")</code>; para usarlas en tu ordenador, descárgalo (lo explica el <a href="./90-uxlearn.html">Apéndice A</a>). Por ejemplo, <code>contraste()</code> calcula la relación de contraste entre dos colores según las WCAG:</p>
 <div>
 <div id="webr-5" class="exercise-cell">
 
 </div>
 <script type="webr-5-contents">
-eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic291cmNlKFwiZGF0b3MvdXhsZWFybi5SXCIpXG5jb250cmFzdGUoXCIjNzY3Njc2XCIsIFwiI2ZmZmZmZlwiKSAgICMgZ3JpcyBzb2JyZSBibGFuY29cbmNvbnRyYXN0ZShcIiM5OTk5OTlcIiwgXCIjZmZmZmZmXCIpIn0=
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic291cmNlKFwiZGF0b3MvZnVuY2lvbmVzX3V4LlJcIilcbmNvbnRyYXN0ZShcIiM3Njc2NzZcIiwgXCIjZmZmZmZmXCIpICAgIyBncmlzIHNvYnJlIGJsYW5jb1xuY29udHJhc3RlKFwiIzk5OTk5OVwiLCBcIiNmZmZmZmZcIikifQ==
 </script>
 </div>
 <section id="ejercicio-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ejercicio-2">Ejercicio 2</h3>
 <p>Las WCAG piden un contraste mínimo de 4,5:1 para el texto normal. Completa el código para comprobar si el gris <code>#999999</code> sobre blanco lo cumple.</p>
 <script type="exercise-setup-r_contraste-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicl9jb250cmFzdGUiLCJzZXR1cCI6dHJ1ZX0sImNvZGUiOiJzb3VyY2UoXCJkYXRvcy91eGxlYXJuLlJcIikifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicl9jb250cmFzdGUiLCJzZXR1cCI6dHJ1ZX0sImNvZGUiOiJzb3VyY2UoXCJkYXRvcy9mdW5jaW9uZXNfdXguUlwiKSJ9
 </script>
 <div>
 <div id="webr-7" class="exercise-cell">
@@ -601,7 +601,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InJf
 <h3 class="unnumbered anchored" data-anchor-id="ejercicio-3">Ejercicio 3</h3>
 <p>Las tablas de datos (<code>data.frame</code>) tienen filas y columnas. <code>sesiones_prueba</code> reúne los resultados simulados de una prueba con prototipos. Completa el código para ver cuántas filas tiene.</p>
 <script type="exercise-setup-r_filas-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicl9maWxhcyIsInNldHVwIjp0cnVlfSwiY29kZSI6InNvdXJjZShcImRhdG9zL3V4bGVhcm4uUlwiKSJ9
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicl9maWxhcyIsInNldHVwIjp0cnVlfSwiY29kZSI6InNvdXJjZShcImRhdG9zL2Z1bmNpb25lc191eC5SXCIpIn0=
 </script>
 <div>
 <div id="webr-10" class="exercise-cell">
@@ -722,7 +722,7 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xMCIsImlubGluZSI6ZmFsc2UsIm1l
 </div>
 </div>
 <script type="vfs-file">
-WyJkYXRvcy91eGxlYXJuLlIiXQ==
+WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 </script>
 </section>
 

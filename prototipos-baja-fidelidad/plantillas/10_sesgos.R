@@ -6,14 +6,11 @@
 # Script con todo el código del capítulo, para ejecutarlo en RStudio o Positron.
 # Los ejercicios tienen huecos (______): complétalos y compara con el libro.
 
-# Funciones del paquete UxLearn (instálalo una vez):
-# remotes::install_github("pablosancheznunez/UxLearn")
-library(UxLearn)
-
 
 # ----------------------------------------------------------------------
 # Práctica en R: dos taxonomías
 # ----------------------------------------------------------------------
+source("datos/funciones_ux.R")
 patrones_enganosos[, c("fuente", "categoria", "original")]
 
 
@@ -21,6 +18,7 @@ patrones_enganosos[, c("fuente", "categoria", "original")]
 # Ejercicio 10.1
 # ----------------------------------------------------------------------
 # (preparación del ejercicio)
+source("datos/funciones_ux.R")
 g <- patrones_enganosos
 
 # EJERCICIO: completa los huecos ______

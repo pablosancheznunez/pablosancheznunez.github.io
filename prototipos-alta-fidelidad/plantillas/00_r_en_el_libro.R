@@ -6,10 +6,6 @@
 # Script con todo el código del capítulo, para ejecutarlo en RStudio o Positron.
 # Los ejercicios tienen huecos (______): complétalos y compara con el libro.
 
-# Funciones del paquete UxLearn (instálalo una vez):
-# remotes::install_github("pablosancheznunez/UxLearn")
-library(UxLearn)
-
 
 # ----------------------------------------------------------------------
 # Cómo funcionan las celdas
@@ -35,8 +31,9 @@ exitos / participantes
 
 
 # ----------------------------------------------------------------------
-# El paquete UxLearn
+# Las funciones del libro
 # ----------------------------------------------------------------------
+source("datos/funciones_ux.R")
 contraste("#767676", "#ffffff")   # gris sobre blanco
 contraste("#999999", "#ffffff")
 
@@ -44,6 +41,9 @@ contraste("#999999", "#ffffff")
 # ----------------------------------------------------------------------
 # Ejercicio 2
 # ----------------------------------------------------------------------
+# (preparación del ejercicio)
+source("datos/funciones_ux.R")
+
 # EJERCICIO: completa los huecos ______
 contraste("#999999", "#ffffff") >= ______
 
@@ -51,6 +51,9 @@ contraste("#999999", "#ffffff") >= ______
 # ----------------------------------------------------------------------
 # Ejercicio 3
 # ----------------------------------------------------------------------
+# (preparación del ejercicio)
+source("datos/funciones_ux.R")
+
 # EJERCICIO: completa los huecos ______
 head(sesiones_prueba, 3)
 ______(sesiones_prueba)

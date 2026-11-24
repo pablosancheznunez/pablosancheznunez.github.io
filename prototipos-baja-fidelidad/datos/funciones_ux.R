@@ -1,6 +1,6 @@
-# UxLearn para webR: generado por herramientas/paquete_webr.py.
-# No editar: el código fuente está en https://github.com/pablosancheznunez/UxLearn.
-# En tu ordenador, instala el paquete y usa library(UxLearn).
+# Funciones y datos simulados de los libros de prototipado del Máster UX (UC3M).
+# Licencia MIT. Autor: Pablo Sánchez-Núñez.
+# Para usarlas en tu ordenador: source("funciones_ux.R")
 
 # ---- color.R ----
 # Admite colores hexadecimales abreviados (#fff) además de los de seis cifras.
