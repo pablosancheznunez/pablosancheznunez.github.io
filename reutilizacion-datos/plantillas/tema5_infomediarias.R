@@ -81,6 +81,23 @@ legend("topleft", c("Ingresos", "Costes fijos"), lty = c(1, 2), col = c("#000e78
 
 
 # ----------------------------------------------------------------------
+# Simulador del punto de equilibrio
+# ----------------------------------------------------------------------
+conv <- conversion_pct / 100
+equilibrio <- costes_mes / (conv * precio_mes)
+u <- seq(0, max(12000, equilibrio * 1.4), length.out = 200)
+plot(u, u * conv * precio_mes, type = "l", lwd = 2, col = "#2a78d6", bty = "l",
+     xlab = "Usuarios de la versión gratuita", ylab = "Euros al mes",
+     ylim = c(0, max(u * conv * precio_mes, costes_mes) * 1.05))
+abline(h = costes_mes, lty = 2, col = "#52514e")
+points(equilibrio, costes_mes, pch = 19, cex = 1.4, col = "#eb6834")
+legend("topleft", bty = "n", legend = c("Ingresos", "Costes fijos"),
+       col = c("#2a78d6", "#52514e"), lty = c(1, 2), lwd = c(2, 1))
+cat("Punto de equilibrio:", format(round(equilibrio), big.mark = ".", decimal.mark = ","), "usuarios gratuitos\n")
+cat("Cada usuario gratuito aporta", format(round(conv * precio_mes, 2), decimal.mark = ","), "€ al mes de media\n")
+
+
+# ----------------------------------------------------------------------
 # Ejercicio 5.2
 # ----------------------------------------------------------------------
 # (preparación del ejercicio)

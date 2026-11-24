@@ -1,0 +1,1517 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Reutilización de datos (libro)/Primeros pasos con R</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Primeros pasos con R · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En R, <code>x &lt;- 5</code> guarda el valor 5 en un objeto llamado <code>x</code>. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>&lt;-</code> asigna; el valor queda guardado con ese nombre.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Primeros pasos con R · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué devuelve <code>length(c(3, 8, 1))</code>? ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>length()</code> cuenta los elementos del vector: 3.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>3</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Primeros pasos con R · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Para leer un fichero CSV se usa la función ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>read.csv()</code> lee; <code>write.csv()</code> escribe.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[write.csv()]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[read.csv()]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[csv()]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[open()]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Primeros pasos con R · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Completa el código para contar los meses con más de 2500 préstamos: <code>sum(prestamos</code> ____ <code>2500)</code></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La comparación <code>&gt;</code> devuelve TRUE/FALSE y <code>sum()</code> cuenta los TRUE.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>&gt;</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Primeros pasos con R · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué operador selecciona una columna de un <em>data frame</em>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>df$columna</code> devuelve la columna como vector.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[@]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[$]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[#]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[%in%]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="category">
+    <category>
+      <text>$course$/top/Reutilización de datos (libro)/Tema 0. Datos abiertos</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 0. Datos abiertos · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un conjunto de datos con licencia CC BY-NC 4.0 es abierto según la Open Definition. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[NC prohíbe el uso comercial, así que no cumple la Open Definition.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 0. Datos abiertos · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Los datos FAIR son siempre datos abiertos. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[FAIR se refiere a cómo se describen y gestionan los datos; pueden ser FAIR con acceso restringido.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 0. Datos abiertos · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un CSV con licencia abierta, sin URI ni enlaces, tiene ____ estrellas.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Licencia abierta (★), estructurado (★★) y formato no propietario (★★★); la cuarta exige URI.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>3</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 0. Datos abiertos · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Internet es la red de redes; la World Wide Web es ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La Web (URI, HTTP, HTML) es uno de los servicios de Internet, junto al correo o la transferencia de ficheros.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[otro nombre de Internet]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[un servicio de documentos enlazados que funciona sobre Internet]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[un protocolo de correo]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 0. Datos abiertos · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál de estos formatos es abierto <strong>y</strong> legible por máquina?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[JSON tiene especificación pública y se procesa automáticamente; el PDF escaneado y la imagen no son legibles por máquina, y XLS es propietario.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[PDF escaneado]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[XLS (Excel antiguo)]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[JSON]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Imagen JPG de una tabla]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 0. Datos abiertos · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Completa el código para contar las licencias abiertas de un catálogo: <code>sum(catalogo$licencia</code> ____ <code>licencias_abiertas)</code></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>%in%</code> comprueba si cada licencia está en la lista de licencias abiertas.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>%in%</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="category">
+    <category>
+      <text>$course$/top/Reutilización de datos (libro)/Tema 1. RISP</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 1. RISP · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Tener derecho de acceso a un documento garantiza poder reutilizarlo. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El acceso permite conocer el documento; la reutilización puede estar limitada, por ejemplo, por derechos de terceros.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 1. RISP · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Plazo ordinario para resolver una solicitud de reutilización según la Ley 37/2007 (en días): ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Art. 10 de la Ley 37/2007: veinte días, ampliables otros veinte.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>20</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>veinte</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 1. RISP · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Si la administración no resuelve en plazo una solicitud de acceso (Ley 19/2013), la solicitud se entiende ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Art. 20.4 de la Ley 19/2013: silencio negativo.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[estimada]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[desestimada]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[archivada]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 1. RISP · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>La Directiva (UE) 2019/1024 se transpuso en España mediante el ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El RDL 24/2021 modificó la Ley 37/2007; la Ley 18/2015 transpuso la Directiva 2013/37/UE.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Real Decreto 1495/2011]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Real Decreto-ley 24/2021]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Ley 18/2015]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 1. RISP · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál de estas <strong>no</strong> es una categoría de datos de alto valor del Reglamento de Ejecución (UE) 2023/138?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Las seis categorías son geoespaciales, observación de la Tierra y medio ambiente, meteorológicos, estadísticos, sociedades y movilidad.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Meteorológicos]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Movilidad]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Préstamos bibliotecarios]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Sociedades y propiedad de sociedades]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 1. RISP · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>No citar la fuente al reutilizar con licencia tipo es una infracción ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Art. 11.3 de la Ley 37/2007: multa de 1.000 a 10.000 €.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[leve]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[grave]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[muy grave]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 1. RISP · P7</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Completa el código para sumar un mes a una fecha: <code>seq(recepcion, by = "1</code> ____ <code>", length.out = 2)[2]</code></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>by = "1 month"</code> avanza un mes natural.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>month</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="category">
+    <category>
+      <text>$course$/top/Reutilización de datos (libro)/Tema 2. Proyectos de reutilización</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 2. Proyectos de reutilización · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>datos.gob.es solo publica datos de la Administración General del Estado. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Es el catálogo nacional y federa portales estatales, autonómicos, locales y universitarios.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 2. Proyectos de reutilización · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El Open Data Maturity compara ____ países europeos.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El informe de 2025 compara 36 países en cuatro dimensiones.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>36</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 2. Proyectos de reutilización · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En el marco de Safarov et al., «la licencia y la calidad de los datos» corresponden a la dimensión de ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Las condiciones son lo que facilita o frena el uso: calidad, licencia, formatos, competencias.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[efectos]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[condiciones]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[usuarios]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[tipo de utilización]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 2. Proyectos de reutilización · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué es re3data?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[re3data registra repositorios de datos de investigación de todo el mundo.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Un portal de datos abiertos de la UE]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Un registro internacional de repositorios de datos de investigación]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Un repositorio de software libre]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Un concurso de reutilización]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 2. Proyectos de reutilización · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Los Desafíos Aporta se siguen convocando cada año. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La última edición fue la de 2021.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 2. Proyectos de reutilización · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Completa el código para calcular proporciones a partir de una tabla de frecuencias: ____ <code>(table(casos$efecto))</code></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>prop.table()</code> divide cada frecuencia entre el total.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>prop.table</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="category">
+    <category>
+      <text>$course$/top/Reutilización de datos (libro)/Tema 3. Gestión documental y open data</text>
+    </category>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 3. Gestión documental y open data · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un número de préstamos negativo es un problema de ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Un valor imposible es un error de exactitud.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[completitud]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[exactitud]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[trazabilidad]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[comprensibilidad]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 3. Gestión documental y open data · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Que las fechas aparezcan en dos formatos distintos afecta a la ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La conformidad mide si los valores siguen el formato esperado.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[conformidad]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[actualidad]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[expiración]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 3. Gestión documental y open data · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En DCAT, cada fichero descargable de un conjunto de datos es una ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>dcat:Distribution</code> describe cada forma de obtener el conjunto: un CSV, un JSON, una API.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>distribución</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>distribucion</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>dcat:Distribution</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 3. Gestión documental y open data · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El tipo MIME de un fichero CSV es ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>text/csv</code> es el tipo MIME registrado para CSV.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>text/csv</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 3. Gestión documental y open data · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Si la suma de control MD5 de un fichero descargado coincide con la publicada, el fichero no ha cambiado. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La suma cambia si cambia un solo carácter del fichero.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 3. Gestión documental y open data · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué norma ISO describe el modelo de referencia OAIS para archivos digitales?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[ISO 14721 es OAIS; ISO 15489 es gestión de documentos; ISO/IEC 25012 es calidad de datos; ISO 30301 es sistemas de gestión para los documentos.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[ISO 15489]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[ISO/IEC 25012]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[ISO 14721]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[ISO 30301]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 3. Gestión documental y open data · P7</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Completa el código para quedarte solo con las filas no duplicadas: <code>bruto[</code> ____ <code>, ]</code></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>duplicated()</code> marca las repeticiones y <code>!</code> las excluye.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>!duplicated(bruto)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="category">
+    <category>
+      <text>$course$/top/Reutilización de datos (libro)/Tema 4. Normalización e interoperabilidad</text>
+    </category>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Usar el mismo vocabulario (por ejemplo, <code>schema:Library</code>) resuelve la interoperabilidad ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La interoperabilidad semántica asegura que los datos signifiquen lo mismo para todos.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[técnica]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[semántica]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[jurídica]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[organizativa]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El ENI está previsto en el artículo 156 de la Ley 40/2015. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Así es: el ENI se regula en el Real Decreto 4/2010.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En JSON-LD, la clave que asigna a cada término una URI de un vocabulario es ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>@context</code> convierte las claves JSON en URI.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>@context</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál de estos es el cuarto principio de Linked Data?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Los cuatro principios: URI, URI HTTP, información útil con estándares y enlaces a otras URI.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Usar formatos propietarios]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Publicar solo en PDF]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Incluir enlaces a otras URI]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Evitar los identificadores]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>La propiedad SKOS que apunta a un concepto más general es <code>skos:</code> ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>skos:broader</code> apunta al concepto general; <code>skos:narrower</code>, al específico.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>broader</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Una ontología es un vocabulario con semántica formal que permite inferencias. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[RDFS y OWL permiten expresar jerarquías y restricciones de las que se deduce información nueva.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P7</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Completa la tripleta Turtle: <code>&lt;https://ejemplo.org/biblioteca/centro&gt;</code> ____ <code>schema:Library .</code></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[En Turtle, <code>a</code> abrevia <code>rdf:type</code>.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>a</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="category">
+    <category>
+      <text>$course$/top/Reutilización de datos (libro)/Tema 5. Infomediarios y negocio</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 5. Infomediarios y negocio · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Combinar una fuente CC BY 4.0 con otra CC BY-NC 4.0 permite vender el servicio resultante. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Una sola fuente no comercial impide el uso comercial del conjunto.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 5. Infomediarios y negocio · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un servicio con un nivel gratuito y funciones avanzadas de pago sigue el patrón ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<em>Freemium</em> combina un nivel gratuito y otro de pago.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[premium]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[freemium]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[ahorro de costes]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[maquinilla y cuchillas]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 5. Infomediarios y negocio · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Con costes fijos de 3.000 € al mes, una conversión del 5 % y un precio de 10 €, el punto de equilibrio es de ____ usuarios gratuitos.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[3000 / (0,05 × 10) = 6.000 usuarios.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>6000</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>6.000</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 5. Infomediarios y negocio · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué componente del marco 6-V responde a «¿con qué socios, proveedores y clientes se crea el valor?»?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La red de valor reúne a los socios, proveedores y clientes.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Propuesta de valor]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Captura de valor]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Red de valor]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Gestión del valor]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 5. Infomediarios y negocio · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Cruzar los préstamos con la población para obtener préstamos por cada 1.000 habitantes es un servicio de ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Enriquecer es cruzar con otras fuentes para obtener información nueva.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[agregación]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[enriquecimiento]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[alertas]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 5. Infomediarios y negocio · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Completa el código: los préstamos por cada 1.000 habitantes se calculan como <code>prestamos / habitantes *</code> ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Se multiplica el cociente por 1000.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>1000</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="category">
+    <category>
+      <text>$course$/top/Reutilización de datos (libro)/Caso práctico. Bibliotecas de Madrid</text>
+    </category>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Caso práctico. Bibliotecas de Madrid · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El fichero del Ayuntamiento de Madrid está codificado en ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El fichero se lee con <code>fileEncoding = "latin1"</code>; sin ello, las tildes se estropean.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[UTF-8]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Latin-1 (ISO-8859-1)]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[UTF-16]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Caso práctico. Bibliotecas de Madrid · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Con la licencia CC BY 4.0, una empresa puede usar estos datos en una aplicación de pago si cita la fuente. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[CC BY 4.0 permite el uso comercial y solo exige atribución.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Caso práctico. Bibliotecas de Madrid · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El conjunto tiene ____ estrellas en el modelo de Berners-Lee.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Licencia abierta, estructurado y formato no propietario; no usa URI para identificar las bibliotecas.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>3</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Caso práctico. Bibliotecas de Madrid · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Que la columna <code>ACCESIBILIDAD</code> solo se entienda con un PDF aparte es un problema de ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Los datos son correctos, pero no se entienden sin documentación externa.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[exactitud]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[actualidad]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[comprensibilidad]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Caso práctico. Bibliotecas de Madrid · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Por qué no basta con buscar «sábado» en <code>HORARIO</code> para saber qué bibliotecas abren ese día?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El horario es texto libre que mezcla aperturas y cierres; harían falta horarios estructurados.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque R no distingue tildes]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Porque el texto también recoge días y periodos de cierre]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque la columna está vacía]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

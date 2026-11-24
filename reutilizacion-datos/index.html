@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-29bccce83f8da9471d73d280c8ef785e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -163,6 +163,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-infomediarias.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 5. Empresas infomediarias y oportunidades de negocio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-caso-practico.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Caso práctico: las bibliotecas públicas municipales de Madrid</span></a>
   </div>
 </li>
       </ul>
@@ -348,6 +353,11 @@ ul.task-list li input[type="checkbox"] {
 <td>Sector infomediario · Modelos de negocio · Servicios de valor añadido · Emprendimiento e innovación · IA y reutilización · Tendencias de futuro</td>
 <td>Enriquecer datos, punto de equilibrio <em>freemium</em>, licencias combinadas</td>
 </tr>
+<tr class="even">
+<td><a href="./06-caso-practico.html">Caso práctico: bibliotecas de Madrid</a></td>
+<td>Recorrido por los seis temas con datos reales del Ayuntamiento de Madrid</td>
+<td>Codificación, completitud, JSON-LD con coordenadas, límites del texto libre</td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -436,12 +446,46 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xIiwiaW5saW5lIjpmYWxzZSwibWV0
 </div>
 </div>
 <script type="vfs-file">
-WyJkYXRvcy9wcmVzdGFtb3NfYmlibGlvdGVjYXNfcHJhY3RpY2EuY3N2Il0=
+WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9wcmVzdGFtb3NfYmlibGlvdGVjYXNfcHJhY3RpY2EuY3N2Il0=
 </script>
 </section>
 </section>
 
 </main> <!-- /main -->
+<script>
+/* Mejoras de accesibilidad del libro:
+   - nombre accesible para los editores de código de quarto-live (CodeMirror),
+   - foco de teclado en sus áreas desplazables,
+   - texto alternativo para el icono de ORCID de la portada. */
+(function () {
+  function arreglar(raiz) {
+    raiz.querySelectorAll('.cm-content:not([aria-label])').forEach(function (el) {
+      el.setAttribute('aria-label', 'Editor de código R');
+    });
+    raiz.querySelectorAll('.cm-scroller').forEach(function (el) {
+      if (el.getAttribute('tabindex') !== '0') el.setAttribute('tabindex', '0');
+      if (!el.hasAttribute('aria-label')) el.setAttribute('aria-label', 'Código R');
+    });
+    // controles de Observable (deslizadores y casillas) sin nombre accesible
+    raiz.querySelectorAll('form input:not([aria-label]), form select:not([aria-label])').forEach(function (el) {
+      var form = el.closest('form');
+      var lab = form && form.querySelector('label');
+      if (lab && !(el.id && form.querySelector('label[for="' + el.id + '"]'))) {
+        el.setAttribute('aria-label', lab.textContent.trim() + (el.type === 'number' ? ' (valor)' : ''));
+      }
+    });
+    raiz.querySelectorAll('.quarto-title-author-orcid').forEach(function (a) {
+      a.setAttribute('aria-label', 'Perfil ORCID de Pablo Sánchez-Núñez');
+      var img = a.querySelector('img');
+      if (img && !img.hasAttribute('alt')) img.setAttribute('alt', 'ORCID');
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () { arreglar(document); });
+  new MutationObserver(function () { arreglar(document); })
+    .observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
+<script src="./consent.js" defer=""></script>
 <script type="ojs-module-contents">
 eyJjb250ZW50cyI6W119
 </script>

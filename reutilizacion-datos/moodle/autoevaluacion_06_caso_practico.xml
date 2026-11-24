@@ -1,0 +1,160 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Reutilización de datos (libro)/Caso práctico. Bibliotecas de Madrid</text>
+    </category>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Caso práctico. Bibliotecas de Madrid · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El fichero del Ayuntamiento de Madrid está codificado en ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El fichero se lee con <code>fileEncoding = "latin1"</code>; sin ello, las tildes se estropean.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[UTF-8]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Latin-1 (ISO-8859-1)]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[UTF-16]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Caso práctico. Bibliotecas de Madrid · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Con la licencia CC BY 4.0, una empresa puede usar estos datos en una aplicación de pago si cita la fuente. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[CC BY 4.0 permite el uso comercial y solo exige atribución.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Caso práctico. Bibliotecas de Madrid · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El conjunto tiene ____ estrellas en el modelo de Berners-Lee.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Licencia abierta, estructurado y formato no propietario; no usa URI para identificar las bibliotecas.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>3</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Caso práctico. Bibliotecas de Madrid · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Que la columna <code>ACCESIBILIDAD</code> solo se entienda con un PDF aparte es un problema de ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Los datos son correctos, pero no se entienden sin documentación externa.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[exactitud]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[actualidad]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[comprensibilidad]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Caso práctico. Bibliotecas de Madrid · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Por qué no basta con buscar «sábado» en <code>HORARIO</code> para saber qué bibliotecas abren ese día?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[El horario es texto libre que mezcla aperturas y cierres; harían falta horarios estructurados.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque R no distingue tildes]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Porque el texto también recoge días y periodos de cierre]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque la columna está vacía]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

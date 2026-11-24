@@ -178,6 +178,38 @@ por_muni[order(por_muni$ratio, decreasing = TRUE), ]
 
 
 # ----------------------------------------------------------------------
+# Explora los datos limpios
+# ----------------------------------------------------------------------
+b <- read.csv("datos/prestamos_bibliotecas_practica.csv", colClasses = "character")
+b <- b[!duplicated(b), ]
+k <- chartr("áéíóúüñ", "aeiouun", tolower(trimws(b$municipio)))
+b$municipio <- unname(c(getafe = "Getafe", leganes = "Leganés", alcorcon = "Alcorcón",
+                        mostoles = "Móstoles", fuenlabrada = "Fuenlabrada")[k])
+b$mes <- as.integer(ifelse(grepl("/", b$fecha), substr(b$fecha, 4, 5), substr(b$fecha, 6, 7)))
+b$prestamos <- suppressWarnings(as.numeric(b$prestamos))
+b$prestamos[which(b$prestamos < 0)] <- NA
+colores <- c(Getafe = "#2a78d6", "Leganés" = "#eb6834", "Alcorcón" = "#1baf7a",
+             "Móstoles" = "#eda100", Fuenlabrada = "#e87ba4")
+sel <- unlist(municipios_sel)
+if (length(sel) == 0) {
+  plot.new(); text(0.5, 0.5, "Marca al menos un municipio")
+} else {
+  fun <- if (isTRUE(por_biblioteca)) function(x) mean(x) else function(x) sum(x)
+  tabla <- aggregate(prestamos ~ municipio + mes, data = b[b$municipio %in% sel, ], FUN = fun)
+  rango <- range(tabla$prestamos)
+  plot(NA, xlim = c(1, 6.8), ylim = rango, xaxt = "n", bty = "l",
+       xlab = "", ylab = if (isTRUE(por_biblioteca)) "Préstamos por biblioteca" else "Préstamos")
+  axis(1, at = 1:6, labels = c("ene", "feb", "mar", "abr", "may", "jun"))
+  for (m in sel) {
+    d <- merge(data.frame(mes = 1:6), tabla[tabla$municipio == m, ], all.x = TRUE)
+    lines(d$mes, d$prestamos, col = colores[m], lwd = 2)
+    points(d$mes, d$prestamos, col = colores[m], pch = 19)
+    text(6.1, tail(na.omit(d$prestamos), 1), m, pos = 4, cex = 0.8)
+  }
+}
+
+
+# ----------------------------------------------------------------------
 # Paso 7. Publicar el resultado con metadatos (apartados 3 y 5)
 # ----------------------------------------------------------------------
 write.csv(limpio, "prestamos_limpio.csv", row.names = FALSE)

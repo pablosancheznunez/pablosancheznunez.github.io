@@ -1,0 +1,205 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Reutilización de datos (libro)/Tema 4. Normalización e interoperabilidad</text>
+    </category>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Usar el mismo vocabulario (por ejemplo, <code>schema:Library</code>) resuelve la interoperabilidad ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La interoperabilidad semántica asegura que los datos signifiquen lo mismo para todos.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[técnica]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[semántica]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[jurídica]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[organizativa]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El ENI está previsto en el artículo 156 de la Ley 40/2015. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Así es: el ENI se regula en el Real Decreto 4/2010.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En JSON-LD, la clave que asigna a cada término una URI de un vocabulario es ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>@context</code> convierte las claves JSON en URI.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>@context</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál de estos es el cuarto principio de Linked Data?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Los cuatro principios: URI, URI HTTP, información útil con estándares y enlaces a otras URI.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Usar formatos propietarios]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Publicar solo en PDF]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Incluir enlaces a otras URI]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Evitar los identificadores]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>La propiedad SKOS que apunta a un concepto más general es <code>skos:</code> ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>skos:broader</code> apunta al concepto general; <code>skos:narrower</code>, al específico.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>broader</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Una ontología es un vocabulario con semántica formal que permite inferencias. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[RDFS y OWL permiten expresar jerarquías y restricciones de las que se deduce información nueva.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 4. Normalización e interoperabilidad · P7</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Completa la tripleta Turtle: <code>&lt;https://ejemplo.org/biblioteca/centro&gt;</code> ____ <code>schema:Library .</code></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[En Turtle, <code>a</code> abrevia <code>rdf:type</code>.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>a</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

@@ -31,6 +31,19 @@ Cómo usarla:
 3. Sustituye los textos entre corchetes y borra lo que no necesites.
 -->
 
+::: {.callout-tip collapse="true"}
+## Rúbrica de evaluación (bórrala antes de entregar)
+
+| Criterio | Peso | Excelente | Aceptable | Insuficiente |
+|---|---|---|---|---|
+| **Datos y licencia** | 15 % | Fuente, licencia y obligaciones bien identificadas; nivel de estrellas y FAIR justificados | Fuente y licencia identificadas, sin valorar | Falta la fuente o la licencia |
+| **Calidad y limpieza** | 25 % | Problemas medidos con métricas (completitud, conformidad, exactitud) y corregidos con código documentado | Problemas detectados y corregidos parcialmente | Datos sin revisar |
+| **Análisis y visualización** | 20 % | Indicadores adecuados a la pregunta; figuras legibles, con título, unidades y fuente | Análisis correcto, figuras mejorables | Análisis sin relación con el objetivo |
+| **Interpretación y limitaciones** | 20 % | Conclusiones sostenidas por los datos; limitaciones del conjunto y del método explícitas | Conclusiones razonables, limitaciones genéricas | Conclusiones no sostenidas |
+| **Reproducibilidad** | 10 % | El informe se renderiza de principio a fin sin errores ni pasos manuales | Requiere ajustes menores | No se puede reproducir |
+| **Presentación** | 10 % | Texto claro, referencias completas, sin erratas | Algunos fallos de forma | Desordenado o incompleto |
+:::
+
 ::: {.callout-note appearance="minimal"}
 **Tema:** [0-5] · **Conjunto de datos:** [nombre y portal] · **Licencia de los datos:** [p. ej. CC BY 4.0]
 :::
