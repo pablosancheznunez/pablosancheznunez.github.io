@@ -495,8 +495,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <ul>
 <li>Formular la pregunta de investigación según su tipo: descriptiva, exploratoria, inferencial, predictiva, causal o mecanicista.</li>
-<li>Clasificar variables y elegir el diseño que puede responder a la pregunta.</li>
-<li>Distinguir correlación de causalidad y reconocer las variables de confusión.</li>
+<li>Clasificar <a href="92-glosario.html#gl-variable" class="glos" data-def="Característica que toma valores distintos en las unidades estudiadas: nominal, ordinal, discreta o continua.">variables</a> y elegir el diseño que puede responder a la pregunta.</li>
+<li>Distinguir <a href="92-glosario.html#gl-correlacion" class="glos" data-def="Medida de la fuerza de una relación lineal entre dos variables, entre −1 y 1.">correlación</a> de causalidad y reconocer las <a href="92-glosario.html#gl-confusion" class="glos" data-def="Factor que influye a la vez en la supuesta causa y en el efecto, y crea asociaciones engañosas.">variables de confusión</a>.</li>
 </ul>
 </div>
 </div>
@@ -536,11 +536,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="primero-la-pregunta">1. Primero, la pregunta</h2>
 <p>Leek y Peng (2015) sostienen que el error estadístico más frecuente no es de cálculo, sino de <strong>pregunta</strong>: usar un análisis que responde a una pregunta distinta de la que se quería responder. Proponen seis tipos:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Tipo</th>
@@ -552,7 +547,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><strong>Descriptiva</strong></td>
 <td>¿Cómo son estos datos?</td>
-<td>¿Cuántas horas estudian, de media, los doctorandos de la muestra?</td>
+<td>¿Cuántas horas estudian, de <a href="92-glosario.html#gl-media" class="glos" data-def="La media es el valor de equilibrio; la mediana, el valor central. La mediana resiste mejor los extremos.">media</a>, los doctorandos de la muestra?</td>
 </tr>
 <tr class="even">
 <td><strong>Exploratoria</strong></td>
@@ -561,7 +556,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><strong>Inferencial</strong></td>
-<td>¿Se mantiene el patrón en la población?</td>
+<td>¿Se mantiene el patrón en la <a href="92-glosario.html#gl-poblacion" class="glos" data-def="La población es el conjunto sobre el que se quiere concluir; la muestra, la parte que se observa.">población</a>?</td>
 <td>¿Existe esa relación en todos los doctorandos de la universidad?</td>
 </tr>
 <tr class="even">
@@ -586,12 +581,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="variables-y-escalas" class="level2">
 <h2 class="anchored" data-anchor-id="variables-y-escalas">2. Variables y escalas</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Tipo</th>
@@ -623,7 +612,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><strong>Cuantitativa continua</strong></td>
 <td>Cualquier valor en un intervalo</td>
 <td><code>horas</code>, <code>sueno</code>, <code>nota</code></td>
-<td>Media, desviación típica, cuantiles</td>
+<td>Media, <a href="92-glosario.html#gl-desviacion" class="glos" data-def="Distancia típica de los datos a su media.">desviación típica</a>, cuantiles</td>
 </tr>
 </tbody>
 </table>
@@ -639,8 +628,8 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZCA8
 <section id="diseños-quién-decide-quién-recibe-qué" class="level2">
 <h2 class="anchored" data-anchor-id="diseños-quién-decide-quién-recibe-qué">3. Diseños: quién decide quién recibe qué</h2>
 <ul>
-<li>En un <strong>estudio observacional</strong>, el investigador mide lo que ocurre sin intervenir. Puede describir y encontrar asociaciones, pero las <strong>variables de confusión</strong> (factores que influyen a la vez en la supuesta causa y en el efecto) amenazan cualquier conclusión causal.</li>
-<li>En un <strong>experimento aleatorizado</strong>, el azar decide quién recibe el tratamiento. Si la muestra es suficiente, la aleatorización equilibra en promedio las variables de confusión, <strong>medidas y no medidas</strong>: por eso permite inferir causas.</li>
+<li>En un <a href="92-glosario.html#gl-observacional" class="glos" data-def="Estudio en el que se mide sin intervenir; permite describir y encontrar asociaciones."><strong>estudio observacional</strong></a>, el investigador mide lo que ocurre sin intervenir. Puede describir y encontrar asociaciones, pero las <strong>variables de confusión</strong> (factores que influyen a la vez en la supuesta causa y en el efecto) amenazan cualquier conclusión causal.</li>
+<li>En un <a href="92-glosario.html#gl-experimento" class="glos" data-def="Estudio en el que el azar decide quién recibe cada condición; permite inferir causas."><strong>experimento aleatorizado</strong></a>, el azar decide quién recibe el tratamiento. Si la muestra es suficiente, la aleatorización equilibra en promedio las variables de confusión, <strong>medidas y no medidas</strong>: por eso permite inferir causas.</li>
 <li>Entre ambos están los <strong>cuasiexperimentos</strong> (diferencias en diferencias, regresión discontinua, variables instrumentales), que aprovechan situaciones naturales para aproximarse a una comparación justa.</li>
 </ul>
 <div class="callout callout-style-simple callout-important callout-titled">
@@ -659,7 +648,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZCA8
 </section>
 <section id="validez-interna-y-externa" class="level2">
 <h2 class="anchored" data-anchor-id="validez-interna-y-externa">4. Validez: interna y externa</h2>
-<p>La <strong>validez interna</strong> pregunta si la conclusión es correcta para la muestra estudiada (¿hay confusión, sesgo de medida, abandonos?). La <strong>validez externa</strong> pregunta si se puede generalizar a otras personas, contextos o momentos. Una muestra de doctorandos de una sola universidad puede tener buena validez interna y una validez externa limitada.</p>
+<p>La <a href="92-glosario.html#gl-validez" class="glos" data-def="Interna: si la conclusión es correcta para la muestra. Externa: si se puede generalizar."><strong>validez interna</strong></a> pregunta si la conclusión es correcta para la muestra estudiada (¿hay confusión, sesgo de medida, abandonos?). La <strong>validez externa</strong> pregunta si se puede generalizar a otras personas, contextos o momentos. Una muestra de doctorandos de una sola universidad puede tener buena validez interna y una validez externa limitada.</p>
 <section id="ejercicio-1.1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ejercicio-1.1">Ejercicio 1.1</h3>
 <p>¿Qué proporción del grupo de tutoría tiene una nota de 5 o más? Completa el código.</p>
@@ -703,8 +692,8 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImMx
 <ol type="1">
 <li><strong>Tipo de pregunta:</strong> asociación (no causal), en una muestra observacional.</li>
 <li><strong>Variables:</strong> ansiedad (escala continua), horas de sueño (continua); covariables posibles: horas de trabajo, grupo.</li>
-<li><strong>Análisis previsto:</strong> correlación y regresión lineal del sueño sobre la ansiedad, con intervalo de confianza.</li>
-<li><strong>Decisiones fijadas antes:</strong> exclusiones (cuestionarios incompletos), tratamiento de valores extremos, umbral de significación o, mejor, interpretación por el tamaño del efecto.</li>
+<li><strong>Análisis previsto:</strong> correlación y <a href="92-glosario.html#gl-regresion" class="glos" data-def="Modelo que expresa un resultado como combinación lineal de predictores más un error.">regresión lineal</a> del sueño sobre la ansiedad, con <a href="92-glosario.html#gl-ic" class="glos" data-def="Intervalo calculado con un procedimiento que, repetido, contiene el valor verdadero en un porcentaje fijado de las veces.">intervalo de confianza</a>.</li>
+<li><strong>Decisiones fijadas antes:</strong> exclusiones (cuestionarios incompletos), tratamiento de valores extremos, umbral de significación o, mejor, interpretación por el <a href="92-glosario.html#gl-efecto" class="glos" data-def="Magnitud de un fenómeno, en unidades originales o estandarizada.">tamaño del efecto</a>.</li>
 <li><strong>Interpretación prevista:</strong> «se asocia con», nunca «causa».</li>
 </ol>
 <p>Escribir el plan antes de ver los datos (y, si es posible, preregistrarlo) protege frente al «jardín de los senderos que se bifurcan».</p>
@@ -1461,6 +1450,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 

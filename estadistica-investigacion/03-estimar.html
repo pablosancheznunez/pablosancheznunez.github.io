@@ -495,8 +495,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Entender la variabilidad de muestreo y el error típico.</li>
-<li>Calcular e interpretar correctamente un intervalo de confianza.</li>
+<li>Entender la variabilidad de muestreo y el <a href="92-glosario.html#gl-errortipico" class="glos" data-def="Desviación típica de la distribución muestral; para una media, aproximadamente sd/√n.">error típico</a>.</li>
+<li>Calcular e interpretar correctamente un <a href="92-glosario.html#gl-ic" class="glos" data-def="Intervalo calculado con un procedimiento que, repetido, contiene el valor verdadero en un porcentaje fijado de las veces.">intervalo de confianza</a>.</li>
 <li>Pasar de «¿hay efecto?» a «¿cuánto efecto y con qué precisión?».</li>
 </ul>
 </div>
@@ -535,7 +535,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="una-muestra-es-una-de-muchas-posibles" class="level2">
 <h2 class="anchored" data-anchor-id="una-muestra-es-una-de-muchas-posibles">1. Una muestra es una de muchas posibles</h2>
-<p>Si repitieras el estudio con otros 120 doctorandos, la media sería otra. La <strong>distribución muestral</strong> describe cómo varía un estadístico (la media, una diferencia, una pendiente) de muestra en muestra. Su desviación típica es el <strong>error típico</strong>: para una media, aproximadamente <code>sd / sqrt(n)</code>. Cuanto mayor es la muestra, más precisa es la estimación, pero la precisión crece con la <strong>raíz</strong> de <em>n</em>: para reducir el error a la mitad hace falta cuadruplicar la muestra.</p>
+<p>Si repitieras el estudio con otros 120 doctorandos, la <a href="92-glosario.html#gl-media" class="glos" data-def="La media es el valor de equilibrio; la mediana, el valor central. La mediana resiste mejor los extremos.">media</a> sería otra. La <a href="92-glosario.html#gl-muestral" class="glos" data-def="Distribución de un estadístico si el estudio se repitiera muchas veces."><strong>distribución muestral</strong></a> describe cómo varía un estadístico (la media, una diferencia, una pendiente) de muestra en muestra. Su <a href="92-glosario.html#gl-desviacion" class="glos" data-def="Distancia típica de los datos a su media.">desviación típica</a> es el <strong>error típico</strong>: para una media, aproximadamente <code>sd / sqrt(n)</code>. Cuanto mayor es la muestra, más precisa es la <a href="92-glosario.html#gl-estimacion" class="glos" data-def="Cuantificación de un parámetro con su incertidumbre, en lugar de una decisión de sí o no.">estimación</a>, pero la precisión crece con la <strong>raíz</strong> de <em>n</em>: para reducir el error a la mitad hace falta cuadruplicar la muestra.</p>
 </section>
 <section id="el-intervalo-de-confianza" class="level2">
 <h2 class="anchored" data-anchor-id="el-intervalo-de-confianza">2. El intervalo de confianza</h2>
@@ -572,7 +572,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZCA8
 <div class="laboratorio-etiqueta">
 <p>Laboratorio · simulación en tu navegador</p>
 </div>
-<p>Simulamos 50 estudios de la misma población (media verdadera = 50, desviación típica = 10). Cada línea es el intervalo de confianza de un estudio; en naranja, los que <strong>no</strong> contienen el valor verdadero. Cambia el tamaño de la muestra y el nivel de confianza, y pulsa <strong>Repetir</strong>.</p>
+<p>Simulamos 50 estudios de la misma <a href="92-glosario.html#gl-poblacion" class="glos" data-def="La población es el conjunto sobre el que se quiere concluir; la muestra, la parte que se observa.">población</a> (media verdadera = 50, desviación típica = 10). Cada línea es el intervalo de confianza de un estudio; en naranja, los que <strong>no</strong> contienen el valor verdadero. Cambia el tamaño de la muestra y el nivel de confianza, y pulsa <strong>Repetir</strong>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="64" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 63;"><span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
 <span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>seleccion <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
@@ -1483,6 +1483,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 

@@ -495,9 +495,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Ajustar e interpretar modelos de regresión lineal simple y múltiple.</li>
-<li>Comprobar los supuestos con los residuos.</li>
-<li>Saber qué puede y qué no puede decir un coeficiente sobre causas.</li>
+<li>Ajustar e interpretar modelos de <a href="92-glosario.html#gl-regresion" class="glos" data-def="Modelo que expresa un resultado como combinación lineal de predictores más un error.">regresión lineal</a> simple y múltiple.</li>
+<li>Comprobar los supuestos con los <a href="92-glosario.html#gl-residuo" class="glos" data-def="Diferencia entre el valor observado y el predicho por el modelo.">residuos</a>.</li>
+<li>Saber qué puede y qué no puede decir un <a href="92-glosario.html#gl-coeficiente" class="glos" data-def="Cambio esperado en el resultado por unidad de un predictor, con los demás constantes.">coeficiente</a> sobre causas.</li>
 </ul>
 </div>
 </div>
@@ -535,7 +535,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="la-recta-que-mejor-se-ajusta" class="level2">
 <h2 class="anchored" data-anchor-id="la-recta-que-mejor-se-ajusta">1. La recta que mejor se ajusta</h2>
-<p>La <strong>regresión lineal</strong> modela una variable resultado como una combinación lineal de predictores más un error:</p>
+<p>La <strong>regresión lineal</strong> modela una <a href="92-glosario.html#gl-variable" class="glos" data-def="Característica que toma valores distintos en las unidades estudiadas: nominal, ordinal, discreta o continua.">variable</a> resultado como una combinación lineal de predictores más un error:</p>
 <p><code>nota = b0 + b1 · horas + error</code></p>
 <p><code>b1</code> es el cambio <strong>esperado</strong> en la nota por cada hora más de estudio; <code>b0</code>, la nota esperada con 0 horas (a menudo, sin sentido práctico: por eso conviene <strong>centrar</strong> los predictores, como recomienda Schielzeth, 2010).</p>
 <div>
@@ -559,7 +559,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWUsImZpZy1oZWlnaHQi
 eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZCA8LSByZWFkLmNzdihcImRhdG9zL2VzdHVkaW8uY3N2XCIpXG5kJGhvcmFzX2MgPC0gZCRob3JhcyAtIG1lYW4oZCRob3JhcykgICAgICAjIGNlbnRyYXJcbmQkc3Vlbm9fYyA8LSBkJHN1ZW5vIC0gbWVhbihkJHN1ZW5vKVxuZCRhbnNpZWRhZF9jIDwtIGQkYW5zaWVkYWQgLSBtZWFuKGQkYW5zaWVkYWQpXG5tMiA8LSBsbShub3RhIH4gZ3J1cG8gKyBob3Jhc19jICsgc3Vlbm9fYyArIGFuc2llZGFkX2MsIGRhdGEgPSBkKVxucm91bmQoc3VtbWFyeShtMikkY29lZmZpY2llbnRzLCAzKVxuc3VtbWFyeShtMikkci5zcXVhcmVkIn0=
 </script>
 </div>
-<p>Con los predictores centrados, la constante es la nota esperada en el grupo de referencia (control) para alguien con horas, sueño y ansiedad medios. Fíjate en que el coeficiente de <code>grupotutoria</code> (el efecto de la tutoría ajustado por las demás variables) se estima con algo más de precisión que en la simple comparación de medias: ajustar por covariables que predicen el resultado <strong>aumenta la precisión</strong> en un experimento.</p>
+<p>Con los predictores centrados, la constante es la nota esperada en el grupo de referencia (control) para alguien con horas, sueño y ansiedad medios. Fíjate en que el coeficiente de <code>grupotutoria</code> (el efecto de la tutoría ajustado por las demás variables) se estima con algo más de precisión que en la simple comparación de <a href="92-glosario.html#gl-media" class="glos" data-def="La media es el valor de equilibrio; la mediana, el valor central. La mediana resiste mejor los extremos.">medias</a>: ajustar por covariables que predicen el resultado <strong>aumenta la precisión</strong> en un experimento.</p>
 </section>
 <section id="comprobar-los-supuestos" class="level2">
 <h2 class="anchored" data-anchor-id="comprobar-los-supuestos">3. Comprobar los supuestos</h2>
@@ -714,7 +714,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM2
 <button>Ver solución</button>
 <p>Que, a igualdad de horas de estudio, cada hora adicional de sueño se asocia con 0,3 puntos más de nota media en la muestra. No implica causalidad.</p>
 </div>
-<p><strong>Avanzado.</strong> Ajusta el modelo con las variables centradas e interpreta de nuevo la intersección.</p>
+<p><strong>Avanzado.</strong> Ajusta el modelo con las <a href="92-glosario.html#gl-centrar" class="glos" data-def="Variable a la que se resta su media para que el cero sea interpretable.">variables centradas</a> e interpreta de nuevo la intersección.</p>
 <div class="webex-solution">
 <button>Ver solución</button>
 <p>Con <code>scale(x, scale = FALSE)</code> o restando la media, la intersección pasa a ser la nota prevista para un doctorando con horas y sueño medios; los demás coeficientes no cambian.</p>
@@ -756,7 +756,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM2
 <li>Restar la media a un predictor se llama <input class="webex-solveme nospaces ignorecase" size="9" aria-label="Escribe tu respuesta" data-answer="[&quot;centrar&quot;]"></li>
 <li>El R² siempre aumenta al añadir predictores. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>Un residuo es <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">el valor predicho</option><option value="answer">la diferencia entre el valor observado y el predicho</option><option value="x">el coeficiente de una variable</option></select></li>
-<li>Un coeficiente de regresión en un estudio observacional prueba una relación causal. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
+<li>Un coeficiente de regresión en un <a href="92-glosario.html#gl-observacional" class="glos" data-def="Estudio en el que se mide sin intervenir; permite describir y encontrar asociaciones.">estudio observacional</a> prueba una relación causal. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>Un punto con un valor de <em>x</em> muy alejado del resto tiene mucha <input class="webex-solveme nospaces ignorecase" size="9" aria-label="Escribe tu respuesta" data-answer="[&quot;palanca&quot;]"></li>
 <li>En un experimento, ajustar por covariables que predicen el resultado <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">introduce sesgo siempre</option><option value="answer">suele mejorar la precisión del efecto</option><option value="x">no cambia nada</option></select></li>
 <li>¿Qué intervalo es más ancho?</li>
@@ -772,7 +772,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM2
 <li>Observado menos predicho.</li>
 <li>Asociación ajustada, no causa.</li>
 <li><em>Leverage</em>.</li>
-<li>Reduce el error típico del efecto.</li>
+<li>Reduce el <a href="92-glosario.html#gl-errortipico" class="glos" data-def="Desviación típica de la distribución muestral; para una media, aproximadamente sd/√n.">error típico</a> del efecto.</li>
 <li>El de predicción incluye la variabilidad individual.</li>
 </ul>
 </div>
@@ -1456,6 +1456,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 

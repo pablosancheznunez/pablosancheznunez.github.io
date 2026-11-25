@@ -547,12 +547,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="la-lógica-del-contraste" class="level2">
 <h2 class="anchored" data-anchor-id="la-lógica-del-contraste">1. La lógica del contraste</h2>
 <ol type="1">
-<li>Se plantea una <strong>hipótesis nula</strong> (H₀), normalmente «no hay efecto» o «no hay diferencia».</li>
+<li>Se plantea una <a href="92-glosario.html#gl-nula" class="glos" data-def="Hipótesis de referencia, normalmente de ausencia de efecto, frente a la que se evalúan los datos."><strong>hipótesis nula</strong></a> (H₀), normalmente «no hay efecto» o «no hay diferencia».</li>
 <li>Se calcula un estadístico que mide cuánto se alejan los datos de lo que predice H₀.</li>
 <li>El <strong>valor <em>p</em></strong> es la probabilidad de obtener un estadístico <strong>tan extremo o más</strong> que el observado <strong>si H₀ y todos los supuestos del modelo fueran ciertos</strong>.</li>
 <li>Si <em>p</em> es menor que un umbral α fijado de antemano (por convención, 0,05), se rechaza H₀.</li>
 </ol>
-<p>Este procedimiento controla a largo plazo dos errores: el de <strong>tipo I</strong> (rechazar H₀ cuando es cierta, con probabilidad α) y el de <strong>tipo II</strong> (no rechazarla cuando es falsa, con probabilidad β; la potencia es 1 − β, capítulo 5).</p>
+<p>Este procedimiento controla a largo plazo dos errores: el de <strong>tipo I</strong> (rechazar H₀ cuando es cierta, con probabilidad α) y el de <strong>tipo II</strong> (no rechazarla cuando es falsa, con probabilidad β; la <a href="92-glosario.html#gl-potencia" class="glos" data-def="Probabilidad de detectar un efecto de un tamaño dado si existe.">potencia</a> es 1 − β, capítulo 5).</p>
 </section>
 <section id="seis-principios-de-la-asa" class="level2">
 <h2 class="anchored" data-anchor-id="seis-principios-de-la-asa">2. Seis principios de la ASA</h2>
@@ -629,12 +629,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="contrastes-básicos-en-r" class="level2">
 <h2 class="anchored" data-anchor-id="contrastes-básicos-en-r">4. Contrastes básicos en R</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Pregunta</th>
@@ -645,7 +639,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td>¿Difieren dos medias?</td>
+<td>¿Difieren dos <a href="92-glosario.html#gl-media" class="glos" data-def="La media es el valor de equilibrio; la mediana, el valor central. La mediana resiste mejor los extremos.">medias</a>?</td>
 <td>Dos grupos independientes</td>
 <td><em>t</em> de Welch</td>
 <td><code>t.test(y ~ grupo)</code></td>
@@ -669,7 +663,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><code>aov(y ~ grupo)</code></td>
 </tr>
 <tr class="odd">
-<td>¿Están asociadas dos variables categóricas?</td>
+<td>¿Están asociadas dos <a href="92-glosario.html#gl-variable" class="glos" data-def="Característica que toma valores distintos en las unidades estudiadas: nominal, ordinal, discreta o continua.">variables</a> categóricas?</td>
 <td>Tabla de frecuencias</td>
 <td>Ji cuadrado</td>
 <td><code>chisq.test(tabla)</code></td>
@@ -677,7 +671,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td>¿Hay relación lineal?</td>
 <td>Dos cuantitativas</td>
-<td>Correlación</td>
+<td><a href="92-glosario.html#gl-correlacion" class="glos" data-def="Medida de la fuerza de una relación lineal entre dos variables, entre −1 y 1.">Correlación</a></td>
 <td><code>cor.test(x, y)</code></td>
 </tr>
 </tbody>
@@ -764,14 +758,14 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM0
 </div>
 <div class="callout-body-container callout-body">
 <p>Un estudio informa: diferencia de 3 puntos en la nota entre quienes hicieron un taller y quienes no; t(118) = 2,1; p = 0,038.</p>
-<p>Lo que significa: si no hubiera ninguna diferencia en la población, sería poco frecuente (en torno al 4 % de las veces) observar una diferencia como esta o mayor.</p>
+<p>Lo que significa: si no hubiera ninguna diferencia en la <a href="92-glosario.html#gl-poblacion" class="glos" data-def="La población es el conjunto sobre el que se quiere concluir; la muestra, la parte que se observa.">población</a>, sería poco frecuente (en torno al 4 % de las veces) observar una diferencia como esta o mayor.</p>
 <p>Lo que <strong>no</strong> significa:</p>
 <ul>
 <li>No es la probabilidad de que la hipótesis nula sea cierta.</li>
-<li>No dice que el efecto sea grande o importante: hay que mirar el tamaño del efecto y su intervalo.</li>
+<li>No dice que el efecto sea grande o importante: hay que mirar el <a href="92-glosario.html#gl-efecto" class="glos" data-def="Magnitud de un fenómeno, en unidades originales o estandarizada.">tamaño del efecto</a> y su intervalo.</li>
 <li>p = 0,038 y p = 0,052 no son resultados opuestos: la evidencia es muy parecida.</li>
 </ul>
-<p>Informe completo: diferencia de 3 puntos, IC 95 % [0,2; 5,8], d de Cohen ≈ 0,38, p = 0,038.</p>
+<p>Informe completo: diferencia de 3 puntos, IC 95 % [0,2; 5,8], <a href="92-glosario.html#gl-d" class="glos" data-def="Diferencia de medias dividida entre la desviación típica combinada.">d de Cohen</a> ≈ 0,38, p = 0,038.</p>
 </div>
 </div>
 </section>
@@ -780,7 +774,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM0
 <p><strong>Básico.</strong> Un estudio obtiene p = 0,30. ¿Demuestra que no hay efecto?</p>
 <div class="webex-solution">
 <button>Ver solución</button>
-<p>No: un resultado no significativo no demuestra la ausencia de efecto. Puede deberse a poca potencia; hay que mirar el intervalo de confianza para ver qué efectos son compatibles con los datos.</p>
+<p>No: un resultado no significativo no demuestra la ausencia de efecto. Puede deberse a poca potencia; hay que mirar el <a href="92-glosario.html#gl-ic" class="glos" data-def="Intervalo calculado con un procedimiento que, repetido, contiene el valor verdadero en un porcentaje fijado de las veces.">intervalo de confianza</a> para ver qué efectos son compatibles con los datos.</p>
 </div>
 <p><strong>Avanzado.</strong> Busca en un artículo de tu campo un resultado con valor p y reescribe su descripción con tamaño del efecto e intervalo de confianza.</p>
 <div class="webex-solution">
@@ -808,7 +802,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM0
 <ol type="1">
 <li>Elige dos artículos de tu campo y localiza todas las afirmaciones basadas en valores <em>p</em>.</li>
 <li>Clasifícalas según los seis principios de la ASA: ¿cuáles son correctas y cuáles caen en alguno de los errores de Greenland et al.&nbsp;(2016)?</li>
-<li>Comprueba si informan de tamaños del efecto e intervalos y si corrigen las comparaciones múltiples.</li>
+<li>Comprueba si informan de tamaños del efecto e intervalos y si corrigen las <a href="92-glosario.html#gl-multiples" class="glos" data-def="Problema de hacer muchos contrastes: aumenta la probabilidad de algún falso positivo.">comparaciones múltiples</a>.</li>
 <li>Reescribe dos conclusiones con un lenguaje correcto.</li>
 </ol>
 <p><strong>Entrega:</strong> con la <a href="plantillas/entrega_reto.qmd">plantilla de entrega</a>. Este reto <strong>no tiene solución en el libro</strong>.</p>
@@ -841,7 +835,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM0
 <li><em>Paired</em>.</li>
 <li>1 − 0,95²⁰ ≈ 0,64.</li>
 <li>Con muestras enormes, efectos diminutos dan <em>p</em> minúsculos.</li>
-<li>Estimación antes que dicotomía.</li>
+<li><a href="92-glosario.html#gl-estimacion" class="glos" data-def="Cuantificación de un parámetro con su incertidumbre, en lugar de una decisión de sí o no.">Estimación</a> antes que dicotomía.</li>
 </ul>
 </div>
 
@@ -1524,6 +1518,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 

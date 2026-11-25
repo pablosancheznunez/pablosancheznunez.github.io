@@ -498,9 +498,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Resumir variables con medidas de centro y de dispersión adecuadas a su forma.</li>
-<li>Elegir gráficos que muestren los datos, no solo sus medias.</li>
-<li>Detectar valores atípicos, asimetrías y errores antes de cualquier contraste.</li>
+<li>Resumir <a href="92-glosario.html#gl-variable" class="glos" data-def="Característica que toma valores distintos en las unidades estudiadas: nominal, ordinal, discreta o continua.">variables</a> con medidas de centro y de dispersión adecuadas a su forma.</li>
+<li>Elegir gráficos que muestren los datos, no solo sus <a href="92-glosario.html#gl-media" class="glos" data-def="La media es el valor de equilibrio; la mediana, el valor central. La mediana resiste mejor los extremos.">medias</a>.</li>
+<li>Detectar <a href="92-glosario.html#gl-atipico" class="glos" data-def="Observación muy alejada del resto; hay que investigarla, no eliminarla sin justificación.">valores atípicos</a>, asimetrías y errores antes de cualquier contraste.</li>
 </ul>
 </div>
 </div>
@@ -539,11 +539,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="centro-y-dispersión" class="level2">
 <h2 class="anchored" data-anchor-id="centro-y-dispersión">1. Centro y dispersión</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Medida</th>
@@ -563,12 +558,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>Distribuciones asimétricas o con atípicos</td>
 </tr>
 <tr class="odd">
-<td><strong>Desviación típica</strong></td>
+<td><a href="92-glosario.html#gl-desviacion" class="glos" data-def="Distancia típica de los datos a su media."><strong>Desviación típica</strong></a></td>
 <td>Distancia típica a la media</td>
 <td>Junto a la media</td>
 </tr>
 <tr class="even">
-<td><strong>Rango intercuartílico</strong> (IQR)</td>
+<td><a href="92-glosario.html#gl-iqr" class="glos" data-def="Diferencia entre los percentiles 75 y 25: amplitud del 50 % central de los datos."><strong>Rango intercuartílico</strong></a> (IQR)</td>
 <td>Amplitud del 50 % central</td>
 <td>Junto a la mediana</td>
 </tr>
@@ -623,7 +618,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWUsImZpZy1oZWlnaHQi
 <div class="laboratorio-etiqueta">
 <p>Laboratorio · se ejecuta en tu navegador</p>
 </div>
-<p>El <strong>cuarteto de Anscombe</strong> (1973) son cuatro conjuntos de datos con la misma media, la misma varianza y la misma correlación (<em>r</em> ≈ 0,82). Elige uno y mira el gráfico.</p>
+<p>El <strong>cuarteto de Anscombe</strong> (1973) son cuatro conjuntos de datos con la misma media, la misma varianza y la misma <a href="92-glosario.html#gl-correlacion" class="glos" data-def="Medida de la fuerza de una relación lineal entre dos variables, entre −1 y 1.">correlación</a> (<em>r</em> ≈ 0,82). Elige uno y mira el gráfico.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="87" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 86;"><span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>seleccion <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
 <span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>anscombe <span class="op">=</span> ({</span>
@@ -753,7 +748,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImMy
 </section>
 <section id="ejercicios-graduados" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
-<p><strong>Básico.</strong> ¿Qué medida de tendencia central usarías para los ingresos de una población? ¿Por qué?</p>
+<p><strong>Básico.</strong> ¿Qué medida de tendencia central usarías para los ingresos de una <a href="92-glosario.html#gl-poblacion" class="glos" data-def="La población es el conjunto sobre el que se quiere concluir; la muestra, la parte que se observa.">población</a>? ¿Por qué?</p>
 <div class="webex-solution">
 <button>Ver solución</button>
 <p>La mediana: los ingresos son muy asimétricos y unos pocos valores muy altos elevan la media.</p>
@@ -1500,6 +1495,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
