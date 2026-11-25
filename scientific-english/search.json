@@ -867,135 +867,179 @@
     ]
   },
   {
+    "objectID": "94-laboratorio.html",
+    "href": "94-laboratorio.html",
+    "title": "Appendix B — Interactive lab",
+    "section": "",
+    "text": "Lab: abstract moves\nThis appendix brings together a lab and an activity to practise in your browser.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Interactive lab</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#lab-moves",
+    "href": "94-laboratorio.html#lab-moves",
+    "title": "Appendix B — Interactive lab",
+    "section": "",
+    "text": "Lab · runs in your browser\n\nA good abstract moves through five rhetorical moves (Hyland, 2000): introduction, purpose, method, product (results) and conclusion. Paste your abstract. The lab tags each sentence with its most likely move using signal phrases, flags long sentences and lists the moves it could not find. It is a heuristic guide, not a judgement.\n\nareaE = window.Lab.area\nviewof abstractTxt = areaE(\"Your abstract\", {rows: 9, value: \"Open research data are increasingly required by funders. However, little is known about how researchers in the humanities reuse shared data. This study aims to identify the main barriers to data reuse among humanities scholars. We surveyed 412 researchers in Spain and analysed their responses using latent class analysis. We found that 63% had never reused data and that the lack of documentation was the most frequent barrier. These findings suggest that data policies should invest in documentation and training rather than in mandates alone.\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const frases = abstractTxt.replace(/\\s+/g, \" \").trim().split(/(?&lt;=[.!?])\\s+(?=[A-Z])/).filter((s) =&gt; s.length &gt; 2);\n  const reglas = [\n    [\"Conclusion\", \"#6a3d9a\", /\\b(suggest|conclude|implications?|imply|recommend|should|these (findings|results)|overall|in conclusion)\\b/i],\n    [\"Product\", \"#1c6b3a\", /\\b(we found|results? (show|indicate|reveal)|found that|showed|revealed|was associated|were associated|significantly|\\d+(\\.\\d+)?\\s?%|p\\s?[&lt;=])/i],\n    [\"Method\", \"#b35900\", /\\b(we (surveyed|analysed|analyzed|used|conducted|collected|interviewed|measured|compared|applied|performed)|using|data (from|were)|sample of|participants|questionnaire|regression|analysis)\\b/i],\n    [\"Purpose\", \"#2a78d6\", /\\b(this (study|paper|article)|we (aim|investigate|examine|explore|propose|present)|aims? to|the (aim|purpose|goal) of|here,? we)\\b/i],\n    [\"Introduction\", \"#52514e\", /\\b(however|little is known|remains? (unclear|unknown)|increasingly|has been|have been|is (a|an|the)|are (a|an)|growing)\\b/i]];\n  const etiqueta = (s) =&gt; { for (const [m, c, re] of reglas) if (re.test(s)) return [m, c]; return [\"Unclear\", \"#8a8a8a\"]; };\n  const esc = (s) =&gt; s.replace(/[&&lt;&gt;]/g, (c) =&gt; ({\"&\": \"&amp;\", \"&lt;\": \"&lt;\", \"&gt;\": \"&gt;\"}[c]));\n  const tags = frases.map((s) =&gt; [s, ...etiqueta(s), s.split(/\\s+/).length]);\n  const total = abstractTxt.trim() ? abstractTxt.trim().split(/\\s+/).length : 0;\n  const orden = [\"Introduction\", \"Purpose\", \"Method\", \"Product\", \"Conclusion\"];\n  const faltan = orden.filter((m) =&gt; !tags.some((t) =&gt; t[1] === m));\n  const d = html`&lt;div role=\"status\" aria-live=\"polite\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;ol class=\"list-unstyled\"&gt;${tags.map(([s, m, c, n]) =&gt; `&lt;li class=\"mb-1\"&gt;&lt;span class=\"badge\" style=\"background:${c};color:#fff;min-width:7.5em\"&gt;${m}&lt;/span&gt; ${esc(s)} ${n &gt; 30 ? `&lt;span class=\"small text-danger\"&gt;⚠ ${n} words: consider splitting&lt;/span&gt;` : \"\"}&lt;/li&gt;`).join(\"\")}&lt;/ol&gt;\n  &lt;p&gt;&lt;strong&gt;${total} words&lt;/strong&gt; ${total &gt; 250 ? \"· ⚠ over 250: most journals will ask you to cut it\" : total &lt; 100 ? \"· quite short: check that every move is there\" : \"· a typical length (100–250)\"}.&lt;/p&gt;\n  &lt;p&gt;${faltan.length ? `Moves not detected: &lt;strong&gt;${faltan.join(\", \")}&lt;/strong&gt;. Check whether they are missing or just phrased without the usual signals.` : \"All five moves detected. Check that they appear in a logical order.\"}&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Interactive lab</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#activity-order-the-moves",
+    "href": "94-laboratorio.html#activity-order-the-moves",
+    "title": "Appendix B — Interactive lab",
+    "section": "Activity: order the moves",
+    "text": "Activity: order the moves\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Interactive lab</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#watch-and-keep-learning",
+    "href": "94-laboratorio.html#watch-and-keep-learning",
+    "title": "Appendix B — Interactive lab",
+    "section": "Watch and keep learning",
+    "text": "Watch and keep learning\nThese are links, not embeds: the video opens on the provider’s site.\n\nWriting in the Sciences — Kristin Sainani · Stanford University (Coursera). A video course on clear scientific writing: cutting clutter, sentence and paragraph structure, the writing process and the parts of a manuscript. Free to audit.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Interactive lab</span>"
+    ]
+  },
+  {
     "objectID": "91-guia-docente.html",
     "href": "91-guia-docente.html",
-    "title": "Appendix B — Teacher’s guide",
+    "title": "Appendix C — Teacher’s guide",
     "section": "",
     "text": "Suggested assessment\nThe book can be used as the textbook of a doctoral workshop of about 18-24 hours (six sessions) on scientific English, or for self-study. It assumes an intermediate level of English (around B2) and focuses on research genres rather than general English.\nThe common rubric values structure and argument (25%), clarity and concision (25%), accuracy of language (20%), appropriate academic style (20%) and reflection (10%).",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Teacher's guide</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Teacher's guide</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#suggested-assessment",
     "href": "91-guia-docente.html#suggested-assessment",
-    "title": "Appendix B — Teacher’s guide",
+    "title": "Appendix C — Teacher’s guide",
     "section": "",
     "text": "Activity\nSuggested weight\n\n\n\n\nAssignments (choose 4 of 6)\n60%\n\n\nFinal task: abstract, cover letter and five-minute talk on the student’s own research\n30%\n\n\nSelf-assessments and participation\n10%",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Teacher's guide</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Teacher's guide</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#labs-and-activities",
     "href": "91-guia-docente.html#labs-and-activities",
-    "title": "Appendix B — Teacher’s guide",
+    "title": "Appendix C — Teacher’s guide",
     "section": "Labs and activities",
     "text": "Labs and activities\nLabs: readability checker, hedge and booster highlighter, and Spanglish detector. Scenario: a difficult reviewer. In the PDF and EPUB, the activities appear on paper with their solutions.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Teacher's guide</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Teacher's guide</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#recommendations",
     "href": "91-guia-docente.html#recommendations",
-    "title": "Appendix B — Teacher’s guide",
+    "title": "Appendix C — Teacher’s guide",
     "section": "Recommendations",
     "text": "Recommendations\n\nWork with the students’ own texts as early as possible.\nNormalise the difficulty: most researchers are non-native speakers (Amano et al., 2023), and clarity matters more than accent.\nDiscuss the responsible use of language tools and AI assistants, and the journals’ disclosure policies.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Teacher's guide</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Teacher's guide</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#moodle-and-slides",
     "href": "91-guia-docente.html#moodle-and-slides",
-    "title": "Appendix B — Teacher’s guide",
+    "title": "Appendix C — Teacher’s guide",
     "section": "Moodle and slides",
     "text": "Moodle and slides\nThe questions are exported to Moodle XML in moodle/. Slides for each chapter are in diapositivas/.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Teacher's guide</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Teacher's guide</span>"
     ]
   },
   {
     "objectID": "92-glosario.html",
     "href": "92-glosario.html",
-    "title": "Appendix C — Glossary",
+    "title": "Appendix D — Glossary",
     "section": "",
     "text": "The architecture of a research article\nTerms in the book, by chapter.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glossary</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#the-architecture-of-a-research-article",
     "href": "92-glosario.html#the-architecture-of-a-research-article",
-    "title": "Appendix C — Glossary",
+    "title": "Appendix D — Glossary",
     "section": "",
     "text": "IMRaD\nIntroduction, Methods, Results and Discussion: the standard structure of research articles. → Chapter 1\n\n\nRhetorical move\nA unit of text with a specific communicative purpose, such as showing a gap. → Chapter 1\n\n\nCARS model\nSwales’s Create a Research Space model of introductions: territory, niche, occupation. → Chapter 1\n\n\nResearch gap\nWhat is not yet known or resolved, which the study addresses. → Chapter 1\n\n\nStructured abstract\nAn abstract with labelled parts: background, methods, results and conclusions. → Chapter 1\n\n\nContext-content-conclusion\nScheme for papers, sections and paragraphs recommended by Mensh and Kording (2017). → Chapter 1",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glossary</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#clear-sentences",
     "href": "92-glosario.html#clear-sentences",
-    "title": "Appendix C — Glossary",
+    "title": "Appendix D — Glossary",
     "section": "Clear sentences",
     "text": "Clear sentences\n\nReadability\nHow easy a text is to read, often estimated with formulas such as Flesch Reading Ease. → Chapter 2\n\n\nTopic position\nThe beginning of a sentence, which should hold old, linking information. → Chapter 2\n\n\nStress position\nThe end of a sentence, which should hold new, important information. → Chapter 2\n\n\nNominalisation\nA verb or adjective turned into a noun (analyse → analysis), often making sentences heavier. → Chapter 2\n\n\nPassive voice\nConstruction in which the subject receives the action (samples were stored). → Chapter 2\n\n\nPlain language\nClear, direct writing that the intended reader can understand on first reading. → Chapter 2",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glossary</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#hedging-and-stance",
     "href": "92-glosario.html#hedging-and-stance",
-    "title": "Appendix C — Glossary",
+    "title": "Appendix D — Glossary",
     "section": "Hedging and stance",
     "text": "Hedging and stance\n\nHedge\nWord or phrase that softens a claim (may, suggest, possibly). → Chapter 3\n\n\nBooster\nWord or phrase that strengthens a claim (clearly, demonstrate). → Chapter 3\n\n\nStance\nThe writer’s attitude towards claims and sources. → Chapter 3\n\n\nOverclaiming\nStating more than the evidence supports, for example causal claims from correlations. → Chapter 3\n\n\nReporting verb\nVerb used to report sources (show, suggest, claim), which conveys stance. → Chapter 3",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glossary</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#common-errors",
     "href": "92-glosario.html#common-errors",
-    "title": "Appendix C — Glossary",
+    "title": "Appendix D — Glossary",
     "section": "Common errors",
     "text": "Common errors\n\nFalse friend\nWord that looks similar in two languages but has a different meaning. → Chapter 4\n\n\nUncountable noun\nNoun with no plural form (research, evidence, information). → Chapter 4\n\n\nAcademic Word List\nCoxhead’s list of 570 word families frequent across academic disciplines. → Chapter 4\n\n\nCollocation\nWords that habitually go together (conduct a study, draw a conclusion). → Chapter 4\n\n\nCalque\nLiteral translation of an expression from another language (make a research). → Chapter 4",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glossary</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#peer-review-and-correspondence",
     "href": "92-glosario.html#peer-review-and-correspondence",
-    "title": "Appendix C — Glossary",
+    "title": "Appendix D — Glossary",
     "section": "Peer review and correspondence",
     "text": "Peer review and correspondence\n\nCover letter\nShort letter to the editor that accompanies a submission. → Chapter 5\n\n\nResponse to reviewers\nDocument that answers each reviewer comment and explains the changes. → Chapter 5\n\n\nMajor and minor revision\nEditorial decisions asking for substantial or small changes before acceptance. → Chapter 5\n\n\nPoliteness strategies\nLinguistic choices that soften requests and criticism. → Chapter 5\n\n\nRebuttal\nReasoned disagreement with a reviewer’s comment, supported by evidence. → Chapter 5",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glossary</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#presenting-and-networking",
     "href": "92-glosario.html#presenting-and-networking",
-    "title": "Appendix C — Glossary",
+    "title": "Appendix D — Glossary",
     "section": "Presenting and networking",
     "text": "Presenting and networking\n\nSignposting\nPhrases that tell the audience where they are in a talk. → Chapter 6\n\n\nWord stress\nThe syllable pronounced with more force in a word (aNALysis). → Chapter 6\n\n\nElevator pitch\nA 30-second summary of who you are and what you research. → Chapter 6\n\n\nClarification request\nA phrase used to check you have understood a question. → Chapter 6\n\n\nLinguistic inequality\nThe extra costs that the dominance of English imposes on non-native speakers in science. → Chapter 6",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glossary</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
     ]
   }
 ]
