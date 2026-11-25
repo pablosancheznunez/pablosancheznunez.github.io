@@ -126,6 +126,28 @@
     ]
   },
   {
+    "objectID": "01-que-es.html#caso-práctico-resuelto",
+    "href": "01-que-es.html#caso-práctico-resuelto",
+    "title": "Capítulo 1. Qué es la ciencia de la ciencia",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaConvertir una inquietud en una pregunta de investigación sobre la investigación\n\n\n\nInquietud: «Me parece que en mi campo casi nadie comparte los datos».\n\nPregunta descriptiva: ¿qué proporción de artículos de mi campo publicados en 2024 incluye una declaración de disponibilidad de datos, y cuántos enlazan a un repositorio?\nDatos: una muestra aleatoria de 200 artículos de las revistas principales (lista y criterios fijados antes).\nCodificación propia: un libro de códigos con categorías (sin declaración, «a petición», repositorio enlazado, datos realmente accesibles).\nAnálisis: proporciones con intervalos de confianza; comparación por revista y por política editorial.\nPregunta causal posterior: ¿aumentó la disponibilidad después de que una revista adoptara una política obligatoria? (diferencias en diferencias, capítulo 12).",
+    "crumbs": [
+      "Parte I. Fundamentos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la ciencia de la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "01-que-es.html#ejercicios-graduados",
+    "href": "01-que-es.html#ejercicios-graduados",
+    "title": "Capítulo 1. Qué es la ciencia de la ciencia",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Convierte en pregunta investigable: «La revisión por pares no funciona».\n\nVer solución\nPor ejemplo: «¿Qué proporción de errores introducidos deliberadamente en un manuscrito detectan los revisores?» o «¿Coinciden los revisores de un mismo manuscrito en su recomendación?». Una pregunta investigable define qué se mide.\n\nAvanzado. Formula una pregunta descriptiva y otra causal sobre una práctica de tu campo y esboza los datos que necesitarías.\n\nVer solución\nLa descriptiva debe definir población, variable y fuente; la causal, la intervención, la comparación y un diseño posible (capítulo 12).",
+    "crumbs": [
+      "Parte I. Fundamentos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la ciencia de la ciencia</span>"
+    ]
+  },
+  {
     "objectID": "01-que-es.html#actividades",
     "href": "01-que-es.html#actividades",
     "title": "Capítulo 1. Qué es la ciencia de la ciencia",
@@ -258,6 +280,28 @@
     ]
   },
   {
+    "objectID": "02-medir.html#caso-práctico-resuelto",
+    "href": "02-medir.html#caso-práctico-resuelto",
+    "title": "Capítulo 2. Medir la ciencia",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNota¿Qué indicador uso para esta decisión?\n\n\n\nUna comisión debe repartir fondos internos entre tres departamentos (Historia, Química e Informática). Propuesta inicial: comparar el número total de citas. Problemas: las prácticas de citación difieren mucho por campo y el tamaño de los departamentos también.\nAlternativa responsable:\n\nIndicadores normalizados por campo (MNCS, PP(top 10 %)) y producción por persona.\nProducción no indexada en las bases internacionales (libros en Historia, conferencias en Informática).\nInformes cualitativos de cada departamento sobre su misión y sus resultados.\nUn panel que use los indicadores como apoyo, no como fórmula.",
+    "crumbs": [
+      "Parte I. Fundamentos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Medir la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "02-medir.html#ejercicios-graduados",
+    "href": "02-medir.html#ejercicios-graduados",
+    "title": "Capítulo 2. Medir la ciencia",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Por qué no es válido comparar el factor de impacto medio de las revistas de Historia y de Química?\n\nVer solución\nPorque las prácticas de publicación y citación son muy distintas entre campos, y el factor de impacto describe revistas, no la calidad de los trabajos de cada departamento.\n\nAvanzado. Diseña un pequeño cuadro de indicadores para evaluar un grupo de investigación de tu área y justifica cada indicador con el Manifiesto de Leiden.\n\nVer solución\nDebe combinar indicadores normalizados, información cualitativa y la misión del grupo, explicar los límites de cada indicador y permitir que el grupo verifique los datos.",
+    "crumbs": [
+      "Parte I. Fundamentos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Medir la ciencia</span>"
+    ]
+  },
+  {
     "objectID": "02-medir.html#actividades",
     "href": "02-medir.html#actividades",
     "title": "Capítulo 2. Medir la ciencia",
@@ -373,6 +417,28 @@
     "title": "Capítulo 3. La crisis de reproducibilidad",
     "section": "5. Calcular con R",
     "text": "5. Calcular con R\n\n\n\n\n\n\n\nEjercicio 3.1\nEn un campo exploratorio, solo 1 de cada 20 hipótesis probadas es verdadera (R = 1/19). Con potencia del 80 % y α = 0,05, ¿cuál es el VPP?\n\n\n\n\n\n\n\n\nLa potencia del 80 % se escribe 0.8.\n\n\nvpp(R = 1 / 19, potencia = 0.8)\n0,46: incluso con buena potencia, menos de la mitad de los resultados significativos serían verdaderos. En campos exploratorios, un único resultado significativo es una pista, no una conclusión.\n\n\n\n\nEjercicio 3.2: la maldición del ganador\nSimulamos 2000 estudios pequeños (20 personas por grupo) de un efecto real pequeño (d = 0,2) y nos quedamos con los significativos. Completa el código para calcular el tamaño del efecto medio de los estudios significativos.\n\n\n\n\n\n\n\n\nLa columna con el tamaño del efecto se llama d.\n\n\nsignificativos &lt;- estudios[estudios$p &lt; 0.05, ]\nnrow(significativos) / nrow(estudios)\nmean(significativos$d)\nSolo alrededor de uno de cada diez estudios sale significativo, y el efecto medio de esos estudios es varias veces mayor que el real (0,2): si solo se publican los significativos, la literatura exagera el efecto.",
+    "crumbs": [
+      "Parte I. Fundamentos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducibilidad.html#caso-práctico-resuelto",
+    "href": "03-reproducibilidad.html#caso-práctico-resuelto",
+    "title": "Capítulo 3. La crisis de reproducibilidad",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaIntentar reproducir un análisis publicado\n\n\n\nEscoges un artículo con datos y código abiertos. Procedimiento:\n\nDescargar datos y código del repositorio indicado.\nReconstruir el entorno (versiones de R o Python y paquetes, si se documentan).\nEjecutar el código sin modificarlo y anotar cada error.\nComparar cada cifra de las tablas y figuras principales con el artículo.\nClasificar el resultado: reproducible sin cambios, con cambios menores, con diferencias numéricas, no reproducible.\nInformar con cortesía a los autores de las diferencias encontradas.\n\nResultado típico: las cifras se reproducen tras resolver dependencias no documentadas, lo que demuestra la importancia de fijar el entorno (renv, uv, contenedores).",
+    "crumbs": [
+      "Parte I. Fundamentos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducibilidad.html#ejercicios-graduados",
+    "href": "03-reproducibilidad.html#ejercicios-graduados",
+    "title": "Capítulo 3. La crisis de reproducibilidad",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿En qué se diferencian reproducibilidad y replicabilidad?\n\nVer solución\nReproducibilidad: mismos datos y mismo análisis, mismos resultados. Replicabilidad: datos nuevos para responder la misma pregunta, resultados compatibles.\n\nAvanzado. Intenta reproducir un análisis publicado de tu campo con datos abiertos y documenta el proceso con la clasificación del caso.\n\nVer solución\nInforma del tiempo empleado, de los obstáculos (datos incompletos, código ausente, versiones) y de las cifras que coinciden y las que no.",
     "crumbs": [
       "Parte I. Fundamentos",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
@@ -511,6 +577,28 @@
     ]
   },
   {
+    "objectID": "04-practicas.html#caso-práctico-resuelto",
+    "href": "04-practicas.html#caso-práctico-resuelto",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDetectar el jardín de los senderos que se bifurcan en un análisis propio\n\n\n\nUn análisis de la relación entre sueño y rendimiento admite estas decisiones razonables:\n\nExcluir o no a quienes duermen menos de 4 horas (¿error de respuesta?).\nMedir el rendimiento con la nota media o con la nota del último semestre.\nControlar o no por horas de trabajo remunerado.\nUsar el sueño continuo o en categorías.\n\nHay 2 × 2 × 2 × 2 = 16 análisis posibles. Si se prueban varios y se informa solo del significativo, la tasa de falsos positivos aumenta mucho. Remedios: preregistrar las decisiones, informar de todas (análisis multiverso, capítulo 12) o separar claramente lo confirmatorio de lo exploratorio.",
+    "crumbs": [
+      "Parte I. Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
+    "objectID": "04-practicas.html#ejercicios-graduados",
+    "href": "04-practicas.html#ejercicios-graduados",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué práctica cuestionable es formular la hipótesis después de ver los resultados y presentarla como previa?\n\nVer solución\nHARKing (hypothesizing after the results are known).\n\nAvanzado. Enumera las decisiones analíticas abiertas en tu proyecto actual y calcula cuántos análisis posibles generan.\n\nVer solución\nMultiplica las opciones de cada decisión, indica cuáles fijarías en un preregistro y cuáles explorarías, informando de ello.",
+    "crumbs": [
+      "Parte I. Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
     "objectID": "04-practicas.html#actividades",
     "href": "04-practicas.html#actividades",
     "title": "Capítulo 4. Prácticas cuestionables y sesgos",
@@ -632,6 +720,28 @@
     ]
   },
   {
+    "objectID": "05-reformas.html#caso-práctico-resuelto",
+    "href": "05-reformas.html#caso-práctico-resuelto",
+    "title": "Capítulo 5. Ciencia abierta y reformas",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaPreparar un preregistro en OSF\n\n\n\nPara un estudio sobre el efecto de un taller de escritura en la productividad de doctorandos:\n\nHipótesis: quienes hagan el taller enviarán más manuscritos en seis meses.\nDiseño: asignación aleatoria entre los inscritos (taller ahora o en el semestre siguiente).\nVariables: manuscritos enviados (resultado principal), satisfacción (secundario).\nTamaño muestral con análisis de potencia y regla de parada.\nAnálisis principal exacto (modelo y covariables) y criterios de exclusión.\nAnálisis exploratorios declarados como tales.\n\nEl preregistro se fecha y se hace público (o embargado) antes de recoger los datos. Desviarse es legítimo si se declara y se justifica.",
+    "crumbs": [
+      "Parte I. Fundamentos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Ciencia abierta y reformas</span>"
+    ]
+  },
+  {
+    "objectID": "05-reformas.html#ejercicios-graduados",
+    "href": "05-reformas.html#ejercicios-graduados",
+    "title": "Capítulo 5. Ciencia abierta y reformas",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Prohíbe el preregistro hacer análisis no previstos?\n\nVer solución\nNo: permite hacerlos, pero exige declararlos como exploratorios y distinguirlos de los confirmatorios.\n\nAvanzado. Redacta un preregistro con la plantilla de OSF para un estudio que podrías hacer tú solo con datos existentes.\n\nVer solución\nCon datos existentes, hay que declarar qué se conoce ya de los datos y cómo se evita que ese conocimiento condicione el análisis (por ejemplo, separando una muestra de validación).",
+    "crumbs": [
+      "Parte I. Fundamentos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Ciencia abierta y reformas</span>"
+    ]
+  },
+  {
     "objectID": "05-reformas.html#actividades",
     "href": "05-reformas.html#actividades",
     "title": "Capítulo 5. Ciencia abierta y reformas",
@@ -736,6 +846,28 @@
     "title": "Capítulo 6. Evaluar la investigación",
     "section": "4. Evaluar no es solo medir: un caso",
     "text": "4. Evaluar no es solo medir: un caso\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Parte I. Fundamentos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Evaluar la investigación</span>"
+    ]
+  },
+  {
+    "objectID": "06-evaluacion.html#caso-práctico-resuelto",
+    "href": "06-evaluacion.html#caso-práctico-resuelto",
+    "title": "Capítulo 6. Evaluar la investigación",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaRedactar un CV narrativo a partir de un CV tradicional\n\n\n\nUn investigador pasa de una lista de 40 publicaciones a un CV narrativo de las convocatorias que siguen los principios de CoARA:\n\nContribución al conocimiento: tres resultados destacados, explicando su importancia y su papel en cada uno (con CRediT), no solo dónde se publicaron.\nDesarrollo de otras personas: dirección de tesis, mentoría, formación.\nContribución a la comunidad investigadora: revisión, edición, organización de congresos, ciencia abierta (datos y software publicados con DOI).\nContribución a la sociedad: transferencia, divulgación, asesoramiento.\n\nCada afirmación va acompañada de evidencias verificables (DOI, enlaces) y, si se usan indicadores, contextualizados por campo.",
+    "crumbs": [
+      "Parte I. Fundamentos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Evaluar la investigación</span>"
+    ]
+  },
+  {
+    "objectID": "06-evaluacion.html#ejercicios-graduados",
+    "href": "06-evaluacion.html#ejercicios-graduados",
+    "title": "Capítulo 6. Evaluar la investigación",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué diferencia principal hay entre un CV narrativo y uno tradicional?\n\nVer solución\nEl narrativo explica la contribución y su importancia con evidencias en varias dimensiones; el tradicional enumera resultados, sobre todo publicaciones.\n\nAvanzado. Convierte tu CV en un CV narrativo de dos páginas con las cuatro secciones del caso.\n\nVer solución\nCada sección debe incluir ejemplos concretos y verificables, explicar tu papel y evitar métricas sin contexto (como el factor de impacto de las revistas).",
     "crumbs": [
       "Parte I. Fundamentos",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Evaluar la investigación</span>"

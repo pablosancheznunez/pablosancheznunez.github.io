@@ -447,6 +447,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#compartir-datos-código-y-materiales" id="toc-compartir-datos-código-y-materiales" class="nav-link" data-scroll-target="#compartir-datos-código-y-materiales">3. Compartir datos, código y materiales</a></li>
   <li><a href="#funcionan-las-reformas" id="toc-funcionan-las-reformas" class="nav-link" data-scroll-target="#funcionan-las-reformas">4. ¿Funcionan las reformas?</a></li>
   <li><a href="#lab-c5-plan" id="toc-lab-c5-plan" class="nav-link" data-scroll-target="#lab-c5-plan">5. Laboratorio: ¿qué prácticas abiertas necesita tu estudio?</a></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-c5" id="toc-reto-c5" class="nav-link" data-scroll-target="#reto-c5">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -612,6 +614,44 @@ Figura&nbsp;1: Del estudio tradicional al informe registrado: la revisión y la 
 <section id="lab-c5-plan" class="level2">
 <h2 class="anchored" data-anchor-id="lab-c5-plan">5. Laboratorio: ¿qué prácticas abiertas necesita tu estudio?</h2>
 <div class="ia ia-escenario" id="ia-c5-plan"><script type="application/json" class="ia-datos">{"enunciado":"<p>Vas a empezar un estudio empírico de tu tesis.<\/p>","inicio":"c5p-inicio","nodos":{"c5p-confirmatorio":{"final":false,"opciones":[{"destino":"c5p-rr","texto":"Sí"},{"destino":"c5p-prereg","texto":"No o no lo sé"}],"texto":"<p>Tienes una hipótesis y un diseño. ¿Hay una revista de tu campo que\nacepte informes registrados?<\/p>","titulo":"Confirmatorio","valor":""},"c5p-exploratorio":{"final":true,"opciones":[],"texto":"<p>No hace falta un preregistro confirmatorio, pero sí transparencia:\npreséntalo como exploratorio, comparte los datos y el código, y\nconsidera reservar una parte de los datos para confirmar lo\nencontrado.<\/p>","titulo":"Exploratorio","valor":"bien"},"c5p-inicio":{"final":false,"opciones":[{"destino":"c5p-confirmatorio","texto":"Confirmatorio: pongo a prueba una hipótesis concreta"},{"destino":"c5p-exploratorio","texto":"Exploratorio: busco patrones sin hipótesis previa"},{"destino":"c5p-secundario","texto":"Análisis de datos secundarios que ya existen"}],"texto":"<p>¿Qué tipo de estudio es?<\/p>","titulo":"Tipo de estudio","valor":""},"c5p-prereg":{"final":true,"opciones":[],"texto":"<p>Preregistra hipótesis, muestra (con su justificación), variables y\nanálisis en OSF o AsPredicted. Declara en el artículo cualquier\ndesviación.<\/p>","titulo":"Preregistro","valor":"bien"},"c5p-rr":{"final":true,"opciones":[],"texto":"<p>Envía la fase 1 (introducción, métodos, plan de análisis y cálculo de\npotencia) antes de recoger datos. Comparte datos y código al\npublicar.<\/p>","titulo":"Informe registrado","valor":"bien"},"c5p-sec-no":{"final":true,"opciones":[],"texto":"<p>Existen plantillas de preregistro para datos secundarios: registra el\nplan antes de analizar y declara qué sabías de los datos.<\/p>","titulo":"Preregistro de datos secundarios","valor":"bien"},"c5p-sec-si":{"final":true,"opciones":[],"texto":"<p>Un preregistro tendría menos valor, pero aún puedes declarar qué\nanálisis decidiste antes y cuáles después, compartir el código y hacer\nanálisis de robustez o multiverso.<\/p>","titulo":"Ya los conoces","valor":"regular"},"c5p-secundario":{"final":false,"opciones":[{"destino":"c5p-sec-no","texto":"No todavía"},{"destino":"c5p-sec-si","texto":"Sí, ya los conozco"}],"texto":"<p>¿Has explorado ya los datos?<\/p>","titulo":"Datos secundarios","valor":""}},"tipo":"escenario","titulo":"Planifica tu estudio"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Preparar un preregistro en OSF
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para un estudio sobre el efecto de un taller de escritura en la productividad de doctorandos:</p>
+<ol type="1">
+<li><strong>Hipótesis:</strong> quienes hagan el taller enviarán más manuscritos en seis meses.</li>
+<li><strong>Diseño:</strong> asignación aleatoria entre los inscritos (taller ahora o en el semestre siguiente).</li>
+<li><strong>Variables:</strong> manuscritos enviados (resultado principal), satisfacción (secundario).</li>
+<li><strong>Tamaño muestral</strong> con análisis de potencia y regla de parada.</li>
+<li><strong>Análisis principal</strong> exacto (modelo y covariables) y criterios de exclusión.</li>
+<li><strong>Análisis exploratorios</strong> declarados como tales.</li>
+</ol>
+<p>El preregistro se fecha y se hace público (o embargado) antes de recoger los datos. Desviarse es legítimo si se declara y se justifica.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> ¿Prohíbe el preregistro hacer análisis no previstos?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>No: permite hacerlos, pero exige declararlos como exploratorios y distinguirlos de los confirmatorios.</p>
+</div>
+<p><strong>Avanzado.</strong> Redacta un preregistro con la plantilla de OSF para un estudio que podrías hacer tú solo con datos existentes.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Con datos existentes, hay que declarar qué se conoce ya de los datos y cómo se evita que ese conocimiento condicione el análisis (por ejemplo, separando una muestra de validación).</p>
+</div>
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>

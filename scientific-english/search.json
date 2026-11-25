@@ -86,6 +86,28 @@
     ]
   },
   {
+    "objectID": "01-structure.html#worked-example",
+    "href": "01-structure.html#worked-example",
+    "title": "Chapter 1. The architecture of a research article",
+    "section": "Worked example",
+    "text": "Worked example\n\n\n\n\n\n\nNoteFrom a vague abstract to a structured one\n\n\n\nBefore: “This paper studies doctoral supervision. Data were collected and analysed. Several interesting results were found, which are discussed in relation to the literature.”\nAfter: &gt; Background: About one in three doctoral students leave before completing. Aim: We examined whether supervision quality predicts completion better than funding. Methods: We followed 1,200 doctoral students at 14 Spanish universities for five years. Results: Students reporting high-quality supervision were half as likely to drop out (hazard ratio 0.51, 95% CI 0.40–0.65); funding had a smaller effect. Conclusions: Doctoral programmes should invest in supervisor training as well as funding.\nThe second version states the gap, the method, numbers and a conclusion a reader can act on.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1. The architecture of a research article</span>"
+    ]
+  },
+  {
+    "objectID": "01-structure.html#graded-exercises",
+    "href": "01-structure.html#graded-exercises",
+    "title": "Chapter 1. The architecture of a research article",
+    "section": "Graded exercises",
+    "text": "Graded exercises\nBasic. Which CARS move is missing from this introduction: “Open data is important. Here, we survey 500 researchers about their data-sharing practices.”?\n\nShow solution\nMove 2, establishing a niche: there is no gap or problem that justifies the survey (for example, “However, little is known about…”).\n\nAdvanced. Rewrite the abstract of one of your papers as a structured abstract of no more than 250 words, with numbers in the results.\n\nShow solution\nCheck that each part answers its question (why, what, how, what was found, so what) and that the results include effect sizes or key figures, not only directions.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1. The architecture of a research article</span>"
+    ]
+  },
+  {
     "objectID": "01-structure.html#activities",
     "href": "01-structure.html#activities",
     "title": "Chapter 1. The architecture of a research article",
@@ -185,6 +207,28 @@
     ]
   },
   {
+    "objectID": "02-clarity.html#worked-example",
+    "href": "02-clarity.html#worked-example",
+    "title": "Chapter 2. Clear sentences",
+    "section": "Worked example",
+    "text": "Worked example\n\n\n\n\n\n\nNoteEditing a paragraph step by step\n\n\n\nOriginal (52 words): “The implementation of an evaluation of the effectiveness of the mentoring programme was carried out by the research team, and it was found that there was a significant reduction in the level of anxiety of the participants due to the fact that they had access to regular meetings.”\n\nFind the real action: evaluate. Make it a verb with a subject: We evaluated…\nReplace wordy phrases: due to the fact that → because.\nTurn nominalisations into verbs: a reduction in the level of anxiety → anxiety fell.\nPut new information at the end: …because they met their mentors regularly.\n\nEdited (20 words): “We evaluated the mentoring programme and found that participants’ anxiety fell significantly, probably because they met their mentors regularly.”",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2. Clear sentences</span>"
+    ]
+  },
+  {
+    "objectID": "02-clarity.html#graded-exercises",
+    "href": "02-clarity.html#graded-exercises",
+    "title": "Chapter 2. Clear sentences",
+    "section": "Graded exercises",
+    "text": "Graded exercises\nBasic. Rewrite: “An increase in the number of citations was observed.”\n\nShow solution\n“Citations increased.” or, with an agent, “We observed that citations increased.”\n\nAdvanced. Edit a paragraph of your own writing with the four steps of the case and compare the readability scores before and after in the lab.\n\nShow solution\nReport the word count and the score before and after, and explain each change. Check that no technical precision was lost.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2. Clear sentences</span>"
+    ]
+  },
+  {
     "objectID": "02-clarity.html#activities",
     "href": "02-clarity.html#activities",
     "title": "Chapter 2. Clear sentences",
@@ -278,6 +322,28 @@
     "title": "Chapter 3. Hedging and stance",
     "section": "Lab: hedges and boosters",
     "text": "Lab: hedges and boosters\n\n\nLab · runs in your browser; your text does not leave it\n\n\narea = window.Lab.area\nviewof texto_h = area(\"Your text\", {rows: 6, submit: \"Analyse\", value: \"Our results clearly demonstrate that mentoring causes higher completion rates. This finding is undoubtedly important for doctoral programmes. However, the effect may differ across disciplines, and it is possible that more motivated students sought mentors.\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const hedges = [\"may\", \"might\", \"could\", \"possibly\", \"perhaps\", \"likely\", \"unlikely\", \"suggest\", \"suggests\", \"indicate\", \"indicates\", \"appear\", \"appears\", \"seem\", \"seems\", \"probably\", \"it is possible\", \"tend to\", \"to some extent\", \"approximately\", \"relatively\"];\n  const boosters = [\"clearly\", \"demonstrate\", \"demonstrates\", \"undoubtedly\", \"certainly\", \"prove\", \"proves\", \"obviously\", \"definitely\", \"always\", \"never\", \"it is well known\", \"establish\", \"establishes\", \"show that\", \"shows that\", \"causes\", \"cause\"];\n  const esc = s =&gt; s.replace(/&/g, \"&amp;\").replace(/&lt;/g, \"&lt;\");\n  let m = esc(texto_h || \"\"); let nh = 0, nb = 0;\n  const marca = (lista, estilo, cuenta) =&gt; { for (const w of lista.sort((a, b) =&gt; b.length - a.length)) { const re = new RegExp(`\\\\b(${w.replace(/ /g, \"\\\\s+\")})\\\\b`, \"gi\"); m = m.replace(re, x =&gt; { cuenta(); return `&lt;span style=\"${estilo}\"&gt;${x}&lt;/span&gt;`; }); } };\n  marca(hedges, \"background:#d6e6f8;color:#0b0b0b;padding:0 2px;border-radius:3px\", () =&gt; nh++);\n  marca(boosters, \"background:#f6dccf;color:#0b0b0b;padding:0 2px;border-radius:3px;font-weight:600\", () =&gt; nb++);\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p style=\"line-height:1.9\"&gt;${m}&lt;/p&gt;&lt;p class=\"small\"&gt;&lt;span style=\"background:#d6e6f8;color:#0b0b0b;padding:0 2px\"&gt;blue&lt;/span&gt; = hedge (${nh}) · &lt;span style=\"background:#f6dccf;color:#0b0b0b;padding:0 2px;font-weight:600\"&gt;orange&lt;/span&gt; = booster (${nb})&lt;/p&gt;\n   &lt;p class=\"${nb &gt; nh ? \"lab-medio\" : \"lab-bien\"}\" style=\"font-weight:600\"&gt;${nb &gt; nh ? \"More boosters than hedges: check that the evidence (design, sample, replication) supports such strong claims, especially any causal verbs.\" : \"The text is cautious. Check that it is not over-hedged: one hedge per claim is usually enough.\"}&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
+    ]
+  },
+  {
+    "objectID": "03-stance.html#worked-example",
+    "href": "03-stance.html#worked-example",
+    "title": "Chapter 3. Hedging and stance",
+    "section": "Worked example",
+    "text": "Worked example\n\n\n\n\n\n\nNoteCalibrating a discussion paragraph\n\n\n\nOriginal: “Our results prove that mentoring causes better completion rates and clearly demonstrate that all universities must implement mentoring programmes.”\nEvidence: one observational cohort study in one country.\nCalibrated: “Our results suggest that mentoring is associated with higher completion rates. Because the study was observational, we cannot rule out that more motivated students sought mentors. If confirmed in experimental studies, these findings would support investing in mentoring programmes.”\nChanges: prove → suggest; causes → is associated with; the alternative explanation is stated; the recommendation becomes conditional.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
+    ]
+  },
+  {
+    "objectID": "03-stance.html#graded-exercises",
+    "href": "03-stance.html#graded-exercises",
+    "title": "Chapter 3. Hedging and stance",
+    "section": "Graded exercises",
+    "text": "Graded exercises\nBasic. Replace the booster in: “This method undoubtedly outperforms all previous approaches.”\n\nShow solution\nFor example: “In our tests, this method outperformed the three approaches we compared it with.” It states the evidence instead of asserting certainty.\n\nAdvanced. Take the conclusions of a paper in your field and rewrite them so that each claim matches the strength of its evidence.\n\nShow solution\nIdentify the design of each piece of evidence (experimental, observational, replicated) and choose verbs accordingly; add limitations where the evidence is indirect.",
     "crumbs": [
       "Chapters",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
@@ -394,6 +460,28 @@
     ]
   },
   {
+    "objectID": "04-errors.html#worked-example",
+    "href": "04-errors.html#worked-example",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "Worked example",
+    "text": "Worked example\n\n\n\n\n\n\nNoteCorrecting a paragraph by a Spanish speaker\n\n\n\nOriginal: “Actually, the researches about this topic are scarce. In this work we have realised an study with 1.250 students, which consisted in a survey. The informations obtained depend of the faculty.”\nCorrected: “Research on this topic is currently scarce. In this study, we conducted a survey of 1,250 students. The information obtained depends on the faculty.”\nErrors fixed: actually (false friend) → currently; researches (uncountable) → research; realised (false friend) → conducted; an study → a study; 1.250 → 1,250; consisted in → (restructured); informations → information; depend of → depends on.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
+    "objectID": "04-errors.html#graded-exercises",
+    "href": "04-errors.html#graded-exercises",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "Graded exercises",
+    "text": "Graded exercises\nBasic. Correct: “The equipments were sensible to the temperature.”\n\nShow solution\n“The equipment was sensitive to temperature.” (equipment is uncountable; sensible → sensitive).\n\nAdvanced. Build your personal list of ten frequent errors from your own texts, with the correction and an example sentence for each.\n\nShow solution\nClassify them (false friends, uncountables, prepositions, articles, punctuation) and review the list before submitting any text in English.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
     "objectID": "04-errors.html#activities",
     "href": "04-errors.html#activities",
     "title": "Chapter 4. Common errors and false friends",
@@ -487,6 +575,28 @@
     "title": "Chapter 5. Peer review and correspondence",
     "section": "4. Academic emails",
     "text": "4. Academic emails\nShort, with a clear subject line and the request in the first two sentences. Formal openings (Dear Professor García,), a polite request (Would you be able to…? I would be grateful if…) and a closing (Best regards, / Kind regards,). Avoid Spanish calques such as I write you to… (→ I am writing to…) and Waiting for your answer (→ I look forward to hearing from you).",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
+    ]
+  },
+  {
+    "objectID": "05-review.html#worked-example",
+    "href": "05-review.html#worked-example",
+    "title": "Chapter 5. Peer review and correspondence",
+    "section": "Worked example",
+    "text": "Worked example\n\n\n\n\n\n\nNoteAnswering three reviewer comments\n\n\n\nComment 1: “The sample is not representative.” → We agree that the sample is not representative of all doctoral students. We now describe its composition in detail (p. 6) and have restricted our conclusions to public universities (p. 18).\nComment 2: “Please add a reference to Smith (2019).” → We thank the reviewer. We have added this reference and discuss how our results compare (p. 15, lines 320-326).\nComment 3: “The authors should use a multilevel model.” → We agree that the data are nested. We have re-run the analysis with a multilevel model (students within universities). The results are very similar (Table S3), and we report them in the supplement.\nEach response: thanks or acknowledgement, what was done, where.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
+    ]
+  },
+  {
+    "objectID": "05-review.html#graded-exercises",
+    "href": "05-review.html#graded-exercises",
+    "title": "Chapter 5. Peer review and correspondence",
+    "section": "Graded exercises",
+    "text": "Graded exercises\nBasic. Rewrite politely: “We do not agree with this comment because it is wrong.”\n\nShow solution\n“We respectfully disagree with this point, because (give your evidence). We have nevertheless clarified the text to avoid this interpretation (p. 9).”\n\nAdvanced. Write a complete response letter to the reviews of one of your papers (or to an invented set of five comments).\n\nShow solution\nFollow Noble (2017): overview, every comment quoted, polite responses, changes with page and line numbers, and reasoned disagreement where appropriate.",
     "crumbs": [
       "Chapters",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
@@ -597,6 +707,28 @@
     "title": "Chapter 6. Presenting and networking",
     "section": "5. Networking",
     "text": "5. Networking\nPrepare a 30-second elevator pitch: who you are, what you study and why it matters, in plain words. Ask questions about the other person’s work, follow up by email within a week, and remember that coffee breaks are where many collaborations start.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html#worked-example",
+    "href": "06-presenting.html#worked-example",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "Worked example",
+    "text": "Worked example\n\n\n\n\n\n\nNoteScript and signposting for a five-minute talk\n\n\n\nOpening: “Imagine starting a PhD with 1,200 other students. Five years later, one in three has left. Today I’d like to show you why.”\nOutline: “First, I’ll explain how we followed these students. Then I’ll show what predicted who stayed. Finally, I’ll suggest what programmes can do.”\nTransitions: “So that’s how we collected the data. Let’s move on to what we found.” / “This brings me to the main result.”\nConclusion: “To sum up: supervision matters more than money. The main take-home message is that programmes should train supervisors.”\nQuestions: “Thank you. I’d be happy to take any questions.”",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html#graded-exercises",
+    "href": "06-presenting.html#graded-exercises",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "Graded exercises",
+    "text": "Graded exercises\nBasic. Choose the right phrase to move from methods to results.\n\nShow solution\nFor example: “Let’s move on to the results.” or “So what did we find?”\n\nAdvanced. Write the full signposted script of a five-minute talk on your research, mark the stressed syllables of ten key words and record yourself.\n\nShow solution\nCheck that every section has an explicit transition, that the main message is stated at the start and at the end, and compare the recording with the script for stress and pace.",
     "crumbs": [
       "Chapters",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
