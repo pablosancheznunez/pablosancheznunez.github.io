@@ -812,146 +812,190 @@
     ]
   },
   {
+    "objectID": "94-laboratorio.html",
+    "href": "94-laboratorio.html",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "",
+    "text": "Laboratorio: títulos que afirman\nEste apéndice reúne un laboratorio y un escenario ramificado para practicar en tu navegador.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#lab-titulos",
+    "href": "94-laboratorio.html#lab-titulos",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "",
+    "text": "Laboratorio · se ejecuta en tu navegador\n\nEn el enfoque afirmación-evidencia (Alley), cada diapositiva tiene como título una frase completa que dice la conclusión, y el cuerpo muestra la evidencia visual. Escribe un título y el laboratorio lo revisa.\n\ntextoR = window.Lab.texto\nviewof tituloDiapo = textoR(\"Título de tu diapositiva\", {value: \"Resultados\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const t = tituloDiapo.trim(), palabras = t.split(/\\s+/).filter(Boolean), n = palabras.length;\n  const generico = /^(introducción|resultados|metodología|método|métodos|conclusiones?|discusión|objetivos?|contexto|antecedentes|datos|análisis|agradecimientos)$/i.test(t.replace(/[.:]$/, \"\"));\n  const verbo = palabras.some((w) =&gt; { const x = w.toLowerCase().replace(/[^a-záéíóúüñ]/g, \"\"); return [\"es\", \"son\", \"fue\", \"fueron\", \"hay\", \"está\", \"están\", \"puede\", \"pueden\", \"reduce\", \"reducen\", \"aumenta\", \"aumentan\", \"mejora\", \"mejoran\", \"duplica\", \"triplica\", \"multiplica\", \"explica\", \"predice\", \"muestra\", \"muestran\", \"demuestra\", \"permite\", \"indica\", \"sugiere\", \"supera\", \"crece\", \"cae\", \"disminuye\", \"depende\", \"cambia\", \"funciona\", \"falla\", \"afecta\", \"baja\", \"sube\", \"tarda\", \"cuesta\", \"necesita\", \"requiere\", \"evita\", \"acelera\", \"frena\", \"mantiene\", \"genera\"].includes(x) || (x.length &gt; 4 && /(aron|ieron|aban|ían|ará|erá|irá|arán|erán|irán)$/.test(x)); });\n  const cifra = /\\d/.test(t);\n  const checks = [\n    [!generico, \"No es una etiqueta genérica («Resultados», «Metodología»…).\"],\n    [n &gt;= 6, \"Tiene al menos 6 palabras: es una frase, no un tema.\"],\n    [n &lt;= 20, \"No pasa de 20 palabras (cabe en dos líneas).\"],\n    [verbo, \"Contiene un verbo que afirma algo.\"],\n    [cifra, \"Incluye una cifra o un dato concreto (recomendable, no obligatorio).\"]];\n  const nota = checks.slice(0, 4).filter((c) =&gt; c[0]).length;\n  const d = html`&lt;div role=\"status\" aria-live=\"polite\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;div class=\"p-3 border rounded mb-2\" style=\"aspect-ratio:16/9;max-width:480px;display:flex;flex-direction:column\"&gt;&lt;div style=\"font-size:1.25rem;font-weight:600;line-height:1.25\"&gt;${t.replace(/[&&lt;&gt;]/g, \"\") || \"(sin título)\"}&lt;/div&gt;&lt;div class=\"mt-auto small text-body-secondary\"&gt;[evidencia visual: gráfico, imagen o esquema]&lt;/div&gt;&lt;/div&gt;\n  &lt;ul class=\"list-unstyled\"&gt;${checks.map(([ok, txt], i) =&gt; `&lt;li&gt;${ok ? \"✓\" : i === 4 ? \"○\" : \"✗\"} ${txt}&lt;/li&gt;`).join(\"\")}&lt;/ul&gt;\n  &lt;p&gt;${nota === 4 ? \"Buen título-afirmación: el público sabe qué debe recordar aunque no lea nada más.\" : \"Prueba a reescribirlo como la conclusión de la diapositiva. Por ejemplo: «La tutoría entre iguales reduce el abandono del 18 % al 9 %».\"}&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#escenario-el-turno-de-preguntas",
+    "href": "94-laboratorio.html#escenario-el-turno-de-preguntas",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "Escenario: el turno de preguntas",
+    "text": "Escenario: el turno de preguntas\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#para-ver-y-seguir-aprendiendo",
+    "href": "94-laboratorio.html#para-ver-y-seguir-aprendiendo",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "Para ver y seguir aprendiendo",
+    "text": "Para ver y seguir aprendiendo\nSon enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.\n\nThe secret structure of great talks — Nancy Duarte · TEDxEast. Unos 18 minutos sobre la estructura «lo que es / lo que podría ser» de los grandes discursos, con transcripción.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
     "objectID": "91-guia-docente.html",
     "href": "91-guia-docente.html",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "",
     "text": "Propuesta de evaluación\nEl libro sirve como manual de un taller de doctorado de unas 20-24 horas (seis sesiones) sobre comunicación oral y escrita de la investigación, o como lectura autónoma. Cada capítulo combina una lectura obligatoria, práctica individual y un reto que se presenta en la sesión siguiente.\nLa rúbrica común valora la estructura y el argumento (25 %), el uso de la evidencia (20 %), la adaptación al público (20 %), la expresión oral o escrita (25 %) y la reflexión y la mejora entre versiones (10 %).",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#propuesta-de-evaluación",
     "href": "91-guia-docente.html#propuesta-de-evaluación",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "",
     "text": "Actividad\nPeso orientativo\n\n\n\n\nTesis en tres minutos (reto 5), presentada en directo\n30 %\n\n\nOtros retos evaluables (elegir 3 de 5)\n45 %\n\n\nRetroalimentación por pares a las charlas de los compañeros\n15 %\n\n\nAutoevaluaciones y participación\n10 %",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
     "href": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Actividades interactivas y laboratorios",
     "text": "Actividades interactivas y laboratorios\nLaboratorios sin programar: análisis de ethos, pathos y logos de un texto, constructor de argumentos de Toulmin, mensaje en estructura ABT, medidor de guiones (duración, frases largas y legibilidad de Fernández Huerta) y cronómetro de ensayo. Escenarios de decisión: pregunta difícil en un congreso. En el PDF y el EPUB, las actividades aparecen en papel con su solución.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#sesiones-de-práctica-oral",
     "href": "91-guia-docente.html#sesiones-de-práctica-oral",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Sesiones de práctica oral",
     "text": "Sesiones de práctica oral\nSe recomienda grabar las charlas (con consentimiento) y usar la retroalimentación en dos pasos: primero lo que funcionó, después una o dos mejoras concretas. La ansiedad al hablar en público es frecuente: conviene normalizarla, practicar en grupos pequeños antes que ante toda la clase y conocer los servicios de apoyo psicológico de la universidad.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#autoevaluación-en-aula-global-y-diapositivas",
     "href": "91-guia-docente.html#autoevaluación-en-aula-global-y-diapositivas",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Autoevaluación en Aula Global y diapositivas",
     "text": "Autoevaluación en Aula Global y diapositivas\nLas preguntas están exportadas a Moodle XML en moodle/. Las diapositivas de cada capítulo están en diapositivas/.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#mantenimiento",
     "href": "91-guia-docente.html#mantenimiento",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Mantenimiento",
     "text": "Mantenimiento\npython3 herramientas/preparar.py\npython3 herramientas/moodle.py\npython3 herramientas/figuras.py\npython3 herramientas/pdf.py\nquarto render\npython3 herramientas/diapositivas.py",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "92-glosario.html",
     "href": "92-glosario.html",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "",
     "text": "La retórica clásica hoy\nTérminos del libro ordenados por capítulo.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#la-retórica-clásica-hoy",
     "href": "92-glosario.html#la-retórica-clásica-hoy",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "",
     "text": "Retórica\nFacultad de ver, en cada caso, los medios de persuasión disponibles (Aristóteles). → Capítulo 1\n\n\nEthos\nPersuasión basada en la credibilidad y el carácter de quien habla. → Capítulo 1\n\n\nPathos\nPersuasión basada en las emociones y los valores del auditorio. → Capítulo 1\n\n\nLogos\nPersuasión basada en la razón: datos, pruebas y argumentos. → Capítulo 1\n\n\nKairós\nEl momento oportuno: qué decir, cuándo y en qué medida. → Capítulo 1\n\n\nCánones de la retórica\nInventio, dispositio, elocutio, memoria y actio: las cinco tareas de preparar un discurso. → Capítulo 1\n\n\nAuditorio\nPersonas a las que se dirige un discurso y cuya aceptación se busca. → Capítulo 1",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#argumentar",
     "href": "92-glosario.html#argumentar",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Argumentar",
     "text": "Argumentar\n\nArgumento\nConjunto de razones que apoyan una afirmación. → Capítulo 2\n\n\nModelo de Toulmin\nAnálisis de los argumentos en afirmación, datos, garantía, respaldo, cualificador y refutación. → Capítulo 2\n\n\nGarantía\nPrincipio que explica por qué los datos apoyan la afirmación. → Capítulo 2\n\n\nCualificador\nExpresión de la fuerza con que se afirma algo («probablemente»). → Capítulo 2\n\n\nRefutación\nCondiciones en las que la afirmación no se cumpliría. → Capítulo 2\n\n\nFalacia\nArgumento que parece válido sin serlo. → Capítulo 2\n\n\nTeoría argumentativa del razonamiento\nPropuesta de que razonamos sobre todo para producir y evaluar argumentos ante otros (Mercier y Sperber). → Capítulo 2",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#persuadir",
     "href": "92-glosario.html#persuadir",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Persuadir",
     "text": "Persuadir\n\nModelo de probabilidad de elaboración\nModelo de la persuasión con dos rutas según la motivación y la capacidad de pensar en el mensaje. → Capítulo 3\n\n\nRuta central y periférica\nCentral: se evalúan los argumentos. Periférica: se responde a señales superficiales. → Capítulo 3\n\n\nNarrativa\nRelato con personajes, secuencia causal y desenlace. → Capítulo 3\n\n\nEstructura ABT\n«Y, pero, por tanto»: contexto, tensión y resolución. → Capítulo 3\n\n\nEncuadre\nForma de presentar una información que activa unas interpretaciones y no otras. → Capítulo 3",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#presentaciones",
     "href": "92-glosario.html#presentaciones",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Presentaciones",
     "text": "Presentaciones\n\nCarga cognitiva\nDemanda que impone una tarea sobre la memoria de trabajo, que es limitada. → Capítulo 4\n\n\nAfirmación-evidencia\nDiseño de diapositivas con un título que afirma y una prueba visual que lo sostiene. → Capítulo 4\n\n\nTítulo afirmación\nTítulo de diapositiva que es una frase con la conclusión, no un tema. → Capítulo 4\n\n\nPrincipio de redundancia\nLeer y oír a la vez el mismo texto dificulta la comprensión. → Capítulo 4\n\n\nMensaje principal\nIdea que el público debe recordar al terminar, escrita en una frase. → Capítulo 4",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#oratoria",
     "href": "92-glosario.html#oratoria",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Oratoria",
     "text": "Oratoria\n\nActio\nPresentación del discurso con la voz y el cuerpo. → Capítulo 5\n\n\nRitmo del habla\nVelocidad del discurso, en palabras por minuto, y sus variaciones. → Capítulo 5\n\n\nPausa\nSilencio intencionado para separar ideas, destacar o dejar pensar. → Capítulo 5\n\n\nAnsiedad al hablar en público\nReacción fisiológica, cognitiva y conductual ante hablar en público. → Capítulo 5\n\n\nExposición gradual\nPráctica repetida en situaciones de dificultad creciente. → Capítulo 5\n\n\nLegibilidad\nFacilidad de lectura de un texto; en español se estima, por ejemplo, con el índice de Fernández Huerta. → Capítulo 5",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#públicos",
     "href": "92-glosario.html#públicos",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Públicos",
     "text": "Públicos\n\nTurno de preguntas\nParte de una charla en la que el público pregunta; se prepara como la charla. → Capítulo 6\n\n\nModelo de déficit\nIdea de que el público discrepa de la ciencia solo por falta de información. → Capítulo 6\n\n\nComunicación bidireccional\nComunicación en la que se escucha al público y se dialoga con él. → Capítulo 6\n\n\nMensaje clave\nCada una de las pocas ideas preparadas para una entrevista o una pieza divulgativa. → Capítulo 6\n\n\nIncertidumbre comunicada\nExplicación de qué se sabe, qué no y qué cambiaría la conclusión. → Capítulo 6",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   }
 ]
