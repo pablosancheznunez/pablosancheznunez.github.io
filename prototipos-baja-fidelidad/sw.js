@@ -5,11 +5,11 @@
    - webR, paquetes, estilos, figuras y datos: primero la copia; si no está,
      la red, y se guarda.
    Cambia VERSION en cada versión publicada para renovar la caché. */
-const VERSION = "1.2.0";
+const VERSION = "1.3.0";
 const CACHE = "prototipos-baja-fidelidad-" + VERSION;
 const BASE = new URL("./", self.location).pathname;
 
-const PAGINAS = ["", "index.html", "00-r-en-el-libro.html", "01-fundamentos.html", "02-investigacion.html", "03-problema.html", "04-metricas.html", "05-flujos.html", "06-storyboards.html", "07-wireframes.html", "08-estados.html", "09-prototipos-papel.html", "10-sesgos.html", "11-atencion.html", "12-inclusivo.html", "90-uxlearn.html", "91-guia-docente.html", "92-glosario.html", "search.json"];
+const PAGINAS = ["", "index.html", "00-r-en-el-libro.html", "01-fundamentos.html", "02-investigacion.html", "03-problema.html", "04-metricas.html", "05-flujos.html", "06-storyboards.html", "07-wireframes.html", "08-estados.html", "09-prototipos-papel.html", "10-sesgos.html", "11-atencion.html", "12-inclusivo.html", "93-galeria.html", "90-uxlearn.html", "91-guia-docente.html", "92-glosario.html", "search.json"];
 
 self.addEventListener("install", (evento) => {
   evento.waitUntil(

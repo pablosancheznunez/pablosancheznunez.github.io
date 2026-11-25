@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Apéndice A — Galería interactiva de esquemas – Esquemas de página y prototipos de baja fidelidad</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./90-uxlearn.html" rel="next">
+<link href="./12-inclusivo.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script src="laboratorio.js"></script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="fuentes/fuentes.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./93-galeria.html">Apéndices</a></li><li class="breadcrumb-item"><a href="./93-galeria.html"><span class="chapter-title">Galería interactiva de esquemas</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Esquemas de página y prototipos de baja fidelidad</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/prototipos-baja-fidelidad.pdf">
+            Libro en PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/prototipos-baja-fidelidad.epub">
+            Libro en EPUB (lectores de libros electrónicos)
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-r-en-el-libro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Usar R en este libro</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Temas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-fundamentos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 1. Fundamentos del prototipado de baja fidelidad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-investigacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 2. La investigación como base del concepto creativo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-problema.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 3. Definir el problema de diseño</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-metricas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 4. Hitos, objetivos y métricas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-flujos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 5. Flujos de usuario: modelado y representación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-storyboards.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 6. <em>Storyboards</em> en el diseño de interacción</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-wireframes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 7. Esquemas de página en papel y en pantalla</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-estados.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 8. Estados y transiciones en los esquemas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-prototipos-papel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 9. Prototipos en papel: técnicas y validación temprana</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-sesgos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 10. Sesgos cognitivos y patrones engañosos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-atencion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 11. Economía de la atención y bienestar digital</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-inclusivo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 12. Diseño equitativo, inclusivo y accesible</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./93-galeria.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Galería interactiva de esquemas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./91-guia-docente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Guía para el profesorado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./92-glosario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glosario</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#las-pantallas-una-a-una" id="toc-las-pantallas-una-a-una" class="nav-link active" data-scroll-target="#las-pantallas-una-a-una">Las pantallas, una a una</a></li>
+  <li><a href="#el-flujo-completo" id="toc-el-flujo-completo" class="nav-link" data-scroll-target="#el-flujo-completo">El flujo completo</a></li>
+  <li><a href="#antes-y-después" id="toc-antes-y-después" class="nav-link" data-scroll-target="#antes-y-después">Antes y después</a></li>
+  <li><a href="#actividad-encuentra-los-problemas" id="toc-actividad-encuentra-los-problemas" class="nav-link" data-scroll-target="#actividad-encuentra-los-problemas">Actividad: encuentra los problemas</a></li>
+  <li><a href="#lab-galeria-constructor" id="toc-lab-galeria-constructor" class="nav-link" data-scroll-target="#lab-galeria-constructor">Laboratorio: constructor de esquemas</a></li>
+  <li><a href="#lab-galeria-prototipo" id="toc-lab-galeria-prototipo" class="nav-link" data-scroll-target="#lab-galeria-prototipo">Laboratorio: prototipo navegable</a></li>
+  <li><a href="#para-tu-proyecto" id="toc-para-tu-proyecto" class="nav-link" data-scroll-target="#para-tu-proyecto">Para tu proyecto</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./93-galeria.html">Apéndices</a></li><li class="breadcrumb-item"><a href="./93-galeria.html"><span class="chapter-title">Galería interactiva de esquemas</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-galeria" class="quarto-section-identifier">Apéndice A — Galería interactiva de esquemas</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Esta galería reúne los esquemas completos de <strong>ReservaSala</strong>, la app para reservar salas de estudio que sirve de ejemplo en los casos prácticos de todos los temas. Úsala como referencia de patrones, como material para criticar y como punto de partida para tus propios esquemas. Todos los esquemas son SVG: puedes descargarlos y editarlos con cualquier herramienta de diseño.</p>
+<section id="las-pantallas-una-a-una" class="level2">
+<h2 class="anchored" data-anchor-id="las-pantallas-una-a-una">Las pantallas, una a una</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">Inicio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Lista</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Detalle</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Formulario</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Confirmación</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">Estado vacío</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="fig-g-inicio" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Esquema móvil de la pantalla de inicio de ReservaSala: saludo, tarjeta con la próxima reserva y enlaces para cancelar o cómo llegar, botones de franja (Ahora, Esta tarde, Mañana, Elegir), lista de tres salas libres con enlace Reservar y barra de navegación inferior.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-g-inicio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/g_inicio.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Pantalla de inicio: la próxima reserva arriba, la elección rápida de franja y las salas libres ahora."><img src="figuras/g_inicio.svg" class="img-fluid figure-img" alt="Esquema móvil de la pantalla de inicio de ReservaSala: saludo, tarjeta con la próxima reserva y enlaces para cancelar o cómo llegar, botones de franja (Ahora, Esta tarde, Mañana, Elegir), lista de tres salas libres con enlace Reservar y barra de navegación inferior." width="320"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-g-inicio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Pantalla de inicio: la próxima reserva arriba, la elección rápida de franja y las salas libres ahora.
+</figcaption>
+</figure>
+</div>
+<p><strong>Decisiones de diseño</strong></p>
+<ul>
+<li>Lo más urgente primero: la <strong>próxima reserva</strong> (con cancelación a un toque).</li>
+<li>La pregunta de la investigación («¿cuándo quieres estudiar?») se convierte en <strong>botones de franja</strong> grandes.</li>
+<li>Resultados inmediatos sin pantalla intermedia: tres salas libres <strong>ahora</strong>.</li>
+<li>Navegación inferior con cuatro destinos, al alcance del pulgar.</li>
+</ul>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="fig-g-lista" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Esquema móvil de la lista de salas: tres filtros desplegables (franja, personas, silencio), un texto con el número de salas disponibles y seis filas con nombre de sala, capacidad, planta y una pequeña barra de disponibilidad horaria.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-g-lista-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/g_lista.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Lista de salas con filtros en forma de chips y una barra de disponibilidad compacta en cada fila."><img src="figuras/g_lista.svg" class="img-fluid figure-img" alt="Esquema móvil de la lista de salas: tres filtros desplegables (franja, personas, silencio), un texto con el número de salas disponibles y seis filas con nombre de sala, capacidad, planta y una pequeña barra de disponibilidad horaria." width="320"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-g-lista-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Lista de salas con filtros en forma de chips y una barra de disponibilidad compacta en cada fila.
+</figcaption>
+</figure>
+</div>
+<p><strong>Decisiones de diseño</strong></p>
+<ul>
+<li><strong>Filtros visibles</strong> como <em>chips</em>: se ve qué está filtrado sin abrir un panel.</li>
+<li>El recuento («12 salas disponibles») confirma que el filtro ha funcionado.</li>
+<li>La <strong>barra horaria</strong> de cada fila permite comparar sin entrar en el detalle.</li>
+<li>Orden explícito («por cercanía»): el usuario sabe por qué ve ese orden.</li>
+</ul>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div id="fig-g-detalle" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Esquema móvil del detalle de la sala 2.14: marcador de foto, nombre completo, ubicación, etiquetas de capacidad, pizarra y enchufes, barra de disponibilidad de 9 a 21 horas con leyenda Libre y Ocupada, líneas de texto descriptivo y botón Reservar de 16:00 a 18:00.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-g-detalle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/g_detalle.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;3: Detalle de una sala: foto, características y disponibilidad del día con la acción principal fija abajo."><img src="figuras/g_detalle.svg" class="img-fluid figure-img" alt="Esquema móvil del detalle de la sala 2.14: marcador de foto, nombre completo, ubicación, etiquetas de capacidad, pizarra y enchufes, barra de disponibilidad de 9 a 21 horas con leyenda Libre y Ocupada, líneas de texto descriptivo y botón Reservar de 16:00 a 18:00." width="320"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-g-detalle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Detalle de una sala: foto, características y disponibilidad del día con la acción principal fija abajo.
+</figcaption>
+</figure>
+</div>
+<p><strong>Decisiones de diseño</strong></p>
+<ul>
+<li>La <strong>disponibilidad</strong> es el elemento central: es lo que decide la reserva.</li>
+<li>La leyenda no depende solo del color: dice «Libre» y «Ocupada».</li>
+<li>El botón concreta la acción («Reservar 16:00–18:00»), no solo «Reservar».</li>
+</ul>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div id="fig-g-formulario" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Esquema móvil del formulario Confirmar reserva: resumen de sala y hora, campos etiquetados de número de personas, motivo opcional e invitar a compañeros, casilla Recordarme 30 minutos antes, aviso de que la sala se libera si no se confirma la llegada en 15 minutos, botón Confirmar reserva y botón Volver.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-g-formulario-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/g_formulario.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figura&nbsp;4: Confirmación de la reserva con tres campos etiquetados, una casilla de recordatorio y la regla de liberación explicada antes de confirmar."><img src="figuras/g_formulario.svg" class="img-fluid figure-img" alt="Esquema móvil del formulario Confirmar reserva: resumen de sala y hora, campos etiquetados de número de personas, motivo opcional e invitar a compañeros, casilla Recordarme 30 minutos antes, aviso de que la sala se libera si no se confirma la llegada en 15 minutos, botón Confirmar reserva y botón Volver." width="320"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-g-formulario-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Confirmación de la reserva con tres campos etiquetados, una casilla de recordatorio y la regla de liberación explicada antes de confirmar.
+</figcaption>
+</figure>
+</div>
+<p><strong>Decisiones de diseño</strong></p>
+<ul>
+<li><strong>Etiquetas visibles</strong> encima de cada campo; el marcador de posición solo da un ejemplo.</li>
+<li>Se indica qué es <strong>opcional</strong>, no qué es obligatorio (la mayoría lo es).</li>
+<li>Las reglas («se libera en 15 minutos») se explican <strong>antes</strong> de confirmar, no después.</li>
+<li>Jerarquía clara: una acción principal y una secundaria.</li>
+</ul>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div id="fig-g-confirmacion" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Esquema móvil de Reserva confirmada: icono de verificación, mensaje Sala reservada y aviso de correo enviado, tarjeta con sala, hora, personas y código 7F3K, botones Añadir al calendario y Cancelar reserva, y enlace Volver al inicio.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-g-confirmacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/g_confirmacion.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figura&nbsp;5: Pantalla de éxito con el resumen de la reserva, el código y las acciones siguientes."><img src="figuras/g_confirmacion.svg" class="img-fluid figure-img" alt="Esquema móvil de Reserva confirmada: icono de verificación, mensaje Sala reservada y aviso de correo enviado, tarjeta con sala, hora, personas y código 7F3K, botones Añadir al calendario y Cancelar reserva, y enlace Volver al inicio." width="320"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-g-confirmacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5: Pantalla de éxito con el resumen de la reserva, el código y las acciones siguientes.
+</figcaption>
+</figure>
+</div>
+<p><strong>Decisiones de diseño</strong></p>
+<ul>
+<li>Mensaje de éxito inequívoco y <strong>resumen</strong> para comprobar los datos.</li>
+<li>Las <strong>acciones siguientes</strong> más probables (calendario, cancelar).</li>
+<li>El código de reserva es corto y legible para dictarlo en el mostrador.</li>
+</ul>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<div id="fig-g-vacio" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Esquema móvil del estado vacío: icono de conjunto vacío, texto No hay salas para 10 personas, las más grandes son para 8, botones Ver salas para 8 personas y Probar otra franja, y enlace Avisarme si se libera una sala.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-g-vacio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/g_vacio.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figura&nbsp;6: Estado vacío útil: explica por qué no hay resultados y ofrece alternativas."><img src="figuras/g_vacio.svg" class="img-fluid figure-img" alt="Esquema móvil del estado vacío: icono de conjunto vacío, texto No hay salas para 10 personas, las más grandes son para 8, botones Ver salas para 8 personas y Probar otra franja, y enlace Avisarme si se libera una sala." width="320"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-g-vacio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6: Estado vacío útil: explica por qué no hay resultados y ofrece alternativas.
+</figcaption>
+</figure>
+</div>
+<p><strong>Decisiones de diseño</strong></p>
+<ul>
+<li>Explica el <strong>motivo</strong> («para 10 personas») y da el dato útil («las más grandes son para 8»).</li>
+<li>Ofrece <strong>tres salidas</strong>: relajar el filtro, cambiar la franja o esperar un aviso.</li>
+<li>Nunca un callejón sin salida.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="el-flujo-completo" class="level2">
+<h2 class="anchored" data-anchor-id="el-flujo-completo">El flujo completo</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Inicio] --&gt; B{¿Franja elegida?}
+  B -- Sí --&gt; C[Lista de salas]
+  B -- No --&gt; B2[Elegir franja] --&gt; C
+  C --&gt; D{¿Hay salas?}
+  D -- No --&gt; E[Estado vacío] --&gt; C
+  D -- Sí --&gt; F[Detalle de sala]
+  F --&gt; G[Formulario]
+  G --&gt; H{¿Sigue libre?}
+  H -- Sí --&gt; I[Confirmación]
+  H -- No --&gt; J[Aviso: sala ocupada] --&gt; C
+  I --&gt; K[Calendario]
+  I --&gt; L[Cancelar]
+</pre>
+</div>
+<p></p><figcaption> Flujo de reserva de ReservaSala con sus caminos alternativos.</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="antes-y-después" class="level2">
+<h2 class="anchored" data-anchor-id="antes-y-después">Antes y después</h2>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-g-antes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Esquema móvil con problemas: cabecera técnica RESERVASALA v2.3 BETA, gran banner de noticias, campos sin etiqueta con textos AAAAMMDD-HHMM y Cód. espacio, cuadros grises de disponibilidad con leyenda solo por tono, dos botones iguales Ejecutar y Borrar todo, y un pequeño signo de interrogación abajo.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-g-antes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/g_problemas.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figura&nbsp;7: Antes. Primera versión, con problemas de jerarquía, lenguaje y retroalimentación."><img src="figuras/g_problemas.svg" class="img-fluid figure-img" alt="Esquema móvil con problemas: cabecera técnica RESERVASALA v2.3 BETA, gran banner de noticias, campos sin etiqueta con textos AAAAMMDD-HHMM y Cód. espacio, cuadros grises de disponibilidad con leyenda solo por tono, dos botones iguales Ejecutar y Borrar todo, y un pequeño signo de interrogación abajo."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-g-antes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7: <strong>Antes.</strong> Primera versión, con problemas de jerarquía, lenguaje y retroalimentación.
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-g-despues" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Esquema móvil de la pantalla de inicio rediseñada de ReservaSala, con la próxima reserva, la elección de franja y las salas libres.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-g-despues-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/g_inicio.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figura&nbsp;8: Después. La misma función rediseñada: la tarea principal primero y lenguaje de la persona."><img src="figuras/g_inicio.svg" class="img-fluid figure-img" alt="Esquema móvil de la pantalla de inicio rediseñada de ReservaSala, con la próxima reserva, la elección de franja y las salas libres."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-g-despues-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8: <strong>Después.</strong> La misma función rediseñada: la tarea principal primero y lenguaje de la persona.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="actividad-encuentra-los-problemas" class="level2">
+<h2 class="anchored" data-anchor-id="actividad-encuentra-los-problemas">Actividad: encuentra los problemas</h2>
+<div class="ia ia-zonas" id="ia-g-problemas"><script type="application/json" class="ia-datos">{"alt":"Esquema móvil con cabecera técnica, banner grande, dos campos sin etiqueta, cuadros de disponibilidad en grises, dos botones iguales Ejecutar y Borrar todo y una pequeña ayuda.","enunciado":"<p>Esta pantalla tiene <strong>siete<\/strong> problemas de usabilidad o\naccesibilidad. Pulsa sobre ellos y comprueba.<\/p>","explicacion":"","imagen":"figuras/g_problemas.svg","tipo":"zonas","titulo":"¿Qué falla en esta primera versión?","zonas":[{"correcta":false,"descripcion":"Cabecera con el nombre y la versión","explicacion":"Poco útil, pero no impide la tarea.","h":6.9,"w":91.1,"x":4.4,"y":5.6},{"correcta":true,"descripcion":"Banner de noticias","explicacion":"Ocupa la mejor zona de la pantalla y relega la tarea principal\n(jerarquía).","h":18.8,"w":86.7,"x":6.7,"y":18.8},{"correcta":true,"descripcion":"Campo «AAAAMMDD-HHMM»","explicacion":"Sin etiqueta y con un formato rígido: mejor un selector de fecha y\nhora.","h":5.6,"w":86.7,"x":6.7,"y":40},{"correcta":true,"descripcion":"Campo «Cód. espacio»","explicacion":"Nadie conoce los códigos: hay que elegir sala de una lista (reconocer\nmejor que recordar).","h":5.6,"w":86.7,"x":6.7,"y":47.2},{"correcta":true,"descripcion":"Disponibilidad en dos grises","explicacion":"La información depende solo del tono y el contraste es bajo.","h":7.2,"w":80,"x":6.7,"y":54.7},{"correcta":true,"descripcion":"Botón «Ejecutar»","explicacion":"Jerga del sistema: la acción es «Reservar».","h":5.6,"w":41.7,"x":6.7,"y":64.1},{"correcta":true,"descripcion":"Botón «Borrar todo»","explicacion":"Acción destructiva con el mismo peso que la principal y junto a\nella.","h":5.6,"w":41.7,"x":51.7,"y":64.1},{"correcta":true,"descripcion":"Ayuda «?» diminuta","explicacion":"Demasiado pequeña para pulsarla y para verla.","h":5,"w":7,"x":88,"y":90.5}]}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+</section>
+<section id="lab-galeria-constructor" class="level2">
+<h2 class="anchored" data-anchor-id="lab-galeria-constructor">Laboratorio: constructor de esquemas</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · se ejecuta en tu navegador</p>
+</div>
+<p>Elige los bloques de una pantalla móvil y su orden. El laboratorio dibuja el esquema y señala problemas frecuentes. Puedes descargar el resultado como SVG.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="131" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 130;"><span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>seleccion <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>casilla <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">casilla</span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>viewof b1 <span class="op">=</span> <span class="fu">seleccion</span>(<span class="st">"Bloque 1 (arriba)"</span><span class="op">,</span> [<span class="st">"Buscador"</span><span class="op">,</span> <span class="st">"Próxima reserva"</span><span class="op">,</span> <span class="st">"Banner"</span><span class="op">,</span> <span class="st">"Filtros"</span><span class="op">,</span> <span class="st">"Lista de resultados"</span><span class="op">,</span> <span class="st">"Botón principal"</span><span class="op">,</span> <span class="st">"(vacío)"</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"Próxima reserva"</span>})</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>viewof b2 <span class="op">=</span> <span class="fu">seleccion</span>(<span class="st">"Bloque 2"</span><span class="op">,</span> [<span class="st">"Buscador"</span><span class="op">,</span> <span class="st">"Próxima reserva"</span><span class="op">,</span> <span class="st">"Banner"</span><span class="op">,</span> <span class="st">"Filtros"</span><span class="op">,</span> <span class="st">"Lista de resultados"</span><span class="op">,</span> <span class="st">"Botón principal"</span><span class="op">,</span> <span class="st">"(vacío)"</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"Filtros"</span>})</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>viewof b3 <span class="op">=</span> <span class="fu">seleccion</span>(<span class="st">"Bloque 3"</span><span class="op">,</span> [<span class="st">"Buscador"</span><span class="op">,</span> <span class="st">"Próxima reserva"</span><span class="op">,</span> <span class="st">"Banner"</span><span class="op">,</span> <span class="st">"Filtros"</span><span class="op">,</span> <span class="st">"Lista de resultados"</span><span class="op">,</span> <span class="st">"Botón principal"</span><span class="op">,</span> <span class="st">"(vacío)"</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"Lista de resultados"</span>})</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>viewof b4 <span class="op">=</span> <span class="fu">seleccion</span>(<span class="st">"Bloque 4 (abajo)"</span><span class="op">,</span> [<span class="st">"Buscador"</span><span class="op">,</span> <span class="st">"Próxima reserva"</span><span class="op">,</span> <span class="st">"Banner"</span><span class="op">,</span> <span class="st">"Filtros"</span><span class="op">,</span> <span class="st">"Lista de resultados"</span><span class="op">,</span> <span class="st">"Botón principal"</span><span class="op">,</span> <span class="st">"(vacío)"</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"(vacío)"</span>})</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>viewof navinf <span class="op">=</span> <span class="fu">casilla</span>(<span class="st">"Barra de navegación inferior"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="kw">true</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="141" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 140;"><span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> bloques <span class="op">=</span> [b1<span class="op">,</span> b2<span class="op">,</span> b3<span class="op">,</span> b4]<span class="op">.</span><span class="fu">filter</span>(b <span class="kw">=&gt;</span> b <span class="op">!==</span> <span class="st">"(vacío)"</span>)<span class="op">;</span></span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> alto <span class="op">=</span> {<span class="st">"Buscador"</span><span class="op">:</span> <span class="dv">44</span><span class="op">,</span> <span class="st">"Próxima reserva"</span><span class="op">:</span> <span class="dv">84</span><span class="op">,</span> <span class="st">"Banner"</span><span class="op">:</span> <span class="dv">130</span><span class="op">,</span> <span class="st">"Filtros"</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span> <span class="st">"Lista de resultados"</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span> <span class="st">"Botón principal"</span><span class="op">:</span> <span class="dv">48</span>}<span class="op">;</span></span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> y <span class="op">=</span> <span class="dv">96</span><span class="op">,</span> partes <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> g <span class="op">=</span> <span class="st">"#eceae5"</span><span class="op">,</span> a <span class="op">=</span> <span class="st">"#2a78d6"</span><span class="op">;</span></span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">const</span> b <span class="kw">of</span> bloques) {</span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> h <span class="op">=</span> alto[b]<span class="op">;</span></span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (b <span class="op">===</span> <span class="st">"Buscador"</span>) partes<span class="op">.</span><span class="fu">push</span>(<span class="vs">`&lt;rect x="24" y="</span><span class="sc">${</span>y<span class="sc">}</span><span class="vs">" width="312" height="</span><span class="sc">${</span>h<span class="sc">}</span><span class="vs">" rx="22" fill="#fff" stroke="#52514e"/&gt;&lt;text x="44" y="</span><span class="sc">${</span>y <span class="op">+</span> <span class="dv">27</span><span class="sc">}</span><span class="vs">" font-size="13" fill="#52514e"&gt;Buscar sala…&lt;/text&gt;`</span>)<span class="op">;</span></span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (b <span class="op">===</span> <span class="st">"Próxima reserva"</span>) partes<span class="op">.</span><span class="fu">push</span>(<span class="vs">`&lt;rect x="24" y="</span><span class="sc">${</span>y<span class="sc">}</span><span class="vs">" width="312" height="</span><span class="sc">${</span>h <span class="op">-</span> <span class="dv">10</span><span class="sc">}</span><span class="vs">" rx="10" fill="#fff" stroke="#a3a29e"/&gt;&lt;text x="36" y="</span><span class="sc">${</span>y <span class="op">+</span> <span class="dv">24</span><span class="sc">}</span><span class="vs">" font-size="11" fill="#52514e"&gt;Tu próxima reserva&lt;/text&gt;&lt;text x="36" y="</span><span class="sc">${</span>y <span class="op">+</span> <span class="dv">46</span><span class="sc">}</span><span class="vs">" font-size="14" font-weight="600" fill="#0b0b0b"&gt;Sala 2.14 · Hoy 16:00&lt;/text&gt;`</span>)<span class="op">;</span></span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (b <span class="op">===</span> <span class="st">"Banner"</span>) partes<span class="op">.</span><span class="fu">push</span>(<span class="vs">`&lt;rect x="24" y="</span><span class="sc">${</span>y<span class="sc">}</span><span class="vs">" width="312" height="</span><span class="sc">${</span>h <span class="op">-</span> <span class="dv">10</span><span class="sc">}</span><span class="vs">" rx="6" fill="</span><span class="sc">${</span>g<span class="sc">}</span><span class="vs">"/&gt;&lt;text x="180" y="</span><span class="sc">${</span>y <span class="op">+</span> <span class="dv">64</span><span class="sc">}</span><span class="vs">" font-size="13" text-anchor="middle" fill="#52514e"&gt;Banner&lt;/text&gt;`</span>)<span class="op">;</span></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (b <span class="op">===</span> <span class="st">"Filtros"</span>) partes<span class="op">.</span><span class="fu">push</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="vs">`&lt;rect x="</span><span class="sc">${</span><span class="dv">24</span> <span class="op">+</span> i <span class="op">*</span> <span class="dv">104</span><span class="sc">}</span><span class="vs">" y="</span><span class="sc">${</span>y<span class="sc">}</span><span class="vs">" width="96" height="30" rx="15" fill="#fff" stroke="#0b0b0b"/&gt;`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>))<span class="op">;</span></span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (b <span class="op">===</span> <span class="st">"Lista de resultados"</span>) partes<span class="op">.</span><span class="fu">push</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="vs">`&lt;rect x="24" y="</span><span class="sc">${</span>y <span class="op">+</span> i <span class="op">*</span> <span class="dv">64</span><span class="sc">}</span><span class="vs">" width="312" height="56" rx="8" fill="</span><span class="sc">${</span>g<span class="sc">}</span><span class="vs">"/&gt;&lt;rect x="36" y="</span><span class="sc">${</span>y <span class="op">+</span> i <span class="op">*</span> <span class="dv">64</span> <span class="op">+</span> <span class="dv">16</span><span class="sc">}</span><span class="vs">" width="140" height="8" rx="4" fill="#a3a29e"/&gt;&lt;rect x="36" y="</span><span class="sc">${</span>y <span class="op">+</span> i <span class="op">*</span> <span class="dv">64</span> <span class="op">+</span> <span class="dv">32</span><span class="sc">}</span><span class="vs">" width="90" height="6" rx="3" fill="#d9d8d4"/&gt;`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>))<span class="op">;</span></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> (b <span class="op">===</span> <span class="st">"Botón principal"</span>) partes<span class="op">.</span><span class="fu">push</span>(<span class="vs">`&lt;rect x="24" y="</span><span class="sc">${</span>y<span class="sc">}</span><span class="vs">" width="312" height="40" rx="8" fill="</span><span class="sc">${</span>a<span class="sc">}</span><span class="vs">"/&gt;&lt;text x="180" y="</span><span class="sc">${</span>y <span class="op">+</span> <span class="dv">25</span><span class="sc">}</span><span class="vs">" font-size="14" font-weight="600" fill="#fff" text-anchor="middle"&gt;Reservar&lt;/text&gt;`</span>)<span class="op">;</span></span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>    y <span class="op">+=</span> h<span class="op">;</span></span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> navsvg <span class="op">=</span> navinf <span class="op">?</span> <span class="vs">`&lt;line x1="16" y1="580" x2="344" y2="580" stroke="#d9d8d4"/&gt;`</span> <span class="op">+</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span>]<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="vs">`&lt;rect x="</span><span class="sc">${</span><span class="dv">46</span> <span class="op">+</span> i <span class="op">*</span> <span class="dv">92</span><span class="sc">}</span><span class="vs">" y="592" width="24" height="20" rx="4" fill="#d9d8d4"/&gt;`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>) <span class="op">:</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> desborda <span class="op">=</span> y <span class="op">&gt;</span> (navinf <span class="op">?</span> <span class="dv">576</span> <span class="op">:</span> <span class="dv">620</span>)<span class="op">;</span></span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> svgTxt <span class="op">=</span> <span class="vs">`&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" width="260" role="img" aria-label="Esquema generado con </span><span class="sc">${</span>bloques<span class="op">.</span><span class="fu">join</span>(<span class="st">", "</span>)<span class="sc">}</span><span class="vs">"&gt;&lt;rect x="1" y="1" width="358" height="638" rx="28" fill="#fff" stroke="#0b0b0b" stroke-width="2"/&gt;&lt;rect x="16" y="36" width="328" height="44" fill="#fff"/&gt;&lt;text x="180" y="64" font-size="15" font-weight="600" text-anchor="middle" fill="#0b0b0b"&gt;ReservaSala&lt;/text&gt;</span><span class="sc">${</span>partes<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="sc">}${</span>navsvg<span class="sc">}</span><span class="vs">&lt;/svg&gt;`</span><span class="op">;</span></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> avisos <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (bloques[<span class="dv">0</span>] <span class="op">===</span> <span class="st">"Banner"</span>) avisos<span class="op">.</span><span class="fu">push</span>(<span class="st">"El banner ocupa la mejor posición: la tarea principal queda abajo."</span>)<span class="op">;</span></span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>bloques<span class="op">.</span><span class="fu">includes</span>(<span class="st">"Lista de resultados"</span>) <span class="op">&amp;&amp;</span> <span class="op">!</span>bloques<span class="op">.</span><span class="fu">includes</span>(<span class="st">"Próxima reserva"</span>)) avisos<span class="op">.</span><span class="fu">push</span>(<span class="st">"No hay contenido de la tarea principal: ¿qué hace el usuario aquí?"</span>)<span class="op">;</span></span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (bloques<span class="op">.</span><span class="fu">indexOf</span>(<span class="st">"Filtros"</span>) <span class="op">&gt;</span> bloques<span class="op">.</span><span class="fu">indexOf</span>(<span class="st">"Lista de resultados"</span>) <span class="op">&amp;&amp;</span> bloques<span class="op">.</span><span class="fu">includes</span>(<span class="st">"Filtros"</span>) <span class="op">&amp;&amp;</span> bloques<span class="op">.</span><span class="fu">includes</span>(<span class="st">"Lista de resultados"</span>)) avisos<span class="op">.</span><span class="fu">push</span>(<span class="st">"Los filtros van después de la lista: el usuario no los verá hasta desplazarse."</span>)<span class="op">;</span></span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="kw">new</span> <span class="bu">Set</span>(bloques)<span class="op">.</span><span class="at">size</span> <span class="op">&lt;</span> bloques<span class="op">.</span><span class="at">length</span>) avisos<span class="op">.</span><span class="fu">push</span>(<span class="st">"Hay bloques repetidos."</span>)<span class="op">;</span></span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (desborda) avisos<span class="op">.</span><span class="fu">push</span>(<span class="st">"El contenido no cabe sin desplazarse: prioriza."</span>)<span class="op">;</span></span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status" class="d-flex flex-wrap gap-3 align-items-start"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> izq <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div&gt;&lt;/div&gt;`</span><span class="op">;</span> izq<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> svgTxt<span class="op">;</span></span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> der <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div style="max-width:24rem"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>  der<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> avisos<span class="op">.</span><span class="at">length</span> <span class="op">?</span> <span class="vs">`&lt;ul&gt;</span><span class="sc">${</span>avisos<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> <span class="vs">`&lt;li class="lab-medio" style="font-weight:600"&gt;</span><span class="sc">${</span>x<span class="sc">}</span><span class="vs">&lt;/li&gt;`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="sc">}</span><span class="vs">&lt;/ul&gt;`</span> <span class="op">:</span> <span class="st">'&lt;p class="lab-bien" style="font-weight:600"&gt;Estructura coherente: la tarea principal está arriba y todo cabe.&lt;/p&gt;'</span><span class="op">;</span></span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> enlace <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;a class="btn btn-outline-primary btn-sm" download="esquema.svg"&gt;Descargar SVG&lt;/a&gt;`</span><span class="op">;</span></span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>  enlace<span class="op">.</span><span class="at">href</span> <span class="op">=</span> URL<span class="op">.</span><span class="fu">createObjectURL</span>(<span class="kw">new</span> <span class="bu">Blob</span>([svgTxt]<span class="op">,</span> {<span class="dt">type</span><span class="op">:</span> <span class="st">"image/svg+xml"</span>}))<span class="op">;</span></span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>  der<span class="op">.</span><span class="fu">append</span>(enlace)<span class="op">;</span></span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="fu">append</span>(izq<span class="op">,</span> der)<span class="op">;</span></span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d<span class="op">;</span></span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lab-galeria-prototipo" class="level2">
+<h2 class="anchored" data-anchor-id="lab-galeria-prototipo">Laboratorio: prototipo navegable</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · se ejecuta en tu navegador</p>
+</div>
+<p>Un prototipo de baja fidelidad navegable hecho solo con los esquemas de la galería y zonas pulsables. Haz la tarea: <strong>reserva una sala para esta tarde</strong>. Así se prueba un flujo antes de diseñar nada en alta fidelidad.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="189" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 188;"><span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pantallas <span class="op">=</span> {</span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>    <span class="dt">inicio</span><span class="op">:</span> {<span class="dt">img</span><span class="op">:</span> <span class="st">"figuras/g_inicio.svg"</span><span class="op">,</span> <span class="dt">zonas</span><span class="op">:</span> [[<span class="dv">24</span><span class="op">,</span> <span class="dv">322</span><span class="op">,</span> <span class="dv">312</span><span class="op">,</span> <span class="dv">50</span><span class="op">,</span> <span class="st">"detalle"</span><span class="op">,</span> <span class="st">"Sala 1.03"</span>]<span class="op">,</span> [<span class="dv">100</span><span class="op">,</span> <span class="dv">242</span><span class="op">,</span> <span class="dv">72</span><span class="op">,</span> <span class="dv">34</span><span class="op">,</span> <span class="st">"lista"</span><span class="op">,</span> <span class="st">"Esta tarde"</span>]<span class="op">,</span> [<span class="dv">24</span><span class="op">,</span> <span class="dv">500</span><span class="op">,</span> <span class="dv">312</span><span class="op">,</span> <span class="dv">30</span><span class="op">,</span> <span class="st">"lista"</span><span class="op">,</span> <span class="st">"Ver todas las salas"</span>]]}<span class="op">,</span></span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>    <span class="dt">lista</span><span class="op">:</span> {<span class="dt">img</span><span class="op">:</span> <span class="st">"figuras/g_lista.svg"</span><span class="op">,</span> <span class="dt">zonas</span><span class="op">:</span> [[<span class="dv">24</span><span class="op">,</span> <span class="dv">162</span><span class="op">,</span> <span class="dv">312</span><span class="op">,</span> <span class="dv">58</span><span class="op">,</span> <span class="st">"detalle"</span><span class="op">,</span> <span class="st">"Sala 1.02"</span>]<span class="op">,</span> [<span class="dv">16</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="st">"inicio"</span><span class="op">,</span> <span class="st">"Volver"</span>]]}<span class="op">,</span></span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a>    <span class="dt">detalle</span><span class="op">:</span> {<span class="dt">img</span><span class="op">:</span> <span class="st">"figuras/g_detalle.svg"</span><span class="op">,</span> <span class="dt">zonas</span><span class="op">:</span> [[<span class="dv">24</span><span class="op">,</span> <span class="dv">528</span><span class="op">,</span> <span class="dv">312</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="st">"formulario"</span><span class="op">,</span> <span class="st">"Reservar 16:00–18:00"</span>]<span class="op">,</span> [<span class="dv">16</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="st">"lista"</span><span class="op">,</span> <span class="st">"Volver"</span>]]}<span class="op">,</span></span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a>    <span class="dt">formulario</span><span class="op">:</span> {<span class="dt">img</span><span class="op">:</span> <span class="st">"figuras/g_formulario.svg"</span><span class="op">,</span> <span class="dt">zonas</span><span class="op">:</span> [[<span class="dv">24</span><span class="op">,</span> <span class="dv">484</span><span class="op">,</span> <span class="dv">312</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="st">"confirmacion"</span><span class="op">,</span> <span class="st">"Confirmar reserva"</span>]<span class="op">,</span> [<span class="dv">24</span><span class="op">,</span> <span class="dv">534</span><span class="op">,</span> <span class="dv">312</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="st">"detalle"</span><span class="op">,</span> <span class="st">"Volver"</span>]]}<span class="op">,</span></span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>    <span class="dt">confirmacion</span><span class="op">:</span> {<span class="dt">img</span><span class="op">:</span> <span class="st">"figuras/g_confirmacion.svg"</span><span class="op">,</span> <span class="dt">zonas</span><span class="op">:</span> [[<span class="dv">100</span><span class="op">,</span> <span class="dv">545</span><span class="op">,</span> <span class="dv">160</span><span class="op">,</span> <span class="dv">24</span><span class="op">,</span> <span class="st">"inicio"</span><span class="op">,</span> <span class="st">"Volver al inicio"</span>]]}</span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> caja <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div style="position:relative;width:288px;max-width:100%"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> estado <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;p role="status" aria-live="polite" class="small"&gt;&lt;/p&gt;`</span><span class="op">;</span></span>
+<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> pasos <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> ir <span class="op">=</span> id <span class="kw">=&gt;</span> {</span>
+<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> p <span class="op">=</span> pantallas[id]<span class="op">;</span> caja<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> im <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;img alt="Pantalla </span><span class="sc">${</span>id<span class="sc">}</span><span class="vs"> del prototipo" style="width:100%;display:block"&gt;`</span><span class="op">;</span> im<span class="op">.</span><span class="at">src</span> <span class="op">=</span> p<span class="op">.</span><span class="at">img</span><span class="op">;</span> caja<span class="op">.</span><span class="fu">append</span>(im)<span class="op">;</span></span>
+<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">const</span> [x<span class="op">,</span> y<span class="op">,</span> w<span class="op">,</span> h<span class="op">,</span> dest<span class="op">,</span> et] <span class="kw">of</span> p<span class="op">.</span><span class="at">zonas</span>) {</span>
+<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> b <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;button type="button" aria-label="</span><span class="sc">${</span>et<span class="sc">}</span><span class="vs">" title="</span><span class="sc">${</span>et<span class="sc">}</span><span class="vs">" style="position:absolute;left:</span><span class="sc">${</span>x <span class="op">/</span> <span class="fl">3.6</span><span class="sc">}</span><span class="vs">%;top:</span><span class="sc">${</span>y <span class="op">/</span> <span class="fl">6.4</span><span class="sc">}</span><span class="vs">%;width:</span><span class="sc">${</span>w <span class="op">/</span> <span class="fl">3.6</span><span class="sc">}</span><span class="vs">%;height:</span><span class="sc">${</span>h <span class="op">/</span> <span class="fl">6.4</span><span class="sc">}</span><span class="vs">%;background:rgba(42,120,214,.12);border:2px dashed rgba(42,120,214,.6);border-radius:8px;cursor:pointer"&gt;&lt;/button&gt;`</span><span class="op">;</span></span>
+<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a>      b<span class="op">.</span><span class="at">onclick</span> <span class="op">=</span> () <span class="kw">=&gt;</span> { pasos<span class="op">++;</span> <span class="fu">ir</span>(dest)<span class="op">;</span> }<span class="op">;</span></span>
+<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a>      caja<span class="op">.</span><span class="fu">append</span>(b)<span class="op">;</span></span>
+<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a>    estado<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> id <span class="op">===</span> <span class="st">"confirmacion"</span> <span class="op">?</span> <span class="vs">`¡Tarea completada en </span><span class="sc">${</span>pasos<span class="sc">}</span><span class="vs"> pasos! El camino más corto son 4.`</span> <span class="op">:</span> <span class="vs">`Pantalla: </span><span class="sc">${</span>id<span class="sc">}</span><span class="vs"> · pasos: </span><span class="sc">${</span>pasos<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ir</span>(<span class="st">"inicio"</span>)<span class="op">;</span></span>
+<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;div&gt;</span><span class="sc">${</span>caja<span class="sc">}${</span>estado<span class="sc">}</span><span class="vs">&lt;p class="small"&gt;Las zonas pulsables están marcadas con borde discontinuo. Puedes navegar también con el tabulador.&lt;/p&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="para-tu-proyecto" class="level2">
+<h2 class="anchored" data-anchor-id="para-tu-proyecto">Para tu proyecto</h2>
+<ul>
+<li>Descarga los SVG desde el botón derecho del ratón («Guardar imagen como…») y edítalos en Figma, Penpot o Inkscape.</li>
+<li>Usa la lista de <strong>decisiones de diseño</strong> de cada pantalla como guion para presentar tus esquemas en la crítica.</li>
+<li>Reproduce el <strong>prototipo navegable</strong> con tus propias pantallas: es la forma más rápida de probar un flujo con cinco personas.</li>
+</ul>
+
+
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Mejoras de accesibilidad del libro:
+   - nombre accesible para los editores de código de quarto-live (CodeMirror),
+   - foco de teclado en sus áreas desplazables,
+   - texto alternativo para el icono de ORCID de la portada. */
+(function () {
+  function arreglar(raiz) {
+    raiz.querySelectorAll('.cm-content:not([aria-label])').forEach(function (el) {
+      el.setAttribute('aria-label', 'Editor de código R');
+    });
+    raiz.querySelectorAll('.cm-scroller').forEach(function (el) {
+      if (el.getAttribute('tabindex') !== '0') el.setAttribute('tabindex', '0');
+      if (!el.hasAttribute('aria-label')) el.setAttribute('aria-label', 'Código R');
+    });
+    // controles de Observable (deslizadores y casillas) sin nombre accesible
+    raiz.querySelectorAll('form input:not([aria-label]), form select:not([aria-label])').forEach(function (el) {
+      var form = el.closest('form');
+      var lab = form && form.querySelector('label');
+      if (lab && !(el.id && form.querySelector('label[for="' + el.id + '"]'))) {
+        el.setAttribute('aria-label', lab.textContent.trim() + (el.type === 'number' ? ' (valor)' : ''));
+      }
+    });
+    // menú de descarga de la barra lateral (solo icono)
+    raiz.querySelectorAll('.quarto-navigation-tool.dropdown-toggle').forEach(function (a) {
+      if (a.getAttribute('aria-label')) return;
+      a.setAttribute('aria-label', 'Descargar el libro en PDF o EPUB');
+      a.setAttribute('title', 'Descargar el libro en PDF o EPUB');
+    });
+    raiz.querySelectorAll('.quarto-title-author-orcid').forEach(function (a) {
+      a.setAttribute('aria-label', 'Perfil ORCID de Pablo Sánchez-Núñez');
+      var img = a.querySelector('img');
+      if (img && !img.hasAttribute('alt')) img.setAttribute('alt', 'ORCID');
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () { arreglar(document); });
+  new MutationObserver(function () { arreglar(document); })
+    .observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
+<script src="./consent.js" defer=""></script>
+<style>
+.progreso-capitulo { border: 1px solid var(--bs-border-color, #dee2e6); border-left: 4px solid var(--bs-primary, #000e78);
+  border-radius: .35rem; padding: .6rem .9rem; margin: 0 0 1.4rem; font-size: .92rem; background: rgba(127, 127, 127, .08); color: inherit; }
+.progreso-capitulo progress { width: 100%; height: .6rem; margin: .35rem 0 .2rem; accent-color: var(--bs-primary, #000e78); }
+.progreso-capitulo .progreso-nota { font-size: .82rem; opacity: .85; }
+.progreso-capitulo button, #progreso-resumen button { font-size: .82rem; padding: .05rem .5rem; margin-left: .4rem;
+  border: 1px solid var(--bs-border-color, #ced4da); border-radius: .3rem; background: transparent; color: inherit; }
+#progreso-resumen table { width: 100%; }
+#progreso-resumen { margin-bottom: 1.2rem; }
+#progreso-resumen progress { width: 8rem; height: .55rem; accent-color: var(--bs-primary, #000e78); vertical-align: middle; }
+.sin-conexion-estado { font-size: .85rem; }
+</style>
+<script>
+/* Progreso del estudiante: cuenta los ejercicios de código resueltos y las
+   preguntas de autoevaluación acertadas en cada capítulo. Se guarda solo en
+   el almacenamiento local de este navegador; no se envía a ningún servidor. */
+(function () {
+  var CLAVE = 'progreso-' + (location.pathname.split('/').filter(Boolean)[0] || 'libro') + '-v1';
+  function leer() { try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch (e) { return {}; } }
+  function guardar(d) { try { localStorage.setItem(CLAVE, JSON.stringify(d)); } catch (e) {} }
+  var pagina = location.pathname.split('/').pop() || 'index.html';
+
+  function nombresEjercicios() {
+    var m = {};
+    document.querySelectorAll('script[type^="webr-"][type$="-contents"]').forEach(function (s) {
+      try {
+        var bin = atob(s.textContent.trim());
+        var d = JSON.parse(new TextDecoder().decode(Uint8Array.from(bin, function (c) { return c.charCodeAt(0); })));
+        if (d.attr && d.attr.exercise && !d.attr.setup && !d.attr.check) m[s.type.replace('-contents', '')] = d.attr.exercise;
+      } catch (e) {}
+    });
+    return m;
+  }
+  function preguntas() {
+    return Array.prototype.slice.call(document.querySelectorAll('.webex-check .webex-solveme, .webex-check .webex-select, .webex-check .webex-radiogroup'));
+  }
+
+  function registro(datos) {
+    var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
+    r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
+    r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
+    return r;
+  }
+
+  function pintar(caja, totalEj, totalPr, totalIa) {
+    var r = registro(leer());
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
+    var partes = [];
+    if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
+    if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
+    caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
+      '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
+      '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
+      '<button type="button">Borrar el progreso del capítulo</button>';
+    caja.querySelector('button').addEventListener('click', function () {
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
+    });
+  }
+
+  function capitulo() {
+    var mapa = nombresEjercicios();
+    var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
+      .filter(function (v, i, a) { return a.indexOf(v) === i; });
+    var lista = preguntas();
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
+
+    var d = leer(); var r = registro(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
+
+    var caja = document.createElement('div');
+    caja.className = 'progreso-capitulo';
+    caja.setAttribute('role', 'status');
+    var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
+    if (!cabecera) return;
+    cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
+    pintar(caja, nombres.length, lista.length, nIa);
+
+    function anotar(tipo, valor) {
+      var d = leer(); var r = registro(d);
+      if (r[tipo].indexOf(valor) === -1) {
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
+      }
+    }
+
+    // Ejercicios de webR: un aviso verde de quarto-live dentro de la celda del ejercicio
+    new MutationObserver(function () {
+      document.querySelectorAll('.exercise-grade.alert-success:not([data-progreso])').forEach(function (a) {
+        a.setAttribute('data-progreso', '1');
+        var el = a;
+        while (el && !(el.id && mapa[el.id])) el = el.parentElement;
+        if (el) anotar('ej', mapa[el.id]);
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
+
+    // Preguntas: se anotan al pulsar «Mostrar respuestas»
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('.webex-check-button');
+      if (!b) return;
+      setTimeout(function () {
+        lista.forEach(function (q, i) {
+          if (q.classList.contains('webex-correct') || q.querySelector('.webex-correct')) anotar('pr', i);
+        });
+      }, 0);
+    });
+  }
+
+  function resumen() {
+    var destino = document.getElementById('progreso-resumen');
+    if (!destino) return;
+    var d = leer();
+    var filas = [];
+    document.querySelectorAll('#quarto-sidebar a.sidebar-link').forEach(function (a) {
+      var f = (a.getAttribute('href') || '').split('/').pop().split('#')[0];
+      if (!f || f === 'index.html' || /^9\d-/.test(f) || filas.some(function (x) { return x.f === f; })) return;
+      filas.push({ f: f, t: a.textContent.replace(/\s+/g, ' ').trim(), r: d[f] });
+    });
+    var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
+    filas.forEach(function (x) {
+      var celda = 'Sin empezar';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
+      }
+      html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
+    });
+    html += '</tbody></' + 'table><button type="button">Borrar todo mi progreso</button>';
+    destino.innerHTML = html;
+    destino.querySelector('button').addEventListener('click', function () {
+      try { localStorage.removeItem(CLAVE); } catch (e) {}
+      resumen();
+    });
+  }
+
+  function iniciar() { capitulo(); resumen(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar); else iniciar();
+})();
+
+/* Uso sin conexión: un service worker guarda el libro, webR y sus paquetes
+   la primera vez que se visitan. */
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').then(function () {
+      var estado = document.getElementById('sin-conexion-estado');
+      if (estado) estado.textContent = 'Este navegador ya guarda el libro para usarlo sin conexión.';
+    }).catch(function () {});
+  });
+})();
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InNlbGVjY2lvbiA9IHdpbmRvdy5MYWIuc2VsZWNjaW9uXG5jYXNpbGxhID0gd2luZG93LkxhYi5jYXNpbGxhXG52aWV3b2YgYjEgPSBzZWxlY2Npb24oXCJCbG9xdWUgMSAoYXJyaWJhKVwiLCBbXCJCdXNjYWRvclwiLCBcIlByw7N4aW1hIHJlc2VydmFcIiwgXCJCYW5uZXJcIiwgXCJGaWx0cm9zXCIsIFwiTGlzdGEgZGUgcmVzdWx0YWRvc1wiLCBcIkJvdMOzbiBwcmluY2lwYWxcIiwgXCIodmFjw61vKVwiXSwge3ZhbHVlOiBcIlByw7N4aW1hIHJlc2VydmFcIn0pXG52aWV3b2YgYjIgPSBzZWxlY2Npb24oXCJCbG9xdWUgMlwiLCBbXCJCdXNjYWRvclwiLCBcIlByw7N4aW1hIHJlc2VydmFcIiwgXCJCYW5uZXJcIiwgXCJGaWx0cm9zXCIsIFwiTGlzdGEgZGUgcmVzdWx0YWRvc1wiLCBcIkJvdMOzbiBwcmluY2lwYWxcIiwgXCIodmFjw61vKVwiXSwge3ZhbHVlOiBcIkZpbHRyb3NcIn0pXG52aWV3b2YgYjMgPSBzZWxlY2Npb24oXCJCbG9xdWUgM1wiLCBbXCJCdXNjYWRvclwiLCBcIlByw7N4aW1hIHJlc2VydmFcIiwgXCJCYW5uZXJcIiwgXCJGaWx0cm9zXCIsIFwiTGlzdGEgZGUgcmVzdWx0YWRvc1wiLCBcIkJvdMOzbiBwcmluY2lwYWxcIiwgXCIodmFjw61vKVwiXSwge3ZhbHVlOiBcIkxpc3RhIGRlIHJlc3VsdGFkb3NcIn0pXG52aWV3b2YgYjQgPSBzZWxlY2Npb24oXCJCbG9xdWUgNCAoYWJham8pXCIsIFtcIkJ1c2NhZG9yXCIsIFwiUHLDs3hpbWEgcmVzZXJ2YVwiLCBcIkJhbm5lclwiLCBcIkZpbHRyb3NcIiwgXCJMaXN0YSBkZSByZXN1bHRhZG9zXCIsIFwiQm90w7NuIHByaW5jaXBhbFwiLCBcIih2YWPDrW8pXCJdLCB7dmFsdWU6IFwiKHZhY8OtbylcIn0pXG52aWV3b2YgbmF2aW5mID0gY2FzaWxsYShcIkJhcnJhIGRlIG5hdmVnYWNpw7NuIGluZmVyaW9yXCIsIHt2YWx1ZTogdHJ1ZX0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIGNvbnN0IGJsb3F1ZXMgPSBbYjEsIGIyLCBiMywgYjRdLmZpbHRlcihiID0+IGIgIT09IFwiKHZhY8OtbylcIik7XG4gIGNvbnN0IGFsdG8gPSB7XCJCdXNjYWRvclwiOiA0NCwgXCJQcsOzeGltYSByZXNlcnZhXCI6IDg0LCBcIkJhbm5lclwiOiAxMzAsIFwiRmlsdHJvc1wiOiA0MCwgXCJMaXN0YSBkZSByZXN1bHRhZG9zXCI6IDIwMCwgXCJCb3TDs24gcHJpbmNpcGFsXCI6IDQ4fTtcbiAgbGV0IHkgPSA5NiwgcGFydGVzID0gW107XG4gIGNvbnN0IGcgPSBcIiNlY2VhZTVcIiwgYSA9IFwiIzJhNzhkNlwiO1xuICBmb3IgKGNvbnN0IGIgb2YgYmxvcXVlcykge1xuICAgIGNvbnN0IGggPSBhbHRvW2JdO1xuICAgIGlmIChiID09PSBcIkJ1c2NhZG9yXCIpIHBhcnRlcy5wdXNoKGA8cmVjdCB4PVwiMjRcIiB5PVwiJHt5fVwiIHdpZHRoPVwiMzEyXCIgaGVpZ2h0PVwiJHtofVwiIHJ4PVwiMjJcIiBmaWxsPVwiI2ZmZlwiIHN0cm9rZT1cIiM1MjUxNGVcIi8+PHRleHQgeD1cIjQ0XCIgeT1cIiR7eSArIDI3fVwiIGZvbnQtc2l6ZT1cIjEzXCIgZmlsbD1cIiM1MjUxNGVcIj5CdXNjYXIgc2FsYeKApjwvdGV4dD5gKTtcbiAgICBlbHNlIGlmIChiID09PSBcIlByw7N4aW1hIHJlc2VydmFcIikgcGFydGVzLnB1c2goYDxyZWN0IHg9XCIyNFwiIHk9XCIke3l9XCIgd2lkdGg9XCIzMTJcIiBoZWlnaHQ9XCIke2ggLSAxMH1cIiByeD1cIjEwXCIgZmlsbD1cIiNmZmZcIiBzdHJva2U9XCIjYTNhMjllXCIvPjx0ZXh0IHg9XCIzNlwiIHk9XCIke3kgKyAyNH1cIiBmb250LXNpemU9XCIxMVwiIGZpbGw9XCIjNTI1MTRlXCI+VHUgcHLDs3hpbWEgcmVzZXJ2YTwvdGV4dD48dGV4dCB4PVwiMzZcIiB5PVwiJHt5ICsgNDZ9XCIgZm9udC1zaXplPVwiMTRcIiBmb250LXdlaWdodD1cIjYwMFwiIGZpbGw9XCIjMGIwYjBiXCI+U2FsYSAyLjE0IMK3IEhveSAxNjowMDwvdGV4dD5gKTtcbiAgICBlbHNlIGlmIChiID09PSBcIkJhbm5lclwiKSBwYXJ0ZXMucHVzaChgPHJlY3QgeD1cIjI0XCIgeT1cIiR7eX1cIiB3aWR0aD1cIjMxMlwiIGhlaWdodD1cIiR7aCAtIDEwfVwiIHJ4PVwiNlwiIGZpbGw9XCIke2d9XCIvPjx0ZXh0IHg9XCIxODBcIiB5PVwiJHt5ICsgNjR9XCIgZm9udC1zaXplPVwiMTNcIiB0ZXh0LWFuY2hvcj1cIm1pZGRsZVwiIGZpbGw9XCIjNTI1MTRlXCI+QmFubmVyPC90ZXh0PmApO1xuICAgIGVsc2UgaWYgKGIgPT09IFwiRmlsdHJvc1wiKSBwYXJ0ZXMucHVzaChbMCwgMSwgMl0ubWFwKGkgPT4gYDxyZWN0IHg9XCIkezI0ICsgaSAqIDEwNH1cIiB5PVwiJHt5fVwiIHdpZHRoPVwiOTZcIiBoZWlnaHQ9XCIzMFwiIHJ4PVwiMTVcIiBmaWxsPVwiI2ZmZlwiIHN0cm9rZT1cIiMwYjBiMGJcIi8+YCkuam9pbihcIlwiKSk7XG4gICAgZWxzZSBpZiAoYiA9PT0gXCJMaXN0YSBkZSByZXN1bHRhZG9zXCIpIHBhcnRlcy5wdXNoKFswLCAxLCAyXS5tYXAoaSA9PiBgPHJlY3QgeD1cIjI0XCIgeT1cIiR7eSArIGkgKiA2NH1cIiB3aWR0aD1cIjMxMlwiIGhlaWdodD1cIjU2XCIgcng9XCI4XCIgZmlsbD1cIiR7Z31cIi8+PHJlY3QgeD1cIjM2XCIgeT1cIiR7eSArIGkgKiA2NCArIDE2fVwiIHdpZHRoPVwiMTQwXCIgaGVpZ2h0PVwiOFwiIHJ4PVwiNFwiIGZpbGw9XCIjYTNhMjllXCIvPjxyZWN0IHg9XCIzNlwiIHk9XCIke3kgKyBpICogNjQgKyAzMn1cIiB3aWR0aD1cIjkwXCIgaGVpZ2h0PVwiNlwiIHJ4PVwiM1wiIGZpbGw9XCIjZDlkOGQ0XCIvPmApLmpvaW4oXCJcIikpO1xuICAgIGVsc2UgaWYgKGIgPT09IFwiQm90w7NuIHByaW5jaXBhbFwiKSBwYXJ0ZXMucHVzaChgPHJlY3QgeD1cIjI0XCIgeT1cIiR7eX1cIiB3aWR0aD1cIjMxMlwiIGhlaWdodD1cIjQwXCIgcng9XCI4XCIgZmlsbD1cIiR7YX1cIi8+PHRleHQgeD1cIjE4MFwiIHk9XCIke3kgKyAyNX1cIiBmb250LXNpemU9XCIxNFwiIGZvbnQtd2VpZ2h0PVwiNjAwXCIgZmlsbD1cIiNmZmZcIiB0ZXh0LWFuY2hvcj1cIm1pZGRsZVwiPlJlc2VydmFyPC90ZXh0PmApO1xuICAgIHkgKz0gaDtcbiAgfVxuICBjb25zdCBuYXZzdmcgPSBuYXZpbmYgPyBgPGxpbmUgeDE9XCIxNlwiIHkxPVwiNTgwXCIgeDI9XCIzNDRcIiB5Mj1cIjU4MFwiIHN0cm9rZT1cIiNkOWQ4ZDRcIi8+YCArIFswLCAxLCAyLCAzXS5tYXAoaSA9PiBgPHJlY3QgeD1cIiR7NDYgKyBpICogOTJ9XCIgeT1cIjU5MlwiIHdpZHRoPVwiMjRcIiBoZWlnaHQ9XCIyMFwiIHJ4PVwiNFwiIGZpbGw9XCIjZDlkOGQ0XCIvPmApLmpvaW4oXCJcIikgOiBcIlwiO1xuICBjb25zdCBkZXNib3JkYSA9IHkgPiAobmF2aW5mID8gNTc2IDogNjIwKTtcbiAgY29uc3Qgc3ZnVHh0ID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHZpZXdCb3g9XCIwIDAgMzYwIDY0MFwiIHdpZHRoPVwiMjYwXCIgcm9sZT1cImltZ1wiIGFyaWEtbGFiZWw9XCJFc3F1ZW1hIGdlbmVyYWRvIGNvbiAke2Jsb3F1ZXMuam9pbihcIiwgXCIpfVwiPjxyZWN0IHg9XCIxXCIgeT1cIjFcIiB3aWR0aD1cIjM1OFwiIGhlaWdodD1cIjYzOFwiIHJ4PVwiMjhcIiBmaWxsPVwiI2ZmZlwiIHN0cm9rZT1cIiMwYjBiMGJcIiBzdHJva2Utd2lkdGg9XCIyXCIvPjxyZWN0IHg9XCIxNlwiIHk9XCIzNlwiIHdpZHRoPVwiMzI4XCIgaGVpZ2h0PVwiNDRcIiBmaWxsPVwiI2ZmZlwiLz48dGV4dCB4PVwiMTgwXCIgeT1cIjY0XCIgZm9udC1zaXplPVwiMTVcIiBmb250LXdlaWdodD1cIjYwMFwiIHRleHQtYW5jaG9yPVwibWlkZGxlXCIgZmlsbD1cIiMwYjBiMGJcIj5SZXNlcnZhU2FsYTwvdGV4dD4ke3BhcnRlcy5qb2luKFwiXCIpfSR7bmF2c3ZnfTwvc3ZnPmA7XG4gIGNvbnN0IGF2aXNvcyA9IFtdO1xuICBpZiAoYmxvcXVlc1swXSA9PT0gXCJCYW5uZXJcIikgYXZpc29zLnB1c2goXCJFbCBiYW5uZXIgb2N1cGEgbGEgbWVqb3IgcG9zaWNpw7NuOiBsYSB0YXJlYSBwcmluY2lwYWwgcXVlZGEgYWJham8uXCIpO1xuICBpZiAoIWJsb3F1ZXMuaW5jbHVkZXMoXCJMaXN0YSBkZSByZXN1bHRhZG9zXCIpICYmICFibG9xdWVzLmluY2x1ZGVzKFwiUHLDs3hpbWEgcmVzZXJ2YVwiKSkgYXZpc29zLnB1c2goXCJObyBoYXkgY29udGVuaWRvIGRlIGxhIHRhcmVhIHByaW5jaXBhbDogwr9xdcOpIGhhY2UgZWwgdXN1YXJpbyBhcXXDrT9cIik7XG4gIGlmIChibG9xdWVzLmluZGV4T2YoXCJGaWx0cm9zXCIpID4gYmxvcXVlcy5pbmRleE9mKFwiTGlzdGEgZGUgcmVzdWx0YWRvc1wiKSAmJiBibG9xdWVzLmluY2x1ZGVzKFwiRmlsdHJvc1wiKSAmJiBibG9xdWVzLmluY2x1ZGVzKFwiTGlzdGEgZGUgcmVzdWx0YWRvc1wiKSkgYXZpc29zLnB1c2goXCJMb3MgZmlsdHJvcyB2YW4gZGVzcHXDqXMgZGUgbGEgbGlzdGE6IGVsIHVzdWFyaW8gbm8gbG9zIHZlcsOhIGhhc3RhIGRlc3BsYXphcnNlLlwiKTtcbiAgaWYgKG5ldyBTZXQoYmxvcXVlcykuc2l6ZSA8IGJsb3F1ZXMubGVuZ3RoKSBhdmlzb3MucHVzaChcIkhheSBibG9xdWVzIHJlcGV0aWRvcy5cIik7XG4gIGlmIChkZXNib3JkYSkgYXZpc29zLnB1c2goXCJFbCBjb250ZW5pZG8gbm8gY2FiZSBzaW4gZGVzcGxhemFyc2U6IHByaW9yaXphLlwiKTtcbiAgY29uc3QgZCA9IGh0bWxgPGRpdiByb2xlPVwic3RhdHVzXCIgY2xhc3M9XCJkLWZsZXggZmxleC13cmFwIGdhcC0zIGFsaWduLWl0ZW1zLXN0YXJ0XCI+PC9kaXY+YDtcbiAgY29uc3QgaXpxID0gaHRtbGA8ZGl2PjwvZGl2PmA7IGl6cS5pbm5lckhUTUwgPSBzdmdUeHQ7XG4gIGNvbnN0IGRlciA9IGh0bWxgPGRpdiBzdHlsZT1cIm1heC13aWR0aDoyNHJlbVwiPjwvZGl2PmA7XG4gIGRlci5pbm5lckhUTUwgPSBhdmlzb3MubGVuZ3RoID8gYDx1bD4ke2F2aXNvcy5tYXAoeCA9PiBgPGxpIGNsYXNzPVwibGFiLW1lZGlvXCIgc3R5bGU9XCJmb250LXdlaWdodDo2MDBcIj4ke3h9PC9saT5gKS5qb2luKFwiXCIpfTwvdWw+YCA6ICc8cCBjbGFzcz1cImxhYi1iaWVuXCIgc3R5bGU9XCJmb250LXdlaWdodDo2MDBcIj5Fc3RydWN0dXJhIGNvaGVyZW50ZTogbGEgdGFyZWEgcHJpbmNpcGFsIGVzdMOhIGFycmliYSB5IHRvZG8gY2FiZS48L3A+JztcbiAgY29uc3QgZW5sYWNlID0gaHRtbGA8YSBjbGFzcz1cImJ0biBidG4tb3V0bGluZS1wcmltYXJ5IGJ0bi1zbVwiIGRvd25sb2FkPVwiZXNxdWVtYS5zdmdcIj5EZXNjYXJnYXIgU1ZHPC9hPmA7XG4gIGVubGFjZS5ocmVmID0gVVJMLmNyZWF0ZU9iamVjdFVSTChuZXcgQmxvYihbc3ZnVHh0XSwge3R5cGU6IFwiaW1hZ2Uvc3ZnK3htbFwifSkpO1xuICBkZXIuYXBwZW5kKGVubGFjZSk7XG4gIGQuYXBwZW5kKGl6cSwgZGVyKTtcbiAgcmV0dXJuIGQ7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIGNvbnN0IHBhbnRhbGxhcyA9IHtcbiAgICBpbmljaW86IHtpbWc6IFwiZmlndXJhcy9nX2luaWNpby5zdmdcIiwgem9uYXM6IFtbMjQsIDMyMiwgMzEyLCA1MCwgXCJkZXRhbGxlXCIsIFwiU2FsYSAxLjAzXCJdLCBbMTAwLCAyNDIsIDcyLCAzNCwgXCJsaXN0YVwiLCBcIkVzdGEgdGFyZGVcIl0sIFsyNCwgNTAwLCAzMTIsIDMwLCBcImxpc3RhXCIsIFwiVmVyIHRvZGFzIGxhcyBzYWxhc1wiXV19LFxuICAgIGxpc3RhOiB7aW1nOiBcImZpZ3VyYXMvZ19saXN0YS5zdmdcIiwgem9uYXM6IFtbMjQsIDE2MiwgMzEyLCA1OCwgXCJkZXRhbGxlXCIsIFwiU2FsYSAxLjAyXCJdLCBbMTYsIDQwLCA0MCwgNDAsIFwiaW5pY2lvXCIsIFwiVm9sdmVyXCJdXX0sXG4gICAgZGV0YWxsZToge2ltZzogXCJmaWd1cmFzL2dfZGV0YWxsZS5zdmdcIiwgem9uYXM6IFtbMjQsIDUyOCwgMzEyLCA0MCwgXCJmb3JtdWxhcmlvXCIsIFwiUmVzZXJ2YXIgMTY6MDDigJMxODowMFwiXSwgWzE2LCA0MCwgNDAsIDQwLCBcImxpc3RhXCIsIFwiVm9sdmVyXCJdXX0sXG4gICAgZm9ybXVsYXJpbzoge2ltZzogXCJmaWd1cmFzL2dfZm9ybXVsYXJpby5zdmdcIiwgem9uYXM6IFtbMjQsIDQ4NCwgMzEyLCA0MCwgXCJjb25maXJtYWNpb25cIiwgXCJDb25maXJtYXIgcmVzZXJ2YVwiXSwgWzI0LCA1MzQsIDMxMiwgNDAsIFwiZGV0YWxsZVwiLCBcIlZvbHZlclwiXV19LFxuICAgIGNvbmZpcm1hY2lvbjoge2ltZzogXCJmaWd1cmFzL2dfY29uZmlybWFjaW9uLnN2Z1wiLCB6b25hczogW1sxMDAsIDU0NSwgMTYwLCAyNCwgXCJpbmljaW9cIiwgXCJWb2x2ZXIgYWwgaW5pY2lvXCJdXX1cbiAgfTtcbiAgY29uc3QgY2FqYSA9IGh0bWxgPGRpdiBzdHlsZT1cInBvc2l0aW9uOnJlbGF0aXZlO3dpZHRoOjI4OHB4O21heC13aWR0aDoxMDAlXCI+PC9kaXY+YDtcbiAgY29uc3QgZXN0YWRvID0gaHRtbGA8cCByb2xlPVwic3RhdHVzXCIgYXJpYS1saXZlPVwicG9saXRlXCIgY2xhc3M9XCJzbWFsbFwiPjwvcD5gO1xuICBsZXQgcGFzb3MgPSAwO1xuICBjb25zdCBpciA9IGlkID0+IHtcbiAgICBjb25zdCBwID0gcGFudGFsbGFzW2lkXTsgY2FqYS5pbm5lckhUTUwgPSBcIlwiO1xuICAgIGNvbnN0IGltID0gaHRtbGA8aW1nIGFsdD1cIlBhbnRhbGxhICR7aWR9IGRlbCBwcm90b3RpcG9cIiBzdHlsZT1cIndpZHRoOjEwMCU7ZGlzcGxheTpibG9ja1wiPmA7IGltLnNyYyA9IHAuaW1nOyBjYWphLmFwcGVuZChpbSk7XG4gICAgZm9yIChjb25zdCBbeCwgeSwgdywgaCwgZGVzdCwgZXRdIG9mIHAuem9uYXMpIHtcbiAgICAgIGNvbnN0IGIgPSBodG1sYDxidXR0b24gdHlwZT1cImJ1dHRvblwiIGFyaWEtbGFiZWw9XCIke2V0fVwiIHRpdGxlPVwiJHtldH1cIiBzdHlsZT1cInBvc2l0aW9uOmFic29sdXRlO2xlZnQ6JHt4IC8gMy42fSU7dG9wOiR7eSAvIDYuNH0lO3dpZHRoOiR7dyAvIDMuNn0lO2hlaWdodDoke2ggLyA2LjR9JTtiYWNrZ3JvdW5kOnJnYmEoNDIsMTIwLDIxNCwuMTIpO2JvcmRlcjoycHggZGFzaGVkIHJnYmEoNDIsMTIwLDIxNCwuNik7Ym9yZGVyLXJhZGl1czo4cHg7Y3Vyc29yOnBvaW50ZXJcIj48L2J1dHRvbj5gO1xuICAgICAgYi5vbmNsaWNrID0gKCkgPT4geyBwYXNvcysrOyBpcihkZXN0KTsgfTtcbiAgICAgIGNhamEuYXBwZW5kKGIpO1xuICAgIH1cbiAgICBlc3RhZG8udGV4dENvbnRlbnQgPSBpZCA9PT0gXCJjb25maXJtYWNpb25cIiA/IGDCoVRhcmVhIGNvbXBsZXRhZGEgZW4gJHtwYXNvc30gcGFzb3MhIEVsIGNhbWlubyBtw6FzIGNvcnRvIHNvbiA0LmAgOiBgUGFudGFsbGE6ICR7aWR9IMK3IHBhc29zOiAke3Bhc29zfWA7XG4gIH07XG4gIGlyKFwiaW5pY2lvXCIpO1xuICByZXR1cm4gaHRtbGA8ZGl2PiR7Y2FqYX0ke2VzdGFkb308cCBjbGFzcz1cInNtYWxsXCI+TGFzIHpvbmFzIHB1bHNhYmxlcyBlc3TDoW4gbWFyY2FkYXMgY29uIGJvcmRlIGRpc2NvbnRpbnVvLiBQdWVkZXMgbmF2ZWdhciB0YW1iacOpbiBjb24gZWwgdGFidWxhZG9yLjwvcD48L2Rpdj5gO1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdiMScpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdiMicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdiMycpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdiNCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCduYXZpbmYnKSJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pablosancheznunez\.com\/prototipos-baja-fidelidad\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./12-inclusivo.html" class="pagination-link" aria-label="Tema 12. Diseño equitativo, inclusivo y accesible">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Tema 12. Diseño equitativo, inclusivo y accesible</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./90-uxlearn.html" class="pagination-link" aria-label="Las funciones del libro">
+        <span class="nav-page-text"><span class="chapter-title">Las funciones del libro</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 <a href="https://pablosancheznunez.com">Pablo Sánchez-Núñez</a> · <a href="https://orcid.org/0000-0001-7845-9506">ORCID 0000-0001-7845-9506</a> · Texto bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Universidad Carlos III de Madrid · Hecho con <a href="https://quarto.org">Quarto</a> y <a href="https://docs.r-wasm.org/webr/latest/">webR</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

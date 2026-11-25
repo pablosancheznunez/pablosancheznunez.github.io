@@ -2055,278 +2055,366 @@
     ]
   },
   {
+    "objectID": "93-galeria.html",
+    "href": "93-galeria.html",
+    "title": "Apéndice A — Galería interactiva de esquemas",
+    "section": "",
+    "text": "Las pantallas, una a una\nEsta galería reúne los esquemas completos de ReservaSala, la app para reservar salas de estudio que sirve de ejemplo en los casos prácticos de todos los temas. Úsala como referencia de patrones, como material para criticar y como punto de partida para tus propios esquemas. Todos los esquemas son SVG: puedes descargarlos y editarlos con cualquier herramienta de diseño.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Galería interactiva de esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "93-galeria.html#las-pantallas-una-a-una",
+    "href": "93-galeria.html#las-pantallas-una-a-una",
+    "title": "Apéndice A — Galería interactiva de esquemas",
+    "section": "",
+    "text": "InicioListaDetalleFormularioConfirmaciónEstado vacío\n\n\n\n\n\n\n\n\nFigura 1: Pantalla de inicio: la próxima reserva arriba, la elección rápida de franja y las salas libres ahora.\n\n\n\nDecisiones de diseño\n\nLo más urgente primero: la próxima reserva (con cancelación a un toque).\nLa pregunta de la investigación («¿cuándo quieres estudiar?») se convierte en botones de franja grandes.\nResultados inmediatos sin pantalla intermedia: tres salas libres ahora.\nNavegación inferior con cuatro destinos, al alcance del pulgar.\n\n\n\n\n\n\n\n\n\nFigura 2: Lista de salas con filtros en forma de chips y una barra de disponibilidad compacta en cada fila.\n\n\n\nDecisiones de diseño\n\nFiltros visibles como chips: se ve qué está filtrado sin abrir un panel.\nEl recuento («12 salas disponibles») confirma que el filtro ha funcionado.\nLa barra horaria de cada fila permite comparar sin entrar en el detalle.\nOrden explícito («por cercanía»): el usuario sabe por qué ve ese orden.\n\n\n\n\n\n\n\n\n\nFigura 3: Detalle de una sala: foto, características y disponibilidad del día con la acción principal fija abajo.\n\n\n\nDecisiones de diseño\n\nLa disponibilidad es el elemento central: es lo que decide la reserva.\nLa leyenda no depende solo del color: dice «Libre» y «Ocupada».\nEl botón concreta la acción («Reservar 16:00–18:00»), no solo «Reservar».\n\n\n\n\n\n\n\n\n\nFigura 4: Confirmación de la reserva con tres campos etiquetados, una casilla de recordatorio y la regla de liberación explicada antes de confirmar.\n\n\n\nDecisiones de diseño\n\nEtiquetas visibles encima de cada campo; el marcador de posición solo da un ejemplo.\nSe indica qué es opcional, no qué es obligatorio (la mayoría lo es).\nLas reglas («se libera en 15 minutos») se explican antes de confirmar, no después.\nJerarquía clara: una acción principal y una secundaria.\n\n\n\n\n\n\n\n\n\nFigura 5: Pantalla de éxito con el resumen de la reserva, el código y las acciones siguientes.\n\n\n\nDecisiones de diseño\n\nMensaje de éxito inequívoco y resumen para comprobar los datos.\nLas acciones siguientes más probables (calendario, cancelar).\nEl código de reserva es corto y legible para dictarlo en el mostrador.\n\n\n\n\n\n\n\n\n\nFigura 6: Estado vacío útil: explica por qué no hay resultados y ofrece alternativas.\n\n\n\nDecisiones de diseño\n\nExplica el motivo («para 10 personas») y da el dato útil («las más grandes son para 8»).\nOfrece tres salidas: relajar el filtro, cambiar la franja o esperar un aviso.\nNunca un callejón sin salida.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Galería interactiva de esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "93-galeria.html#el-flujo-completo",
+    "href": "93-galeria.html#el-flujo-completo",
+    "title": "Apéndice A — Galería interactiva de esquemas",
+    "section": "El flujo completo",
+    "text": "El flujo completo\n\n\n\n\n\nflowchart LR\n  A[Inicio] --&gt; B{¿Franja elegida?}\n  B -- Sí --&gt; C[Lista de salas]\n  B -- No --&gt; B2[Elegir franja] --&gt; C\n  C --&gt; D{¿Hay salas?}\n  D -- No --&gt; E[Estado vacío] --&gt; C\n  D -- Sí --&gt; F[Detalle de sala]\n  F --&gt; G[Formulario]\n  G --&gt; H{¿Sigue libre?}\n  H -- Sí --&gt; I[Confirmación]\n  H -- No --&gt; J[Aviso: sala ocupada] --&gt; C\n  I --&gt; K[Calendario]\n  I --&gt; L[Cancelar]\n\n\n Flujo de reserva de ReservaSala con sus caminos alternativos.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Galería interactiva de esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "93-galeria.html#antes-y-después",
+    "href": "93-galeria.html#antes-y-después",
+    "title": "Apéndice A — Galería interactiva de esquemas",
+    "section": "Antes y después",
+    "text": "Antes y después\n\n\n\n\n\n\n\n\n\nFigura 7: Antes. Primera versión, con problemas de jerarquía, lenguaje y retroalimentación.\n\n\n\n\n\n\n\n\n\n\n\nFigura 8: Después. La misma función rediseñada: la tarea principal primero y lenguaje de la persona.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Galería interactiva de esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "93-galeria.html#actividad-encuentra-los-problemas",
+    "href": "93-galeria.html#actividad-encuentra-los-problemas",
+    "title": "Apéndice A — Galería interactiva de esquemas",
+    "section": "Actividad: encuentra los problemas",
+    "text": "Actividad: encuentra los problemas\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Galería interactiva de esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "93-galeria.html#lab-galeria-constructor",
+    "href": "93-galeria.html#lab-galeria-constructor",
+    "title": "Apéndice A — Galería interactiva de esquemas",
+    "section": "Laboratorio: constructor de esquemas",
+    "text": "Laboratorio: constructor de esquemas\n\n\nLaboratorio · se ejecuta en tu navegador\n\nElige los bloques de una pantalla móvil y su orden. El laboratorio dibuja el esquema y señala problemas frecuentes. Puedes descargar el resultado como SVG.\n\nseleccion = window.Lab.seleccion\ncasilla = window.Lab.casilla\nviewof b1 = seleccion(\"Bloque 1 (arriba)\", [\"Buscador\", \"Próxima reserva\", \"Banner\", \"Filtros\", \"Lista de resultados\", \"Botón principal\", \"(vacío)\"], {value: \"Próxima reserva\"})\nviewof b2 = seleccion(\"Bloque 2\", [\"Buscador\", \"Próxima reserva\", \"Banner\", \"Filtros\", \"Lista de resultados\", \"Botón principal\", \"(vacío)\"], {value: \"Filtros\"})\nviewof b3 = seleccion(\"Bloque 3\", [\"Buscador\", \"Próxima reserva\", \"Banner\", \"Filtros\", \"Lista de resultados\", \"Botón principal\", \"(vacío)\"], {value: \"Lista de resultados\"})\nviewof b4 = seleccion(\"Bloque 4 (abajo)\", [\"Buscador\", \"Próxima reserva\", \"Banner\", \"Filtros\", \"Lista de resultados\", \"Botón principal\", \"(vacío)\"], {value: \"(vacío)\"})\nviewof navinf = casilla(\"Barra de navegación inferior\", {value: true})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const bloques = [b1, b2, b3, b4].filter(b =&gt; b !== \"(vacío)\");\n  const alto = {\"Buscador\": 44, \"Próxima reserva\": 84, \"Banner\": 130, \"Filtros\": 40, \"Lista de resultados\": 200, \"Botón principal\": 48};\n  let y = 96, partes = [];\n  const g = \"#eceae5\", a = \"#2a78d6\";\n  for (const b of bloques) {\n    const h = alto[b];\n    if (b === \"Buscador\") partes.push(`&lt;rect x=\"24\" y=\"${y}\" width=\"312\" height=\"${h}\" rx=\"22\" fill=\"#fff\" stroke=\"#52514e\"/&gt;&lt;text x=\"44\" y=\"${y + 27}\" font-size=\"13\" fill=\"#52514e\"&gt;Buscar sala…&lt;/text&gt;`);\n    else if (b === \"Próxima reserva\") partes.push(`&lt;rect x=\"24\" y=\"${y}\" width=\"312\" height=\"${h - 10}\" rx=\"10\" fill=\"#fff\" stroke=\"#a3a29e\"/&gt;&lt;text x=\"36\" y=\"${y + 24}\" font-size=\"11\" fill=\"#52514e\"&gt;Tu próxima reserva&lt;/text&gt;&lt;text x=\"36\" y=\"${y + 46}\" font-size=\"14\" font-weight=\"600\" fill=\"#0b0b0b\"&gt;Sala 2.14 · Hoy 16:00&lt;/text&gt;`);\n    else if (b === \"Banner\") partes.push(`&lt;rect x=\"24\" y=\"${y}\" width=\"312\" height=\"${h - 10}\" rx=\"6\" fill=\"${g}\"/&gt;&lt;text x=\"180\" y=\"${y + 64}\" font-size=\"13\" text-anchor=\"middle\" fill=\"#52514e\"&gt;Banner&lt;/text&gt;`);\n    else if (b === \"Filtros\") partes.push([0, 1, 2].map(i =&gt; `&lt;rect x=\"${24 + i * 104}\" y=\"${y}\" width=\"96\" height=\"30\" rx=\"15\" fill=\"#fff\" stroke=\"#0b0b0b\"/&gt;`).join(\"\"));\n    else if (b === \"Lista de resultados\") partes.push([0, 1, 2].map(i =&gt; `&lt;rect x=\"24\" y=\"${y + i * 64}\" width=\"312\" height=\"56\" rx=\"8\" fill=\"${g}\"/&gt;&lt;rect x=\"36\" y=\"${y + i * 64 + 16}\" width=\"140\" height=\"8\" rx=\"4\" fill=\"#a3a29e\"/&gt;&lt;rect x=\"36\" y=\"${y + i * 64 + 32}\" width=\"90\" height=\"6\" rx=\"3\" fill=\"#d9d8d4\"/&gt;`).join(\"\"));\n    else if (b === \"Botón principal\") partes.push(`&lt;rect x=\"24\" y=\"${y}\" width=\"312\" height=\"40\" rx=\"8\" fill=\"${a}\"/&gt;&lt;text x=\"180\" y=\"${y + 25}\" font-size=\"14\" font-weight=\"600\" fill=\"#fff\" text-anchor=\"middle\"&gt;Reservar&lt;/text&gt;`);\n    y += h;\n  }\n  const navsvg = navinf ? `&lt;line x1=\"16\" y1=\"580\" x2=\"344\" y2=\"580\" stroke=\"#d9d8d4\"/&gt;` + [0, 1, 2, 3].map(i =&gt; `&lt;rect x=\"${46 + i * 92}\" y=\"592\" width=\"24\" height=\"20\" rx=\"4\" fill=\"#d9d8d4\"/&gt;`).join(\"\") : \"\";\n  const desborda = y &gt; (navinf ? 576 : 620);\n  const svgTxt = `&lt;svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 640\" width=\"260\" role=\"img\" aria-label=\"Esquema generado con ${bloques.join(\", \")}\"&gt;&lt;rect x=\"1\" y=\"1\" width=\"358\" height=\"638\" rx=\"28\" fill=\"#fff\" stroke=\"#0b0b0b\" stroke-width=\"2\"/&gt;&lt;rect x=\"16\" y=\"36\" width=\"328\" height=\"44\" fill=\"#fff\"/&gt;&lt;text x=\"180\" y=\"64\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#0b0b0b\"&gt;ReservaSala&lt;/text&gt;${partes.join(\"\")}${navsvg}&lt;/svg&gt;`;\n  const avisos = [];\n  if (bloques[0] === \"Banner\") avisos.push(\"El banner ocupa la mejor posición: la tarea principal queda abajo.\");\n  if (!bloques.includes(\"Lista de resultados\") && !bloques.includes(\"Próxima reserva\")) avisos.push(\"No hay contenido de la tarea principal: ¿qué hace el usuario aquí?\");\n  if (bloques.indexOf(\"Filtros\") &gt; bloques.indexOf(\"Lista de resultados\") && bloques.includes(\"Filtros\") && bloques.includes(\"Lista de resultados\")) avisos.push(\"Los filtros van después de la lista: el usuario no los verá hasta desplazarse.\");\n  if (new Set(bloques).size &lt; bloques.length) avisos.push(\"Hay bloques repetidos.\");\n  if (desborda) avisos.push(\"El contenido no cabe sin desplazarse: prioriza.\");\n  const d = html`&lt;div role=\"status\" class=\"d-flex flex-wrap gap-3 align-items-start\"&gt;&lt;/div&gt;`;\n  const izq = html`&lt;div&gt;&lt;/div&gt;`; izq.innerHTML = svgTxt;\n  const der = html`&lt;div style=\"max-width:24rem\"&gt;&lt;/div&gt;`;\n  der.innerHTML = avisos.length ? `&lt;ul&gt;${avisos.map(x =&gt; `&lt;li class=\"lab-medio\" style=\"font-weight:600\"&gt;${x}&lt;/li&gt;`).join(\"\")}&lt;/ul&gt;` : '&lt;p class=\"lab-bien\" style=\"font-weight:600\"&gt;Estructura coherente: la tarea principal está arriba y todo cabe.&lt;/p&gt;';\n  const enlace = html`&lt;a class=\"btn btn-outline-primary btn-sm\" download=\"esquema.svg\"&gt;Descargar SVG&lt;/a&gt;`;\n  enlace.href = URL.createObjectURL(new Blob([svgTxt], {type: \"image/svg+xml\"}));\n  der.append(enlace);\n  d.append(izq, der);\n  return d;\n}",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Galería interactiva de esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "93-galeria.html#lab-galeria-prototipo",
+    "href": "93-galeria.html#lab-galeria-prototipo",
+    "title": "Apéndice A — Galería interactiva de esquemas",
+    "section": "Laboratorio: prototipo navegable",
+    "text": "Laboratorio: prototipo navegable\n\n\nLaboratorio · se ejecuta en tu navegador\n\nUn prototipo de baja fidelidad navegable hecho solo con los esquemas de la galería y zonas pulsables. Haz la tarea: reserva una sala para esta tarde. Así se prueba un flujo antes de diseñar nada en alta fidelidad.\n\n{\n  const pantallas = {\n    inicio: {img: \"figuras/g_inicio.svg\", zonas: [[24, 322, 312, 50, \"detalle\", \"Sala 1.03\"], [100, 242, 72, 34, \"lista\", \"Esta tarde\"], [24, 500, 312, 30, \"lista\", \"Ver todas las salas\"]]},\n    lista: {img: \"figuras/g_lista.svg\", zonas: [[24, 162, 312, 58, \"detalle\", \"Sala 1.02\"], [16, 40, 40, 40, \"inicio\", \"Volver\"]]},\n    detalle: {img: \"figuras/g_detalle.svg\", zonas: [[24, 528, 312, 40, \"formulario\", \"Reservar 16:00–18:00\"], [16, 40, 40, 40, \"lista\", \"Volver\"]]},\n    formulario: {img: \"figuras/g_formulario.svg\", zonas: [[24, 484, 312, 40, \"confirmacion\", \"Confirmar reserva\"], [24, 534, 312, 40, \"detalle\", \"Volver\"]]},\n    confirmacion: {img: \"figuras/g_confirmacion.svg\", zonas: [[100, 545, 160, 24, \"inicio\", \"Volver al inicio\"]]}\n  };\n  const caja = html`&lt;div style=\"position:relative;width:288px;max-width:100%\"&gt;&lt;/div&gt;`;\n  const estado = html`&lt;p role=\"status\" aria-live=\"polite\" class=\"small\"&gt;&lt;/p&gt;`;\n  let pasos = 0;\n  const ir = id =&gt; {\n    const p = pantallas[id]; caja.innerHTML = \"\";\n    const im = html`&lt;img alt=\"Pantalla ${id} del prototipo\" style=\"width:100%;display:block\"&gt;`; im.src = p.img; caja.append(im);\n    for (const [x, y, w, h, dest, et] of p.zonas) {\n      const b = html`&lt;button type=\"button\" aria-label=\"${et}\" title=\"${et}\" style=\"position:absolute;left:${x / 3.6}%;top:${y / 6.4}%;width:${w / 3.6}%;height:${h / 6.4}%;background:rgba(42,120,214,.12);border:2px dashed rgba(42,120,214,.6);border-radius:8px;cursor:pointer\"&gt;&lt;/button&gt;`;\n      b.onclick = () =&gt; { pasos++; ir(dest); };\n      caja.append(b);\n    }\n    estado.textContent = id === \"confirmacion\" ? `¡Tarea completada en ${pasos} pasos! El camino más corto son 4.` : `Pantalla: ${id} · pasos: ${pasos}`;\n  };\n  ir(\"inicio\");\n  return html`&lt;div&gt;${caja}${estado}&lt;p class=\"small\"&gt;Las zonas pulsables están marcadas con borde discontinuo. Puedes navegar también con el tabulador.&lt;/p&gt;&lt;/div&gt;`;\n}",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Galería interactiva de esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "93-galeria.html#para-tu-proyecto",
+    "href": "93-galeria.html#para-tu-proyecto",
+    "title": "Apéndice A — Galería interactiva de esquemas",
+    "section": "Para tu proyecto",
+    "text": "Para tu proyecto\n\nDescarga los SVG desde el botón derecho del ratón («Guardar imagen como…») y edítalos en Figma, Penpot o Inkscape.\nUsa la lista de decisiones de diseño de cada pantalla como guion para presentar tus esquemas en la crítica.\nReproduce el prototipo navegable con tus propias pantallas: es la forma más rápida de probar un flujo con cinco personas.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Galería interactiva de esquemas</span>"
+    ]
+  },
+  {
     "objectID": "90-uxlearn.html",
     "href": "90-uxlearn.html",
-    "title": "Apéndice A — Las funciones del libro",
+    "title": "Apéndice B — Las funciones del libro",
     "section": "",
     "text": "Funciones\nEl fichero funciones_ux.R reúne las funciones y los datos simulados de este libro y de su continuación, Diseño e interacción en prototipos de alta fidelidad. Sirve para comprobar y medir lo que se diseña: no sustituye a las herramientas de diseño.\nDentro del libro se carga con source(\"datos/funciones_ux.R\"). Para usarlo en tu ordenador, con RStudio o Positron, descárgalo en la carpeta de tu proyecto y cárgalo igual; no hace falta instalar nada:\nDescargar funciones_ux.R",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Las funciones del libro</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "90-uxlearn.html#funciones",
     "href": "90-uxlearn.html#funciones",
-    "title": "Apéndice A — Las funciones del libro",
+    "title": "Apéndice B — Las funciones del libro",
     "section": "",
     "text": "Para…\nFunción\nTema\n\n\n\n\nRelación de contraste entre dos colores (WCAG)\ncontraste()\n12\n\n\n¿Cumple el contraste mínimo AA o AAA?\ncumple_wcag()\n12\n\n\nRevisar todos los colores de una paleta\nrevisar_paleta()\n12\n\n\nSimular protanopía, deuteranopía o tritanopía\nsimular_daltonismo()\n12\n\n\n¿Se distinguen dos colores por luminosidad?\ndistinguibles()\n12\n\n\nCalcular una rejilla de columnas\nrejilla(), ancho_bloque()\n7\n\n\nCaracteres por línea\ncaracteres_por_linea()\n7\n\n\nEscala tipográfica modular\nescala_tipografica()\nAlta fidelidad\n\n\nPuntuación SUS y su aceptabilidad\npuntuacion_sus(), aceptabilidad_sus()\n4\n\n\nTasa de éxito con intervalo de confianza\ntasa_exito()\n4, 9\n\n\nTiempo típico (media geométrica)\ntiempo_tipico()\n4, 9\n\n\nAbandono en cada paso de un flujo\nembudo()\n5\n\n\nPriorizar los hallazgos de una revisión heurística\npriorizar_hallazgos()\n2",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Las funciones del libro</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "90-uxlearn.html#datos-todos-simulados-salvo-las-taxonomías",
     "href": "90-uxlearn.html#datos-todos-simulados-salvo-las-taxonomías",
-    "title": "Apéndice A — Las funciones del libro",
+    "title": "Apéndice B — Las funciones del libro",
     "section": "Datos (todos simulados, salvo las taxonomías)",
     "text": "Datos (todos simulados, salvo las taxonomías)\n\n\n\n\n\n\n\nObjeto\nContenido\n\n\n\n\nrespuestas_sus\nRespuestas al SUS de 12 participantes\n\n\nsesiones_prueba\n8 participantes × 3 tareas × prototipo en papel y digital\n\n\nflujo_registro\nUsuarios en cada paso de un registro\n\n\nhallazgos_heuristicos\n6 problemas valorados por 3 evaluadores\n\n\nheuristicas_nielsen\nLas diez heurísticas de Nielsen\n\n\npatrones_enganosos\nCategorías de Gray et al. (2018) y Mathur et al. (2019)\n\n\npaleta_ejemplo\nNueve colores de un sistema de diseño\n\n\n\nPrueba aquí cualquier función:",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Las funciones del libro</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "90-uxlearn.html#referencias-de-los-métodos",
     "href": "90-uxlearn.html#referencias-de-los-métodos",
-    "title": "Apéndice A — Las funciones del libro",
+    "title": "Apéndice B — Las funciones del libro",
     "section": "Referencias de los métodos",
     "text": "Referencias de los métodos\n\nBangor, A.; Kortum, P. T.; Miller, J. T. (2008). An empirical evaluation of the System Usability Scale. International Journal of Human-Computer Interaction, 24(6), 574-594.\nBrooke, J. (1996). SUS: A «quick and dirty» usability scale. En P. W. Jordan et al. (eds.), Usability evaluation in industry (pp. 189-194). Taylor & Francis.\nMachado, G. M.; Oliveira, M. M.; Fernandes, L. A. F. (2009). A physiologically-based model for simulation of color vision deficiency. IEEE Transactions on Visualization and Computer Graphics, 15(6), 1291-1298.\nSauro, J.; Lewis, J. R. (2016). Quantifying the user experience (2.ª ed.). Morgan Kaufmann.\nW3C (2023). Web Content Accessibility Guidelines (WCAG) 2.2.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Las funciones del libro</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html",
     "href": "91-guia-docente.html",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "",
     "text": "Correspondencia con la ficha de la asignatura\nEsta guía explica cómo está pensado el libro para la docencia de la asignatura y cómo mantenerlo.\nLos doce temas siguen, en el mismo orden, los contenidos de la ficha oficial de Esquemas de página y prototipos de baja fidelidad (19945). Los objetivos de cada tema concretan los objetivos específicos de la ficha.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#correspondencia-con-la-ficha-de-la-asignatura",
     "href": "91-guia-docente.html#correspondencia-con-la-ficha-de-la-asignatura",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "",
     "text": "Actividad de evaluación (ficha)\nPeso\nApoyo en el libro\n\n\n\n\nExamen final\n50 %\nContenidos y lecturas obligatorias de los doce temas; las autoevaluaciones sirven de práctica\n\n\nActividades en Aula Global\n25 %\nRetos evaluables (uno por tema) y banco de preguntas en Moodle XML\n\n\nProyecto final en equipo\n25 %\nLos retos 3 a 9 son los pasos del proyecto: brief, métricas, flujos, storyboards, esquemas, prototipo navegable y prueba",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#retos-evaluables",
     "href": "91-guia-docente.html#retos-evaluables",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Retos evaluables",
     "text": "Retos evaluables\nCada tema termina con un reto sin pista, solución ni corrección automática. Cada estudiante trabaja con un servicio o un proyecto elegido por él, lo que dificulta copiar. Se entrega con la plantilla entrega_reto.qmd, que lleva una rúbrica común: comprensión del tema (20 %), calidad del trabajo de diseño (30 %), justificación de las decisiones (20 %), ética, inclusión y accesibilidad (15 %) y presentación (15 %). La plantilla genera un HTML con las imágenes dentro, de modo que la entrega es un único fichero. No hace falta saber R para usarla.\nLas soluciones de referencia y los criterios de corrección de los retos no están en el repositorio público.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#autoevaluación-en-aula-global",
     "href": "91-guia-docente.html#autoevaluación-en-aula-global",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Autoevaluación en Aula Global",
     "text": "Autoevaluación en Aula Global\nLas preguntas de autoevaluación de cada tema están exportadas a Moodle XML en la carpeta moodle/ del repositorio: un fichero por tema y uno con todo el banco. Se importan desde Banco de preguntas → Importar → Formato Moodle XML. Cada pregunta conserva su explicación como retroalimentación general.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#el-papel-de-r",
     "href": "91-guia-docente.html#el-papel-de-r",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "El papel de R",
     "text": "El papel de R\nEl libro usa R lo imprescindible: cinco temas tienen ejercicios breves de completar huecos con funciones del libro (métricas, embudos, priorización de hallazgos, rejillas y color). El capítulo Usar R en este libro basta como preparación. Ningún reto exige programar.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
     "href": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Actividades interactivas y laboratorios",
     "text": "Actividades interactivas y laboratorios\nAdemás de los ejercicios de R y la autoevaluación, cada tema tiene actividades de corrección inmediata (ordenar, clasificar, señalar zonas sobre una pantalla y escenarios con decisiones) y varios laboratorios que se usan sin programar: ordenación de tarjetas con una matriz de similitud, escala SUS, intervalo de confianza de una tasa de éxito, embudo de un flujo, calculadora de rejilla, prueba de los cinco segundos, prueba de árbol, mapa de calor simulado y comprobador de contraste con simulación de daltonismo. Todo se ejecuta en el navegador del estudiante, sin conexión a servicios externos, y los datos de los laboratorios son simulados. En el PDF y el EPUB las actividades aparecen en papel, con su solución.\nLas actividades están escritas en Markdown con la extensión interactivos (_extensions/interactivos/interactivos.lua), así que se pueden añadir o cambiar sin programar.\n\nDiapositivas de clase: cada tema tiene unas diapositivas con los objetivos, las figuras, las tablas principales, la lectura, preguntas para debatir y el reto, en diapositivas/ (F, pantalla completa; S, notas).",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#funciones-del-libro",
     "href": "91-guia-docente.html#funciones-del-libro",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Funciones del libro",
     "text": "Funciones del libro\n\nProgreso del estudiante: cada capítulo muestra los ejercicios resueltos y las preguntas acertadas; la presentación resume todos. Se guarda solo en el navegador del estudiante (localStorage): el profesorado no lo ve. Sirve para la autorregulación, no para evaluar.\nUso sin conexión: un service worker (sw.js) guarda las páginas, webR y sus paquetes tras la primera visita.\nModo claro y oscuro, con auditoría de accesibilidad (WCAG 2.1 AA) en los dos.\nPDF y EPUB generados con python3 herramientas/pdf.py.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#mantenimiento",
     "href": "91-guia-docente.html#mantenimiento",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Mantenimiento",
     "text": "Mantenimiento\nDesde la raíz del repositorio:\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras y plantillas en PDF\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\npython3 herramientas/diapositivas.py    # diapositivas de clase\nEl flujo .github/workflows/comprobar.yml renderiza el libro y comprueba en un navegador real todos los ejercicios, las preguntas y la accesibilidad en modo claro y oscuro. Al publicar una versión nueva, actualiza version en CITATION.cff y vuelve a ejecutar preparar.py para que los navegadores renueven su copia.\nLos datos de todos los ejercicios son simulados; no hay datos de personas reales.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "92-glosario.html",
     "href": "92-glosario.html",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "",
     "text": "Tema 1. Fundamentos\nTérminos del libro ordenados por tema. Cada entrada enlaza con el tema donde se explica.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-1.-fundamentos",
     "href": "92-glosario.html#tema-1.-fundamentos",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "",
     "text": "Prototipo\nRepresentación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo. → Tema 1\n\n\nFidelidad\nGrado en que un prototipo se parece al producto final. Tiene varias dimensiones independientes: apariencia, datos, funcionalidad, interactividad y estructura espacial. → Tema 1\n\n\nBoceto\nDibujo rápido, barato y ambiguo que sirve para explorar y generar alternativas, no para especificar. → Tema 1\n\n\nEsquema de página\nWireframe. Representación de la estructura de una pantalla: qué elementos contiene, dónde están y qué importancia tienen, sin estilo visual. → Tema 7\n\n\nDiseño centrado en las personas\nEnfoque, descrito en la norma ISO 9241-210, que repite un ciclo de cuatro actividades: entender el contexto de uso, especificar requisitos, producir soluciones y evaluarlas. → Tema 1\n\n\nIteración\nCada vuelta del ciclo de diseño y evaluación. → Tema 1",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-2.-investigación",
     "href": "92-glosario.html#tema-2.-investigación",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 2. Investigación",
     "text": "Tema 2. Investigación\n\nInvestigación con usuarios\nConjunto de métodos para entender quién usará un producto, qué intenta conseguir, en qué contexto y qué se lo impide. → Tema 2\n\n\nMétodo actitudinal\nMétodo que recoge lo que las personas dicen: opiniones, intenciones, preferencias. → Tema 2\n\n\nMétodo comportamental\nMétodo que observa lo que las personas hacen. → Tema 2\n\n\nEvaluación heurística\nInspección de una interfaz por varios evaluadores con una lista breve de principios (heurísticas), sin participación de usuarios. → Tema 2\n\n\nSeveridad\nGravedad de un problema de usabilidad, de 0 (no es un problema) a 4 (catástrofe) en la escala de Nielsen. → Tema 2\n\n\nDiagrama de afinidad\nTécnica de análisis que agrupa observaciones escritas en notas según su similitud hasta que emergen temas. → Tema 2\n\n\nHallazgo\nObservación de la investigación con su evidencia. Se distingue de la conclusión (insight), que la interpreta. → Tema 2\n\n\n«¿Cómo podríamos…?»\nHow might we. Forma de convertir una conclusión de la investigación en una oportunidad de diseño abierta a varias soluciones. → Tema 2",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-3.-definir-el-problema",
     "href": "92-glosario.html#tema-3.-definir-el-problema",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 3. Definir el problema",
     "text": "Tema 3. Definir el problema\n\nEnunciado del problema\nFrase que describe a quién afecta el problema, qué necesita y por qué, sin incluir una solución. → Tema 3\n\n\nHipótesis de diseño\nAfirmación comprobable sobre el efecto de un cambio de diseño, con la señal que permitirá saber si se cumple. → Tema 3\n\n\nAlcance\nLo que entra y, sobre todo, lo que no entra en un proyecto. → Tema 3\n\n\nProblema retorcido\nWicked problem. Problema sin formulación definitiva en el que entenderlo y resolverlo ocurren a la vez (Rittel y Webber, 1973). → Tema 3\n\n\nEncuadre\nManera de mirar una situación que abre soluciones nuevas; según Dorst (2011), el núcleo del pensamiento de diseño. → Tema 3\n\n\nBrief de diseño\nDocumento breve que reúne el problema, las personas usuarias, las hipótesis, el alcance, las restricciones y los criterios de éxito. → Tema 3",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-4.-métricas",
     "href": "92-glosario.html#tema-4.-métricas",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 4. Métricas",
     "text": "Tema 4. Métricas\n\nObjetivo SMART\nObjetivo específico, medible, alcanzable, relevante y con plazo. → Tema 4\n\n\nHito\nPunto del proyecto definido por un resultado comprobable. → Tema 4\n\n\nMarco HEART\nAgrupación de métricas de experiencia en satisfacción, implicación, adopción, retención y éxito en la tarea (Rodden et al., 2010). → Tema 4\n\n\nTasa de éxito\nProporción de participantes que completan una tarea. → Tema 4\n\n\nIntervalo de confianza\nRango de valores entre los que está probablemente el valor real de una métrica. Con muestras pequeñas es ancho. → Tema 4\n\n\nMedia geométrica\nMedia de los logaritmos devuelta a la escala original; representa mejor el tiempo típico cuando hay valores muy altos. → Tema 4\n\n\nSUS\nSystem Usability Scale. Cuestionario de diez afirmaciones que da una puntuación de usabilidad percibida de 0 a 100, que no es un porcentaje. → Tema 4",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-5.-flujos",
     "href": "92-glosario.html#tema-5.-flujos",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 5. Flujos",
     "text": "Tema 5. Flujos\n\nFlujo de usuario\nRecorrido por el sistema para completar una tarea, con sus pantallas y decisiones. → Tema 5\n\n\nAnálisis de tareas\nDescomposición de un objetivo en subtareas y pasos. → Tema 5\n\n\nMapa de tareas\nRepresentación ordenada de todas las tareas de un servicio, sin entrar en pantallas. → Tema 5\n\n\nWireflow\nFlujo dibujado con miniaturas de los esquemas de cada pantalla. → Tema 5\n\n\nFlujo de error\nCamino que sigue la persona cuando algo falla. → Tema 5\n\n\nCallejón sin salida\nPunto de un flujo desde el que no se puede continuar, volver ni salir. → Tema 5\n\n\nEmbudo\nRecuento de las personas que llegan a cada paso de un flujo, que muestra dónde se pierden. → Tema 5",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-6.-storyboards",
     "href": "92-glosario.html#tema-6.-storyboards",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 6. Storyboards",
     "text": "Tema 6. Storyboards\n\nStoryboard\nSecuencia de viñetas que cuenta cómo una persona usa un producto en una situación concreta. → Tema 6\n\n\nEscenario\nHistoria escrita de una persona concreta que persigue un objetivo en un contexto; sirve de guion al storyboard. → Tema 6\n\n\nContexto de uso\nEntorno físico, social y técnico en el que se usa un producto. → Tema 6\n\n\nMomento clave\nInstante de la historia en el que el producto marca la diferencia. → Tema 6\n\n\nViñeta\nCada uno de los cuadros de un storyboard. → Tema 6",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-7.-esquemas-de-página",
     "href": "92-glosario.html#tema-7.-esquemas-de-página",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 7. Esquemas de página",
     "text": "Tema 7. Esquemas de página\n\nJerarquía visual\nOrden de importancia de los elementos, comunicado con el tamaño, la posición, la agrupación y el contraste. → Tema 7\n\n\nRejilla\nDivisión del ancho de la pantalla en columnas, medianiles y márgenes para alinear los elementos. → Tema 7\n\n\nMedianil\nGutter. Separación entre las columnas de una rejilla. → Tema 7\n\n\nÁrea de contenido\nZona de la pantalla que se repite en todas las páginas: cabecera, navegación, contenido, lateral, pie. → Tema 7\n\n\nConvención\nSolución de interfaz que la mayoría de los sitios resuelve igual y que las personas ya esperan. → Tema 7\n\n\nAnotación\nNota numerada en un esquema que explica un comportamiento que el dibujo no muestra. → Tema 7",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-8.-estados-y-transiciones",
     "href": "92-glosario.html#tema-8.-estados-y-transiciones",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 8. Estados y transiciones",
     "text": "Tema 8. Estados y transiciones\n\nEstado\nCada situación distinta en la que puede estar un componente o una pantalla. → Tema 8\n\n\nTransición\nPaso de un estado a otro, provocado por un evento. → Tema 8\n\n\nDiagrama de estados\nRepresentación de los estados de un sistema y de las transiciones entre ellos, basada en los statecharts de Harel (1987). → Tema 8\n\n\nEstado vacío\nEstado de una pantalla cuando no hay contenido que mostrar. → Tema 8\n\n\nFoco\nEstado del elemento al que se ha llegado con el teclado; debe ser siempre visible. → Tema 8\n\n\nPrototipo navegable\nConjunto de pantallas enlazadas que se puede recorrer como si fuera el producto. → Tema 8",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-9.-prototipos-en-papel",
     "href": "92-glosario.html#tema-9.-prototipos-en-papel",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 9. Prototipos en papel",
     "text": "Tema 9. Prototipos en papel\n\nPrototipo en papel\nPrototipo hecho con hojas y piezas de papel que se manipulan durante una prueba. → Tema 9\n\n\nFacilitador\nPersona que dirige una sesión de prueba, lee las tareas y mantiene la neutralidad. → Tema 9\n\n\n«Ordenador humano»\nPersona que, en una prueba en papel, cambia las hojas según lo que hace el participante, como lo haría el sistema. → Tema 9\n\n\nPensamiento en voz alta\nTécnica en la que el participante dice lo que busca, espera y le sorprende mientras usa el prototipo. → Tema 9\n\n\nEscenario de tarea\nSituación realista que da un objetivo al participante sin decirle cómo conseguirlo. → Tema 9\n\n\nPrueba de usabilidad\nSesión en la que personas representativas realizan tareas con un producto o prototipo mientras se observa qué ocurre. → Tema 9",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-10.-sesgos-y-patrones-engañosos",
     "href": "92-glosario.html#tema-10.-sesgos-y-patrones-engañosos",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 10. Sesgos y patrones engañosos",
     "text": "Tema 10. Sesgos y patrones engañosos\n\nSesgo cognitivo\nError sistemático en el juicio que se produce al usar atajos mentales. → Tema 10\n\n\nHeurístico\nAtajo mental para decidir con incertidumbre (Tversky y Kahneman, 1974). No confundir con las heurísticas de usabilidad. → Tema 10\n\n\nEfecto de anclaje\nTendencia a que la primera cifra vista condicione la valoración de las siguientes. → Tema 10\n\n\nOpción por defecto\nLa opción que viene marcada; tendemos a no cambiarla. → Tema 10\n\n\nPatrón engañoso\nDark pattern o diseño engañoso. Solución de interfaz que engaña, presiona o dificulta decidir libremente. → Tema 10\n\n\nSesgo de confirmación\nTendencia a buscar y valorar más los datos que confirman la idea propia. → Tema 10\n\n\nArquitectura de la decisión\nForma en que se presentan las opciones, que influye en lo que se elige. → Tema 10",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-11.-economía-de-la-atención",
     "href": "92-glosario.html#tema-11.-economía-de-la-atención",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 11. Economía de la atención",
     "text": "Tema 11. Economía de la atención\n\nEconomía de la atención\nModelo económico en el que la atención de las personas es el recurso que se capta y se vende, sobre todo a anunciantes. → Tema 11\n\n\nMétrica de implicación\nMedida de la intensidad de uso (tiempo, sesiones, desplazamiento) que no indica por sí sola si el producto ayuda a la persona. → Tema 11\n\n\nRefuerzo intermitente\nRecompensa que llega de forma impredecible; es el patrón que más cuesta abandonar. → Tema 11\n\n\nDesplazamiento infinito\nLista que carga contenido sin fin al llegar abajo, sin un punto natural para parar. → Tema 11\n\n\nSeñal de parada\nElemento de diseño que marca un final natural (un final de lista, un resumen). → Tema 11\n\n\nBienestar digital\nRelación con la tecnología alineada con los objetivos y la salud de las personas. → Tema 11",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-12.-diseño-inclusivo-y-accesible",
     "href": "92-glosario.html#tema-12.-diseño-inclusivo-y-accesible",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 12. Diseño inclusivo y accesible",
     "text": "Tema 12. Diseño inclusivo y accesible\n\nDiseño inclusivo\nDiseño que tiene en cuenta toda la diversidad humana en lugar de un usuario medio. → Tema 12\n\n\nAccesibilidad\nCondición de un producto que pueden percibir, entender, navegar y usar las personas con discapacidad. → Tema 12\n\n\nWCAG\nPautas de Accesibilidad para el Contenido Web del W3C; la versión actual es la 2.2 (2023). → Tema 12\n\n\nEspectro de personas\nIdea de que una limitación puede ser permanente, temporal o situacional. → Tema 12\n\n\nGenderMag\nMétodo de inspección que detecta sesgos de género con personajes que varían en cinco facetas cognitivas (Burnett et al., 2016). → Tema 12\n\n\nContraste\nRelación entre la luminancia de dos colores, de 1:1 a 21:1. → Tema 12\n\n\nDaltonismo\nDeficiencia en la visión de los colores; la más frecuente afecta al eje rojo-verde. → Tema 12\n\n\nOrden de foco\nSecuencia en la que el teclado recorre los elementos interactivos de una pantalla. → Tema 12",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   }
 ]
