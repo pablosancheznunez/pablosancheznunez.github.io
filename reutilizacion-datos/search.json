@@ -74,7 +74,7 @@
     "href": "index.html#autoría-y-cómo-citar",
     "title": "Reutilización de datos abiertos y documentos",
     "section": "Autoría y cómo citar",
-    "text": "Autoría y cómo citar\nAutor: Pablo Sánchez-Núñez (ORCID 0000-0001-7845-9506), Universidad Carlos III de Madrid. DOI: 10.5281/zenodo.24500934. ORCID: 0000-0001-7845-9506 · Web: pablosancheznunez.com\n\nSánchez-Núñez, P. (2026). Reutilización de datos abiertos y documentos: tutoriales interactivos en R (webR). Universidad Carlos III de Madrid. Zenodo. https://doi.org/10.5281/zenodo.24500934\n\nDOI de todas las versiones: 10.5281/zenodo.24500934; apunta siempre a la última edición. Cada edición tiene además su propio DOI, que encontrarás en la ficha de Zenodo.",
+    "text": "Autoría y cómo citar\nAutor: Pablo Sánchez-Núñez, Universidad Carlos III de Madrid\nORCID: 0000-0001-7845-9506\nWeb: pablosancheznunez.com\nDOI: 10.5281/zenodo.24500934.\n\nSánchez-Núñez, P. (2026). Reutilización de datos abiertos y documentos: tutoriales interactivos en R (webR). Universidad Carlos III de Madrid. Zenodo. https://doi.org/10.5281/zenodo.24500934\n\nDOI de todas las versiones: 10.5281/zenodo.24500934; apunta siempre a la última edición. Cada edición tiene además su propio DOI, que encontrarás en la ficha de Zenodo.",
     "crumbs": [
       "Presentación"
     ]
@@ -1425,278 +1425,333 @@
     ]
   },
   {
+    "objectID": "94-laboratorio-limpieza.html",
+    "href": "94-laboratorio-limpieza.html",
+    "title": "Apéndice A — Laboratorio de limpieza de datos",
+    "section": "",
+    "text": "Los problemas del fichero\nAntes de reutilizar un conjunto de datos hay que limpiarlo: espacios sobrantes, mayúsculas inconsistentes, fechas en cinco formatos, números con separador de miles, valores imposibles y duplicados. Este laboratorio usa un CSV pequeño y deliberadamente sucio de préstamos en bibliotecas municipales (datos ficticios).",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Laboratorio de limpieza de datos</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio-limpieza.html#los-problemas-del-fichero",
+    "href": "94-laboratorio-limpieza.html#los-problemas-del-fichero",
+    "title": "Apéndice A — Laboratorio de limpieza de datos",
+    "section": "",
+    "text": "Problema\nEjemplo en el fichero\nPor qué importa\n\n\n\n\nEspacios sobrantes\n\"  Biblioteca Sur\"\n«Biblioteca Sur» y « Biblioteca Sur» cuentan como dos bibliotecas\n\n\nMayúsculas inconsistentes\nBIBLIOTECA OESTE, centro\nRompen agrupaciones y uniones\n\n\nVariantes de un nombre\nRío y Rio\nDuplican categorías\n\n\nFechas en varios formatos\n01/03/2024, 3 mar 2024, 2024/03/02\nNo se pueden ordenar ni filtrar por periodo\n\n\nSeparador de miles y texto\n1.250, n/d\nR los lee como texto, no como números\n\n\nValores imposibles\n-12 préstamos\nSesgan medias y totales\n\n\nDuplicados\ndos filas de la Biblioteca Central del 1 de marzo\nCuentan dos veces el mismo dato",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Laboratorio de limpieza de datos</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio-limpieza.html#lab-limpieza",
+    "href": "94-laboratorio-limpieza.html#lab-limpieza",
+    "title": "Apéndice A — Laboratorio de limpieza de datos",
+    "section": "Laboratorio: limpia paso a paso",
+    "text": "Laboratorio: limpia paso a paso\n\n\nLaboratorio · se ejecuta en tu navegador\n\nActiva las operaciones de limpieza. La tabla resalta con ⚠ las celdas que aún tienen problemas y, debajo, aparece el código de R equivalente, listo para copiarlo en la consola del final.\n\n{\n  const crudo = [[\"Biblioteca Central \", \"2024-03-01\", \"1.250\", \"Centro\"], [\"biblioteca central\", \"01/03/2024\", \"1250\", \"centro\"], [\"Biblioteca Norte\", \"2024/03/02\", \"980\", \"Norte\"], [\"  Biblioteca Sur\", \"3 mar 2024\", \"1.020\", \"Sur\"], [\"Biblioteca Este\", \"2024-03-03\", \"n/d\", \"Este\"], [\"BIBLIOTECA OESTE\", \"04-03-2024\", \"875\", \"Oeste \"], [\"Biblioteca Río\", \"2024-03-04\", \"640\", \"Ribera\"], [\"Biblioteca Rio\", \"2024-03-04\", \"640\", \"Ribera\"], [\"Biblioteca Norte\", \"2024-03-05\", \"1.105\", \"Norte\"], [\"Biblioteca Centro Cívico\", \"05/03/2024\", \"-12\", \"Centro\"]];\n  const ops = [\n    [\"recortar\", \"Recortar espacios al principio y al final\", \"df[] &lt;- lapply(df, trimws)\"],\n    [\"mayus\", \"Unificar mayúsculas (tipo título)\", 'titulo &lt;- function(x) gsub(\"(^|\\\\\\\\s)(\\\\\\\\p{L})\", \"\\\\\\\\1\\\\\\\\U\\\\\\\\2\", tolower(x), perl = TRUE)\\ndf$biblioteca &lt;- titulo(df$biblioteca); df$distrito &lt;- titulo(df$distrito)'],\n    [\"variantes\", \"Unificar variantes del mismo nombre (Rio → Río)\", 'df$biblioteca[df$biblioteca == \"Biblioteca Rio\"] &lt;- \"Biblioteca Río\"'],\n    [\"fechas\", \"Convertir las fechas a ISO 8601 (AAAA-MM-DD)\", 'meses &lt;- c(ene = 1, feb = 2, mar = 3, abr = 4, may = 5, jun = 6, jul = 7, ago = 8, sep = 9, oct = 10, nov = 11, dic = 12)\\na_iso &lt;- function(x) {\\n  out &lt;- rep(NA_character_, length(x))\\n  f1 &lt;- grepl(\"^\\\\\\\\d{4}[-/]\\\\\\\\d{2}[-/]\\\\\\\\d{2}$\", x)\\n  out[f1] &lt;- gsub(\"/\", \"-\", x[f1])\\n  f2 &lt;- grepl(\"^\\\\\\\\d{2}[-/]\\\\\\\\d{2}[-/]\\\\\\\\d{4}$\", x)\\n  out[f2] &lt;- vapply(strsplit(x[f2], \"[-/]\"), function(v) paste(v[3], v[2], v[1], sep = \"-\"), \"\")\\n  f3 &lt;- grepl(\"^\\\\\\\\d{1,2} [a-z]{3} \\\\\\\\d{4}$\", x)\\n  out[f3] &lt;- vapply(strsplit(x[f3], \" \"), function(v) sprintf(\"%s-%02d-%02d\", v[3], meses[[v[2]]], as.integer(v[1])), \"\")\\n  out\\n}\\ndf$fecha &lt;- a_iso(df$fecha)'],\n    [\"numeros\", \"Quitar el separador de miles y convertir a número («n/d» pasa a NA)\", 'df$prestamos &lt;- suppressWarnings(as.numeric(gsub(\".\", \"\", df$prestamos, fixed = TRUE)))'],\n    [\"imposibles\", \"Marcar como NA los valores imposibles (préstamos negativos)\", \"df$prestamos[!is.na(df$prestamos) & df$prestamos &lt; 0] &lt;- NA\"],\n    [\"duplicados\", \"Eliminar filas duplicadas\", \"df &lt;- df[!duplicated(df), ]\"]];\n  const raiz = html`&lt;div class=\"limpieza-lab\"&gt;&lt;/div&gt;`;\n  const caja = html`&lt;fieldset class=\"mb-2\"&gt;&lt;legend class=\"h6\"&gt;Operaciones&lt;/legend&gt;&lt;/fieldset&gt;`;\n  const marcas = ops.map(([id, txt]) =&gt; { const u = id + Math.random().toString(36).slice(2, 6); const d = html`&lt;div class=\"form-check\"&gt;&lt;input class=\"form-check-input\" type=\"checkbox\" id=\"${u}\"&gt;&lt;label class=\"form-check-label\" for=\"${u}\"&gt;${txt}&lt;/label&gt;&lt;/div&gt;`; caja.append(d); return d.querySelector(\"input\"); });\n  const salida = html`&lt;div role=\"status\" aria-live=\"polite\"&gt;&lt;/div&gt;`;\n  const titulo = (x) =&gt; x.toLowerCase().replace(/(^|\\s)(\\p{L})/gu, (m, a, b) =&gt; a + b.toUpperCase());\n  const meses = {ene: 1, feb: 2, mar: 3, abr: 4, may: 5, jun: 6, jul: 7, ago: 8, sep: 9, oct: 10, nov: 11, dic: 12};\n  const iso = (x) =&gt; { let m; if ((m = x.match(/^(\\d{4})[-/](\\d{2})[-/](\\d{2})$/))) return `${m[1]}-${m[2]}-${m[3]}`; if ((m = x.match(/^(\\d{2})[-/](\\d{2})[-/](\\d{4})$/))) return `${m[3]}-${m[2]}-${m[1]}`; if ((m = x.match(/^(\\d{1,2}) ([a-z]{3}) (\\d{4})$/)) && meses[m[2]]) return `${m[3]}-${String(meses[m[2]]).padStart(2, \"0\")}-${m[1].padStart(2, \"0\")}`; return null; };\n  const esc = (s) =&gt; String(s).replace(/[&&lt;&gt;]/g, (c) =&gt; ({\"&\": \"&amp;\", \"&lt;\": \"&lt;\", \"&gt;\": \"&gt;\"}[c]));\n  function limpiar() {\n    const on = Object.fromEntries(ops.map(([id], i) =&gt; [id, marcas[i].checked]));\n    let df = crudo.map((f) =&gt; [...f]);\n    if (on.recortar) df = df.map((f) =&gt; f.map((v) =&gt; v.trim()));\n    if (on.mayus) df = df.map(([b, f, p, d]) =&gt; [titulo(b), f, p, titulo(d)]);\n    if (on.variantes) df = df.map(([b, ...r]) =&gt; [b === \"Biblioteca Rio\" ? \"Biblioteca Río\" : b, ...r]);\n    if (on.fechas) df = df.map(([b, f, p, d]) =&gt; [b, iso(f.trim()) ?? \"NA\", p, d]);\n    if (on.numeros) df = df.map(([b, f, p, d]) =&gt; { const n = Number(p.replace(/\\./g, \"\")); return [b, f, Number.isFinite(n) && p.trim() !== \"\" ? n : \"NA\", d]; });\n    if (on.imposibles) df = df.map(([b, f, p, d]) =&gt; [b, f, typeof p === \"number\" && p &lt; 0 ? \"NA\" : p, d]);\n    if (on.duplicados) { const vistos = new Set(); df = df.filter((f) =&gt; { const k = JSON.stringify(f); if (vistos.has(k)) return false; vistos.add(k); return true; }); }\n    const claves = df.map((f) =&gt; JSON.stringify(f));\n    const problemas = (f, j) =&gt; {\n      const v = f[j], s = String(v);\n      if (s !== s.trim()) return \"espacios\";\n      if ((j === 0 || j === 3) && s !== titulo(s)) return \"mayúsculas\";\n      if (j === 0 && s === \"Biblioteca Rio\") return \"variante\";\n      if (j === 1 && s !== \"NA\" && !/^\\d{4}-\\d{2}-\\d{2}$/.test(s)) return \"fecha\";\n      if (j === 2 && typeof v !== \"number\" && s !== \"NA\") return \"texto, no número\";\n      if (j === 2 && typeof v === \"number\" && v &lt; 0) return \"imposible\";\n      return null;\n    };\n    let n = 0;\n    const filas = df.map((f, i) =&gt; { const dup = claves.indexOf(claves[i]) !== i; return `&lt;tr&gt;${f.map((v, j) =&gt; { const p = problemas(f, j) || (dup && j === 0 ? \"duplicado\" : null); if (p) n++; return `&lt;td${p ? ' class=\"table-warning\"' : \"\"}&gt;${p ? \"⚠ \" : \"\"}&lt;code&gt;${esc(typeof v === \"number\" ? v : JSON.stringify(v).slice(1, -1))}&lt;/code&gt;${p ? `&lt;span class=\"visually-hidden\"&gt; (${p})&lt;/span&gt;` : \"\"}&lt;/td&gt;`; }).join(\"\")}&lt;/tr&gt;`; }).join(\"\");\n    const codigo = ['df &lt;- read.csv(\"datos/bibliotecas_sucio.csv\", colClasses = \"character\")', ...ops.filter((_, i) =&gt; marcas[i].checked).map((o) =&gt; o[2])].join(\"\\n\");\n    salida.innerHTML = `&lt;p&gt;&lt;strong&gt;${df.length} filas · ${n} problemas pendientes&lt;/strong&gt;${n === 0 ? \" · ✓ ¡Datos listos para reutilizar!\" : \"\"}&lt;/p&gt;&lt;div class=\"table-responsive\"&gt;&lt;table class=\"table table-sm\"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=\"col\"&gt;biblioteca&lt;/th&gt;&lt;th scope=\"col\"&gt;fecha&lt;/th&gt;&lt;th scope=\"col\"&gt;prestamos&lt;/th&gt;&lt;th scope=\"col\"&gt;distrito&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;${filas}&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;p class=\"small mb-1\"&gt;Código de R equivalente:&lt;/p&gt;&lt;pre class=\"sourceCode\"&gt;&lt;code&gt;${esc(codigo)}&lt;/code&gt;&lt;/pre&gt;`;\n  }\n  marcas.forEach((m) =&gt; m.addEventListener(\"input\", limpiar));\n  raiz.append(caja, salida); limpiar();\n  return raiz;\n}\n\n\n\n\n\n\n\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Laboratorio de limpieza de datos</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio-limpieza.html#hazlo-tú-en-r",
+    "href": "94-laboratorio-limpieza.html#hazlo-tú-en-r",
+    "title": "Apéndice A — Laboratorio de limpieza de datos",
+    "section": "Hazlo tú en R",
+    "text": "Hazlo tú en R\nCopia aquí el código que ha generado el laboratorio (o escríbelo tú) y ejecútalo. El fichero está en datos/bibliotecas_sucio.csv.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipPara ir más allá\n\n\n\nPara conjuntos grandes o con muchas variantes de nombres, OpenRefine agrupa valores parecidos («Rio», «Río», «RIO») con algoritmos de clustering y guarda un historial de operaciones que puedes exportar y reaplicar a otro fichero.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Laboratorio de limpieza de datos</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio-limpieza.html#para-ver-y-seguir-aprendiendo",
+    "href": "94-laboratorio-limpieza.html#para-ver-y-seguir-aprendiendo",
+    "title": "Apéndice A — Laboratorio de limpieza de datos",
+    "section": "Para ver y seguir aprendiendo",
+    "text": "Para ver y seguir aprendiendo\nSon enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.\n\nThe next web — Tim Berners-Lee · TED2009. El creador de la web defiende publicar datos abiertos y enlazados (unos 16 minutos, con transcripción).",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Laboratorio de limpieza de datos</span>"
+    ]
+  },
+  {
     "objectID": "90-chuleta-r.html",
     "href": "90-chuleta-r.html",
-    "title": "Apéndice A — Chuleta de R",
+    "title": "Apéndice B — Chuleta de R",
     "section": "",
     "text": "El paquete datareuseR\nTodas las funciones que usa el libro, en una página.\nPrueba cualquiera de ellas aquí:\ndatareuseR reúne los datos y las funciones auxiliares del libro para que repitas las prácticas en tu ordenador, con RStudio o Positron, y las apliques a tus propios datos. Dentro del libro se carga con source(\"datos/datareuseR.R\"); en tu ordenador, instálalo una vez y cárgalo con library():\nDatos incluidos: prestamos_practica (el CSV de práctica, sin limpiar), bibliotecas_madrid (copia del 24 de noviembre de 2026, CC BY 4.0, Ayuntamiento de Madrid), casos_reutilizacion (los doce casos del Tema 2) y licencias (la tabla del Tema 5).\nPrueba el paquete aquí:",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta de R</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Chuleta de R</span>"
     ]
   },
   {
     "objectID": "90-chuleta-r.html#sec-datareuser",
     "href": "90-chuleta-r.html#sec-datareuser",
-    "title": "Apéndice A — Chuleta de R",
+    "title": "Apéndice B — Chuleta de R",
     "section": "",
     "text": "install.packages(\"remotes\")\nremotes::install_github(\"pablosancheznunez/reutilizacion-datos\", subdir = \"datareuseR\")\nlibrary(datareuseR)\nvignette(\"datareuseR\")   # guía rápida\n\n\n\n\n\n\n\n\nPara…\nFunción\nTema\n\n\n\n\nLeer un CSV con codificación y separador desconocidos\nleer_csv_abierto()\n0, 3\n\n\nEstrellas del esquema de cinco estrellas\nestrellas()\n0\n\n\nPlazos en días hábiles, con festivos\nsumar_habiles()\n1\n\n\nEvaluación FAIR simplificada\nevaluar_fair()\n2\n\n\nConsultar la API de datos.gob.es (con copia sin conexión)\nconsultar_datosgob()\n2\n\n\nTítulo, formatos y tabla de los resultados\ntitulo_es(), formatos_de(), tabla_datosgob()\n2, 4\n\n\nUnificar etiquetas de formato (URI de la UE y tipos MIME)\nnormalizar_formato()\n4\n\n\nCeldas vacías y completitud (Vetrò et al.)\ncelda_vacia(), completitud()\n3\n\n\nInforme rápido de calidad\ninforme_calidad()\n3\n\n\nClave de agrupación al estilo de OpenRefine\nclave_agrupacion()\n3\n\n\nIngresos y punto de equilibrio freemium\ningresos_mensuales(), punto_equilibrio()\n5\n\n\nObligaciones al combinar licencias\nobligaciones()\n5",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta de R</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Chuleta de R</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html",
     "href": "91-guia-docente.html",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "",
     "text": "Cómo encaja el libro con Aula Global\nEl libro es material de estudio y práctica; la evaluación sigue en los cuestionarios de Aula Global. Cada capítulo prepara la actividad evaluable de su tema:\nPara enlazarlo desde Aula Global basta un recurso URL por tema que apunte al capítulo correspondiente. También puede incrustarse un capítulo en una Página con un &lt;iframe&gt;, aunque la lectura es más cómoda en pestaña aparte.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#cómo-encaja-el-libro-con-aula-global",
     "href": "91-guia-docente.html#cómo-encaja-el-libro-con-aula-global",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "",
     "text": "Capítulo\nActividad de Aula Global\nQué practica el libro\n\n\n\n\nTema 0\n«Clasifica y audita»\nEstrellas, Open Definition y auditoría del CSV\n\n\nTema 1\n«Del derecho de acceso a la reutilización»\nCronología de normas, plazos de la Ley 19/2013, datos de alto valor\n\n\nTema 2\n«WebQuest de reutilización»\nDimensiones de Safarov et al.; lectura de la ficha ODM 2025\n\n\nTema 3\n«Laboratorio de calidad con OpenRefine»\nCompletitud, duplicados, municipios, fechas y total de Getafe en R\n\n\nTema 4\n«Taller de datos enlazados»\nTurtle, JSON-LD y consultas sobre un grafo fijo\n\n\nTema 5\n«Caso de empresa infomediaria»\nPatrones de negocio y obligaciones de licencias",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#el-conjunto-de-datos-de-práctica",
     "href": "91-guia-docente.html#el-conjunto-de-datos-de-práctica",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "El conjunto de datos de práctica",
     "text": "El conjunto de datos de práctica\nEl fichero datos/prestamos_bibliotecas_practica.csv de este libro es sintético. Si en Aula Global se usa otra versión del CSV, sustituye el fichero de la carpeta datos/ por esa versión con el mismo nombre y vuelve a publicar. Las comprobaciones de los ejercicios que dependen del CSV (Primeros pasos, Temas 3, 4 y 5) calculan la respuesta esperada a partir del fichero, así que se adaptan solas, con dos condiciones:\n\nLas columnas deben llamarse igual (id, biblioteca, municipio, fecha, prestamos, usuarios_activos).\nLa tabla de equivalencias de municipios (forma_correcta, en los Temas 3, 4 y 5) y la tabla de población ficticia del Tema 5 debe incluir todos los municipios del fichero.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#glosario-descargas-y-autoevaluación",
     "href": "91-guia-docente.html#glosario-descargas-y-autoevaluación",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Glosario, descargas y autoevaluación",
     "text": "Glosario, descargas y autoevaluación\n\nGlosario (92-glosario.qmd): términos agrupados por tema, cada uno con un ancla #gl-.... Cada capítulo tiene un recuadro «Glosario del tema» con enlaces a sus términos. Para añadir uno, crea un encabezado ### Término {#gl-termino} en la sección del tema y enlázalo como [Término](92-glosario.qmd#gl-termino).\nDescargas (carpeta plantillas/): un script .R limpio por capítulo, la plantilla de informe informe_practica.qmd y su tema informe.scss. Los scripts se generan a partir de los bloques {webr} de cada capítulo con python3 herramientas/extraer_r.py .; vuelve a ejecutarlo si cambias el código de un capítulo.\nAutoevaluación: preguntas con el formato de webexercises, mediante la extensión local _extensions/webex/, que genera el mismo marcado sin necesidad de R al renderizar:\n\n::: {.webex-check .webex-box}\n1. Pregunta de verdadero o falso {{&lt; torf true &gt;}}\n2. Desplegable: {{&lt; mcq \"*correcta\" \"incorrecta\" \"incorrecta\" &gt;}}\n3. Hueco: {{&lt; fitb \"respuesta\" \"alternativa\" ignorecase=true &gt;}}\n4. Opciones en lista:\n\n{{&lt; longmcq \"incorrecta\" \"*correcta\" &gt;}}\n:::\n\n::: {.webex-solution boton=\"Ver explicaciones\"}\nTexto que se despliega con el botón.\n:::\nEl asterisco marca la opción correcta. Los huecos no pueden ir dentro de código en línea: escribe el código antes y después, por ejemplo `sum(x` {{&lt; fitb \"&gt;\" &gt;}} `2)`.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#figuras-y-versión-en-pdf",
     "href": "91-guia-docente.html#figuras-y-versión-en-pdf",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Figuras y versión en PDF",
     "text": "Figuras y versión en PDF\n\nFiguras (carpeta figuras/): una o dos por tema, en SVG, generadas con python3 herramientas/figuras.py . (necesita Python con matplotlib). Usan una paleta categórica validada para el daltonismo y llevan texto alternativo en el capítulo. Si cambias el CSV de práctica, vuelve a generarlas.\nPDF (pdf/reutilizacion-datos-abiertos.pdf): se genera con python3 herramientas/pdf.py, que une los capítulos y los compila con Typst, incluido en Quarto, sin LaTeX. El filtro _extensions/libro-pdf/ adapta el contenido al papel: muestra el código sin ejecutar, convierte pistas y soluciones en recuadros, presenta las preguntas sin corrección automática y transforma los enlaces entre capítulos en enlaces internos. Genera el PDF antes de quarto render, para que se copie al sitio.\n\nOrden para publicar una edición nueva:\npython3 herramientas/extraer_r.py .   # scripts .R de cada capítulo\npython3 herramientas/figuras.py .     # figuras\npython3 herramientas/moodle.py .      # banco de preguntas para Aula Global\npython3 herramientas/pdf.py           # PDF\nquarto render                         # sitio web en _book/",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#banco-de-preguntas-para-aula-global",
     "href": "91-guia-docente.html#banco-de-preguntas-para-aula-global",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Banco de preguntas para Aula Global",
     "text": "Banco de preguntas para Aula Global\nLas preguntas de autoevaluación de cada capítulo (49 en total) se exportan a Moodle XML con python3 herramientas/moodle.py ., que deja en la carpeta moodle/ un fichero por capítulo y otro con todo el banco. Cada pregunta conserva su explicación como retroalimentación general. Para usarlas como cuestionario calificado: Banco de preguntas → Importar → Moodle XML.\n\nBanco completo (Moodle XML)\n\nTipos: verdadero/falso, opción múltiple con respuesta única y respuesta corta. Las respuestas cortas que aceptan variantes (con y sin tilde, en mayúsculas o minúsculas) las incluyen todas.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#caso-práctico-y-datos-reales",
     "href": "91-guia-docente.html#caso-práctico-y-datos-reales",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Caso práctico y datos reales",
     "text": "Caso práctico y datos reales\nEl caso práctico usa una copia del conjunto «Bibliotecas de Madrid» del Ayuntamiento de Madrid (CC BY 4.0), descargada el 24 de noviembre de 2026 y sin modificar: datos/bibliotecas_madrid_2026-11-24.csv. El portal lo actualiza a diario; para actualizar el caso, descarga una copia nueva, cambia el nombre del fichero en el capítulo y en herramientas/extraer_r.py, y vuelve a ejecutar las pruebas: las comprobaciones de los ejercicios calculan la respuesta a partir del fichero.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#accesibilidad-analítica-y-comprobación-automática",
     "href": "91-guia-docente.html#accesibilidad-analítica-y-comprobación-automática",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Accesibilidad, analítica y comprobación automática",
     "text": "Accesibilidad, analítica y comprobación automática\n\nAccesibilidad. El libro se ha revisado con axe-core contra WCAG 2.1 AA sin incidencias. El fichero accesibilidad.html añade nombres accesibles a los editores de código y a los controles interactivos, y estilos.scss ajusta el contraste de pies de figura y citas.\nAnalítica. El libro carga /consent.js de la web: Google Analytics y Microsoft Clarity solo se activan si el visitante acepta las cookies, y la elección es la misma en toda la web. Fuera de pablosancheznunez.com el script no existe y no se carga nada.\nComprobación automática. El flujo .github/workflows/comprobar.yml genera el libro en cada cambio y ejecuta en un navegador real los ejercicios de webR, las preguntas de autoevaluación y la auditoría de accesibilidad (herramientas/pruebas/). Si algo falla, el cambio aparece con una cruz roja en GitHub.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#retos-evaluables",
     "href": "91-guia-docente.html#retos-evaluables",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Retos evaluables",
     "text": "Retos evaluables\nCada tema termina con un reto evaluable pensado para la evaluación continua en Aula Global. A diferencia de los ejercicios, no tiene pista, solución ni corrección automática, y cada estudiante trabaja con datos distintos (un portal, una palabra de búsqueda o un conjunto elegido por él), lo que dificulta copiar. La entrega es un informe hecho con la plantilla informe_practica.qmd y se corrige con su rúbrica (pesos 15/25/20/20/10/10).\n\n\n\n\n\n\n\n\nTema\nReto\nFunciones de datareuseR\n\n\n\n\n0\nAuditoría de apertura de tres conjuntos de publicadores distintos\nestrellas()\n\n\n1\nSolicitud de reutilización con cálculo de plazos y festivos reales\nsumar_habiles()\n\n\n2\nRadiografía de un tema en datos.gob.es con la API en directo\nconsultar_datosgob(), tabla_datosgob()\n\n\n3\nLimpieza documentada de un CSV real (≥100 filas)\nleer_csv_abierto(), informe_calidad(), clave_agrupacion()\n\n\n4\nPublicación de diez registros como JSON-LD y del conjunto con DCAT-AP\n—\n\n\n5\nPropuesta de servicio infomediario con tres escenarios\nobligaciones(), punto_equilibrio()\n\n\n\nLas soluciones de referencia y los criterios de corrección de cada reto no están en el repositorio público: se entregan aparte al profesorado. Si las guardas en el repositorio, hazlo en una rama o un repositorio privado.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
     "href": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Actividades interactivas y laboratorios",
     "text": "Actividades interactivas y laboratorios\nDesde la versión 1.4, cada tema incluye actividades de corrección inmediata (ordenar, clasificar y escenarios con decisiones) y laboratorios que se usan sin programar: compatibilidad de licencias, comprobador de calidad de un CSV (que también acepta los ficheros del estudiante, sin que salgan de su navegador) y conversión de CSV a JSON y a RDF. En el PDF y el EPUB las actividades aparecen en papel, con su solución. Las actividades están escritas en Markdown con la extensión interactivos (_extensions/interactivos/interactivos.lua), así que se pueden añadir o cambiar sin programar.\nCada tema tiene además diapositivas de clase (objetivos, figuras, tablas principales, lectura, preguntas para debatir y reto) en diapositivas/; se generan con python3 herramientas/diapositivas.py después de quarto render.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#progreso-uso-sin-conexión-y-modo-oscuro",
     "href": "91-guia-docente.html#progreso-uso-sin-conexión-y-modo-oscuro",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Progreso, uso sin conexión y modo oscuro",
     "text": "Progreso, uso sin conexión y modo oscuro\n\nProgreso del estudiante (progreso.html): cada capítulo muestra cuántos ejercicios ha resuelto y cuántas preguntas ha acertado el estudiante, y la presentación resume todos los capítulos. Se guarda en el almacenamiento local del navegador (localStorage), sin cookies ni envío a ningún servidor: el profesorado no lo ve. Sirve de autorregulación, no de evaluación.\nUso sin conexión (sw.js): un service worker guarda las páginas, webR y sus paquetes la primera vez que se visitan. Las páginas se piden primero a la red y, si no hay conexión, se sirven desde la copia; el resto, al revés. Al publicar una versión nueva, cambia VERSION en sw.js.\nModo claro y oscuro: el interruptor junto al título, en la barra lateral, cambia entre los dos; por defecto se respeta la preferencia del sistema. El tema oscuro está en estilos-oscuro.scss y también se audita con axe-core.\nPDF y EPUB: python3 herramientas/pdf.py genera los dos formatos; el EPUB lleva portada, metadatos (DOI, licencia) y la misma ficha del libro que el PDF.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#el-paquete-datareuser",
     "href": "91-guia-docente.html#el-paquete-datareuser",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "El paquete datareuseR",
     "text": "El paquete datareuseR\nLa carpeta datareuseR/ contiene un paquete de R con los datos y las funciones auxiliares del libro, documentado y con pruebas (R CMD check --as-cran sin errores ni avisos). El libro no puede instalarlo dentro de webR, así que python3 herramientas/datareuser_webr.py genera datos/datareuseR.R con sus funciones, y los capítulos lo cargan con source(). Si cambias el paquete, vuelve a ejecutar ese script. Los estudiantes pueden instalarlo con remotes::install_github(\"pablosancheznunez/reutilizacion-datos\", subdir = \"datareuseR\"); para publicarlo en CRAN basta con enviar la carpeta del paquete.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#publicar-y-actualizar-el-libro",
     "href": "91-guia-docente.html#publicar-y-actualizar-el-libro",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Publicar y actualizar el libro",
     "text": "Publicar y actualizar el libro\nEl libro es un proyecto de Quarto con la extensión quarto-live, que ya va incluida en la carpeta _extensions/. Los capítulos usan engine: markdown, así que para renderizar no hace falta R instalado: el código se ejecuta en el navegador del estudiante.\nquarto preview          # vista previa local\nquarto render           # genera el sitio en _book/\nOpciones de publicación:\n\nGitHub Pages: el repositorio incluye .github/workflows/publicar.yml, que renderiza y publica el libro en cada push a main. En Settings → Pages, elige GitHub Actions como origen.\nCualquier servidor web: sube el contenido de _book/. Debe servirse por HTTP(S); abrir index.html con doble clic no funciona, porque webR necesita un servidor.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#mantenimiento",
     "href": "91-guia-docente.html#mantenimiento",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Mantenimiento",
     "text": "Mantenimiento\n\nDatos que cambian cada año: el Tema 2 remite a la ficha del Open Data Maturity 2025 y el Tema 5 al informe de ASEDIE. El libro no incluye esas cifras, solo los enlaces; basta con actualizar los enlaces cuando salga una nueva edición.\nDCAT-AP-ES y NTI-RISP: antes de cada curso, comprueba si la NTI modificada se ha publicado en el BOE y ajusta el párrafo del Tema 3.\nVersión de webR: el libro sirve webR 0.6.0 desde su propia carpeta webr/ y los paquetes desde webr-repo/, sin depender de servidores externos. Para actualizarlo, sustituye esas carpetas por la nueva distribución de webR y los binarios correspondientes, y cambia VERSION en sw.js para que los navegadores renueven su copia.\nFuentes externas: el flujo .github/workflows/semanal.yml comprueba cada lunes los enlaces del libro, el CSV de bibliotecas de Madrid y la API de datos.gob.es, y comprueba el paquete datareuseR con la consulta en directo. Si algo falla, abre una incidencia en GitHub con el informe; también puedes ejecutarlo a mano con python3 herramientas/comprobar_fuentes.py.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#añadir-un-ejercicio",
     "href": "91-guia-docente.html#añadir-un-ejercicio",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Añadir un ejercicio",
     "text": "Añadir un ejercicio\nUn ejercicio autocorregido tiene hasta cuatro bloques con la misma etiqueta exercise:\n```{webr}\n#| exercise: mi_ejercicio\n#| setup: true\ndatos &lt;- read.csv(\"datos/prestamos_bibliotecas_practica.csv\")\n```\n\n```{webr}\n#| exercise: mi_ejercicio\nnrow(______)\n```\n\n::: {.solution exercise=\"mi_ejercicio\"}\n`nrow(datos)`\n:::\n\n```{webr}\n#| exercise: mi_ejercicio\n#| check: true\nif (identical(.result, nrow(read.csv(\"datos/prestamos_bibliotecas_practica.csv\")))) {\n  list(correct = TRUE, message = \"Correcto\")\n} else {\n  list(correct = FALSE, message = \"Revisa el objeto que cuentas\")\n}\n```\nEn el bloque check, .result es el valor de la última línea del código del estudiante y .user_code es el texto del código. La documentación de quarto-live explica más opciones.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "92-glosario.html",
     "href": "92-glosario.html",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "",
     "text": "Tema 0. Datos abiertos\nTérminos técnicos del libro, agrupados por tema. Cada capítulo enlaza aquí desde su recuadro «Glosario del tema», y desde cada término puedes volver al capítulo donde se explica. Usa el buscador del libro (arriba a la izquierda) para localizar cualquier término.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#gl-tema0",
     "href": "92-glosario.html#gl-tema0",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "",
     "text": "Datos abiertos\nDatos que cualquiera puede usar, modificar y compartir libremente para cualquier fin, con como mucho la obligación de citar la fuente o de compartir en las mismas condiciones. → Tema 0\n\n\nOpen Definition\nDefinición de «abierto» de la Open Knowledge Foundation (versión 2.1). Exige licencia abierta, acceso completo y formato legible por máquina y abierto. → Tema 0\n\n\nDatos públicos\nInformación producida o custodiada por el sector público. No toda es abierta: puede incluir datos personales o protegidos. → Tema 0\n\n\nGobierno abierto\nForma de gobernar basada en la transparencia, la participación y la colaboración. Los datos abiertos son una de sus herramientas. → Tema 0\n\n\nModelo de cinco estrellas\nEscala acumulativa de Tim Berners-Lee para valorar la publicación de datos: de un documento con licencia abierta (★) a datos enlazados (★★★★★). → Tema 0\n\n\nPrincipios FAIR\nDatos localizables (Findable), accesibles (Accessible), interoperables (Interoperable) y reutilizables (Reusable). No equivale a «abierto». → Tema 0\n\n\nFormato abierto\nFormato con especificación pública que cualquiera puede implementar sin pagar ni pedir permiso (CSV, JSON, XML, ODS). Su contrario es el formato propietario. → Tema 0\n\n\nLegible por máquina\nFormato del que un programa puede extraer los datos sin intervención humana. Un PDF escaneado no lo es; un CSV sí. → Tema 0\n\n\nLicencia abierta\nLicencia que permite usar, redistribuir y modificar para cualquier fin. Puede exigir atribución (CC BY) o compartir igual (CC BY-SA, ODbL), pero no prohibir el uso comercial (NC) ni las obras derivadas (ND). → Tema 0\n\n\nWeb Semántica\nExtensión de la Web en la que los datos tienen un significado explícito y enlazado que las máquinas pueden procesar. → Tema 0, Tema 4",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#gl-tema1",
     "href": "92-glosario.html#gl-tema1",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 1. Reutilización de la información del sector público",
     "text": "Tema 1. Reutilización de la información del sector público\n\nReutilización\nUso de documentos del sector público con fines comerciales o no comerciales distintos del propósito inicial para el que se produjeron (Ley 37/2007). → Tema 1\n\n\nRISP\nReutilización de la información del sector público. Nombre del marco normativo europeo y español sobre la materia. → Tema 1\n\n\nDerecho de acceso\nDerecho de cualquier persona a solicitar y conocer la información pública (Ley 19/2013). Es previo a la reutilización, pero no la garantiza. → Tema 1\n\n\nPublicidad activa\nInformación que las administraciones deben publicar sin que nadie la pida: organización, contratos, subvenciones, presupuestos. → Tema 1\n\n\nSilencio administrativo negativo\nSi la administración no resuelve en plazo, la solicitud se entiende desestimada. Rige tanto en el derecho de acceso como en las solicitudes de reutilización. → Tema 1\n\n\nLicencia tipo\nTexto de licencia estándar, igual para todos los reutilizadores, publicado en el aviso legal de un portal. → Tema 1\n\n\nConjuntos de datos de alto valor\nDatos con gran beneficio social y económico, que deben ofrecerse gratis, por API y con licencia abierta. Seis categorías: geoespaciales, observación de la Tierra y medio ambiente, meteorológicos, estadísticos, sociedades y movilidad. → Tema 1\n\n\nDatos dinámicos\nDatos que se actualizan con frecuencia o en tiempo real, como los de tráfico o sensores. Deben ofrecerse mediante API. → Tema 1\n\n\nTransposición\nIncorporación de una directiva europea al derecho de un Estado miembro mediante una norma propia. Los reglamentos, en cambio, se aplican directamente. → Tema 1\n\n\nAgente infomediario\nReutilizador que crea productos o servicios de valor añadido a partir de información, sobre todo pública. → Tema 1, Tema 5",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#gl-tema2",
     "href": "92-glosario.html#gl-tema2",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 2. Proyectos de reutilización",
     "text": "Tema 2. Proyectos de reutilización\n\nPortal de datos abiertos\nSitio web que cataloga y da acceso a conjuntos de datos abiertos, como datos.gob.es o data.europa.eu. → Tema 2\n\n\nFederación de catálogos\nRecolección automática de los metadatos de varios portales en un catálogo común. datos.gob.es federa portales estatales, autonómicos, locales y universitarios. → Tema 2\n\n\nOpen Data Maturity\nInforme anual que compara la madurez en datos abiertos de 36 países europeos en cuatro dimensiones: políticas, impacto, portal y calidad. → Tema 2\n\n\nCaso de uso\nProyecto concreto que reutiliza datos. Conviene describirlo con las dimensiones de Safarov et al.: tipo de utilización, condiciones, efectos y usuarios. → Tema 2\n\n\nB2G\nBusiness-to-government: intercambio de datos de empresas con administraciones para fines de interés general. → Tema 2\n\n\nAltruismo de datos\nCesión voluntaria de datos por ciudadanos o empresas para fines de interés general, regulada por el Reglamento de Gobernanza de Datos. → Tema 2\n\n\nCiencia abierta\nPráctica de la investigación que hace accesibles publicaciones, datos, código y métodos para que puedan comprobarse y reutilizarse. → Tema 2\n\n\nRepositorio de datos\nServicio que deposita, describe, preserva y da acceso a conjuntos de datos con un identificador persistente (Zenodo, e-Archivo). re3data es el registro mundial de repositorios. → Tema 2\n\n\nData paper\nArtículo científico que describe un conjunto de datos —origen, método y estructura— para facilitar su reutilización. → Tema 2\n\n\nAPI\nInterfaz de programación de aplicaciones: una dirección web que devuelve datos estructurados (normalmente JSON o XML) para que los use un programa, no una persona. datos.gob.es ofrece una para consultar su catálogo. → Tema 2",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#gl-tema3",
     "href": "92-glosario.html#gl-tema3",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 3. Gestión documental y open data",
     "text": "Tema 3. Gestión documental y open data\n\nGestión documental\nConjunto de procesos para controlar la creación, clasificación, valoración, conservación y eliminación de documentos (ISO 15489). → Tema 3\n\n\nCiclo de vida de los datos\nSecuencia de fases por las que pasan los datos, desde su creación hasta su reutilización, preservación o eliminación (modelo del DCC). → Tema 3\n\n\nMetadatos\nDatos que describen otros datos: qué son, quién los publica, con qué licencia, cómo están estructurados y cómo se conservan. → Tema 3\n\n\nDCAT\nVocabulario del W3C para describir catálogos, conjuntos de datos (dcat:Dataset) y distribuciones (dcat:Distribution). DCAT-AP y DCAT-AP-ES son sus perfiles europeo y español. → Tema 3\n\n\nDistribución\nCada forma concreta de obtener un conjunto de datos: un fichero CSV, un JSON, una API. → Tema 3\n\n\nCompletitud\nCaracterística de calidad que mide la proporción de celdas o filas sin valores ausentes. → Tema 3\n\n\nConformidad\nCaracterística de calidad que mide si los valores siguen el formato esperado (fechas, códigos, unidades). → Tema 3\n\n\nExactitud\nCaracterística de calidad que mide si los valores son correctos y plausibles. Un número de préstamos negativo es un error de exactitud. → Tema 3\n\n\nValor ausente\nCelda sin dato. En R se representa con NA; en los ficheros aparece de muchas formas («», «n/d», «-»), lo que conviene unificar. → Tema 3\n\n\nSuma de control (checksum)\nHuella numérica de un fichero (MD5, SHA-256) que permite comprobar que no ha cambiado ni se ha corrompido. → Tema 3\n\n\nOAIS\nModelo de referencia para archivos digitales que deben preservar información a largo plazo (ISO 14721). → Tema 3\n\n\nIdentificador persistente\nIdentificador que no cambia aunque cambie la ubicación del recurso, como un DOI, un ORCID o un Handle. → Tema 3",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#gl-tema4",
     "href": "92-glosario.html#gl-tema4",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 4. Normalización e interoperabilidad",
     "text": "Tema 4. Normalización e interoperabilidad\n\nEstándar abierto\nEspecificación pública, desarrollada en un proceso abierto e implementable sin pagar derechos. → Tema 4\n\n\nInteroperabilidad\nCapacidad de sistemas y organizaciones para intercambiar información y usarla. El EIF distingue cuatro niveles: jurídico, organizativo, semántico y técnico. → Tema 4\n\n\nENI\nEsquema Nacional de Interoperabilidad: criterios que deben seguir las administraciones españolas para que sus sistemas interoperen. Se desarrolla en Normas Técnicas de Interoperabilidad (NTI). → Tema 4\n\n\nURI\nIdentificador uniforme de recursos: cadena que identifica algo de forma única en la Web, como http://www.wikidata.org/entity/Q8802. → Tema 4\n\n\nRDF\nModelo del W3C que representa la información como tripletas sujeto–predicado–objeto. Se escribe en sintaxis como Turtle, RDF/XML o JSON-LD. → Tema 4\n\n\nTripleta\nUnidad mínima de RDF: un sujeto, un predicado y un objeto, por ejemplo «biblioteca — está en — Getafe». → Tema 4\n\n\nTurtle\nSintaxis compacta y legible de RDF, con prefijos para abreviar las URI. → Tema 4\n\n\nJSON-LD\nJSON con un @context que asigna a cada clave una URI de un vocabulario: RDF con aspecto de JSON. → Tema 4\n\n\nLinked Open Data\nDatos enlazados publicados con licencia abierta: las cinco estrellas del modelo de Berners-Lee. → Tema 4\n\n\nSPARQL\nLenguaje de consulta del W3C para datos RDF, basado en patrones de tripletas. → Tema 4\n\n\nVocabulario\nConjunto de clases y propiedades con URI para describir datos (schema.org, Dublin Core, DCAT). → Tema 4\n\n\nOntología\nVocabulario con una semántica formal más rica (jerarquías, restricciones, reglas de inferencia), expresado en RDFS u OWL. → Tema 4\n\n\nSKOS\nVocabulario del W3C para publicar tesauros y clasificaciones en la Web, con relaciones como skos:broader y skos:narrower. → Tema 4\n\n\nTipo MIME\nEtiqueta normalizada que indica el formato de un fichero en internet, como text/csv o application/json. Convive en los catálogos con el vocabulario de tipos de fichero de la UE, lo que obliga a normalizar. → Tema 2, Tema 4",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#gl-tema5",
     "href": "92-glosario.html#gl-tema5",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tema 5. Infomediarios y negocio",
     "text": "Tema 5. Infomediarios y negocio\n\nSector infomediario\nConjunto de empresas que crean productos y servicios de valor añadido a partir de información, en buena parte pública. → Tema 5\n\n\nMarco 6-V\nSeis componentes para describir cómo un negocio crea y captura valor con datos abiertos: propuesta de valor, proceso de creación, valor obtenido, captura, gestión y red de valor (Ahmadi Zeleti et al.). → Tema 5\n\n\nFreemium\nModelo de negocio con un servicio básico gratuito y funciones avanzadas de pago. → Tema 5\n\n\nPunto de equilibrio\nVolumen de actividad a partir del cual los ingresos cubren los costes. → Tema 5\n\n\nServicio de valor añadido\nProducto que transforma los datos en algo más útil: agregación, limpieza, enriquecimiento, análisis, visualización o API. → Tema 5\n\n\nCompartir igual (share-alike)\nCláusula de licencia que obliga a distribuir las obras o bases de datos derivadas con la misma licencia (CC BY-SA, ODbL). → Tema 5\n\n\nMinería de textos y datos\nAnálisis automatizado de textos y datos para extraer patrones. La Directiva (UE) 2019/790 regula sus excepciones de derechos de autor. → Tema 5\n\n\nEspacio de datos\nEntorno de confianza para compartir datos, también privados, entre organizaciones de un sector con reglas comunes. → Tema 5\n\n\nDatos sintéticos\nDatos generados artificialmente que imitan la estructura de los reales sin corresponder a casos reales. El CSV de este libro es un ejemplo. → Tema 5",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#gl-herramientas",
     "href": "92-glosario.html#gl-herramientas",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Herramientas",
     "text": "Herramientas\n\nR\nLenguaje y entorno libre para análisis estadístico y de datos. → Primeros pasos\n\n\nwebR\nVersión de R compilada a WebAssembly que se ejecuta en el navegador, sin instalación. → Presentación\n\n\nQuarto\nSistema de publicación científica de código abierto que combina texto y código para generar libros, artículos, presentaciones y webs. → Presentación\n\n\nData frame\nTabla de datos en R: cada columna es un vector del mismo tamaño. → Primeros pasos\n\n\nOpenRefine\nHerramienta libre para limpiar y transformar datos, con agrupación (clustering) de valores similares. → Tema 3\n\n\nPaquete de R\nConjunto de funciones, datos y documentación de R que se instala y se carga con library(). El paquete datareuseR reúne las funciones y los datos de este libro. → Apéndice A\n\n\nService worker\nPrograma que el navegador ejecuta en segundo plano para una web. En este libro guarda las páginas y el motor de R para que funcionen sin conexión después de la primera visita. → Presentación",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   }
 ]
