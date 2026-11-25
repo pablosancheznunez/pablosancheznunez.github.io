@@ -446,6 +446,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#qué-es-un-proceso-etl" id="toc-qué-es-un-proceso-etl" class="nav-link" data-scroll-target="#qué-es-un-proceso-etl">1. Qué es un proceso ETL</a></li>
   <li><a href="#datos-tidy" id="toc-datos-tidy" class="nav-link" data-scroll-target="#datos-tidy">2. Datos tidy</a></li>
   <li><a href="#transformar-los-problemas-típicos" id="toc-transformar-los-problemas-típicos" class="nav-link" data-scroll-target="#transformar-los-problemas-típicos">3. Transformar: los problemas típicos</a></li>
+  <li><a href="#un-etl-completo-línea-a-línea" id="toc-un-etl-completo-línea-a-línea" class="nav-link" data-scroll-target="#un-etl-completo-línea-a-línea">4. Un ETL completo, línea a línea</a></li>
   <li><a href="#lab-p3-regex" id="toc-lab-p3-regex" class="nav-link" data-scroll-target="#lab-p3-regex">Laboratorio: prueba expresiones regulares</a></li>
   <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a>
   <ul class="collapse">
@@ -550,7 +551,7 @@ Figura&nbsp;1: Un proceso ETL: de fuentes heterogéneas a una tabla limpia y doc
 <p>Principios para un ETL reproducible:</p>
 <ul>
 <li>Los <strong>datos brutos no se tocan</strong>; todo cambio es código.</li>
-<li>Cada paso es una <strong>función</strong> pequeña y probada.</li>
+<li>Cada paso es una <a href="92-glosario.html#gl-funcion" class="glos" data-def="Bloque de código con nombre que recibe argumentos y devuelve un resultado."><strong>función</strong></a> pequeña y probada.</li>
 <li>El proceso es <strong>idempotente</strong>: ejecutarlo dos veces da el mismo resultado.</li>
 <li>Se <strong>registra</strong> qué se ha cambiado (cuántas filas se descartan y por qué).</li>
 <li>Se <strong>valida</strong> al final: tipos, rangos, claves únicas.</li>
@@ -558,16 +559,11 @@ Figura&nbsp;1: Un proceso ETL: de fuentes heterogéneas a una tabla limpia y doc
 </section>
 <section id="datos-tidy" class="level2">
 <h2 class="anchored" data-anchor-id="datos-tidy">2. Datos tidy</h2>
-<p>Wickham (2014) define los <strong>datos tidy</strong> (ordenados) con tres reglas: cada <strong>variable</strong> es una columna, cada <strong>observación</strong> es una fila y cada tipo de unidad observacional es una tabla. Muchos problemas de los datos reales violan esas reglas: varios autores en una celda, años en columnas, unidades mezcladas. En <code>publicaciones.csv</code>, la columna <code>autores</code> contiene varios valores en una celda; para analizar la autoría habría que <strong>separarla</strong> en una tabla aparte (una fila por artículo y autor).</p>
+<p>Wickham (2014) define los <a href="92-glosario.html#gl-tidy" class="glos" data-def="Datos en los que cada variable es una columna, cada observación una fila y cada unidad una tabla."><strong>datos tidy</strong></a> (ordenados) con tres reglas: cada <strong>variable</strong> es una columna, cada <strong>observación</strong> es una fila y cada tipo de unidad observacional es una tabla. Muchos problemas de los datos reales violan esas reglas: varios autores en una celda, años en columnas, unidades mezcladas. En <code>publicaciones.csv</code>, la columna <code>autores</code> contiene varios valores en una celda; para analizar la autoría habría que <strong>separarla</strong> en una tabla aparte (una fila por artículo y autor).</p>
 </section>
 <section id="transformar-los-problemas-típicos" class="level2">
 <h2 class="anchored" data-anchor-id="transformar-los-problemas-típicos">3. Transformar: los problemas típicos</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Problema</th>
@@ -579,12 +575,12 @@ Figura&nbsp;1: Un proceso ETL: de fuentes heterogéneas a una tabla limpia y doc
 <tr class="odd">
 <td>Formatos inconsistentes</td>
 <td><code>https://doi.org/10…</code>, <code>DOI: 10…</code></td>
-<td><strong>Normalización</strong> con expresiones regulares</td>
+<td><a href="92-glosario.html#gl-normalizacion" class="glos" data-def="Llevar valores a un formato único y coherente."><strong>Normalización</strong></a> con <a href="92-glosario.html#gl-regex" class="glos" data-def="Patrón que describe un conjunto de cadenas de texto.">expresiones regulares</a></td>
 </tr>
 <tr class="even">
 <td>Categorías mal escritas</td>
 <td><code>Sí</code>, <code>si</code>, <code>TRUE</code></td>
-<td>Diccionario de recodificación</td>
+<td><a href="92-glosario.html#gl-diccionario" class="glos" data-def="Colección de pares clave-valor en Python.">Diccionario</a> de recodificación</td>
 </tr>
 <tr class="odd">
 <td>Números como texto</td>
@@ -599,11 +595,88 @@ Figura&nbsp;1: Un proceso ETL: de fuentes heterogéneas a una tabla limpia y doc
 <tr class="odd">
 <td>Duplicados</td>
 <td>Registros repetidos</td>
-<td><strong>Deduplicación</strong> por clave normalizada</td>
+<td><a href="92-glosario.html#gl-deduplicacion" class="glos" data-def="Detección y eliminación de registros repetidos."><strong>Deduplicación</strong></a> por clave normalizada</td>
 </tr>
 </tbody>
 </table>
 <p>Una <strong>expresión regular</strong> describe un patrón de texto. Para los DOI, un patrón útil es <code>10\.\d{4,9}/\S+</code>: «10.», de cuatro a nueve dígitos, una barra y caracteres sin espacios.</p>
+</section>
+<section id="un-etl-completo-línea-a-línea" class="level2">
+<h2 class="anchored" data-anchor-id="un-etl-completo-línea-a-línea">4. Un ETL completo, línea a línea</h2>
+<p>Así queda un ETL pequeño de publicaciones con las tres fases separadas. Cada número explica una decisión.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-1"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-1-1"><a href="#annotated-cell-1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="annotated-cell-1-2"><a href="#annotated-cell-1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="annotated-cell-1-3"><a href="#annotated-cell-1-3" aria-hidden="true" tabindex="-1"></a></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-1-4" class="code-annotation-target"><a href="#annotated-cell-1-4" aria-hidden="true" tabindex="-1"></a>ENTRADA <span class="op">=</span> Path(<span class="st">"datos/brutos/publicaciones.csv"</span>)</span>
+<span id="annotated-cell-1-5"><a href="#annotated-cell-1-5" aria-hidden="true" tabindex="-1"></a>SALIDA <span class="op">=</span> Path(<span class="st">"datos/procesados/publicaciones_limpias.csv"</span>)</span>
+<span id="annotated-cell-1-6"><a href="#annotated-cell-1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-1-7"><a href="#annotated-cell-1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> extraer(ruta):</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-1-8" class="code-annotation-target"><a href="#annotated-cell-1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.read_csv(ruta, dtype<span class="op">=</span><span class="bu">str</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
+<span id="annotated-cell-1-9"><a href="#annotated-cell-1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-1-10"><a href="#annotated-cell-1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> transformar(df):</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-1-11" class="code-annotation-target"><a href="#annotated-cell-1-11" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> df.rename(columns<span class="op">=</span><span class="bu">str</span>.lower)</span>
+<span id="annotated-cell-1-12"><a href="#annotated-cell-1-12" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">"doi"</span>] <span class="op">=</span> (df[<span class="st">"doi"</span>].fillna(<span class="st">""</span>)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-1-13" class="code-annotation-target"><a href="#annotated-cell-1-13" aria-hidden="true" tabindex="-1"></a>                   .<span class="bu">str</span>.extract(<span class="vs">r"</span><span class="kw">(</span><span class="vs">10</span><span class="ch">\.</span><span class="dv">\d</span><span class="op">{4,9}</span><span class="vs">/</span><span class="dv">\S</span><span class="op">+</span><span class="kw">)</span><span class="vs">"</span>, expand<span class="op">=</span><span class="va">False</span>)</span>
+<span id="annotated-cell-1-14"><a href="#annotated-cell-1-14" aria-hidden="true" tabindex="-1"></a>                   .<span class="bu">str</span>.lower().<span class="bu">str</span>.rstrip(<span class="st">".,;"</span>))</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="5" onclick="event.preventDefault();">5</a><span id="annotated-cell-1-15" class="code-annotation-target"><a href="#annotated-cell-1-15" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">"anio"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"anio"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>).astype(<span class="st">"Int64"</span>)</span>
+<span id="annotated-cell-1-16"><a href="#annotated-cell-1-16" aria-hidden="true" tabindex="-1"></a>    oa <span class="op">=</span> {<span class="st">"sí"</span>: <span class="va">True</span>, <span class="st">"si"</span>: <span class="va">True</span>, <span class="st">"true"</span>: <span class="va">True</span>, <span class="st">"no"</span>: <span class="va">False</span>, <span class="st">"false"</span>: <span class="va">False</span>}</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="6" onclick="event.preventDefault();">6</a><span id="annotated-cell-1-17" class="code-annotation-target"><a href="#annotated-cell-1-17" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">"acceso_abierto"</span>] <span class="op">=</span> df[<span class="st">"acceso_abierto"</span>].<span class="bu">str</span>.strip().<span class="bu">str</span>.lower().<span class="bu">map</span>(oa)</span>
+<span id="annotated-cell-1-18"><a href="#annotated-cell-1-18" aria-hidden="true" tabindex="-1"></a>    sin_doi <span class="op">=</span> df[df[<span class="st">"doi"</span>].isna()]</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="7" onclick="event.preventDefault();">7</a><span id="annotated-cell-1-19" class="code-annotation-target"><a href="#annotated-cell-1-19" aria-hidden="true" tabindex="-1"></a>    con_doi <span class="op">=</span> df.dropna(subset<span class="op">=</span>[<span class="st">"doi"</span>]).drop_duplicates(subset<span class="op">=</span><span class="st">"doi"</span>)</span>
+<span id="annotated-cell-1-20"><a href="#annotated-cell-1-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.concat([con_doi, sin_doi], ignore_index<span class="op">=</span><span class="va">True</span>)</span>
+<span id="annotated-cell-1-21"><a href="#annotated-cell-1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-1-22"><a href="#annotated-cell-1-22" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> validar(df):</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="8" onclick="event.preventDefault();">8</a><span id="annotated-cell-1-23" class="code-annotation-target"><a href="#annotated-cell-1-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> df[<span class="st">"doi"</span>].dropna().is_unique, <span class="st">"Hay DOI repetidos"</span></span>
+<span id="annotated-cell-1-24"><a href="#annotated-cell-1-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> df[<span class="st">"anio"</span>].dropna().between(<span class="dv">1900</span>, <span class="dv">2030</span>).<span class="bu">all</span>(), <span class="st">"Años fuera de rango"</span></span>
+<span id="annotated-cell-1-25"><a href="#annotated-cell-1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-1-26"><a href="#annotated-cell-1-26" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cargar(df, ruta):</span>
+<span id="annotated-cell-1-27"><a href="#annotated-cell-1-27" aria-hidden="true" tabindex="-1"></a>    ruta.parent.mkdir(parents<span class="op">=</span><span class="va">True</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="9" onclick="event.preventDefault();">9</a><span id="annotated-cell-1-28" class="code-annotation-target"><a href="#annotated-cell-1-28" aria-hidden="true" tabindex="-1"></a>    df.to_csv(ruta, index<span class="op">=</span><span class="va">False</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
+<span id="annotated-cell-1-29"><a href="#annotated-cell-1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-1-30"><a href="#annotated-cell-1-30" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="annotated-cell-1-31"><a href="#annotated-cell-1-31" aria-hidden="true" tabindex="-1"></a>    datos <span class="op">=</span> transformar(extraer(ENTRADA))</span>
+<span id="annotated-cell-1-32"><a href="#annotated-cell-1-32" aria-hidden="true" tabindex="-1"></a>    validar(datos)</span>
+<span id="annotated-cell-1-33"><a href="#annotated-cell-1-33" aria-hidden="true" tabindex="-1"></a>    cargar(datos, SALIDA)</span>
+<span id="annotated-cell-1-34"><a href="#annotated-cell-1-34" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="bu">len</span>(datos)<span class="sc">}</span><span class="ss"> registros escritos en </span><span class="sc">{</span>SALIDA<span class="sc">}</span><span class="ss">"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="4" data-code-annotation="1">Las rutas, en constantes al principio: cambiarlas no obliga a buscar por todo el código. Los datos brutos nunca se sobrescriben.</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="8" data-code-annotation="2">Leerlo todo como texto evita que pandas «adivine» tipos y pierda ceros iniciales o convierta códigos en números.</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="11" data-code-annotation="3">Normalizar los nombres de columna hace el código robusto a cambios de mayúsculas en la fuente.</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="13" data-code-annotation="4">Extrae solo el DOI aunque venga con prefijos (<code>https://doi.org/</code>, <code>doi:</code>); el resto de la celda se descarta.</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="5">5</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="15" data-code-annotation="5"><code>errors="coerce"</code> convierte en ausente lo que no es un año, en lugar de detener el proceso; <code>Int64</code> admite ausentes.</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="6">6</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="17" data-code-annotation="6">Un diccionario explícito para recodificar: los valores que no estén en él quedan como ausentes y se ven.</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="7">7</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="19" data-code-annotation="7">Se deduplica por DOI, pero los registros <strong>sin</strong> DOI se conservan: no son duplicados entre sí.</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="8">8</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="23" data-code-annotation="8">Las validaciones detienen el proceso si algo no cuadra, antes de que un error llegue al análisis.</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="9">9</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="28" data-code-annotation="9">Se escribe en una carpeta distinta, en UTF-8 y sin el índice de pandas.</span>
+</dd>
+</dl>
+<p>Separar <code>extraer</code>, <code>transformar</code>, <code>validar</code> y <code>cargar</code> en funciones permite probar cada fase por su cuenta y reutilizarlas con otra fuente.</p>
 </section>
 <section id="lab-p3-regex" class="level2">
 <h2 class="anchored" data-anchor-id="lab-p3-regex">Laboratorio: prueba expresiones regulares</h2>
@@ -612,10 +685,10 @@ Figura&nbsp;1: Un proceso ETL: de fuentes heterogéneas a una tabla limpia y doc
 <p>Laboratorio · se ejecuta en tu navegador</p>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="71" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 70;"><span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">texto</span></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>viewof patron <span class="op">=</span> <span class="fu">texto</span>(<span class="st">"Patrón (sintaxis de JavaScript, muy parecida a la de Python)"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"10</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">d{4,9}/</span><span class="sc">\\</span><span class="st">S+"</span>})</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>viewof muestras <span class="op">=</span> <span class="fu">area</span>(<span class="st">"Textos de prueba (uno por línea)"</span><span class="op">,</span> {<span class="dt">rows</span><span class="op">:</span> <span class="dv">6</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"https://doi.org/10.1371/journal.pcbi.1005510</span><span class="sc">\n</span><span class="st">DOI: 10.18637/JSS.V059.I10</span><span class="sc">\n</span><span class="st">doi:10.1038/s41586-020-2649-2.</span><span class="sc">\n</span><span class="st">sin doi</span><span class="sc">\n</span><span class="st">10.123/corto</span><span class="sc">\n</span><span class="st">Ver 10.1080/00031305.2017.1375986 (2018)"</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="123" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 122;"><span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">texto</span></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>viewof patron <span class="op">=</span> <span class="fu">texto</span>(<span class="st">"Patrón (sintaxis de JavaScript, muy parecida a la de Python)"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"10</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">d{4,9}/</span><span class="sc">\\</span><span class="st">S+"</span>})</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>viewof muestras <span class="op">=</span> <span class="fu">area</span>(<span class="st">"Textos de prueba (uno por línea)"</span><span class="op">,</span> {<span class="dt">rows</span><span class="op">:</span> <span class="dv">6</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"https://doi.org/10.1371/journal.pcbi.1005510</span><span class="sc">\n</span><span class="st">DOI: 10.18637/JSS.V059.I10</span><span class="sc">\n</span><span class="st">doi:10.1038/s41586-020-2649-2.</span><span class="sc">\n</span><span class="st">sin doi</span><span class="sc">\n</span><span class="st">10.123/corto</span><span class="sc">\n</span><span class="st">Ver 10.1080/00031305.2017.1375986 (2018)"</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -646,16 +719,16 @@ Figura&nbsp;1: Un proceso ETL: de fuentes heterogéneas a una tabla limpia y doc
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="78" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 77;"><span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> re<span class="op">;</span></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>  <span class="cf">try</span> { re <span class="op">=</span> <span class="kw">new</span> <span class="bu">RegExp</span>(patron<span class="op">,</span> <span class="st">"i"</span>)<span class="op">;</span> } <span class="cf">catch</span> (e) { d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;p class="lab-mal" style="font-weight:600"&gt;Patrón no válido: </span><span class="sc">${</span><span class="bu">String</span>(e<span class="op">.</span><span class="at">message</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/&lt;/g</span><span class="op">,</span> <span class="st">"&amp;lt;"</span>)<span class="sc">}</span><span class="vs">&lt;/p&gt;`</span><span class="op">;</span> <span class="cf">return</span> d<span class="op">;</span> }</span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> esc <span class="op">=</span> s <span class="kw">=&gt;</span> s<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/&amp;/g</span><span class="op">,</span> <span class="st">"&amp;amp;"</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/&lt;/g</span><span class="op">,</span> <span class="st">"&amp;lt;"</span>)<span class="op">;</span></span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> filas <span class="op">=</span> muestras<span class="op">.</span><span class="fu">split</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)<span class="op">.</span><span class="fu">filter</span>(l <span class="kw">=&gt;</span> l<span class="op">.</span><span class="fu">trim</span>())<span class="op">.</span><span class="fu">map</span>(l <span class="kw">=&gt;</span> { <span class="kw">const</span> m <span class="op">=</span> l<span class="op">.</span><span class="fu">match</span>(re)<span class="op">;</span> <span class="cf">return</span> <span class="vs">`&lt;tr&gt;&lt;td&gt;&lt;code&gt;</span><span class="sc">${</span><span class="fu">esc</span>(l)<span class="sc">}</span><span class="vs">&lt;/code&gt;&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>m <span class="op">?</span> <span class="vs">`&lt;code&gt;</span><span class="sc">${</span><span class="fu">esc</span>(m[<span class="dv">0</span>])<span class="sc">}</span><span class="vs">&lt;/code&gt;`</span> <span class="op">:</span> <span class="st">'&lt;span class="lab-mal"&gt;sin coincidencia&lt;/span&gt;'</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>m <span class="op">?</span> <span class="vs">`&lt;code&gt;</span><span class="sc">${</span><span class="fu">esc</span>(m[<span class="dv">0</span>]<span class="op">.</span><span class="fu">toLowerCase</span>()<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">[.,;)]+$</span><span class="ss">/</span><span class="op">,</span> <span class="st">""</span>))<span class="sc">}</span><span class="vs">&lt;/code&gt;`</span> <span class="op">:</span> <span class="st">"—"</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;/tr&gt;`</span><span class="op">;</span> })<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="op">;</span></span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;table class="table table-sm"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Texto&lt;/th&gt;&lt;th scope="col"&gt;Coincidencia&lt;/th&gt;&lt;th scope="col"&gt;Normalizado (minúsculas, sin puntuación final)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;</span><span class="sc">${</span>filas<span class="sc">}</span><span class="vs">&lt;/tbody&gt;&lt;/table&gt;</span></span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;p class="small"&gt;Fíjate en el tercer ejemplo: el punto final se cuela en la coincidencia. Por eso conviene quitar la puntuación final al normalizar.&lt;/p&gt;`</span><span class="op">;</span></span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d<span class="op">;</span></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="130" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 129;"><span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> re<span class="op">;</span></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>  <span class="cf">try</span> { re <span class="op">=</span> <span class="kw">new</span> <span class="bu">RegExp</span>(patron<span class="op">,</span> <span class="st">"i"</span>)<span class="op">;</span> } <span class="cf">catch</span> (e) { d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;p class="lab-mal" style="font-weight:600"&gt;Patrón no válido: </span><span class="sc">${</span><span class="bu">String</span>(e<span class="op">.</span><span class="at">message</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/&lt;/g</span><span class="op">,</span> <span class="st">"&amp;lt;"</span>)<span class="sc">}</span><span class="vs">&lt;/p&gt;`</span><span class="op">;</span> <span class="cf">return</span> d<span class="op">;</span> }</span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> esc <span class="op">=</span> s <span class="kw">=&gt;</span> s<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/&amp;/g</span><span class="op">,</span> <span class="st">"&amp;amp;"</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/&lt;/g</span><span class="op">,</span> <span class="st">"&amp;lt;"</span>)<span class="op">;</span></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> filas <span class="op">=</span> muestras<span class="op">.</span><span class="fu">split</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)<span class="op">.</span><span class="fu">filter</span>(l <span class="kw">=&gt;</span> l<span class="op">.</span><span class="fu">trim</span>())<span class="op">.</span><span class="fu">map</span>(l <span class="kw">=&gt;</span> { <span class="kw">const</span> m <span class="op">=</span> l<span class="op">.</span><span class="fu">match</span>(re)<span class="op">;</span> <span class="cf">return</span> <span class="vs">`&lt;tr&gt;&lt;td&gt;&lt;code&gt;</span><span class="sc">${</span><span class="fu">esc</span>(l)<span class="sc">}</span><span class="vs">&lt;/code&gt;&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>m <span class="op">?</span> <span class="vs">`&lt;code&gt;</span><span class="sc">${</span><span class="fu">esc</span>(m[<span class="dv">0</span>])<span class="sc">}</span><span class="vs">&lt;/code&gt;`</span> <span class="op">:</span> <span class="st">'&lt;span class="lab-mal"&gt;sin coincidencia&lt;/span&gt;'</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>m <span class="op">?</span> <span class="vs">`&lt;code&gt;</span><span class="sc">${</span><span class="fu">esc</span>(m[<span class="dv">0</span>]<span class="op">.</span><span class="fu">toLowerCase</span>()<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">[.,;)]+$</span><span class="ss">/</span><span class="op">,</span> <span class="st">""</span>))<span class="sc">}</span><span class="vs">&lt;/code&gt;`</span> <span class="op">:</span> <span class="st">"—"</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;/tr&gt;`</span><span class="op">;</span> })<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="op">;</span></span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;table class="table table-sm"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Texto&lt;/th&gt;&lt;th scope="col"&gt;Coincidencia&lt;/th&gt;&lt;th scope="col"&gt;Normalizado (minúsculas, sin puntuación final)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;</span><span class="sc">${</span>filas<span class="sc">}</span><span class="vs">&lt;/tbody&gt;&lt;/table&gt;</span></span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;p class="small"&gt;Fíjate en el tercer ejemplo: el punto final se cuela en la coincidencia. Por eso conviene quitar la puntuación final al normalizar.&lt;/p&gt;`</span><span class="op">;</span></span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d<span class="op">;</span></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="expression">
 
@@ -723,7 +796,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InAz
 </section>
 <section id="ejercicio-3.3-cargar-en-sqlite-python" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ejercicio-3.3-cargar-en-sqlite-python">Ejercicio 3.3 · Cargar en SQLite (Python)</h3>
-<p>Carga la tabla limpia en una base de datos <strong>SQLite</strong> en memoria y consulta con SQL cuántas publicaciones hay de <strong>2023</strong>.</p>
+<p>Carga la tabla limpia en una base de datos <a href="92-glosario.html#gl-sqlite" class="glos" data-def="Base de datos relacional que se guarda en un único archivo."><strong>SQLite</strong></a> en memoria y consulta con SQL cuántas publicaciones hay de <strong>2023</strong>.</p>
 <script type="exercise-setup-p3_sql-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicDNfc3FsIiwic2V0dXAiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBhbmRhcyBhcyBwZCwgc3FsaXRlM1xucHViID0gcGQucmVhZF9jc3YoXCJkYXRvcy9wdWJsaWNhY2lvbmVzLmNzdlwiLCBkdHlwZT1zdHIpXG5wdWJbXCJhbmlvXCJdID0gcGQudG9fbnVtZXJpYyhwdWJbXCJhbmlvXCJdLnN0ci5zdHJpcCgpLCBlcnJvcnM9XCJjb2VyY2VcIikuYXN0eXBlKFwiSW50NjRcIilcbnB1YiA9IHB1Yi5kcm9wX2R1cGxpY2F0ZXMoc3Vic2V0PVtcInRpdHVsb1wiLCBcImF1dG9yZXNcIl0pIn0=
 </script>
@@ -1592,6 +1665,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

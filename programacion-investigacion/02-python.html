@@ -490,8 +490,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Usar los tipos de datos y las estructuras básicas de Python (listas, diccionarios).</li>
-<li>Escribir funciones documentadas y reutilizables.</li>
+<li>Usar los tipos de datos y las estructuras básicas de Python (<a href="92-glosario.html#gl-lista" class="glos" data-def="Colección ordenada y modificable de elementos en Python.">listas</a>, <a href="92-glosario.html#gl-diccionario" class="glos" data-def="Colección de pares clave-valor en Python.">diccionarios</a>).</li>
+<li>Escribir <a href="92-glosario.html#gl-funcion" class="glos" data-def="Bloque de código con nombre que recibe argumentos y devuelve un resultado.">funciones</a> documentadas y reutilizables.</li>
 <li>Leer, filtrar y resumir datos tabulares con pandas.</li>
 </ul>
 </div>
@@ -551,7 +551,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVm
 </section>
 <section id="datos-tabulares-con-pandas" class="level2">
 <h2 class="anchored" data-anchor-id="datos-tabulares-con-pandas">2. Datos tabulares con pandas</h2>
-<p><strong>pandas</strong> organiza los datos en un <strong>DataFrame</strong>: una tabla con columnas de distinto tipo, parecida a un <code>data.frame</code> de R. Sus operaciones están <strong>vectorizadas</strong>: se aplican a columnas enteras sin escribir bucles, lo que es más claro y más rápido. Esa idea viene de la programación con matrices que Harris et al.&nbsp;(2020) describen para NumPy, la base sobre la que se construye pandas.</p>
+<p><strong>pandas</strong> organiza los datos en un <a href="92-glosario.html#gl-dataframe" class="glos" data-def="Tabla de datos con columnas de distinto tipo (pandas en Python, data.frame en R)."><strong>DataFrame</strong></a>: una tabla con columnas de distinto tipo, parecida a un <code>data.frame</code> de R. Sus operaciones están <strong>vectorizadas</strong>: se aplican a columnas enteras sin escribir bucles, lo que es más claro y más rápido. Esa idea viene de la programación con matrices que Harris et al.&nbsp;(2020) describen para NumPy, la base sobre la que se construye pandas.</p>
 <div>
 <div id="pyodide-3" class="exercise-cell">
 
@@ -673,7 +673,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InAy
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>medias <span class="op">=</span> {a: suma[a] <span class="op">/</span> n[a] <span class="cf">for</span> a <span class="kw">in</span> suma}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Versión con pandas, vectorizada:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>medias <span class="op">=</span> pub.groupby(<span class="st">"anio"</span>)[<span class="st">"citas"</span>].mean()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>La segunda es más corta, más legible y menos propensa a errores. El bucle sigue siendo útil para entender qué hace <code>groupby</code> o para estructuras que no son tablas (JSON anidado).</p>
+<p>La segunda es más corta, más legible y menos propensa a errores. El bucle sigue siendo útil para entender qué hace <code>groupby</code> o para estructuras que no son tablas (<a href="92-glosario.html#gl-json" class="glos" data-def="Formato de texto para datos estructurados con objetos y listas.">JSON</a> anidado).</p>
 </div>
 </div>
 </section>
@@ -1425,6 +1425,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 

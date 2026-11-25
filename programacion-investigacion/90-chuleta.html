@@ -460,7 +460,7 @@ ul.task-list li input[type="checkbox"] {
 <td><code>git log --oneline --graph</code></td>
 </tr>
 <tr class="odd">
-<td>Nueva rama</td>
+<td>Nueva <a href="92-glosario.html#gl-rama" class="glos" data-def="Línea de trabajo paralela en un repositorio de Git.">rama</a></td>
 <td><code>git switch -c nombre</code></td>
 </tr>
 <tr class="even">
@@ -525,11 +525,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="datos" class="level2">
 <h2 class="anchored" data-anchor-id="datos">Datos</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Tarea</th>
@@ -544,7 +539,7 @@ ul.task-list li input[type="checkbox"] {
 <td><code>read.csv("f.csv")</code> · <code>readr::read_csv()</code></td>
 </tr>
 <tr class="even">
-<td>Leer JSON</td>
+<td>Leer <a href="92-glosario.html#gl-json" class="glos" data-def="Formato de texto para datos estructurados con objetos y listas.">JSON</a></td>
 <td><code>json.load(open("f.json"))</code></td>
 <td><code>jsonlite::fromJSON("f.json")</code></td>
 </tr>
@@ -564,12 +559,12 @@ ul.task-list li input[type="checkbox"] {
 <td><code>unique(df)</code> · <code>dplyr::distinct()</code></td>
 </tr>
 <tr class="even">
-<td>Expresión regular</td>
+<td><a href="92-glosario.html#gl-regex" class="glos" data-def="Patrón que describe un conjunto de cadenas de texto.">Expresión regular</a></td>
 <td><code>s.str.extract(r"...")</code></td>
 <td><code>regmatches()</code> · <code>stringr::str_extract()</code></td>
 </tr>
 <tr class="odd">
-<td>SQLite</td>
+<td><a href="92-glosario.html#gl-sqlite" class="glos" data-def="Base de datos relacional que se guarda en un único archivo.">SQLite</a></td>
 <td><code>sqlite3.connect("db.sqlite")</code></td>
 <td><code>DBI::dbConnect(RSQLite::SQLite(), "db.sqlite")</code></td>
 </tr>
@@ -579,11 +574,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="api" class="level2">
 <h2 class="anchored" data-anchor-id="api">API</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Tarea</th>
@@ -613,7 +603,7 @@ ul.task-list li input[type="checkbox"] {
 <td><code>req_retry()</code></td>
 </tr>
 <tr class="odd">
-<td>Clave desde el entorno</td>
+<td>Clave desde el <a href="92-glosario.html#gl-entorno" class="glos" data-def="Espacio aislado con las dependencias de un proyecto.">entorno</a></td>
 <td><code>os.environ["CLAVE"]</code></td>
 <td><code>Sys.getenv("CLAVE")</code></td>
 </tr>
@@ -672,11 +662,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="mcp" class="level2">
 <h2 class="anchored" data-anchor-id="mcp">MCP</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Tarea</th>
@@ -686,12 +671,12 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>Paquete</td>
+<td><a href="92-glosario.html#gl-paquete" class="glos" data-def="Forma estándar de distribuir código reutilizable con documentación, pruebas y dependencias.">Paquete</a></td>
 <td><code>mcp</code> (SDK oficial)</td>
 <td><code>mcptools</code> + <code>ellmer</code></td>
 </tr>
 <tr class="even">
-<td>Definir herramienta</td>
+<td>Definir <a href="92-glosario.html#gl-tool" class="glos" data-def="Función que el modelo puede decidir llamar, con argumentos descritos en JSON Schema.">herramienta</a></td>
 <td><code>@mcp.tool()</code></td>
 <td><code>ellmer::tool()</code></td>
 </tr>
@@ -1384,6 +1369,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 

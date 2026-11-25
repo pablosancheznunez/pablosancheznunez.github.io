@@ -491,9 +491,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Entender cuándo merece la pena convertir el código de un proyecto en un paquete.</li>
+<li>Entender cuándo merece la pena convertir el código de un proyecto en un <a href="92-glosario.html#gl-paquete" class="glos" data-def="Forma estándar de distribuir código reutilizable con documentación, pruebas y dependencias.">paquete</a>.</li>
 <li>Conocer la estructura de un paquete de R y el flujo con usethis, roxygen2 y testthat.</li>
-<li>Conocer el equivalente en Python (pyproject.toml, uv, pytest) y cómo publicar y citar el software.</li>
+<li>Conocer el equivalente en Python (<a href="92-glosario.html#gl-pyproject" class="glos" data-def="Archivo de metadatos y dependencias de un proyecto de Python.">pyproject.toml</a>, uv, pytest) y cómo publicar y citar el software.</li>
 </ul>
 </div>
 </div>
@@ -537,7 +537,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Quieres que <strong>otras personas</strong> usen tu método.</li>
 <li>Quieres que el software sea <strong>citable</strong> y reconocido como resultado de investigación.</li>
 </ul>
-<p>Marwick, Boettiger y Mullen (2018) van más allá y proponen organizar todo un proyecto de análisis como un <strong>compendio de investigación</strong>: una estructura de paquete que reúne datos, código, documentación y manuscrito, de modo que las herramientas del ecosistema (comprobaciones, pruebas, integración continua) sirvan también para garantizar la reproducibilidad.</p>
+<p>Marwick, Boettiger y Mullen (2018) van más allá y proponen organizar todo un proyecto de análisis como un <a href="92-glosario.html#gl-compendio" class="glos" data-def="Proyecto de análisis organizado como un paquete con datos, código y manuscrito."><strong>compendio de investigación</strong></a>: una estructura de paquete que reúne datos, código, documentación y manuscrito, de modo que las <a href="92-glosario.html#gl-tool" class="glos" data-def="Función que el modelo puede decidir llamar, con argumentos descritos en JSON Schema.">herramientas</a> del ecosistema (comprobaciones, pruebas, integración continua) sirvan también para garantizar la reproducibilidad.</p>
 </section>
 <section id="un-paquete-de-r" class="level2">
 <h2 class="anchored" data-anchor-id="un-paquete-de-r">2. Un paquete de R</h2>
@@ -561,7 +561,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">document</span>()                <span class="co"># roxygen2 → man/ y NAMESPACE</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">test</span>()                    <span class="co"># ejecuta las pruebas</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">check</span>()                   <span class="co"># R CMD check: la revisión completa</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Una función documentada con <strong>roxygen2</strong> y su prueba con <strong>testthat</strong>:</p>
+<p>Una <a href="92-glosario.html#gl-funcion" class="glos" data-def="Bloque de código con nombre que recibe argumentos y devuelve un resultado.">función</a> documentada con <strong>roxygen2</strong> y su prueba con <strong>testthat</strong>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' Índice h de una serie de citas</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param citas Vector numérico de citas, una por publicación.</span></span>
@@ -581,7 +581,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_equal</span>(<span class="fu">indice_h</span>(<span class="fu">numeric</span>(<span class="dv">0</span>)), <span class="dv">0</span>)</span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_error</span>(<span class="fu">indice_h</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">2</span>)))</span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>R CMD check</strong> revisa la documentación, los ejemplos, las pruebas, las dependencias y docenas de detalles; CRAN exige que pase sin errores ni avisos. Para publicar, las opciones son <strong>CRAN</strong> (revisión estricta, máxima difusión), <strong>R-universe</strong> (publicación inmediata desde GitHub) y la revisión por pares de <strong>rOpenSci</strong> para paquetes científicos. La web de documentación se genera con <strong>pkgdown</strong>.</p>
+<p><a href="92-glosario.html#gl-check" class="glos" data-def="Revisión completa de un paquete de R antes de publicarlo."><strong>R CMD check</strong></a> revisa la documentación, los ejemplos, las pruebas, las dependencias y docenas de detalles; CRAN exige que pase sin errores ni avisos. Para publicar, las opciones son <strong>CRAN</strong> (revisión estricta, máxima difusión), <strong>R-universe</strong> (publicación inmediata desde GitHub) y la revisión por pares de <strong>rOpenSci</strong> para paquetes científicos. La web de documentación se genera con <strong>pkgdown</strong>.</p>
 </section>
 <section id="un-paquete-de-python" class="level2">
 <h2 class="anchored" data-anchor-id="un-paquete-de-python">3. Un paquete de Python</h2>
@@ -602,7 +602,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="versiones-citas-y-doi" class="level2">
 <h2 class="anchored" data-anchor-id="versiones-citas-y-doi">4. Versiones, citas y DOI</h2>
 <ul>
-<li><strong>Versionado semántico</strong> (MAJOR.MINOR.PATCH): sube el PATCH al corregir errores, el MINOR al añadir funciones compatibles y el MAJOR al romper la compatibilidad.</li>
+<li><a href="92-glosario.html#gl-semver" class="glos" data-def="Numeración MAJOR.MINOR.PATCH según el tipo de cambio."><strong>Versionado semántico</strong></a> (MAJOR.MINOR.PATCH): sube el PATCH al corregir errores, el MINOR al añadir funciones compatibles y el MAJOR al romper la compatibilidad.</li>
 <li>Añade un <strong>CITATION.cff</strong> (lo leen GitHub y Zenodo) y, en R, <code>inst/CITATION</code>.</li>
 <li>Conecta el repositorio con <strong>Zenodo</strong> para obtener un <strong>DOI</strong> por versión, y cita el software en tus artículos con su versión y su DOI.</li>
 </ul>
@@ -1448,6 +1448,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 

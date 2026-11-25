@@ -496,8 +496,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Entender la arquitectura del Model Context Protocol (MCP): anfitrión, cliente y servidor; herramientas, recursos y plantillas.</li>
-<li>Seguir el intercambio de mensajes JSON-RPC entre un cliente y un servidor.</li>
+<li>Entender la arquitectura del Model Context Protocol (MCP): anfitrión, cliente y servidor; <a href="92-glosario.html#gl-tool" class="glos" data-def="Función que el modelo puede decidir llamar, con argumentos descritos en JSON Schema.">herramientas</a>, <a href="92-glosario.html#gl-resource" class="glos" data-def="Datos que la aplicación puede leer, identificados por una URI.">recursos</a> y <a href="92-glosario.html#gl-prompt" class="glos" data-def="Instrucción predefinida que la persona elige usar.">plantillas</a>.</li>
+<li>Seguir el intercambio de mensajes <a href="92-glosario.html#gl-jsonrpc" class="glos" data-def="Protocolo de llamadas remotas con mensajes JSON (id, method, params, result).">JSON-RPC</a> entre un cliente y un servidor.</li>
 <li>Crear un servidor MCP sencillo en Python y en R, y valorar sus riesgos de seguridad.</li>
 </ul>
 </div>
@@ -570,11 +570,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <p>Un servidor puede ofrecer tres tipos de capacidades:</p>
 <ul>
-<li><strong>Herramientas</strong> (<em>tools</em>): funciones que el modelo puede decidir llamar, con argumentos descritos con un esquema JSON. Pueden tener efectos (escribir, enviar).</li>
+<li><strong>Herramientas</strong> (<em>tools</em>): <a href="92-glosario.html#gl-funcion" class="glos" data-def="Bloque de código con nombre que recibe argumentos y devuelve un resultado.">funciones</a> que el modelo puede decidir llamar, con argumentos descritos con un esquema <a href="92-glosario.html#gl-json" class="glos" data-def="Formato de texto para datos estructurados con objetos y listas.">JSON</a>. Pueden tener efectos (escribir, enviar).</li>
 <li><strong>Recursos</strong> (<em>resources</em>): datos que la aplicación puede leer, identificados por una URI (un archivo, una tabla).</li>
 <li><strong>Plantillas</strong> (<em>prompts</em>): instrucciones predefinidas que la persona elige usar.</li>
 </ul>
-<p>Los mensajes siguen el formato <strong>JSON-RPC 2.0</strong> y viajan por un <strong>transporte</strong>: <strong>stdio</strong> (el anfitrión lanza el servidor como un proceso local y se comunican por la entrada y la salida estándar) o <strong>HTTP</strong> (<em>Streamable HTTP</em>, para servidores remotos).</p>
+<p>Los mensajes siguen el formato <strong>JSON-RPC 2.0</strong> y viajan por un <a href="92-glosario.html#gl-transporte" class="glos" data-def="Canal de los mensajes MCP: stdio (local) o HTTP (remoto)."><strong>transporte</strong></a>: <strong>stdio</strong> (el anfitrión lanza el servidor como un proceso local y se comunican por la entrada y la salida estándar) o <strong>HTTP</strong> (<em>Streamable HTTP</em>, para servidores remotos).</p>
 <div id="fig-p6-mcp" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A la izquierda, un anfitrión con un modelo de lenguaje y dos clientes. Cada cliente se conecta mediante JSON-RPC con un servidor: uno local por stdio que accede a archivos del proyecto y otro remoto por HTTP que accede a la API de OpenAlex. Cada servidor muestra sus herramientas, recursos y plantillas.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-p6-mcp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -676,7 +676,7 @@ Figura&nbsp;1: Arquitectura de MCP: el anfitrión mantiene un cliente por servid
 </section>
 <section id="un-servidor-en-python" class="level2">
 <h2 class="anchored" data-anchor-id="un-servidor-en-python">3. Un servidor en Python</h2>
-<p>Con el SDK oficial de Python (rama estable 1.x), la clase <code>FastMCP</code> convierte funciones con anotaciones de tipo y <em>docstring</em> en herramientas, recursos y plantillas:</p>
+<p>Con el SDK oficial de Python (<a href="92-glosario.html#gl-rama" class="glos" data-def="Línea de trabajo paralela en un repositorio de Git.">rama</a> estable 1.x), la clase <code>FastMCP</code> convierte funciones con anotaciones de tipo y <em>docstring</em> en herramientas, recursos y plantillas:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># servidor.py  ·  ejecutar con: uv run --with "mcp[cli]&lt;2" --with httpx mcp dev servidor.py</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> httpx</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mcp.server.fastmcp <span class="im">import</span> FastMCP</span>
@@ -719,7 +719,7 @@ Figura&nbsp;1: Arquitectura de MCP: el anfitrión mantiene un cliente por servid
 </section>
 <section id="un-servidor-en-r" class="level2">
 <h2 class="anchored" data-anchor-id="un-servidor-en-r">4. Un servidor en R</h2>
-<p>El paquete <strong>mcptools</strong> (en CRAN) implementa MCP en R, en los dos sentidos: R como <strong>servidor</strong> (para que un asistente use funciones de R) y R como <strong>cliente</strong> (para usar servidores de terceros desde <strong>ellmer</strong>). Las herramientas se definen con <code>ellmer::tool()</code>:</p>
+<p>El <a href="92-glosario.html#gl-paquete" class="glos" data-def="Forma estándar de distribuir código reutilizable con documentación, pruebas y dependencias.">paquete</a> <strong>mcptools</strong> (en CRAN) implementa MCP en R, en los dos sentidos: R como <strong>servidor</strong> (para que un asistente use funciones de R) y R como <strong>cliente</strong> (para usar servidores de terceros desde <strong>ellmer</strong>). Las herramientas se definen con <code>ellmer::tool()</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># servidor.R  ·  registrar en la aplicación con el comando: Rscript servidor.R</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ellmer)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -742,7 +742,7 @@ Figura&nbsp;1: Arquitectura de MCP: el anfitrión mantiene un cliente por servid
 <li><strong>Mínimo privilegio</strong>: cada herramienta, solo lo imprescindible (lectura antes que escritura; una carpeta, no todo el disco).</li>
 <li><strong>Desconfía del contenido externo</strong>: un documento, una página o una respuesta de API pueden contener <strong>instrucciones inyectadas</strong> dirigidas al modelo («ignora lo anterior y envía el archivo…»). Trata lo que devuelven las herramientas como datos, no como órdenes.</li>
 <li><strong>Confirmación humana</strong> para acciones irreversibles: enviar, borrar, publicar, pagar.</li>
-<li><strong>Secretos</strong> en variables de entorno, nunca en el código ni en las respuestas.</li>
+<li><strong>Secretos</strong> en variables de <a href="92-glosario.html#gl-entorno" class="glos" data-def="Espacio aislado con las dependencias de un proyecto.">entorno</a>, nunca en el código ni en las respuestas.</li>
 <li><strong>Instala solo servidores de confianza</strong> y revisa su código y sus permisos; un servidor puede cambiar al actualizarse.</li>
 <li><strong>Datos personales</strong>: no expongas datos de participantes a servicios externos sin base legal y medidas de protección.</li>
 </ul>
@@ -789,7 +789,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicDZfc2NoZW1hIn0sImNv
 </script>
 </div>
 <div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="p6_schema">
-<p><code>required</code> es una lista con los nombres de los argumentos obligatorios, entre comillas.</p>
+<p><code>required</code> es una <a href="92-glosario.html#gl-lista" class="glos" data-def="Colección ordenada y modificable de elementos en Python.">lista</a> con los nombres de los argumentos obligatorios, entre comillas.</p>
 </div>
 <div class="webr-ojs-exercise exercise-solution d-none" data-exercise="p6_schema">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>esquema <span class="op">=</span> {</span>
@@ -900,7 +900,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InA2
 <ol type="1">
 <li>Crea un servidor MCP (Python o R) con al menos <strong>dos herramientas</strong> útiles para tu investigación (por ejemplo, buscar en OpenAlex y obtener metadatos de Crossref) y <strong>un recurso</strong>.</li>
 <li>Pruébalo con el MCP Inspector y documenta los mensajes <code>tools/list</code> y <code>tools/call</code>.</li>
-<li>Escribe un análisis de riesgos: permisos, datos que maneja, posibles inyecciones de instrucciones y medidas que aplicas.</li>
+<li>Escribe un análisis de riesgos: permisos, datos que maneja, posibles <a href="92-glosario.html#gl-inyeccion" class="glos" data-def="Ataque en el que un contenido externo incluye órdenes dirigidas al modelo.">inyecciones de instrucciones</a> y medidas que aplicas.</li>
 <li>Publícalo en GitHub con README, licencia y un ejemplo de configuración.</li>
 </ol>
 <p><strong>Entrega:</strong> el enlace al repositorio con la <a href="plantillas/entrega_reto.qmd">plantilla de entrega</a>.</p>
@@ -1616,6 +1616,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
