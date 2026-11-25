@@ -523,7 +523,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Comprender el papel de la gestión documental en la publicación de datos abiertos.</li>
+<li>Comprender el papel de la <a href="92-glosario.html#gl-gestion-documental" class="glos" data-def="Conjunto de procesos para controlar la creación, clasificación, valoración, conservación y eliminación de documentos (ISO 15489).">gestión documental</a> en la publicación de <a href="92-glosario.html#gl-datos-abiertos" class="glos" data-def="Datos que cualquiera puede usar, modificar y compartir libremente para cualquier fin, con como mucho la obligación de citar la fuente o de compartir en las mismas condiciones.">datos abiertos</a>.</li>
 <li>Aplicar criterios de calidad y documentación de conjuntos de datos.</li>
 </ul>
 </div>
@@ -565,7 +565,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
 <li>Batini, C.; Cappiello, C.; Francalanci, C.; Maurino, A. (2009). <a href="https://doi.org/10.1145/1541880.1541883">Methodologies for data quality assessment and improvement</a>. <em>ACM Computing Surveys</em>, 41(3). Revisión clásica de metodologías de evaluación de la calidad de datos.</li>
-<li>Umbrich, J.; Neumaier, S.; Polleres, A. (2015). <a href="https://doi.org/10.1109/FiCloud.2015.82">Quality assessment and evolution of open data portals</a>. En <em>2015 3rd International Conference on Future Internet of Things and Cloud</em>, 404-411. Métricas de calidad aplicadas a portales de datos abiertos.</li>
+<li>Umbrich, J.; Neumaier, S.; Polleres, A. (2015). <a href="https://doi.org/10.1109/FiCloud.2015.82">Quality assessment and evolution of open data portals</a>. En <em>2015 3rd International Conference on Future Internet of Things and Cloud</em>, 404-411. Métricas de calidad aplicadas a <a href="92-glosario.html#gl-portal" class="glos" data-def="Sitio web que cataloga y da acceso a conjuntos de datos abiertos, como datos.gob.es o data.europa.eu.">portales de datos abiertos</a>.</li>
 </ul>
 </section>
 </section>
@@ -573,10 +573,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="gestión-documental-aplicada-a-los-datos-abiertos">1. Gestión documental aplicada a los datos abiertos</h2>
 <p>Un conjunto de datos publicado es, a todos los efectos, un <strong>documento</strong> de la administración: tiene un productor, un contexto de creación, un valor (administrativo, informativo, histórico) y un plazo de conservación. Por eso la publicación de datos abiertos no empieza en el portal, sino en el <strong>sistema de gestión documental</strong> de la organización.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Aportación de la gestión documental</th>
@@ -590,11 +586,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><strong>Valoración</strong></td>
-<td>Decidir qué conjuntos tienen valor para la reutilización y cuáles deben protegerse</td>
+<td>Decidir qué conjuntos tienen valor para la <a href="92-glosario.html#gl-reutilizacion" class="glos" data-def="Uso de documentos del sector público con fines comerciales o no comerciales distintos del propósito inicial para el que se produjeron (Ley 37/2007).">reutilización</a> y cuáles deben protegerse</td>
 </tr>
 <tr class="odd">
 <td><strong>Descripción</strong></td>
-<td>Metadatos que garantizan autenticidad, contexto y comprensión</td>
+<td><a href="92-glosario.html#gl-metadatos" class="glos" data-def="Datos que describen otros datos: qué son, quién los publica, con qué licencia, cómo están estructurados y cómo se conservan.">Metadatos</a> que garantizan autenticidad, contexto y comprensión</td>
 </tr>
 <tr class="even">
 <td><strong>Calendario de conservación</strong></td>
@@ -622,8 +618,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="metadatos" class="level2">
 <h2 class="anchored" data-anchor-id="metadatos">3. Metadatos</h2>
-<p>Un conjunto de datos sin metadatos no se encuentra ni se entiende. Hay metadatos <strong>descriptivos</strong> (qué es), <strong>administrativos</strong> (quién lo publica, con qué licencia), <strong>estructurales</strong> (qué columnas tiene y qué significan) y <strong>de preservación</strong> (versiones, sumas de control, formatos).</p>
-<p>El vocabulario del W3C <a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a> describe catálogos, conjuntos de datos (<code>dcat:Dataset</code>) y distribuciones (<code>dcat:Distribution</code>, cada fichero descargable), y reutiliza términos de <strong>Dublin Core</strong> (<code>dct:</code>). En Europa se usa el perfil DCAT-AP y en España <a href="https://datosgobes.github.io/DCAT-AP-ES">DCAT-AP-ES</a>, basado en DCAT-AP 2.1.1 y en la extensión de datos de alto valor. Según datos.gob.es, será el modelo de metadatos de la nueva versión de la NTI-RISP; comprueba si la norma modificada ya se ha publicado en el BOE.</p>
+<p>Un conjunto de datos sin metadatos no se encuentra ni se entiende. Hay metadatos <strong>descriptivos</strong> (qué es), <strong>administrativos</strong> (quién lo publica, con qué licencia), <strong>estructurales</strong> (qué columnas tiene y qué significan) y <strong>de preservación</strong> (versiones, <a href="92-glosario.html#gl-checksum" class="glos" data-def="Huella numérica de un fichero (MD5, SHA-256) que permite comprobar que no ha cambiado ni se ha corrompido.">sumas de control</a>, formatos).</p>
+<p>El <a href="92-glosario.html#gl-vocabulario" class="glos" data-def="Conjunto de clases y propiedades con URI para describir datos (schema.org, Dublin Core, DCAT).">vocabulario</a> del W3C <a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a> describe catálogos, conjuntos de datos (<code>dcat:Dataset</code>) y <a href="92-glosario.html#gl-distribucion" class="glos" data-def="Cada forma concreta de obtener un conjunto de datos: un fichero CSV, un JSON, una API.">distribuciones</a> (<code>dcat:Distribution</code>, cada fichero descargable), y reutiliza términos de <strong>Dublin Core</strong> (<code>dct:</code>). En Europa se usa el perfil DCAT-AP y en España <a href="https://datosgobes.github.io/DCAT-AP-ES">DCAT-AP-ES</a>, basado en DCAT-AP 2.1.1 y en la extensión de datos de alto valor. Según datos.gob.es, será el modelo de metadatos de la nueva versión de la NTI-RISP; comprueba si la norma modificada ya se ha publicado en el BOE.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -666,7 +662,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><code>dcat:mediaType</code></td>
-<td>Tipo MIME del fichero (por ejemplo, <code>text/csv</code>)</td>
+<td><a href="92-glosario.html#gl-mime" class="glos" data-def="Etiqueta normalizada que indica el formato de un fichero en internet, como `text/csv` o `application/json`. Convive en los catálogos con el vocabulario de tipos de fichero de la UE, lo que obliga a normalizar.">Tipo MIME</a> del fichero (por ejemplo, <code>text/csv</code>)</td>
 </tr>
 </tbody>
 </table>
@@ -676,10 +672,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="calidad-de-los-datos">4. Calidad de los datos</h2>
 <p>Vetrò et al.&nbsp;proponen medir la calidad de cada conjunto de datos, no solo la del portal, con siete características y 17 métricas:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Característica</th>
@@ -700,15 +692,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>Si el conjunto sigue vigente o ya ha sido sustituido</td>
 </tr>
 <tr class="even">
-<td><strong>Completitud</strong></td>
-<td>Proporción de celdas y filas sin valores ausentes</td>
+<td><a href="92-glosario.html#gl-completitud" class="glos" data-def="Característica de calidad que mide la proporción de celdas o filas sin valores ausentes."><strong>Completitud</strong></a></td>
+<td>Proporción de celdas y filas sin <a href="92-glosario.html#gl-ausente" class="glos" data-def="Celda sin dato. En R se representa con `NA`; en los ficheros aparece de muchas formas («», «n/d», «-»), lo que conviene unificar.">valores ausentes</a></td>
 </tr>
 <tr class="odd">
-<td>Conformidad</td>
+<td><a href="92-glosario.html#gl-conformidad" class="glos" data-def="Característica de calidad que mide si los valores siguen el formato esperado (fechas, códigos, unidades).">Conformidad</a></td>
 <td>Si los valores siguen el formato esperado (fechas, códigos, unidades)</td>
 </tr>
 <tr class="even">
-<td>Exactitud</td>
+<td><a href="92-glosario.html#gl-exactitud" class="glos" data-def="Característica de calidad que mide si los valores son correctos y plausibles. Un número de préstamos negativo es un error de exactitud.">Exactitud</a></td>
 <td>Si los valores son correctos y plausibles</td>
 </tr>
 <tr class="odd">
@@ -736,7 +728,7 @@ Figura&nbsp;1: Completitud por columna del CSV de práctica: las columnas descri
 <li><strong>Seleccionar</strong> el conjunto a partir del inventario y del plan de apertura.</li>
 <li><strong>Revisar</strong> la protección de datos: anonimizar o agregar si hay datos personales.</li>
 <li><strong>Depurar</strong> y comprobar la calidad (laboratorio de este capítulo).</li>
-<li><strong>Preparar las distribuciones</strong> en formatos abiertos (CSV, JSON, RDF) y, si procede, una API.</li>
+<li><strong>Preparar las distribuciones</strong> en <a href="92-glosario.html#gl-formato-abierto" class="glos" data-def="Formato con especificación pública que cualquiera puede implementar sin pagar ni pedir permiso (CSV, JSON, XML, ODS). Su contrario es el formato propietario.">formatos abiertos</a> (CSV, JSON, RDF) y, si procede, una API.</li>
 <li><strong>Describir</strong> con metadatos DCAT-AP-ES y un diccionario de datos.</li>
 <li><strong>Asignar una licencia</strong> (normalmente CC BY 4.0).</li>
 <li><strong>Publicar</strong> en el portal de la organización, a menudo construido con software como <a href="https://ckan.org">CKAN</a>, y <strong>federarlo</strong> con datos.gob.es.</li>
@@ -889,7 +881,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQz
 eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic2luX2R1cCA8LSBicnV0b1shZHVwbGljYXRlZChicnV0byksIF1cbnRhYmxlKHNpbl9kdXAkbXVuaWNpcGlvKSJ9
 </script>
 </div>
-<p>El mismo municipio aparece escrito de varias formas. Construimos una <strong>clave</strong> como hace el método <em>fingerprint</em> de OpenRefine: quitar espacios sobrantes, pasar a minúsculas y eliminar tildes.</p>
+<p>El mismo municipio aparece escrito de varias formas. Construimos una <strong>clave</strong> como hace el método <em>fingerprint</em> de <a href="92-glosario.html#gl-openrefine" class="glos" data-def="Herramienta libre para limpiar y transformar datos, con agrupación (clustering) de valores similares.">OpenRefine</a>: quitar espacios sobrantes, pasar a minúsculas y eliminar tildes.</p>
 <div>
 <div id="webr-14" class="exercise-cell">
 
@@ -1034,7 +1026,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDNfcmF0aW8ifSwiY29k
 <a href="figuras/tema3_prestamos_municipio.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Préstamos mensuales por municipio tras la limpieza, enero a junio de 2025 (datos sintéticos). Getafe suma dos bibliotecas; el resto, una."><img src="figuras/tema3_prestamos_municipio.svg" class="img-fluid figure-img" alt="Gráfico de líneas de enero a junio. Getafe se mantiene entre unos 4.800 y 5.300 préstamos. Fuenlabrada ronda los 1.700-2.100; Leganés, Móstoles y Alcorcón entre unos 1.000 y 1.750. Leganés y Alcorcón no tienen dato en febrero."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-prestamos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2: Préstamos mensuales por municipio tras la limpieza, enero a junio de 2025 (datos sintéticos). Getafe suma dos bibliotecas; el resto, una.
+Figura&nbsp;2: Préstamos mensuales por municipio tras la limpieza, enero a junio de 2025 (<a href="92-glosario.html#gl-datos-sinteticos" class="glos" data-def="Datos generados artificialmente que imitan la estructura de los reales sin corresponder a casos reales. El CSV de este libro es un ejemplo.">datos sintéticos</a>). Getafe suma dos bibliotecas; el resto, una.
 </figcaption>
 </figure>
 </div>
@@ -1080,7 +1072,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWUsImZpZy1oZWlnaHQi
 </section>
 <section id="paso-7.-publicar-el-resultado-con-metadatos-apartados-3-y-5" class="level3">
 <h3 class="anchored" data-anchor-id="paso-7.-publicar-el-resultado-con-metadatos-apartados-3-y-5">Paso 7. Publicar el resultado con metadatos (apartados 3 y 5)</h3>
-<p>Guardamos el fichero limpio y lo describimos con propiedades DCAT. <code>jsonlite</code> convierte una lista de R en JSON.</p>
+<p>Guardamos el fichero limpio y lo describimos con propiedades <a href="92-glosario.html#gl-dcat" class="glos" data-def="Vocabulario del W3C para describir catálogos, conjuntos de datos (`dcat:Dataset`) y distribuciones (`dcat:Distribution`). DCAT-AP y DCAT-AP-ES son sus perfiles europeo y español.">DCAT</a>. <code>jsonlite</code> convierte una lista de R en JSON.</p>
 <div>
 <div id="webr-29" class="exercise-cell">
 
@@ -1165,7 +1157,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQz
 <a href="figuras/v14_ciclo.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;3: El ciclo de vida de los datos: cada fase tiene responsables y documentos propios."><img src="figuras/v14_ciclo.svg" class="img-fluid figure-img" alt="Seis fases en círculo unidas por flechas: planificar, recoger o crear, describir con metadatos, publicar, reutilizar, y preservar y actualizar, que vuelve a planificar. En el centro, ciclo de vida de los datos."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-v14-ciclo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;3: El ciclo de vida de los datos: cada fase tiene responsables y documentos propios.
+Figura&nbsp;3: El <a href="92-glosario.html#gl-ciclo-vida" class="glos" data-def="Secuencia de fases por las que pasan los datos, desde su creación hasta su reutilización, preservación o eliminación (modelo del DCC).">ciclo de vida de los datos</a>: cada fase tiene responsables y documentos propios.
 </figcaption>
 </figure>
 </div>
@@ -1350,7 +1342,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic291cmNlKFwiZGF0b3MvZGF0
 <li>En DCAT, cada fichero descargable de un conjunto de datos es una <input class="webex-solveme nospaces ignorecase" size="19" aria-label="Escribe tu respuesta" data-answer="[&quot;distribución&quot;,&quot;distribucion&quot;,&quot;dcat:Distribution&quot;]"></li>
 <li>El tipo MIME de un fichero CSV es <input class="webex-solveme nospaces" size="10" aria-label="Escribe tu respuesta" data-answer="[&quot;text/csv&quot;]"></li>
 <li>Si la suma de control MD5 de un fichero descargado coincide con la publicada, el fichero no ha cambiado. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
-<li>¿Qué norma ISO describe el modelo de referencia OAIS para archivos digitales?</li>
+<li>¿Qué norma ISO describe el modelo de referencia <a href="92-glosario.html#gl-oais" class="glos" data-def="Modelo de referencia para archivos digitales que deben preservar información a largo plazo (ISO 14721).">OAIS</a> para archivos digitales?</li>
 </ol>
 <p></p><div class="webex-radiogroup" role="radiogroup" aria-label="Opciones de respuesta" id="radio_libro_1"><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>ISO 15489</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>ISO/IEC 25012</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="answer"> <span>ISO 14721</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>ISO 30301</span></label></div><p></p>
 <ol start="7" type="1">
@@ -2151,6 +2143,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

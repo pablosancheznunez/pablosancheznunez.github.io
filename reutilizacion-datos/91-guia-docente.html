@@ -484,11 +484,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="cómo-encaja-el-libro-con-aula-global">Cómo encaja el libro con Aula Global</h2>
 <p>El libro es material de estudio y práctica; la evaluación sigue en los cuestionarios de Aula Global. Cada capítulo prepara la actividad evaluable de su tema:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Capítulo</th>
@@ -500,11 +495,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td>Tema 0</td>
 <td>«Clasifica y audita»</td>
-<td>Estrellas, Open Definition y auditoría del CSV</td>
+<td>Estrellas, <a href="92-glosario.html#gl-open-definition" class="glos" data-def="Definición de «abierto» de la Open Knowledge Foundation (versión 2.1). Exige licencia abierta, acceso completo y formato legible por máquina y abierto.">Open Definition</a> y auditoría del CSV</td>
 </tr>
 <tr class="even">
 <td>Tema 1</td>
-<td>«Del derecho de acceso a la reutilización»</td>
+<td>«Del <a href="92-glosario.html#gl-derecho-acceso" class="glos" data-def="Derecho de cualquier persona a solicitar y conocer la información pública (Ley 19/2013). Es previo a la reutilización, pero no la garantiza.">derecho de acceso</a> a la <a href="92-glosario.html#gl-reutilizacion" class="glos" data-def="Uso de documentos del sector público con fines comerciales o no comerciales distintos del propósito inicial para el que se produjeron (Ley 37/2007).">reutilización</a>»</td>
 <td>Cronología de normas, plazos de la Ley 19/2013, datos de alto valor</td>
 </tr>
 <tr class="odd">
@@ -514,13 +509,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>Tema 3</td>
-<td>«Laboratorio de calidad con OpenRefine»</td>
-<td>Completitud, duplicados, municipios, fechas y total de Getafe en R</td>
+<td>«Laboratorio de calidad con <a href="92-glosario.html#gl-openrefine" class="glos" data-def="Herramienta libre para limpiar y transformar datos, con agrupación (clustering) de valores similares.">OpenRefine</a>»</td>
+<td><a href="92-glosario.html#gl-completitud" class="glos" data-def="Característica de calidad que mide la proporción de celdas o filas sin valores ausentes.">Completitud</a>, duplicados, municipios, fechas y total de Getafe en R</td>
 </tr>
 <tr class="odd">
 <td>Tema 4</td>
 <td>«Taller de datos enlazados»</td>
-<td>Turtle, JSON-LD y consultas sobre un grafo fijo</td>
+<td><a href="92-glosario.html#gl-turtle" class="glos" data-def="Sintaxis compacta y legible de RDF, con prefijos para abreviar las URI.">Turtle</a>, <a href="92-glosario.html#gl-jsonld" class="glos" data-def="JSON con un `@context` que asigna a cada clave una URI de un vocabulario: RDF con aspecto de JSON.">JSON-LD</a> y consultas sobre un grafo fijo</td>
 </tr>
 <tr class="even">
 <td>Tema 5</td>
@@ -564,7 +559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="figuras-y-versión-en-pdf">Figuras y versión en PDF</h2>
 <ul>
 <li><strong>Figuras</strong> (carpeta <code>figuras/</code>): una o dos por tema, en SVG, generadas con <code>python3 herramientas/figuras.py .</code> (necesita Python con matplotlib). Usan una paleta categórica validada para el daltonismo y llevan texto alternativo en el capítulo. Si cambias el CSV de práctica, vuelve a generarlas.</li>
-<li><strong>PDF</strong> (<code>pdf/reutilizacion-datos-abiertos.pdf</code>): se genera con <code>python3 herramientas/pdf.py</code>, que une los capítulos y los compila con Typst, incluido en Quarto, sin LaTeX. El filtro <code>_extensions/libro-pdf/</code> adapta el contenido al papel: muestra el código sin ejecutar, convierte pistas y soluciones en recuadros, presenta las preguntas sin corrección automática y transforma los enlaces entre capítulos en enlaces internos. Genera el PDF antes de <code>quarto render</code>, para que se copie al sitio.</li>
+<li><strong>PDF</strong> (<code>pdf/reutilizacion-datos-abiertos.pdf</code>): se genera con <code>python3 herramientas/pdf.py</code>, que une los capítulos y los compila con Typst, incluido en <a href="92-glosario.html#gl-quarto" class="glos" data-def="Sistema de publicación científica de código abierto que combina texto y código para generar libros, artículos, presentaciones y webs.">Quarto</a>, sin LaTeX. El filtro <code>_extensions/libro-pdf/</code> adapta el contenido al papel: muestra el código sin ejecutar, convierte pistas y soluciones en recuadros, presenta las preguntas sin corrección automática y transforma los enlaces entre capítulos en enlaces internos. Genera el PDF antes de <code>quarto render</code>, para que se copie al sitio.</li>
 </ul>
 <p>Orden para publicar una edición nueva:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> herramientas/extraer_r.py .   <span class="co"># scripts .R de cada capítulo</span></span>
@@ -590,7 +585,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>Accesibilidad.</strong> El libro se ha revisado con axe-core contra WCAG 2.1 AA sin incidencias. El fichero <code>accesibilidad.html</code> añade nombres accesibles a los editores de código y a los controles interactivos, y <code>estilos.scss</code> ajusta el contraste de pies de figura y citas.</li>
 <li><strong>Analítica.</strong> El libro carga <code>/consent.js</code> de la web: Google Analytics y Microsoft Clarity solo se activan si el visitante acepta las cookies, y la elección es la misma en toda la web. Fuera de pablosancheznunez.com el script no existe y no se carga nada.</li>
-<li><strong>Comprobación automática.</strong> El flujo <code>.github/workflows/comprobar.yml</code> genera el libro en cada cambio y ejecuta en un navegador real los ejercicios de webR, las preguntas de autoevaluación y la auditoría de accesibilidad (<code>herramientas/pruebas/</code>). Si algo falla, el cambio aparece con una cruz roja en GitHub.</li>
+<li><strong>Comprobación automática.</strong> El flujo <code>.github/workflows/comprobar.yml</code> genera el libro en cada cambio y ejecuta en un navegador real los ejercicios de <a href="92-glosario.html#gl-webr" class="glos" data-def="Versión de R compilada a WebAssembly que se ejecuta en el navegador, sin instalación.">webR</a>, las preguntas de autoevaluación y la auditoría de accesibilidad (<code>herramientas/pruebas/</code>). Si algo falla, el cambio aparece con una cruz roja en GitHub.</li>
 </ul>
 </section>
 <section id="retos-evaluables" class="level2">
@@ -653,14 +648,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="progreso-uso-sin-conexión-y-modo-oscuro">Progreso, uso sin conexión y modo oscuro</h2>
 <ul>
 <li><strong>Progreso del estudiante</strong> (<code>progreso.html</code>): cada capítulo muestra cuántos ejercicios ha resuelto y cuántas preguntas ha acertado el estudiante, y la presentación resume todos los capítulos. Se guarda en el almacenamiento local del navegador (<code>localStorage</code>), sin cookies ni envío a ningún servidor: el profesorado no lo ve. Sirve de autorregulación, no de evaluación.</li>
-<li><strong>Uso sin conexión</strong> (<code>sw.js</code>): un <em>service worker</em> guarda las páginas, webR y sus paquetes la primera vez que se visitan. Las páginas se piden primero a la red y, si no hay conexión, se sirven desde la copia; el resto, al revés. Al publicar una versión nueva, cambia <code>VERSION</code> en <code>sw.js</code>.</li>
+<li><strong>Uso sin conexión</strong> (<code>sw.js</code>): un <a href="92-glosario.html#gl-service-worker" class="glos" data-def="Programa que el navegador ejecuta en segundo plano para una web. En este libro guarda las páginas y el motor de R para que funcionen sin conexión después de la primera visita."><em>service worker</em></a> guarda las páginas, webR y sus paquetes la primera vez que se visitan. Las páginas se piden primero a la red y, si no hay conexión, se sirven desde la copia; el resto, al revés. Al publicar una versión nueva, cambia <code>VERSION</code> en <code>sw.js</code>.</li>
 <li><strong>Modo claro y oscuro</strong>: el interruptor junto al título, en la barra lateral, cambia entre los dos; por defecto se respeta la preferencia del sistema. El tema oscuro está en <code>estilos-oscuro.scss</code> y también se audita con axe-core.</li>
-<li><strong>PDF y EPUB</strong>: <code>python3 herramientas/pdf.py</code> genera los dos formatos; el EPUB lleva portada, metadatos (DOI, licencia) y la misma ficha del libro que el PDF.</li>
+<li><strong>PDF y EPUB</strong>: <code>python3 herramientas/pdf.py</code> genera los dos formatos; el EPUB lleva portada, <a href="92-glosario.html#gl-metadatos" class="glos" data-def="Datos que describen otros datos: qué son, quién los publica, con qué licencia, cómo están estructurados y cómo se conservan.">metadatos</a> (DOI, licencia) y la misma ficha del libro que el PDF.</li>
 </ul>
 </section>
 <section id="el-paquete-datareuser" class="level2">
 <h2 class="anchored" data-anchor-id="el-paquete-datareuser">El paquete datareuseR</h2>
-<p>La carpeta <code>datareuseR/</code> contiene un paquete de R con los datos y las funciones auxiliares del libro, documentado y con pruebas (<code>R CMD check --as-cran</code> sin errores ni avisos). El libro no puede instalarlo dentro de webR, así que <code>python3 herramientas/datareuser_webr.py</code> genera <code>datos/datareuseR.R</code> con sus funciones, y los capítulos lo cargan con <code>source()</code>. Si cambias el paquete, vuelve a ejecutar ese script. Los estudiantes pueden instalarlo con <code>remotes::install_github("pablosancheznunez/reutilizacion-datos", subdir = "datareuseR")</code>; para publicarlo en CRAN basta con enviar la carpeta del paquete.</p>
+<p>La carpeta <code>datareuseR/</code> contiene un <a href="92-glosario.html#gl-paquete" class="glos" data-def="Conjunto de funciones, datos y documentación de R que se instala y se carga con `library()`. El paquete `datareuseR` reúne las funciones y los datos de este libro.">paquete de R</a> con los datos y las funciones auxiliares del libro, documentado y con pruebas (<code>R CMD check --as-cran</code> sin errores ni avisos). El libro no puede instalarlo dentro de webR, así que <code>python3 herramientas/datareuser_webr.py</code> genera <code>datos/datareuseR.R</code> con sus funciones, y los capítulos lo cargan con <code>source()</code>. Si cambias el paquete, vuelve a ejecutar ese script. Los estudiantes pueden instalarlo con <code>remotes::install_github("pablosancheznunez/reutilizacion-datos", subdir = "datareuseR")</code>; para publicarlo en CRAN basta con enviar la carpeta del paquete.</p>
 </section>
 <section id="publicar-y-actualizar-el-libro" class="level2">
 <h2 class="anchored" data-anchor-id="publicar-y-actualizar-el-libro">Publicar y actualizar el libro</h2>
@@ -676,9 +671,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="mantenimiento" class="level2">
 <h2 class="anchored" data-anchor-id="mantenimiento">Mantenimiento</h2>
 <ul>
-<li><strong>Datos que cambian cada año</strong>: el Tema 2 remite a la ficha del Open Data Maturity 2025 y el Tema 5 al informe de ASEDIE. El libro no incluye esas cifras, solo los enlaces; basta con actualizar los enlaces cuando salga una nueva edición.</li>
+<li><strong>Datos que cambian cada año</strong>: el Tema 2 remite a la ficha del <a href="92-glosario.html#gl-odm" class="glos" data-def="Informe anual que compara la madurez en datos abiertos de 36 países europeos en cuatro dimensiones: políticas, impacto, portal y calidad.">Open Data Maturity</a> 2025 y el Tema 5 al informe de ASEDIE. El libro no incluye esas cifras, solo los enlaces; basta con actualizar los enlaces cuando salga una nueva edición.</li>
 <li><strong>DCAT-AP-ES y NTI-RISP</strong>: antes de cada curso, comprueba si la NTI modificada se ha publicado en el BOE y ajusta el párrafo del Tema 3.</li>
-<li><strong>Versión de webR</strong>: el libro sirve webR 0.6.0 desde su propia carpeta <code>webr/</code> y los paquetes desde <code>webr-repo/</code>, sin depender de servidores externos. Para actualizarlo, sustituye esas carpetas por la nueva distribución de webR y los binarios correspondientes, y cambia <code>VERSION</code> en <code>sw.js</code> para que los navegadores renueven su copia.</li>
+<li><strong>Versión de webR</strong>: el libro sirve webR 0.6.0 desde su propia carpeta <code>webr/</code> y los paquetes desde <code>webr-repo/</code>, sin depender de servidores externos. Para actualizarlo, sustituye esas carpetas por la nueva <a href="92-glosario.html#gl-distribucion" class="glos" data-def="Cada forma concreta de obtener un conjunto de datos: un fichero CSV, un JSON, una API.">distribución</a> de webR y los binarios correspondientes, y cambia <code>VERSION</code> en <code>sw.js</code> para que los navegadores renueven su copia.</li>
 <li><strong>Fuentes externas</strong>: el flujo <code>.github/workflows/semanal.yml</code> comprueba cada lunes los enlaces del libro, el CSV de bibliotecas de Madrid y la API de datos.gob.es, y comprueba el paquete <code>datareuseR</code> con la consulta en directo. Si algo falla, abre una incidencia en GitHub con el informe; también puedes ejecutarlo a mano con <code>python3 herramientas/comprobar_fuentes.py</code>.</li>
 </ul>
 </section>
@@ -1387,6 +1382,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 
