@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Competencias digitales para el uso de la información",
     "section": "",
-    "text": "Presentación\nEste libro acompaña a la asignatura Competencias digitales para el uso de la información (código 19408, 3 ECTS, primer curso, segundo cuatrimestre) de Grado (Formación Transversal) de la Universidad Carlos III de Madrid. Su objetivo es que aprendas a encontrar, evaluar y usar la información de forma fiable y ética, también cuando la produce una inteligencia artificial.\nEl libro recorre los cuatro bloques del programa oficial: la evaluación de la credibilidad de la información digital, la búsqueda y organización de la información, su uso ético (incluidas las referencias bibliográficas y el plagio) y la inteligencia artificial generativa para crear contenidos.\nAutor: Pablo Sánchez-Núñez (ORCID 0000-0001-7845-9506), Universidad Carlos III de Madrid. DOI: 10.5281/zenodo.24515144.",
+    "text": "Presentación\nEste libro acompaña a la asignatura Competencias digitales para el uso de la información (código 19408, 3 ECTS, primer curso, segundo cuatrimestre) de Grado (Formación Transversal) de la Universidad Carlos III de Madrid. Su objetivo es que aprendas a encontrar, evaluar y usar la información de forma fiable y ética, también cuando la produce una inteligencia artificial.\nEl libro recorre los cuatro bloques del programa oficial: la evaluación de la credibilidad de la información digital, la búsqueda y organización de la información, su uso ético (incluidas las referencias bibliográficas y el plagio) y la inteligencia artificial generativa para crear contenidos.\nAutor: Pablo Sánchez-Núñez, Universidad Carlos III de Madrid\nORCID: 0000-0001-7845-9506\nWeb: pablosancheznunez.com\nDOI: 10.5281/zenodo.24515144.",
     "crumbs": [
       "Presentación"
     ]
@@ -1166,157 +1166,223 @@
     ]
   },
   {
+    "objectID": "94-verificacion.html",
+    "href": "94-verificacion.html",
+    "title": "Apéndice C — Laboratorio de verificación",
+    "section": "",
+    "text": "Cronología: desinformación, ciencia y regulación\nEste apéndice complementa la unidad 1 con una cronología de la desinformación, una herramienta para evaluar fuentes y una actividad para detectar señales de alerta.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Laboratorio de verificación</span>"
+    ]
+  },
+  {
+    "objectID": "94-verificacion.html#cronología-desinformación-ciencia-y-regulación",
+    "href": "94-verificacion.html#cronología-desinformación-ciencia-y-regulación",
+    "title": "Apéndice C — Laboratorio de verificación",
+    "section": "",
+    "text": "2016Oxford Dictionaries elige «post-truth» (posverdad) como palabra del año.2017IFLA publica la infografía «Cómo detectar noticias falsas», basada en un artículo de FactCheck.org.2018Vosoughi, Roy y Aral (Science) muestran que en Twitter lo falso se difunde más lejos y más rápido que lo verdadero. La UE aprueba el Código de buenas prácticas en materia de desinformación.2020La OMS alerta de una «infodemia» durante la COVID-19.2022La UE adopta el Reglamento de Servicios Digitales y refuerza el Código de buenas prácticas.2023Imágenes generadas con IA se vuelven virales como si fueran fotografías reales.2024Se aprueba el Reglamento europeo de IA, que obliga a señalar los contenidos ultrafalsos (deepfakes) desde agosto de 2026.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Laboratorio de verificación</span>"
+    ]
+  },
+  {
+    "objectID": "94-verificacion.html#lab-craap",
+    "href": "94-verificacion.html#lab-craap",
+    "title": "Apéndice C — Laboratorio de verificación",
+    "section": "Laboratorio: evalúa una fuente con el test CRAAP",
+    "text": "Laboratorio: evalúa una fuente con el test CRAAP\n\n\nLaboratorio · se ejecuta en tu navegador\n\nEl test CRAAP, creado en la Meriam Library de la California State University, Chico, evalúa una fuente con cinco criterios. Puntúa una fuente que estés usando (de 0 a 10) y mira su perfil.\n\nrangoC = window.Lab.rango\nviewof cActualidad = rangoC(\"Actualidad: ¿es reciente para tu tema? ¿se actualiza?\", [0, 10], {value: 7})\nviewof cRelevancia = rangoC(\"Relevancia: ¿responde a tu pregunta y al nivel adecuado?\", [0, 10], {value: 8})\nviewof cAutoridad = rangoC(\"Autoridad: ¿quién lo firma? ¿tiene credenciales y afiliación?\", [0, 10], {value: 4})\nviewof cExactitud = rangoC(\"Exactitud: ¿aporta pruebas y fuentes verificables? ¿ha sido revisada?\", [0, 10], {value: 3})\nviewof cProposito = rangoC(\"Propósito: ¿informa, vende, persuade o entretiene?\", [0, 10], {value: 5})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const crit = [[\"Actualidad\", cActualidad], [\"Relevancia\", cRelevancia], [\"Autoridad\", cAutoridad], [\"Exactitud\", cExactitud], [\"Propósito\", cProposito]];\n  const total = crit.reduce((s, c) =&gt; s + c[1], 0);\n  const peor = [...crit].sort((a, b) =&gt; a[1] - b[1])[0];\n  const barras = crit.map(([n, v], i) =&gt; `&lt;g transform=\"translate(0 ${i * 34})\"&gt;&lt;text x=\"0\" y=\"20\" font-size=\"14\" fill=\"currentColor\"&gt;${n}&lt;/text&gt;&lt;rect x=\"110\" y=\"6\" width=\"300\" height=\"20\" rx=\"4\" fill=\"var(--bs-secondary-bg)\"/&gt;&lt;rect x=\"110\" y=\"6\" width=\"${v * 30}\" height=\"20\" rx=\"4\" fill=\"${v &lt; 5 ? \"#b3261e\" : \"#1c6b3a\"}\"/&gt;&lt;text x=\"${118 + v * 30}\" y=\"21\" font-size=\"13\" fill=\"currentColor\"&gt;${v}${v &lt; 5 ? \" ⚠\" : \"\"}&lt;/text&gt;&lt;/g&gt;`).join(\"\");\n  const veredicto = total &gt;= 40 && peor[1] &gt;= 5 ? \"Fuente sólida: puedes usarla, citándola correctamente.\" : total &gt;= 25 ? `Úsala con cautela y contrástala con otras fuentes. Su punto débil es la ${peor[0].toLowerCase()}.` : \"Fuente poco fiable: busca otra mejor antes de usarla.\";\n  const d = html`&lt;div role=\"status\" aria-live=\"polite\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;svg viewBox=\"0 0 460 172\" width=\"100%\" style=\"max-width:520px\" role=\"img\" aria-label=\"Perfil CRAAP: ${crit.map(([n, v]) =&gt; n + \" \" + v).join(\", \")}\" font-family=\"inherit\"&gt;${barras}&lt;/svg&gt;&lt;p&gt;&lt;strong&gt;Total: ${total} de 50.&lt;/strong&gt; ${veredicto}&lt;/p&gt;${peor[0] === \"Exactitud\" || peor[0] === \"Autoridad\" ? '&lt;p class=\"small\"&gt;Pista: aplica la &lt;strong&gt;lectura lateral&lt;/strong&gt; (abre otras pestañas y busca qué dicen otros sobre la fuente) antes de seguir leyendo.&lt;/p&gt;' : \"\"}`;\n  return d;\n}\n\n\n\n\n\n\nLos criterios con menos de 5 se marcan con ⚠. Una puntuación alta no sustituye al juicio crítico: el test es una guía, no una fórmula.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Laboratorio de verificación</span>"
+    ]
+  },
+  {
+    "objectID": "94-verificacion.html#actividad-señal-de-alerta-o-no",
+    "href": "94-verificacion.html#actividad-señal-de-alerta-o-no",
+    "title": "Apéndice C — Laboratorio de verificación",
+    "section": "Actividad: ¿señal de alerta o no?",
+    "text": "Actividad: ¿señal de alerta o no?\nLee esta publicación ficticia y clasifica cada dato.\n\n\n\n\n\n\nNota«¡ESTUDIO DEFINITIVO! El chocolate negro cura el insomnio»\n\n\n\nPublicado en SaludTotal24.info · sin firma · fecha: «hace 3 años», compartido hoy 40 000 veces. El artículo enlaza a un estudio con 12 participantes financiado por una marca de chocolate. Al final aparece un código de descuento para comprar «chocolate terapéutico».\n\n\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Laboratorio de verificación</span>"
+    ]
+  },
+  {
+    "objectID": "94-verificacion.html#para-practicar-con-casos-reales",
+    "href": "94-verificacion.html#para-practicar-con-casos-reales",
+    "title": "Apéndice C — Laboratorio de verificación",
+    "section": "Para practicar con casos reales",
+    "text": "Para practicar con casos reales\n\nMaldita.es y Newtral publican verificaciones en español y se han adherido al código de principios de la red internacional de verificadores (IFCN).\nEl Observatorio Europeo de Medios Digitales (EDMO) reúne investigación y verificaciones de toda la UE.\nLa infografía de IFLA está traducida a decenas de idiomas (37 según IFLA).",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Laboratorio de verificación</span>"
+    ]
+  },
+  {
+    "objectID": "94-verificacion.html#para-ver-y-seguir-aprendiendo",
+    "href": "94-verificacion.html#para-ver-y-seguir-aprendiendo",
+    "title": "Apéndice C — Laboratorio de verificación",
+    "section": "Para ver y seguir aprendiendo",
+    "text": "Para ver y seguir aprendiendo\nSon enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.\n\nCheck Yourself with Lateral Reading (Crash Course Navigating Digital Information #3) — CrashCourse, con el Stanford History Education Group y MediaWise. Unos 14 minutos sobre la lectura lateral; forma parte de una serie de 10 episodios (2019).",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Laboratorio de verificación</span>"
+    ]
+  },
+  {
     "objectID": "91-guia-docente.html",
     "href": "91-guia-docente.html",
-    "title": "Apéndice C — Guía para el profesorado",
+    "title": "Apéndice D — Guía para el profesorado",
     "section": "",
     "text": "Correspondencia con la ficha de la asignatura\nEsta guía explica cómo está pensado el libro para la docencia de la asignatura y cómo mantenerlo.\nLos seis capítulos siguen, en el mismo orden, los cuatro bloques y las nueve unidades del programa oficial de Competencias digitales para el uso de la información (19408).",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#correspondencia-con-la-ficha-de-la-asignatura",
     "href": "91-guia-docente.html#correspondencia-con-la-ficha-de-la-asignatura",
-    "title": "Apéndice C — Guía para el profesorado",
+    "title": "Apéndice D — Guía para el profesorado",
     "section": "",
     "text": "Capítulo\nUnidades\nBloque\n\n\n\n\nFuentes de información\n1\nIntroducción. Fuentes de información\n\n\nRecuperación de información\n2\nRecuperación y uso ético\n\n\nUso ético de la información y plagio\n3\nRecuperación y uso ético\n\n\nReferencias bibliográficas\n4 y 5\nReferencias bibliográficas\n\n\nIA generativa: fundamentos y aplicaciones\n6 y 7\nInteligencia artificial generativa\n\n\nIA generativa: ética, autoría y regulación\n8 y 9\nInteligencia artificial generativa\n\n\n\n\n\n\n\n\n\n\n\nActividad de evaluación (ficha)\nPeso\nApoyo en el libro\n\n\n\n\nTrabajos prácticos y presentaciones\n70 %\nRetos evaluables (uno por capítulo)\n\n\nPrueba final (mínimo 4)\n30 %\nContenidos y lecturas obligatorias; las autoevaluaciones y el banco de preguntas en Moodle XML sirven de práctica\n\n\nRecuperación (prueba tipo test 50 % y trabajo práctico 50 %)\n—\nBanco de preguntas y cualquiera de los retos",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#retos-evaluables",
     "href": "91-guia-docente.html#retos-evaluables",
-    "title": "Apéndice C — Guía para el profesorado",
+    "title": "Apéndice D — Guía para el profesorado",
     "section": "Retos evaluables",
     "text": "Retos evaluables\nCada capítulo termina con un reto sin pista, solución ni corrección automática. Cada estudiante elige su tema, su afirmación o su caso, lo que dificulta copiar. Los retos 2 y 4 se encadenan: los documentos encontrados en la estrategia de búsqueda se gestionan después en Zotero. Se entregan con la plantilla entrega_reto.qmd, que lleva una rúbrica común: búsqueda y selección de fuentes (25 %), evaluación crítica (25 %), uso ético y citación (20 %), argumentación (20 %) y presentación (10 %). La plantilla genera un HTML con las imágenes dentro, de modo que la entrega es un único fichero; también puede entregarse en el formato que indique el profesorado. No hace falta saber R para usarla.\nLas soluciones de referencia y los criterios de corrección de los retos no están en el repositorio público.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#autoevaluación-en-aula-global",
     "href": "91-guia-docente.html#autoevaluación-en-aula-global",
-    "title": "Apéndice C — Guía para el profesorado",
+    "title": "Apéndice D — Guía para el profesorado",
     "section": "Autoevaluación en Aula Global",
     "text": "Autoevaluación en Aula Global\nLas preguntas de autoevaluación de cada capítulo están exportadas a Moodle XML en la carpeta moodle/ del repositorio: un fichero por capítulo y uno con todo el banco. Se importan desde Banco de preguntas → Importar → Formato Moodle XML. Cada pregunta conserva su explicación como retroalimentación general, y el banco sirve para preparar la prueba final y la prueba de recuperación.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
     "href": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
-    "title": "Apéndice C — Guía para el profesorado",
+    "title": "Apéndice D — Guía para el profesorado",
     "section": "Actividades interactivas y laboratorios",
     "text": "Actividades interactivas y laboratorios\nAdemás de la autoevaluación, cada capítulo tiene actividades de corrección inmediata (ordenar, clasificar y escenarios con decisiones) y varios laboratorios: buscar en OpenAlex con operadores booleanos, comparar textos como un detector de coincidencias, convertir un DOI en una referencia APA, verificar los DOI que da una IA y jugar con un modelo de lenguaje en miniatura. Los laboratorios con datos en vivo consultan APIs abiertas (OpenAlex, Crossref y doi.org) directamente desde el navegador del estudiante; no se envía nada al servidor del libro. En el PDF y el EPUB las actividades aparecen en papel, con su solución.\nLas actividades están escritas en Markdown con la extensión interactivos (ver _extensions/interactivos/interactivos.lua), así que se pueden añadir o cambiar sin programar.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#el-papel-de-r",
     "href": "91-guia-docente.html#el-papel-de-r",
-    "title": "Apéndice C — Guía para el profesorado",
+    "title": "Apéndice D — Guía para el profesorado",
     "section": "El papel de R",
     "text": "El papel de R\nEl libro usa R lo imprescindible: cuatro capítulos tienen un ejercicio breve de completar huecos que muestra por dentro una herramienta (operadores booleanos, orden de referencias, detección de coincidencias, verificación de DOI). El capítulo Usar R en este libro basta como preparación. Ningún reto exige programar.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#funciones-del-libro",
     "href": "91-guia-docente.html#funciones-del-libro",
-    "title": "Apéndice C — Guía para el profesorado",
+    "title": "Apéndice D — Guía para el profesorado",
     "section": "Funciones del libro",
     "text": "Funciones del libro\n\nDiapositivas de clase: cada capítulo tiene unas diapositivas con los objetivos, las figuras, las tablas principales, la lectura, preguntas para debatir y el reto. Están en diapositivas/; pulsa F para pantalla completa y S para ver las notas.\nProgreso del estudiante: cada capítulo muestra los ejercicios resueltos y las preguntas acertadas; la presentación resume todos. Se guarda solo en el navegador del estudiante (localStorage): el profesorado no lo ve.\nUso sin conexión: un service worker (sw.js) guarda las páginas y el motor de R tras la primera visita.\nModo claro y oscuro, con auditoría de accesibilidad (WCAG 2.1 AA) en los dos.\nPDF y EPUB generados con python3 herramientas/pdf.py.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#mantenimiento",
     "href": "91-guia-docente.html#mantenimiento",
-    "title": "Apéndice C — Guía para el profesorado",
+    "title": "Apéndice D — Guía para el profesorado",
     "section": "Mantenimiento",
     "text": "Mantenimiento\nDesde la raíz del repositorio:\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras\npython3 herramientas/diapositivas.py    # diapositivas de clase (después de quarto render)\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\nEl flujo .github/workflows/comprobar.yml renderiza el libro y comprueba en un navegador real todos los ejercicios, las preguntas y la accesibilidad en modo claro y oscuro, y una vez por semana revisa los enlaces externos. Al publicar una versión nueva, actualiza version en CITATION.cff y vuelve a ejecutar preparar.py para que los navegadores renueven su copia.\nLos datos de los ejercicios son inventados con fines didácticos; no hay datos de personas reales.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "92-glosario.html",
     "href": "92-glosario.html",
-    "title": "Apéndice D — Glosario",
+    "title": "Apéndice E — Glosario",
     "section": "",
     "text": "Fuentes de información\nTérminos del libro ordenados por capítulo. Cada entrada enlaza con el capítulo donde se explica.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#fuentes-de-información",
     "href": "92-glosario.html#fuentes-de-información",
-    "title": "Apéndice D — Glosario",
+    "title": "Apéndice E — Glosario",
     "section": "",
     "text": "Sobrecarga informativa\nSituación en la que se recibe más información de la que se puede procesar, con efectos como la ansiedad o la sensación de estar peor informado. → Unidad 1\n\n\nDesinformación\nDisinformation. Información falsa creada o difundida con intención de engañar. → Unidad 1\n\n\nInformación errónea\nMisinformation. Información falsa que se comparte sin intención de engañar. → Unidad 1\n\n\nCredibilidad\nGrado en que una fuente o un mensaje se percibe como digno de confianza. En línea se juzga a menudo con atajos mentales (heurísticos) como la reputación o el respaldo de otros. → Unidad 1\n\n\nLectura lateral\nEstrategia de verificación que consiste en salir de la página y consultar otras fuentes sobre ella y sobre lo que afirma, en lugar de analizarla solo por dentro. → Unidad 1\n\n\nMétodo SIFT\nMétodo de Mike Caulfield para verificar información en cuatro pasos: parar, investigar la fuente, buscar mejor cobertura y rastrear hasta el original. → Unidad 1\n\n\nFuente primaria\nFuente que contiene información original: un artículo de investigación, unos datos, una ley o una entrevista. Las secundarias la analizan o resumen; las terciarias ayudan a encontrarla. → Unidad 1\n\n\nRevisión por pares\nEvaluación de un trabajo por especialistas del área antes de su publicación. → Unidad 1\n\n\nAltmetría\nMedición de las menciones de las publicaciones científicas en redes sociales, noticias y otras fuentes en línea. Mide atención, no calidad. → Unidad 1",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#recuperación-de-información",
     "href": "92-glosario.html#recuperación-de-información",
-    "title": "Apéndice D — Glosario",
+    "title": "Apéndice E — Glosario",
     "section": "Recuperación de información",
     "text": "Recuperación de información\n\nNecesidad de información\nLo que una persona quiere saber y para qué; es el punto de partida de toda búsqueda. → Unidad 2\n\n\nOperador booleano\nPalabra que combina términos de búsqueda como conjuntos: Y (AND) exige todos, O (OR) admite cualquiera y NO (NOT) excluye. → Unidad 2\n\n\nTruncamiento\nUso de un símbolo, normalmente el asterisco, para recuperar todas las terminaciones de una raíz. → Unidad 2\n\n\nBúsqueda por campos\nBúsqueda limitada a una parte del registro, como el título, el autor o el resumen. → Unidad 2\n\n\nPrecisión\nProporción de los resultados recuperados que son pertinentes. → Unidad 2\n\n\nExhaustividad\nRecall. Proporción de todos los documentos pertinentes que la búsqueda recupera. → Unidad 2\n\n\nRecolección de bayas\nBerrypicking. Modelo de Marcia Bates según el cual la búsqueda es un proceso que cambia a medida que se lee, recogiendo información útil en cada paso. → Unidad 2\n\n\nVocabulario controlado\nConjunto de términos normalizados (tesauro, encabezamientos de materia) que una base de datos usa para describir los documentos y agrupar los sinónimos. → Unidad 2",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#uso-ético-de-la-información-y-plagio",
     "href": "92-glosario.html#uso-ético-de-la-información-y-plagio",
-    "title": "Apéndice D — Glosario",
+    "title": "Apéndice E — Glosario",
     "section": "Uso ético de la información y plagio",
     "text": "Uso ético de la información y plagio\n\nPropiedad intelectual\nConjunto de derechos de los autores sobre sus creaciones originales: derechos morales (irrenunciables) y de explotación. → Unidad 3\n\n\nDerecho de cita\nLímite de la propiedad intelectual que permite incluir fragmentos de obras ajenas para su análisis o comentario con fines docentes o de investigación, indicando la fuente y el autor. → Unidad 3\n\n\nDominio público\nSituación de una obra cuyos derechos de explotación han expirado y puede usarse libremente, respetando los derechos morales. → Unidad 3\n\n\nLicencia Creative Commons\nLicencia con la que el autor autoriza de antemano ciertos usos de su obra, combinando las condiciones BY, SA, NC y ND. → Unidad 3\n\n\nPlagio\nPresentar como propio el trabajo, las ideas o las palabras de otra persona sin reconocerlo. → Unidad 3\n\n\nParáfrasis\nExpresión de las ideas de un autor con palabras y estructura propias, acompañada de su cita. → Unidad 3\n\n\nEscritura en mosaico\nPatchwriting. Copiar un texto cambiando algunas palabras o su orden, pero manteniendo su estructura. Es una forma de plagio. → Unidad 3\n\n\nIntegridad académica\nCompromiso con la honestidad, la confianza, la justicia, el respeto y la responsabilidad en el estudio y la investigación. → Unidad 3",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#referencias-bibliográficas",
     "href": "92-glosario.html#referencias-bibliográficas",
-    "title": "Apéndice D — Glosario",
+    "title": "Apéndice E — Glosario",
     "section": "Referencias bibliográficas",
     "text": "Referencias bibliográficas\n\nCita\nMarca breve en el texto que remite a la fuente usada, como (Bates, 1989) o [3]. → Unidades 4 y 5\n\n\nReferencia bibliográfica\nDescripción completa de una fuente en la lista final de un trabajo. → Unidades 4 y 5\n\n\nEstilo de citación\nConjunto de normas que fija qué datos incluyen las citas y las referencias, en qué orden y con qué puntuación (APA, Vancouver, ISO 690…). → Unidades 4 y 5\n\n\nSistema autor-fecha\nSistema de citación que identifica la fuente en el texto por el apellido y el año, y ordena la lista alfabéticamente. → Unidades 4 y 5\n\n\nSistema numérico\nSistema de citación que identifica la fuente con un número y ordena la lista por orden de aparición. → Unidades 4 y 5\n\n\nDOI\nDigital Object Identifier. Identificador permanente de un documento digital que se resuelve en https://doi.org/. → Unidades 4 y 5\n\n\nGestor de referencias\nPrograma que guarda y organiza referencias, inserta citas en el procesador de textos y genera la bibliografía en un estilo. → Unidades 4 y 5\n\n\nHerramienta de originalidad\nPrograma que compara un texto con grandes colecciones de documentos y señala las coincidencias. Su informe es un indicio, no un veredicto de plagio. → Unidades 4 y 5",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#inteligencia-artificial-generativa",
     "href": "92-glosario.html#inteligencia-artificial-generativa",
-    "title": "Apéndice D — Glosario",
+    "title": "Apéndice E — Glosario",
     "section": "Inteligencia artificial generativa",
     "text": "Inteligencia artificial generativa\n\nInteligencia artificial generativa\nIA que produce contenido nuevo (texto, imágenes, audio, código) a partir de patrones aprendidos de grandes cantidades de datos. → Unidades 6 y 7\n\n\nModelo de lenguaje\nSistema entrenado con grandes colecciones de textos para predecir el fragmento más probable que sigue a un texto dado. → Unidades 6 y 7\n\n\nInstrucción\nPrompt. Texto con el que se pide algo a un sistema de IA generativa. → Unidades 6 y 7\n\n\nAlucinación\nRespuesta de una IA que parece correcta pero es falsa o inventada, como una referencia bibliográfica inexistente. → Unidades 6 y 7\n\n\nDatos de entrenamiento\nColección de datos con la que se entrena un modelo; determina lo que sabe y los sesgos que reproduce. → Unidades 6 y 7\n\n\nGeneración aumentada por recuperación\nRAG. Técnica que combina un modelo de lenguaje con un buscador o una colección de documentos para responder a partir de lo recuperado. → Unidades 6 y 7\n\n\nSesgo algorítmico\nError sistemático de un sistema automático que favorece o perjudica a ciertos grupos, a menudo heredado de los datos. → Unidades 8 y 9\n\n\nDeclaración de uso de IA\nTexto que indica qué herramienta de IA se ha usado en un trabajo, para qué, en qué partes y cómo se ha revisado el resultado. → Unidades 8 y 9\n\n\nReglamento de IA\nAI Act. Reglamento (UE) 2024/1689, que regula la IA en la Unión Europea con un enfoque basado en el riesgo. → Unidades 8 y 9\n\n\nAlfabetización en IA\nConocimientos y capacidades para usar la IA de forma informada y comprender sus oportunidades, riesgos y posibles daños. → Unidades 8 y 9\n\n\nExplicabilidad\nPrincipio ético según el cual debe poder entenderse cómo funciona un sistema de IA y quién responde de él. → Unidades 8 y 9\n\n\nDatos personales\nCualquier información sobre una persona física identificada o identificable. → Unidades 8 y 9\n\n\nAutodeterminación informativa\nDerecho de cada persona a decidir sobre el uso de sus datos personales. → Unidades 8 y 9",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glosario</span>"
     ]
   }
 ]
