@@ -75,6 +75,28 @@
     ]
   },
   {
+    "objectID": "01-que-es.html#caso-práctico-resuelto",
+    "href": "01-que-es.html#caso-práctico-resuelto",
+    "title": "Capítulo 1. Qué es la inteligencia emocional",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaLas cuatro ramas en una reunión difícil\n\n\n\nSituación: en la reunión del grupo, tu director critica con dureza un capítulo.\n\nPercibir: notas tensión en tu cuerpo y que tu compañera mira al suelo; tu director parece cansado.\nUsar: decides no responder en ese momento, porque con enfado te cuesta pensar con claridad.\nComprender: lo que sientes es frustración (habías trabajado mucho) y algo de vergüenza (fue en público); sabes que, si no la gestionas, puede convertirse en desmotivación.\nRegular: pides una reunión al día siguiente para entender los comentarios y, mientras, sales a caminar.\n\nEl análisis no elimina la emoción, pero te ayuda a elegir qué hacer con ella.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la inteligencia emocional</span>"
+    ]
+  },
+  {
+    "objectID": "01-que-es.html#ejercicios-graduados",
+    "href": "01-que-es.html#ejercicios-graduados",
+    "title": "Capítulo 1. Qué es la inteligencia emocional",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué rama se pone en juego al notar que una compañera está agobiada antes de que lo diga?\n\nVer solución\nPercibir las emociones de otras personas.\n\nAvanzado. Analiza con las cuatro ramas una situación reciente de tu trabajo (puedes cambiar los detalles).\n\nVer solución\nDescribe qué percibiste, cómo influyó la emoción en tu pensamiento, qué comprendiste de ella y qué hiciste para regularla, y qué harías distinto.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la inteligencia emocional</span>"
+    ]
+  },
+  {
     "objectID": "01-que-es.html#actividades",
     "href": "01-que-es.html#actividades",
     "title": "Capítulo 1. Qué es la inteligencia emocional",
@@ -168,6 +190,28 @@
     "title": "Capítulo 2. Reconocer y comprender las emociones",
     "section": "Laboratorio: amplía tu vocabulario emocional",
     "text": "Laboratorio: amplía tu vocabulario emocional\n\n\nLaboratorio · se ejecuta en tu navegador\n\nElige la familia de lo que sientes y su intensidad. El laboratorio te propone palabras más precisas y una pregunta para afinar.\n\nseleccion = window.Lab.seleccion\nrango = window.Lab.rango\nviewof familia = seleccion(\"Familia de la emoción\", [\"Miedo\", \"Enfado\", \"Tristeza\", \"Vergüenza\", \"Alegría\", \"Interés\"], {value: \"Miedo\"})\nviewof intensidad = rango(\"Intensidad\", [1, 3], {value: 2, formato: x =&gt; [\"baja\", \"media\", \"alta\"][x - 1]})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const V = {\n    \"Miedo\": [[\"inquietud\", \"preocupación\", \"incertidumbre\"], [\"ansiedad\", \"nerviosismo\", \"aprensión\"], [\"pánico\", \"angustia\", \"terror\"], \"¿Qué es lo que temes que ocurra, en concreto?\"],\n    \"Enfado\": [[\"fastidio\", \"impaciencia\", \"molestia\"], [\"irritación\", \"frustración\", \"indignación\"], [\"rabia\", \"ira\", \"furia\"], \"¿Qué objetivo o qué valor sientes que se ha bloqueado o vulnerado?\"],\n    \"Tristeza\": [[\"melancolía\", \"desánimo\", \"nostalgia\"], [\"decepción\", \"pena\", \"desaliento\"], [\"desesperanza\", \"abatimiento\", \"desolación\"], \"¿Qué has perdido o qué esperabas que no ha ocurrido?\"],\n    \"Vergüenza\": [[\"incomodidad\", \"timidez\", \"apuro\"], [\"bochorno\", \"culpa\", \"inseguridad\"], [\"humillación\", \"sentirse fuera de lugar\", \"indignidad\"], \"¿Es por algo que hiciste (culpa) o por cómo te ves (vergüenza)?\"],\n    \"Alegría\": [[\"satisfacción\", \"tranquilidad\", \"agrado\"], [\"entusiasmo\", \"orgullo\", \"gratitud\"], [\"euforia\", \"júbilo\", \"exaltación\"], \"¿Qué ha salido bien y qué papel has tenido tú?\"],\n    \"Interés\": [[\"curiosidad\", \"atención\", \"intriga\"], [\"motivación\", \"implicación\", \"fascinación\"], [\"absorción\", \"pasión\", \"flujo\"], \"¿Qué te gustaría descubrir ahora?\"]\n  };\n  const [b, m, a, q] = V[familia], pal = [b, m, a][intensidad - 1];\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;Palabras más precisas para &lt;strong&gt;${familia.toLowerCase()}&lt;/strong&gt; de intensidad ${[\"baja\", \"media\", \"alta\"][intensidad - 1]}:&lt;/p&gt;\n   &lt;p style=\"font-size:1.25rem\"&gt;${pal.map(w =&gt; `&lt;span class=\"badge text-bg-light border me-1\"&gt;${w}&lt;/span&gt;`).join(\"\")}&lt;/p&gt;\n   &lt;p&gt;&lt;strong&gt;Para afinar:&lt;/strong&gt; ${q}&lt;/p&gt;\n   &lt;p class=\"small\"&gt;Prueba a completar: «Siento ___ porque ___, y lo que necesito es ___».${intensidad === 3 && [\"Miedo\", \"Tristeza\", \"Vergüenza\"].includes(familia) ? ' Si sientes esto con intensidad alta durante días, habla con alguien de confianza o con un profesional (ver &lt;a href=\"90-recursos.html\"&gt;Recursos de apoyo&lt;/a&gt;).' : \"\"}&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Reconocer y comprender las emociones</span>"
+    ]
+  },
+  {
+    "objectID": "02-reconocer.html#caso-práctico-resuelto",
+    "href": "02-reconocer.html#caso-práctico-resuelto",
+    "title": "Capítulo 2. Reconocer y comprender las emociones",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDe «estoy mal» a una emoción con nombre\n\n\n\nDespués de una evaluación de seguimiento negativa, una doctoranda escribe en su diario: «Estoy fatal». Con el laboratorio del capítulo afina:\n\nFamilia: tristeza y vergüenza.\nPrecisión: «decepcionada» (esperaba otra valoración) y «avergonzada» (le preocupa lo que piense el tribunal).\nNecesidad: entender qué falta en el plan y separar el resultado de su valía.\nAcción: pedir los comentarios por escrito y reunirse con su directora.\n\nPonerle nombre preciso convierte un malestar difuso en algo con lo que se puede trabajar.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Reconocer y comprender las emociones</span>"
+    ]
+  },
+  {
+    "objectID": "02-reconocer.html#ejercicios-graduados",
+    "href": "02-reconocer.html#ejercicios-graduados",
+    "title": "Capítulo 2. Reconocer y comprender las emociones",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Sustituye «estoy mal» por una emoción más precisa en esta situación: el código que llevas días depurando sigue fallando.\n\nVer solución\nPor ejemplo, «frustrado» (algo bloquea tu objetivo) o «desanimado» si dura días; cada una sugiere una respuesta distinta (cambiar de estrategia, pedir ayuda, descansar).\n\nAvanzado. Lleva un diario emocional de una semana y analiza cuántas emociones distintas has nombrado.\n\nVer solución\nLa reflexión debe valorar si el vocabulario se amplía con la práctica y si nombrar con precisión cambia lo que haces.",
     "crumbs": [
       "Capítulos",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Reconocer y comprender las emociones</span>"
@@ -273,6 +317,28 @@
     ]
   },
   {
+    "objectID": "03-regular.html#caso-práctico-resuelto",
+    "href": "03-regular.html#caso-práctico-resuelto",
+    "title": "Capítulo 3. Regular las emociones",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaTres planes si-entonces para la defensa de la tesis\n\n\n\n\nSi la noche anterior no puedo dormir, entonces me levanto, leo algo ajeno a la tesis veinte minutos y vuelvo a la cama (modulación de la respuesta y despliegue de la atención).\nSi el tribunal hace una pregunta que no sé responder, entonces respiro, reconozco el límite y explico cómo lo abordaría (cambio cognitivo: «no saberlo todo es normal y honesto»).\nSi noto que me acelero al hablar, entonces hago una pausa al cambiar de diapositiva y miro a una persona concreta (modificación de la situación).\n\nLos planes se escriben antes y se repasan el día de antes, para que la situación active la respuesta.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Regular las emociones</span>"
+    ]
+  },
+  {
+    "objectID": "03-regular.html#ejercicios-graduados",
+    "href": "03-regular.html#ejercicios-graduados",
+    "title": "Capítulo 3. Regular las emociones",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué familia de estrategias de Gross es «ver la pregunta difícil del tribunal como una oportunidad»?\n\nVer solución\nCambio cognitivo (reevaluación).\n\nAvanzado. Escribe tres planes si-entonces para una situación difícil que tengas en las próximas semanas, con al menos dos familias de estrategias.\n\nVer solución\nDeben ser concretos (situación precisa, acción observable) y basarse en estrategias con buen apoyo (reevaluación, aceptación, resolución de problemas) más que en la supresión.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Regular las emociones</span>"
+    ]
+  },
+  {
     "objectID": "03-regular.html#actividades",
     "href": "03-regular.html#actividades",
     "title": "Capítulo 3. Regular las emociones",
@@ -372,6 +438,28 @@
     ]
   },
   {
+    "objectID": "04-bienestar.html#caso-práctico-resuelto",
+    "href": "04-bienestar.html#caso-práctico-resuelto",
+    "title": "Capítulo 4. Estrés, bienestar y salud mental",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDel desajuste a una propuesta al programa de doctorado\n\n\n\nVarias doctorandas de un programa coinciden en el laboratorio del capítulo: desajuste en comunidad (trabajan aisladas) y carga (docencia añadida sin planificar).\nAcción individual: cada una protege dos bloques semanales de escritura y se une a un grupo de escritura.\nAcción organizativa (propuesta a la comisión del programa):\n\nGrupos de escritura quincenales abiertos a todo el programa.\nCriterios escritos sobre la carga docente de los contratos predoctorales.\nInformación visible sobre el servicio de atención psicológica.\n\nEl enfoque recoge la conclusión de Levecque et al. (2017): las condiciones de trabajo importan.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Estrés, bienestar y salud mental</span>"
+    ]
+  },
+  {
+    "objectID": "04-bienestar.html#ejercicios-graduados",
+    "href": "04-bienestar.html#ejercicios-graduados",
+    "title": "Capítulo 4. Estrés, bienestar y salud mental",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué área de la vida laboral afecta la docencia añadida sin planificar?\n\nVer solución\nLa carga de trabajo (y también el control, si no se puede negociar).\n\nAvanzado. Propón una acción individual y una organizativa para el área de mayor desajuste en tu entorno (puede ser un caso ficticio).\n\nVer solución\nLa acción organizativa debe ser concreta, viable y dirigida a quien puede decidirla; la individual, sostenible en el tiempo.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Estrés, bienestar y salud mental</span>"
+    ]
+  },
+  {
     "objectID": "04-bienestar.html#actividades",
     "href": "04-bienestar.html#actividades",
     "title": "Capítulo 4. Estrés, bienestar y salud mental",
@@ -454,6 +542,28 @@
     "title": "Capítulo 5. Autocompasión y síndrome del impostor",
     "section": "Laboratorio: responder como a un buen amigo",
     "text": "Laboratorio: responder como a un buen amigo\n\n\nLaboratorio · se ejecuta en tu navegador; tu texto no sale de él\n\nEscribe un pensamiento autocrítico frecuente. El laboratorio te ayuda a reformularlo con los tres componentes de Neff.\n\ntexto = window.Lab.texto\nviewof critico = texto(\"Pensamiento autocrítico\", {value: \"Todos mis compañeros publican más que yo; no valgo para esto\", submit: \"Reformular\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const esc = s =&gt; (s || \"\").replace(/&/g, \"&amp;\").replace(/&lt;/g, \"&lt;\");\n  const t = (critico || \"\").toLowerCase();\n  const marcas = [[\"siempre\", \"generalización\"], [\"nunca\", \"generalización\"], [\"todos\", \"comparación global\"], [\"nadie\", \"generalización\"], [\"no valgo\", \"juicio sobre la identidad\"], [\"soy un\", \"juicio sobre la identidad\"], [\"soy una\", \"juicio sobre la identidad\"], [\"fraude\", \"etiqueta de impostor\"], [\"inútil\", \"etiqueta\"], [\"desastre\", \"etiqueta\"], [\"debería\", \"exigencia rígida\"]].filter(([w]) =&gt; t.includes(w));\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `${marcas.length ? `&lt;p&gt;Detecto: ${[...new Set(marcas.map(m =&gt; m[1]))].join(\", \")}.&lt;/p&gt;` : \"\"}\n   &lt;ol&gt;\n    &lt;li&gt;&lt;strong&gt;Atención plena&lt;/strong&gt; (nombra lo que sientes, sin etiquetarte): «Ahora mismo me siento ___ porque ___».&lt;/li&gt;\n    &lt;li&gt;&lt;strong&gt;Humanidad compartida&lt;/strong&gt;: «Muchas personas en el doctorado sienten esto; ___ (alguien que admiras) también ha pasado por algo parecido».&lt;/li&gt;\n    &lt;li&gt;&lt;strong&gt;Amabilidad&lt;/strong&gt;: ¿qué le dirías a un buen amigo que pensara «${esc(critico)}»? Escríbelo y díselo a ti.&lt;/li&gt;\n   &lt;/ol&gt;\n   &lt;p class=\"small\"&gt;Si este tipo de pensamientos es constante e intenso, o afecta a tu sueño y a tu vida diaria, coméntalo con un profesional (ver &lt;a href=\"90-recursos.html\"&gt;Recursos de apoyo&lt;/a&gt;).&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Autocompasión y síndrome del impostor</span>"
+    ]
+  },
+  {
+    "objectID": "05-autocompasion.html#caso-práctico-resuelto",
+    "href": "05-autocompasion.html#caso-práctico-resuelto",
+    "title": "Capítulo 5. Autocompasión y síndrome del impostor",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaResponder a un rechazo con los tres componentes de Neff\n\n\n\nPensamiento tras el rechazo de un artículo: «Soy un fraude, nunca voy a publicar nada».\n\nAtención plena: «Ahora me siento decepcionado y avergonzado. Es un pensamiento, no un hecho».\nHumanidad compartida: «A casi todos los investigadores les rechazan artículos; mi directora me contó que su primer artículo lo rechazaron tres revistas».\nAmabilidad: «He trabajado mucho en esto. Los comentarios me dicen cómo mejorarlo. Hoy descanso y mañana planifico la revisión».\n\nEl objetivo no es sentirse bien al instante, sino que el rechazo no se convierta en un juicio sobre tu valía.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Autocompasión y síndrome del impostor</span>"
+    ]
+  },
+  {
+    "objectID": "05-autocompasion.html#ejercicios-graduados",
+    "href": "05-autocompasion.html#ejercicios-graduados",
+    "title": "Capítulo 5. Autocompasión y síndrome del impostor",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué componente se opone a «solo a mí me pasan estas cosas»?\n\nVer solución\nLa humanidad compartida (frente al aislamiento).\n\nAvanzado. Escribe una respuesta autocompasiva a un pensamiento autocrítico frecuente tuyo con los tres componentes.\n\nVer solución\nCada componente debe aparecer de forma reconocible y la respuesta debe ser realista, no un elogio vacío.",
     "crumbs": [
       "Capítulos",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Autocompasión y síndrome del impostor</span>"
@@ -553,6 +663,28 @@
     "title": "Capítulo 6. Empatía, retroalimentación y conflicto",
     "section": "3. Conflictos",
     "text": "3. Conflictos\nLos conflictos son inevitables en equipos que discuten ideas; el problema es cuando se vuelven personales o se enquistan. El modelo de estilos de conflicto de Thomas y Kilmann combina dos dimensiones, la atención a los propios intereses y a los de la otra parte, y describe cinco estilos:\n\n\n\n\n\n\n\n\nEstilo\nCuándo puede ser adecuado\nRiesgo si es el único\n\n\n\n\nCompetir\nUrgencias, cuestiones éticas no negociables\nDaña relaciones\n\n\nColaborar\nAsuntos importantes para ambos, con tiempo\nLento\n\n\nTransigir\nAcuerdos rápidos de reparto\nNadie queda satisfecho del todo\n\n\nEvitar\nAsuntos triviales, o para enfriar los ánimos\nLos problemas se acumulan\n\n\nCeder\nCuando el asunto importa más a la otra parte\nResentimiento acumulado",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Empatía, retroalimentación y conflicto</span>"
+    ]
+  },
+  {
+    "objectID": "06-relaciones.html#caso-práctico-resuelto",
+    "href": "06-relaciones.html#caso-práctico-resuelto",
+    "title": "Capítulo 6. Empatía, retroalimentación y conflicto",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDar retroalimentación a un compañero que no cumple plazos\n\n\n\nTu compañero de proyecto lleva tres semanas sin entregar su parte del análisis.\nVersión que falla: «Eres un irresponsable, siempre lo dejas todo para el final».\nVersión con el modelo SCI:\n\nSituación: en el plan del 15 de octubre acordamos que el análisis estaría el día 1. Comportamiento: aún no lo tengo y no he recibido noticias. Impacto: no puedo empezar la redacción y nos arriesgamos a no llegar al congreso. Petición: ¿podemos hablar hoy de qué te ha impedido terminarlo y fijar una nueva fecha realista?\n\nEscucha activa después: quizá hay un problema (técnico o personal) que no conocías.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Empatía, retroalimentación y conflicto</span>"
+    ]
+  },
+  {
+    "objectID": "06-relaciones.html#ejercicios-graduados",
+    "href": "06-relaciones.html#ejercicios-graduados",
+    "title": "Capítulo 6. Empatía, retroalimentación y conflicto",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Reescribe con el modelo SCI: «Tus presentaciones siempre son aburridas».\n\nVer solución\nEjemplo: «En la presentación de ayer (S), leíste las diapositivas durante veinte minutos (C) y noté que el público dejó de atender (I). ¿Te ayudaría ensayar juntos la próxima con menos texto en pantalla? (P)».\n\nAvanzado. Prepara y, si es posible, da una retroalimentación real con el modelo SCI; luego anota cómo fue y qué cambiarías.\n\nVer solución\nLa reflexión debe considerar la reacción de la otra persona, si la conversación fue bidireccional (escucha activa) y si se acordó algo concreto.",
     "crumbs": [
       "Capítulos",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Empatía, retroalimentación y conflicto</span>"

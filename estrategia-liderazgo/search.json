@@ -97,6 +97,28 @@
     ]
   },
   {
+    "objectID": "01-estrategia.html#caso-práctico-resuelto",
+    "href": "01-estrategia.html#caso-práctico-resuelto",
+    "title": "Capítulo 1. Pensar estratégicamente",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaPriorizar una cartera de cinco proyectos\n\n\n\nUna posdoc tiene cinco ideas y tiempo para dos o tres este año. Aplicando la matriz de Alon y la cartera equilibrada:\n\n\n\n\n\n\n\n\n\nIdea\nDificultad\nGanancia\nDecisión\n\n\n\n\nReanálisis de datos del grupo con un método nuevo\n2\n4\nHacer ya: viable y valioso\n\n\nRevisión sistemática del tema\n2\n3\nHacer: base para la línea\n\n\nEncuesta internacional propia\n4\n4\nApuesta: preparar la solicitud de financiación\n\n\nNuevo instrumento de medida\n5\n5\nAplazar dos años, cuando haya equipo\n\n\nCapítulo descriptivo de la base de datos\n1\n1\nNo hacer o delegarlo como práctica\n\n\n\nEl criterio explícito ayuda a decir que no sin culpa: cada sí tiene un coste de oportunidad.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Pensar estratégicamente</span>"
+    ]
+  },
+  {
+    "objectID": "01-estrategia.html#ejercicios-graduados",
+    "href": "01-estrategia.html#ejercicios-graduados",
+    "title": "Capítulo 1. Pensar estratégicamente",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué hacer con una idea de dificultad 5 y ganancia 2?\n\nVer solución\nEvitarla o reformularla: exige mucho esfuerzo para poco avance del conocimiento.\n\nAvanzado. Prioriza tus propias ideas con la tabla del caso y escribe qué dejarás de hacer este año.\n\nVer solución\nLa justificación debe usar los criterios (interés, viabilidad, ventaja propia) y tener en cuenta el equilibrio entre proyectos seguros y apuestas.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Pensar estratégicamente</span>"
+    ]
+  },
+  {
     "objectID": "01-estrategia.html#actividades",
     "href": "01-estrategia.html#actividades",
     "title": "Capítulo 1. Pensar estratégicamente",
@@ -196,6 +218,28 @@
     ]
   },
   {
+    "objectID": "02-carrera.html#caso-práctico-resuelto",
+    "href": "02-carrera.html#caso-práctico-resuelto",
+    "title": "Capítulo 2. Diseñar la carrera",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaUn plan individual de desarrollo en una página\n\n\n\nDoctorando de tercer año interesado en la academia y en la gestión de la ciencia:\n\nObjetivos a un año: depositar la tesis; publicar dos artículos como primer autor; hacer una estancia de tres meses.\nObjetivos a tres años: contrato posdoctoral o puesto en una oficina de proyectos; experiencia en la redacción de una solicitud competitiva.\nCompetencias por desarrollar: redacción de proyectos (curso + colaborar en una solicitud del grupo), gestión de equipos (coordinar a dos estudiantes de TFM).\nContactos: dos personas que trabajan en oficinas de proyectos; un mentor fuera del grupo.\nRevisión: en junio, con la directora y con el mentor.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Diseñar la carrera</span>"
+    ]
+  },
+  {
+    "objectID": "02-carrera.html#ejercicios-graduados",
+    "href": "02-carrera.html#ejercicios-graduados",
+    "title": "Capítulo 2. Diseñar la carrera",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Es SMART el objetivo «mejorar mi CV»? Reescríbelo.\n\nVer solución\nNo. Por ejemplo: «Publicar antes de diciembre un artículo como primer autor en una revista de mi área con revisión por pares».\n\nAvanzado. Redacta tu plan individual de desarrollo en una página y compártelo con una persona de confianza para recibir comentarios.\n\nVer solución\nDebe tener objetivos SMART, acciones con fecha y una fecha de revisión; los comentarios externos suelen revelar caminos o contactos que no se habían considerado.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Diseñar la carrera</span>"
+    ]
+  },
+  {
     "objectID": "02-carrera.html#actividades",
     "href": "02-carrera.html#actividades",
     "title": "Capítulo 2. Diseñar la carrera",
@@ -289,6 +333,28 @@
     "title": "Capítulo 3. Liderar",
     "section": "Laboratorio: tu perfil de conductas de liderazgo",
     "text": "Laboratorio: tu perfil de conductas de liderazgo\n\n\nLaboratorio · se ejecuta en tu navegador\n\nValora de 1 (casi nunca) a 5 (casi siempre) con qué frecuencia haces cada conducta. Lo ideal es pedir a dos o tres personas que te valoren también y comparar.\n\nrango = window.Lab.rango\nviewof l1 = rango(\"Comparto una visión clara de hacia dónde vamos\", [1, 5], {value: 3})\nviewof l2 = rango(\"Animo a cuestionar ideas, incluidas las mías\", [1, 5], {value: 4})\nviewof l3 = rango(\"Presto atención a las necesidades de cada persona\", [1, 5], {value: 3})\nviewof l4 = rango(\"Acuerdo expectativas y plazos de forma explícita\", [1, 5], {value: 2})\nviewof l5 = rango(\"Reconozco el trabajo bien hecho\", [1, 5], {value: 3})\nviewof l6 = rango(\"Abordo los problemas y conflictos a tiempo\", [1, 5], {value: 2})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const ej = [[\"Visión\", l1], [\"Estímulo intelectual\", l2], [\"Atención individual\", l3], [\"Expectativas claras\", l4], [\"Reconocimiento\", l5], [\"Afrontar problemas\", l6]];\n  const cx = 170, cy = 150, R = 110, ang = i =&gt; -Math.PI / 2 + i * 2 * Math.PI / 6, P = (i, v) =&gt; [cx + R * v / 5 * Math.cos(ang(i)), cy + R * v / 5 * Math.sin(ang(i))];\n  const red = [1, 2, 3, 4, 5].map(v =&gt; `&lt;polygon points=\"${ej.map((_, i) =&gt; P(i, v).join(\",\")).join(\" \")}\" fill=\"none\" stroke=\"currentColor\" opacity=\".2\"/&gt;`).join(\"\");\n  const eti = ej.map(([n], i) =&gt; { const [x, y] = P(i, 6.1); return `&lt;text x=\"${x}\" y=\"${y}\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"currentColor\"&gt;${n}&lt;/text&gt;`; }).join(\"\");\n  const pol = `&lt;polygon points=\"${ej.map(([, v], i) =&gt; P(i, v).join(\",\")).join(\" \")}\" fill=\"#2a78d6\" fill-opacity=\".3\" stroke=\"#2a78d6\" stroke-width=\"2\"/&gt;`;\n  const orden = [...ej].sort((a, b) =&gt; a[1] - b[1]);\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;svg viewBox=\"-10 0 360 300\" width=\"100%\" style=\"max-width:420px\" role=\"img\" aria-label=\"Gráfico radial de las seis conductas\"&gt;${red}${eti}${pol}&lt;/svg&gt;\n   &lt;p&gt;Punto fuerte: &lt;strong&gt;${orden[5][0].toLowerCase()}&lt;/strong&gt; (${orden[5][1]}). Área de mejora: &lt;strong&gt;${orden[0][0].toLowerCase()}&lt;/strong&gt; (${orden[0][1]}).&lt;/p&gt;\n   &lt;p class=\"small\"&gt;Las cuatro primeras conductas son propias del liderazgo transformacional; expectativas y reconocimiento, del transaccional constructivo; afrontar los problemas es lo contrario del &lt;em&gt;laissez-faire&lt;/em&gt;. Elige una sola conducta para practicar este mes.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Liderar</span>"
+    ]
+  },
+  {
+    "objectID": "03-liderar.html#caso-práctico-resuelto",
+    "href": "03-liderar.html#caso-práctico-resuelto",
+    "title": "Capítulo 3. Liderar",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaCoordinar un seminario de doctorandos sin cargo formal\n\n\n\nUna doctoranda organiza el seminario mensual de su programa. No tiene autoridad formal, pero ejerce liderazgo:\n\nVisión: «un espacio para presentar trabajo en curso sin miedo a equivocarse».\nExpectativas claras: calendario semestral, 20 minutos por presentación, comentarios en formato «qué funciona, qué mejoraría».\nAtención individual: pregunta a cada persona qué tipo de comentarios necesita.\nReconocimiento: agradece en público las presentaciones y los buenos comentarios.\nAfrontar problemas: cuando un asistente monopoliza los turnos, habla con él en privado y propone un orden de palabra.\n\nResultado: más asistencia y presentaciones más tempranas (menos «trabajo acabado»).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Liderar</span>"
+    ]
+  },
+  {
+    "objectID": "03-liderar.html#ejercicios-graduados",
+    "href": "03-liderar.html#ejercicios-graduados",
+    "title": "Capítulo 3. Liderar",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué conducta de liderazgo transaccional aparece en el caso?\n\nVer solución\nLas expectativas claras (calendario, tiempos, formato de comentarios) y el reconocimiento.\n\nAvanzado. Identifica una situación en tu entorno en la que podrías ejercer liderazgo sin cargo y diseña tres conductas concretas.\n\nVer solución\nLas conductas deben ser observables y relacionarse con los estilos del capítulo (visión, estímulo intelectual, atención individual, expectativas, reconocimiento).",
     "crumbs": [
       "Capítulos",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Liderar</span>"
@@ -405,6 +471,28 @@
     ]
   },
   {
+    "objectID": "04-equipos.html#caso-práctico-resuelto",
+    "href": "04-equipos.html#caso-práctico-resuelto",
+    "title": "Capítulo 4. Equipos, supervisión y autoría",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaResolver un conflicto de autoría antes de que estalle\n\n\n\nTres doctorandos y una posdoc preparan un artículo. Al empezar, la posdoc propone usar CRediT para acordar autoría:\n\nLista de tareas previstas asignadas a roles CRediT.\nAcuerdo provisional del orden de firma según la contribución esperada.\nRevisión del acuerdo al terminar el análisis (las contribuciones cambian).\nDeclaración final de contribuciones en el artículo.\n\nCuando uno de los doctorandos asume más análisis de lo previsto, el acuerdo se revisa sin conflicto porque existía un criterio compartido. Lo que se evita: discutir la autoría al final, cuando ya hay tensión.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Equipos, supervisión y autoría</span>"
+    ]
+  },
+  {
+    "objectID": "04-equipos.html#ejercicios-graduados",
+    "href": "04-equipos.html#ejercicios-graduados",
+    "title": "Capítulo 4. Equipos, supervisión y autoría",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Cuándo conviene acordar los criterios de autoría?\n\nVer solución\nAl inicio del proyecto, con revisión en momentos clave, y siempre por escrito.\n\nAvanzado. Redacta un acuerdo de autoría para un artículo en curso con la taxonomía CRediT.\n\nVer solución\nDebe asignar roles por persona, criterios para el orden de firma, cuándo se revisará y qué se hará en caso de desacuerdo.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Equipos, supervisión y autoría</span>"
+    ]
+  },
+  {
     "objectID": "04-equipos.html#actividades",
     "href": "04-equipos.html#actividades",
     "title": "Capítulo 4. Equipos, supervisión y autoría",
@@ -504,6 +592,28 @@
     ]
   },
   {
+    "objectID": "05-proyectos.html#caso-práctico-resuelto",
+    "href": "05-proyectos.html#caso-práctico-resuelto",
+    "title": "Capítulo 5. Proyectos y financiación",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaUn cronograma realista con margen\n\n\n\nProyecto de 24 meses, tres paquetes de trabajo. Primera versión: todo encadenado sin huecos, terminando justo en el mes 24. Revisión:\n\nDependencias: el análisis no puede empezar sin datos depurados; el comité de ética debe aprobar antes de recoger datos.\nRuta crítica: ética → recogida → depuración → análisis → artículo principal. Cualquier retraso aquí retrasa el final.\nMargen: 10-15 % del tiempo de la ruta crítica (unos tres meses) al final.\nHitos de control en los meses 6, 12 y 18, con decisiones previstas si hay retrasos (reducir el alcance, priorizar resultados).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Proyectos y financiación</span>"
+    ]
+  },
+  {
+    "objectID": "05-proyectos.html#ejercicios-graduados",
+    "href": "05-proyectos.html#ejercicios-graduados",
+    "title": "Capítulo 5. Proyectos y financiación",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué es la ruta crítica de un proyecto?\n\nVer solución\nLa secuencia de tareas dependientes cuya duración determina la fecha final: cualquier retraso en ellas retrasa todo el proyecto.\n\nAvanzado. Dibuja el diagrama de Gantt de tu proyecto actual, marca la ruta crítica y añade un margen justificado.\n\nVer solución\nIncluye dependencias, hitos con criterios verificables y una lista de tareas que podrían recortarse si hay retrasos.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Proyectos y financiación</span>"
+    ]
+  },
+  {
     "objectID": "05-proyectos.html#actividades",
     "href": "05-proyectos.html#actividades",
     "title": "Capítulo 5. Proyectos y financiación",
@@ -597,6 +707,28 @@
     "title": "Capítulo 6. Decidir y negociar",
     "section": "3. Negociar",
     "text": "3. Negociar\nEn la vida investigadora se negocia constantemente: el orden de autoría, las condiciones de un contrato, el reparto de tareas en un consorcio, los plazos con una editorial. La negociación basada en principios (Fisher y Ury, Getting to Yes) propone:\n\nSeparar a las personas del problema: duro con el problema, cordial con las personas.\nCentrarse en intereses, no en posiciones. La posición es lo que se pide («quiero ser primera autora»); el interés, por qué («necesito un artículo como primera autora para la convocatoria»). Bajo posiciones opuestas a menudo hay intereses compatibles.\nInventar opciones de beneficio mutuo antes de decidir.\nUsar criterios objetivos (normas de la revista, CRediT, tablas salariales, convenios).\n\nAntes de negociar, conoce tu MAAN: la mejor alternativa a un acuerdo negociado (en inglés, BATNA). Si el acuerdo que te ofrecen es peor que tu MAAN, no te conviene. Mejorar tu MAAN (por ejemplo, tener otra oferta) es la forma más eficaz de ganar poder de negociación.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Decidir y negociar</span>"
+    ]
+  },
+  {
+    "objectID": "06-decidir.html#caso-práctico-resuelto",
+    "href": "06-decidir.html#caso-práctico-resuelto",
+    "title": "Capítulo 6. Decidir y negociar",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaNegociar las condiciones de un contrato posdoctoral\n\n\n\nTe ofrecen un posdoc de dos años. Preparación:\n\nTus intereses: estabilidad, tiempo para publicar tu línea, posibilidad de dirigir un TFM.\nIntereses del grupo: que avance el proyecto financiado, incorporar tus métodos.\nMAAN: otra oferta de un año en tu ciudad, con menos salario.\nCriterios objetivos: tablas salariales de la convocatoria, normas de la universidad sobre docencia.\nOpciones de beneficio mutuo: 20 % del tiempo para tu línea a cambio de formar al equipo en tus métodos; dirección conjunta de un TFM.\n\nResultado: no se negocia solo el salario (fijado por convocatoria), sino condiciones que importan a ambas partes.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Decidir y negociar</span>"
+    ]
+  },
+  {
+    "objectID": "06-decidir.html#ejercicios-graduados",
+    "href": "06-decidir.html#ejercicios-graduados",
+    "title": "Capítulo 6. Decidir y negociar",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué es tu MAAN en el caso?\n\nVer solución\nLa otra oferta de un año en tu ciudad: lo que harías si no hubiera acuerdo.\n\nAvanzado. Prepara una negociación real (contrato, autoría, reparto de tareas) con la plantilla del apéndice.\n\nVer solución\nIncluye intereses de ambas partes, tres opciones de beneficio mutuo, criterios objetivos y tu MAAN, y valora cómo mejorarla.",
     "crumbs": [
       "Capítulos",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Decidir y negociar</span>"
