@@ -535,8 +535,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <ul>
 <li>Reconocer las prácticas de investigación cuestionables y por qué parecen inocentes.</li>
-<li>Comprobar con simulaciones cómo los «grados de libertad del investigador» fabrican falsos positivos.</li>
-<li>Entender el sesgo de publicación y los incentivos que lo sostienen.</li>
+<li>Comprobar con simulaciones cómo los «<a href="92-glosario.html#gl-grados" class="glos" data-def="Decisiones que se pueden tomar al recoger y analizar los datos y que cambian el resultado.">grados de libertad del investigador</a>» fabrican <a href="92-glosario.html#gl-falsopositivo" class="glos" data-def="Resultado significativo cuando no existe un efecto real (error de tipo I).">falsos positivos</a>.</li>
+<li>Entender el <a href="92-glosario.html#gl-sesgopub" class="glos" data-def="Dependencia de la publicación respecto del resultado: se publican más los resultados positivos.">sesgo de publicación</a> y los incentivos que lo sostienen.</li>
 </ul>
 </div>
 </div>
@@ -584,10 +584,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="entre-la-buena-práctica-y-el-fraude">1. Entre la buena práctica y el fraude</h2>
 <p>La mala conducta científica en sentido estricto se resume en <strong>FFP</strong>: <em>fabrication</em> (inventar datos), <em>falsification</em> (manipularlos) y <em>plagiarism</em>. Es grave pero relativamente rara. Mucho más frecuentes son las <strong>prácticas de investigación cuestionables</strong> (<em>questionable research practices</em>, QRP): decisiones que no son fraude, que a menudo se toman de buena fe y que, sin embargo, aumentan la probabilidad de publicar resultados falsos.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Práctica</th>
@@ -600,7 +596,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>Medir varias variables dependientes y contar solo las significativas</td>
 </tr>
 <tr class="even">
-<td><strong>Parada opcional</strong></td>
+<td><a href="92-glosario.html#gl-parada" class="glos" data-def="Decidir cuándo dejar de recoger datos según el resultado provisional."><strong>Parada opcional</strong></a></td>
 <td>Mirar los datos a medida que llegan y dejar de recoger cuando <em>p</em> &lt; 0,05</td>
 </tr>
 <tr class="odd">
@@ -612,7 +608,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>Probar varias covariables, transformaciones o pruebas y contar solo una</td>
 </tr>
 <tr class="odd">
-<td><strong>HARKing</strong> (<em>hypothesizing after the results are known</em>)</td>
+<td><a href="92-glosario.html#gl-harking" class="glos" data-def="Hypothesizing after the results are known: presentar como hipótesis previa lo descubierto tras ver los datos."><strong>HARKing</strong></a> (<em>hypothesizing after the results are known</em>)</td>
 <td>Presentar como hipótesis previa lo que se descubrió al analizar</td>
 </tr>
 <tr class="even">
@@ -751,12 +747,12 @@ Figura&nbsp;1: El jardín de los senderos que se bifurcan: tres decisiones binar
 </section>
 <section id="sesgo-de-publicación" class="level2">
 <h2 class="anchored" data-anchor-id="sesgo-de-publicación">4. Sesgo de publicación</h2>
-<p>El <strong>sesgo de publicación</strong> aparece cuando la probabilidad de publicar un estudio depende de su resultado. Fanelli (2010) encontró que la proporción de artículos que confirman su hipótesis es altísima en muchas disciplinas y mayor en las ciencias sociales que en las físicas. Si los resultados nulos se quedan en el cajón, la literatura publicada es una muestra sesgada de lo investigado: los metaanálisis heredan el sesgo y sobrestiman los efectos.</p>
+<p>El <strong>sesgo de publicación</strong> aparece cuando la probabilidad de publicar un estudio depende de su resultado. Fanelli (2010) encontró que la proporción de artículos que confirman su hipótesis es altísima en muchas disciplinas y mayor en las ciencias sociales que en las físicas. Si los resultados nulos se quedan en el cajón, la literatura publicada es una muestra sesgada de lo investigado: los <a href="92-glosario.html#gl-metaanalisis" class="glos" data-def="Combinación estadística de los resultados de varios estudios.">metaanálisis</a> heredan el sesgo y sobrestiman los efectos.</p>
 <p>Algunas señales de alarma en una literatura:</p>
 <ul>
 <li>Demasiados resultados positivos para la potencia de los estudios.</li>
 <li>Valores <em>p</em> que se amontonan justo por debajo de 0,05.</li>
-<li>Estudios pequeños con efectos grandes y estudios grandes con efectos pequeños (asimetría en el <strong>gráfico de embudo</strong> de un metaanálisis).</li>
+<li>Estudios pequeños con efectos grandes y estudios grandes con efectos pequeños (asimetría en el <a href="92-glosario.html#gl-embudo" class="glos" data-def="Gráfico del efecto de cada estudio frente a su precisión, para detectar asimetrías."><strong>gráfico de embudo</strong></a> de un metaanálisis).</li>
 </ul>
 </section>
 <section id="incentivos-la-selección-natural-de-la-mala-ciencia" class="level2">
@@ -811,7 +807,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM0
 <li>Controlar o no por horas de trabajo remunerado.</li>
 <li>Usar el sueño continuo o en categorías.</li>
 </ul>
-<p>Hay 2 × 2 × 2 × 2 = 16 análisis posibles. Si se prueban varios y se informa solo del significativo, la tasa de falsos positivos aumenta mucho. Remedios: <strong>preregistrar</strong> las decisiones, informar de todas (análisis multiverso, capítulo 12) o separar claramente lo <strong>confirmatorio</strong> de lo <strong>exploratorio</strong>.</p>
+<p>Hay 2 × 2 × 2 × 2 = 16 análisis posibles. Si se prueban varios y se informa solo del significativo, la tasa de falsos positivos aumenta mucho. Remedios: <strong>preregistrar</strong> las decisiones, informar de todas (<a href="92-glosario.html#gl-multiverso" class="glos" data-def="Ejecución de todas las combinaciones razonables de decisiones analíticas.">análisis multiverso</a>, capítulo 12) o separar claramente lo <strong>confirmatorio</strong> de lo <strong>exploratorio</strong>.</p>
 </div>
 </div>
 </section>
@@ -825,7 +821,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM0
 <p><strong>Avanzado.</strong> Enumera las decisiones analíticas abiertas en tu proyecto actual y calcula cuántos análisis posibles generan.</p>
 <div class="webex-solution">
 <button>Ver solución</button>
-<p>Multiplica las opciones de cada decisión, indica cuáles fijarías en un preregistro y cuáles explorarías, informando de ello.</p>
+<p>Multiplica las opciones de cada decisión, indica cuáles fijarías en un <a href="92-glosario.html#gl-preregistro" class="glos" data-def="Plan del estudio registrado con fecha antes de analizar los datos.">preregistro</a> y cuáles explorarías, informando de ello.</p>
 </div>
 </section>
 <section id="actividades" class="level2">
@@ -1589,6 +1585,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

@@ -531,9 +531,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Distinguir las redes de citación directa, cocitación, acoplamiento bibliográfico, coautoría y coocurrencia de términos.</li>
-<li>Calcular medidas básicas de redes (grado, densidad, centralidad) y entender la detección de comunidades.</li>
-<li>Construir e interpretar mapas de la ciencia con responsabilidad.</li>
+<li>Distinguir las redes de citación directa, <a href="92-glosario.html#gl-cocitacion" class="glos" data-def="Relación entre dos documentos citados juntos por un tercero.">cocitación</a>, <a href="92-glosario.html#gl-acoplamiento" class="glos" data-def="Relación entre dos documentos que comparten referencias.">acoplamiento bibliográfico</a>, coautoría y coocurrencia de términos.</li>
+<li>Calcular medidas básicas de redes (grado, densidad, <a href="92-glosario.html#gl-centralidad" class="glos" data-def="Medida de la importancia de un nodo en una red (grado, intermediación…).">centralidad</a>) y entender la <a href="92-glosario.html#gl-comunidades" class="glos" data-def="Algoritmos que agrupan los nodos más conectados entre sí (Louvain, Leiden).">detección de comunidades</a>.</li>
+<li>Construir e interpretar <a href="92-glosario.html#gl-mapa" class="glos" data-def="Representación visual de la estructura de un campo a partir de redes bibliométricas.">mapas de la ciencia</a> con responsabilidad.</li>
 </ul>
 </div>
 </div>
@@ -578,12 +578,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="cinco-formas-de-relacionar-documentos-y-personas" class="level2">
 <h2 class="anchored" data-anchor-id="cinco-formas-de-relacionar-documentos-y-personas">1. Cinco formas de relacionar documentos y personas</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Red</th>
@@ -596,7 +590,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><strong>Citación directa</strong></td>
 <td>Documentos</td>
-<td>A cita a B</td>
+<td>A <a href="92-glosario.html#gl-cita" class="glos" data-def="Referencia de un documento a otro. Mide uso o visibilidad, no calidad.">cita</a> a B</td>
 <td>Seguir la genealogía de una idea</td>
 </tr>
 <tr class="even">
@@ -635,7 +629,7 @@ Figura&nbsp;1: La cocitación une documentos citados juntos; el acoplamiento une
 </figcaption>
 </figure>
 </div>
-<p>Boyack y Klavans (2010) compararon los tres enfoques basados en citas con más de dos millones de artículos biomédicos. Encontraron que el <strong>acoplamiento bibliográfico</strong> delimitaba los frentes de investigación con algo más de precisión que la cocitación, y que la citación directa era la menos precisa en ventanas cortas; los enfoques híbridos que combinan citas y texto mejoraban los resultados.</p>
+<p>Boyack y Klavans (2010) compararon los tres enfoques basados en citas con más de dos millones de artículos biomédicos. Encontraron que el <strong>acoplamiento bibliográfico</strong> delimitaba los frentes de investigación con algo más de <a href="92-glosario.html#gl-precision" class="glos" data-def="Proporción de aciertos entre lo marcado (precisión) y entre lo existente (exhaustividad).">precisión</a> que la cocitación, y que la citación directa era la menos precisa en ventanas cortas; los enfoques híbridos que combinan citas y texto mejoraban los resultados.</p>
 </section>
 <section id="medidas-básicas" class="level2">
 <h2 class="anchored" data-anchor-id="medidas-básicas">2. Medidas básicas</h2>
@@ -673,7 +667,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZCA8
 <h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
 <section id="ejercicio-9.1-coautoría" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ejercicio-9.1-coautoría">Ejercicio 9.1 · Coautoría</h3>
-<p>En la red de coautoría de la muestra, ¿cuántos <strong>coautores distintos</strong> tiene el autor más conectado (su grado)?</p>
+<p>En la <a href="92-glosario.html#gl-coautoria" class="glos" data-def="Red en la que personas, instituciones o países se unen al firmar juntos.">red de coautoría</a> de la muestra, ¿cuántos <strong>coautores distintos</strong> tiene el autor más conectado (su grado)?</p>
 <script type="exercise-setup-c9_grado-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiYzlfZ3JhZG8iLCJzZXR1cCI6dHJ1ZX0sImNvZGUiOiJkIDwtIGpzb25saXRlOjpmcm9tSlNPTihcImRhdG9zL21ldGFjaWVuY2lhX29wZW5hbGV4Lmpzb25cIiwgc2ltcGxpZnlWZWN0b3IgPSBGQUxTRSkkdHJhYmFqb3MifQ==
 </script>
@@ -1462,6 +1456,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

@@ -531,7 +531,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Distinguir reproducibilidad, replicabilidad y robustez.</li>
+<li>Distinguir <a href="92-glosario.html#gl-reproducibilidad" class="glos" data-def="Obtener los mismos resultados con los mismos datos y el mismo código.">reproducibilidad</a>, <a href="92-glosario.html#gl-replicabilidad" class="glos" data-def="Obtener resultados coherentes con datos nuevos recogidos con el mismo método.">replicabilidad</a> y robustez.</li>
 <li>Conocer los grandes proyectos de replicación y sus resultados.</li>
 <li>Calcular cuánto podemos fiarnos de un resultado significativo según la potencia, el umbral y la probabilidad previa.</li>
 </ul>
@@ -625,13 +625,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Un resultado puede no replicarse por azar en cualquiera de los dos estudios, por diferencias de población o de contexto, por errores, o porque el efecto original era un falso positivo o estaba inflado. Una sola replicación tampoco es concluyente: lo que importa es la evidencia acumulada.</p>
+<p>Un resultado puede no replicarse por azar en cualquiera de los dos estudios, por diferencias de población o de contexto, por errores, o porque el efecto original era un <a href="92-glosario.html#gl-falsopositivo" class="glos" data-def="Resultado significativo cuando no existe un efecto real (error de tipo I).">falso positivo</a> o estaba inflado. Una sola replicación tampoco es concluyente: lo que importa es la evidencia acumulada.</p>
 </div>
 </div>
 </section>
 <section id="por-qué-tantos-resultados-no-se-replican" class="level2">
 <h2 class="anchored" data-anchor-id="por-qué-tantos-resultados-no-se-replican">3. Por qué tantos resultados no se replican</h2>
-<p>Ioannidis (2005) mostró con un modelo sencillo que la probabilidad de que un resultado significativo sea verdadero, el <strong>valor predictivo positivo</strong> (VPP), depende de tres cosas:</p>
+<p>Ioannidis (2005) mostró con un modelo sencillo que la probabilidad de que un resultado significativo sea verdadero, el <a href="92-glosario.html#gl-vpp" class="glos" data-def="Probabilidad de que un resultado significativo corresponda a un efecto real."><strong>valor predictivo positivo</strong></a> (VPP), depende de tres cosas:</p>
 <ul>
 <li>La <strong>probabilidad previa</strong> de que la hipótesis sea cierta (expresada como razón <em>R</em> entre hipótesis verdaderas y falsas que se ponen a prueba).</li>
 <li>La <strong>potencia</strong> del estudio (1 − β): la probabilidad de detectar el efecto si existe.</li>
@@ -641,7 +641,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>VPP = (1 − β) · R / [ (1 − β) · R + α ]</p>
 </div>
 <p>Con hipótesis arriesgadas (R bajo) y estudios con poca potencia, la mayoría de los «hallazgos» significativos pueden ser falsos aunque nadie haga trampas. Si además hay <strong>sesgo</strong> (prácticas que convierten resultados nulos en significativos, capítulo 4), el VPP baja todavía más.</p>
-<p>Button et al.&nbsp;(2013) estimaron que la potencia mediana de los estudios de neurociencia rondaba el <strong>21 %</strong>. La poca potencia tiene un segundo efecto, la <strong>maldición del ganador</strong>: cuando un estudio pequeño sale significativo, lo hace casi siempre porque sobrestimó el efecto; por eso las replicaciones encuentran efectos más pequeños.</p>
+<p>Button et al.&nbsp;(2013) estimaron que la potencia mediana de los estudios de neurociencia rondaba el <strong>21 %</strong>. La poca potencia tiene un segundo efecto, la <a href="92-glosario.html#gl-ganador" class="glos" data-def="Tendencia de los estudios pequeños que resultan significativos a sobrestimar el tamaño del efecto."><strong>maldición del ganador</strong></a>: cuando un estudio pequeño sale significativo, lo hace casi siempre porque sobrestimó el efecto; por eso las replicaciones encuentran efectos más pequeños.</p>
 </section>
 <section id="lab-c3-vpp" class="level2">
 <h2 class="anchored" data-anchor-id="lab-c3-vpp">4. Laboratorio: ¿cuánto te fías de un resultado significativo?</h2>
@@ -895,7 +895,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImMz
 </tr>
 <tr class="odd">
 <td><a href="https://forrt.org/">FORRT</a></td>
-<td>Recursos docentes sobre reproducibilidad y ciencia abierta</td>
+<td>Recursos docentes sobre reproducibilidad y <a href="92-glosario.html#gl-cienciaabierta" class="glos" data-def="Conjunto de prácticas que hacen accesibles y transparentes las publicaciones, los datos, el código, los métodos y la evaluación.">ciencia abierta</a></td>
 </tr>
 </tbody>
 </table>
@@ -1579,6 +1579,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 

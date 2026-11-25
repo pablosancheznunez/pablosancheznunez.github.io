@@ -528,8 +528,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Conocer las principales fuentes de datos para investigar la investigación: bases bibliográficas, identificadores persistentes, registros y repositorios.</li>
-<li>Comparar su cobertura, sus licencias y sus sesgos, y elegir la adecuada para cada pregunta.</li>
+<li>Conocer las principales fuentes de datos para investigar la investigación: bases bibliográficas, <a href="92-glosario.html#gl-pid" class="glos" data-def="Código estable que identifica sin ambigüedad un objeto, persona u organización (DOI, ORCID, ROR).">identificadores persistentes</a>, registros y repositorios.</li>
+<li>Comparar su <a href="92-glosario.html#gl-cobertura" class="glos" data-def="Conjunto de documentos, campos, idiomas y años que recoge una fuente.">cobertura</a>, sus licencias y sus sesgos, y elegir la adecuada para cada pregunta.</li>
 <li>Leer y explorar datos reales de OpenAlex con R.</li>
 </ul>
 </div>
@@ -568,14 +568,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="un-mapa-de-las-fuentes" class="level2">
 <h2 class="anchored" data-anchor-id="un-mapa-de-las-fuentes">1. Un mapa de las fuentes</h2>
-<p>La investigación sobre la investigación se apoya en datos que producen otros: editoriales, agencias de registro de DOI, bases de datos, financiadores, repositorios. Ninguna fuente es neutral ni completa; conocer qué recoge cada una es el primer paso metodológico.</p>
+<p>La <a href="92-glosario.html#gl-ror" class="glos" data-def="Research on research (RoR). Estudio de qué hace que la investigación sea mejor y más útil, con atención especial a la financiación y la política científica.">investigación sobre la investigación</a> se apoya en datos que producen otros: editoriales, agencias de registro de DOI, bases de datos, financiadores, repositorios. Ninguna fuente es neutral ni completa; conocer qué recoge cada una es el primer paso metodológico.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Tipo</th>
@@ -588,7 +582,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><strong>Bases bibliográficas multidisciplinares</strong></td>
 <td>Web of Science, Scopus, Dimensions, OpenAlex</td>
-<td>Producción, citas, colaboración, temas</td>
+<td>Producción, <a href="92-glosario.html#gl-cita" class="glos" data-def="Referencia de un documento a otro. Mide uso o visibilidad, no calidad.">citas</a>, colaboración, temas</td>
 <td>Comerciales (las tres primeras); abierta CC0 (OpenAlex)</td>
 </tr>
 <tr class="even">
@@ -616,9 +610,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>Abiertos</td>
 </tr>
 <tr class="even">
-<td><strong>Ciencia abierta</strong></td>
+<td><a href="92-glosario.html#gl-cienciaabierta" class="glos" data-def="Conjunto de prácticas que hacen accesibles y transparentes las publicaciones, los datos, el código, los métodos y la evaluación."><strong>Ciencia abierta</strong></a></td>
 <td>OSF, registros de ensayos (ClinicalTrials.gov, EU CTR), Zenodo</td>
-<td>Preregistros, datos, materiales</td>
+<td><a href="92-glosario.html#gl-preregistro" class="glos" data-def="Plan del estudio registrado con fecha antes de analizar los datos.">Preregistros</a>, datos, materiales</td>
 <td>Abiertos</td>
 </tr>
 <tr class="odd">
@@ -666,7 +660,7 @@ Figura&nbsp;1: Cada fuente cubre una parte distinta del universo de publicacione
 <li>Usa <strong>identificadores persistentes</strong> para unir fuentes (DOI, ORCID, ROR) en lugar de títulos o nombres.</li>
 <li>Valida una muestra a mano (por ejemplo, 100 registros) para estimar errores de clasificación.</li>
 <li>Si es posible, <strong>repite el análisis con una segunda fuente</strong> como prueba de robustez.</li>
-<li>Prefiere fuentes con <strong>metadatos abiertos</strong>: permiten que otros reproduzcan el estudio (principios de la <em>Barcelona Declaration on Open Research Information</em>, 2024).</li>
+<li>Prefiere fuentes con <a href="92-glosario.html#gl-metabiertos" class="glos" data-def="Metadatos de la investigación que cualquiera puede reutilizar sin restricciones."><strong>metadatos abiertos</strong></a>: permiten que otros reproduzcan el estudio (principios de la <em>Barcelona Declaration on Open Research Information</em>, 2024).</li>
 </ol>
 </section>
 <section id="ejemplo-resuelto-explorar-una-muestra-de-openalex" class="level2">
@@ -789,7 +783,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM3
 <li>Por eso se justifica la fuente.</li>
 <li><em>Author name disambiguation</em>.</li>
 <li>Desde 2023.</li>
-<li>Reproducibilidad.</li>
+<li><a href="92-glosario.html#gl-reproducibilidad" class="glos" data-def="Obtener los mismos resultados con los mismos datos y el mismo código.">Reproducibilidad</a>.</li>
 <li>Prueba de robustez.</li>
 </ul>
 </div>
@@ -1473,6 +1467,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

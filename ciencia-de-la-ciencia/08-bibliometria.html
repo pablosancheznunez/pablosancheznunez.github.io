@@ -533,9 +533,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Calcular e interpretar indicadores de producción y de impacto con recuento completo y fraccionario.</li>
-<li>Normalizar las citas por campo, año y tipo de documento, y usar indicadores de percentiles.</li>
-<li>Aplicar los principios del Manifiesto de Leiden al uso responsable de los indicadores.</li>
+<li>Calcular e interpretar indicadores de producción y de impacto con <a href="92-glosario.html#gl-completo" class="glos" data-def="Cada unidad que participa en un trabajo suma una publicación completa.">recuento completo</a> y fraccionario.</li>
+<li>Normalizar las <a href="92-glosario.html#gl-cita" class="glos" data-def="Referencia de un documento a otro. Mide uso o visibilidad, no calidad.">citas</a> por campo, año y tipo de documento, y usar <a href="92-glosario.html#gl-percentil" class="glos" data-def="Proporción de trabajos de una unidad que están entre los más citados de su campo y año, como PP(top 10 %).">indicadores de percentiles</a>.</li>
+<li>Aplicar los principios del <a href="92-glosario.html#gl-leiden" class="glos" data-def="Diez principios para el uso responsable de los indicadores en la evaluación (Hicks et al., 2015).">Manifiesto de Leiden</a> al uso responsable de los indicadores.</li>
 </ul>
 </div>
 </div>
@@ -582,7 +582,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Cuando un artículo tiene autores de varias instituciones, ¿a quién se atribuye? Hay dos opciones principales:</p>
 <ul>
 <li><strong>Recuento completo</strong>: cada institución (o país, o persona) suma 1. La suma de todos los créditos supera el número de artículos.</li>
-<li><strong>Recuento fraccionario</strong>: el artículo se reparte; con 4 autores, cada uno recibe 1/4. La suma total coincide con el número de artículos.</li>
+<li><a href="92-glosario.html#gl-fraccionario" class="glos" data-def="El trabajo se reparte entre las unidades participantes, de modo que la suma es uno."><strong>Recuento fraccionario</strong></a>: el artículo se reparte; con 4 autores, cada uno recibe 1/4. La suma total coincide con el número de artículos.</li>
 </ul>
 <table class="caption-top table">
 <colgroup>
@@ -633,11 +633,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Las citas dependen del <strong>campo</strong> (en biomedicina se cita mucho más que en matemáticas), del <strong>año</strong> (los trabajos antiguos han tenido más tiempo) y del <strong>tipo de documento</strong> (las revisiones se citan más). Por eso los indicadores de impacto comparables se <strong>normalizan</strong>:</p>
 <ul>
 <li><strong>Citación normalizada de un trabajo</strong>: sus citas divididas entre la media de citas de los trabajos del mismo campo, año y tipo. Un valor de 1 equivale a la media mundial.</li>
-<li><strong>MNCS</strong> (<em>mean normalized citation score</em>): la media de las citaciones normalizadas de un conjunto de trabajos.</li>
+<li><a href="92-glosario.html#gl-mncs" class="glos" data-def="Media de las citaciones normalizadas por campo, año y tipo de documento de un conjunto de trabajos."><strong>MNCS</strong></a> (<em>mean normalized citation score</em>): la media de las citaciones normalizadas de un conjunto de trabajos.</li>
 <li><strong>Indicadores de percentiles</strong>: la proporción de trabajos de una unidad que están en el 10 % (o el 1 %) más citado de su campo y año, <strong>PP(top 10 %)</strong>. Son más robustos que las medias, porque una sola publicación muy citada no los dispara.</li>
-<li><strong>Ventana de citación</strong>: contar las citas en un periodo fijo (por ejemplo, tres años tras la publicación) para comparar cohortes.</li>
+<li><a href="92-glosario.html#gl-ventana" class="glos" data-def="Periodo fijo tras la publicación en el que se cuentan las citas."><strong>Ventana de citación</strong></a>: contar las citas en un periodo fijo (por ejemplo, tres años tras la publicación) para comparar cohortes.</li>
 </ul>
-<p>Waltman (2016) repasa además los problemas de los indicadores populares: el <strong>factor de impacto</strong> describe revistas, no artículos, y el <strong>índice h</strong> mezcla producción e impacto, depende de la edad académica y del campo, y no se puede normalizar bien.</p>
+<p>Waltman (2016) repasa además los problemas de los indicadores populares: el <a href="92-glosario.html#gl-fi" class="glos" data-def="Media de citas recibidas en un año por los artículos que una revista publicó en los dos años anteriores. Es un indicador de revista."><strong>factor de impacto</strong></a> describe revistas, no artículos, y el <a href="92-glosario.html#gl-indiceh" class="glos" data-def="Mayor número h tal que h trabajos tienen al menos h citas cada uno (Hirsch, 2005)."><strong>índice h</strong></a> mezcla producción e impacto, depende de la edad académica y del campo, y no se puede normalizar bien.</p>
 <div id="fig-c8-asim" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Histograma de citas muy sesgado a la derecha, con la mayoría de trabajos con pocas citas y una cola larga. Líneas verticales marcan la mediana, la media y el umbral del 10 % más citado.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-c8-asim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1524,6 +1524,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

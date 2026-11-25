@@ -528,8 +528,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Preparar textos científicos para su análisis (tokenización, palabras vacías, ponderación tf-idf).</li>
-<li>Conocer los modelos de temas y los enfoques basados en <em>embeddings</em> y modelos de lenguaje.</li>
+<li>Preparar textos científicos para su análisis (<a href="92-glosario.html#gl-token" class="glos" data-def="División de un texto en unidades de análisis.">tokenización</a>, palabras vacías, ponderación <a href="92-glosario.html#gl-tfidf" class="glos" data-def="Ponderación que valora los términos frecuentes en un documento pero raros en el corpus.">tf-idf</a>).</li>
+<li>Conocer los <a href="92-glosario.html#gl-temas" class="glos" data-def="Modelo que descubre grupos de palabras que coaparecen (LDA, STM).">modelos de temas</a> y los enfoques basados en <a href="92-glosario.html#gl-embedding" class="glos" data-def="Representación de un texto como vector numérico que captura su significado."><em>embeddings</em></a> y modelos de lenguaje.</li>
 <li>Validar cualquier clasificación automática frente a una codificación de referencia.</li>
 </ul>
 </div>
@@ -568,7 +568,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="el-texto-como-dato" class="level2">
 <h2 class="anchored" data-anchor-id="el-texto-como-dato">1. El texto como dato</h2>
-<p>Títulos, resúmenes, textos completos, informes de revisión, convocatorias o políticas científicas son fuentes masivas para la metaciencia: permiten estudiar la evolución de los temas, la novedad, el lenguaje promocional («sin precedentes», «novedoso»), la descripción de métodos o la presencia de declaraciones de datos abiertos.</p>
+<p>Títulos, resúmenes, textos completos, informes de revisión, convocatorias o políticas científicas son fuentes masivas para la <a href="92-glosario.html#gl-metaciencia" class="glos" data-def="Investigación sobre la fiabilidad de los métodos y resultados científicos y sobre las reformas que la mejoran. También, metainvestigación.">metaciencia</a>: permiten estudiar la evolución de los temas, la novedad, el lenguaje promocional («sin precedentes», «novedoso»), la descripción de métodos o la presencia de declaraciones de datos abiertos.</p>
 <p>Grimmer y Stewart (2013) proponen cuatro principios que siguen vigentes:</p>
 <ol type="1">
 <li><strong>Todos los modelos cuantitativos del lenguaje son erróneos, pero algunos son útiles</strong>: simplifican el texto (por ejemplo, ignorando el orden de las palabras).</li>
@@ -625,9 +625,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="métodos">3. Métodos</h2>
 <ul>
 <li><strong>Diccionarios</strong>: listas de términos definidas por el investigador (por ejemplo, términos de <em>hype</em>). Transparentes, pero hay que validarlos.</li>
-<li><strong>Aprendizaje supervisado</strong>: se codifica a mano una muestra y un modelo aprende a clasificar el resto. Se evalúa con <strong>precisión</strong> (de lo que el modelo marca, cuánto es correcto) y <strong>exhaustividad</strong> (<em>recall</em>: de lo que hay, cuánto encuentra).</li>
+<li><strong>Aprendizaje supervisado</strong>: se codifica a mano una muestra y un modelo aprende a clasificar el resto. Se evalúa con <a href="92-glosario.html#gl-precision" class="glos" data-def="Proporción de aciertos entre lo marcado (precisión) y entre lo existente (exhaustividad)."><strong>precisión</strong></a> (de lo que el modelo marca, cuánto es correcto) y <strong>exhaustividad</strong> (<em>recall</em>: de lo que hay, cuánto encuentra).</li>
 <li><strong>Modelos de temas</strong>: LDA y STM (que permite incorporar covariables como el año o el campo) descubren grupos de palabras que coaparecen. Hay que elegir el número de temas, etiquetarlos leyendo documentos y comprobar su estabilidad.</li>
-<li><strong><em>Embeddings</em></strong> y modelos de lenguaje: representan textos como vectores que capturan significado; permiten agrupar por similitud semántica (BERTopic) o clasificar con modelos de lenguaje mediante instrucciones. Son potentes, pero exigen <strong>validación</strong> con una muestra codificada a mano, documentar el modelo y su versión, y tener en cuenta su coste y su reproducibilidad (los modelos comerciales cambian).</li>
+<li><strong><em>Embeddings</em></strong> y modelos de lenguaje: representan textos como vectores que capturan significado; permiten agrupar por similitud semántica (BERTopic) o clasificar con modelos de lenguaje mediante instrucciones. Son potentes, pero exigen <a href="92-glosario.html#gl-validacion" class="glos" data-def="Contraste de una medida automática con una codificación humana de referencia."><strong>validación</strong></a> con una muestra codificada a mano, documentar el modelo y su versión, y tener en cuenta su coste y su <a href="92-glosario.html#gl-reproducibilidad" class="glos" data-def="Obtener los mismos resultados con los mismos datos y el mismo código.">reproducibilidad</a> (los modelos comerciales cambian).</li>
 </ul>
 <div id="fig-c10-flujo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Secuencia de cinco pasos: pregunta, corpus, preprocesamiento, modelo y validación. Debajo de cada paso, una banda indica lectura humana, y una flecha de retorno desde la validación al modelo indica que se ajusta hasta que funciona.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1438,6 +1438,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

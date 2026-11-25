@@ -532,8 +532,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <ul>
 <li>Elegir el diseño adecuado para preguntas causales sobre el sistema científico: experimentos, experimentos naturales y cuasiexperimentos.</li>
-<li>Conocer los diseños propios de la metaciencia: replicaciones a gran escala, estudios con muchos analistas y análisis multiverso.</li>
-<li>Valorar el papel de las encuestas, los métodos cualitativos y los métodos mixtos.</li>
+<li>Conocer los diseños propios de la <a href="92-glosario.html#gl-metaciencia" class="glos" data-def="Investigación sobre la fiabilidad de los métodos y resultados científicos y sobre las reformas que la mejoran. También, metainvestigación.">metaciencia</a>: replicaciones a gran escala, estudios con <a href="92-glosario.html#gl-analistas" class="glos" data-def="Diseño en el que varios equipos analizan los mismos datos para responder la misma pregunta.">muchos analistas</a> y <a href="92-glosario.html#gl-multiverso" class="glos" data-def="Ejecución de todas las combinaciones razonables de decisiones analíticas.">análisis multiverso</a>.</li>
+<li>Valorar el papel de las encuestas, los métodos cualitativos y los <a href="92-glosario.html#gl-mixtos" class="glos" data-def="Combinación de métodos cuantitativos y cualitativos en un mismo estudio.">métodos mixtos</a>.</li>
 </ul>
 </div>
 </div>
@@ -579,11 +579,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="preguntas-causales-sobre-la-ciencia">1. Preguntas causales sobre la ciencia</h2>
 <p>Muchas preguntas de la metaciencia son causales: ¿la revisión doble ciega reduce los sesgos?, ¿las ayudas aumentan la productividad?, ¿los mandatos de datos abiertos aumentan la reutilización? Los datos bibliométricos son observacionales y están llenos de factores de confusión (los mejores grupos obtienen más fondos <strong>y</strong> publican más), así que hacen falta diseños que aproximen la comparación contrafactual.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Diseño</th>
@@ -598,7 +593,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>Asignar al azar manuscritos a revisión simple o doble ciega</td>
 </tr>
 <tr class="even">
-<td><strong>Experimento de campo</strong></td>
+<td><a href="92-glosario.html#gl-campo" class="glos" data-def="Experimento aleatorizado en un entorno real."><strong>Experimento de campo</strong></a></td>
 <td>Aleatorización en un entorno real</td>
 <td>Enviar correos idénticos con nombres distintos a investigadores para medir sesgos en la respuesta</td>
 </tr>
@@ -608,12 +603,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>Una lotería entre candidatos de igual puntuación en una convocatoria</td>
 </tr>
 <tr class="even">
-<td><strong>Diferencias en diferencias</strong></td>
+<td><a href="92-glosario.html#gl-did" class="glos" data-def="Comparación del cambio antes y después entre un grupo afectado y otro no afectado."><strong>Diferencias en diferencias</strong></a></td>
 <td>Comparar el cambio antes y después en un grupo afectado frente a uno no afectado</td>
 <td>Efecto de un mandato de acceso abierto de un financiador frente a otro que no lo aplica</td>
 </tr>
 <tr class="odd">
-<td><strong>Regresión discontinua</strong></td>
+<td><a href="92-glosario.html#gl-rd" class="glos" data-def="Comparación de casos justo a ambos lados de un umbral de asignación."><strong>Regresión discontinua</strong></a></td>
 <td>Comparar justo por encima y por debajo de un umbral</td>
 <td>Proyectos que quedan justo por encima o por debajo de la nota de corte de financiación</td>
 </tr>
@@ -629,15 +624,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="diseños-propios-de-la-metaciencia" class="level2">
 <h2 class="anchored" data-anchor-id="diseños-propios-de-la-metaciencia">2. Diseños propios de la metaciencia</h2>
 <ul>
-<li><strong>Replicaciones a gran escala</strong>: muchos equipos repiten estudios publicados con protocolos preregistrados (proyectos de la Open Science Collaboration, Many Labs, el proyecto de reproducibilidad en biología del cáncer). Miden la replicabilidad de un campo, no la de un estudio aislado.</li>
+<li><strong>Replicaciones a gran escala</strong>: muchos equipos repiten estudios publicados con protocolos preregistrados (proyectos de la Open Science Collaboration, Many Labs, el proyecto de <a href="92-glosario.html#gl-reproducibilidad" class="glos" data-def="Obtener los mismos resultados con los mismos datos y el mismo código.">reproducibilidad</a> en biología del cáncer). Miden la <a href="92-glosario.html#gl-replicabilidad" class="glos" data-def="Obtener resultados coherentes con datos nuevos recogidos con el mismo método.">replicabilidad</a> de un campo, no la de un estudio aislado.</li>
 <li><strong>Muchos analistas</strong>: Silberzahn et al.&nbsp;(2018) dieron los mismos datos (¿reciben más tarjetas rojas los futbolistas de piel más oscura?) a 29 equipos. Los efectos estimados variaron mucho (de nulos a claramente positivos) por decisiones analíticas razonables, sin que la experiencia de los equipos explicara las diferencias. La conclusión: <strong>la incertidumbre analítica</strong> es una fuente de variación tan real como la muestral.</li>
 <li><strong>Análisis multiverso</strong> (Steegen et al., 2016): en lugar de un único análisis, se ejecutan todas las combinaciones razonables de decisiones (exclusiones, codificaciones, covariables) y se informa de la distribución de resultados. Su versión gráfica es la <strong>curva de especificaciones</strong>.</li>
-<li><strong>Estudios de auditoría de la literatura</strong>: codificar sistemáticamente una muestra de artículos (por ejemplo, disponibilidad de datos, preregistro, potencia) para estimar la prevalencia de prácticas.</li>
+<li><strong>Estudios de auditoría de la literatura</strong>: codificar sistemáticamente una muestra de artículos (por ejemplo, disponibilidad de datos, <a href="92-glosario.html#gl-preregistro" class="glos" data-def="Plan del estudio registrado con fecha antes de analizar los datos.">preregistro</a>, potencia) para estimar la prevalencia de prácticas.</li>
 </ul>
 </section>
 <section id="encuestas-métodos-cualitativos-y-mixtos" class="level2">
 <h2 class="anchored" data-anchor-id="encuestas-métodos-cualitativos-y-mixtos">3. Encuestas, métodos cualitativos y mixtos</h2>
-<p>No todo se mide con bases de datos. Las <strong>encuestas</strong> a investigadores estiman actitudes y prácticas (por ejemplo, prevalencia autodeclarada de prácticas cuestionables), con sus problemas de deseabilidad social y de respuesta. Los <strong>métodos cualitativos</strong> (entrevistas, grupos de discusión, etnografía de laboratorio, análisis documental de políticas y convocatorias) explican <strong>cómo</strong> y <strong>por qué</strong> funcionan las normas y los incentivos. Los <strong>métodos mixtos</strong> combinan ambos: por ejemplo, un análisis bibliométrico de un cambio de política seguido de análisis documental de las convocatorias para interpretar el mecanismo.</p>
+<p>No todo se mide con bases de datos. Las <strong>encuestas</strong> a investigadores estiman actitudes y prácticas (por ejemplo, prevalencia autodeclarada de <a href="92-glosario.html#gl-qrp" class="glos" data-def="Decisiones que no son fraude pero aumentan la probabilidad de resultados falsos, como informar solo de lo significativo.">prácticas cuestionables</a>), con sus problemas de deseabilidad social y de respuesta. Los <strong>métodos cualitativos</strong> (entrevistas, grupos de discusión, etnografía de laboratorio, análisis documental de políticas y convocatorias) explican <strong>cómo</strong> y <strong>por qué</strong> funcionan las normas y los incentivos. Los <strong>métodos mixtos</strong> combinan ambos: por ejemplo, un análisis bibliométrico de un cambio de política seguido de análisis documental de las convocatorias para interpretar el mecanismo.</p>
 <div id="fig-c12-capas" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Tres bloques apilados. Abajo, datos bibliométricos y registros: qué ha cambiado. En medio, diseños causales: si la reforma lo ha causado. Arriba, métodos cualitativos y documentales: cómo y por qué. Flechas laterales indican que las tres capas se combinan en métodos mixtos.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-c12-capas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -655,7 +650,7 @@ Figura&nbsp;1: Tres capas de evidencia para estudiar una reforma científica: da
 <div class="laboratorio-etiqueta">
 <p>Laboratorio · se ejecuta en tu navegador</p>
 </div>
-<p>Una investigación estudia si los artículos con datos abiertos reciben más citas. Hay cuatro decisiones razonables con dos opciones cada una: 16 análisis posibles. Elige tu especificación favorita y compárala con el multiverso entero.</p>
+<p>Una investigación estudia si los artículos con datos abiertos reciben más <a href="92-glosario.html#gl-cita" class="glos" data-def="Referencia de un documento a otro. Mide uso o visibilidad, no calidad.">citas</a>. Hay cuatro decisiones razonables con dos opciones cada una: 16 análisis posibles. Elige tu especificación favorita y compárala con el multiverso entero.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="73" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 72;"><span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>seleccion <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
 <span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>viewof m1 <span class="op">=</span> <span class="fu">seleccion</span>(<span class="st">"Ventana de citación"</span><span class="op">,</span> [<span class="st">"3 años"</span><span class="op">,</span> <span class="st">"5 años"</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"3 años"</span>})</span>
@@ -1514,6 +1509,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
