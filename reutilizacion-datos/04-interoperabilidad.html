@@ -74,17 +74,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,10 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -458,6 +465,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#paso-6.-un-vocabulario-controlado-en-skos-apartado-6" id="toc-paso-6.-un-vocabulario-controlado-en-skos-apartado-6" class="nav-link" data-scroll-target="#paso-6.-un-vocabulario-controlado-en-skos-apartado-6">Paso 6. Un vocabulario controlado en SKOS (apartado 6)</a></li>
   <li><a href="#ejercicio-4.5" id="toc-ejercicio-4.5" class="nav-link" data-scroll-target="#ejercicio-4.5">Ejercicio 4.5</a></li>
   </ul></li>
+  <li><a href="#lab-t4-formatos" id="toc-lab-t4-formatos" class="nav-link" data-scroll-target="#lab-t4-formatos">Laboratorio: del CSV al JSON y al RDF</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t4" id="toc-reto-t4" class="nav-link" data-scroll-target="#reto-t4">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#para-practicar-fuera-del-libro" id="toc-para-practicar-fuera-del-libro" class="nav-link" data-scroll-target="#para-practicar-fuera-del-libro">Para practicar fuera del libro</a></li>
@@ -937,7 +946,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZ3Jh
 <div id="fig-grafo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Diagrama en tres columnas. Actividades a la derecha: club de lectura, taller de datos abiertos, cuentacuentos y alfabetización digital. Bibliotecas en el centro: centro, sur, norte y parque. Municipios a la izquierda: Getafe, Leganés y Alcorcón. Flechas de cada actividad a su biblioteca y de cada biblioteca a su municipio.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-grafo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/tema4_grafo.svg" class="img-fluid figure-img" alt="Diagrama en tres columnas. Actividades a la derecha: club de lectura, taller de datos abiertos, cuentacuentos y alfabetización digital. Bibliotecas en el centro: centro, sur, norte y parque. Municipios a la izquierda: Getafe, Leganés y Alcorcón. Flechas de cada actividad a su biblioteca y de cada biblioteca a su municipio.">
+<a href="figuras/tema4_grafo.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: El grafo de la práctica: las actividades apuntan a la biblioteca donde se celebran (schema:location) y las bibliotecas, al municipio de Wikidata donde están (schema:containedInPlace). Seguir las flechas es lo que hace una consulta SPARQL."><img src="figuras/tema4_grafo.svg" class="img-fluid figure-img" alt="Diagrama en tres columnas. Actividades a la derecha: club de lectura, taller de datos abiertos, cuentacuentos y alfabetización digital. Bibliotecas en el centro: centro, sur, norte y parque. Municipios a la izquierda: Getafe, Leganés y Alcorcón. Flechas de cada actividad a su biblioteca y de cada biblioteca a su municipio."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: El grafo de la práctica: las actividades apuntan a la biblioteca donde se celebran (<code>schema:location</code>) y las bibliotecas, al municipio de Wikidata donde están (<code>schema:containedInPlace</code>). Seguir las flechas es lo que hace una consulta SPARQL.
@@ -1063,7 +1072,73 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfc2tvcyJ9LCJjb2Rl
 <script type="exercise-check-t4_skos-contents">
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ0X3Nrb3MifSwiY29kZSI6ImlmIChzZXRlcXVhbCgucmVzdWx0LCBjKFwiQ2x1YiBkZSBsZWN0dXJhXCIsIFwiQ3VlbnRhY3VlbnRvc1wiKSkpIHtcbiAgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IFwiQ29ycmVjdG86IMKrQ2x1YiBkZSBsZWN0dXJhwrsgeSDCq0N1ZW50YWN1ZW50b3PCuy4gQXPDrSBmdW5jaW9uYSBsYSBuYXZlZ2FjacOzbiBqZXLDoXJxdWljYSBkZSB1biB0ZXNhdXJvIHB1YmxpY2FkbyBlbiBTS09TLlwiKVxufSBlbHNlIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkZpbHRyYSBwcmltZXJvIHBvciBza29zOmJyb2FkZXIgY29uIHZhbG9yIGV4OmZvbWVudG9fbGVjdHVyYSB5IHVzYSBlc2UgcmVzdWx0YWRvIGNvbiAlaW4lLlwiKVxufSJ9
 </script>
+<div id="fig-v14-dcat" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Tres recuadros unidos por flechas: dcat:Catalog (catálogo, datos.gob.es) se relaciona por dcat:dataset con dcat:Dataset (conjunto de datos de préstamos de bibliotecas), que se relaciona por dcat:distribution con dcat:Distribution (fichero CSV, API JSON). Debajo, propiedades del conjunto: dct:title, dct:description, dct:publisher, dct:license, dcat:theme, dct:modified; y de la distribución: dcat:accessURL, dcat:downloadURL, dct:format, dcat:mediaType.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-v14-dcat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/v14_dcat.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: El modelo DCAT: un catálogo contiene conjuntos de datos, y cada conjunto, una o varias distribuciones."><img src="figuras/v14_dcat.svg" class="img-fluid figure-img" alt="Tres recuadros unidos por flechas: dcat:Catalog (catálogo, datos.gob.es) se relaciona por dcat:dataset con dcat:Dataset (conjunto de datos de préstamos de bibliotecas), que se relaciona por dcat:distribution con dcat:Distribution (fichero CSV, API JSON). Debajo, propiedades del conjunto: dct:title, dct:description, dct:publisher, dct:license, dcat:theme, dct:modified; y de la distribución: dcat:accessURL, dcat:downloadURL, dct:format, dcat:mediaType."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-v14-dcat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: El modelo DCAT: un catálogo contiene conjuntos de datos, y cada conjunto, una o varias distribuciones.
+</figcaption>
+</figure>
+</div>
 </section>
+</section>
+<section id="lab-t4-formatos" class="level2">
+<h2 class="anchored" data-anchor-id="lab-t4-formatos">Laboratorio: del CSV al JSON y al RDF</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · se ejecuta en tu navegador</p>
+</div>
+<p>Los mismos datos en tres formatos. Edita el CSV y mira cómo cambian el <strong>JSON</strong> (para las API) y el <strong>RDF en Turtle</strong> (para los datos enlazados, con un URI para cada biblioteca y el municipio enlazado con Wikidata).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb14" data-startfrom="659" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 658;"><span id="cb14-659"><a href="#cb14-659" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
+<span id="cb14-660"><a href="#cb14-660" aria-hidden="true" tabindex="-1"></a>viewof csv_f <span class="op">=</span> <span class="fu">area</span>(<span class="st">"CSV (separado por comas)"</span><span class="op">,</span> {<span class="dt">rows</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="vs">`id,biblioteca,municipio,wikidata_municipio,prestamos</span></span>
+<span id="cb14-661"><a href="#cb14-661" aria-hidden="true" tabindex="-1"></a><span class="vs">eugenio-trias,Biblioteca Eugenio Trías,Madrid,Q2807,12450</span></span>
+<span id="cb14-662"><a href="#cb14-662" aria-hidden="true" tabindex="-1"></a><span class="vs">ricardo-vega,Biblioteca Ricardo de la Vega,Getafe,Q8802,3210`</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb15" data-startfrom="666" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 665;"><span id="cb15-666"><a href="#cb15-666" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb15-667"><a href="#cb15-667" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> l <span class="op">=</span> csv_f<span class="op">.</span><span class="fu">trim</span>()<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\r?\n</span><span class="ss">/</span>)<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="fu">split</span>(<span class="st">","</span>))<span class="op">;</span></span>
+<span id="cb15-668"><a href="#cb15-668" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> cab <span class="op">=</span> l[<span class="dv">0</span>]<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="fu">trim</span>())<span class="op">,</span> filas <span class="op">=</span> l<span class="op">.</span><span class="fu">slice</span>(<span class="dv">1</span>)<span class="op">.</span><span class="fu">filter</span>(f <span class="kw">=&gt;</span> f<span class="op">.</span><span class="at">length</span> <span class="op">===</span> cab<span class="op">.</span><span class="at">length</span>)<span class="op">;</span></span>
+<span id="cb15-669"><a href="#cb15-669" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> objs <span class="op">=</span> filas<span class="op">.</span><span class="fu">map</span>(f <span class="kw">=&gt;</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">fromEntries</span>(cab<span class="op">.</span><span class="fu">map</span>((c<span class="op">,</span> i) <span class="kw">=&gt;</span> [c<span class="op">,</span> <span class="ss">/</span><span class="sc">^\d+$</span><span class="ss">/</span><span class="op">.</span><span class="fu">test</span>(f[i]<span class="op">.</span><span class="fu">trim</span>()) <span class="op">?</span> <span class="op">+</span>f[i] <span class="op">:</span> f[i]<span class="op">.</span><span class="fu">trim</span>()])))<span class="op">;</span></span>
+<span id="cb15-670"><a href="#cb15-670" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> json <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">stringify</span>(objs<span class="op">,</span> <span class="kw">null</span><span class="op">,</span> <span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb15-671"><a href="#cb15-671" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> esc <span class="op">=</span> s <span class="kw">=&gt;</span> <span class="bu">String</span>(s)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">\\</span><span class="ss">/g</span><span class="op">,</span> <span class="st">"</span><span class="sc">\\\\</span><span class="st">"</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/"/g</span><span class="op">,</span> <span class="st">'</span><span class="sc">\\</span><span class="st">"'</span>)<span class="op">;</span></span>
+<span id="cb15-672"><a href="#cb15-672" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> ttl <span class="op">=</span> [<span class="st">"@prefix ex: &lt;https://example.org/biblioteca/&gt; ."</span><span class="op">,</span> <span class="st">"@prefix schema: &lt;https://schema.org/&gt; ."</span><span class="op">,</span> <span class="st">"@prefix wd: &lt;http://www.wikidata.org/entity/&gt; ."</span><span class="op">,</span> <span class="st">""</span>]</span>
+<span id="cb15-673"><a href="#cb15-673" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">concat</span>(objs<span class="op">.</span><span class="fu">map</span>(o <span class="kw">=&gt;</span> <span class="vs">`ex:</span><span class="sc">${</span>o<span class="op">.</span><span class="at">id</span> <span class="op">??</span> <span class="st">"sin-id"</span><span class="sc">}</span><span class="vs"> a schema:Library ;</span><span class="sc">\n</span><span class="vs">    schema:name "</span><span class="sc">${</span><span class="fu">esc</span>(o<span class="op">.</span><span class="at">biblioteca</span> <span class="op">??</span> <span class="st">""</span>)<span class="sc">}</span><span class="vs">"@es ;</span><span class="sc">\n</span><span class="vs">    schema:location </span><span class="sc">${</span>o<span class="op">.</span><span class="at">wikidata_municipio</span> <span class="op">?</span> <span class="st">"wd:"</span> <span class="op">+</span> o<span class="op">.</span><span class="at">wikidata_municipio</span> <span class="op">:</span> <span class="vs">`"</span><span class="sc">${</span><span class="fu">esc</span>(o<span class="op">.</span><span class="at">municipio</span> <span class="op">??</span> <span class="st">""</span>)<span class="sc">}</span><span class="vs">"`</span><span class="sc">}</span><span class="vs"> ;</span><span class="sc">\n</span><span class="vs">    ex:prestamos </span><span class="sc">${</span><span class="bu">Number</span><span class="op">.</span><span class="fu">isFinite</span>(o<span class="op">.</span><span class="at">prestamos</span>) <span class="op">?</span> o<span class="op">.</span><span class="at">prestamos</span> <span class="op">:</span> <span class="vs">`"</span><span class="sc">${</span><span class="fu">esc</span>(o<span class="op">.</span><span class="at">prestamos</span> <span class="op">??</span> <span class="st">""</span>)<span class="sc">}</span><span class="vs">"`</span><span class="sc">}</span><span class="vs"> .`</span>))<span class="op">.</span><span class="fu">join</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)<span class="op">;</span></span>
+<span id="cb15-674"><a href="#cb15-674" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pre <span class="op">=</span> (t<span class="op">,</span> s) <span class="kw">=&gt;</span> <span class="vs">`&lt;div style="flex:1;min-width:16rem"&gt;&lt;p class="small fw-semibold mb-1"&gt;</span><span class="sc">${</span>t<span class="sc">}</span><span class="vs">&lt;/p&gt;&lt;pre style="font-size:.8rem;max-height:20rem;overflow:auto" tabindex="0"&gt;&lt;code&gt;</span><span class="sc">${</span>s<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/&amp;/g</span><span class="op">,</span> <span class="st">"&amp;amp;"</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/&lt;/g</span><span class="op">,</span> <span class="st">"&amp;lt;"</span>)<span class="sc">}</span><span class="vs">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb15-675"><a href="#cb15-675" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status" style="display:flex;gap:1rem;flex-wrap:wrap"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb15-676"><a href="#cb15-676" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="fu">pre</span>(<span class="st">"JSON"</span><span class="op">,</span> json) <span class="op">+</span> <span class="fu">pre</span>(<span class="st">"RDF (Turtle)"</span><span class="op">,</span> ttl)<span class="op">;</span></span>
+<span id="cb15-677"><a href="#cb15-677" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d<span class="op">;</span></span>
+<span id="cb15-678"><a href="#cb15-678" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<p>En el RDF, <code>wd:Q2807</code> no es un texto: es el identificador de Madrid en Wikidata. Esa es la diferencia entre la tercera estrella (un CSV) y la quinta (datos enlazados). Los URI <code>example.org</code> son de ejemplo.</p>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-clasificar" id="ia-t4-formato"><script type="application/json" class="ia-datos">{"categorias":["CSV","JSON","XML","RDF (Turtle)"],"enunciado":"","explicacion":"","items":[{"categoria":"CSV","explicacion":"","texto":"<code>municipio;prestamos<\/code> seguido de\n<code>Madrid;12450<\/code>"},{"categoria":"JSON","explicacion":"","texto":"<code>{\"municipio\": \"Madrid\", \"prestamos\": 12450}<\/code>"},{"categoria":"XML","explicacion":"","texto":"<code>&lt;biblioteca&gt;&lt;municipio&gt;Madrid&lt;/municipio&gt;&lt;/biblioteca&gt;<\/code>"},{"categoria":"RDF (Turtle)","explicacion":"","texto":"<code>ex:eugenio-trias schema:location wd:Q2807 .<\/code>"}],"tipo":"clasificar","titulo":"¿Qué formato es?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t4-dcat"><script type="application/json" class="ia-datos">{"categorias":["dct:title","dct:publisher","dct:license","dct:modified","dcat:downloadURL"],"enunciado":"","explicacion":"","items":[{"categoria":"dct:title","explicacion":"","texto":"«Préstamos en las bibliotecas públicas municipales»"},{"categoria":"dct:publisher","explicacion":"","texto":"«Ayuntamiento de Madrid»"},{"categoria":"dct:license","explicacion":"","texto":"«https://creativecommons.org/licenses/by/4.0/»"},{"categoria":"dct:modified","explicacion":"","texto":"«2024-02-15» como fecha de la última actualización"},{"categoria":"dcat:downloadURL","explicacion":"","texto":"Enlace directo al fichero CSV"}],"tipo":"clasificar","titulo":"¿A qué propiedad DCAT-AP corresponde?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t4-interop"><script type="application/json" class="ia-datos">{"categorias":["Técnica","Semántica","Organizativa"],"enunciado":"","explicacion":"","items":[{"categoria":"Técnica","explicacion":"","texto":"Usar HTTPS y codificación UTF-8"},{"categoria":"Semántica","explicacion":"","texto":"Usar los códigos de municipio del INE en todos los conjuntos"},{"categoria":"Organizativa","explicacion":"","texto":"Un convenio entre ayuntamientos para publicar con la misma\nperiodicidad"},{"categoria":"Semántica","explicacion":"","texto":"Describir los datos con el vocabulario DCAT-AP"}],"tipo":"clasificar","titulo":"¿Qué nivel de interoperabilidad?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-t4" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t4">Reto evaluable</h2>
@@ -1276,7 +1351,7 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
    preguntas de autoevaluación acertadas en cada capítulo. Se guarda solo en
    el almacenamiento local de este navegador; no se envía a ningún servidor. */
 (function () {
-  var CLAVE = 'reutilizacion-datos-progreso-v1';
+  var CLAVE = 'progreso-' + (location.pathname.split('/').filter(Boolean)[0] || 'libro') + '-v1';
   function leer() { try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch (e) { return {}; } }
   function guardar(d) { try { localStorage.setItem(CLAVE, JSON.stringify(d)); } catch (e) {} }
   var pagina = location.pathname.split('/').pop() || 'index.html';
@@ -1298,23 +1373,26 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -1323,10 +1401,12 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -1334,13 +1414,13 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -1353,6 +1433,9 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -1379,10 +1462,14 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -1411,7 +1498,7 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImFyZWEgPSB3aW5kb3cuTGFiLmFyZWFcbnZpZXdvZiBjc3ZfZiA9IGFyZWEoXCJDU1YgKHNlcGFyYWRvIHBvciBjb21hcylcIiwge3Jvd3M6IDQsIHZhbHVlOiBgaWQsYmlibGlvdGVjYSxtdW5pY2lwaW8sd2lraWRhdGFfbXVuaWNpcGlvLHByZXN0YW1vc1xuZXVnZW5pby10cmlhcyxCaWJsaW90ZWNhIEV1Z2VuaW8gVHLDrWFzLE1hZHJpZCxRMjgwNywxMjQ1MFxucmljYXJkby12ZWdhLEJpYmxpb3RlY2EgUmljYXJkbyBkZSBsYSBWZWdhLEdldGFmZSxRODgwMiwzMjEwYH0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIGNvbnN0IGwgPSBjc3ZfZi50cmltKCkuc3BsaXQoL1xccj9cXG4vKS5tYXAoeCA9PiB4LnNwbGl0KFwiLFwiKSk7XG4gIGNvbnN0IGNhYiA9IGxbMF0ubWFwKHggPT4geC50cmltKCkpLCBmaWxhcyA9IGwuc2xpY2UoMSkuZmlsdGVyKGYgPT4gZi5sZW5ndGggPT09IGNhYi5sZW5ndGgpO1xuICBjb25zdCBvYmpzID0gZmlsYXMubWFwKGYgPT4gT2JqZWN0LmZyb21FbnRyaWVzKGNhYi5tYXAoKGMsIGkpID0+IFtjLCAvXlxcZCskLy50ZXN0KGZbaV0udHJpbSgpKSA/ICtmW2ldIDogZltpXS50cmltKCldKSkpO1xuICBjb25zdCBqc29uID0gSlNPTi5zdHJpbmdpZnkob2JqcywgbnVsbCwgMik7XG4gIGNvbnN0IGVzYyA9IHMgPT4gU3RyaW5nKHMpLnJlcGxhY2UoL1xcXFwvZywgXCJcXFxcXFxcXFwiKS5yZXBsYWNlKC9cIi9nLCAnXFxcXFwiJyk7XG4gIGNvbnN0IHR0bCA9IFtcIkBwcmVmaXggZXg6IDxodHRwczovL2V4YW1wbGUub3JnL2JpYmxpb3RlY2EvPiAuXCIsIFwiQHByZWZpeCBzY2hlbWE6IDxodHRwczovL3NjaGVtYS5vcmcvPiAuXCIsIFwiQHByZWZpeCB3ZDogPGh0dHA6Ly93d3cud2lraWRhdGEub3JnL2VudGl0eS8+IC5cIiwgXCJcIl1cbiAgICAuY29uY2F0KG9ianMubWFwKG8gPT4gYGV4OiR7by5pZCA/PyBcInNpbi1pZFwifSBhIHNjaGVtYTpMaWJyYXJ5IDtcXG4gICAgc2NoZW1hOm5hbWUgXCIke2VzYyhvLmJpYmxpb3RlY2EgPz8gXCJcIil9XCJAZXMgO1xcbiAgICBzY2hlbWE6bG9jYXRpb24gJHtvLndpa2lkYXRhX211bmljaXBpbyA/IFwid2Q6XCIgKyBvLndpa2lkYXRhX211bmljaXBpbyA6IGBcIiR7ZXNjKG8ubXVuaWNpcGlvID8/IFwiXCIpfVwiYH0gO1xcbiAgICBleDpwcmVzdGFtb3MgJHtOdW1iZXIuaXNGaW5pdGUoby5wcmVzdGFtb3MpID8gby5wcmVzdGFtb3MgOiBgXCIke2VzYyhvLnByZXN0YW1vcyA/PyBcIlwiKX1cImB9IC5gKSkuam9pbihcIlxcblxcblwiKTtcbiAgY29uc3QgcHJlID0gKHQsIHMpID0+IGA8ZGl2IHN0eWxlPVwiZmxleDoxO21pbi13aWR0aDoxNnJlbVwiPjxwIGNsYXNzPVwic21hbGwgZnctc2VtaWJvbGQgbWItMVwiPiR7dH08L3A+PHByZSBzdHlsZT1cImZvbnQtc2l6ZTouOHJlbTttYXgtaGVpZ2h0OjIwcmVtO292ZXJmbG93OmF1dG9cIiB0YWJpbmRleD1cIjBcIj48Y29kZT4ke3MucmVwbGFjZSgvJi9nLCBcIiZhbXA7XCIpLnJlcGxhY2UoLzwvZywgXCImbHQ7XCIpfTwvY29kZT48L3ByZT48L2Rpdj5gO1xuICBjb25zdCBkID0gaHRtbGA8ZGl2IHJvbGU9XCJzdGF0dXNcIiBzdHlsZT1cImRpc3BsYXk6ZmxleDtnYXA6MXJlbTtmbGV4LXdyYXA6d3JhcFwiPjwvZGl2PmA7XG4gIGQuaW5uZXJIVE1MID0gcHJlKFwiSlNPTlwiLCBqc29uKSArIHByZShcIlJERiAoVHVydGxlKVwiLCB0dGwpO1xuICByZXR1cm4gZDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnY3N2X2YnKSJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1865,6 +1952,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

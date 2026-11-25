@@ -1,0 +1,931 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ciencia de la ciencia y metaciencia",
+    "section": "",
+    "text": "Presentación\nLa ciencia es la forma más fiable que hemos inventado para conocer el mundo, y también es una actividad humana: tiene incentivos, sesgos, modas y fallos. La ciencia de la ciencia (science of science) estudia con métodos científicos cómo se produce, se comunica y se evalúa el conocimiento. La investigación sobre la investigación (research on research, RoR) y la metaciencia ponen el foco en mejorarla: detectar qué falla y comprobar si las reformas funcionan.\nEste libro está pensado para doctorandos y personal investigador de cualquier disciplina. Al terminarlo sabrás leer críticamente un indicador bibliométrico, estimar cuánto puedes fiarte de un resultado publicado, reconocer las prácticas cuestionables (incluidas las tuyas) y elegir las prácticas abiertas que hacen tu trabajo más creíble.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#mapa-del-libro",
+    "href": "index.html#mapa-del-libro",
+    "title": "Ciencia de la ciencia y metaciencia",
+    "section": "Mapa del libro",
+    "text": "Mapa del libro\n\n\n\nCapítulo\nPregunta\n\n\n\n\n1. Qué es la ciencia de la ciencia\n¿Cómo se estudia científicamente la propia ciencia?\n\n\n2. Medir la ciencia\n¿Qué miden (y qué no) las citas y los indicadores?\n\n\n3. La crisis de reproducibilidad\n¿Cuánto podemos fiarnos de un resultado publicado?\n\n\n4. Prácticas cuestionables y sesgos\n¿Cómo se fabrican falsos positivos sin hacer trampa a propósito?\n\n\n5. Ciencia abierta y reformas\n¿Qué cambios mejoran la credibilidad y qué pruebas hay?\n\n\n6. Evaluar la investigación\n¿Cómo evaluar de forma responsable personas, proyectos e instituciones?",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#cómo-está-organizado-cada-capítulo",
+    "href": "index.html#cómo-está-organizado-cada-capítulo",
+    "title": "Ciencia de la ciencia y metaciencia",
+    "section": "Cómo está organizado cada capítulo",
+    "text": "Cómo está organizado cada capítulo\nCada capítulo empieza con sus objetivos, el glosario del capítulo y una lectura obligatoria con DOI. Después vienen el contenido, laboratorios interactivos, actividades de corrección inmediata, un reto evaluable sin solución en el libro y una autoevaluación. Los ejercicios de R se ejecutan en tu navegador: si nunca has usado R, empieza por Usar R en este libro.\nTu progreso se guarda solo en tu navegador. El libro funciona sin conexión una vez visitado, salvo los laboratorios que consultan datos en vivo.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html",
+    "href": "00-r-en-el-libro.html",
+    "title": "Usar R en este libro",
+    "section": "",
+    "text": "Cómo funcionan las celdas\nVarios capítulos tienen ejercicios cortos de R que se ejecutan en tu navegador, sin instalar nada. Los usarás para calcular indicadores y para simular cómo se generan resultados falsos. Este capítulo te explica lo justo en diez minutos; si ya usas R, puedes saltarlo.\nCada bloque de código tiene un botón Run Code. Puedes cambiar el código y volver a ejecutarlo; Start Over recupera la versión original. La primera vez que abres una página, el navegador descarga el motor de R (unos segundos).\nCon &lt;- se guarda un valor en un objeto. Un vector reúne varios valores con c(). Los textos van entre comillas:",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html#cómo-funcionan-las-celdas",
+    "href": "00-r-en-el-libro.html#cómo-funcionan-las-celdas",
+    "title": "Usar R en este libro",
+    "section": "",
+    "text": "Ejercicio 1\nDe 480 estudios replicados, 24 obtienen un resultado coherente con el original. Calcula la proporción de replicaciones exitosas.\n\n\n\n\n\n\n\nSustituye el hueco por el número total de estudios replicados.\n\n\npertinentes &lt;- 24\nresultados &lt;- 480\npertinentes / resultados\n0,05: una de cada veinte. Es un ejemplo inventado; en el capítulo 3 verás cifras reales.\n\n\n\n\nEjercicio 2\nComprueba si «Scopus» está en el vector bases.\n\n\n\n\n\n\n\n\nEscribe el nombre exactamente igual, con mayúscula inicial.\n\n\n\"Scopus\" %in% bases\nTRUE. Si escribes «scopus» en minúsculas, R dice FALSE: distingue mayúsculas y minúsculas.",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html#autoevaluación",
+    "href": "00-r-en-el-libro.html#autoevaluación",
+    "title": "Usar R en este libro",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nEn R, los textos se escriben entre comillas. VERDADEROFALSO\nPara crear un vector con varios valores se usa la función length()c()toupper()\nlength(c(\"a\", \"b\", \"c\")) devuelve \nPara hacer los ejercicios del libro hay que instalar R en el ordenador. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nSin comillas, R buscaría un objeto con ese nombre.\nc() combina valores en un vector.\nTres elementos.\nSe ejecutan en el navegador con webR.",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "01-que-es.html",
+    "href": "01-que-es.html",
+    "title": "Capítulo 1. Qué es la ciencia de la ciencia",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la ciencia de la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "01-que-es.html#lectura-obligatoria",
+    "href": "01-que-es.html#lectura-obligatoria",
+    "title": "Capítulo 1. Qué es la ciencia de la ciencia",
+    "section": "",
+    "text": "Fortunato, S.; Bergstrom, C. T.; Börner, K.; Evans, J. A.; Helbing, D.; Milojević, S. et al. (2018). Science of science. Science, 359(6379), eaao0185.\n\n\nLecturas complementarias\n\nPrice, D. J. de S. (1965). Networks of scientific papers. Science, 149(3683), 510-515. El nacimiento del análisis de redes de citas.\nMerton, R. K. (1968). The Matthew effect in science. Science, 159(3810), 56-63. Por qué el reconocimiento se acumula en quien ya lo tiene.\nIoannidis, J. P. A.; Fanelli, D.; Dunne, D. D.; Goodman, S. N. (2015). Meta-research: Evaluation and improvement of research methods and practices. PLOS Biology, 13(10), e1002264.\nSinatra, R.; Wang, D.; Deville, P.; Song, C.; Barabási, A.-L. (2016). Quantifying the evolution of individual scientific impact. Science, 354(6312), aaf5239.\nWuchty, S.; Jones, B. F.; Uzzi, B. (2007). The increasing dominance of teams in production of knowledge. Science, 316(5827), 1036-1039.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la ciencia de la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "01-que-es.html#tres-nombres-para-un-campo",
+    "href": "01-que-es.html#tres-nombres-para-un-campo",
+    "title": "Capítulo 1. Qué es la ciencia de la ciencia",
+    "section": "1. Tres nombres para un campo",
+    "text": "1. Tres nombres para un campo\nTres etiquetas que se solapan, con acentos distintos:\n\n\n\n\n\n\n\n\nNombre\nPregunta central\nTradición\n\n\n\n\nCiencia de la ciencia (science of science, SciSci)\n¿Cómo funciona la ciencia como sistema: quién produce, colabora, cita e innova?\nCienciometría, sociología de la ciencia, física de redes\n\n\nInvestigación sobre la investigación (research on research, RoR)\n¿Qué funciona para que la investigación sea mejor y más útil, y cómo deben decidir quienes la financian?\nPolítica científica, evaluación\n\n\nMetaciencia o metainvestigación\n¿Son fiables los métodos y los resultados? ¿Qué reformas los mejoran?\nEstadística, psicología, biomedicina\n\n\n\nLo que comparten es el giro empírico: no se limitan a opinar sobre cómo debería ser la ciencia, sino que reúnen datos (publicaciones, citas, financiación, replicaciones, encuestas) y los analizan como cualquier otro objeto de estudio. Fortunato et al. (2018) resumen el programa: entender los mecanismos que impulsan la ciencia para acelerar el descubrimiento y orientar las políticas científicas con evidencia.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la ciencia de la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "01-que-es.html#una-breve-historia",
+    "href": "01-que-es.html#una-breve-historia",
+    "title": "Capítulo 1. Qué es la ciencia de la ciencia",
+    "section": "2. Una breve historia",
+    "text": "2. Una breve historia\n\n1939-1965. John D. Bernal estudia la función social de la ciencia; Derek de Solla Price muestra que la literatura científica crece de forma exponencial y propone la ley de Price: una pequeña parte de los autores produce una gran parte de los trabajos. En 1965 dibuja la primera red de citas.\n1955-1963. Eugene Garfield propone el índice de citas y crea el Science Citation Index, la base de Web of Science.\n1968. Robert K. Merton describe el efecto Mateo: los investigadores ya reconocidos reciben más reconocimiento por contribuciones similares.\nDécadas de 1970-1990. Nace la cienciometría como disciplina, con revistas propias (Scientometrics, 1978).\n2005. Ioannidis publica Why most published research findings are false, punto de partida de la metaciencia contemporánea.\nDesde 2010. Datos masivos (Web of Science, Scopus, OpenAlex, Dimensions), crisis de reproducibilidad, ciencia abierta y una nueva comunidad interdisciplinar: el Research on Research Institute (RoRI, 2019) o los congresos de metaciencia.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la ciencia de la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "01-que-es.html#preguntas-que-se-hace-el-campo",
+    "href": "01-que-es.html#preguntas-que-se-hace-el-campo",
+    "title": "Capítulo 1. Qué es la ciencia de la ciencia",
+    "section": "3. Preguntas que se hace el campo",
+    "text": "3. Preguntas que se hace el campo\n\n\n\n\n\n\n\n\nÁmbito\nEjemplos de preguntas\nUn hallazgo\n\n\n\n\nColaboración\n¿Los equipos producen mejor ciencia que las personas solas?\nLos equipos dominan cada vez más la producción y reciben más citas (Wuchty et al., 2007).\n\n\nCarreras\n¿Cuándo hacen los investigadores su trabajo más influyente?\nEl trabajo más citado puede aparecer en cualquier punto de la carrera (Sinatra et al., 2016).\n\n\nImpacto\n¿Se puede predecir qué artículos serán muy citados?\nLas citas siguen patrones regulares, pero con mucha incertidumbre individual (Wang et al., 2013).\n\n\nDesigualdad\n¿Se reparte el reconocimiento con justicia?\nEl efecto Mateo y las brechas de género en autoría y citas están bien documentados.\n\n\nFiabilidad\n¿Cuántos resultados publicados se replican?\nBastante menos de lo que se suponía en varias disciplinas (capítulo 3).\n\n\nReforma\n¿Funcionan el preregistro o los informes registrados?\nHay pruebas prometedoras, y se siguen evaluando (capítulo 5).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la ciencia de la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "01-que-es.html#datos-y-métodos",
+    "href": "01-que-es.html#datos-y-métodos",
+    "title": "Capítulo 1. Qué es la ciencia de la ciencia",
+    "section": "4. Datos y métodos",
+    "text": "4. Datos y métodos\nLa ciencia deja un rastro digital enorme. Las fuentes habituales son las bases de datos bibliográficas (Web of Science, Scopus, Dimensions y la abierta OpenAlex), los registros de identificadores (Crossref, DataCite, ORCID, ROR), las bases de financiación, los registros de ensayos y de preregistros, las patentes y las encuestas a investigadores.\nLos métodos combinan:\n\nAnálisis de redes: citas, coautorías, palabras clave.\nModelos estadísticos y econométricos: efectos de la financiación, de las políticas o de la movilidad.\nExperimentos y cuasiexperimentos: por ejemplo, asignar al azar revisores o formatos de revisión.\nReplicaciones a gran escala: repetir decenas de estudios para estimar su fiabilidad.\nMétodos cualitativos: entrevistas y etnografías de laboratorio, que explican lo que los datos no ven.\n\n\n\n\n\n\n\nImportanteUna advertencia de partida\n\n\n\nLos datos sobre la ciencia también tienen sesgos: cobertura desigual por idiomas, regiones y disciplinas, errores en la atribución de autores y afiliaciones, y diferencias entre bases de datos. Antes de concluir algo sobre «la ciencia», pregúntate qué ciencia está en tus datos.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la ciencia de la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "01-que-es.html#actividades",
+    "href": "01-que-es.html#actividades",
+    "title": "Capítulo 1. Qué es la ciencia de la ciencia",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la ciencia de la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "01-que-es.html#práctica",
+    "href": "01-que-es.html#práctica",
+    "title": "Capítulo 1. Qué es la ciencia de la ciencia",
+    "section": "Práctica",
+    "text": "Práctica\nElige un artículo de tu campo y búscalo en OpenAlex. Anota qué datos ofrece (autores, afiliaciones, conceptos, citas, financiación) y cuáles faltan o son incorrectos. Esa es la materia prima, y la primera limitación, de cualquier estudio de ciencia de la ciencia.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la ciencia de la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "01-que-es.html#reto-c1",
+    "href": "01-que-es.html#reto-c1",
+    "title": "Capítulo 1. Qué es la ciencia de la ciencia",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 1 · Una pregunta de metaciencia sobre tu campo\n\n\n\n\nFormula una pregunta de ciencia de la ciencia o de metaciencia sobre tu disciplina (por ejemplo: «¿Ha crecido el tamaño de los equipos en mi campo?»).\nIndica qué datos necesitarías y de qué fuentes; justifica sus sesgos de cobertura.\nPropón un método para responderla y describe un resultado que confirmaría tu hipótesis y otro que la refutaría.\nBusca dos estudios que hayan abordado preguntas parecidas y resume qué encontraron.\n\nEntrega: un informe hecho con la plantilla de entrega. Este reto no tiene solución en el libro: cada persona elige su pregunta y la corrección la hace el profesorado.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la ciencia de la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "01-que-es.html#autoevaluación",
+    "href": "01-que-es.html#autoevaluación",
+    "title": "Capítulo 1. Qué es la ciencia de la ciencia",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nLa metaciencia se centra sobre todo en la fiabilidad de los métodos y los resultados, y en cómo mejorarlos. VERDADEROFALSO\nEl fenómeno por el que los investigadores ya reconocidos reciben más reconocimiento se llama efecto \n¿Quién creó el Science Citation Index? Robert K. MertonEugene GarfieldDerek de Solla Price\nLos datos bibliográficos cubren por igual todas las lenguas y regiones. VERDADEROFALSO\nSegún Wuchty et al. (2007), la producción científica está cada vez más dominada por investigadores individualesequiposgrandes empresas\nLa base de datos bibliográfica abierta y gratuita del listado es Web of ScienceScopusOpenAlex\n¿Qué tienen en común los tres nombres del campo?\n\n Que solo usan métodos cualitativos Que estudian la ciencia de forma empírica, con datos y métodos científicos Que se limitan a la biomedicina\n\nReplicar decenas de estudios para estimar cuántos se confirman es un método de la metaciencia. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nFiabilidad y reforma son su núcleo.\nPor el evangelio: «al que tiene, se le dará».\nGarfield, en 1963 (propuesta en 1955).\nLa cobertura favorece al inglés, a Norteamérica y Europa y a algunas disciplinas.\nLos equipos producen más y reciben más citas.\nOpenAlex es abierta y gratuita.\nEl giro empírico es lo que los une.\nLas replicaciones a gran escala son centrales en metaciencia.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la ciencia de la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "01-que-es.html#recursos-complementarios",
+    "href": "01-que-es.html#recursos-complementarios",
+    "title": "Capítulo 1. Qué es la ciencia de la ciencia",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nOpenAlex\nÍndice abierto de la literatura científica\n\n\nResearch on Research Institute\nRed internacional de investigación sobre la investigación\n\n\nCenter for Open Science\nOrganización de referencia en metaciencia y ciencia abierta\n\n\nLeiden Madtrics\nBlog del CWTS (Universidad de Leiden) sobre indicadores y evaluación",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Qué es la ciencia de la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "02-medir.html",
+    "href": "02-medir.html",
+    "title": "Capítulo 2. Medir la ciencia",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Medir la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "02-medir.html#lectura-obligatoria",
+    "href": "02-medir.html#lectura-obligatoria",
+    "title": "Capítulo 2. Medir la ciencia",
+    "section": "",
+    "text": "Hicks, D.; Wouters, P.; Waltman, L.; de Rijcke, S.; Rafols, I. (2015). Bibliometrics: The Leiden Manifesto for research metrics. Nature, 520(7548), 429-431.\n\n\nLecturas complementarias\n\nHirsch, J. E. (2005). An index to quantify an individual’s scientific research output. PNAS, 102(46), 16569-16572.\nWang, D.; Song, C.; Barabási, A.-L. (2013). Quantifying long-term scientific impact. Science, 342(6154), 127-132.\nDeclaración de San Francisco sobre la Evaluación de la Investigación (DORA), 2012.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Medir la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "02-medir.html#qué-es-una-cita",
+    "href": "02-medir.html#qué-es-una-cita",
+    "title": "Capítulo 2. Medir la ciencia",
+    "section": "1. Qué es una cita",
+    "text": "1. Qué es una cita\nUna cita es una referencia de un documento a otro. Merton la veía como el pago de una deuda intelectual; otros autores la ven como un instrumento de persuasión. En la práctica se cita por muchos motivos: reconocer una idea, apoyar un argumento, describir un método, discrepar o, simplemente, porque todo el mundo cita ese trabajo. Por eso las citas miden uso o visibilidad dentro de la comunidad científica, no calidad ni verdad.\nTres hechos que conviene tener siempre presentes:\n\nLas citas se distribuyen de forma muy asimétrica. Unos pocos artículos acumulan muchas citas y la mayoría recibe pocas o ninguna. La media está dominada por los extremos; la mediana y los percentiles describen mejor lo típico.\nLas prácticas de citación varían por campo: un artículo de biología celular recibe, de media, muchas más citas que uno de matemáticas o de historia. Comparar recuentos brutos entre campos es comparar peras con manzanas.\nLas citas tardan en llegar y su ritmo depende del campo. Los indicadores de ventanas cortas (dos años) favorecen a las disciplinas rápidas.\n\n\n\n\n\n\n\nFigura 1: Distribución típica de las citas: muchos artículos con pocas citas y unos pocos con muchas. La media queda muy por encima de lo típico.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Medir la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "02-medir.html#indicadores-más-usados",
+    "href": "02-medir.html#indicadores-más-usados",
+    "title": "Capítulo 2. Medir la ciencia",
+    "section": "2. Indicadores más usados",
+    "text": "2. Indicadores más usados\n\n\n\n\n\n\n\n\nIndicador\nQué mide\nProblemas\n\n\n\n\nRecuento de citas\nAtención recibida por un trabajo\nDepende del campo, la antigüedad y el tipo de documento\n\n\nFactor de impacto (de la revista)\nCitas medias recibidas por los artículos de una revista en dos años\nEs de la revista, no del artículo; media de una distribución asimétrica; manipulable\n\n\nÍndice h (Hirsch, 2005)\nEl mayor h tal que h trabajos tienen al menos h citas\nCrece con la edad académica; ignora las citas de los muy citados; no comparable entre campos\n\n\nCitas normalizadas (p. ej. MNCS, FWCI)\nCitas relativas a la media mundial del mismo campo, año y tipo\nDependen de cómo se definen los campos\n\n\nPercentiles (p. ej. % en el 10 % más citado)\nPosición en la distribución del campo\nNecesitan muchos trabajos para ser estables\n\n\nAltmetría\nMenciones en redes, noticias, políticas, gestores\nMide atención, no calidad; fácil de inflar\n\n\n\nEl índice h es popular porque combina cantidad e impacto en un solo número fácil de calcular, pero precisamente por eso oculta mucho. Dos investigadoras con h = 10 pueden tener perfiles muy distintos.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Medir la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "02-medir.html#lab-c2-h",
+    "href": "02-medir.html#lab-c2-h",
+    "title": "Capítulo 2. Medir la ciencia",
+    "section": "3. Laboratorio: calcula un índice h",
+    "text": "3. Laboratorio: calcula un índice h\n\n\nLaboratorio · se ejecuta en tu navegador\n\nEscribe las citas de cada trabajo de un perfil (separadas por comas). El laboratorio las ordena, calcula el índice h y lo compara con la media y la mediana.\n\ntexto = window.Lab.texto\nviewof citas_txt = texto(\"Citas por trabajo\", {value: \"120, 45, 30, 22, 15, 12, 9, 8, 6, 5, 3, 2, 1, 0, 0\", submit: \"Calcular\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const c = citas_txt.split(/[,;\\s]+/).map(Number).filter(Number.isFinite).sort((a, b) =&gt; b - a);\n  if (!c.length) return html`&lt;p role=\"status\"&gt;Escribe al menos un número.&lt;/p&gt;`;\n  let h = 0; c.forEach((v, i) =&gt; { if (v &gt;= i + 1) h = i + 1; });\n  const media = c.reduce((a, b) =&gt; a + b, 0) / c.length, med = c.length % 2 ? c[(c.length - 1) / 2] : (c[c.length / 2 - 1] + c[c.length / 2]) / 2;\n  const max = Math.max(...c, 1), W = 520, H = 200, bw = Math.max(4, (W - 40) / c.length - 2);\n  const barras = c.map((v, i) =&gt; `&lt;rect x=\"${30 + i * (bw + 2)}\" y=\"${H - 20 - (H - 40) * v / max}\" width=\"${bw}\" height=\"${(H - 40) * v / max}\" fill=\"${i &lt; h ? \"#2a78d6\" : \"#a3a29e\"}\"/&gt;`).join(\"\");\n  const fmt = x =&gt; x.toLocaleString(\"es-ES\", {maximumFractionDigits: 1});\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;&lt;strong&gt;Índice h = ${h}&lt;/strong&gt; · ${c.length} trabajos · ${fmt(c.reduce((a, b) =&gt; a + b, 0))} citas · media ${fmt(media)} · mediana ${fmt(med)}&lt;/p&gt;\n   &lt;svg viewBox=\"0 0 ${W} ${H}\" width=\"100%\" style=\"max-width:${W}px\" role=\"img\" aria-label=\"Citas por trabajo ordenadas de mayor a menor; en azul los ${h} trabajos del núcleo h\"&gt;\n   &lt;line x1=\"28\" y1=\"${H - 20}\" x2=\"${W - 5}\" y2=\"${H - 20}\" stroke=\"currentColor\" stroke-opacity=\".4\"/&gt;${barras}&lt;/svg&gt;\n   &lt;p class=\"small\"&gt;En azul, el «núcleo h». Prueba a cambiar 120 por 1200: el índice h no se mueve, pero la media se dispara.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Medir la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "02-medir.html#calcular-con-r",
+    "href": "02-medir.html#calcular-con-r",
+    "title": "Capítulo 2. Medir la ciencia",
+    "section": "4. Calcular con R",
+    "text": "4. Calcular con R\n\n\n\n\n\n\nLa línea clave compara cada recuento con su posición: seq_along() genera 1, 2, 3…, y el índice h es cuántas veces las citas igualan o superan la posición.\n\nEjercicio 2.1\nCalcula el índice h de este perfil.\n\n\n\n\n\n\n\n\nLa función que genera la secuencia 1, 2, 3… de la longitud del vector es seq_along().\n\n\nord &lt;- sort(perfil, decreasing = TRUE)\nsum(ord &gt;= seq_along(ord))\nh = 5: los cinco trabajos más citados tienen 25, 15, 9, 8 y 7 citas, todos al menos 5; el sexto tiene 4 citas, menos que 6.\n\n\n\n\nEjercicio 2.2\nUn artículo de matemáticas tiene 12 citas; la media mundial de los artículos de matemáticas del mismo año y tipo es 4. Un artículo de biología celular tiene 30 citas y la media de su campo es 40. Calcula la citación normalizada (citas / media del campo) del artículo de matemáticas.\n\n\n\n\n\n\n\nDivide entre la media de su campo.\n\n\n12 / 4\n3: el triple de lo esperado en su campo. El de biología, con 30 citas, obtiene 30 / 40 = 0,75, por debajo de lo esperado. Con recuentos brutos parecería al revés.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Medir la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "02-medir.html#usar-las-métricas-con-responsabilidad",
+    "href": "02-medir.html#usar-las-métricas-con-responsabilidad",
+    "title": "Capítulo 2. Medir la ciencia",
+    "section": "5. Usar las métricas con responsabilidad",
+    "text": "5. Usar las métricas con responsabilidad\nEl Manifiesto de Leiden (Hicks et al., 2015) propone diez principios. Los más citados:\n\nLa evaluación cuantitativa debe apoyar el juicio experto cualitativo, no sustituirlo.\nMedir el desempeño en relación con la misión de la institución, el grupo o la persona.\nProteger la excelencia en la investigación local (incluida la publicada en otros idiomas).\nQue los procesos de recogida y análisis de datos sean abiertos, transparentes y sencillos.\nPermitir que las personas evaluadas verifiquen los datos y los análisis.\nTener en cuenta las diferencias entre campos en publicación y citación.\nBasar la evaluación individual en el juicio cualitativo de la trayectoria.\nEvitar la falsa precisión (por ejemplo, tres decimales en un factor de impacto).\nReconocer los efectos sistémicos de la evaluación y de los indicadores.\nRevisar y actualizar los indicadores con regularidad.\n\nLa declaración DORA (2012) añade una recomendación concreta: no usar métricas de revista, como el factor de impacto, para evaluar artículos ni personas. El acuerdo europeo CoARA (2022) compromete a las instituciones firmantes a reformar sus evaluaciones en esa dirección (capítulo 6).\n\n\n\n\n\n\nAdvertenciaLey de Goodhart\n\n\n\n«Cuando una medida se convierte en objetivo, deja de ser una buena medida». Si se premia el número de artículos, aparecen el troceado de resultados y las revistas depredadoras; si se premian las citas, las autocitas y los círculos de citación.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Medir la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "02-medir.html#actividades",
+    "href": "02-medir.html#actividades",
+    "title": "Capítulo 2. Medir la ciencia",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Medir la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "02-medir.html#reto-c2",
+    "href": "02-medir.html#reto-c2",
+    "title": "Capítulo 2. Medir la ciencia",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 2 · Auditoría de un indicador\n\n\n\n\nElige un perfil (el tuyo, el de tu grupo o el de una revista de tu campo) y obtén sus datos en una fuente abierta (OpenAlex) y en otra (Google Académico, Scopus o Web of Science).\nCalcula el recuento de citas, la mediana, el índice h y, si puedes, un indicador normalizado.\nCompara las fuentes: ¿coinciden? ¿Por qué no?\nEscribe una valoración del perfil aplicando cinco principios del Manifiesto de Leiden.\n\nEntrega: un informe reproducible (con el código o la hoja de cálculo) hecho con la plantilla de entrega. Este reto no tiene solución en el libro.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Medir la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "02-medir.html#autoevaluación",
+    "href": "02-medir.html#autoevaluación",
+    "title": "Capítulo 2. Medir la ciencia",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nLas citas miden la calidad científica de un artículo. VERDADEROFALSO\nSi un perfil tiene citas 10, 8, 5, 4 y 3, su índice h es 3458\nEl factor de impacto es un indicador de la personarevistainstitucióndisciplina\nPara describir lo típico de una distribución de citas muy asimétrica, es mejor la \nLa declaración que pide no usar el factor de impacto para evaluar personas se llama LeidenDORAHelsinkiBudapest\nUn artículo con 20 citas en un campo cuya media es 10 tiene una citación normalizada de \n«Cuando una medida se convierte en objetivo, deja de ser una buena medida» es la ley de \n¿Por qué no se pueden comparar recuentos de citas entre campos?\n\n Porque las bases de datos solo cubren un campo Porque las prácticas de citación y publicación varían mucho entre disciplinas Porque en algunos campos está prohibido citar\n\n\nVer explicaciones\n\nMiden uso o visibilidad en la comunidad.\nCuatro trabajos tienen al menos 4 citas; no hay cinco con 5 o más.\nMedia de citas de la revista en dos años.\nLa media se deja arrastrar por los muy citados.\nDORA, San Francisco, 2012.\n20 / 10 = 2.\nCharles Goodhart, economista.\nPor eso existen los indicadores normalizados.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Medir la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "02-medir.html#recursos-complementarios",
+    "href": "02-medir.html#recursos-complementarios",
+    "title": "Capítulo 2. Medir la ciencia",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nManifiesto de Leiden (web)\nLos diez principios y sus traducciones\n\n\nDORA\nDeclaración y recursos para evaluar sin métricas de revista\n\n\nOpenAlex\nDatos abiertos de citas y autores\n\n\nCWTS Leiden Ranking\nEjemplo de indicadores transparentes y normalizados",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Medir la ciencia</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducibilidad.html",
+    "href": "03-reproducibilidad.html",
+    "title": "Capítulo 3. La crisis de reproducibilidad",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducibilidad.html#lectura-obligatoria",
+    "href": "03-reproducibilidad.html#lectura-obligatoria",
+    "title": "Capítulo 3. La crisis de reproducibilidad",
+    "section": "",
+    "text": "Open Science Collaboration (2015). Estimating the reproducibility of psychological science. Science, 349(6251), aac4716.\n\n\nLecturas complementarias\n\nIoannidis, J. P. A. (2005). Why most published research findings are false. PLoS Medicine, 2(8), e124.\nButton, K. S.; Ioannidis, J. P. A.; Mokrysz, C.; Nosek, B. A.; Flint, J.; Robinson, E. S. J.; Munafò, M. R. (2013). Power failure: Why small sample size undermines the reliability of neuroscience. Nature Reviews Neuroscience, 14(5), 365-376.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducibilidad.html#tres-palabras-que-no-son-sinónimos",
+    "href": "03-reproducibilidad.html#tres-palabras-que-no-son-sinónimos",
+    "title": "Capítulo 3. La crisis de reproducibilidad",
+    "section": "1. Tres palabras que no son sinónimos",
+    "text": "1. Tres palabras que no son sinónimos\n\n\n\n\n\n\n\n\nTérmino\nPregunta\nSe comprueba…\n\n\n\n\nReproducibilidad (computacional)\n¿Obtengo los mismos resultados con los mismos datos y el mismo código?\nVolviendo a ejecutar el análisis\n\n\nReplicabilidad\n¿Obtengo un resultado coherente con datos nuevos recogidos con el mismo método?\nRepitiendo el estudio\n\n\nRobustez\n¿Se mantiene el resultado con otros análisis razonables de los mismos datos?\nVariando decisiones analíticas\n\n\n\nLa terminología varía entre disciplinas (en algunas, «reproducibilidad» significa lo que aquí llamamos replicabilidad), así que conviene definirla siempre al escribir.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducibilidad.html#qué-han-encontrado-los-proyectos-de-replicación",
+    "href": "03-reproducibilidad.html#qué-han-encontrado-los-proyectos-de-replicación",
+    "title": "Capítulo 3. La crisis de reproducibilidad",
+    "section": "2. Qué han encontrado los proyectos de replicación",
+    "text": "2. Qué han encontrado los proyectos de replicación\nEn 2015, la Open Science Collaboration repitió 100 estudios publicados en tres revistas de psicología, con muestras más grandes y en contacto con los autores originales. El 97 % de los originales tenían resultados significativos; en las replicaciones, solo alrededor del 36 %. Los tamaños del efecto de las replicaciones eran, de media, aproximadamente la mitad de los originales.\nProyectos posteriores, con métodos distintos, han encontrado tasas de replicación diversas en economía experimental, ciencias sociales publicadas en Nature y Science, o biología del cáncer preclínica. Las cifras no son comparables entre sí, y «replicar» puede definirse de varias formas (significación, tamaño del efecto, intervalo), pero el mensaje común es claro: un resultado publicado y significativo no es, por sí solo, una prueba sólida.\n\n\n\n\n\n\nNotaUna replicación fallida no es un fraude\n\n\n\nUn resultado puede no replicarse por azar en cualquiera de los dos estudios, por diferencias de población o de contexto, por errores, o porque el efecto original era un falso positivo o estaba inflado. Una sola replicación tampoco es concluyente: lo que importa es la evidencia acumulada.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducibilidad.html#por-qué-tantos-resultados-no-se-replican",
+    "href": "03-reproducibilidad.html#por-qué-tantos-resultados-no-se-replican",
+    "title": "Capítulo 3. La crisis de reproducibilidad",
+    "section": "3. Por qué tantos resultados no se replican",
+    "text": "3. Por qué tantos resultados no se replican\nIoannidis (2005) mostró con un modelo sencillo que la probabilidad de que un resultado significativo sea verdadero, el valor predictivo positivo (VPP), depende de tres cosas:\n\nLa probabilidad previa de que la hipótesis sea cierta (expresada como razón R entre hipótesis verdaderas y falsas que se ponen a prueba).\nLa potencia del estudio (1 − β): la probabilidad de detectar el efecto si existe.\nEl umbral de significación α (normalmente 0,05).\n\n\nVPP = (1 − β) · R / [ (1 − β) · R + α ]\n\nCon hipótesis arriesgadas (R bajo) y estudios con poca potencia, la mayoría de los «hallazgos» significativos pueden ser falsos aunque nadie haga trampas. Si además hay sesgo (prácticas que convierten resultados nulos en significativos, capítulo 4), el VPP baja todavía más.\nButton et al. (2013) estimaron que la potencia mediana de los estudios de neurociencia rondaba el 21 %. La poca potencia tiene un segundo efecto, la maldición del ganador: cuando un estudio pequeño sale significativo, lo hace casi siempre porque sobrestimó el efecto; por eso las replicaciones encuentran efectos más pequeños.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducibilidad.html#lab-c3-vpp",
+    "href": "03-reproducibilidad.html#lab-c3-vpp",
+    "title": "Capítulo 3. La crisis de reproducibilidad",
+    "section": "4. Laboratorio: ¿cuánto te fías de un resultado significativo?",
+    "text": "4. Laboratorio: ¿cuánto te fías de un resultado significativo?\n\n\nLaboratorio · cálculo en tu navegador\n\nImagina 1000 hipótesis puestas a prueba en un campo. Ajusta la proporción de hipótesis verdaderas, la potencia, el umbral y el sesgo, y mira cuántos resultados significativos son verdaderos.\n\nrango = window.Lab.rango\nviewof p_prev = rango(\"Hipótesis verdaderas (de cada 100 que se prueban)\", [1, 50], {step: 1, value: 10})\nviewof potencia = rango(\"Potencia (%)\", [5, 99], {step: 1, value: 35})\nviewof alfa = rango(\"Umbral α\", [0.001, 0.1], {step: 0.001, value: 0.05, formato: x =&gt; x.toFixed(3).replace(\".\", \",\")})\nviewof sesgo = rango(\"Sesgo u (proporción de nulos convertidos en positivos)\", [0, 0.5], {step: 0.05, value: 0, formato: x =&gt; x.toFixed(2).replace(\".\", \",\")})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const N = 1000, verd = N * p_prev / 100, fals = N - verd, pw = potencia / 100;\n  const vp = verd * (pw + sesgo * (1 - pw)), fp = fals * (alfa + sesgo * (1 - alfa));\n  const vpp = vp / (vp + fp);\n  const fmt = x =&gt; Math.round(x).toLocaleString(\"es-ES\");\n  const W = 520, esc = (W - 20) / N;\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;De ${fmt(N)} hipótesis, ${fmt(verd)} son verdaderas. Salen significativas &lt;strong&gt;${fmt(vp)}&lt;/strong&gt; verdaderas y &lt;strong&gt;${fmt(fp)}&lt;/strong&gt; falsas.&lt;/p&gt;\n   &lt;p style=\"font-size:1.2rem\"&gt;Valor predictivo positivo: &lt;strong&gt;${(100 * vpp).toFixed(0)} %&lt;/strong&gt; &lt;span class=\"${vpp &gt;= .8 ? \"lab-bien\" : vpp &gt;= .5 ? \"lab-medio\" : \"lab-mal\"}\" style=\"font-weight:600\"&gt;${vpp &gt;= .8 ? \"· bastante fiable\" : vpp &gt;= .5 ? \"· dudoso\" : \"· es más probable que sea falso\"}&lt;/span&gt;&lt;/p&gt;\n   &lt;svg viewBox=\"0 0 ${W} 46\" width=\"100%\" style=\"max-width:${W}px\" role=\"img\" aria-label=\"Resultados significativos: ${fmt(vp)} verdaderos y ${fmt(fp)} falsos\"&gt;\n   &lt;rect x=\"10\" y=\"8\" width=\"${(W - 20) * vp / Math.max(vp + fp, 1)}\" height=\"24\" fill=\"#1baf7a\"/&gt;\n   &lt;rect x=\"${10 + (W - 20) * vp / Math.max(vp + fp, 1)}\" y=\"8\" width=\"${(W - 20) * fp / Math.max(vp + fp, 1)}\" height=\"24\" fill=\"#eb6834\"/&gt;\n   &lt;text x=\"10\" y=\"44\" font-size=\"11\" fill=\"currentColor\"&gt;verdaderos&lt;/text&gt;&lt;text x=\"${W - 10}\" y=\"44\" font-size=\"11\" text-anchor=\"end\" fill=\"currentColor\"&gt;falsos&lt;/text&gt;&lt;/svg&gt;\n   &lt;p class=\"small\"&gt;Modelo de Ioannidis (2005). Prueba: 10 de cada 100 hipótesis verdaderas, potencia 20 % y un poco de sesgo (0,1). Después sube la potencia al 80 % y baja α a 0,005.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducibilidad.html#calcular-con-r",
+    "href": "03-reproducibilidad.html#calcular-con-r",
+    "title": "Capítulo 3. La crisis de reproducibilidad",
+    "section": "5. Calcular con R",
+    "text": "5. Calcular con R\n\n\n\n\n\n\n\nEjercicio 3.1\nEn un campo exploratorio, solo 1 de cada 20 hipótesis probadas es verdadera (R = 1/19). Con potencia del 80 % y α = 0,05, ¿cuál es el VPP?\n\n\n\n\n\n\n\n\nLa potencia del 80 % se escribe 0.8.\n\n\nvpp(R = 1 / 19, potencia = 0.8)\n0,46: incluso con buena potencia, menos de la mitad de los resultados significativos serían verdaderos. En campos exploratorios, un único resultado significativo es una pista, no una conclusión.\n\n\n\n\nEjercicio 3.2: la maldición del ganador\nSimulamos 2000 estudios pequeños (20 personas por grupo) de un efecto real pequeño (d = 0,2) y nos quedamos con los significativos. Completa el código para calcular el tamaño del efecto medio de los estudios significativos.\n\n\n\n\n\n\n\n\nLa columna con el tamaño del efecto se llama d.\n\n\nsignificativos &lt;- estudios[estudios$p &lt; 0.05, ]\nnrow(significativos) / nrow(estudios)\nmean(significativos$d)\nSolo alrededor de uno de cada diez estudios sale significativo, y el efecto medio de esos estudios es varias veces mayor que el real (0,2): si solo se publican los significativos, la literatura exagera el efecto.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducibilidad.html#actividades",
+    "href": "03-reproducibilidad.html#actividades",
+    "title": "Capítulo 3. La crisis de reproducibilidad",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducibilidad.html#reto-c3",
+    "href": "03-reproducibilidad.html#reto-c3",
+    "title": "Capítulo 3. La crisis de reproducibilidad",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 3 · Intenta reproducir un artículo\n\n\n\n\nElige un artículo de tu campo que comparta datos y código.\nIntenta reproducir una tabla o una figura principal. Documenta cada paso, cada obstáculo y el tiempo empleado.\nHaz un análisis de robustez: cambia una decisión razonable (exclusiones, covariables, transformación) y comprueba si el resultado se mantiene.\nEstima con el modelo de Ioannidis el VPP del hallazgo principal, justificando tus supuestos de probabilidad previa y potencia.\n\nEntrega: informe y código con la plantilla de entrega. Este reto no tiene solución en el libro.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducibilidad.html#autoevaluación",
+    "href": "03-reproducibilidad.html#autoevaluación",
+    "title": "Capítulo 3. La crisis de reproducibilidad",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nObtener los mismos resultados con los mismos datos y el mismo código es replicabilidadreproducibilidad computacionalrobustez\n¿Qué porcentaje aproximado de replicaciones fue significativo en el proyecto de la Open Science Collaboration (2015)? 10 %36 %70 %97 %\nUna sola replicación fallida demuestra que el estudio original era fraudulento. VERDADEROFALSO\nSi la potencia baja, el valor predictivo positivo de un resultado significativo subebajano cambia\nQue los estudios pequeños significativos sobrestimen el efecto se conoce como la maldición del \nSegún Button et al. (2013), la potencia mediana en neurociencia rondaba el 5 %21 %50 %80 %\nEl VPP depende de la probabilidad previa de que la hipótesis sea cierta. VERDADEROFALSO\n¿Por qué los tamaños del efecto de las replicaciones suelen ser menores?\n\n Porque los equipos que replican son menos competentes Porque los originales publicados, seleccionados por ser significativos, tienden a sobrestimar el efecto Porque las replicaciones usan muestras más pequeñas\n\n\nVer explicaciones\n\nMismos datos, mismo código.\nEn torno al 36 %, frente al 97 % de los originales.\nHay muchas causas posibles, incluido el azar.\nCon menos potencia, una mayor proporción de los significativos son falsos.\nWinner’s curse.\nAlrededor del 21 %.\nEs la R del modelo de Ioannidis.\nSelección por significación + muestras pequeñas = efectos inflados.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducibilidad.html#recursos-complementarios",
+    "href": "03-reproducibilidad.html#recursos-complementarios",
+    "title": "Capítulo 3. La crisis de reproducibilidad",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nOSF\nCompartir datos, código y materiales para que otros reproduzcan tu trabajo\n\n\nRedes nacionales de reproducibilidad (UKRN)\nDirectorio de redes nacionales, incluida la Red Española de Reproducibilidad (SPRN)\n\n\nFORRT\nRecursos docentes sobre reproducibilidad y ciencia abierta",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. La crisis de reproducibilidad</span>"
+    ]
+  },
+  {
+    "objectID": "04-practicas.html",
+    "href": "04-practicas.html",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
+    "objectID": "04-practicas.html#lectura-obligatoria",
+    "href": "04-practicas.html#lectura-obligatoria",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "",
+    "text": "Simmons, J. P.; Nelson, L. D.; Simonsohn, U. (2011). False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant. Psychological Science, 22(11), 1359-1366.\n\n\nLecturas complementarias\n\nJohn, L. K.; Loewenstein, G.; Prelec, D. (2012). Measuring the prevalence of questionable research practices with incentives for truth telling. Psychological Science, 23(5), 524-532.\nFanelli, D. (2010). «Positive» results increase down the hierarchy of the sciences. PLoS ONE, 5(4), e10068.\nSmaldino, P. E.; McElreath, R. (2016). The natural selection of bad science. Royal Society Open Science, 3(9), 160384.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
+    "objectID": "04-practicas.html#entre-la-buena-práctica-y-el-fraude",
+    "href": "04-practicas.html#entre-la-buena-práctica-y-el-fraude",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "1. Entre la buena práctica y el fraude",
+    "text": "1. Entre la buena práctica y el fraude\nLa mala conducta científica en sentido estricto se resume en FFP: fabrication (inventar datos), falsification (manipularlos) y plagiarism. Es grave pero relativamente rara. Mucho más frecuentes son las prácticas de investigación cuestionables (questionable research practices, QRP): decisiones que no son fraude, que a menudo se toman de buena fe y que, sin embargo, aumentan la probabilidad de publicar resultados falsos.\n\n\n\n\n\n\n\nPráctica\nEn qué consiste\n\n\n\n\nInformar solo de las variables que salen\nMedir varias variables dependientes y contar solo las significativas\n\n\nParada opcional\nMirar los datos a medida que llegan y dejar de recoger cuando p &lt; 0,05\n\n\nExcluir datos a conveniencia\nDecidir qué observaciones son «atípicas» después de ver el resultado\n\n\nElegir el análisis que funciona\nProbar varias covariables, transformaciones o pruebas y contar solo una\n\n\nHARKing (hypothesizing after the results are known)\nPresentar como hipótesis previa lo que se descubrió al analizar\n\n\nRedondear p\nEscribir p = 0,05 cuando es 0,054\n\n\nNo publicar los resultados nulos\nGuardar en el cajón los estudios que «no salen»\n\n\n\nJohn et al. (2012) encuestaron a más de 2000 psicólogos con incentivos para responder con sinceridad: muchas de estas prácticas eran admitidas por una proporción considerable, en algunos casos por la mayoría.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
+    "objectID": "04-practicas.html#el-jardín-de-los-senderos-que-se-bifurcan",
+    "href": "04-practicas.html#el-jardín-de-los-senderos-que-se-bifurcan",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "2. El jardín de los senderos que se bifurcan",
+    "text": "2. El jardín de los senderos que se bifurcan\nSimmons et al. (2011) demostraron con simulaciones que combinar unas pocas decisiones flexibles, cada una defendible por sí sola, puede elevar la tasa de falsos positivos del 5 % nominal a más del 60 %. Gelman y Loken llamaron a este problema el «jardín de los senderos que se bifurcan»: aunque solo se haga un análisis, la elección depende de los datos, y otros datos habrían llevado a otro camino.\n\n\n\n\n\n\nFigura 1: El jardín de los senderos que se bifurcan: tres decisiones binarias crean ocho análisis posibles con los mismos datos.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
+    "objectID": "04-practicas.html#lab-c4-phacking",
+    "href": "04-practicas.html#lab-c4-phacking",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "3. Laboratorio: fabrica un falso positivo sin hacer trampa",
+    "text": "3. Laboratorio: fabrica un falso positivo sin hacer trampa\n\n\nLaboratorio · simulación en tu navegador\n\nSimulamos 2000 estudios en los que no hay ningún efecto real (dos grupos idénticos). Con un análisis honesto y único, alrededor del 5 % sale significativo por azar. Activa las decisiones flexibles y mira cómo sube la tasa de falsos positivos.\n\ncasilla = window.Lab.casilla\nrango = window.Lab.rango\nviewof dos_vd = casilla(\"Medir dos variables dependientes correlacionadas y quedarse con la que salga\", {value: false})\nviewof parada = casilla(\"Parada opcional: si no sale, añadir 10 personas por grupo (hasta dos veces)\", {value: false})\nviewof atipicos = casilla(\"Probar también el análisis excluyendo los valores extremos\", {value: false})\nviewof subgrupo = casilla(\"Probar también solo en un subgrupo (por ejemplo, solo mujeres)\", {value: false})\nviewof n_ini = rango(\"Personas por grupo al inicio\", [10, 100], {step: 5, value: 20})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  let s = 7; const u = () =&gt; (s = (s * 16807) % 2147483647) / 2147483647;\n  const norm = () =&gt; Math.sqrt(-2 * Math.log(u())) * Math.cos(2 * Math.PI * u());\n  const Phi = z =&gt; { const t = 1 / (1 + 0.2316419 * Math.abs(z)), d = 0.3989423 * Math.exp(-z * z / 2);\n    const p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274)))); return z &gt; 0 ? 1 - p : p; };\n  const pval = (a, b) =&gt; { const m = x =&gt; x.reduce((p, q) =&gt; p + q, 0) / x.length;\n    const v = x =&gt; { const mm = m(x); return x.reduce((p, q) =&gt; p + (q - mm) ** 2, 0) / (x.length - 1); };\n    const z = (m(a) - m(b)) / Math.sqrt(v(a) / a.length + v(b) / b.length); return 2 * (1 - Phi(Math.abs(z))); };\n  const persona = () =&gt; { const y1 = norm(), y2 = 0.5 * y1 + Math.sqrt(0.75) * norm(); return {y1, y2, sexo: u() &lt; 0.5}; };\n  const S = 2000; let fp = 0;\n  for (let k = 0; k &lt; S; k++) {\n    let A = Array.from({length: n_ini}, persona), B = Array.from({length: n_ini}, persona), sig = false;\n    for (let ronda = 0; ronda &lt; (parada ? 3 : 1) && !sig; ronda++) {\n      if (ronda &gt; 0) { A = A.concat(Array.from({length: 10}, persona)); B = B.concat(Array.from({length: 10}, persona)); }\n      const vds = dos_vd ? [\"y1\", \"y2\"] : [\"y1\"];\n      for (const vd of vds) {\n        const conj = [[A, B]];\n        if (subgrupo) conj.push([A.filter(p =&gt; p.sexo), B.filter(p =&gt; p.sexo)]);\n        for (const [a0, b0] of conj) {\n          const a = a0.map(p =&gt; p[vd]), b = b0.map(p =&gt; p[vd]);\n          if (a.length &gt; 2 && b.length &gt; 2 && pval(a, b) &lt; 0.05) sig = true;\n          if (atipicos) { const f = x =&gt; x.filter(v =&gt; Math.abs(v) &lt; 2); const af = f(a), bf = f(b); if (af.length &gt; 2 && bf.length &gt; 2 && pval(af, bf) &lt; 0.05) sig = true; }\n        }\n      }\n    }\n    if (sig) fp++;\n  }\n  const t = fp / S;\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p style=\"font-size:1.2rem\"&gt;Tasa de falsos positivos: &lt;strong&gt;${(100 * t).toFixed(1).replace(\".\", \",\")} %&lt;/strong&gt; &lt;span class=\"${t &lt;= .06 ? \"lab-bien\" : t &lt;= .15 ? \"lab-medio\" : \"lab-mal\"}\" style=\"font-weight:600\"&gt;${t &lt;= .06 ? \"· lo nominal\" : \"· inflada\"}&lt;/span&gt;&lt;/p&gt;\n   &lt;svg viewBox=\"0 0 520 40\" width=\"100%\" style=\"max-width:520px\" role=\"img\" aria-label=\"Barra de la tasa de falsos positivos\"&gt;&lt;rect x=\"10\" y=\"8\" width=\"500\" height=\"20\" rx=\"4\" fill=\"#d9d8d4\"/&gt;&lt;rect x=\"10\" y=\"8\" width=\"${500 * t}\" height=\"20\" rx=\"4\" fill=\"#eb6834\"/&gt;&lt;line x1=\"${10 + 500 * .05}\" x2=\"${10 + 500 * .05}\" y1=\"2\" y2=\"34\" stroke=\"currentColor\" stroke-width=\"2\"/&gt;&lt;text x=\"${14 + 500 * .05}\" y=\"38\" font-size=\"10\" fill=\"currentColor\"&gt;5 % nominal&lt;/text&gt;&lt;/svg&gt;\n   &lt;p class=\"small\"&gt;2000 estudios simulados sin efecto real; prueba aproximada con la distribución normal. Activa las cuatro decisiones a la vez.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
+    "objectID": "04-practicas.html#sesgo-de-publicación",
+    "href": "04-practicas.html#sesgo-de-publicación",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "4. Sesgo de publicación",
+    "text": "4. Sesgo de publicación\nEl sesgo de publicación aparece cuando la probabilidad de publicar un estudio depende de su resultado. Fanelli (2010) encontró que la proporción de artículos que confirman su hipótesis es altísima en muchas disciplinas y mayor en las ciencias sociales que en las físicas. Si los resultados nulos se quedan en el cajón, la literatura publicada es una muestra sesgada de lo investigado: los metaanálisis heredan el sesgo y sobrestiman los efectos.\nAlgunas señales de alarma en una literatura:\n\nDemasiados resultados positivos para la potencia de los estudios.\nValores p que se amontonan justo por debajo de 0,05.\nEstudios pequeños con efectos grandes y estudios grandes con efectos pequeños (asimetría en el gráfico de embudo de un metaanálisis).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
+    "objectID": "04-practicas.html#incentivos-la-selección-natural-de-la-mala-ciencia",
+    "href": "04-practicas.html#incentivos-la-selección-natural-de-la-mala-ciencia",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "5. Incentivos: la selección natural de la mala ciencia",
+    "text": "5. Incentivos: la selección natural de la mala ciencia\n¿Por qué persisten estas prácticas si casi nadie quiere engañar? Smaldino y McElreath (2016) mostraron con un modelo evolutivo que, si se premia sobre todo el número de publicaciones positivas, los laboratorios que usan métodos de menor potencia y más flexibles producen más «éxitos», reciben más recursos y forman a más investigadores que copian esos métodos. Sin cambiar los incentivos, la mala ciencia se selecciona sola, aunque las personas actúen de buena fe. Es el puente hacia los capítulos 5 y 6.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
+    "objectID": "04-practicas.html#calcular-con-r",
+    "href": "04-practicas.html#calcular-con-r",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "6. Calcular con R",
+    "text": "6. Calcular con R\n\nEjercicio 4.1: dos variables dependientes\nSimulamos estudios sin efecto real en los que se miden dos variables independientes entre sí y se informa de la que salga. Completa el código para calcular la tasa de falsos positivos.\n\n\n\n\n\n\n\n\nEl umbral es el mismo para las dos variables: 0.05.\n\n\nsale &lt;- p_vd1 &lt; 0.05 | p_vd2 &lt; 0.05\nmean(sale)\nAlrededor del 10 %: el doble del 5 % nominal. Con variables independientes, la probabilidad es 1 − 0,95² ≈ 0,0975. Con más variables o más decisiones, sigue subiendo.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
+    "objectID": "04-practicas.html#actividades",
+    "href": "04-practicas.html#actividades",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
+    "objectID": "04-practicas.html#reto-c4",
+    "href": "04-practicas.html#reto-c4",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 4 · El jardín de tu propio análisis\n\n\n\n\nToma un análisis que hayas hecho (o uno publicado en tu campo) y lista todas las decisiones que se tomaron: exclusiones, transformaciones, covariables, pruebas, variables.\nPara cada una, señala si se tomó antes o después de ver los datos.\nSi tienes los datos, haz un análisis multiverso sencillo: repite el análisis con las combinaciones razonables y muestra cuántas dan el mismo resultado.\nPropón cómo blindarías el próximo estudio frente a esas decisiones.\n\nEntrega: informe y código con la plantilla de entrega. Este reto no tiene solución en el libro.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
+    "objectID": "04-practicas.html#autoevaluación",
+    "href": "04-practicas.html#autoevaluación",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nLas prácticas de investigación cuestionables son siempre fraude intencionado. VERDADEROFALSO\nPresentar como hipótesis previa lo descubierto tras analizar los datos se llama \nSegún Simmons et al. (2011), combinar varias decisiones flexibles puede elevar la tasa de falsos positivos por encima del 6 %15 %60 %95 %\nMirar los datos a medida que llegan y parar cuando p &lt; 0,05 se llama parada \nCon dos variables independientes y α = 0,05, la probabilidad de al menos un falso positivo es aproximadamente 5 %10 %25 %\nEl sesgo de publicación hace que los metaanálisis tiendan a subestimar los efectossobrestimar los efectosno verse afectados\nSmaldino y McElreath (2016) explican la persistencia de la mala ciencia sobre todo por la falta de inteligencia de los investigadoreslos incentivos que premian publicar muchos resultados positivosel coste de los ordenadores\n¿Qué tienen en común FFP?\n\n Son prácticas aceptables en algunas disciplinas Son las tres formas de mala conducta en sentido estricto: fabricación, falsificación y plagio Son tipos de sesgo de publicación\n\n\nVer explicaciones\n\nA menudo se toman de buena fe.\nHypothesizing After the Results are Known.\nMás del 60 % en su combinación más extrema.\nOptional stopping.\n1 − 0,95² ≈ 0,0975.\nSolo se ve la parte significativa (y exagerada).\nSelección natural de métodos por incentivos.\nFabrication, falsification, plagiarism.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
+    "objectID": "04-practicas.html#recursos-complementarios",
+    "href": "04-practicas.html#recursos-complementarios",
+    "title": "Capítulo 4. Prácticas cuestionables y sesgos",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nRetraction Watch\nSeguimiento de retractaciones y casos de mala conducta\n\n\nCódigo europeo de conducta para la integridad en la investigación (ALLEA)\nMarco de referencia en Europa\n\n\nstatcheck\nComprueba la coherencia de los resultados estadísticos publicados",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Prácticas cuestionables y sesgos</span>"
+    ]
+  },
+  {
+    "objectID": "05-reformas.html",
+    "href": "05-reformas.html",
+    "title": "Capítulo 5. Ciencia abierta y reformas",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Ciencia abierta y reformas</span>"
+    ]
+  },
+  {
+    "objectID": "05-reformas.html#lectura-obligatoria",
+    "href": "05-reformas.html#lectura-obligatoria",
+    "title": "Capítulo 5. Ciencia abierta y reformas",
+    "section": "",
+    "text": "Munafò, M. R.; Nosek, B. A.; Bishop, D. V. M.; Button, K. S.; Chambers, C. D.; Percie du Sert, N. et al. (2017). A manifesto for reproducible science. Nature Human Behaviour, 1(1), 0021.\n\n\nLecturas complementarias\n\nNosek, B. A.; Ebersole, C. R.; DeHaven, A. C.; Mellor, D. T. (2018). The preregistration revolution. PNAS, 115(11), 2600-2606.\nChambers, C. D. (2013). Registered Reports: A new publishing initiative at Cortex. Cortex, 49(3), 609-610.\nKaplan, R. M.; Irvin, V. L. (2015). Likelihood of null effects of large NHLBI clinical trials has increased over time. PLoS ONE, 10(8), e0132382.\nScheel, A. M.; Schijen, M. R. M. J.; Lakens, D. (2021). An excess of positive results: Comparing the standard psychology literature with Registered Reports. Advances in Methods and Practices in Psychological Science, 4(2).\nKidwell, M. C. et al. (2016). Badges to acknowledge open practices: A simple, low-cost, effective method for increasing transparency. PLOS Biology, 14(5), e1002456.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Ciencia abierta y reformas</span>"
+    ]
+  },
+  {
+    "objectID": "05-reformas.html#un-manifiesto-en-cinco-frentes",
+    "href": "05-reformas.html#un-manifiesto-en-cinco-frentes",
+    "title": "Capítulo 5. Ciencia abierta y reformas",
+    "section": "1. Un manifiesto en cinco frentes",
+    "text": "1. Un manifiesto en cinco frentes\nMunafò et al. (2017) agrupan las medidas para una ciencia más reproducible en cinco ámbitos:\n\n\n\n\n\n\n\nÁmbito\nMedidas\n\n\n\n\nMétodos\nProteger frente al sesgo cognitivo (enmascaramiento), mejorar la formación metodológica y estadística, colaborar en equipos grandes\n\n\nInformación\nPreregistrar estudios, seguir guías de comunicación (CONSORT, PRISMA, ARRIVE…)\n\n\nReproducibilidad\nCompartir datos, código y materiales; promover la transparencia\n\n\nEvaluación\nDiversificar la revisión por pares y apoyar la revisión posterior a la publicación\n\n\nIncentivos\nPremiar la apertura y la calidad, no solo el número de publicaciones positivas",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Ciencia abierta y reformas</span>"
+    ]
+  },
+  {
+    "objectID": "05-reformas.html#preregistro-e-informes-registrados",
+    "href": "05-reformas.html#preregistro-e-informes-registrados",
+    "title": "Capítulo 5. Ciencia abierta y reformas",
+    "section": "2. Preregistro e informes registrados",
+    "text": "2. Preregistro e informes registrados\nUn preregistro es un plan del estudio (hipótesis, diseño, muestra, variables, análisis) registrado con fecha antes de ver los datos, en un repositorio público como OSF Registries o AsPredicted. Su función no es prohibir la exploración, sino distinguir lo confirmatorio de lo exploratorio (Nosek et al., 2018). Desviarse del plan es legítimo si se declara y se justifica.\nUn informe registrado (Registered Report) va un paso más allá: la revista revisa la introducción, los métodos y el plan de análisis antes de recoger los datos y, si los acepta, se compromete a publicar el artículo sea cual sea el resultado (Chambers, 2013). Así desaparecen a la vez el incentivo para el p-hacking y el sesgo de publicación. Hoy los ofrecen cientos de revistas.\n\n\n\n\n\n\nFigura 1: Del estudio tradicional al informe registrado: la revisión y la aceptación se adelantan a la recogida de datos.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Ciencia abierta y reformas</span>"
+    ]
+  },
+  {
+    "objectID": "05-reformas.html#compartir-datos-código-y-materiales",
+    "href": "05-reformas.html#compartir-datos-código-y-materiales",
+    "title": "Capítulo 5. Ciencia abierta y reformas",
+    "section": "3. Compartir datos, código y materiales",
+    "text": "3. Compartir datos, código y materiales\nCompartir permite reproducir, reutilizar y detectar errores. Los principios FAIR piden que los datos sean localizables, accesibles, interoperables y reutilizables, lo que no siempre significa abiertos: «tan abiertos como sea posible, tan cerrados como sea necesario», por ejemplo con datos personales. Buenas prácticas mínimas:\n\nDepositar en un repositorio con DOI (Zenodo, OSF, un repositorio institucional o temático), no en una web personal.\nIncluir un README con la descripción de variables, la procedencia y la licencia.\nCompartir el código que va de los datos brutos a las figuras, con las versiones del software.\nCitar los datos y el software como cualquier otra fuente.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Ciencia abierta y reformas</span>"
+    ]
+  },
+  {
+    "objectID": "05-reformas.html#funcionan-las-reformas",
+    "href": "05-reformas.html#funcionan-las-reformas",
+    "title": "Capítulo 5. Ciencia abierta y reformas",
+    "section": "4. ¿Funcionan las reformas?",
+    "text": "4. ¿Funcionan las reformas?\nLa metaciencia también se evalúa a sí misma. Algunas pruebas:\n\nTras introducir insignias por compartir datos en Psychological Science, la proporción de artículos con datos abiertos aumentó mucho más que en revistas comparables (Kidwell et al., 2016).\nEn los grandes ensayos clínicos financiados por el NHLBI estadounidense sobre fármacos o suplementos para enfermedades cardiovasculares, la proporción de ensayos con resultado positivo cayó notablemente tras exigirse el registro previo del resultado principal en 2000 (Kaplan e Irvin, 2015).\nLos informes registrados publican una proporción mucho mayor de resultados que no apoyan la hipótesis que los artículos tradicionales (Scheel et al., 2021).\n\nSon pruebas observacionales en su mayoría, y la investigación sobre qué intervenciones funcionan, en qué disciplinas y con qué costes, sigue abierta. La reforma también tiene riesgos: burocracia, «lavado de ciencia abierta» (open washing) o desigualdades entre quienes tienen recursos para cumplir y quienes no.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Ciencia abierta y reformas</span>"
+    ]
+  },
+  {
+    "objectID": "05-reformas.html#lab-c5-plan",
+    "href": "05-reformas.html#lab-c5-plan",
+    "title": "Capítulo 5. Ciencia abierta y reformas",
+    "section": "5. Laboratorio: ¿qué prácticas abiertas necesita tu estudio?",
+    "text": "5. Laboratorio: ¿qué prácticas abiertas necesita tu estudio?\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Ciencia abierta y reformas</span>"
+    ]
+  },
+  {
+    "objectID": "05-reformas.html#actividades",
+    "href": "05-reformas.html#actividades",
+    "title": "Capítulo 5. Ciencia abierta y reformas",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Ciencia abierta y reformas</span>"
+    ]
+  },
+  {
+    "objectID": "05-reformas.html#reto-c5",
+    "href": "05-reformas.html#reto-c5",
+    "title": "Capítulo 5. Ciencia abierta y reformas",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 5 · Tu preregistro\n\n\n\n\nEscribe el preregistro completo del próximo estudio de tu tesis con la plantilla de OSF o de AsPredicted (hipótesis, diseño, justificación de la muestra, variables, análisis, criterios de exclusión).\nIncluye un plan de gestión de datos de una página: dónde depositarás datos y código, con qué licencia y qué no podrás compartir y por qué.\nSeñala dos riesgos de tu plan (por ejemplo, un análisis que dependa de los datos) y cómo los gestionarás.\n\nEntrega: el preregistro (sin necesidad de publicarlo) con la plantilla de entrega. Este reto no tiene solución en el libro.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Ciencia abierta y reformas</span>"
+    ]
+  },
+  {
+    "objectID": "05-reformas.html#autoevaluación",
+    "href": "05-reformas.html#autoevaluación",
+    "title": "Capítulo 5. Ciencia abierta y reformas",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nPreregistrar un estudio prohíbe hacer análisis exploratorios. VERDADEROFALSO\nEn un informe registrado, la revista acepta el artículo en principio después de ver los resultadosantes de que se recojan los datossolo si el resultado es significativo\nLos datos FAIR siempre tienen que ser abiertos. VERDADEROFALSO\nLa guía de comunicación para revisiones sistemáticas es CONSORTPRISMAARRIVE\nSegún Kidwell et al. (2016), las insignias por compartir datos no tuvieron efectose asociaron a un gran aumento de artículos con datos abiertosredujeron la calidad de los datos\nUn plan de estudio registrado con fecha antes de ver los datos es un \nDesviarse del preregistro es legítimo si se declara y se justifica. VERDADEROFALSO\n¿Qué dos problemas elimina a la vez un informe registrado?\n\n La falta de financiación y la burocracia El incentivo para buscar significación y el sesgo de publicación Los errores de código y el plagio\n\n\nVer explicaciones\n\nSolo pide distinguir lo exploratorio de lo confirmatorio.\nAceptación en principio tras la fase 1.\n«Tan abiertos como sea posible, tan cerrados como sea necesario».\nPRISMA (CONSORT, ensayos; ARRIVE, animales).\nAumento muy superior al de revistas comparables.\nPreregistration.\nLa transparencia es lo esencial.\nLa publicación no depende del resultado.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Ciencia abierta y reformas</span>"
+    ]
+  },
+  {
+    "objectID": "05-reformas.html#recursos-complementarios",
+    "href": "05-reformas.html#recursos-complementarios",
+    "title": "Capítulo 5. Ciencia abierta y reformas",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nOSF Registries\nPreregistrar estudios\n\n\nRegistered Reports (COS)\nRevistas que aceptan informes registrados\n\n\nEQUATOR Network\nGuías de comunicación por tipo de estudio\n\n\nZenodo\nDepositar datos y software con DOI",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Ciencia abierta y reformas</span>"
+    ]
+  },
+  {
+    "objectID": "06-evaluacion.html",
+    "href": "06-evaluacion.html",
+    "title": "Capítulo 6. Evaluar la investigación",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Evaluar la investigación</span>"
+    ]
+  },
+  {
+    "objectID": "06-evaluacion.html#lectura-obligatoria",
+    "href": "06-evaluacion.html#lectura-obligatoria",
+    "title": "Capítulo 6. Evaluar la investigación",
+    "section": "",
+    "text": "Moher, D.; Bouter, L.; Kleinert, S.; Glasziou, P.; Sham, M. H.; Barbour, V. et al. (2020). The Hong Kong Principles for assessing researchers: Fostering research integrity. PLOS Biology, 18(7), e3000737.\n\n\nLecturas complementarias\n\nHicks, D. et al. (2015). Bibliometrics: The Leiden Manifesto for research metrics. Nature, 520, 429-431.\nCompromisos del Acuerdo para la reforma de la evaluación de la investigación (CoARA), 2022.\nSmaldino, P. E.; McElreath, R. (2016). The natural selection of bad science. Royal Society Open Science, 3(9), 160384.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Evaluar la investigación</span>"
+    ]
+  },
+  {
+    "objectID": "06-evaluacion.html#lo-que-se-evalúa-es-lo-que-se-hace",
+    "href": "06-evaluacion.html#lo-que-se-evalúa-es-lo-que-se-hace",
+    "title": "Capítulo 6. Evaluar la investigación",
+    "section": "1. Lo que se evalúa es lo que se hace",
+    "text": "1. Lo que se evalúa es lo que se hace\nLa evaluación decide quién obtiene una plaza, un proyecto, una promoción o una acreditación. Por eso no solo mide la investigación: la moldea. Si la evaluación cuenta artículos en revistas de alto factor de impacto, el personal investigador tiende a trocear resultados, a perseguir temas de moda, a evitar los riesgos y a no dedicar tiempo a la docencia, los datos, el software, la revisión por pares o la transferencia. El capítulo 4 mostró que esos incentivos pueden seleccionar, sin mala intención, los métodos menos fiables.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Evaluar la investigación</span>"
+    ]
+  },
+  {
+    "objectID": "06-evaluacion.html#el-movimiento-por-una-evaluación-responsable",
+    "href": "06-evaluacion.html#el-movimiento-por-una-evaluación-responsable",
+    "title": "Capítulo 6. Evaluar la investigación",
+    "section": "2. El movimiento por una evaluación responsable",
+    "text": "2. El movimiento por una evaluación responsable\n\n\n\n\n\n\n\n\nIniciativa\nAño\nIdea central\n\n\n\n\nDORA\n2012\nNo usar métricas de revista (como el factor de impacto) para evaluar artículos ni personas; valorar todos los resultados de la investigación\n\n\nManifiesto de Leiden\n2015\nDiez principios para usar indicadores como apoyo, no como sustituto, del juicio experto\n\n\nPrincipios de Hong Kong\n2020\nEvaluar a las personas por prácticas que favorecen la integridad\n\n\nCoARA\n2022\nCompromiso de instituciones europeas para reformar su evaluación, con plazos\n\n\n\nLos Principios de Hong Kong (Moher et al., 2020) proponen valorar:\n\nLas prácticas responsables en todo el ciclo de la investigación.\nLa comunicación completa y transparente, sea cual sea el resultado.\nLas prácticas de ciencia abierta.\nUna amplia gama de investigación, incluidas las replicaciones y las síntesis.\nOtras contribuciones: revisión por pares, mentoría, divulgación, intercambio de conocimiento.\n\nEl Acuerdo de CoARA compromete a sus firmantes, entre otras cosas, a reconocer la diversidad de contribuciones y carreras, a basar la evaluación sobre todo en la revisión cualitativa con un uso responsable de los indicadores, a abandonar los usos inadecuados de las métricas de revista y del índice h, y a evitar los rankings de universidades en la evaluación de la investigación.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Evaluar la investigación</span>"
+    ]
+  },
+  {
+    "objectID": "06-evaluacion.html#herramientas-para-evaluar-de-otro-modo",
+    "href": "06-evaluacion.html#herramientas-para-evaluar-de-otro-modo",
+    "title": "Capítulo 6. Evaluar la investigación",
+    "section": "3. Herramientas para evaluar de otro modo",
+    "text": "3. Herramientas para evaluar de otro modo\n\nCV narrativos: formatos con apartados en los que la persona explica sus contribuciones al conocimiento, a otras personas, a la comunidad y a la sociedad, con evidencias seleccionadas en lugar de listas exhaustivas.\nTaxonomía CRediT: 14 roles (conceptualización, curación de datos, análisis formal, software, supervisión…) para declarar quién hizo qué en un trabajo colectivo.\nEvidencias diversas: conjuntos de datos y software con DOI, protocolos, informes de revisión, materiales docentes abiertos, impacto en políticas.\nRevisión por pares bien diseñada: criterios explícitos, paneles diversos, formación de los evaluadores y, en algunos casos, sorteos parciales entre las propuestas que superan un umbral de calidad, que algunas agencias ya ensayan.\n\n\n\n\n\n\n\nNotaLa revisión por pares también se estudia\n\n\n\nSus problemas están documentados: baja concordancia entre revisores, sesgos, lentitud y dificultad para detectar errores. Experimentos como los de revisión abierta, doble anónima o con formación específica forman parte de la investigación sobre la investigación (capítulo 1).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Evaluar la investigación</span>"
+    ]
+  },
+  {
+    "objectID": "06-evaluacion.html#evaluar-no-es-solo-medir-un-caso",
+    "href": "06-evaluacion.html#evaluar-no-es-solo-medir-un-caso",
+    "title": "Capítulo 6. Evaluar la investigación",
+    "section": "4. Evaluar no es solo medir: un caso",
+    "text": "4. Evaluar no es solo medir: un caso\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Evaluar la investigación</span>"
+    ]
+  },
+  {
+    "objectID": "06-evaluacion.html#actividades",
+    "href": "06-evaluacion.html#actividades",
+    "title": "Capítulo 6. Evaluar la investigación",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Evaluar la investigación</span>"
+    ]
+  },
+  {
+    "objectID": "06-evaluacion.html#reto-c6",
+    "href": "06-evaluacion.html#reto-c6",
+    "title": "Capítulo 6. Evaluar la investigación",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 6 · Tu trayectoria en formato narrativo\n\n\n\n\nRedacta un CV narrativo de dos páginas con cuatro apartados: contribuciones al conocimiento, a la formación de otras personas, a la comunidad investigadora y a la sociedad.\nSelecciona cinco contribuciones (no solo artículos) y explica para cada una qué aportó y tu papel con roles CRediT.\nAnaliza la convocatoria de evaluación más relevante para ti (una ayuda, una acreditación, una plaza): ¿qué criterios aplica? ¿Son coherentes con DORA y CoARA?\nPropón tres cambios concretos a esa convocatoria y justifícalos con la literatura del libro.\n\nEntrega: con la plantilla de entrega. Este reto no tiene solución en el libro.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Evaluar la investigación</span>"
+    ]
+  },
+  {
+    "objectID": "06-evaluacion.html#autoevaluación",
+    "href": "06-evaluacion.html#autoevaluación",
+    "title": "Capítulo 6. Evaluar la investigación",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nLa evaluación de la investigación solo mide; no influye en cómo se investiga. VERDADEROFALSO\nLa iniciativa europea de 2022 que compromete a las instituciones a reformar su evaluación se llama \nLos Principios de Hong Kong se centran en evaluar a las personas investigadoras para fomentar la productividadintegridadinternacionalización\nLa taxonomía que describe quién hizo qué en un trabajo se llama ORCIDCRediTDORA\nSegún CoARA, deben evitarse los rankings de universidades en la evaluación de la investigación. VERDADEROFALSO\nUn CV narrativo sustituye la lista exhaustiva de publicaciones por contribuciones seleccionadas y explicadas. VERDADEROFALSO\nUn sorteo parcial entre propuestas que superan un umbral de calidad es una práctica prohibidauna técnica que algunas agencias ensayan para repartir fondoslo mismo que evaluar por métricas\n¿Por qué valorar los resultados nulos y las replicaciones?\n\n Porque son más fáciles de publicar Porque son necesarios para una ciencia fiable y la evaluación tradicional los desincentiva Porque tienen más citas\n\n\nVer explicaciones\n\nLo que se evalúa es lo que se hace.\nCoalition for Advancing Research Assessment.\nFostering research integrity.\nContributor Roles Taxonomy.\nEs uno de sus compromisos.\nEs su rasgo central.\nVarias agencias han probado sorteos parciales.\nCorrigen el sesgo de publicación.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Evaluar la investigación</span>"
+    ]
+  },
+  {
+    "objectID": "06-evaluacion.html#recursos-complementarios",
+    "href": "06-evaluacion.html#recursos-complementarios",
+    "title": "Capítulo 6. Evaluar la investigación",
+    "section": "Recursos complementarios",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nCoARA\nCoalición europea para la reforma de la evaluación\n\n\nDORA\nDeclaración y herramientas para evaluar sin factor de impacto\n\n\nCRediT\nLos 14 roles de contribución\n\n\nRésumé for Research and Innovation (UKRI)\nUn modelo de CV narrativo",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Evaluar la investigación</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html",
+    "href": "91-guia-docente.html",
+    "title": "Apéndice A — Guía para el profesorado",
+    "section": "",
+    "text": "Propuesta de evaluación\nEste libro sirve como manual de un curso o seminario de doctorado de unas 20-30 horas sobre ciencia de la ciencia y metaciencia, o como lectura autónoma. Cada capítulo equivale a una sesión de 3-4 horas con lectura previa.\nLa rúbrica común de los retos valora la pregunta y las fuentes (20 %), el rigor del análisis (30 %), la interpretación crítica (25 %), la reproducibilidad de datos y código (15 %) y la presentación (10 %). Los retos no tienen solución en el libro: cada persona trabaja sobre su propio campo.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#propuesta-de-evaluación",
+    "href": "91-guia-docente.html#propuesta-de-evaluación",
+    "title": "Apéndice A — Guía para el profesorado",
+    "section": "",
+    "text": "Actividad\nPeso orientativo\nApoyo en el libro\n\n\n\n\nRetos evaluables (elegir 4 de 6)\n60 %\nUn reto por capítulo, con rúbrica en la plantilla de entrega\n\n\nPresentación de una lectura obligatoria\n20 %\nDiapositivas y preguntas para debatir de cada capítulo\n\n\nParticipación y autoevaluaciones\n20 %\nAutoevaluaciones y actividades interactivas",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
+    "href": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
+    "title": "Apéndice A — Guía para el profesorado",
+    "section": "Actividades interactivas y laboratorios",
+    "text": "Actividades interactivas y laboratorios\nCada capítulo incluye actividades de corrección inmediata y laboratorios que se usan sin programar: índice h, valor predictivo positivo de un resultado significativo, simulación de p-hacking y escenarios de decisión (análisis que no sale, planificación de prácticas abiertas, comisión de selección). Los ejercicios de R se ejecutan en el navegador con webR. En el PDF y el EPUB, las actividades aparecen en papel con su solución.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#autoevaluación-en-aula-global",
+    "href": "91-guia-docente.html#autoevaluación-en-aula-global",
+    "title": "Apéndice A — Guía para el profesorado",
+    "section": "Autoevaluación en Aula Global",
+    "text": "Autoevaluación en Aula Global\nLas preguntas de autoevaluación están exportadas a Moodle XML en la carpeta moodle/ del repositorio. Se importan desde Banco de preguntas → Importar → Formato Moodle XML.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#diapositivas",
+    "href": "91-guia-docente.html#diapositivas",
+    "title": "Apéndice A — Guía para el profesorado",
+    "section": "Diapositivas",
+    "text": "Diapositivas\nCada capítulo tiene diapositivas con los objetivos, las figuras, las tablas, la lectura obligatoria, preguntas para debatir y el reto: diapositivas/ (F, pantalla completa; S, notas).",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#mantenimiento",
+    "href": "91-guia-docente.html#mantenimiento",
+    "title": "Apéndice A — Guía para el profesorado",
+    "section": "Mantenimiento",
+    "text": "Mantenimiento\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\npython3 herramientas/diapositivas.py    # diapositivas de clase\nLos datos de las simulaciones son generados con semilla fija y no corresponden a personas reales.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html",
+    "href": "92-glosario.html",
+    "title": "Apéndice B — Glosario",
+    "section": "",
+    "text": "Qué es la ciencia de la ciencia\nTérminos del libro ordenados por capítulo. Cada entrada enlaza con el capítulo donde se explica.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#qué-es-la-ciencia-de-la-ciencia",
+    "href": "92-glosario.html#qué-es-la-ciencia-de-la-ciencia",
+    "title": "Apéndice B — Glosario",
+    "section": "",
+    "text": "Ciencia de la ciencia\nScience of science. Estudio científico de cómo se produce, comunica y evalúa el conocimiento, con datos sobre publicaciones, citas, colaboraciones y financiación. → Capítulo 1\n\n\nMetaciencia\nInvestigación sobre la fiabilidad de los métodos y resultados científicos y sobre las reformas que la mejoran. También, metainvestigación. → Capítulo 1\n\n\nInvestigación sobre la investigación\nResearch on research (RoR). Estudio de qué hace que la investigación sea mejor y más útil, con atención especial a la financiación y la política científica. → Capítulo 1\n\n\nCienciometría\nEstudio cuantitativo de la ciencia, sobre todo a partir de publicaciones y citas. → Capítulo 1\n\n\nEfecto Mateo\nAcumulación de reconocimiento en quienes ya lo tienen, descrita por Merton (1968). → Capítulo 1\n\n\nLey de Price\nObservación de que una pequeña parte de los autores produce una gran parte de las publicaciones de un campo. → Capítulo 1",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#medir-la-ciencia",
+    "href": "92-glosario.html#medir-la-ciencia",
+    "title": "Apéndice B — Glosario",
+    "section": "Medir la ciencia",
+    "text": "Medir la ciencia\n\nCita\nReferencia de un documento a otro. Mide uso o visibilidad, no calidad. → Capítulo 2\n\n\nÍndice h\nMayor número h tal que h trabajos tienen al menos h citas cada uno (Hirsch, 2005). → Capítulo 2\n\n\nFactor de impacto\nMedia de citas recibidas en un año por los artículos que una revista publicó en los dos años anteriores. Es un indicador de revista. → Capítulo 2\n\n\nNormalización por campo\nComparación de las citas de un trabajo con la media de los trabajos del mismo campo, año y tipo. → Capítulo 2\n\n\nDistribución asimétrica\nDistribución en la que pocos casos acumulan valores muy altos; la media no representa lo típico. → Capítulo 2\n\n\nAltmetría\nIndicadores basados en menciones en redes sociales, noticias, documentos de políticas o gestores de referencias. → Capítulo 2\n\n\nManifiesto de Leiden\nDiez principios para el uso responsable de los indicadores en la evaluación (Hicks et al., 2015). → Capítulo 2",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#reproducibilidad",
+    "href": "92-glosario.html#reproducibilidad",
+    "title": "Apéndice B — Glosario",
+    "section": "Reproducibilidad",
+    "text": "Reproducibilidad\n\nReproducibilidad\nObtener los mismos resultados con los mismos datos y el mismo código. → Capítulo 3\n\n\nReplicabilidad\nObtener resultados coherentes con datos nuevos recogidos con el mismo método. → Capítulo 3\n\n\nPotencia estadística\nProbabilidad de que un estudio detecte un efecto si existe. → Capítulo 3\n\n\nValor predictivo positivo\nProbabilidad de que un resultado significativo corresponda a un efecto real. → Capítulo 3\n\n\nFalso positivo\nResultado significativo cuando no existe un efecto real (error de tipo I). → Capítulo 3\n\n\nMaldición del ganador\nTendencia de los estudios pequeños que resultan significativos a sobrestimar el tamaño del efecto. → Capítulo 3",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#prácticas-cuestionables",
+    "href": "92-glosario.html#prácticas-cuestionables",
+    "title": "Apéndice B — Glosario",
+    "section": "Prácticas cuestionables",
+    "text": "Prácticas cuestionables\n\nPrácticas cuestionables\nDecisiones que no son fraude pero aumentan la probabilidad de resultados falsos, como informar solo de lo significativo. → Capítulo 4\n\n\np-hacking\nProbar análisis o decisiones hasta obtener un resultado significativo. → Capítulo 4\n\n\nHARKing\nHypothesizing after the results are known: presentar como hipótesis previa lo descubierto tras ver los datos. → Capítulo 4\n\n\nGrados de libertad del investigador\nDecisiones que se pueden tomar al recoger y analizar los datos y que cambian el resultado. → Capítulo 4\n\n\nSesgo de publicación\nDependencia de la publicación respecto del resultado: se publican más los resultados positivos. → Capítulo 4\n\n\nParada opcional\nDecidir cuándo dejar de recoger datos según el resultado provisional. → Capítulo 4",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#reformas",
+    "href": "92-glosario.html#reformas",
+    "title": "Apéndice B — Glosario",
+    "section": "Reformas",
+    "text": "Reformas\n\nCiencia abierta\nConjunto de prácticas que hacen accesibles y transparentes las publicaciones, los datos, el código, los métodos y la evaluación. → Capítulo 5\n\n\nPreregistro\nPlan del estudio registrado con fecha antes de analizar los datos. → Capítulo 5\n\n\nInforme registrado\nFormato de publicación en el que la revista acepta el estudio antes de conocer los resultados. → Capítulo 5\n\n\nDatos FAIR\nDatos localizables, accesibles, interoperables y reutilizables. → Capítulo 5\n\n\nInsignias de prácticas abiertas\nDistintivos que algunas revistas conceden a los artículos que comparten datos, materiales o preregistros. → Capítulo 5\n\n\nPreprint\nVersión de un trabajo difundida antes de la revisión por pares. → Capítulo 5",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#evaluación",
+    "href": "92-glosario.html#evaluación",
+    "title": "Apéndice B — Glosario",
+    "section": "Evaluación",
+    "text": "Evaluación\n\nEvaluación responsable\nEvaluación basada en el juicio experto, apoyada por indicadores bien usados y coherente con la misión de lo evaluado. → Capítulo 6\n\n\nCoARA\nCoalición para el avance de la evaluación de la investigación, creada en 2022 en torno a un acuerdo europeo con diez compromisos. → Capítulo 6\n\n\nDORA\nDeclaración de San Francisco sobre la evaluación de la investigación (2012). → Capítulo 6\n\n\nPrincipios de Hong Kong\nCinco principios para evaluar a las personas investigadoras fomentando la integridad (Moher et al., 2020). → Capítulo 6\n\n\nCV narrativo\nCurrículo que presenta contribuciones seleccionadas y explicadas en lugar de listas exhaustivas. → Capítulo 6\n\n\nRevisión por pares\nEvaluación de un trabajo o una propuesta por especialistas del área. → Capítulo 6\n\n\nCRediT\nTaxonomía de 14 roles para declarar la contribución de cada persona a un trabajo. → Capítulo 6",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  }
+]

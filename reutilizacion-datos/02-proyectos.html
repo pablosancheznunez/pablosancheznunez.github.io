@@ -74,17 +74,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,10 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -458,6 +465,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#paso-4.-consultar-el-catálogo-nacional-en-directo-apartado-1" id="toc-paso-4.-consultar-el-catálogo-nacional-en-directo-apartado-1" class="nav-link" data-scroll-target="#paso-4.-consultar-el-catálogo-nacional-en-directo-apartado-1">Paso 4. Consultar el catálogo nacional en directo (apartado 1)</a></li>
   <li><a href="#ejercicio-2.6" id="toc-ejercicio-2.6" class="nav-link" data-scroll-target="#ejercicio-2.6">Ejercicio 2.6</a></li>
   </ul></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t2" id="toc-reto-t2" class="nav-link" data-scroll-target="#reto-t2">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#para-practicar-fuera-del-libro" id="toc-para-practicar-fuera-del-libro" class="nav-link" data-scroll-target="#para-practicar-fuera-del-libro">Para practicar fuera del libro</a></li>
@@ -711,7 +719,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiY2Fz
 <div id="fig-casos" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Barras horizontales apiladas. Empresas: 3 casos de efecto económico. Administraciones: 1 social y 1 de buen gobierno. Ciudadanía: 1 social y 1 de buen gobierno. Investigadores: 2 sociales. Desarrolladores: 2 sociales. Periodistas: 1 de buen gobierno.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-casos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/tema2_casos_usuario_efecto.svg" class="img-fluid figure-img" alt="Barras horizontales apiladas. Empresas: 3 casos de efecto económico. Administraciones: 1 social y 1 de buen gobierno. Ciudadanía: 1 social y 1 de buen gobierno. Investigadores: 2 sociales. Desarrolladores: 2 sociales. Periodistas: 1 de buen gobierno.">
+<a href="figuras/tema2_casos_usuario_efecto.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Los doce casos ilustrativos por tipo de usuario y efecto. En esta muestra inventada, el valor económico procede solo de empresas, y el buen gobierno, de periodistas, administraciones y ciudadanía."><img src="figuras/tema2_casos_usuario_efecto.svg" class="img-fluid figure-img" alt="Barras horizontales apiladas. Empresas: 3 casos de efecto económico. Administraciones: 1 social y 1 de buen gobierno. Ciudadanía: 1 social y 1 de buen gobierno. Investigadores: 2 sociales. Desarrolladores: 2 sociales. Periodistas: 1 de buen gobierno."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-casos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Los doce casos ilustrativos por tipo de usuario y efecto. En esta muestra inventada, el valor económico procede solo de empresas, y el buen gobierno, de periodistas, administraciones y ciudadanía.
@@ -934,6 +942,28 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQy
 </script>
 </section>
 </section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-clasificar" id="ia-t2-portales"><script type="application/json" class="ia-datos">{"categorias":["España","Unión Europea","Internacional o de otro país"],"enunciado":"","explicacion":"","items":[{"categoria":"España","explicacion":"","texto":"datos.gob.es"},{"categoria":"Unión Europea","explicacion":"","texto":"data.europa.eu"},{"categoria":"Internacional o de otro país","explicacion":"","texto":"data.gov"},{"categoria":"España","explicacion":"","texto":"datos.madrid.es"},{"categoria":"Internacional o de otro país","explicacion":"","texto":"Zenodo"}],"tipo":"clasificar","titulo":"¿De qué ámbito es cada portal?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t2-usuarios"><script type="application/json" class="ia-datos">{"categorias":["Empresa","Ciudadanía","Investigación","Periodismo"],"enunciado":"","explicacion":"","items":[{"categoria":"Empresa","explicacion":"","texto":"Una aplicación de transporte que muestra los horarios en tiempo\nreal"},{"categoria":"Ciudadanía","explicacion":"","texto":"Un vecino que consulta la calidad del aire de su barrio"},{"categoria":"Investigación","explicacion":"","texto":"Un estudio sobre la relación entre bibliotecas y nivel educativo"},{"categoria":"Periodismo","explicacion":"","texto":"Un reportaje que cruza contratos públicos y empresas\nadjudicatarias"}],"tipo":"clasificar","titulo":"¿Quién reutiliza y para qué?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Errores frecuentes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Pensar que un portal es una fuente única</strong>: muchos conjuntos se repiten en el portal local, el autonómico y el nacional; elige el original.</li>
+<li><strong>No mirar la fecha de actualización</strong> antes de basar un proyecto en un conjunto de datos.</li>
+<li><strong>Confundir «publicado» con «reutilizable»</strong>: comprueba la licencia y el formato.</li>
+</ul>
+</div>
+</div>
+</section>
 <section id="reto-t2" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t2">Reto evaluable</h2>
 <div class="callout callout-style-simple callout-important no-icon callout-titled">
@@ -1127,7 +1157,7 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
    preguntas de autoevaluación acertadas en cada capítulo. Se guarda solo en
    el almacenamiento local de este navegador; no se envía a ningún servidor. */
 (function () {
-  var CLAVE = 'reutilizacion-datos-progreso-v1';
+  var CLAVE = 'progreso-' + (location.pathname.split('/').filter(Boolean)[0] || 'libro') + '-v1';
   function leer() { try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch (e) { return {}; } }
   function guardar(d) { try { localStorage.setItem(CLAVE, JSON.stringify(d)); } catch (e) {} }
   var pagina = location.pathname.split('/').pop() || 'index.html';
@@ -1149,23 +1179,26 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -1174,10 +1207,12 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -1185,13 +1220,13 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -1204,6 +1239,9 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -1230,10 +1268,14 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -1716,6 +1758,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

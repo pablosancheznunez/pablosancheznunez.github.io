@@ -1,0 +1,35 @@
+---
+title: "Entrega del reto"
+author: "Tu nombre"
+date: today
+lang: es
+format:
+  html:
+    theme: [cosmo, informe.scss]
+    embed-resources: true
+    toc: true
+---
+
+## Reto
+
+Qué capítulo y qué reto entregas, en una frase.
+
+## Trabajo
+
+Escribe aquí tu respuesta. Añade figuras con `![pie](fichero.png)` y cita tus fuentes.
+
+## Referencias
+
+## Declaración de uso de IA
+
+Indica si has usado IA generativa, qué herramienta, para qué y cómo has comprobado el resultado.
+
+## Rúbrica (para el profesorado)
+
+| Criterio | Peso | Puntuación | Comentarios |
+|---|---|---|---|
+| Pregunta y fuentes | 20 % | | |
+| Rigor del análisis | 30 % | | |
+| Interpretación crítica | 25 % | | |
+| Reproducibilidad (datos y código) | 15 % | | |
+| Presentación | 10 % | | |

@@ -1,0 +1,25 @@
+/*-- scss:defaults --*/
+// Tema para las entregas de los libros de prototipado y competencias de Pablo Sánchez-Núñez.
+// Pablo Sánchez-Núñez (UC3M) · CC BY 4.0. Úsalo junto con cosmo:
+//   theme: [cosmo, informe.scss]
+
+$primary:        #000e78;  // azul UC3M
+$secondary:      #5a6270;
+$success:        #2e7d32;
+$danger:         #b3261e;
+$body-color:     #1f2430;
+$link-color:     $primary;
+$font-size-root: 17px;
+$headings-font-weight: 600;
+$code-color:     #7a1f5c;
+$code-bg:        #f4f5fb;
+
+/*-- scss:rules --*/
+h1, .title { color: $primary; }
+h1 { border-bottom: 2px solid $primary; padding-bottom: .25rem; margin-top: 2.2rem; }
+.subtitle { color: $secondary; font-size: 1.05rem; }
+table { font-size: .92rem; }
+thead th { background: #eef0fb; }
+.callout { border-left-color: $primary !important; }
+figure figcaption { font-style: italic; color: $secondary; }
+pre.sourceCode { border-left: 3px solid $primary; }

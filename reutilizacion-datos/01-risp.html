@@ -74,17 +74,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,10 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -464,6 +471,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-1.5" id="toc-ejercicio-1.5" class="nav-link" data-scroll-target="#ejercicio-1.5">Ejercicio 1.5</a></li>
   <li><a href="#ejercicio-1.6" id="toc-ejercicio-1.6" class="nav-link" data-scroll-target="#ejercicio-1.6">Ejercicio 1.6</a></li>
   </ul></li>
+  <li><a href="#lab-t1-licencias" id="toc-lab-t1-licencias" class="nav-link" data-scroll-target="#lab-t1-licencias">Laboratorio: ¿puedo combinar estos datos?</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t1" id="toc-reto-t1" class="nav-link" data-scroll-target="#reto-t1">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#para-practicar-fuera-del-libro" id="toc-para-practicar-fuera-del-libro" class="nav-link" data-scroll-target="#para-practicar-fuera-del-libro">Para practicar fuera del libro</a></li>
@@ -634,7 +643,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="fig-cronologia" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cronología vertical con dos columnas, España a la izquierda y Unión Europea a la derecha, ordenada por fecha de 2003 a 2024. UE: Directiva 2003/98/CE, Directiva 2013/37/UE, Directiva 2019/1024, Reglamentos 2022/868, de Ejecución 2023/138, 2023/2854 y 2024/1689. España: Ley 37/2007, RD 1495/2011, NTI-RISP, Ley 19/2013, Ley 18/2015 y RDL 24/2021.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cronologia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/tema1_cronologia.svg" class="img-fluid figure-img" alt="Cronología vertical con dos columnas, España a la izquierda y Unión Europea a la derecha, ordenada por fecha de 2003 a 2024. UE: Directiva 2003/98/CE, Directiva 2013/37/UE, Directiva 2019/1024, Reglamentos 2022/868, de Ejecución 2023/138, 2023/2854 y 2024/1689. España: Ley 37/2007, RD 1495/2011, NTI-RISP, Ley 19/2013, Ley 18/2015 y RDL 24/2021.">
+<a href="figuras/tema1_cronologia.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Cronología de las normas europeas y españolas sobre reutilización. Cada directiva europea va seguida de su transposición española; desde 2022 dominan los reglamentos europeos, que se aplican sin transposición."><img src="figuras/tema1_cronologia.svg" class="img-fluid figure-img" alt="Cronología vertical con dos columnas, España a la izquierda y Unión Europea a la derecha, ordenada por fecha de 2003 a 2024. UE: Directiva 2003/98/CE, Directiva 2013/37/UE, Directiva 2019/1024, Reglamentos 2022/868, de Ejecución 2023/138, 2023/2854 y 2024/1689. España: Ley 37/2007, RD 1495/2011, NTI-RISP, Ley 19/2013, Ley 18/2015 y RDL 24/2021."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cronologia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Cronología de las normas europeas y españolas sobre reutilización. Cada directiva europea va seguida de su transposición española; desde 2022 dominan los reglamentos europeos, que se aplican sin transposición.
@@ -1046,6 +1055,89 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQx
 </script>
 </section>
 </section>
+<section id="lab-t1-licencias" class="level2">
+<h2 class="anchored" data-anchor-id="lab-t1-licencias">Laboratorio: ¿puedo combinar estos datos?</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · orientativo, no es asesoramiento jurídico</p>
+</div>
+<p>Quieres crear un conjunto de datos nuevo combinando dos fuentes. Elige sus licencias y el uso que harás: el laboratorio te dice si, en principio, puedes combinarlas y con qué licencia tendrías que publicar el resultado.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb7" data-startfrom="479" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 478;"><span id="cb7-479"><a href="#cb7-479" aria-hidden="true" tabindex="-1"></a>seleccion <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
+<span id="cb7-480"><a href="#cb7-480" aria-hidden="true" tabindex="-1"></a>licencias <span class="op">=</span> [[<span class="st">"cc0"</span><span class="op">,</span> <span class="st">"CC0 (dominio público)"</span>]<span class="op">,</span> [<span class="st">"by"</span><span class="op">,</span> <span class="st">"CC BY 4.0"</span>]<span class="op">,</span> [<span class="st">"bysa"</span><span class="op">,</span> <span class="st">"CC BY-SA 4.0"</span>]<span class="op">,</span> [<span class="st">"odbl"</span><span class="op">,</span> <span class="st">"ODbL 1.0"</span>]<span class="op">,</span> [<span class="st">"bync"</span><span class="op">,</span> <span class="st">"CC BY-NC 4.0"</span>]<span class="op">,</span> [<span class="st">"aviso"</span><span class="op">,</span> <span class="st">"Aviso legal de datos.gob.es (reutilización con cita)"</span>]]</span>
+<span id="cb7-481"><a href="#cb7-481" aria-hidden="true" tabindex="-1"></a>viewof lic_a <span class="op">=</span> <span class="fu">seleccion</span>(<span class="st">"Licencia de la fuente A"</span><span class="op">,</span> licencias<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"by"</span>})</span>
+<span id="cb7-482"><a href="#cb7-482" aria-hidden="true" tabindex="-1"></a>viewof lic_b <span class="op">=</span> <span class="fu">seleccion</span>(<span class="st">"Licencia de la fuente B"</span><span class="op">,</span> licencias<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"bysa"</span>})</span>
+<span id="cb7-483"><a href="#cb7-483" aria-hidden="true" tabindex="-1"></a>viewof uso <span class="op">=</span> <span class="fu">seleccion</span>(<span class="st">"Uso previsto"</span><span class="op">,</span> [[<span class="st">"nc"</span><span class="op">,</span> <span class="st">"Sin fines comerciales"</span>]<span class="op">,</span> [<span class="st">"com"</span><span class="op">,</span> <span class="st">"Comercial"</span>]]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"com"</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb8" data-startfrom="487" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 486;"><span id="cb8-487"><a href="#cb8-487" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb8-488"><a href="#cb8-488" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> nombre <span class="op">=</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">fromEntries</span>(licencias)<span class="op">;</span></span>
+<span id="cb8-489"><a href="#cb8-489" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> sa <span class="op">=</span> <span class="kw">new</span> <span class="bu">Set</span>([<span class="st">"bysa"</span><span class="op">,</span> <span class="st">"odbl"</span>])<span class="op">;</span></span>
+<span id="cb8-490"><a href="#cb8-490" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> res<span class="op">,</span> clase <span class="op">=</span> <span class="st">"lab-bien"</span><span class="op">,</span> nota <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb8-491"><a href="#cb8-491" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> par <span class="op">=</span> [lic_a<span class="op">,</span> lic_b]<span class="op">;</span></span>
+<span id="cb8-492"><a href="#cb8-492" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (par<span class="op">.</span><span class="fu">includes</span>(<span class="st">"bync"</span>) <span class="op">&amp;&amp;</span> uso <span class="op">===</span> <span class="st">"com"</span>) { res <span class="op">=</span> <span class="st">"No: una de las fuentes prohíbe el uso comercial."</span><span class="op">;</span> clase <span class="op">=</span> <span class="st">"lab-mal"</span><span class="op">;</span> }</span>
+<span id="cb8-493"><a href="#cb8-493" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (par<span class="op">.</span><span class="fu">includes</span>(<span class="st">"bysa"</span>) <span class="op">&amp;&amp;</span> par<span class="op">.</span><span class="fu">includes</span>(<span class="st">"odbl"</span>)) { res <span class="op">=</span> <span class="st">"En principio no: CC BY-SA y ODbL son dos licencias «copyleft» distintas y cada una exige publicar el resultado con la suya."</span><span class="op">;</span> clase <span class="op">=</span> <span class="st">"lab-mal"</span><span class="op">;</span> nota <span class="op">=</span> <span class="st">"Algunas combinaciones se resuelven con permisos expresos de quien publica los datos."</span><span class="op">;</span> }</span>
+<span id="cb8-494"><a href="#cb8-494" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (par<span class="op">.</span><span class="fu">includes</span>(<span class="st">"bync"</span>) <span class="op">&amp;&amp;</span> par<span class="op">.</span><span class="fu">some</span>(x <span class="kw">=&gt;</span> sa<span class="op">.</span><span class="fu">has</span>(x))) { res <span class="op">=</span> <span class="st">"Problemático: la licencia copyleft exige compartir igual y la NC añade una restricción que esta no admite."</span><span class="op">;</span> clase <span class="op">=</span> <span class="st">"lab-mal"</span><span class="op">;</span> }</span>
+<span id="cb8-495"><a href="#cb8-495" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
+<span id="cb8-496"><a href="#cb8-496" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> fuerte <span class="op">=</span> par<span class="op">.</span><span class="fu">includes</span>(<span class="st">"odbl"</span>) <span class="op">?</span> <span class="st">"odbl"</span> <span class="op">:</span> par<span class="op">.</span><span class="fu">includes</span>(<span class="st">"bysa"</span>) <span class="op">?</span> <span class="st">"bysa"</span> <span class="op">:</span> par<span class="op">.</span><span class="fu">includes</span>(<span class="st">"bync"</span>) <span class="op">?</span> <span class="st">"bync"</span> <span class="op">:</span> par<span class="op">.</span><span class="fu">includes</span>(<span class="st">"by"</span>) <span class="op">||</span> par<span class="op">.</span><span class="fu">includes</span>(<span class="st">"aviso"</span>) <span class="op">?</span> <span class="st">"by"</span> <span class="op">:</span> <span class="st">"cc0"</span><span class="op">;</span></span>
+<span id="cb8-497"><a href="#cb8-497" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> final <span class="op">=</span> {<span class="dt">odbl</span><span class="op">:</span> <span class="st">"ODbL 1.0"</span><span class="op">,</span> <span class="dt">bysa</span><span class="op">:</span> <span class="st">"CC BY-SA 4.0"</span><span class="op">,</span> <span class="dt">bync</span><span class="op">:</span> <span class="st">"CC BY-NC 4.0 (solo usos no comerciales)"</span><span class="op">,</span> <span class="dt">by</span><span class="op">:</span> <span class="st">"una licencia que mantenga el reconocimiento (por ejemplo, CC BY 4.0)"</span><span class="op">,</span> <span class="dt">cc0</span><span class="op">:</span> <span class="st">"cualquier licencia (incluso CC0)"</span>}[fuerte]<span class="op">;</span></span>
+<span id="cb8-498"><a href="#cb8-498" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> <span class="vs">`Sí. El resultado debería publicarse con </span><span class="sc">${</span>final<span class="sc">}</span><span class="vs">, citando las dos fuentes.`</span><span class="op">;</span></span>
+<span id="cb8-499"><a href="#cb8-499" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (fuerte <span class="op">===</span> <span class="st">"bync"</span>) clase <span class="op">=</span> <span class="st">"lab-medio"</span><span class="op">;</span></span>
+<span id="cb8-500"><a href="#cb8-500" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-501"><a href="#cb8-501" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb8-502"><a href="#cb8-502" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;p&gt;&lt;strong&gt;</span><span class="sc">${</span>nombre[lic_a]<span class="sc">}</span><span class="vs">&lt;/strong&gt; + &lt;strong&gt;</span><span class="sc">${</span>nombre[lic_b]<span class="sc">}</span><span class="vs">&lt;/strong&gt;, uso </span><span class="sc">${</span>uso <span class="op">===</span> <span class="st">"com"</span> <span class="op">?</span> <span class="st">"comercial"</span> <span class="op">:</span> <span class="st">"no comercial"</span><span class="sc">}</span><span class="vs">:&lt;/p&gt;</span></span>
+<span id="cb8-503"><a href="#cb8-503" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;p class="</span><span class="sc">${</span>clase<span class="sc">}</span><span class="vs">" style="font-weight:600"&gt;</span><span class="sc">${</span>res<span class="sc">}</span><span class="vs">&lt;/p&gt;</span><span class="sc">${</span>nota <span class="op">?</span> <span class="vs">`&lt;p class="small"&gt;</span><span class="sc">${</span>nota<span class="sc">}</span><span class="vs">&lt;/p&gt;`</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span></span>
+<span id="cb8-504"><a href="#cb8-504" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;p class="small"&gt;Regla general: el resultado hereda la condición más exigente (reconocimiento, compartir igual, no comercial). Las licencias NC no se consideran abiertas según la Open Definition. Ante un caso real, consulta las condiciones completas.&lt;/p&gt;`</span><span class="op">;</span></span>
+<span id="cb8-505"><a href="#cb8-505" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d<span class="op">;</span></span>
+<span id="cb8-506"><a href="#cb8-506" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-ordenar" id="ia-t1-normas"><script type="application/json" class="ia-datos">{"enunciado":"","explicacion":"","items":["Directiva 2003/98/CE sobre reutilización de la información del sector\npúblico","Ley 37/2007, sobre reutilización de la información del sector\npúblico","Ley 19/2013, de transparencia, acceso a la información pública y buen\ngobierno","Directiva (UE) 2019/1024, de datos abiertos","Reglamento de Ejecución (UE) 2023/138, de conjuntos de datos de alto\nvalor"],"tipo":"ordenar","titulo":"Ordena cronológicamente las normas"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t1-derechos"><script type="application/json" class="ia-datos">{"categorias":["Administración","Reutilizador"],"enunciado":"","explicacion":"","items":[{"categoria":"Reutilizador","explicacion":"","texto":"Citar la fuente de los datos"},{"categoria":"Administración","explicacion":"","texto":"Publicar los datos en formatos abiertos cuando sea posible"},{"categoria":"Reutilizador","explicacion":"","texto":"No desnaturalizar el sentido de la información"},{"categoria":"Reutilizador","explicacion":"","texto":"Indicar la fecha de la última actualización"},{"categoria":"Administración","explicacion":"","texto":"Responder a las solicitudes de reutilización en plazo"},{"categoria":"Reutilizador","explicacion":"","texto":"No sugerir que la Administración patrocina el uso"}],"tipo":"clasificar","titulo":"¿Obligación de la Administración o de quien reutiliza?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+</section>
 <section id="reto-t1" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t1">Reto evaluable</h2>
 <div class="callout callout-style-simple callout-important no-icon callout-titled">
@@ -1245,7 +1337,7 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
    preguntas de autoevaluación acertadas en cada capítulo. Se guarda solo en
    el almacenamiento local de este navegador; no se envía a ningún servidor. */
 (function () {
-  var CLAVE = 'reutilizacion-datos-progreso-v1';
+  var CLAVE = 'progreso-' + (location.pathname.split('/').filter(Boolean)[0] || 'libro') + '-v1';
   function leer() { try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch (e) { return {}; } }
   function guardar(d) { try { localStorage.setItem(CLAVE, JSON.stringify(d)); } catch (e) {} }
   var pagina = location.pathname.split('/').pop() || 'index.html';
@@ -1267,23 +1359,26 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -1292,10 +1387,12 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -1303,13 +1400,13 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -1322,6 +1419,9 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -1348,10 +1448,14 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -1380,7 +1484,7 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InNlbGVjY2lvbiA9IHdpbmRvdy5MYWIuc2VsZWNjaW9uXG5saWNlbmNpYXMgPSBbW1wiY2MwXCIsIFwiQ0MwIChkb21pbmlvIHDDumJsaWNvKVwiXSwgW1wiYnlcIiwgXCJDQyBCWSA0LjBcIl0sIFtcImJ5c2FcIiwgXCJDQyBCWS1TQSA0LjBcIl0sIFtcIm9kYmxcIiwgXCJPRGJMIDEuMFwiXSwgW1wiYnluY1wiLCBcIkNDIEJZLU5DIDQuMFwiXSwgW1wiYXZpc29cIiwgXCJBdmlzbyBsZWdhbCBkZSBkYXRvcy5nb2IuZXMgKHJldXRpbGl6YWNpw7NuIGNvbiBjaXRhKVwiXV1cbnZpZXdvZiBsaWNfYSA9IHNlbGVjY2lvbihcIkxpY2VuY2lhIGRlIGxhIGZ1ZW50ZSBBXCIsIGxpY2VuY2lhcywge3ZhbHVlOiBcImJ5XCJ9KVxudmlld29mIGxpY19iID0gc2VsZWNjaW9uKFwiTGljZW5jaWEgZGUgbGEgZnVlbnRlIEJcIiwgbGljZW5jaWFzLCB7dmFsdWU6IFwiYnlzYVwifSlcbnZpZXdvZiB1c28gPSBzZWxlY2Npb24oXCJVc28gcHJldmlzdG9cIiwgW1tcIm5jXCIsIFwiU2luIGZpbmVzIGNvbWVyY2lhbGVzXCJdLCBbXCJjb21cIiwgXCJDb21lcmNpYWxcIl1dLCB7dmFsdWU6IFwiY29tXCJ9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoie1xuICBjb25zdCBub21icmUgPSBPYmplY3QuZnJvbUVudHJpZXMobGljZW5jaWFzKTtcbiAgY29uc3Qgc2EgPSBuZXcgU2V0KFtcImJ5c2FcIiwgXCJvZGJsXCJdKTtcbiAgbGV0IHJlcywgY2xhc2UgPSBcImxhYi1iaWVuXCIsIG5vdGEgPSBcIlwiO1xuICBjb25zdCBwYXIgPSBbbGljX2EsIGxpY19iXTtcbiAgaWYgKHBhci5pbmNsdWRlcyhcImJ5bmNcIikgJiYgdXNvID09PSBcImNvbVwiKSB7IHJlcyA9IFwiTm86IHVuYSBkZSBsYXMgZnVlbnRlcyBwcm9ow61iZSBlbCB1c28gY29tZXJjaWFsLlwiOyBjbGFzZSA9IFwibGFiLW1hbFwiOyB9XG4gIGVsc2UgaWYgKHBhci5pbmNsdWRlcyhcImJ5c2FcIikgJiYgcGFyLmluY2x1ZGVzKFwib2RibFwiKSkgeyByZXMgPSBcIkVuIHByaW5jaXBpbyBubzogQ0MgQlktU0EgeSBPRGJMIHNvbiBkb3MgbGljZW5jaWFzIMKrY29weWxlZnTCuyBkaXN0aW50YXMgeSBjYWRhIHVuYSBleGlnZSBwdWJsaWNhciBlbCByZXN1bHRhZG8gY29uIGxhIHN1eWEuXCI7IGNsYXNlID0gXCJsYWItbWFsXCI7IG5vdGEgPSBcIkFsZ3VuYXMgY29tYmluYWNpb25lcyBzZSByZXN1ZWx2ZW4gY29uIHBlcm1pc29zIGV4cHJlc29zIGRlIHF1aWVuIHB1YmxpY2EgbG9zIGRhdG9zLlwiOyB9XG4gIGVsc2UgaWYgKHBhci5pbmNsdWRlcyhcImJ5bmNcIikgJiYgcGFyLnNvbWUoeCA9PiBzYS5oYXMoeCkpKSB7IHJlcyA9IFwiUHJvYmxlbcOhdGljbzogbGEgbGljZW5jaWEgY29weWxlZnQgZXhpZ2UgY29tcGFydGlyIGlndWFsIHkgbGEgTkMgYcOxYWRlIHVuYSByZXN0cmljY2nDs24gcXVlIGVzdGEgbm8gYWRtaXRlLlwiOyBjbGFzZSA9IFwibGFiLW1hbFwiOyB9XG4gIGVsc2Uge1xuICAgIGNvbnN0IGZ1ZXJ0ZSA9IHBhci5pbmNsdWRlcyhcIm9kYmxcIikgPyBcIm9kYmxcIiA6IHBhci5pbmNsdWRlcyhcImJ5c2FcIikgPyBcImJ5c2FcIiA6IHBhci5pbmNsdWRlcyhcImJ5bmNcIikgPyBcImJ5bmNcIiA6IHBhci5pbmNsdWRlcyhcImJ5XCIpIHx8IHBhci5pbmNsdWRlcyhcImF2aXNvXCIpID8gXCJieVwiIDogXCJjYzBcIjtcbiAgICBjb25zdCBmaW5hbCA9IHtvZGJsOiBcIk9EYkwgMS4wXCIsIGJ5c2E6IFwiQ0MgQlktU0EgNC4wXCIsIGJ5bmM6IFwiQ0MgQlktTkMgNC4wIChzb2xvIHVzb3Mgbm8gY29tZXJjaWFsZXMpXCIsIGJ5OiBcInVuYSBsaWNlbmNpYSBxdWUgbWFudGVuZ2EgZWwgcmVjb25vY2ltaWVudG8gKHBvciBlamVtcGxvLCBDQyBCWSA0LjApXCIsIGNjMDogXCJjdWFscXVpZXIgbGljZW5jaWEgKGluY2x1c28gQ0MwKVwifVtmdWVydGVdO1xuICAgIHJlcyA9IGBTw60uIEVsIHJlc3VsdGFkbyBkZWJlcsOtYSBwdWJsaWNhcnNlIGNvbiAke2ZpbmFsfSwgY2l0YW5kbyBsYXMgZG9zIGZ1ZW50ZXMuYDtcbiAgICBpZiAoZnVlcnRlID09PSBcImJ5bmNcIikgY2xhc2UgPSBcImxhYi1tZWRpb1wiO1xuICB9XG4gIGNvbnN0IGQgPSBodG1sYDxkaXYgcm9sZT1cInN0YXR1c1wiPjwvZGl2PmA7XG4gIGQuaW5uZXJIVE1MID0gYDxwPjxzdHJvbmc+JHtub21icmVbbGljX2FdfTwvc3Ryb25nPiArIDxzdHJvbmc+JHtub21icmVbbGljX2JdfTwvc3Ryb25nPiwgdXNvICR7dXNvID09PSBcImNvbVwiID8gXCJjb21lcmNpYWxcIiA6IFwibm8gY29tZXJjaWFsXCJ9OjwvcD5cbiAgIDxwIGNsYXNzPVwiJHtjbGFzZX1cIiBzdHlsZT1cImZvbnQtd2VpZ2h0OjYwMFwiPiR7cmVzfTwvcD4ke25vdGEgPyBgPHAgY2xhc3M9XCJzbWFsbFwiPiR7bm90YX08L3A+YCA6IFwiXCJ9XG4gICA8cCBjbGFzcz1cInNtYWxsXCI+UmVnbGEgZ2VuZXJhbDogZWwgcmVzdWx0YWRvIGhlcmVkYSBsYSBjb25kaWNpw7NuIG3DoXMgZXhpZ2VudGUgKHJlY29ub2NpbWllbnRvLCBjb21wYXJ0aXIgaWd1YWwsIG5vIGNvbWVyY2lhbCkuIExhcyBsaWNlbmNpYXMgTkMgbm8gc2UgY29uc2lkZXJhbiBhYmllcnRhcyBzZWfDum4gbGEgT3BlbiBEZWZpbml0aW9uLiBBbnRlIHVuIGNhc28gcmVhbCwgY29uc3VsdGEgbGFzIGNvbmRpY2lvbmVzIGNvbXBsZXRhcy48L3A+YDtcbiAgcmV0dXJuIGQ7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2xpY19hJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2xpY19iJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3VzbycpIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1834,6 +1938,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

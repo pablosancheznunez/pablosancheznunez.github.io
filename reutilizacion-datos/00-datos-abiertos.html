@@ -74,17 +74,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,10 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -464,6 +471,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#paso-6.-público-abierto-o-ambas-cosas" id="toc-paso-6.-público-abierto-o-ambas-cosas" class="nav-link" data-scroll-target="#paso-6.-público-abierto-o-ambas-cosas">Paso 6. ¿Público, abierto o ambas cosas?</a></li>
   <li><a href="#ejercicio-0.5" id="toc-ejercicio-0.5" class="nav-link" data-scroll-target="#ejercicio-0.5">Ejercicio 0.5</a></li>
   </ul></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t0" id="toc-reto-t0" class="nav-link" data-scroll-target="#reto-t0">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#para-practicar-fuera-del-libro" id="toc-para-practicar-fuera-del-libro" class="nav-link" data-scroll-target="#para-practicar-fuera-del-libro">Para practicar fuera del libro</a></li>
@@ -696,7 +704,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="fig-cinco-estrellas" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Escalera de cinco barras de altura creciente, de azul claro a azul oscuro. Una estrella: en la web con licencia abierta, ejemplo PDF de la memoria. Dos: datos estructurados, Excel. Tres: formato no propietario, CSV, señalado como el CSV de práctica. Cuatro: URI para identificar, RDF con URI. Cinco: enlazados con otros datos, RDF más Wikidata.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cinco-estrellas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/tema0_cinco_estrellas.svg" class="img-fluid figure-img" alt="Escalera de cinco barras de altura creciente, de azul claro a azul oscuro. Una estrella: en la web con licencia abierta, ejemplo PDF de la memoria. Dos: datos estructurados, Excel. Tres: formato no propietario, CSV, señalado como el CSV de práctica. Cuatro: URI para identificar, RDF con URI. Cinco: enlazados con otros datos, RDF más Wikidata.">
+<a href="figuras/tema0_cinco_estrellas.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: El modelo de cinco estrellas es acumulativo: cada nivel exige los anteriores. El CSV de práctica se queda en tres estrellas; para subir a cuatro habría que identificar cada biblioteca con una URI."><img src="figuras/tema0_cinco_estrellas.svg" class="img-fluid figure-img" alt="Escalera de cinco barras de altura creciente, de azul claro a azul oscuro. Una estrella: en la web con licencia abierta, ejemplo PDF de la memoria. Dos: datos estructurados, Excel. Tres: formato no propietario, CSV, señalado como el CSV de práctica. Cuatro: URI para identificar, RDF con URI. Cinco: enlazados con otros datos, RDF más Wikidata."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cinco-estrellas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: El modelo de cinco estrellas es acumulativo: cada nivel exige los anteriores. El CSV de práctica se queda en tres estrellas; para subir a cuatro habría que identificar cada biblioteca con una URI.
@@ -1085,7 +1093,24 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDBfcHVibGljbyJ9LCJj
 <script type="exercise-check-t0_publico-contents">
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQwX3B1YmxpY28ifSwiY29kZSI6ImVzcCA8LSBjKFwicHVibGljb19hYmllcnRvXCIsIFwicHVibGljb19ub19hYmllcnRvXCIsIFwicHJpdmFkb19hYmllcnRvXCIsIFwicHJpdmFkb19ub19hYmllcnRvXCIpXG5yIDwtIGFzLmNoYXJhY3RlcigucmVzdWx0KVxuaWYgKGlkZW50aWNhbChyLCBlc3ApKSB7XG4gIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBcIkNvcnJlY3RvLiBGw61qYXRlIGVuIGVsIHNlZ3VuZG8gY2FzbzogZXMgaW5mb3JtYWNpw7NuIGVuIHBvZGVyIGRlIHVuYSBhZG1pbmlzdHJhY2nDs24sIHBlcm8gbG9zIGRhdG9zIHBlcnNvbmFsZXMgcXVlZGFuIGZ1ZXJhIGRlIGxhIHJldXRpbGl6YWNpw7NuLlwiKVxufSBlbHNlIGlmIChsZW5ndGgocikgPT0gNCkge1xuICBsaXN0KGNvcnJlY3QgPSBGQUxTRSwgbWVzc2FnZSA9IHBhc3RlMChcIkFjaWVydGFzIFwiLCBzdW0ociA9PSBlc3ApLCBcIiBkZSA0LiBSZXZpc2EgcXVpw6luIHByb2R1Y2UgY2FkYSBkYXRvIHkgY29uIHF1w6kgbGljZW5jaWEuXCIpKVxufSBlbHNlIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkVzY3JpYmUgY3VhdHJvIHZhbG9yZXMgZW50cmUgY29taWxsYXMsIHNlcGFyYWRvcyBwb3IgY29tYXMuXCIpXG59In0=
 </script>
+<div id="fig-v14-fair" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cuatro tarjetas. F, localizables: identificador persistente y metadatos ricos, indexados en un catálogo. A, accesibles: se recuperan por su identificador con un protocolo abierto. I, interoperables: formatos y vocabularios compartidos que las máquinas entienden. R, reutilizables: licencia clara, procedencia y normas de la comunidad.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-v14-fair-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/v14_fair.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Los principios FAIR (Wilkinson et al., 2016)."><img src="figuras/v14_fair.svg" class="img-fluid figure-img" alt="Cuatro tarjetas. F, localizables: identificador persistente y metadatos ricos, indexados en un catálogo. A, accesibles: se recuperan por su identificador con un protocolo abierto. I, interoperables: formatos y vocabularios compartidos que las máquinas entienden. R, reutilizables: licencia clara, procedencia y normas de la comunidad."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-v14-fair-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Los principios FAIR (Wilkinson et al., 2016).
+</figcaption>
+</figure>
+</div>
 </section>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-clasificar" id="ia-t0-estrellas"><script type="application/json" class="ia-datos">{"categorias":["★","★★","★★★","★★★★","★★★★★"],"enunciado":"","explicacion":"","items":[{"categoria":"★","explicacion":"Disponible en la web con licencia abierta, pero no estructurado.","texto":"Un PDF escaneado con una tabla de préstamos y licencia abierta"},{"categoria":"★★","explicacion":"Estructurado, pero en formato propietario.","texto":"Una hoja de Excel (.xlsx) con licencia abierta"},{"categoria":"★★★","explicacion":"Formato abierto y no propietario.","texto":"El mismo fichero en CSV"},{"categoria":"★★★★","explicacion":"","texto":"Un RDF en el que cada biblioteca tiene su propio URI"},{"categoria":"★★★★★","explicacion":"","texto":"Ese RDF, además, enlazado con Wikidata y con el callejero oficial"}],"tipo":"clasificar","titulo":"¿Cuántas estrellas tiene este conjunto de datos?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t0-fair"><script type="application/json" class="ia-datos">{"categorias":["Localizable","Accesible","Interoperable","Reutilizable"],"enunciado":"","explicacion":"","items":[{"categoria":"Localizable","explicacion":"","texto":"Asignar un DOI al conjunto de datos"},{"categoria":"Localizable","explicacion":"","texto":"Publicarlo en datos.gob.es con metadatos completos"},{"categoria":"Accesible","explicacion":"","texto":"Ofrecer la descarga por HTTPS sin registro"},{"categoria":"Interoperable","explicacion":"","texto":"Usar el vocabulario DCAT-AP y códigos INE de municipio"},{"categoria":"Reutilizable","explicacion":"","texto":"Indicar la licencia CC BY 4.0 y quién generó los datos"}],"tipo":"clasificar","titulo":"¿Qué principio FAIR mejora?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t0-formatos"><script type="application/json" class="ia-datos">{"categorias":["Abierto","Propietario"],"enunciado":"","explicacion":"","items":[{"categoria":"Abierto","explicacion":"","texto":"CSV"},{"categoria":"Abierto","explicacion":"","texto":"JSON"},{"categoria":"Propietario","explicacion":"","texto":"SAV (SPSS)"},{"categoria":"Abierto","explicacion":"","texto":"GeoJSON"},{"categoria":"Propietario","explicacion":"","texto":"DWG (AutoCAD)"}],"tipo":"clasificar","titulo":"¿Formato abierto o propietario?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-ordenar" id="ia-t0-web"><script type="application/json" class="ia-datos">{"enunciado":"","explicacion":"","items":["Web 1.0: páginas estáticas para leer","Web 2.0: participación y contenidos de las personas usuarias","Web semántica: datos enlazados que entienden las máquinas"],"tipo":"ordenar","titulo":"La evolución de la Web"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-t0" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t0">Reto evaluable</h2>
@@ -1282,7 +1307,7 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
    preguntas de autoevaluación acertadas en cada capítulo. Se guarda solo en
    el almacenamiento local de este navegador; no se envía a ningún servidor. */
 (function () {
-  var CLAVE = 'reutilizacion-datos-progreso-v1';
+  var CLAVE = 'progreso-' + (location.pathname.split('/').filter(Boolean)[0] || 'libro') + '-v1';
   function leer() { try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch (e) { return {}; } }
   function guardar(d) { try { localStorage.setItem(CLAVE, JSON.stringify(d)); } catch (e) {} }
   var pagina = location.pathname.split('/').pop() || 'index.html';
@@ -1304,23 +1329,26 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -1329,10 +1357,12 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -1340,13 +1370,13 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -1359,6 +1389,9 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -1385,10 +1418,14 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -1871,6 +1908,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

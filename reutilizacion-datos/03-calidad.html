@@ -74,17 +74,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,10 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -465,6 +472,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#paso-8.-comprobar-la-integridad-de-los-ficheros-apartado-6" id="toc-paso-8.-comprobar-la-integridad-de-los-ficheros-apartado-6" class="nav-link" data-scroll-target="#paso-8.-comprobar-la-integridad-de-los-ficheros-apartado-6">Paso 8. Comprobar la integridad de los ficheros (apartado 6)</a></li>
   <li><a href="#ejercicio-3.8" id="toc-ejercicio-3.8" class="nav-link" data-scroll-target="#ejercicio-3.8">Ejercicio 3.8</a></li>
   </ul></li>
+  <li><a href="#lab-t3-calidad" id="toc-lab-t3-calidad" class="nav-link" data-scroll-target="#lab-t3-calidad">Laboratorio: comprueba la calidad de un CSV</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t3" id="toc-reto-t3" class="nav-link" data-scroll-target="#reto-t3">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#resumen-de-problemas-encontrados" id="toc-resumen-de-problemas-encontrados" class="nav-link" data-scroll-target="#resumen-de-problemas-encontrados">Resumen de problemas encontrados</a></li>
@@ -705,7 +714,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="fig-completitud" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Barras horizontales del porcentaje de celdas completas por columna, eje de 0 a 100. id, biblioteca, municipio y fecha: 100 %. prestamos: 97,4 %. usuarios_activos: 84,2 %.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-completitud-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/tema3_completitud.svg" class="img-fluid figure-img" alt="Barras horizontales del porcentaje de celdas completas por columna, eje de 0 a 100. id, biblioteca, municipio y fecha: 100 %. prestamos: 97,4 %. usuarios_activos: 84,2 %.">
+<a href="figuras/tema3_completitud.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Completitud por columna del CSV de práctica: las columnas descriptivas están completas, pero faltan datos en préstamos y, sobre todo, en usuarios activos."><img src="figuras/tema3_completitud.svg" class="img-fluid figure-img" alt="Barras horizontales del porcentaje de celdas completas por columna, eje de 0 a 100. id, biblioteca, municipio y fecha: 100 %. prestamos: 97,4 %. usuarios_activos: 84,2 %."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-completitud-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Completitud por columna del CSV de práctica: las columnas descriptivas están completas, pero faltan datos en préstamos y, sobre todo, en usuarios activos.
@@ -1015,7 +1024,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDNfcmF0aW8ifSwiY29k
 <div id="fig-prestamos" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de líneas de enero a junio. Getafe se mantiene entre unos 4.800 y 5.300 préstamos. Fuenlabrada ronda los 1.700-2.100; Leganés, Móstoles y Alcorcón entre unos 1.000 y 1.750. Leganés y Alcorcón no tienen dato en febrero.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-prestamos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/tema3_prestamos_municipio.svg" class="img-fluid figure-img" alt="Gráfico de líneas de enero a junio. Getafe se mantiene entre unos 4.800 y 5.300 préstamos. Fuenlabrada ronda los 1.700-2.100; Leganés, Móstoles y Alcorcón entre unos 1.000 y 1.750. Leganés y Alcorcón no tienen dato en febrero.">
+<a href="figuras/tema3_prestamos_municipio.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Préstamos mensuales por municipio tras la limpieza, enero a junio de 2025 (datos sintéticos). Getafe suma dos bibliotecas; el resto, una."><img src="figuras/tema3_prestamos_municipio.svg" class="img-fluid figure-img" alt="Gráfico de líneas de enero a junio. Getafe se mantiene entre unos 4.800 y 5.300 préstamos. Fuenlabrada ronda los 1.700-2.100; Leganés, Móstoles y Alcorcón entre unos 1.000 y 1.750. Leganés y Alcorcón no tienen dato en febrero."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-prestamos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;2: Préstamos mensuales por municipio tras la limpieza, enero a junio de 2025 (datos sintéticos). Getafe suma dos bibliotecas; el resto, una.
@@ -1027,11 +1036,16 @@ Figura&nbsp;2: Préstamos mensuales por municipio tras la limpieza, enero a juni
 <h3 class="anchored" data-anchor-id="explora-los-datos-limpios">Explora los datos limpios</h3>
 <p>Marca y desmarca municipios: la gráfica se recalcula en tu navegador con R.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="516" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 515;"><span id="cb6-516"><a href="#cb6-516" aria-hidden="true" tabindex="-1"></a>viewof municipios_sel <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(</span>
-<span id="cb6-517"><a href="#cb6-517" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Getafe"</span><span class="op">,</span> <span class="st">"Leganés"</span><span class="op">,</span> <span class="st">"Alcorcón"</span><span class="op">,</span> <span class="st">"Móstoles"</span><span class="op">,</span> <span class="st">"Fuenlabrada"</span>]<span class="op">,</span></span>
-<span id="cb6-518"><a href="#cb6-518" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">value</span><span class="op">:</span> [<span class="st">"Leganés"</span><span class="op">,</span> <span class="st">"Alcorcón"</span><span class="op">,</span> <span class="st">"Móstoles"</span><span class="op">,</span> <span class="st">"Fuenlabrada"</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Municipios:"</span> }</span>
-<span id="cb6-519"><a href="#cb6-519" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-520"><a href="#cb6-520" aria-hidden="true" tabindex="-1"></a>viewof por_biblioteca <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">toggle</span>({ <span class="dt">label</span><span class="op">:</span> <span class="st">"Media por biblioteca"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="kw">false</span> })</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="516" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 515;"><span id="cb6-516"><a href="#cb6-516" aria-hidden="true" tabindex="-1"></a>viewof municipios_sel <span class="op">=</span> {</span>
+<span id="cb6-517"><a href="#cb6-517" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> ms <span class="op">=</span> [<span class="st">"Getafe"</span><span class="op">,</span> <span class="st">"Leganés"</span><span class="op">,</span> <span class="st">"Alcorcón"</span><span class="op">,</span> <span class="st">"Móstoles"</span><span class="op">,</span> <span class="st">"Fuenlabrada"</span>]<span class="op">,</span> ini <span class="op">=</span> <span class="kw">new</span> <span class="bu">Set</span>([<span class="st">"Leganés"</span><span class="op">,</span> <span class="st">"Alcorcón"</span><span class="op">,</span> <span class="st">"Móstoles"</span><span class="op">,</span> <span class="st">"Fuenlabrada"</span>])<span class="op">;</span></span>
+<span id="cb6-518"><a href="#cb6-518" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> c <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;fieldset class="mb-2"&gt;&lt;legend class="form-label fs-6"&gt;Municipios:&lt;/legend&gt;&lt;/fieldset&gt;`</span><span class="op">;</span></span>
+<span id="cb6-519"><a href="#cb6-519" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> cs <span class="op">=</span> ms<span class="op">.</span><span class="fu">map</span>(m <span class="kw">=&gt;</span> { <span class="kw">const</span> k <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="fu">casilla</span>(m<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> ini<span class="op">.</span><span class="fu">has</span>(m)})<span class="op">;</span></span>
+<span id="cb6-520"><a href="#cb6-520" aria-hidden="true" tabindex="-1"></a>    k<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> e <span class="kw">=&gt;</span> { e<span class="op">.</span><span class="fu">stopPropagation</span>()<span class="op">;</span> c<span class="op">.</span><span class="at">value</span> <span class="op">=</span> ms<span class="op">.</span><span class="fu">filter</span>((_<span class="op">,</span> i) <span class="kw">=&gt;</span> cs[i]<span class="op">.</span><span class="at">value</span>)<span class="op">;</span> c<span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">Event</span>(<span class="st">"input"</span><span class="op">,</span> {<span class="dt">bubbles</span><span class="op">:</span> <span class="kw">true</span>}))<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb6-521"><a href="#cb6-521" aria-hidden="true" tabindex="-1"></a>    c<span class="op">.</span><span class="fu">append</span>(k)<span class="op">;</span> <span class="cf">return</span> k<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb6-522"><a href="#cb6-522" aria-hidden="true" tabindex="-1"></a>  c<span class="op">.</span><span class="at">value</span> <span class="op">=</span> ms<span class="op">.</span><span class="fu">filter</span>((_<span class="op">,</span> i) <span class="kw">=&gt;</span> cs[i]<span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
+<span id="cb6-523"><a href="#cb6-523" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> c<span class="op">;</span></span>
+<span id="cb6-524"><a href="#cb6-524" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-525"><a href="#cb6-525" aria-hidden="true" tabindex="-1"></a>viewof por_biblioteca <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="fu">casilla</span>(<span class="st">"Media por biblioteca"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="kw">false</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -1138,7 +1152,113 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDNfbWQ1In0sImNvZGUi
 <script type="exercise-check-t3_md5-contents">
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQzX21kNSJ9LCJjb2RlIjoiaWYgKGlzVFJVRSgucmVzdWx0KSAmJiBncmVwbChcInByZXN0YW1vc19iaWJsaW90ZWNhc19wcmFjdGljYS5jc3ZcIiwgLnVzZXJfY29kZSwgZml4ZWQgPSBUUlVFKSkge1xuICBsaXN0KGNvcnJlY3QgPSBUUlVFLCBtZXNzYWdlID0gXCJDb3JyZWN0bzogbGFzIHN1bWFzIGNvaW5jaWRlbiwgYXPDrSBxdWUgZWwgZmljaGVybyBubyBoYSBjYW1iaWFkby5cIilcbn0gZWxzZSBpZiAoaXNGQUxTRSgucmVzdWx0KSkge1xuICBsaXN0KGNvcnJlY3QgPSBGQUxTRSwgbWVzc2FnZSA9IFwiTGFzIHN1bWFzIG5vIGNvaW5jaWRlbjogwr9lc3TDoXMgbGV5ZW5kbyBlbCBmaWNoZXJvIG9yaWdpbmFsIGRlIGxhIGNhcnBldGEgZGF0b3MvP1wiKVxufSBlbHNlIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkNvbXBhcmEgbGFzIGRvcyBzdW1hcyBjb24gPT0uXCIpXG59In0=
 </script>
+<div id="fig-v14-ciclo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Seis fases en círculo unidas por flechas: planificar, recoger o crear, describir con metadatos, publicar, reutilizar, y preservar y actualizar, que vuelve a planificar. En el centro, ciclo de vida de los datos.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-v14-ciclo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/v14_ciclo.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;3: El ciclo de vida de los datos: cada fase tiene responsables y documentos propios."><img src="figuras/v14_ciclo.svg" class="img-fluid figure-img" alt="Seis fases en círculo unidas por flechas: planificar, recoger o crear, describir con metadatos, publicar, reutilizar, y preservar y actualizar, que vuelve a planificar. En el centro, ciclo de vida de los datos."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-v14-ciclo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: El ciclo de vida de los datos: cada fase tiene responsables y documentos propios.
+</figcaption>
+</figure>
+</div>
 </section>
+</section>
+<section id="lab-t3-calidad" class="level2">
+<h2 class="anchored" data-anchor-id="lab-t3-calidad">Laboratorio: comprueba la calidad de un CSV</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · se ejecuta en tu navegador; tus datos no salen de él</p>
+</div>
+<p>Pega un CSV (o abre uno de tu ordenador) y pulsa <strong>Revisar</strong>. El laboratorio detecta el separador y revisa cinco dimensiones de calidad: <strong>completitud</strong> (celdas vacías), <strong>unicidad</strong> (filas duplicadas), <strong>validez</strong> (números y fechas mal escritos), <strong>consistencia</strong> (variantes de un mismo valor) y <strong>formato</strong> (espacios sobrantes).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb9" data-startfrom="711" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 710;"><span id="cb9-711"><a href="#cb9-711" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
+<span id="cb9-712"><a href="#cb9-712" aria-hidden="true" tabindex="-1"></a>viewof csv_txt <span class="op">=</span> <span class="fu">area</span>(<span class="st">"CSV"</span><span class="op">,</span> {<span class="dt">rows</span><span class="op">:</span> <span class="dv">8</span><span class="op">,</span> <span class="dt">submit</span><span class="op">:</span> <span class="st">"Revisar"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="vs">`municipio;biblioteca;prestamos;fecha</span></span>
+<span id="cb9-713"><a href="#cb9-713" aria-hidden="true" tabindex="-1"></a><span class="vs">Madrid;Biblioteca Eugenio Trías;12450;2024-01-31</span></span>
+<span id="cb9-714"><a href="#cb9-714" aria-hidden="true" tabindex="-1"></a><span class="vs">madrid ;Biblioteca Eugenio Trías;12450;2024-01-31</span></span>
+<span id="cb9-715"><a href="#cb9-715" aria-hidden="true" tabindex="-1"></a><span class="vs">Getafe;Biblioteca Ricardo de la Vega;;2024-01-31</span></span>
+<span id="cb9-716"><a href="#cb9-716" aria-hidden="true" tabindex="-1"></a><span class="vs">Getafe;Biblioteca Ricardo de la Vega;3.210;31/01/2024</span></span>
+<span id="cb9-717"><a href="#cb9-717" aria-hidden="true" tabindex="-1"></a><span class="vs">Leganés;Biblioteca Central;n/d;2024-01-31`</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb10" data-startfrom="721" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 720;"><span id="cb10-721"><a href="#cb10-721" aria-hidden="true" tabindex="-1"></a>viewof fichero <span class="op">=</span> {</span>
+<span id="cb10-722"><a href="#cb10-722" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> c <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div class="mb-2"&gt;&lt;label class="form-label" for="lab-csv-f"&gt;…o abre un CSV de tu ordenador&lt;/label&gt;&lt;input id="lab-csv-f" type="file" accept=".csv,text/csv" class="form-control form-control-sm"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb10-723"><a href="#cb10-723" aria-hidden="true" tabindex="-1"></a>  c<span class="op">.</span><span class="at">value</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb10-724"><a href="#cb10-724" aria-hidden="true" tabindex="-1"></a>  c<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"input"</span>)<span class="op">.</span><span class="at">onchange</span> <span class="op">=</span> <span class="kw">async</span> e <span class="kw">=&gt;</span> { <span class="kw">const</span> f <span class="op">=</span> e<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">files</span>[<span class="dv">0</span>]<span class="op">;</span> <span class="cf">if</span> (<span class="op">!</span>f) <span class="cf">return</span><span class="op">;</span> c<span class="op">.</span><span class="at">value</span> <span class="op">=</span> <span class="cf">await</span> f<span class="op">.</span><span class="fu">text</span>()<span class="op">;</span> c<span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">Event</span>(<span class="st">"input"</span><span class="op">,</span> {<span class="dt">bubbles</span><span class="op">:</span> <span class="kw">true</span>}))<span class="op">;</span> }<span class="op">;</span></span>
+<span id="cb10-725"><a href="#cb10-725" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> c<span class="op">;</span></span>
+<span id="cb10-726"><a href="#cb10-726" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb11" data-startfrom="731" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 730;"><span id="cb11-731"><a href="#cb11-731" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb11-732"><a href="#cb11-732" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> txt <span class="op">=</span> (fichero <span class="op">??</span> csv_txt)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss">﻿/</span><span class="op">,</span> <span class="st">""</span>)<span class="op">;</span></span>
+<span id="cb11-733"><a href="#cb11-733" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> lineas <span class="op">=</span> txt<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\r?\n</span><span class="ss">/</span>)<span class="op">.</span><span class="fu">filter</span>(l <span class="kw">=&gt;</span> l<span class="op">.</span><span class="fu">trim</span>() <span class="op">!==</span> <span class="st">""</span>)<span class="op">;</span></span>
+<span id="cb11-734"><a href="#cb11-734" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (lineas<span class="op">.</span><span class="at">length</span> <span class="op">&lt;</span> <span class="dv">2</span>) <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;p role="status"&gt;Hacen falta una cabecera y al menos una fila.&lt;/p&gt;`</span><span class="op">;</span></span>
+<span id="cb11-735"><a href="#cb11-735" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> sep <span class="op">=</span> [<span class="st">";"</span><span class="op">,</span> <span class="st">","</span><span class="op">,</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span><span class="op">,</span> <span class="st">"|"</span>]<span class="op">.</span><span class="fu">map</span>(s <span class="kw">=&gt;</span> [s<span class="op">,</span> lineas[<span class="dv">0</span>]<span class="op">.</span><span class="fu">split</span>(s)<span class="op">.</span><span class="at">length</span>])<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> b[<span class="dv">1</span>] <span class="op">-</span> a[<span class="dv">1</span>])[<span class="dv">0</span>][<span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb11-736"><a href="#cb11-736" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> filas <span class="op">=</span> lineas<span class="op">.</span><span class="fu">map</span>(l <span class="kw">=&gt;</span> l<span class="op">.</span><span class="fu">split</span>(sep))<span class="op">;</span></span>
+<span id="cb11-737"><a href="#cb11-737" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> cab <span class="op">=</span> filas[<span class="dv">0</span>]<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="fu">trim</span>())<span class="op">,</span> datos <span class="op">=</span> filas<span class="op">.</span><span class="fu">slice</span>(<span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb11-738"><a href="#cb11-738" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> nomSep <span class="op">=</span> {<span class="st">";"</span><span class="op">:</span> <span class="st">"punto y coma"</span><span class="op">,</span> <span class="st">","</span><span class="op">:</span> <span class="st">"coma"</span><span class="op">,</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span><span class="op">:</span> <span class="st">"tabulador"</span><span class="op">,</span> <span class="st">"|"</span><span class="op">:</span> <span class="st">"barra vertical"</span>}[sep]<span class="op">;</span></span>
+<span id="cb11-739"><a href="#cb11-739" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> problemas <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb11-740"><a href="#cb11-740" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> largas <span class="op">=</span> datos<span class="op">.</span><span class="fu">filter</span>(f <span class="kw">=&gt;</span> f<span class="op">.</span><span class="at">length</span> <span class="op">!==</span> cab<span class="op">.</span><span class="at">length</span>)<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb11-741"><a href="#cb11-741" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (largas) problemas<span class="op">.</span><span class="fu">push</span>([<span class="st">"Estructura"</span><span class="op">,</span> <span class="vs">`</span><span class="sc">${</span>largas<span class="sc">}</span><span class="vs"> filas no tienen </span><span class="sc">${</span>cab<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> columnas`</span>])<span class="op">;</span></span>
+<span id="cb11-742"><a href="#cb11-742" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> vacios <span class="op">=</span> cab<span class="op">.</span><span class="fu">map</span>((c<span class="op">,</span> j) <span class="kw">=&gt;</span> [c<span class="op">,</span> datos<span class="op">.</span><span class="fu">filter</span>(f <span class="kw">=&gt;</span> <span class="op">!</span>(f[j] <span class="op">??</span> <span class="st">""</span>)<span class="op">.</span><span class="fu">trim</span>() <span class="op">||</span> <span class="ss">/</span><span class="sc">^(</span><span class="ss">n</span><span class="sc">\/?</span><span class="ss">d</span><span class="sc">|</span><span class="ss">na</span><span class="sc">|</span><span class="ss">null</span><span class="sc">|</span><span class="ss">-</span><span class="sc">|\?)$</span><span class="ss">/i</span><span class="op">.</span><span class="fu">test</span>((f[j] <span class="op">??</span> <span class="st">""</span>)<span class="op">.</span><span class="fu">trim</span>()))<span class="op">.</span><span class="at">length</span>])<span class="op">.</span><span class="fu">filter</span>(x <span class="kw">=&gt;</span> x[<span class="dv">1</span>])<span class="op">;</span></span>
+<span id="cb11-743"><a href="#cb11-743" aria-hidden="true" tabindex="-1"></a>  vacios<span class="op">.</span><span class="fu">forEach</span>(([c<span class="op">,</span> n]) <span class="kw">=&gt;</span> problemas<span class="op">.</span><span class="fu">push</span>([<span class="st">"Completitud"</span><span class="op">,</span> <span class="vs">`«</span><span class="sc">${</span>c<span class="sc">}</span><span class="vs">»: </span><span class="sc">${</span>n<span class="sc">}</span><span class="vs"> valores vacíos o del tipo «n/d»`</span>]))<span class="op">;</span></span>
+<span id="cb11-744"><a href="#cb11-744" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> norm <span class="op">=</span> f <span class="kw">=&gt;</span> f<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="fu">trim</span>()<span class="op">.</span><span class="fu">toLowerCase</span>())<span class="op">.</span><span class="fu">join</span>(<span class="st">"¦"</span>)<span class="op">;</span></span>
+<span id="cb11-745"><a href="#cb11-745" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> vistos <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>()<span class="op">;</span> <span class="kw">let</span> dup <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> datos<span class="op">.</span><span class="fu">forEach</span>(f <span class="kw">=&gt;</span> { <span class="kw">const</span> k <span class="op">=</span> <span class="fu">norm</span>(f)<span class="op">;</span> <span class="cf">if</span> (vistos<span class="op">.</span><span class="fu">has</span>(k)) dup<span class="op">++;</span> <span class="cf">else</span> vistos<span class="op">.</span><span class="fu">set</span>(k<span class="op">,</span> <span class="dv">1</span>)<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb11-746"><a href="#cb11-746" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (dup) problemas<span class="op">.</span><span class="fu">push</span>([<span class="st">"Unicidad"</span><span class="op">,</span> <span class="vs">`</span><span class="sc">${</span>dup<span class="sc">}</span><span class="vs"> filas duplicadas (sin distinguir mayúsculas ni espacios)`</span>])<span class="op">;</span></span>
+<span id="cb11-747"><a href="#cb11-747" aria-hidden="true" tabindex="-1"></a>  cab<span class="op">.</span><span class="fu">forEach</span>((c<span class="op">,</span> j) <span class="kw">=&gt;</span> {</span>
+<span id="cb11-748"><a href="#cb11-748" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> v <span class="op">=</span> datos<span class="op">.</span><span class="fu">map</span>(f <span class="kw">=&gt;</span> (f[j] <span class="op">??</span> <span class="st">""</span>)<span class="op">.</span><span class="fu">trim</span>())<span class="op">.</span><span class="fu">filter</span>(x <span class="kw">=&gt;</span> x <span class="op">&amp;&amp;</span> <span class="op">!</span><span class="ss">/</span><span class="sc">^(</span><span class="ss">n</span><span class="sc">\/?</span><span class="ss">d</span><span class="sc">|</span><span class="ss">na</span><span class="sc">|</span><span class="ss">null</span><span class="sc">|</span><span class="ss">-</span><span class="sc">|\?)$</span><span class="ss">/i</span><span class="op">.</span><span class="fu">test</span>(x))<span class="op">;</span></span>
+<span id="cb11-749"><a href="#cb11-749" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> nums <span class="op">=</span> v<span class="op">.</span><span class="fu">filter</span>(x <span class="kw">=&gt;</span> <span class="ss">/</span><span class="sc">^</span><span class="ss">-</span><span class="sc">?\d+([.,]\d+)*$</span><span class="ss">/</span><span class="op">.</span><span class="fu">test</span>(x))<span class="op">;</span></span>
+<span id="cb11-750"><a href="#cb11-750" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (nums<span class="op">.</span><span class="at">length</span> <span class="op">&gt;=</span> v<span class="op">.</span><span class="at">length</span> <span class="op">*</span> <span class="fl">0.6</span> <span class="op">&amp;&amp;</span> nums<span class="op">.</span><span class="at">length</span>) {</span>
+<span id="cb11-751"><a href="#cb11-751" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> miles <span class="op">=</span> nums<span class="op">.</span><span class="fu">filter</span>(x <span class="kw">=&gt;</span> <span class="ss">/</span><span class="sc">^\d{1,3}([.]\d{3})+$</span><span class="ss">/</span><span class="op">.</span><span class="fu">test</span>(x))<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb11-752"><a href="#cb11-752" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (miles) problemas<span class="op">.</span><span class="fu">push</span>([<span class="st">"Validez"</span><span class="op">,</span> <span class="vs">`«</span><span class="sc">${</span>c<span class="sc">}</span><span class="vs">»: </span><span class="sc">${</span>miles<span class="sc">}</span><span class="vs"> números con punto de miles (p. ej. 3.210): ¿tres mil o tres?`</span>])<span class="op">;</span></span>
+<span id="cb11-753"><a href="#cb11-753" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> raros <span class="op">=</span> v<span class="op">.</span><span class="at">length</span> <span class="op">-</span> nums<span class="op">.</span><span class="at">length</span><span class="op">;</span> <span class="cf">if</span> (raros) problemas<span class="op">.</span><span class="fu">push</span>([<span class="st">"Validez"</span><span class="op">,</span> <span class="vs">`«</span><span class="sc">${</span>c<span class="sc">}</span><span class="vs">»: </span><span class="sc">${</span>raros<span class="sc">}</span><span class="vs"> valores no numéricos en una columna numérica`</span>])<span class="op">;</span></span>
+<span id="cb11-754"><a href="#cb11-754" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-755"><a href="#cb11-755" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> iso <span class="op">=</span> v<span class="op">.</span><span class="fu">filter</span>(x <span class="kw">=&gt;</span> <span class="ss">/</span><span class="sc">^\d{4}</span><span class="ss">-</span><span class="sc">\d{2}</span><span class="ss">-</span><span class="sc">\d{2}$</span><span class="ss">/</span><span class="op">.</span><span class="fu">test</span>(x))<span class="op">.</span><span class="at">length</span><span class="op">,</span> dmy <span class="op">=</span> v<span class="op">.</span><span class="fu">filter</span>(x <span class="kw">=&gt;</span> <span class="ss">/</span><span class="sc">^\d{1,2}\/\d{1,2}\/\d{4}$</span><span class="ss">/</span><span class="op">.</span><span class="fu">test</span>(x))<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb11-756"><a href="#cb11-756" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (iso <span class="op">&amp;&amp;</span> dmy) problemas<span class="op">.</span><span class="fu">push</span>([<span class="st">"Consistencia"</span><span class="op">,</span> <span class="vs">`«</span><span class="sc">${</span>c<span class="sc">}</span><span class="vs">»: fechas en dos formatos (</span><span class="sc">${</span>iso<span class="sc">}</span><span class="vs"> AAAA-MM-DD y </span><span class="sc">${</span>dmy<span class="sc">}</span><span class="vs"> DD/MM/AAAA)`</span>])<span class="op">;</span></span>
+<span id="cb11-757"><a href="#cb11-757" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> grupos <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>()<span class="op">;</span> v<span class="op">.</span><span class="fu">forEach</span>(x <span class="kw">=&gt;</span> { <span class="kw">const</span> k <span class="op">=</span> x<span class="op">.</span><span class="fu">toLowerCase</span>()<span class="op">.</span><span class="fu">normalize</span>(<span class="st">"NFD"</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">[̀-ͯ]</span><span class="ss">/g</span><span class="op">,</span> <span class="st">""</span>)<span class="op">.</span><span class="fu">trim</span>()<span class="op">;</span> grupos<span class="op">.</span><span class="fu">set</span>(k<span class="op">,</span> (grupos<span class="op">.</span><span class="fu">get</span>(k) <span class="op">||</span> <span class="kw">new</span> <span class="bu">Set</span>())<span class="op">.</span><span class="fu">add</span>(x))<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb11-758"><a href="#cb11-758" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> variantes <span class="op">=</span> [<span class="op">...</span>grupos<span class="op">.</span><span class="fu">values</span>()]<span class="op">.</span><span class="fu">filter</span>(s <span class="kw">=&gt;</span> s<span class="op">.</span><span class="at">size</span> <span class="op">&gt;</span> <span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb11-759"><a href="#cb11-759" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (variantes<span class="op">.</span><span class="at">length</span>) problemas<span class="op">.</span><span class="fu">push</span>([<span class="st">"Consistencia"</span><span class="op">,</span> <span class="vs">`«</span><span class="sc">${</span>c<span class="sc">}</span><span class="vs">»: variantes de un mismo valor: </span><span class="sc">${</span>variantes<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">3</span>)<span class="op">.</span><span class="fu">map</span>(s <span class="kw">=&gt;</span> [<span class="op">...</span>s]<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> <span class="st">"«"</span> <span class="op">+</span> x <span class="op">+</span> <span class="st">"»"</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">" / "</span>))<span class="op">.</span><span class="fu">join</span>(<span class="st">"; "</span>)<span class="sc">}</span><span class="vs">`</span>])<span class="op">;</span></span>
+<span id="cb11-760"><a href="#cb11-760" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> esp <span class="op">=</span> datos<span class="op">.</span><span class="fu">filter</span>(f <span class="kw">=&gt;</span> f[j] <span class="op">!==</span> <span class="kw">undefined</span> <span class="op">&amp;&amp;</span> f[j] <span class="op">!==</span> f[j]<span class="op">.</span><span class="fu">trim</span>())<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb11-761"><a href="#cb11-761" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (esp) problemas<span class="op">.</span><span class="fu">push</span>([<span class="st">"Formato"</span><span class="op">,</span> <span class="vs">`«</span><span class="sc">${</span>c<span class="sc">}</span><span class="vs">»: </span><span class="sc">${</span>esp<span class="sc">}</span><span class="vs"> valores con espacios al principio o al final`</span>])<span class="op">;</span></span>
+<span id="cb11-762"><a href="#cb11-762" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb11-763"><a href="#cb11-763" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb11-764"><a href="#cb11-764" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;p&gt;Separador: &lt;strong&gt;</span><span class="sc">${</span>nomSep<span class="sc">}</span><span class="vs">&lt;/strong&gt; · </span><span class="sc">${</span>cab<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> columnas · </span><span class="sc">${</span>datos<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> filas.&lt;/p&gt;`</span> <span class="op">+</span></span>
+<span id="cb11-765"><a href="#cb11-765" aria-hidden="true" tabindex="-1"></a>    (problemas<span class="op">.</span><span class="at">length</span> <span class="op">?</span> <span class="vs">`&lt;table class="table table-sm"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Dimensión&lt;/th&gt;&lt;th scope="col"&gt;Problema&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;</span><span class="sc">${</span>problemas<span class="op">.</span><span class="fu">map</span>(([a<span class="op">,</span> b]) <span class="kw">=&gt;</span> <span class="vs">`&lt;tr&gt;&lt;td&gt;</span><span class="sc">${</span>a<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>b<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/&lt;/g</span><span class="op">,</span> <span class="st">"&amp;lt;"</span>)<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;/tr&gt;`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="sc">}</span><span class="vs">&lt;/tbody&gt;&lt;/table&gt;`</span></span>
+<span id="cb11-766"><a href="#cb11-766" aria-hidden="true" tabindex="-1"></a>      <span class="op">:</span> <span class="vs">`&lt;p class="lab-bien" style="font-weight:600"&gt;No se han detectado problemas con estas comprobaciones.&lt;/p&gt;`</span>) <span class="op">+</span></span>
+<span id="cb11-767"><a href="#cb11-767" aria-hidden="true" tabindex="-1"></a>    <span class="vs">`&lt;p class="small"&gt;Son comprobaciones automáticas básicas: no sustituyen a revisar el significado de los datos. En R, el capítulo usa &lt;code&gt;datareuseR&lt;/code&gt; para hacer lo mismo de forma reproducible.&lt;/p&gt;`</span><span class="op">;</span></span>
+<span id="cb11-768"><a href="#cb11-768" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d<span class="op">;</span></span>
+<span id="cb11-769"><a href="#cb11-769" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-clasificar" id="ia-t3-dimensiones"><script type="application/json" class="ia-datos">{"categorias":["Completitud","Exactitud","Consistencia","Actualidad","Unicidad","Validez"],"enunciado":"","explicacion":"","items":[{"categoria":"Completitud","explicacion":"","texto":"La columna de préstamos tiene celdas vacías"},{"categoria":"Consistencia","explicacion":"","texto":"«Madrid», «madrid » y «MADRID» aparecen como municipios distintos"},{"categoria":"Actualidad","explicacion":"","texto":"El conjunto se actualizó por última vez en 2019"},{"categoria":"Unicidad","explicacion":"","texto":"La misma biblioteca aparece dos veces en el mismo mes"},{"categoria":"Validez","explicacion":"","texto":"Una fecha dice 31/02/2024"},{"categoria":"Exactitud","explicacion":"","texto":"Los préstamos de una biblioteca están multiplicados por diez por un\nerror de carga"}],"tipo":"clasificar","titulo":"¿Qué dimensión de la calidad falla?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-ordenar" id="ia-t3-publicar"><script type="application/json" class="ia-datos">{"enunciado":"","explicacion":"","items":["Revisar la calidad y la protección de datos personales","Elegir el formato abierto y la licencia","Describir el conjunto con metadatos DCAT-AP","Publicarlo en el portal y federarlo en datos.gob.es","Mantener la periodicidad de actualización anunciada"],"tipo":"ordenar","titulo":"Ordena la publicación de un conjunto de datos"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-t3" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t3">Reto evaluable</h2>
@@ -1383,7 +1503,7 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
    preguntas de autoevaluación acertadas en cada capítulo. Se guarda solo en
    el almacenamiento local de este navegador; no se envía a ningún servidor. */
 (function () {
-  var CLAVE = 'reutilizacion-datos-progreso-v1';
+  var CLAVE = 'progreso-' + (location.pathname.split('/').filter(Boolean)[0] || 'libro') + '-v1';
   function leer() { try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch (e) { return {}; } }
   function guardar(d) { try { localStorage.setItem(CLAVE, JSON.stringify(d)); } catch (e) {} }
   var pagina = location.pathname.split('/').pop() || 'index.html';
@@ -1405,23 +1525,26 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -1430,10 +1553,12 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -1441,13 +1566,13 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -1460,6 +1585,9 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -1486,10 +1614,14 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -1518,7 +1650,7 @@ WyJkYXRvcy9iaWJsaW90ZWNhc19tYWRyaWRfMjAyNi0xMS0yNC5jc3YiLCJkYXRvcy9kYXRhcmV1c2VS
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBtdW5pY2lwaW9zX3NlbCA9IElucHV0cy5jaGVja2JveChcbiAgW1wiR2V0YWZlXCIsIFwiTGVnYW7DqXNcIiwgXCJBbGNvcmPDs25cIiwgXCJNw7NzdG9sZXNcIiwgXCJGdWVubGFicmFkYVwiXSxcbiAgeyB2YWx1ZTogW1wiTGVnYW7DqXNcIiwgXCJBbGNvcmPDs25cIiwgXCJNw7NzdG9sZXNcIiwgXCJGdWVubGFicmFkYVwiXSwgbGFiZWw6IFwiTXVuaWNpcGlvczpcIiB9XG4pXG52aWV3b2YgcG9yX2JpYmxpb3RlY2EgPSBJbnB1dHMudG9nZ2xlKHsgbGFiZWw6IFwiTWVkaWEgcG9yIGJpYmxpb3RlY2FcIiwgdmFsdWU6IGZhbHNlIH0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ211bmljaXBpb3Nfc2VsJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3Bvcl9iaWJsaW90ZWNhJykifV19
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBtdW5pY2lwaW9zX3NlbCA9IHtcbiAgY29uc3QgbXMgPSBbXCJHZXRhZmVcIiwgXCJMZWdhbsOpc1wiLCBcIkFsY29yY8OzblwiLCBcIk3Ds3N0b2xlc1wiLCBcIkZ1ZW5sYWJyYWRhXCJdLCBpbmkgPSBuZXcgU2V0KFtcIkxlZ2Fuw6lzXCIsIFwiQWxjb3Jjw7NuXCIsIFwiTcOzc3RvbGVzXCIsIFwiRnVlbmxhYnJhZGFcIl0pO1xuICBjb25zdCBjID0gaHRtbGA8ZmllbGRzZXQgY2xhc3M9XCJtYi0yXCI+PGxlZ2VuZCBjbGFzcz1cImZvcm0tbGFiZWwgZnMtNlwiPk11bmljaXBpb3M6PC9sZWdlbmQ+PC9maWVsZHNldD5gO1xuICBjb25zdCBjcyA9IG1zLm1hcChtID0+IHsgY29uc3QgayA9IHdpbmRvdy5MYWIuY2FzaWxsYShtLCB7dmFsdWU6IGluaS5oYXMobSl9KTtcbiAgICBrLmFkZEV2ZW50TGlzdGVuZXIoXCJpbnB1dFwiLCBlID0+IHsgZS5zdG9wUHJvcGFnYXRpb24oKTsgYy52YWx1ZSA9IG1zLmZpbHRlcigoXywgaSkgPT4gY3NbaV0udmFsdWUpOyBjLmRpc3BhdGNoRXZlbnQobmV3IEV2ZW50KFwiaW5wdXRcIiwge2J1YmJsZXM6IHRydWV9KSk7IH0pO1xuICAgIGMuYXBwZW5kKGspOyByZXR1cm4gazsgfSk7XG4gIGMudmFsdWUgPSBtcy5maWx0ZXIoKF8sIGkpID0+IGNzW2ldLnZhbHVlKTtcbiAgcmV0dXJuIGM7XG59XG52aWV3b2YgcG9yX2JpYmxpb3RlY2EgPSB3aW5kb3cuTGFiLmNhc2lsbGEoXCJNZWRpYSBwb3IgYmlibGlvdGVjYVwiLCB7dmFsdWU6IGZhbHNlfSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImFyZWEgPSB3aW5kb3cuTGFiLmFyZWFcbnZpZXdvZiBjc3ZfdHh0ID0gYXJlYShcIkNTVlwiLCB7cm93czogOCwgc3VibWl0OiBcIlJldmlzYXJcIiwgdmFsdWU6IGBtdW5pY2lwaW87YmlibGlvdGVjYTtwcmVzdGFtb3M7ZmVjaGFcbk1hZHJpZDtCaWJsaW90ZWNhIEV1Z2VuaW8gVHLDrWFzOzEyNDUwOzIwMjQtMDEtMzFcbm1hZHJpZCA7QmlibGlvdGVjYSBFdWdlbmlvIFRyw61hczsxMjQ1MDsyMDI0LTAxLTMxXG5HZXRhZmU7QmlibGlvdGVjYSBSaWNhcmRvIGRlIGxhIFZlZ2E7OzIwMjQtMDEtMzFcbkdldGFmZTtCaWJsaW90ZWNhIFJpY2FyZG8gZGUgbGEgVmVnYTszLjIxMDszMS8wMS8yMDI0XG5MZWdhbsOpcztCaWJsaW90ZWNhIENlbnRyYWw7bi9kOzIwMjQtMDEtMzFgfSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBmaWNoZXJvID0ge1xuICBjb25zdCBjID0gaHRtbGA8ZGl2IGNsYXNzPVwibWItMlwiPjxsYWJlbCBjbGFzcz1cImZvcm0tbGFiZWxcIiBmb3I9XCJsYWItY3N2LWZcIj7igKZvIGFicmUgdW4gQ1NWIGRlIHR1IG9yZGVuYWRvcjwvbGFiZWw+PGlucHV0IGlkPVwibGFiLWNzdi1mXCIgdHlwZT1cImZpbGVcIiBhY2NlcHQ9XCIuY3N2LHRleHQvY3N2XCIgY2xhc3M9XCJmb3JtLWNvbnRyb2wgZm9ybS1jb250cm9sLXNtXCI+PC9kaXY+YDtcbiAgYy52YWx1ZSA9IG51bGw7XG4gIGMucXVlcnlTZWxlY3RvcihcImlucHV0XCIpLm9uY2hhbmdlID0gYXN5bmMgZSA9PiB7IGNvbnN0IGYgPSBlLnRhcmdldC5maWxlc1swXTsgaWYgKCFmKSByZXR1cm47IGMudmFsdWUgPSBhd2FpdCBmLnRleHQoKTsgYy5kaXNwYXRjaEV2ZW50KG5ldyBFdmVudChcImlucHV0XCIsIHtidWJibGVzOiB0cnVlfSkpOyB9O1xuICByZXR1cm4gYztcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgY29uc3QgdHh0ID0gKGZpY2hlcm8gPz8gY3N2X3R4dCkucmVwbGFjZSgvXu+7vy8sIFwiXCIpO1xuICBjb25zdCBsaW5lYXMgPSB0eHQuc3BsaXQoL1xccj9cXG4vKS5maWx0ZXIobCA9PiBsLnRyaW0oKSAhPT0gXCJcIik7XG4gIGlmIChsaW5lYXMubGVuZ3RoIDwgMikgcmV0dXJuIGh0bWxgPHAgcm9sZT1cInN0YXR1c1wiPkhhY2VuIGZhbHRhIHVuYSBjYWJlY2VyYSB5IGFsIG1lbm9zIHVuYSBmaWxhLjwvcD5gO1xuICBjb25zdCBzZXAgPSBbXCI7XCIsIFwiLFwiLCBcIlxcdFwiLCBcInxcIl0ubWFwKHMgPT4gW3MsIGxpbmVhc1swXS5zcGxpdChzKS5sZW5ndGhdKS5zb3J0KChhLCBiKSA9PiBiWzFdIC0gYVsxXSlbMF1bMF07XG4gIGNvbnN0IGZpbGFzID0gbGluZWFzLm1hcChsID0+IGwuc3BsaXQoc2VwKSk7XG4gIGNvbnN0IGNhYiA9IGZpbGFzWzBdLm1hcCh4ID0+IHgudHJpbSgpKSwgZGF0b3MgPSBmaWxhcy5zbGljZSgxKTtcbiAgY29uc3Qgbm9tU2VwID0ge1wiO1wiOiBcInB1bnRvIHkgY29tYVwiLCBcIixcIjogXCJjb21hXCIsIFwiXFx0XCI6IFwidGFidWxhZG9yXCIsIFwifFwiOiBcImJhcnJhIHZlcnRpY2FsXCJ9W3NlcF07XG4gIGNvbnN0IHByb2JsZW1hcyA9IFtdO1xuICBjb25zdCBsYXJnYXMgPSBkYXRvcy5maWx0ZXIoZiA9PiBmLmxlbmd0aCAhPT0gY2FiLmxlbmd0aCkubGVuZ3RoO1xuICBpZiAobGFyZ2FzKSBwcm9ibGVtYXMucHVzaChbXCJFc3RydWN0dXJhXCIsIGAke2xhcmdhc30gZmlsYXMgbm8gdGllbmVuICR7Y2FiLmxlbmd0aH0gY29sdW1uYXNgXSk7XG4gIGNvbnN0IHZhY2lvcyA9IGNhYi5tYXAoKGMsIGopID0+IFtjLCBkYXRvcy5maWx0ZXIoZiA9PiAhKGZbal0gPz8gXCJcIikudHJpbSgpIHx8IC9eKG5cXC8/ZHxuYXxudWxsfC18XFw/KSQvaS50ZXN0KChmW2pdID8/IFwiXCIpLnRyaW0oKSkpLmxlbmd0aF0pLmZpbHRlcih4ID0+IHhbMV0pO1xuICB2YWNpb3MuZm9yRWFjaCgoW2MsIG5dKSA9PiBwcm9ibGVtYXMucHVzaChbXCJDb21wbGV0aXR1ZFwiLCBgwqske2N9wrs6ICR7bn0gdmFsb3JlcyB2YWPDrW9zIG8gZGVsIHRpcG8gwqtuL2TCu2BdKSk7XG4gIGNvbnN0IG5vcm0gPSBmID0+IGYubWFwKHggPT4geC50cmltKCkudG9Mb3dlckNhc2UoKSkuam9pbihcIsKmXCIpO1xuICBjb25zdCB2aXN0b3MgPSBuZXcgTWFwKCk7IGxldCBkdXAgPSAwOyBkYXRvcy5mb3JFYWNoKGYgPT4geyBjb25zdCBrID0gbm9ybShmKTsgaWYgKHZpc3Rvcy5oYXMoaykpIGR1cCsrOyBlbHNlIHZpc3Rvcy5zZXQoaywgMSk7IH0pO1xuICBpZiAoZHVwKSBwcm9ibGVtYXMucHVzaChbXCJVbmljaWRhZFwiLCBgJHtkdXB9IGZpbGFzIGR1cGxpY2FkYXMgKHNpbiBkaXN0aW5ndWlyIG1hecO6c2N1bGFzIG5pIGVzcGFjaW9zKWBdKTtcbiAgY2FiLmZvckVhY2goKGMsIGopID0+IHtcbiAgICBjb25zdCB2ID0gZGF0b3MubWFwKGYgPT4gKGZbal0gPz8gXCJcIikudHJpbSgpKS5maWx0ZXIoeCA9PiB4ICYmICEvXihuXFwvP2R8bmF8bnVsbHwtfFxcPykkL2kudGVzdCh4KSk7XG4gICAgY29uc3QgbnVtcyA9IHYuZmlsdGVyKHggPT4gL14tP1xcZCsoWy4sXVxcZCspKiQvLnRlc3QoeCkpO1xuICAgIGlmIChudW1zLmxlbmd0aCA+PSB2Lmxlbmd0aCAqIDAuNiAmJiBudW1zLmxlbmd0aCkge1xuICAgICAgY29uc3QgbWlsZXMgPSBudW1zLmZpbHRlcih4ID0+IC9eXFxkezEsM30oWy5dXFxkezN9KSskLy50ZXN0KHgpKS5sZW5ndGg7XG4gICAgICBpZiAobWlsZXMpIHByb2JsZW1hcy5wdXNoKFtcIlZhbGlkZXpcIiwgYMKrJHtjfcK7OiAke21pbGVzfSBuw7ptZXJvcyBjb24gcHVudG8gZGUgbWlsZXMgKHAuIGVqLiAzLjIxMCk6IMK/dHJlcyBtaWwgbyB0cmVzP2BdKTtcbiAgICAgIGNvbnN0IHJhcm9zID0gdi5sZW5ndGggLSBudW1zLmxlbmd0aDsgaWYgKHJhcm9zKSBwcm9ibGVtYXMucHVzaChbXCJWYWxpZGV6XCIsIGDCqyR7Y33CuzogJHtyYXJvc30gdmFsb3JlcyBubyBudW3DqXJpY29zIGVuIHVuYSBjb2x1bW5hIG51bcOpcmljYWBdKTtcbiAgICB9XG4gICAgY29uc3QgaXNvID0gdi5maWx0ZXIoeCA9PiAvXlxcZHs0fS1cXGR7Mn0tXFxkezJ9JC8udGVzdCh4KSkubGVuZ3RoLCBkbXkgPSB2LmZpbHRlcih4ID0+IC9eXFxkezEsMn1cXC9cXGR7MSwyfVxcL1xcZHs0fSQvLnRlc3QoeCkpLmxlbmd0aDtcbiAgICBpZiAoaXNvICYmIGRteSkgcHJvYmxlbWFzLnB1c2goW1wiQ29uc2lzdGVuY2lhXCIsIGDCqyR7Y33CuzogZmVjaGFzIGVuIGRvcyBmb3JtYXRvcyAoJHtpc299IEFBQUEtTU0tREQgeSAke2RteX0gREQvTU0vQUFBQSlgXSk7XG4gICAgY29uc3QgZ3J1cG9zID0gbmV3IE1hcCgpOyB2LmZvckVhY2goeCA9PiB7IGNvbnN0IGsgPSB4LnRvTG93ZXJDYXNlKCkubm9ybWFsaXplKFwiTkZEXCIpLnJlcGxhY2UoL1vMgC3Nr10vZywgXCJcIikudHJpbSgpOyBncnVwb3Muc2V0KGssIChncnVwb3MuZ2V0KGspIHx8IG5ldyBTZXQoKSkuYWRkKHgpKTsgfSk7XG4gICAgY29uc3QgdmFyaWFudGVzID0gWy4uLmdydXBvcy52YWx1ZXMoKV0uZmlsdGVyKHMgPT4gcy5zaXplID4gMSk7XG4gICAgaWYgKHZhcmlhbnRlcy5sZW5ndGgpIHByb2JsZW1hcy5wdXNoKFtcIkNvbnNpc3RlbmNpYVwiLCBgwqske2N9wrs6IHZhcmlhbnRlcyBkZSB1biBtaXNtbyB2YWxvcjogJHt2YXJpYW50ZXMuc2xpY2UoMCwgMykubWFwKHMgPT4gWy4uLnNdLm1hcCh4ID0+IFwiwqtcIiArIHggKyBcIsK7XCIpLmpvaW4oXCIgLyBcIikpLmpvaW4oXCI7IFwiKX1gXSk7XG4gICAgY29uc3QgZXNwID0gZGF0b3MuZmlsdGVyKGYgPT4gZltqXSAhPT0gdW5kZWZpbmVkICYmIGZbal0gIT09IGZbal0udHJpbSgpKS5sZW5ndGg7XG4gICAgaWYgKGVzcCkgcHJvYmxlbWFzLnB1c2goW1wiRm9ybWF0b1wiLCBgwqske2N9wrs6ICR7ZXNwfSB2YWxvcmVzIGNvbiBlc3BhY2lvcyBhbCBwcmluY2lwaW8gbyBhbCBmaW5hbGBdKTtcbiAgfSk7XG4gIGNvbnN0IGQgPSBodG1sYDxkaXYgcm9sZT1cInN0YXR1c1wiPjwvZGl2PmA7XG4gIGQuaW5uZXJIVE1MID0gYDxwPlNlcGFyYWRvcjogPHN0cm9uZz4ke25vbVNlcH08L3N0cm9uZz4gwrcgJHtjYWIubGVuZ3RofSBjb2x1bW5hcyDCtyAke2RhdG9zLmxlbmd0aH0gZmlsYXMuPC9wPmAgK1xuICAgIChwcm9ibGVtYXMubGVuZ3RoID8gYDx0YWJsZSBjbGFzcz1cInRhYmxlIHRhYmxlLXNtXCI+PHRoZWFkPjx0cj48dGggc2NvcGU9XCJjb2xcIj5EaW1lbnNpw7NuPC90aD48dGggc2NvcGU9XCJjb2xcIj5Qcm9ibGVtYTwvdGg+PC90cj48L3RoZWFkPjx0Ym9keT4ke3Byb2JsZW1hcy5tYXAoKFthLCBiXSkgPT4gYDx0cj48dGQ+JHthfTwvdGQ+PHRkPiR7Yi5yZXBsYWNlKC88L2csIFwiJmx0O1wiKX08L3RkPjwvdHI+YCkuam9pbihcIlwiKX08L3Rib2R5PjwvdGFibGU+YFxuICAgICAgOiBgPHAgY2xhc3M9XCJsYWItYmllblwiIHN0eWxlPVwiZm9udC13ZWlnaHQ6NjAwXCI+Tm8gc2UgaGFuIGRldGVjdGFkbyBwcm9ibGVtYXMgY29uIGVzdGFzIGNvbXByb2JhY2lvbmVzLjwvcD5gKSArXG4gICAgYDxwIGNsYXNzPVwic21hbGxcIj5Tb24gY29tcHJvYmFjaW9uZXMgYXV0b23DoXRpY2FzIGLDoXNpY2FzOiBubyBzdXN0aXR1eWVuIGEgcmV2aXNhciBlbCBzaWduaWZpY2FkbyBkZSBsb3MgZGF0b3MuIEVuIFIsIGVsIGNhcMOtdHVsbyB1c2EgPGNvZGU+ZGF0YXJldXNlUjwvY29kZT4gcGFyYSBoYWNlciBsbyBtaXNtbyBkZSBmb3JtYSByZXByb2R1Y2libGUuPC9wPmA7XG4gIHJldHVybiBkO1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdtdW5pY2lwaW9zX3NlbCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdwb3JfYmlibGlvdGVjYScpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdjc3ZfdHh0JykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2ZpY2hlcm8nKSJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1972,6 +2104,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
