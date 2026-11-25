@@ -442,6 +442,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./94-componentes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Biblioteca de componentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -524,9 +529,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Elegir familias tipográficas adecuadas para interfaces.</li>
+<li>Elegir <a href="92-glosario.html#gl-familia" class="glos" data-def="Conjunto de tipos con un diseño común en varios pesos y estilos.">familias tipográficas</a> adecuadas para interfaces.</li>
 <li>Construir escalas tipográficas y jerarquías coherentes.</li>
-<li>Ajustar el espaciado, la longitud de línea y el contraste para la legibilidad.</li>
+<li>Ajustar el espaciado, la <a href="92-glosario.html#gl-longitud" class="glos" data-def="Número de caracteres por línea; para la lectura cómoda se usan de 45 a 75.">longitud de línea</a> y el <a href="92-glosario.html#gl-contraste" class="glos" data-def="Relación entre la luminancia de dos colores, de 1:1 a 21:1.">contraste</a> para la <a href="92-glosario.html#gl-legibilidad" class="glos" data-def="Facilidad con que se distinguen las letras y se lee un texto.">legibilidad</a>.</li>
 </ul>
 </div>
 </div>
@@ -573,7 +578,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="elegir-la-familia-tipográfica">1. Elegir la familia tipográfica</h2>
 <p>En las interfaces, la tipografía es sobre todo <strong>texto que se lee para hacer algo</strong>: etiquetas, botones, mensajes, contenidos. Para elegir una familia conviene comprobar:</p>
 <ul>
-<li><strong>Legibilidad a tamaños pequeños</strong>: altura de la x generosa (la altura de las minúsculas sin ascendentes), formas abiertas y letras que no se confundan (I, l y 1; O y 0).</li>
+<li><strong>Legibilidad a tamaños pequeños</strong>: <a href="92-glosario.html#gl-altura-x" class="glos" data-def="Altura de las minúsculas sin ascendentes ni descendentes; si es generosa, la letra se lee mejor a tamaños pequeños.">altura de la x</a> generosa (la altura de las minúsculas sin ascendentes), formas abiertas y letras que no se confundan (I, l y 1; O y 0).</li>
 <li><strong>Variedad de pesos y estilos</strong> suficiente para construir la jerarquía sin añadir otras familias.</li>
 <li><strong>Soporte de idiomas</strong>: todos los caracteres que se necesitan (tildes, eñe, otros alfabetos si hay versiones en otras lenguas).</li>
 <li><strong>Rendimiento y licencia</strong>: tipografías del sistema o web con licencia adecuada y un peso de carga razonable.</li>
@@ -582,7 +587,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="escalas-y-jerarquía" class="level2">
 <h2 class="anchored" data-anchor-id="escalas-y-jerarquía">2. Escalas y jerarquía</h2>
-<p>Una <strong>escala modular</strong> fija los tamaños a partir de un tamaño base y una razón constante: cada nivel multiplica el anterior por la razón. Razones habituales: 1,125, 1,2, 1,25, 1,333 o 1,5. Con base de 16 px y razón 1,25 salen 16, 20, 25, 31, 39… Usar una escala evita tamaños arbitrarios y da coherencia.</p>
+<p>Una <a href="92-glosario.html#gl-escala" class="glos" data-def="Serie de tamaños en la que cada uno se obtiene multiplicando el anterior por una razón constante."><strong>escala modular</strong></a> fija los tamaños a partir de un tamaño base y una razón constante: cada nivel multiplica el anterior por la razón. Razones habituales: 1,125, 1,2, 1,25, 1,333 o 1,5. Con base de 16 px y razón 1,25 salen 16, 20, 25, 31, 39… Usar una escala evita tamaños arbitrarios y da coherencia.</p>
 <p>La jerarquía no se construye solo con el tamaño: también con el <strong>peso</strong> (regular, semibold, bold), el <strong>color</strong> (texto principal y secundario, siempre con contraste suficiente) y el <strong>espacio</strong> alrededor. Un sistema típico tiene pocos estilos con nombre: título de pantalla, título de sección, cuerpo, cuerpo pequeño, etiqueta, botón.</p>
 <div id="fig-escala" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Seis líneas de texto «Biblioteca» de tamaño creciente, de 12,8 a 48,8 píxeles, con su tamaño en píxeles y en rem a la izquierda. El tamaño de 16 px aparece marcado como texto base.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -598,7 +603,7 @@ Figura&nbsp;1: Escala modular de base 16 px y razón 1,25: cada paso multiplica 
 <section id="espaciado-y-longitud-de-línea" class="level2">
 <h2 class="anchored" data-anchor-id="espaciado-y-longitud-de-línea">3. Espaciado y longitud de línea</h2>
 <ul>
-<li><strong>Interlineado</strong>: para el texto de lectura, en torno a 1,5 veces el tamaño de la letra; los titulares necesitan menos. Las WCAG exigen que el contenido siga funcionando si la persona aumenta el interlineado hasta 1,5 y el espacio entre párrafos hasta 2 veces el tamaño.</li>
+<li><a href="92-glosario.html#gl-interlineado" class="glos" data-def="Altura de línea: distancia vertical entre líneas de texto."><strong>Interlineado</strong></a>: para el texto de lectura, en torno a 1,5 veces el tamaño de la letra; los titulares necesitan menos. Las WCAG exigen que el contenido siga funcionando si la persona aumenta el interlineado hasta 1,5 y el espacio entre párrafos hasta 2 veces el tamaño.</li>
 <li><strong>Longitud de línea</strong>: Dyson (2004) revisó la investigación sobre la lectura en pantalla y encontró que las líneas largas se leen algo más rápido, pero que las personas prefieren longitudes moderadas. Como regla práctica de diseño se usan de 45 a 75 caracteres por línea para el texto de lectura.</li>
 <li><strong>Tamaño</strong>: 16 px es el tamaño de referencia del texto de los navegadores; el texto de lectura no debería ser menor en móvil.</li>
 <li><strong>Unidades relativas</strong> (rem): permiten que la interfaz respete el tamaño de letra que la persona ha elegido en su sistema.</li>
@@ -857,7 +862,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ0
 <li>Con base 16 px y razón 1,25, el paso 2 mide <input class="webex-solveme nospaces" size="5" aria-label="Escribe tu respuesta" data-answer="[&quot;25&quot;]"> px.</li>
 <li>Para el texto de lectura se suele recomendar una longitud de línea de <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">20 a 30 caracteres</option><option value="answer">45 a 75 caracteres</option><option value="x">100 a 150 caracteres</option></select></li>
 <li>El texto justificado es recomendable en las interfaces porque ordena los márgenes. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
-<li>¿Por qué se prefieren las unidades rem para el tamaño del texto?</li>
+<li>¿Por qué se prefieren las <a href="92-glosario.html#gl-rem" class="glos" data-def="Unidad relativa al tamaño de letra raíz, que respeta el tamaño que elige la persona.">unidades rem</a> para el tamaño del texto?</li>
 </ol>
 <p></p><div class="webex-radiogroup" role="radiogroup" aria-label="Opciones de respuesta" id="radio_libro_1"><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>Porque ocupan menos memoria</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="answer"> <span>Porque respetan el tamaño de letra que la persona elige en su sistema</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>Porque son obligatorias en Figma</span></label></div><p></p>
 <ol start="6" type="1">
@@ -1584,6 +1589,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

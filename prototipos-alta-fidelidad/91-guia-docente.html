@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Apéndice C — Guía para el profesorado – Diseño e interacción en prototipos de alta fidelidad</title>
+<title>Apéndice D — Guía para el profesorado – Diseño e interacción en prototipos de alta fidelidad</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -436,6 +436,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./94-componentes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Biblioteca de componentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -477,7 +482,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./93-laboratorio-visual.html">Apéndices</a></li><li class="breadcrumb-item"><a href="./91-guia-docente.html"><span class="chapter-title">Guía para el profesorado</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-guia" class="quarto-section-identifier">Apéndice C — Guía para el profesorado</span></h1>
+<h1 class="title"><span id="sec-guia" class="quarto-section-identifier">Apéndice D — Guía para el profesorado</span></h1>
 </div>
 
 
@@ -497,13 +502,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Esta guía explica cómo está pensado el libro para la docencia de la asignatura y cómo mantenerlo.</p>
 <section id="correspondencia-con-la-ficha-de-la-asignatura" class="level2">
 <h2 class="anchored" data-anchor-id="correspondencia-con-la-ficha-de-la-asignatura">Correspondencia con la ficha de la asignatura</h2>
-<p>Los once temas siguen, en el mismo orden, los contenidos de la ficha oficial de <strong>Diseño e interacción en prototipos de alta fidelidad</strong> (19950). La asignatura de baja fidelidad (19945) es su requisito recomendado y tiene su propio libro. Los objetivos de cada tema concretan los objetivos específicos de la ficha.</p>
+<p>Los once temas siguen, en el mismo orden, los contenidos de la ficha oficial de <strong>Diseño e interacción en prototipos de alta fidelidad</strong> (19950). La asignatura de baja <a href="92-glosario.html#gl-fidelidad" class="glos" data-def="Grado en que un prototipo se parece al producto final; tiene varias dimensiones independientes.">fidelidad</a> (19945) es su requisito recomendado y tiene su propio libro. Los objetivos de cada tema concretan los objetivos específicos de la ficha.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Actividad de evaluación (ficha)</th>
@@ -525,7 +525,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td>Proyecto final en equipo</td>
 <td>25 %</td>
-<td>Los retos construyen la memoria de diseño: tipografía (4), color (5), iconos (6), composición (7), espaciado (8), sistema de diseño (9), crítica (10) y traspaso (11)</td>
+<td>Los retos construyen la memoria de diseño: tipografía (4), color (5), <a href="92-glosario.html#gl-icono" class="glos" data-def="Imagen pequeña que representa una acción, un objeto o un estado.">iconos</a> (6), composición (7), espaciado (8), <a href="92-glosario.html#gl-sistema" class="glos" data-def="Principios, estilos, componentes, patrones, código y documentación con los que una organización diseña de forma coherente.">sistema de diseño</a> (9), crítica (10) y <a href="92-glosario.html#gl-traspaso" class="glos" data-def="Handoff. Paso del diseño al equipo que lo construye.">traspaso</a> (11)</td>
 </tr>
 </tbody>
 </table>
@@ -537,15 +537,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="autoevaluación-en-aula-global" class="level2">
 <h2 class="anchored" data-anchor-id="autoevaluación-en-aula-global">Autoevaluación en Aula Global</h2>
-<p>Las preguntas de autoevaluación de cada tema están exportadas a <strong>Moodle XML</strong> en la carpeta <code>moodle/</code> del repositorio: un fichero por tema y uno con todo el banco. Se importan desde <em>Banco de preguntas → Importar → Formato Moodle XML</em>. Cada pregunta conserva su explicación como retroalimentación general.</p>
+<p>Las preguntas de autoevaluación de cada tema están exportadas a <strong>Moodle XML</strong> en la carpeta <code>moodle/</code> del repositorio: un fichero por tema y uno con todo el banco. Se importan desde <em>Banco de preguntas → Importar → Formato Moodle XML</em>. Cada pregunta conserva su explicación como <a href="92-glosario.html#gl-retroalimentacion" class="glos" data-def="Forma en que la interfaz comunica lo que está pasando o lo que ha pasado.">retroalimentación</a> general.</p>
 </section>
 <section id="el-papel-de-r" class="level2">
 <h2 class="anchored" data-anchor-id="el-papel-de-r">El papel de R</h2>
-<p>El libro usa R lo imprescindible: tres temas tienen ejercicios breves de completar huecos con funciones del libro (escala tipográfica y longitud de línea, contraste y daltonismo, rejillas). El capítulo <a href="./00-r-en-el-libro.html">Usar R en este libro</a> basta como preparación. Ningún reto exige programar.</p>
+<p>El libro usa R lo imprescindible: tres temas tienen ejercicios breves de completar huecos con funciones del libro (escala tipográfica y <a href="92-glosario.html#gl-longitud" class="glos" data-def="Número de caracteres por línea; para la lectura cómoda se usan de 45 a 75.">longitud de línea</a>, <a href="92-glosario.html#gl-contraste" class="glos" data-def="Relación entre la luminancia de dos colores, de 1:1 a 21:1.">contraste</a> y <a href="92-glosario.html#gl-daltonismo" class="glos" data-def="Deficiencia en la visión de los colores; la más frecuente afecta al eje rojo-verde.">daltonismo</a>, <a href="92-glosario.html#gl-rejilla" class="glos" data-def="División del espacio en columnas, medianiles y márgenes para alinear los elementos.">rejillas</a>). El capítulo <a href="./00-r-en-el-libro.html">Usar R en este libro</a> basta como preparación. Ningún reto exige programar.</p>
 </section>
 <section id="actividades-interactivas-y-laboratorios" class="level2">
 <h2 class="anchored" data-anchor-id="actividades-interactivas-y-laboratorios">Actividades interactivas y laboratorios</h2>
-<p>Además de los ejercicios de R y la autoevaluación, cada tema tiene <strong>actividades de corrección inmediata</strong> (ordenar, clasificar y escenarios con decisiones) y <strong>laboratorios</strong> que se usan sin programar: estados de un componente, escala tipográfica modular, contraste con simulación de daltonismo, proximidad de la Gestalt, diseño adaptable, densidad de información y un explorador de <em>design tokens</em>. Todo se ejecuta en el navegador del estudiante, sin servicios externos. En el PDF y el EPUB las actividades aparecen en papel, con su solución.</p>
+<p>Además de los ejercicios de R y la autoevaluación, cada tema tiene <strong>actividades de corrección inmediata</strong> (ordenar, clasificar y escenarios con decisiones) y <strong>laboratorios</strong> que se usan sin programar: estados de un componente, escala tipográfica modular, contraste con simulación de daltonismo, <a href="92-glosario.html#gl-proximidad" class="glos" data-def="Principio de la Gestalt: lo cercano se percibe como relacionado.">proximidad</a> de la Gestalt, <a href="92-glosario.html#gl-adaptable" class="glos" data-def="Responsive. Diseño que reorganiza la composición según el tamaño de la pantalla.">diseño adaptable</a>, <a href="92-glosario.html#gl-densidad" class="glos" data-def="Cantidad de información por unidad de espacio, que debe ajustarse a la tarea y la frecuencia de uso.">densidad de información</a> y un explorador de <em>design tokens</em>. Todo se ejecuta en el navegador del estudiante, sin servicios externos. En el PDF y el EPUB las actividades aparecen en papel, con su solución.</p>
 <p>Las actividades están escritas en Markdown con la extensión <code>interactivos</code> (<code>_extensions/interactivos/interactivos.lua</code>), así que se pueden añadir o cambiar sin programar.</p>
 <ul>
 <li><strong>Diapositivas de clase</strong>: cada tema tiene unas diapositivas con los objetivos, las figuras, las tablas principales, la lectura, preguntas para debatir y el reto, en <a href="diapositivas/index.html" target="_blank">diapositivas/</a> (F, pantalla completa; S, notas).</li>
@@ -1249,6 +1249,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 

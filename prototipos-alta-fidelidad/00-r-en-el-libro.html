@@ -437,6 +437,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./94-componentes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Biblioteca de componentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -540,7 +545,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoidGllbXBvcyA8LSBjKDMyLCA0
 <p>La media se dispara por la persona que tardó 120 segundos: por eso en las pruebas con usuarios se prefiere la media geométrica (<code>tiempo_tipico()</code> en las funciones del libro).</p>
 <section id="ejercicio-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ejercicio-1">Ejercicio 1</h3>
-<p>En una prueba, 7 de 9 participantes completaron la tarea de reservar una sala. Calcula la proporción de éxito.</p>
+<p>En una prueba, 7 de 9 participantes completaron la tarea de reservar una sala. Calcula la <a href="92-glosario.html#gl-proporcion" class="glos" data-def="Relación de tamaño entre elementos.">proporción</a> de éxito.</p>
 <div>
 <div id="webr-3" class="exercise-cell">
 
@@ -556,7 +561,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicl9wcm9wb3JjaW9uIn0s
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>exitos <span class="ot">&lt;-</span> <span class="dv">7</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>participantes <span class="ot">&lt;-</span> <span class="dv">9</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>exitos <span class="sc">/</span> participantes</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Un 78 % aproximadamente. Con tan pocas personas, esa cifra tiene mucha incertidumbre: lo explica el libro de la asignatura de baja fidelidad (Tema 4).</p>
+<p>Un 78 % aproximadamente. Con tan pocas personas, esa cifra tiene mucha incertidumbre: lo explica el libro de la asignatura de baja <a href="92-glosario.html#gl-fidelidad" class="glos" data-def="Grado en que un prototipo se parece al producto final; tiene varias dimensiones independientes.">fidelidad</a> (Tema 4).</p>
 </div>
 <script type="exercise-check-r_proporcion-contents">
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InJfcHJvcG9yY2lvbiJ9LCJjb2RlIjoiaWYgKGlzVFJVRShhbGwuZXF1YWwoYXMubnVtZXJpYygucmVzdWx0KSwgNyAvIDkpKSkge1xuICBsaXN0KGNvcnJlY3QgPSBUUlVFLCBtZXNzYWdlID0gXCJDb3JyZWN0bzogNyAvIDkgPSAwLDc4LlwiKVxufSBlbHNlIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkRpdmlkZSBsb3Mgw6l4aXRvcyAoNykgZW50cmUgZWwgdG90YWwgZGUgcGFydGljaXBhbnRlcyAoOSkuXCIpXG59In0=
@@ -565,7 +570,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InJf
 </section>
 <section id="las-funciones-del-libro" class="level2">
 <h2 class="anchored" data-anchor-id="las-funciones-del-libro">Las funciones del libro</h2>
-<p>Las funciones propias de este libro están en el fichero <code>funciones_ux.R</code>. Dentro del libro se cargan con <code>source("datos/funciones_ux.R")</code>; para usarlas en tu ordenador, descárgalo (lo explica el <a href="./90-uxlearn.html">Apéndice A</a>). Por ejemplo, <code>contraste()</code> calcula la relación de contraste entre dos colores según las WCAG:</p>
+<p>Las funciones propias de este libro están en el fichero <code>funciones_ux.R</code>. Dentro del libro se cargan con <code>source("datos/funciones_ux.R")</code>; para usarlas en tu ordenador, descárgalo (lo explica el <a href="./90-uxlearn.html">Apéndice A</a>). Por ejemplo, <code>contraste()</code> calcula la relación de <a href="92-glosario.html#gl-contraste" class="glos" data-def="Relación entre la luminancia de dos colores, de 1:1 a 21:1.">contraste</a> entre dos colores según las WCAG:</p>
 <div>
 <div id="webr-5" class="exercise-cell">
 
@@ -601,7 +606,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InJf
 </section>
 <section id="ejercicio-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ejercicio-3">Ejercicio 3</h3>
-<p>Las tablas de datos (<code>data.frame</code>) tienen filas y columnas. <code>sesiones_prueba</code> reúne los resultados simulados de una prueba con prototipos. Completa el código para ver cuántas filas tiene.</p>
+<p>Las tablas de datos (<code>data.frame</code>) tienen filas y columnas. <code>sesiones_prueba</code> reúne los resultados simulados de una prueba con <a href="92-glosario.html#gl-prototipo" class="glos" data-def="Representación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo.">prototipos</a>. Completa el código para ver cuántas filas tiene.</p>
 <script type="exercise-setup-r_filas-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicl9maWxhcyIsInNldHVwIjp0cnVlfSwiY29kZSI6InNvdXJjZShcImRhdG9zL2Z1bmNpb25lc191eC5SXCIpIn0=
 </script>
@@ -1387,6 +1392,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 

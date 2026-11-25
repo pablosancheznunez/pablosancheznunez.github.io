@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./90-uxlearn.html" rel="next">
+<link href="./94-componentes.html" rel="next">
 <link href="./11-entrega.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -444,6 +444,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./94-componentes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Biblioteca de componentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -500,7 +505,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Este apéndice reúne herramientas interactivas para practicar las decisiones de alta fidelidad sobre el ejemplo de <strong>ReservaSala</strong>: comparar versiones, ajustar una escala tipográfica y una de espaciado, ver los estados reales de un componente y probar una microinteracción accesible. Todo funciona en tu navegador.</p>
+<p>Este apéndice reúne herramientas interactivas para practicar las decisiones de <a href="92-glosario.html#gl-alta" class="glos" data-def="Prototipo que se parece al producto final en casi todas sus dimensiones: aspecto, contenido e interacción.">alta fidelidad</a> sobre el ejemplo de <strong>ReservaSala</strong>: comparar versiones, ajustar una escala tipográfica y una de espaciado, ver los estados reales de un componente y probar una <a href="92-glosario.html#gl-microinteraccion" class="glos" data-def="Momento de interacción con un solo propósito, con disparador, reglas, retroalimentación y bucles (Saffer, 2013).">microinteracción</a> accesible. Todo funciona en tu navegador.</p>
 <section id="antes-y-después" class="level2">
 <h2 class="anchored" data-anchor-id="antes-y-después">Antes y después</h2>
 <div class="quarto-layout-panel" data-layout-ncol="2">
@@ -512,7 +517,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <a href="figuras/m_antes.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Antes. Contraste insuficiente, sin jerarquía, color como único código, iconos de estilos mezclados y dos acciones con el mismo peso."><img src="figuras/m_antes.svg" class="img-fluid figure-img" alt="Maqueta móvil de la sala 2.14 con cabecera verde claro y texto blanco, imagen gris, descripción en letra diminuta gris claro, disponibilidad en cuadros verdes y rojos, tres iconos de estilos distintos, normas en letra muy pequeña y dos botones verdes iguales Reservar y Cancelar."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m-antes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: <strong>Antes.</strong> Contraste insuficiente, sin jerarquía, color como único código, iconos de estilos mezclados y dos acciones con el mismo peso.
+Figura&nbsp;1: <strong>Antes.</strong> <a href="92-glosario.html#gl-contraste" class="glos" data-def="Relación entre la luminancia de dos colores, de 1:1 a 21:1.">Contraste</a> insuficiente, sin jerarquía, color como único código, <a href="92-glosario.html#gl-icono" class="glos" data-def="Imagen pequeña que representa una acción, un objeto o un estado.">iconos</a> de estilos mezclados y dos acciones con el mismo peso.
 </figcaption>
 </figure>
 </div>
@@ -536,7 +541,7 @@ Figura&nbsp;2: <strong>Después.</strong> Contraste AA, jerarquía tipográfica,
 <section id="herramientas" class="level2">
 <h2 class="anchored" data-anchor-id="herramientas">Herramientas</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">Escala tipográfica</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Espaciado</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Estados de un botón</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Microinteracción</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Contraste</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">Paleta y daltonismo</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">Escala tipográfica</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Espaciado</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Estados de un botón</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Microinteracción</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Contraste</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href=""></a><a href="92-glosario.html#gl-paleta" class="glos" data-def="Conjunto de colores de un producto con sus funciones y tonos.">Paleta</a> y daltonismo</li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
@@ -640,7 +645,7 @@ Figura&nbsp;2: <strong>Después.</strong> Contraste AA, jerarquía tipográfica,
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>Pasa el ratón, pulsa y navega con el tabulador sobre estos botones reales: cada estado tiene su especificación.</p>
+<p>Pasa el ratón, pulsa y navega con el tabulador sobre estos botones reales: cada estado tiene su <a href="92-glosario.html#gl-especificacion" class="glos" data-def="Documentación precisa de flujos, estilos, componentes, estados, interacciones, contenido y accesibilidad.">especificación</a>.</p>
 <style>
 .lv-btn{font:600 16px/1 inherit;padding:12px 20px;border-radius:10px;border:2px solid transparent;background:#1c6b3a;color:#fff;cursor:pointer;margin:6px 8px 6px 0;transition:background-color .15s ease, transform .1s ease}
 .lv-btn:hover{background:#155a30}
@@ -747,7 +752,7 @@ Figura&nbsp;2: <strong>Después.</strong> Contraste AA, jerarquía tipográfica,
 </div>
 </div>
 </div>
-<p>La animación dura lo justo para dar retroalimentación (menos de 1,5 s), se acompaña de un mensaje que leen los lectores de pantalla (<code>aria-live</code>) y desaparece si el sistema pide <strong>reducir el movimiento</strong>.</p>
+<p>La animación dura lo justo para dar <a href="92-glosario.html#gl-retroalimentacion" class="glos" data-def="Forma en que la interfaz comunica lo que está pasando o lo que ha pasado.">retroalimentación</a> (menos de 1,5 s), se acompaña de un mensaje que leen los lectores de pantalla (<code>aria-live</code>) y desaparece si el sistema pide <strong>reducir el movimiento</strong>.</p>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <p>Elige el color del texto y del fondo. El laboratorio calcula la razón de contraste de WCAG y, si no llega, te propone el color más parecido que sí cumple.</p>
@@ -809,7 +814,7 @@ Figura&nbsp;2: <strong>Después.</strong> Contraste AA, jerarquía tipográfica,
 </div>
 </div>
 <div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
-<p>Elige cuatro colores para las categorías de un gráfico o los estados de la interfaz y mira cómo los perciben las personas con los tres tipos principales de daltonismo. La simulación usa el modelo de Machado, Oliveira y Fernandes (2009).</p>
+<p>Elige cuatro colores para las categorías de un gráfico o los estados de la interfaz y mira cómo los perciben las personas con los tres tipos principales de <a href="92-glosario.html#gl-daltonismo" class="glos" data-def="Deficiencia en la visión de los colores; la más frecuente afecta al eje rojo-verde.">daltonismo</a>. La simulación usa el modelo de Machado, Oliveira y Fernandes (2009).</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb9" data-startfrom="201" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 200;"><span id="cb9-201"><a href="#cb9-201" aria-hidden="true" tabindex="-1"></a>viewof p1 <span class="op">=</span> <span class="fu">colorL</span>(<span class="st">"Color 1"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"#2e7d32"</span>})</span>
 <span id="cb9-202"><a href="#cb9-202" aria-hidden="true" tabindex="-1"></a>viewof p2 <span class="op">=</span> <span class="fu">colorL</span>(<span class="st">"Color 2"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"#c62828"</span>})</span>
@@ -890,13 +895,13 @@ Figura&nbsp;2: <strong>Después.</strong> Contraste AA, jerarquía tipográfica,
 <ul>
 <li><strong><a href="https://www.w3.org/WAI/perspective-videos/">Web Accessibility Perspectives</a></strong> — W3C WAI. Diez vídeos de alrededor de un minuto (contraste, teclado, subtítulos, diseño claro…), con audiodescripción y subtítulos.</li>
 <li><strong><a href="https://www.w3.org/WAI/videos/standards-and-benefits/">Video Introduction to Web Accessibility and W3C Standards</a></strong> — W3C WAI. Cuatro minutos sobre qué es la accesibilidad web y qué son las WCAG.</li>
-<li><strong><a href="https://www.nngroup.com/videos/tips-for-new-prototypers/">5 Tips for New Prototypers</a></strong> — Nielsen Norman Group. Consejos de diseño y de flujo de trabajo para prototipos que se van a probar con usuarios.</li>
+<li><strong><a href="https://www.nngroup.com/videos/tips-for-new-prototypers/">5 Tips for New Prototypers</a></strong> — Nielsen Norman Group. Consejos de diseño y de flujo de trabajo para <a href="92-glosario.html#gl-prototipo" class="glos" data-def="Representación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo.">prototipos</a> que se van a probar con usuarios.</li>
 </ul>
 </section>
 <section id="para-tu-proyecto" class="level2">
 <h2 class="anchored" data-anchor-id="para-tu-proyecto">Para tu proyecto</h2>
 <ul>
-<li>Copia la tabla de <strong>tokens</strong> de la escala tipográfica a tu sistema de diseño.</li>
+<li>Copia la tabla de <strong>tokens</strong> de la escala tipográfica a tu <a href="92-glosario.html#gl-sistema" class="glos" data-def="Principios, estilos, componentes, patrones, código y documentación con los que una organización diseña de forma coherente.">sistema de diseño</a>.</li>
 <li>Especifica los <strong>seis estados</strong> de cada componente interactivo, como en la tabla del botón.</li>
 <li>Haz siempre una versión «antes y después» para justificar tus decisiones en la crítica.</li>
 <li>Pasa todos los pares texto-fondo por el <strong>comprobador de contraste</strong> y la paleta de tus gráficos por el <strong>simulador de daltonismo</strong>.</li>
@@ -1559,8 +1564,8 @@ window._ojs.runtime.interpretFromScriptTags();
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./90-uxlearn.html" class="pagination-link" aria-label="Las funciones del libro">
-        <span class="nav-page-text"><span class="chapter-title">Las funciones del libro</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./94-componentes.html" class="pagination-link" aria-label="Biblioteca de componentes">
+        <span class="nav-page-text"><span class="chapter-title">Biblioteca de componentes</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1578,6 +1583,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

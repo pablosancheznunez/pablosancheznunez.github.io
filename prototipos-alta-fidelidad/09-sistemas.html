@@ -442,6 +442,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./94-componentes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Biblioteca de componentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -521,9 +526,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Conocer los principales sistemas de diseño y su estructura.</li>
-<li>Construir y usar bibliotecas de componentes y <em>tokens</em> de diseño.</li>
-<li>Entender la gobernanza de un sistema de diseño.</li>
+<li>Conocer los principales <a href="92-glosario.html#gl-sistema" class="glos" data-def="Principios, estilos, componentes, patrones, código y documentación con los que una organización diseña de forma coherente.">sistemas de diseño</a> y su estructura.</li>
+<li>Construir y usar <a href="92-glosario.html#gl-biblioteca" class="glos" data-def="Colección de componentes reutilizables con sus variantes y estados.">bibliotecas de componentes</a> y <em>tokens</em> de diseño.</li>
+<li>Entender la <a href="92-glosario.html#gl-gobernanza" class="glos" data-def="Reglas sobre quién decide, cómo se proponen cambios y cómo se versiona un sistema de diseño.">gobernanza</a> de un sistema de diseño.</li>
 </ul>
 </div>
 </div>
@@ -574,11 +579,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="estructura-tokens-componentes-y-patrones" class="level2">
 <h2 class="anchored" data-anchor-id="estructura-tokens-componentes-y-patrones">2. Estructura: <em>tokens</em>, componentes y patrones</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Capa</th>
@@ -599,7 +599,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><strong>Componentes</strong></td>
-<td>Piezas reutilizables con sus variantes y estados</td>
+<td>Piezas reutilizables con sus <a href="92-glosario.html#gl-variante" class="glos" data-def="Versión de un componente para un uso (primario, secundario) o un tamaño.">variantes</a> y estados</td>
 <td>Botón (primario, secundario; reposo, foco, desactivado)</td>
 </tr>
 <tr class="even">
@@ -624,7 +624,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Moléculas</strong>: grupos sencillos con una función (un buscador: etiqueta, campo y botón).</li>
 <li><strong>Organismos</strong>: secciones complejas (una cabecera con logotipo, navegación y buscador).</li>
 <li><strong>Plantillas</strong>: la estructura de una página con los organismos colocados.</li>
-<li><strong>Páginas</strong>: las plantillas con contenido real, donde se comprueba que todo funciona.</li>
+<li><strong>Páginas</strong>: las plantillas con <a href="92-glosario.html#gl-contenido-real" class="glos" data-def="Textos, nombres, cifras e imágenes reales o realistas en lugar de texto de relleno.">contenido real</a>, donde se comprueba que todo funciona.</li>
 </ol>
 <div id="fig-atomico" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cinco columnas de izquierda a derecha, cada una más grande que la anterior: átomos (un botón, un campo, una etiqueta), moléculas (un buscador), organismos (una cabecera con buscador), plantillas (la estructura de la página de resultados) y páginas (la página de resultados con libros reales).">
 <figure class="quarto-float quarto-float-fig figure">
@@ -632,7 +632,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <a href="figuras/tema9_atomico.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Los cinco niveles del diseño atómico de Frost (2016), con un ejemplo del catálogo de una biblioteca en cada uno."><img src="figuras/tema9_atomico.svg" class="img-fluid figure-img" alt="Cinco columnas de izquierda a derecha, cada una más grande que la anterior: átomos (un botón, un campo, una etiqueta), moléculas (un buscador), organismos (una cabecera con buscador), plantillas (la estructura de la página de resultados) y páginas (la página de resultados con libros reales)."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-atomico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Los cinco niveles del diseño atómico de Frost (2016), con un ejemplo del catálogo de una biblioteca en cada uno.
+Figura&nbsp;1: Los cinco niveles del <a href="92-glosario.html#gl-atomico" class="glos" data-def="Método de Frost (2016) que construye las interfaces en cinco niveles: átomos, moléculas, organismos, plantillas y páginas.">diseño atómico</a> de Frost (2016), con un ejemplo del catálogo de una biblioteca en cada uno.
 </figcaption>
 </figure>
 </div>
@@ -670,7 +670,7 @@ Figura&nbsp;2: Las tres capas de los <em>design tokens</em>: primitivos, semánt
 <div class="laboratorio-etiqueta">
 <p>Laboratorio · se ejecuta en tu navegador</p>
 </div>
-<p>Edita los <em>tokens</em> (en JSON) y pulsa <strong>Aplicar</strong>: la tarjeta y el botón cambian a la vez, porque leen los mismos valores. El laboratorio comprueba además el contraste entre el texto del botón y su fondo.</p>
+<p>Edita los <em>tokens</em> (en JSON) y pulsa <strong>Aplicar</strong>: la tarjeta y el botón cambian a la vez, porque leen los mismos valores. El laboratorio comprueba además el <a href="92-glosario.html#gl-contraste" class="glos" data-def="Relación entre la luminancia de dos colores, de 1:1 a 21:1.">contraste</a> entre el texto del botón y su fondo.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="95" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 94;"><span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
 <span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>viewof tokens_txt <span class="op">=</span> <span class="fu">area</span>(<span class="st">"Tokens (JSON)"</span><span class="op">,</span> {<span class="dt">rows</span><span class="op">:</span> <span class="dv">9</span><span class="op">,</span> <span class="dt">submit</span><span class="op">:</span> <span class="st">"Aplicar"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="vs">`{</span></span>
@@ -752,7 +752,7 @@ Figura&nbsp;2: Las tres capas de los <em>design tokens</em>: primitivos, semánt
 <p><strong>Básico.</strong> ¿Qué estados mínimos debe documentar un botón?</p>
 <div class="webex-solution">
 <button>Ver solución</button>
-<p>Normal, <em>hover</em> (en escritorio), foco (visible para teclado), pulsado, desactivado y cargando. Cada uno con su especificación de color y contraste.</p>
+<p>Normal, <em>hover</em> (en escritorio), foco (visible para teclado), pulsado, desactivado y cargando. Cada uno con su <a href="92-glosario.html#gl-especificacion" class="glos" data-def="Documentación precisa de flujos, estilos, componentes, estados, interacciones, contenido y accesibilidad.">especificación</a> de color y contraste.</p>
 </div>
 <p><strong>Avanzado.</strong> Define los tokens de color de ReservaSala en modo claro y oscuro con nombres semánticos.</p>
 <div class="webex-solution">
@@ -1530,6 +1530,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

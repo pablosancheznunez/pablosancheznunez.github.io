@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -404,6 +439,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./94-componentes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Biblioteca de componentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -437,6 +477,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#preparar-y-presentar" id="toc-preparar-y-presentar" class="nav-link" data-scroll-target="#preparar-y-presentar">2. Preparar y presentar</a></li>
   <li><a href="#dar-comentarios-útiles" id="toc-dar-comentarios-útiles" class="nav-link" data-scroll-target="#dar-comentarios-útiles">3. Dar comentarios útiles</a></li>
   <li><a href="#recibir-y-gestionar-la-retroalimentación" id="toc-recibir-y-gestionar-la-retroalimentación" class="nav-link" data-scroll-target="#recibir-y-gestionar-la-retroalimentación">4. Recibir y gestionar la retroalimentación</a></li>
+  <li><a href="#de-la-crítica-a-la-prueba-con-usuarios" id="toc-de-la-crítica-a-la-prueba-con-usuarios" class="nav-link" data-scroll-target="#de-la-crítica-a-la-prueba-con-usuarios">5. De la crítica a la prueba con usuarios</a>
+  <ul class="collapse">
+  <li><a href="#lab-t10-plan" id="toc-lab-t10-plan" class="nav-link" data-scroll-target="#lab-t10-plan">Laboratorio: tu plan de prueba</a></li>
+  </ul></li>
   <li><a href="#práctica" id="toc-práctica" class="nav-link" data-scroll-target="#práctica">Práctica</a></li>
   <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
   <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
@@ -483,7 +527,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Preparar y presentar un diseño para una crítica.</li>
 <li>Formular y recibir comentarios útiles.</li>
-<li>Gestionar la retroalimentación y convertirla en decisiones.</li>
+<li>Gestionar la <a href="92-glosario.html#gl-retroalimentacion" class="glos" data-def="Forma en que la interfaz comunica lo que está pasando o lo que ha pasado.">retroalimentación</a> y convertirla en decisiones.</li>
 </ul>
 </div>
 </div>
@@ -528,7 +572,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="qué-es-una-crítica-de-diseño" class="level2">
 <h2 class="anchored" data-anchor-id="qué-es-una-crítica-de-diseño">1. Qué es una crítica de diseño</h2>
-<p>Una <strong>crítica de diseño</strong> (<em>design crit</em>) es una sesión en la que un equipo analiza un diseño en curso para mejorarlo. No es una votación ni una aprobación: su objetivo es <strong>entender si el diseño cumple sus objetivos</strong> y descubrir problemas a tiempo. Dannels y Martin (2008) analizaron las críticas en estudios de diseño, desde principiantes hasta expertos, y las describieron como un género de comunicación propio, con distintos formatos (críticas en la mesa de trabajo, en grupo, ante un tribunal) y con convenciones que hay que aprender.</p>
+<p>Una <a href="92-glosario.html#gl-critica" class="glos" data-def="Sesión para analizar un diseño en curso respecto a sus objetivos."><strong>crítica de diseño</strong></a> (<em>design crit</em>) es una sesión en la que un equipo analiza un diseño en curso para mejorarlo. No es una votación ni una aprobación: su objetivo es <strong>entender si el diseño cumple sus objetivos</strong> y descubrir problemas a tiempo. Dannels y Martin (2008) analizaron las críticas en estudios de diseño, desde principiantes hasta expertos, y las describieron como un género de comunicación propio, con distintos formatos (críticas en la mesa de trabajo, en grupo, ante un tribunal) y con convenciones que hay que aprender.</p>
 </section>
 <section id="preparar-y-presentar" class="level2">
 <h2 class="anchored" data-anchor-id="preparar-y-presentar">2. Preparar y presentar</h2>
@@ -577,9 +621,60 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Escuchar sin defenderse</strong>: preguntar para entender el comentario, no para rebatirlo.</li>
 <li><strong>Registrar</strong> todos los comentarios: quién, sobre qué, qué problema plantea.</li>
 <li><strong>Priorizar</strong> después, con calma: frecuencia, gravedad y relación con los objetivos.</li>
-<li><strong>Decidir y comunicar</strong>: qué se cambia, qué no y por qué, y con qué evidencia (enlazando con el registro de decisiones del Tema 3).</li>
+<li><strong>Decidir y comunicar</strong>: qué se cambia, qué no y por qué, y con qué evidencia (enlazando con el <a href="92-glosario.html#gl-registro" class="glos" data-def="Tabla con la fecha, la decisión, el motivo, la evidencia y las pantallas afectadas.">registro de decisiones</a> del Tema 3).</li>
 </ul>
 <p>Un <strong>facilitador</strong> ayuda a que la sesión cumpla su objetivo: controla el tiempo, reconduce los comentarios de gusto, da la palabra a todos y resume las conclusiones.</p>
+</section>
+<section id="de-la-crítica-a-la-prueba-con-usuarios" class="level2">
+<h2 class="anchored" data-anchor-id="de-la-crítica-a-la-prueba-con-usuarios">5. De la crítica a la prueba con usuarios</h2>
+<p>La crítica entre profesionales detecta problemas de diseño, pero no sustituye a observar a quienes usarán el producto. Con el <a href="92-glosario.html#gl-prototipo" class="glos" data-def="Representación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo.">prototipo</a> de <a href="92-glosario.html#gl-alta" class="glos" data-def="Prototipo que se parece al producto final en casi todas sus dimensiones: aspecto, contenido e interacción.">alta fidelidad</a> ya se puede hacer una <strong>prueba de usabilidad</strong> moderada: unas pocas personas intentan tareas realistas mientras piensan en voz alta y el equipo observa sin ayudar. Con <strong>cinco participantes</strong> suelen aparecer los problemas más frecuentes; es mejor hacer varias rondas pequeñas que una grande.</p>
+<p>Las tareas deben describir <strong>el objetivo</strong>, no los pasos: «Reserva una sala para cuatro personas esta tarde» y no «Pulsa en Buscar y elige 16:00». Si la tarea nombra los botones, la prueba mide si la gente sabe leer, no si encuentra el camino.</p>
+<section id="lab-t10-plan" class="level3">
+<h3 class="anchored" data-anchor-id="lab-t10-plan">Laboratorio: tu plan de prueba</h3>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · se ejecuta en tu navegador</p>
+</div>
+<p>Rellena los campos y obtén un plan de prueba listo para tu entrega. El laboratorio avisa de los errores habituales.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="88" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 87;"><span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> raiz <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div class="plan-lab"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> campo <span class="op">=</span> (id<span class="op">,</span> et<span class="op">,</span> val<span class="op">,</span> tipo <span class="op">=</span> <span class="st">"input"</span>) <span class="kw">=&gt;</span> { <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div class="mb-2"&gt;&lt;label class="form-label" for="</span><span class="sc">${</span>id<span class="sc">}</span><span class="vs">"&gt;</span><span class="sc">${</span>et<span class="sc">}</span><span class="vs">&lt;/label&gt;</span><span class="sc">${</span>tipo <span class="op">===</span> <span class="st">"area"</span> <span class="op">?</span> <span class="vs">`&lt;textarea id="</span><span class="sc">${</span>id<span class="sc">}</span><span class="vs">" class="form-control form-control-sm" rows="4"&gt;</span><span class="sc">${</span>val<span class="sc">}</span><span class="vs">&lt;/textarea&gt;`</span> <span class="op">:</span> <span class="vs">`&lt;input id="</span><span class="sc">${</span>id<span class="sc">}</span><span class="vs">" class="form-control form-control-sm" value="</span><span class="sc">${</span>val<span class="sc">}</span><span class="vs">"&gt;`</span><span class="sc">}</span><span class="vs">&lt;/div&gt;`</span><span class="op">;</span> raiz<span class="op">.</span><span class="fu">append</span>(d)<span class="op">;</span> <span class="cf">return</span> d<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"input, textarea"</span>)<span class="op">;</span> }<span class="op">;</span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> obj <span class="op">=</span> <span class="fu">campo</span>(<span class="st">"pl-obj"</span><span class="op">,</span> <span class="st">"Objetivo de la prueba"</span><span class="op">,</span> <span class="st">"Comprobar si el estudiantado encuentra y reserva una sala libre en menos de un minuto"</span>)<span class="op">;</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pro <span class="op">=</span> <span class="fu">campo</span>(<span class="st">"pl-pro"</span><span class="op">,</span> <span class="st">"Prototipo y versión"</span><span class="op">,</span> <span class="st">"ReservaSala, prototipo navegable v3"</span>)<span class="op">;</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> per <span class="op">=</span> <span class="fu">campo</span>(<span class="st">"pl-per"</span><span class="op">,</span> <span class="st">"Perfil de participantes"</span><span class="op">,</span> <span class="st">"Estudiantes de grado que han reservado una sala alguna vez"</span>)<span class="op">;</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> num <span class="op">=</span> <span class="fu">campo</span>(<span class="st">"pl-num"</span><span class="op">,</span> <span class="st">"Número de participantes"</span><span class="op">,</span> <span class="st">"5"</span>)<span class="op">;</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> tar <span class="op">=</span> <span class="fu">campo</span>(<span class="st">"pl-tar"</span><span class="op">,</span> <span class="st">"Tareas (una por línea)"</span><span class="op">,</span> <span class="st">"Reserva una sala para cuatro personas esta tarde</span><span class="sc">\n</span><span class="st">Cancela la reserva que tienes para mañana</span><span class="sc">\n</span><span class="st">Averigua si la sala 2.14 tiene pizarra"</span><span class="op">,</span> <span class="st">"area"</span>)<span class="op">;</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> met <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;fieldset class="mb-2"&gt;&lt;legend class="form-label"&gt;Métricas&lt;/legend&gt;</span><span class="sc">${</span>[<span class="st">"Éxito de la tarea"</span><span class="op">,</span> <span class="st">"Tiempo"</span><span class="op">,</span> <span class="st">"Errores"</span><span class="op">,</span> <span class="st">"Facilidad tras cada tarea (SEQ)"</span><span class="op">,</span> <span class="st">"Cuestionario SUS al final"</span>]<span class="op">.</span><span class="fu">map</span>((m<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="vs">`&lt;div class="form-check form-check-inline"&gt;&lt;input class="form-check-input" type="checkbox" id="pl-m</span><span class="sc">${</span>i<span class="sc">}</span><span class="vs">" </span><span class="sc">${</span>i <span class="op">&lt;</span> <span class="dv">2</span> <span class="op">||</span> i <span class="op">===</span> <span class="dv">3</span> <span class="op">?</span> <span class="st">"checked"</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">&gt;&lt;label class="form-check-label" for="pl-m</span><span class="sc">${</span>i<span class="sc">}</span><span class="vs">"&gt;</span><span class="sc">${</span>m<span class="sc">}</span><span class="vs">&lt;/label&gt;&lt;/div&gt;`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="sc">}</span><span class="vs">&lt;/fieldset&gt;`</span><span class="op">;</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>  raiz<span class="op">.</span><span class="fu">append</span>(met)<span class="op">;</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> salida <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status" aria-live="polite"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> esc <span class="op">=</span> (s) <span class="kw">=&gt;</span> s<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">[&amp;&lt;&gt;]</span><span class="ss">/g</span><span class="op">,</span> (c) <span class="kw">=&gt;</span> ({<span class="st">"&amp;"</span><span class="op">:</span> <span class="st">"&amp;amp;"</span><span class="op">,</span> <span class="st">"&lt;"</span><span class="op">:</span> <span class="st">"&amp;lt;"</span><span class="op">,</span> <span class="st">"&gt;"</span><span class="op">:</span> <span class="st">"&amp;gt;"</span>}[c]))<span class="op">;</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">plan</span>() {</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> tareas <span class="op">=</span> tar<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">split</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)<span class="op">.</span><span class="fu">map</span>((x) <span class="kw">=&gt;</span> x<span class="op">.</span><span class="fu">trim</span>())<span class="op">.</span><span class="fu">filter</span>(<span class="bu">Boolean</span>)<span class="op">;</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> metricas <span class="op">=</span> [<span class="op">...</span>met<span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">"input"</span>)]<span class="op">.</span><span class="fu">filter</span>((x) <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">checked</span>)<span class="op">.</span><span class="fu">map</span>((x) <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">nextElementSibling</span><span class="op">.</span><span class="at">textContent</span>)<span class="op">;</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> n <span class="op">=</span> <span class="pp">parseInt</span>(num<span class="op">.</span><span class="at">value</span>) <span class="op">||</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> avisos <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>    tareas<span class="op">.</span><span class="fu">forEach</span>((t<span class="op">,</span> i) <span class="kw">=&gt;</span> { <span class="cf">if</span> (<span class="ss">/</span><span class="sc">\b(</span><span class="ss">pulsa</span><span class="sc">|</span><span class="ss">haz clic</span><span class="sc">|</span><span class="ss">clica</span><span class="sc">|</span><span class="ss">toca</span><span class="sc">|</span><span class="ss">botón</span><span class="sc">|</span><span class="ss">menú</span><span class="sc">|</span><span class="ss">pestaña</span><span class="sc">)\b</span><span class="ss">/i</span><span class="op">.</span><span class="fu">test</span>(t)) avisos<span class="op">.</span><span class="fu">push</span>(<span class="vs">`La tarea </span><span class="sc">${</span>i <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="vs"> nombra elementos de la interfaz: describe el objetivo, no los pasos.`</span>)<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (tareas<span class="op">.</span><span class="at">length</span> <span class="op">&gt;</span> <span class="dv">6</span>) avisos<span class="op">.</span><span class="fu">push</span>(<span class="st">"Más de 6 tareas alarga la sesión por encima de 45 minutos: prioriza."</span>)<span class="op">;</span></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (n <span class="op">&gt;</span> <span class="dv">8</span>) avisos<span class="op">.</span><span class="fu">push</span>(<span class="st">"Con más de 8 participantes en una ronda, los problemas se repiten: mejor dos rondas de 5 con cambios entre medias."</span>)<span class="op">;</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (n <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">&amp;&amp;</span> n <span class="op">&lt;</span> <span class="dv">3</span>) avisos<span class="op">.</span><span class="fu">push</span>(<span class="st">"Con menos de 3 participantes es fácil confundir un caso particular con un problema general."</span>)<span class="op">;</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">!</span>metricas<span class="op">.</span><span class="at">length</span>) avisos<span class="op">.</span><span class="fu">push</span>(<span class="st">"Elige al menos una métrica."</span>)<span class="op">;</span></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> minutos <span class="op">=</span> <span class="dv">10</span> <span class="op">+</span> tareas<span class="op">.</span><span class="at">length</span> <span class="op">*</span> <span class="dv">6</span><span class="op">;</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> md <span class="op">=</span> <span class="vs">`# Plan de prueba de usabilidad</span><span class="sc">\n\n</span><span class="vs">**Objetivo:** </span><span class="sc">${</span>obj<span class="op">.</span><span class="at">value</span><span class="sc">}\n\n</span><span class="vs">**Prototipo:** </span><span class="sc">${</span>pro<span class="op">.</span><span class="at">value</span><span class="sc">}\n\n</span><span class="vs">**Participantes:** </span><span class="sc">${</span>n<span class="sc">}</span><span class="vs"> · </span><span class="sc">${</span>per<span class="op">.</span><span class="at">value</span><span class="sc">}\n\n</span><span class="vs">**Duración estimada:** </span><span class="sc">${</span>minutos<span class="sc">}</span><span class="vs"> minutos por sesión</span><span class="sc">\n\n</span><span class="vs">## Guion</span><span class="sc">\n\n</span><span class="vs">1. Bienvenida y consentimiento (grabación opcional).</span><span class="sc">\n</span><span class="vs">2. Explicar que se evalúa el diseño, no a la persona, y pedir que piense en voz alta.</span><span class="sc">\n${</span>tareas<span class="op">.</span><span class="fu">map</span>((t<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>i <span class="op">+</span> <span class="dv">3</span><span class="sc">}</span><span class="vs">. Tarea </span><span class="sc">${</span>i <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="vs">: «</span><span class="sc">${</span>t<span class="sc">}</span><span class="vs">»`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)<span class="sc">}\n${</span>tareas<span class="op">.</span><span class="at">length</span> <span class="op">+</span> <span class="dv">3</span><span class="sc">}</span><span class="vs">. Preguntas finales y agradecimiento.</span><span class="sc">\n\n</span><span class="vs">## Métricas</span><span class="sc">\n\n${</span>metricas<span class="op">.</span><span class="fu">map</span>((m) <span class="kw">=&gt;</span> <span class="st">"- "</span> <span class="op">+</span> m)<span class="op">.</span><span class="fu">join</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)<span class="sc">}\n</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> url <span class="op">=</span> URL<span class="op">.</span><span class="fu">createObjectURL</span>(<span class="kw">new</span> <span class="bu">Blob</span>([md]<span class="op">,</span> {<span class="dt">type</span><span class="op">:</span> <span class="st">"text/markdown"</span>}))<span class="op">;</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>    salida<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span><span class="sc">${</span>avisos<span class="op">.</span><span class="at">length</span> <span class="op">?</span> <span class="vs">`&lt;div class="alert alert-warning small"&gt;</span><span class="sc">${</span>avisos<span class="op">.</span><span class="fu">map</span>((a) <span class="kw">=&gt;</span> <span class="st">"⚠ "</span> <span class="op">+</span> <span class="fu">esc</span>(a))<span class="op">.</span><span class="fu">join</span>(<span class="st">"&lt;br&gt;"</span>)<span class="sc">}</span><span class="vs">&lt;/div&gt;`</span> <span class="op">:</span> <span class="st">'&lt;p class="small"&gt;✓ Sin avisos.&lt;/p&gt;'</span><span class="sc">}</span><span class="vs">&lt;pre class="small" style="white-space:pre-wrap"&gt;</span><span class="sc">${</span><span class="fu">esc</span>(md)<span class="sc">}</span><span class="vs">&lt;/pre&gt;&lt;a class="btn btn-outline-primary btn-sm" download="plan-de-prueba.md" href="</span><span class="sc">${</span>url<span class="sc">}</span><span class="vs">"&gt;Descargar el plan (.md)&lt;/a&gt;`</span><span class="op">;</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>  raiz<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> plan)<span class="op">;</span> raiz<span class="op">.</span><span class="fu">append</span>(salida)<span class="op">;</span> <span class="fu">plan</span>()<span class="op">;</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> raiz<span class="op">;</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-1" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="práctica" class="level2">
 <h2 class="anchored" data-anchor-id="práctica">Práctica</h2>
@@ -613,7 +708,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Básico.</strong> Reformula este comentario como una crítica útil: «El botón es feo».</p>
 <div class="webex-solution">
 <button>Ver solución</button>
-<p>Ejemplo: «El botón de reservar tiene poco contraste con el fondo y se confunde con el de cancelar; puede que el usuario dude cuál es la acción principal. ¿Qué pasaría si fuera relleno y el otro de contorno?».</p>
+<p>Ejemplo: «El botón de reservar tiene poco <a href="92-glosario.html#gl-contraste" class="glos" data-def="Relación entre la luminancia de dos colores, de 1:1 a 21:1.">contraste</a> con el fondo y se confunde con el de cancelar; puede que el usuario dude cuál es la acción principal. ¿Qué pasaría si fuera relleno y el otro de contorno?».</p>
 </div>
 <p><strong>Avanzado.</strong> Prepara la presentación de un diseño tuyo para una crítica de diez minutos.</p>
 <div class="webex-solution">
@@ -641,8 +736,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="callout-body-container callout-body">
 <p>Con el prototipo de tu proyecto:</p>
 <ol type="1">
-<li>Prepara la <strong>presentación</strong> de una crítica con el guion del apartado 2, incluido el objetivo de la crítica.</li>
-<li>Participa en una crítica con compañeros y lleva un <strong>registro de comentarios</strong> (al menos diez).</li>
+<li>Prepara la <strong>presentación</strong> de una crítica con el guion del apartado 2, incluido el <a href="92-glosario.html#gl-objetivo-critica" class="glos" data-def="Lo que quien presenta quiere que se comente, y lo que no.">objetivo de la crítica</a>.</li>
+<li>Participa en una crítica con compañeros y lleva un <a href="92-glosario.html#gl-registro-comentarios" class="glos" data-def="Lista de los comentarios recibidos para priorizarlos después."><strong>registro de comentarios</strong></a> (al menos diez).</li>
 <li><strong>Prioriza</strong> los comentarios y decide qué cambias y qué no, con su justificación.</li>
 <li>Muestra los <strong>cambios</strong> realizados y reflexiona sobre qué comentarios fueron más útiles y por qué.</li>
 </ol>
@@ -919,7 +1014,7 @@ W10=
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgY29uc3QgcmFpeiA9IGh0bWxgPGRpdiBjbGFzcz1cInBsYW4tbGFiXCI+PC9kaXY+YDtcbiAgY29uc3QgY2FtcG8gPSAoaWQsIGV0LCB2YWwsIHRpcG8gPSBcImlucHV0XCIpID0+IHsgY29uc3QgZCA9IGh0bWxgPGRpdiBjbGFzcz1cIm1iLTJcIj48bGFiZWwgY2xhc3M9XCJmb3JtLWxhYmVsXCIgZm9yPVwiJHtpZH1cIj4ke2V0fTwvbGFiZWw+JHt0aXBvID09PSBcImFyZWFcIiA/IGA8dGV4dGFyZWEgaWQ9XCIke2lkfVwiIGNsYXNzPVwiZm9ybS1jb250cm9sIGZvcm0tY29udHJvbC1zbVwiIHJvd3M9XCI0XCI+JHt2YWx9PC90ZXh0YXJlYT5gIDogYDxpbnB1dCBpZD1cIiR7aWR9XCIgY2xhc3M9XCJmb3JtLWNvbnRyb2wgZm9ybS1jb250cm9sLXNtXCIgdmFsdWU9XCIke3ZhbH1cIj5gfTwvZGl2PmA7IHJhaXouYXBwZW5kKGQpOyByZXR1cm4gZC5xdWVyeVNlbGVjdG9yKFwiaW5wdXQsIHRleHRhcmVhXCIpOyB9O1xuICBjb25zdCBvYmogPSBjYW1wbyhcInBsLW9ialwiLCBcIk9iamV0aXZvIGRlIGxhIHBydWViYVwiLCBcIkNvbXByb2JhciBzaSBlbCBlc3R1ZGlhbnRhZG8gZW5jdWVudHJhIHkgcmVzZXJ2YSB1bmEgc2FsYSBsaWJyZSBlbiBtZW5vcyBkZSB1biBtaW51dG9cIik7XG4gIGNvbnN0IHBybyA9IGNhbXBvKFwicGwtcHJvXCIsIFwiUHJvdG90aXBvIHkgdmVyc2nDs25cIiwgXCJSZXNlcnZhU2FsYSwgcHJvdG90aXBvIG5hdmVnYWJsZSB2M1wiKTtcbiAgY29uc3QgcGVyID0gY2FtcG8oXCJwbC1wZXJcIiwgXCJQZXJmaWwgZGUgcGFydGljaXBhbnRlc1wiLCBcIkVzdHVkaWFudGVzIGRlIGdyYWRvIHF1ZSBoYW4gcmVzZXJ2YWRvIHVuYSBzYWxhIGFsZ3VuYSB2ZXpcIik7XG4gIGNvbnN0IG51bSA9IGNhbXBvKFwicGwtbnVtXCIsIFwiTsO6bWVybyBkZSBwYXJ0aWNpcGFudGVzXCIsIFwiNVwiKTtcbiAgY29uc3QgdGFyID0gY2FtcG8oXCJwbC10YXJcIiwgXCJUYXJlYXMgKHVuYSBwb3IgbMOtbmVhKVwiLCBcIlJlc2VydmEgdW5hIHNhbGEgcGFyYSBjdWF0cm8gcGVyc29uYXMgZXN0YSB0YXJkZVxcbkNhbmNlbGEgbGEgcmVzZXJ2YSBxdWUgdGllbmVzIHBhcmEgbWHDsWFuYVxcbkF2ZXJpZ3VhIHNpIGxhIHNhbGEgMi4xNCB0aWVuZSBwaXphcnJhXCIsIFwiYXJlYVwiKTtcbiAgY29uc3QgbWV0ID0gaHRtbGA8ZmllbGRzZXQgY2xhc3M9XCJtYi0yXCI+PGxlZ2VuZCBjbGFzcz1cImZvcm0tbGFiZWxcIj5Nw6l0cmljYXM8L2xlZ2VuZD4ke1tcIsOJeGl0byBkZSBsYSB0YXJlYVwiLCBcIlRpZW1wb1wiLCBcIkVycm9yZXNcIiwgXCJGYWNpbGlkYWQgdHJhcyBjYWRhIHRhcmVhIChTRVEpXCIsIFwiQ3Vlc3Rpb25hcmlvIFNVUyBhbCBmaW5hbFwiXS5tYXAoKG0sIGkpID0+IGA8ZGl2IGNsYXNzPVwiZm9ybS1jaGVjayBmb3JtLWNoZWNrLWlubGluZVwiPjxpbnB1dCBjbGFzcz1cImZvcm0tY2hlY2staW5wdXRcIiB0eXBlPVwiY2hlY2tib3hcIiBpZD1cInBsLW0ke2l9XCIgJHtpIDwgMiB8fCBpID09PSAzID8gXCJjaGVja2VkXCIgOiBcIlwifT48bGFiZWwgY2xhc3M9XCJmb3JtLWNoZWNrLWxhYmVsXCIgZm9yPVwicGwtbSR7aX1cIj4ke219PC9sYWJlbD48L2Rpdj5gKS5qb2luKFwiXCIpfTwvZmllbGRzZXQ+YDtcbiAgcmFpei5hcHBlbmQobWV0KTtcbiAgY29uc3Qgc2FsaWRhID0gaHRtbGA8ZGl2IHJvbGU9XCJzdGF0dXNcIiBhcmlhLWxpdmU9XCJwb2xpdGVcIj48L2Rpdj5gO1xuICBjb25zdCBlc2MgPSAocykgPT4gcy5yZXBsYWNlKC9bJjw+XS9nLCAoYykgPT4gKHtcIiZcIjogXCImYW1wO1wiLCBcIjxcIjogXCImbHQ7XCIsIFwiPlwiOiBcIiZndDtcIn1bY10pKTtcbiAgZnVuY3Rpb24gcGxhbigpIHtcbiAgICBjb25zdCB0YXJlYXMgPSB0YXIudmFsdWUuc3BsaXQoXCJcXG5cIikubWFwKCh4KSA9PiB4LnRyaW0oKSkuZmlsdGVyKEJvb2xlYW4pO1xuICAgIGNvbnN0IG1ldHJpY2FzID0gWy4uLm1ldC5xdWVyeVNlbGVjdG9yQWxsKFwiaW5wdXRcIildLmZpbHRlcigoeCkgPT4geC5jaGVja2VkKS5tYXAoKHgpID0+IHgubmV4dEVsZW1lbnRTaWJsaW5nLnRleHRDb250ZW50KTtcbiAgICBjb25zdCBuID0gcGFyc2VJbnQobnVtLnZhbHVlKSB8fCAwO1xuICAgIGNvbnN0IGF2aXNvcyA9IFtdO1xuICAgIHRhcmVhcy5mb3JFYWNoKCh0LCBpKSA9PiB7IGlmICgvXFxiKHB1bHNhfGhheiBjbGljfGNsaWNhfHRvY2F8Ym90w7NufG1lbsO6fHBlc3Rhw7FhKVxcYi9pLnRlc3QodCkpIGF2aXNvcy5wdXNoKGBMYSB0YXJlYSAke2kgKyAxfSBub21icmEgZWxlbWVudG9zIGRlIGxhIGludGVyZmF6OiBkZXNjcmliZSBlbCBvYmpldGl2bywgbm8gbG9zIHBhc29zLmApOyB9KTtcbiAgICBpZiAodGFyZWFzLmxlbmd0aCA+IDYpIGF2aXNvcy5wdXNoKFwiTcOhcyBkZSA2IHRhcmVhcyBhbGFyZ2EgbGEgc2VzacOzbiBwb3IgZW5jaW1hIGRlIDQ1IG1pbnV0b3M6IHByaW9yaXphLlwiKTtcbiAgICBpZiAobiA+IDgpIGF2aXNvcy5wdXNoKFwiQ29uIG3DoXMgZGUgOCBwYXJ0aWNpcGFudGVzIGVuIHVuYSByb25kYSwgbG9zIHByb2JsZW1hcyBzZSByZXBpdGVuOiBtZWpvciBkb3Mgcm9uZGFzIGRlIDUgY29uIGNhbWJpb3MgZW50cmUgbWVkaWFzLlwiKTtcbiAgICBpZiAobiA+IDAgJiYgbiA8IDMpIGF2aXNvcy5wdXNoKFwiQ29uIG1lbm9zIGRlIDMgcGFydGljaXBhbnRlcyBlcyBmw6FjaWwgY29uZnVuZGlyIHVuIGNhc28gcGFydGljdWxhciBjb24gdW4gcHJvYmxlbWEgZ2VuZXJhbC5cIik7XG4gICAgaWYgKCFtZXRyaWNhcy5sZW5ndGgpIGF2aXNvcy5wdXNoKFwiRWxpZ2UgYWwgbWVub3MgdW5hIG3DqXRyaWNhLlwiKTtcbiAgICBjb25zdCBtaW51dG9zID0gMTAgKyB0YXJlYXMubGVuZ3RoICogNjtcbiAgICBjb25zdCBtZCA9IGAjIFBsYW4gZGUgcHJ1ZWJhIGRlIHVzYWJpbGlkYWRcXG5cXG4qKk9iamV0aXZvOioqICR7b2JqLnZhbHVlfVxcblxcbioqUHJvdG90aXBvOioqICR7cHJvLnZhbHVlfVxcblxcbioqUGFydGljaXBhbnRlczoqKiAke259IMK3ICR7cGVyLnZhbHVlfVxcblxcbioqRHVyYWNpw7NuIGVzdGltYWRhOioqICR7bWludXRvc30gbWludXRvcyBwb3Igc2VzacOzblxcblxcbiMjIEd1aW9uXFxuXFxuMS4gQmllbnZlbmlkYSB5IGNvbnNlbnRpbWllbnRvIChncmFiYWNpw7NuIG9wY2lvbmFsKS5cXG4yLiBFeHBsaWNhciBxdWUgc2UgZXZhbMO6YSBlbCBkaXNlw7FvLCBubyBhIGxhIHBlcnNvbmEsIHkgcGVkaXIgcXVlIHBpZW5zZSBlbiB2b3ogYWx0YS5cXG4ke3RhcmVhcy5tYXAoKHQsIGkpID0+IGAke2kgKyAzfS4gVGFyZWEgJHtpICsgMX06IMKrJHt0fcK7YCkuam9pbihcIlxcblwiKX1cXG4ke3RhcmVhcy5sZW5ndGggKyAzfS4gUHJlZ3VudGFzIGZpbmFsZXMgeSBhZ3JhZGVjaW1pZW50by5cXG5cXG4jIyBNw6l0cmljYXNcXG5cXG4ke21ldHJpY2FzLm1hcCgobSkgPT4gXCItIFwiICsgbSkuam9pbihcIlxcblwiKX1cXG5gO1xuICAgIGNvbnN0IHVybCA9IFVSTC5jcmVhdGVPYmplY3RVUkwobmV3IEJsb2IoW21kXSwge3R5cGU6IFwidGV4dC9tYXJrZG93blwifSkpO1xuICAgIHNhbGlkYS5pbm5lckhUTUwgPSBgJHthdmlzb3MubGVuZ3RoID8gYDxkaXYgY2xhc3M9XCJhbGVydCBhbGVydC13YXJuaW5nIHNtYWxsXCI+JHthdmlzb3MubWFwKChhKSA9PiBcIuKaoCBcIiArIGVzYyhhKSkuam9pbihcIjxicj5cIil9PC9kaXY+YCA6ICc8cCBjbGFzcz1cInNtYWxsXCI+4pyTIFNpbiBhdmlzb3MuPC9wPid9PHByZSBjbGFzcz1cInNtYWxsXCIgc3R5bGU9XCJ3aGl0ZS1zcGFjZTpwcmUtd3JhcFwiPiR7ZXNjKG1kKX08L3ByZT48YSBjbGFzcz1cImJ0biBidG4tb3V0bGluZS1wcmltYXJ5IGJ0bi1zbVwiIGRvd25sb2FkPVwicGxhbi1kZS1wcnVlYmEubWRcIiBocmVmPVwiJHt1cmx9XCI+RGVzY2FyZ2FyIGVsIHBsYW4gKC5tZCk8L2E+YDtcbiAgfVxuICByYWl6LmFkZEV2ZW50TGlzdGVuZXIoXCJpbnB1dFwiLCBwbGFuKTsgcmFpei5hcHBlbmQoc2FsaWRhKTsgcGxhbigpO1xuICByZXR1cm4gcmFpejtcbn1cbiJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1373,6 +1468,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 

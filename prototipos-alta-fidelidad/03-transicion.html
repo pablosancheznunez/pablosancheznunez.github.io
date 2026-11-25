@@ -442,6 +442,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./94-componentes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Biblioteca de componentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -477,6 +482,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#microinteracciones" id="toc-microinteracciones" class="nav-link" data-scroll-target="#microinteracciones">4. Microinteracciones</a></li>
   <li><a href="#práctica" id="toc-práctica" class="nav-link" data-scroll-target="#práctica">Práctica</a></li>
   <li><a href="#lab-t3-estados" id="toc-lab-t3-estados" class="nav-link" data-scroll-target="#lab-t3-estados">Laboratorio: estados de un componente</a></li>
+  <li><a href="#lab-t3-curvas" id="toc-lab-t3-curvas" class="nav-link" data-scroll-target="#lab-t3-curvas">Laboratorio: editor de curvas de animación</a></li>
   <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
   <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
@@ -520,9 +526,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Hacer evolucionar los prototipos de baja a alta fidelidad sin perder la intención del diseño.</li>
-<li>Mantener la trazabilidad de las decisiones.</li>
-<li>Diseñar microinteracciones para los prototipos interactivos.</li>
+<li>Hacer evolucionar los <a href="92-glosario.html#gl-prototipo" class="glos" data-def="Representación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo.">prototipos</a> de baja a <a href="92-glosario.html#gl-alta" class="glos" data-def="Prototipo que se parece al producto final en casi todas sus dimensiones: aspecto, contenido e interacción.">alta fidelidad</a> sin perder la <a href="92-glosario.html#gl-intencion" class="glos" data-def="Lo que el diseño pretende conseguir: estructura, jerarquía y flujo validados.">intención del diseño</a>.</li>
+<li>Mantener la <a href="92-glosario.html#gl-trazabilidad" class="glos" data-def="Posibilidad de explicar de dónde viene cada decisión de diseño.">trazabilidad</a> de las decisiones.</li>
+<li>Diseñar <a href="92-glosario.html#gl-microinteraccion" class="glos" data-def="Momento de interacción con un solo propósito, con disparador, reglas, retroalimentación y bucles (Saffer, 2013).">microinteracciones</a> para los <a href="92-glosario.html#gl-interactivo" class="glos" data-def="Prototipo con estados, transiciones y microinteracciones que reproduce la sensación de uso.">prototipos interactivos</a>.</li>
 </ul>
 </div>
 </div>
@@ -567,12 +573,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="qué-se-conserva-y-qué-cambia" class="level2">
 <h2 class="anchored" data-anchor-id="qué-se-conserva-y-qué-cambia">1. Qué se conserva y qué cambia</h2>
-<p>Virzi, Sokolov y Karis (1996) compararon los problemas de usabilidad detectados con prototipos de baja y de alta fidelidad y encontraron que ambos los detectan en gran medida por igual. Eso tiene una consecuencia práctica: lo validado en baja fidelidad (estructura, flujo, contenido, jerarquía) es una base sólida que <strong>no debe perderse</strong> al pulir el aspecto.</p>
+<p>Virzi, Sokolov y Karis (1996) compararon los problemas de usabilidad detectados con prototipos de baja y de alta <a href="92-glosario.html#gl-fidelidad" class="glos" data-def="Grado en que un prototipo se parece al producto final; tiene varias dimensiones independientes.">fidelidad</a> y encontraron que ambos los detectan en gran medida por igual. Eso tiene una consecuencia práctica: lo validado en baja fidelidad (estructura, flujo, contenido, jerarquía) es una base sólida que <strong>no debe perderse</strong> al pulir el aspecto.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Se conserva de la baja fidelidad</th>
@@ -582,7 +584,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>Flujos y pantallas</td>
-<td>Tipografía, color, iconos</td>
+<td>Tipografía, color, <a href="92-glosario.html#gl-icono" class="glos" data-def="Imagen pequeña que representa una acción, un objeto o un estado.">iconos</a></td>
 </tr>
 <tr class="even">
 <td>Jerarquía: qué es lo más importante</td>
@@ -603,13 +605,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="estrategias-para-subir-la-fidelidad">2. Estrategias para subir la fidelidad</h2>
 <ul>
 <li><strong>Por capas</strong>: primero la tipografía y el espaciado sobre el esquema, después el color, después los iconos e imágenes. Cada capa se revisa antes de añadir la siguiente.</li>
-<li><strong>Por pantallas clave</strong>: llevar a alta fidelidad una o dos pantallas representativas, extraer de ellas los estilos y componentes, y aplicarlos al resto (lo que da origen al sistema de diseño, Tema 9).</li>
+<li><strong>Por pantallas clave</strong>: llevar a alta fidelidad una o dos pantallas representativas, extraer de ellas los estilos y componentes, y aplicarlos al resto (lo que da origen al <a href="92-glosario.html#gl-sistema" class="glos" data-def="Principios, estilos, componentes, patrones, código y documentación con los que una organización diseña de forma coherente.">sistema de diseño</a>, Tema 9).</li>
 <li><strong>Fidelidad mixta</strong>: alta fidelidad solo donde la pregunta lo exige (la pantalla de pago) y baja en el resto.</li>
 </ul>
 </section>
 <section id="trazabilidad-de-las-decisiones" class="level2">
 <h2 class="anchored" data-anchor-id="trazabilidad-de-las-decisiones">3. Trazabilidad de las decisiones</h2>
-<p>Al pulir, es fácil que una decisión visual contradiga, sin querer, una decisión validada: un botón principal que pierde protagonismo porque «quedaba mejor» en gris, una etiqueta que se acorta y deja de entenderse. La <strong>trazabilidad</strong> consiste en poder explicar de dónde viene cada decisión. Un <strong>registro de decisiones</strong> sencillo ayuda:</p>
+<p>Al pulir, es fácil que una decisión visual contradiga, sin querer, una decisión validada: un botón principal que pierde protagonismo porque «quedaba mejor» en gris, una etiqueta que se acorta y deja de entenderse. La <strong>trazabilidad</strong> consiste en poder explicar de dónde viene cada decisión. Un <a href="92-glosario.html#gl-registro" class="glos" data-def="Tabla con la fecha, la decisión, el motivo, la evidencia y las pantallas afectadas."><strong>registro de decisiones</strong></a> sencillo ayuda:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 20%">
@@ -649,9 +651,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="microinteracciones">4. Microinteracciones</h2>
 <p>Una <strong>microinteracción</strong> es un momento de interacción con un solo propósito: marcar un favorito, activar un ajuste, recibir la confirmación de una reserva. Saffer (2013) describe cuatro partes:</p>
 <ol type="1">
-<li><strong>Disparador</strong>: lo que la inicia (una acción de la persona o una condición del sistema).</li>
+<li><a href="92-glosario.html#gl-disparador" class="glos" data-def="Lo que inicia una microinteracción: una acción de la persona o una condición del sistema."><strong>Disparador</strong></a>: lo que la inicia (una acción de la persona o una condición del sistema).</li>
 <li><strong>Reglas</strong>: qué ocurre y en qué orden.</li>
-<li><strong>Retroalimentación</strong>: cómo se comunica lo que está pasando (visual, sonora, táctil).</li>
+<li><a href="92-glosario.html#gl-retroalimentacion" class="glos" data-def="Forma en que la interfaz comunica lo que está pasando o lo que ha pasado."><strong>Retroalimentación</strong></a>: cómo se comunica lo que está pasando (visual, sonora, táctil).</li>
 <li><strong>Bucles y modos</strong>: qué cambia si se repite o si hay estados distintos.</li>
 </ol>
 <table class="caption-top table">
@@ -754,6 +756,121 @@ Figura&nbsp;1: El mismo diseño en baja y en alta fidelidad.
 </div>
 </div>
 </section>
+<section id="lab-t3-curvas" class="level2">
+<h2 class="anchored" data-anchor-id="lab-t3-curvas">Laboratorio: editor de curvas de animación</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · se ejecuta en tu navegador</p>
+</div>
+<p>La <strong>curva de aceleración</strong> (<em>easing</em>) decide cómo se reparte el movimiento en el tiempo. En la vida real nada empieza ni se detiene de golpe: por eso <code>linear</code> parece mecánico. Ajusta los puntos de control de la curva de Bézier, elige la duración y pulsa «Reproducir».</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="137" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 136;"><span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>selC <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>rangoC <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>viewof preset <span class="op">=</span> <span class="fu">selC</span>(<span class="st">"Punto de partida"</span><span class="op">,</span> [<span class="st">"ease-out · entrar"</span><span class="op">,</span> <span class="st">"ease-in · salir"</span><span class="op">,</span> <span class="st">"ease-in-out · moverse"</span><span class="op">,</span> <span class="st">"linear · mecánico"</span><span class="op">,</span> <span class="st">"personalizada"</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"ease-out · entrar"</span>})</span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>viewof x1 <span class="op">=</span> <span class="fu">rangoC</span>(<span class="st">"x₁"</span><span class="op">,</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">formato</span><span class="op">:</span> (v) <span class="kw">=&gt;</span> v<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="st">"."</span><span class="op">,</span> <span class="st">","</span>)})</span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>viewof y1 <span class="op">=</span> <span class="fu">rangoC</span>(<span class="st">"y₁"</span><span class="op">,</span> [<span class="op">-</span><span class="fl">0.5</span><span class="op">,</span> <span class="fl">1.5</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">formato</span><span class="op">:</span> (v) <span class="kw">=&gt;</span> v<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="st">"."</span><span class="op">,</span> <span class="st">","</span>)})</span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>viewof x2 <span class="op">=</span> <span class="fu">rangoC</span>(<span class="st">"x₂"</span><span class="op">,</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">0.58</span><span class="op">,</span> <span class="dt">formato</span><span class="op">:</span> (v) <span class="kw">=&gt;</span> v<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="st">"."</span><span class="op">,</span> <span class="st">","</span>)})</span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>viewof y2 <span class="op">=</span> <span class="fu">rangoC</span>(<span class="st">"y₂"</span><span class="op">,</span> [<span class="op">-</span><span class="fl">0.5</span><span class="op">,</span> <span class="fl">1.5</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">formato</span><span class="op">:</span> (v) <span class="kw">=&gt;</span> v<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="st">"."</span><span class="op">,</span> <span class="st">","</span>)})</span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>viewof duracion <span class="op">=</span> <span class="fu">rangoC</span>(<span class="st">"Duración (ms)"</span><span class="op">,</span> [<span class="dv">100</span><span class="op">,</span> <span class="dv">1000</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">250</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-8" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="148" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 147;"><span id="cb4-148"><a href="#cb4-148" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb4-149"><a href="#cb4-149" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> P <span class="op">=</span> {<span class="st">"ease-out · entrar"</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="fl">0.58</span><span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> <span class="st">"ease-in · salir"</span><span class="op">:</span> [<span class="fl">0.42</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> <span class="st">"ease-in-out · moverse"</span><span class="op">:</span> [<span class="fl">0.42</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="fl">0.58</span><span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> <span class="st">"linear · mecánico"</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">1</span>]}<span class="op">;</span></span>
+<span id="cb4-150"><a href="#cb4-150" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> [a<span class="op">,</span> b<span class="op">,</span> c<span class="op">,</span> d] <span class="op">=</span> preset <span class="op">===</span> <span class="st">"personalizada"</span> <span class="op">?</span> [x1<span class="op">,</span> y1<span class="op">,</span> x2<span class="op">,</span> y2] <span class="op">:</span> P[preset]<span class="op">;</span></span>
+<span id="cb4-151"><a href="#cb4-151" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> W <span class="op">=</span> <span class="dv">240</span><span class="op">,</span> X <span class="op">=</span> (v) <span class="kw">=&gt;</span> <span class="dv">30</span> <span class="op">+</span> v <span class="op">*</span> W<span class="op">,</span> Y <span class="op">=</span> (v) <span class="kw">=&gt;</span> <span class="dv">30</span> <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> v) <span class="op">*</span> <span class="dv">200</span><span class="op">;</span></span>
+<span id="cb4-152"><a href="#cb4-152" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> reducir <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="fu">matchMedia</span>(<span class="st">"(prefers-reduced-motion: reduce)"</span>)<span class="op">.</span><span class="at">matches</span><span class="op">;</span></span>
+<span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> f <span class="op">=</span> (v) <span class="kw">=&gt;</span> <span class="op">+</span>v<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> css <span class="op">=</span> <span class="vs">`transition: transform </span><span class="sc">${</span>duracion<span class="sc">}</span><span class="vs">ms cubic-bezier(</span><span class="sc">${</span><span class="fu">f</span>(a)<span class="sc">}</span><span class="vs">, </span><span class="sc">${</span><span class="fu">f</span>(b)<span class="sc">}</span><span class="vs">, </span><span class="sc">${</span><span class="fu">f</span>(c)<span class="sc">}</span><span class="vs">, </span><span class="sc">${</span><span class="fu">f</span>(d)<span class="sc">}</span><span class="vs">);`</span><span class="op">;</span></span>
+<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> el <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="group" aria-label="Vista previa de la curva"&gt;</span></span>
+<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;svg viewBox="0 0 300 260" width="300" role="img" aria-label="Curva de Bézier con puntos de control (</span><span class="sc">${</span><span class="fu">f</span>(a)<span class="sc">}</span><span class="vs">, </span><span class="sc">${</span><span class="fu">f</span>(b)<span class="sc">}</span><span class="vs">) y (</span><span class="sc">${</span><span class="fu">f</span>(c)<span class="sc">}</span><span class="vs">, </span><span class="sc">${</span><span class="fu">f</span>(d)<span class="sc">}</span><span class="vs">)" style="max-width:100%"&gt;</span></span>
+<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;rect x="30" y="30" width="</span><span class="sc">${</span>W<span class="sc">}</span><span class="vs">" height="200" fill="none" stroke="currentColor" stroke-opacity="0.25"/&gt;</span></span>
+<span id="cb4-158"><a href="#cb4-158" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;text x="30" y="250" font-size="11" fill="currentColor"&gt;tiempo →&lt;/text&gt;&lt;text x="6" y="34" font-size="11" fill="currentColor"&gt;fin&lt;/text&gt;</span></span>
+<span id="cb4-159"><a href="#cb4-159" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;line x1="</span><span class="sc">${</span><span class="fu">X</span>(<span class="dv">0</span>)<span class="sc">}</span><span class="vs">" y1="</span><span class="sc">${</span><span class="fu">Y</span>(<span class="dv">0</span>)<span class="sc">}</span><span class="vs">" x2="</span><span class="sc">${</span><span class="fu">X</span>(a)<span class="sc">}</span><span class="vs">" y2="</span><span class="sc">${</span><span class="fu">Y</span>(b)<span class="sc">}</span><span class="vs">" stroke="#d6336c" stroke-dasharray="4 3"/&gt;&lt;line x1="</span><span class="sc">${</span><span class="fu">X</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">" y1="</span><span class="sc">${</span><span class="fu">Y</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">" x2="</span><span class="sc">${</span><span class="fu">X</span>(c)<span class="sc">}</span><span class="vs">" y2="</span><span class="sc">${</span><span class="fu">Y</span>(d)<span class="sc">}</span><span class="vs">" stroke="#d6336c" stroke-dasharray="4 3"/&gt;</span></span>
+<span id="cb4-160"><a href="#cb4-160" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;path d="M</span><span class="sc">${</span><span class="fu">X</span>(<span class="dv">0</span>)<span class="sc">}</span><span class="vs"> </span><span class="sc">${</span><span class="fu">Y</span>(<span class="dv">0</span>)<span class="sc">}</span><span class="vs"> C </span><span class="sc">${</span><span class="fu">X</span>(a)<span class="sc">}</span><span class="vs"> </span><span class="sc">${</span><span class="fu">Y</span>(b)<span class="sc">}</span><span class="vs">, </span><span class="sc">${</span><span class="fu">X</span>(c)<span class="sc">}</span><span class="vs"> </span><span class="sc">${</span><span class="fu">Y</span>(d)<span class="sc">}</span><span class="vs">, </span><span class="sc">${</span><span class="fu">X</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs"> </span><span class="sc">${</span><span class="fu">Y</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">" fill="none" stroke="#2a78d6" stroke-width="3"/&gt;</span></span>
+<span id="cb4-161"><a href="#cb4-161" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;circle cx="</span><span class="sc">${</span><span class="fu">X</span>(a)<span class="sc">}</span><span class="vs">" cy="</span><span class="sc">${</span><span class="fu">Y</span>(b)<span class="sc">}</span><span class="vs">" r="6" fill="#d6336c"/&gt;&lt;circle cx="</span><span class="sc">${</span><span class="fu">X</span>(c)<span class="sc">}</span><span class="vs">" cy="</span><span class="sc">${</span><span class="fu">Y</span>(d)<span class="sc">}</span><span class="vs">" r="6" fill="#d6336c"/&gt;</span></span>
+<span id="cb4-162"><a href="#cb4-162" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/svg&gt;</span></span>
+<span id="cb4-163"><a href="#cb4-163" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="position:relative;height:56px;max-width:420px;border:1px solid var(--bs-border-color);border-radius:28px;margin:.5rem 0"&gt;</span></span>
+<span id="cb4-164"><a href="#cb4-164" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div class="bola" style="position:absolute;left:6px;top:6px;width:44px;height:44px;border-radius:50%;background:#2a78d6"&gt;&lt;/div&gt;</span></span>
+<span id="cb4-165"><a href="#cb4-165" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;</span></span>
+<span id="cb4-166"><a href="#cb4-166" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;button type="button" class="btn btn-primary btn-sm"&gt;Reproducir&lt;/button&gt;</span></span>
+<span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;pre class="mt-2"&gt;&lt;code&gt;</span><span class="sc">${</span>css<span class="sc">}</span><span class="vs">&lt;/code&gt;&lt;/pre&gt;</span></span>
+<span id="cb4-168"><a href="#cb4-168" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;p class="small" aria-live="polite"&gt;&lt;/p&gt;</span></span>
+<span id="cb4-169"><a href="#cb4-169" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> bola <span class="op">=</span> el<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">".bola"</span>)<span class="op">,</span> msg <span class="op">=</span> el<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"p"</span>)<span class="op">;</span></span>
+<span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a>  el<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"button"</span>)<span class="op">.</span><span class="at">onclick</span> <span class="op">=</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> fin <span class="op">=</span> bola<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">transform</span> <span class="op">===</span> <span class="st">"translateX(360px)"</span> <span class="op">?</span> <span class="st">"translateX(0)"</span> <span class="op">:</span> <span class="st">"translateX(360px)"</span><span class="op">;</span></span>
+<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a>    bola<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">transition</span> <span class="op">=</span> reducir <span class="op">?</span> <span class="st">"none"</span> <span class="op">:</span> <span class="vs">`transform </span><span class="sc">${</span>duracion<span class="sc">}</span><span class="vs">ms cubic-bezier(</span><span class="sc">${</span>a<span class="sc">}</span><span class="vs">, </span><span class="sc">${</span>b<span class="sc">}</span><span class="vs">, </span><span class="sc">${</span>c<span class="sc">}</span><span class="vs">, </span><span class="sc">${</span>d<span class="sc">}</span><span class="vs">)`</span><span class="op">;</span></span>
+<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a>    bola<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">transform</span> <span class="op">=</span> fin<span class="op">;</span></span>
+<span id="cb4-175"><a href="#cb4-175" aria-hidden="true" tabindex="-1"></a>    msg<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> reducir <span class="op">?</span> <span class="st">"Tu sistema pide reducir el movimiento: la bola salta sin animación, como debería hacer tu interfaz."</span> <span class="op">:</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb4-176"><a href="#cb4-176" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb4-177"><a href="#cb4-177" aria-hidden="true" tabindex="-1"></a>  msg<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> duracion <span class="op">&gt;</span> <span class="dv">500</span> <span class="op">?</span> <span class="st">"Más de 500 ms se percibe lento para una microinteracción; resérvalo para transiciones grandes."</span> <span class="op">:</span> (b <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">||</span> b <span class="op">&gt;</span> <span class="dv">1</span> <span class="op">||</span> d <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">||</span> d <span class="op">&gt;</span> <span class="dv">1</span>) <span class="op">?</span> <span class="st">"Los valores fuera de 0–1 producen un rebote: úsalo con moderación."</span> <span class="op">:</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb4-178"><a href="#cb4-178" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> el<span class="op">;</span></span>
+<span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<p><strong>Regla práctica.</strong> Los elementos que <strong>entran</strong> usan <em>ease-out</em> (llegan rápido y frenan), los que <strong>salen</strong> usan <em>ease-in</em> y los que se <strong>desplazan</strong> dentro de la pantalla usan <em>ease-in-out</em>. Entre 150 y 300 ms basta para casi todas las microinteracciones.</p>
+</div>
+</section>
 <section id="caso-práctico-resuelto" class="level2">
 <h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
 <div class="callout callout-style-simple callout-note no-icon callout-titled">
@@ -788,7 +905,7 @@ Figura&nbsp;1: El mismo diseño en baja y en alta fidelidad.
 <p><strong>Avanzado.</strong> Escribe la ficha de decisiones (jerarquía, color, iconos, espaciado, movimiento) para la pantalla de lista de salas.</p>
 <div class="webex-solution">
 <button>Ver solución</button>
-<p>Debe justificar cada decisión con un principio (contraste, consistencia, escala de espaciado, accesibilidad) y especificar valores concretos que desarrollo pueda aplicar.</p>
+<p>Debe justificar cada decisión con un principio (<a href="92-glosario.html#gl-contraste" class="glos" data-def="Relación entre la luminancia de dos colores, de 1:1 a 21:1.">contraste</a>, consistencia, escala de espaciado, accesibilidad) y especificar valores concretos que desarrollo pueda aplicar.</p>
 </div>
 </section>
 <section id="actividades" class="level2">
@@ -1091,7 +1208,7 @@ W10=
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InNlbGVjY2lvbiA9IHdpbmRvdy5MYWIuc2VsZWNjaW9uXG52aWV3b2YgZXN0YWRvX2JvdG9uID0gc2VsZWNjaW9uKFwiRXN0YWRvIGZvcnphZG9cIiwgW1tcInJlcG9zb1wiLCBcIlJlcG9zbyAoaW50ZXJhY3Rpdm8pXCJdLCBbXCJkZXNhY3RpdmFkb1wiLCBcIkRlc2FjdGl2YWRvXCJdLCBbXCJjYXJnYW5kb1wiLCBcIkNhcmdhbmRvXCJdLCBbXCJlcnJvclwiLCBcIkVycm9yXCJdLCBbXCJleGl0b1wiLCBcIsOJeGl0b1wiXV0sIHt2YWx1ZTogXCJyZXBvc29cIn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIGNvbnN0IGUgPSBlc3RhZG9fYm90b247XG4gIGNvbnN0IGV0aXF1ZXRhID0ge3JlcG9zbzogXCJSZXNlcnZhclwiLCBkZXNhY3RpdmFkbzogXCJSZXNlcnZhclwiLCBjYXJnYW5kbzogXCJSZXNlcnZhbmRv4oCmXCIsIGVycm9yOiBcIlJlaW50ZW50YXJcIiwgZXhpdG86IFwiUmVzZXJ2YWRvIOKck1wifVtlXTtcbiAgY29uc3QgYXl1ZGEgPSB7cmVwb3NvOiBcIlBhc2EgZWwgcmF0w7NuLCBwdWxzYSBvIHVzYSBlbCB0YWJ1bGFkb3I6IHZlcsOhcyBsb3MgZXN0YWRvcyA6aG92ZXIsIDphY3RpdmUgeSA6Zm9jdXMtdmlzaWJsZS5cIixcbiAgICBkZXNhY3RpdmFkbzogXCJEZXNhY3RpdmFkbzogbm8gcmVzcG9uZGUuIEV4cGxpY2EgcG9yIHF1w6kgY2VyY2EgZGVsIGJvdMOzbiAowqtObyBzZSBwdWVkZSByZXNlcnZhcjogeWEgdGllbmVzIDUgcmVzZXJ2YXPCuykuXCIsXG4gICAgY2FyZ2FuZG86IFwiQ2FyZ2FuZG86IGV2aXRhIGVsIGRvYmxlIGVudsOtbyB5IGNvbXVuaWNhIHF1ZSBlbCBzaXN0ZW1hIHRyYWJhamEgKGFyaWEtYnVzeSkuXCIsXG4gICAgZXJyb3I6IFwiRXJyb3I6IGVsIG1lbnNhamUgZGljZSBxdcOpIHBhc8OzIHkgbGEgYWNjacOzbiBwZXJtaXRlIHJlY3VwZXJhcnNlLlwiLFxuICAgIGV4aXRvOiBcIsOJeGl0bzogY29uZmlybWEgZWwgcmVzdWx0YWRvIHNpbiBvYmxpZ2FyIGEgYnVzY2FybG8uXCJ9W2VdO1xuICBjb25zdCBkID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudChcImRpdlwiKTsgZC5jbGFzc05hbWUgPSBcImxhYi1lc3RhZG9zXCI7XG4gIGNvbnN0IGIgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwiYnV0dG9uXCIpOyBiLnR5cGUgPSBcImJ1dHRvblwiOyBiLmNsYXNzTmFtZSA9IFwibGFiLWJvdG9uIGxhYi1cIiArIGU7XG4gIGlmIChlID09PSBcImRlc2FjdGl2YWRvXCIpIGIuZGlzYWJsZWQgPSB0cnVlO1xuICBiLnNldEF0dHJpYnV0ZShcImFyaWEtYnVzeVwiLCBTdHJpbmcoZSA9PT0gXCJjYXJnYW5kb1wiKSk7XG4gIGlmIChlID09PSBcImNhcmdhbmRvXCIpIHsgY29uc3QgZyA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJzcGFuXCIpOyBnLmNsYXNzTmFtZSA9IFwibGFiLWdpcm9cIjsgZy5zZXRBdHRyaWJ1dGUoXCJhcmlhLWhpZGRlblwiLCBcInRydWVcIik7IGIuYXBwZW5kKGcpOyB9XG4gIGIuYXBwZW5kKGV0aXF1ZXRhKTsgZC5hcHBlbmQoYik7XG4gIGlmIChlID09PSBcImVycm9yXCIpIHsgY29uc3QgcCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJwXCIpOyBwLmNsYXNzTmFtZSA9IFwibGFiLW1hbCBzbWFsbCBtdC0xIG1iLTBcIjsgcC50ZXh0Q29udGVudCA9IFwiTm8gc2UgaGEgcG9kaWRvIHJlc2VydmFyOiBjb21wcnVlYmEgdHUgY29uZXhpw7NuLlwiOyBkLmFwcGVuZChwKTsgfVxuICBjb25zdCBzdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJwXCIpOyBzdC5jbGFzc05hbWUgPSBcInNtYWxsIG10LTJcIjsgc3Quc2V0QXR0cmlidXRlKFwicm9sZVwiLCBcInN0YXR1c1wiKTsgc3QudGV4dENvbnRlbnQgPSBheXVkYTsgZC5hcHBlbmQoc3QpO1xuICBsZXQgbiA9IDA7XG4gIGlmIChlID09PSBcInJlcG9zb1wiKSBiLm9uY2xpY2sgPSAoKSA9PiB7IG4rKzsgc3QudGV4dENvbnRlbnQgPSBgUHVsc2FkbyAke259ICR7biA9PT0gMSA/IFwidmV6XCIgOiBcInZlY2VzXCJ9LiDCv0hhcyB2aXN0byBlbCBjYW1iaW8gYWwgcHVsc2FyIHkgZWwgYW5pbGxvIGRlIGZvY28gY29uIGVsIHRlY2xhZG8/YDsgfTtcbiAgcmV0dXJuIGQ7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2VzdGFkb19ib3RvbicpIn1dfQ==
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InNlbGVjY2lvbiA9IHdpbmRvdy5MYWIuc2VsZWNjaW9uXG52aWV3b2YgZXN0YWRvX2JvdG9uID0gc2VsZWNjaW9uKFwiRXN0YWRvIGZvcnphZG9cIiwgW1tcInJlcG9zb1wiLCBcIlJlcG9zbyAoaW50ZXJhY3Rpdm8pXCJdLCBbXCJkZXNhY3RpdmFkb1wiLCBcIkRlc2FjdGl2YWRvXCJdLCBbXCJjYXJnYW5kb1wiLCBcIkNhcmdhbmRvXCJdLCBbXCJlcnJvclwiLCBcIkVycm9yXCJdLCBbXCJleGl0b1wiLCBcIsOJeGl0b1wiXV0sIHt2YWx1ZTogXCJyZXBvc29cIn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIGNvbnN0IGUgPSBlc3RhZG9fYm90b247XG4gIGNvbnN0IGV0aXF1ZXRhID0ge3JlcG9zbzogXCJSZXNlcnZhclwiLCBkZXNhY3RpdmFkbzogXCJSZXNlcnZhclwiLCBjYXJnYW5kbzogXCJSZXNlcnZhbmRv4oCmXCIsIGVycm9yOiBcIlJlaW50ZW50YXJcIiwgZXhpdG86IFwiUmVzZXJ2YWRvIOKck1wifVtlXTtcbiAgY29uc3QgYXl1ZGEgPSB7cmVwb3NvOiBcIlBhc2EgZWwgcmF0w7NuLCBwdWxzYSBvIHVzYSBlbCB0YWJ1bGFkb3I6IHZlcsOhcyBsb3MgZXN0YWRvcyA6aG92ZXIsIDphY3RpdmUgeSA6Zm9jdXMtdmlzaWJsZS5cIixcbiAgICBkZXNhY3RpdmFkbzogXCJEZXNhY3RpdmFkbzogbm8gcmVzcG9uZGUuIEV4cGxpY2EgcG9yIHF1w6kgY2VyY2EgZGVsIGJvdMOzbiAowqtObyBzZSBwdWVkZSByZXNlcnZhcjogeWEgdGllbmVzIDUgcmVzZXJ2YXPCuykuXCIsXG4gICAgY2FyZ2FuZG86IFwiQ2FyZ2FuZG86IGV2aXRhIGVsIGRvYmxlIGVudsOtbyB5IGNvbXVuaWNhIHF1ZSBlbCBzaXN0ZW1hIHRyYWJhamEgKGFyaWEtYnVzeSkuXCIsXG4gICAgZXJyb3I6IFwiRXJyb3I6IGVsIG1lbnNhamUgZGljZSBxdcOpIHBhc8OzIHkgbGEgYWNjacOzbiBwZXJtaXRlIHJlY3VwZXJhcnNlLlwiLFxuICAgIGV4aXRvOiBcIsOJeGl0bzogY29uZmlybWEgZWwgcmVzdWx0YWRvIHNpbiBvYmxpZ2FyIGEgYnVzY2FybG8uXCJ9W2VdO1xuICBjb25zdCBkID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudChcImRpdlwiKTsgZC5jbGFzc05hbWUgPSBcImxhYi1lc3RhZG9zXCI7XG4gIGNvbnN0IGIgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwiYnV0dG9uXCIpOyBiLnR5cGUgPSBcImJ1dHRvblwiOyBiLmNsYXNzTmFtZSA9IFwibGFiLWJvdG9uIGxhYi1cIiArIGU7XG4gIGlmIChlID09PSBcImRlc2FjdGl2YWRvXCIpIGIuZGlzYWJsZWQgPSB0cnVlO1xuICBiLnNldEF0dHJpYnV0ZShcImFyaWEtYnVzeVwiLCBTdHJpbmcoZSA9PT0gXCJjYXJnYW5kb1wiKSk7XG4gIGlmIChlID09PSBcImNhcmdhbmRvXCIpIHsgY29uc3QgZyA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJzcGFuXCIpOyBnLmNsYXNzTmFtZSA9IFwibGFiLWdpcm9cIjsgZy5zZXRBdHRyaWJ1dGUoXCJhcmlhLWhpZGRlblwiLCBcInRydWVcIik7IGIuYXBwZW5kKGcpOyB9XG4gIGIuYXBwZW5kKGV0aXF1ZXRhKTsgZC5hcHBlbmQoYik7XG4gIGlmIChlID09PSBcImVycm9yXCIpIHsgY29uc3QgcCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJwXCIpOyBwLmNsYXNzTmFtZSA9IFwibGFiLW1hbCBzbWFsbCBtdC0xIG1iLTBcIjsgcC50ZXh0Q29udGVudCA9IFwiTm8gc2UgaGEgcG9kaWRvIHJlc2VydmFyOiBjb21wcnVlYmEgdHUgY29uZXhpw7NuLlwiOyBkLmFwcGVuZChwKTsgfVxuICBjb25zdCBzdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJwXCIpOyBzdC5jbGFzc05hbWUgPSBcInNtYWxsIG10LTJcIjsgc3Quc2V0QXR0cmlidXRlKFwicm9sZVwiLCBcInN0YXR1c1wiKTsgc3QudGV4dENvbnRlbnQgPSBheXVkYTsgZC5hcHBlbmQoc3QpO1xuICBsZXQgbiA9IDA7XG4gIGlmIChlID09PSBcInJlcG9zb1wiKSBiLm9uY2xpY2sgPSAoKSA9PiB7IG4rKzsgc3QudGV4dENvbnRlbnQgPSBgUHVsc2FkbyAke259ICR7biA9PT0gMSA/IFwidmV6XCIgOiBcInZlY2VzXCJ9LiDCv0hhcyB2aXN0byBlbCBjYW1iaW8gYWwgcHVsc2FyIHkgZWwgYW5pbGxvIGRlIGZvY28gY29uIGVsIHRlY2xhZG8/YDsgfTtcbiAgcmV0dXJuIGQ7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJzZWxDID0gd2luZG93LkxhYi5zZWxlY2Npb25cbnJhbmdvQyA9IHdpbmRvdy5MYWIucmFuZ29cbnZpZXdvZiBwcmVzZXQgPSBzZWxDKFwiUHVudG8gZGUgcGFydGlkYVwiLCBbXCJlYXNlLW91dCDCtyBlbnRyYXJcIiwgXCJlYXNlLWluIMK3IHNhbGlyXCIsIFwiZWFzZS1pbi1vdXQgwrcgbW92ZXJzZVwiLCBcImxpbmVhciDCtyBtZWPDoW5pY29cIiwgXCJwZXJzb25hbGl6YWRhXCJdLCB7dmFsdWU6IFwiZWFzZS1vdXQgwrcgZW50cmFyXCJ9KVxudmlld29mIHgxID0gcmFuZ29DKFwieOKCgVwiLCBbMCwgMV0sIHtzdGVwOiAwLjAxLCB2YWx1ZTogMCwgZm9ybWF0bzogKHYpID0+IHYudG9GaXhlZCgyKS5yZXBsYWNlKFwiLlwiLCBcIixcIil9KVxudmlld29mIHkxID0gcmFuZ29DKFwieeKCgVwiLCBbLTAuNSwgMS41XSwge3N0ZXA6IDAuMDEsIHZhbHVlOiAwLCBmb3JtYXRvOiAodikgPT4gdi50b0ZpeGVkKDIpLnJlcGxhY2UoXCIuXCIsIFwiLFwiKX0pXG52aWV3b2YgeDIgPSByYW5nb0MoXCJ44oKCXCIsIFswLCAxXSwge3N0ZXA6IDAuMDEsIHZhbHVlOiAwLjU4LCBmb3JtYXRvOiAodikgPT4gdi50b0ZpeGVkKDIpLnJlcGxhY2UoXCIuXCIsIFwiLFwiKX0pXG52aWV3b2YgeTIgPSByYW5nb0MoXCJ54oKCXCIsIFstMC41LCAxLjVdLCB7c3RlcDogMC4wMSwgdmFsdWU6IDEsIGZvcm1hdG86ICh2KSA9PiB2LnRvRml4ZWQoMikucmVwbGFjZShcIi5cIiwgXCIsXCIpfSlcbnZpZXdvZiBkdXJhY2lvbiA9IHJhbmdvQyhcIkR1cmFjacOzbiAobXMpXCIsIFsxMDAsIDEwMDBdLCB7c3RlcDogNTAsIHZhbHVlOiAyNTB9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoie1xuICBjb25zdCBQID0ge1wiZWFzZS1vdXQgwrcgZW50cmFyXCI6IFswLCAwLCAwLjU4LCAxXSwgXCJlYXNlLWluIMK3IHNhbGlyXCI6IFswLjQyLCAwLCAxLCAxXSwgXCJlYXNlLWluLW91dCDCtyBtb3ZlcnNlXCI6IFswLjQyLCAwLCAwLjU4LCAxXSwgXCJsaW5lYXIgwrcgbWVjw6FuaWNvXCI6IFswLCAwLCAxLCAxXX07XG4gIGNvbnN0IFthLCBiLCBjLCBkXSA9IHByZXNldCA9PT0gXCJwZXJzb25hbGl6YWRhXCIgPyBbeDEsIHkxLCB4MiwgeTJdIDogUFtwcmVzZXRdO1xuICBjb25zdCBXID0gMjQwLCBYID0gKHYpID0+IDMwICsgdiAqIFcsIFkgPSAodikgPT4gMzAgKyAoMSAtIHYpICogMjAwO1xuICBjb25zdCByZWR1Y2lyID0gd2luZG93Lm1hdGNoTWVkaWEoXCIocHJlZmVycy1yZWR1Y2VkLW1vdGlvbjogcmVkdWNlKVwiKS5tYXRjaGVzO1xuICBjb25zdCBmID0gKHYpID0+ICt2LnRvRml4ZWQoMik7XG4gIGNvbnN0IGNzcyA9IGB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gJHtkdXJhY2lvbn1tcyBjdWJpYy1iZXppZXIoJHtmKGEpfSwgJHtmKGIpfSwgJHtmKGMpfSwgJHtmKGQpfSk7YDtcbiAgY29uc3QgZWwgPSBodG1sYDxkaXYgcm9sZT1cImdyb3VwXCIgYXJpYS1sYWJlbD1cIlZpc3RhIHByZXZpYSBkZSBsYSBjdXJ2YVwiPlxuICAgIDxzdmcgdmlld0JveD1cIjAgMCAzMDAgMjYwXCIgd2lkdGg9XCIzMDBcIiByb2xlPVwiaW1nXCIgYXJpYS1sYWJlbD1cIkN1cnZhIGRlIELDqXppZXIgY29uIHB1bnRvcyBkZSBjb250cm9sICgke2YoYSl9LCAke2YoYil9KSB5ICgke2YoYyl9LCAke2YoZCl9KVwiIHN0eWxlPVwibWF4LXdpZHRoOjEwMCVcIj5cbiAgICAgIDxyZWN0IHg9XCIzMFwiIHk9XCIzMFwiIHdpZHRoPVwiJHtXfVwiIGhlaWdodD1cIjIwMFwiIGZpbGw9XCJub25lXCIgc3Ryb2tlPVwiY3VycmVudENvbG9yXCIgc3Ryb2tlLW9wYWNpdHk9XCIwLjI1XCIvPlxuICAgICAgPHRleHQgeD1cIjMwXCIgeT1cIjI1MFwiIGZvbnQtc2l6ZT1cIjExXCIgZmlsbD1cImN1cnJlbnRDb2xvclwiPnRpZW1wbyDihpI8L3RleHQ+PHRleHQgeD1cIjZcIiB5PVwiMzRcIiBmb250LXNpemU9XCIxMVwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIj5maW48L3RleHQ+XG4gICAgICA8bGluZSB4MT1cIiR7WCgwKX1cIiB5MT1cIiR7WSgwKX1cIiB4Mj1cIiR7WChhKX1cIiB5Mj1cIiR7WShiKX1cIiBzdHJva2U9XCIjZDYzMzZjXCIgc3Ryb2tlLWRhc2hhcnJheT1cIjQgM1wiLz48bGluZSB4MT1cIiR7WCgxKX1cIiB5MT1cIiR7WSgxKX1cIiB4Mj1cIiR7WChjKX1cIiB5Mj1cIiR7WShkKX1cIiBzdHJva2U9XCIjZDYzMzZjXCIgc3Ryb2tlLWRhc2hhcnJheT1cIjQgM1wiLz5cbiAgICAgIDxwYXRoIGQ9XCJNJHtYKDApfSAke1koMCl9IEMgJHtYKGEpfSAke1koYil9LCAke1goYyl9ICR7WShkKX0sICR7WCgxKX0gJHtZKDEpfVwiIGZpbGw9XCJub25lXCIgc3Ryb2tlPVwiIzJhNzhkNlwiIHN0cm9rZS13aWR0aD1cIjNcIi8+XG4gICAgICA8Y2lyY2xlIGN4PVwiJHtYKGEpfVwiIGN5PVwiJHtZKGIpfVwiIHI9XCI2XCIgZmlsbD1cIiNkNjMzNmNcIi8+PGNpcmNsZSBjeD1cIiR7WChjKX1cIiBjeT1cIiR7WShkKX1cIiByPVwiNlwiIGZpbGw9XCIjZDYzMzZjXCIvPlxuICAgIDwvc3ZnPlxuICAgIDxkaXYgc3R5bGU9XCJwb3NpdGlvbjpyZWxhdGl2ZTtoZWlnaHQ6NTZweDttYXgtd2lkdGg6NDIwcHg7Ym9yZGVyOjFweCBzb2xpZCB2YXIoLS1icy1ib3JkZXItY29sb3IpO2JvcmRlci1yYWRpdXM6MjhweDttYXJnaW46LjVyZW0gMFwiPlxuICAgICAgPGRpdiBjbGFzcz1cImJvbGFcIiBzdHlsZT1cInBvc2l0aW9uOmFic29sdXRlO2xlZnQ6NnB4O3RvcDo2cHg7d2lkdGg6NDRweDtoZWlnaHQ6NDRweDtib3JkZXItcmFkaXVzOjUwJTtiYWNrZ3JvdW5kOiMyYTc4ZDZcIj48L2Rpdj5cbiAgICA8L2Rpdj5cbiAgICA8YnV0dG9uIHR5cGU9XCJidXR0b25cIiBjbGFzcz1cImJ0biBidG4tcHJpbWFyeSBidG4tc21cIj5SZXByb2R1Y2lyPC9idXR0b24+XG4gICAgPHByZSBjbGFzcz1cIm10LTJcIj48Y29kZT4ke2Nzc308L2NvZGU+PC9wcmU+XG4gICAgPHAgY2xhc3M9XCJzbWFsbFwiIGFyaWEtbGl2ZT1cInBvbGl0ZVwiPjwvcD5cbiAgPC9kaXY+YDtcbiAgY29uc3QgYm9sYSA9IGVsLnF1ZXJ5U2VsZWN0b3IoXCIuYm9sYVwiKSwgbXNnID0gZWwucXVlcnlTZWxlY3RvcihcInBcIik7XG4gIGVsLnF1ZXJ5U2VsZWN0b3IoXCJidXR0b25cIikub25jbGljayA9ICgpID0+IHtcbiAgICBjb25zdCBmaW4gPSBib2xhLnN0eWxlLnRyYW5zZm9ybSA9PT0gXCJ0cmFuc2xhdGVYKDM2MHB4KVwiID8gXCJ0cmFuc2xhdGVYKDApXCIgOiBcInRyYW5zbGF0ZVgoMzYwcHgpXCI7XG4gICAgYm9sYS5zdHlsZS50cmFuc2l0aW9uID0gcmVkdWNpciA/IFwibm9uZVwiIDogYHRyYW5zZm9ybSAke2R1cmFjaW9ufW1zIGN1YmljLWJlemllcigke2F9LCAke2J9LCAke2N9LCAke2R9KWA7XG4gICAgYm9sYS5zdHlsZS50cmFuc2Zvcm0gPSBmaW47XG4gICAgbXNnLnRleHRDb250ZW50ID0gcmVkdWNpciA/IFwiVHUgc2lzdGVtYSBwaWRlIHJlZHVjaXIgZWwgbW92aW1pZW50bzogbGEgYm9sYSBzYWx0YSBzaW4gYW5pbWFjacOzbiwgY29tbyBkZWJlcsOtYSBoYWNlciB0dSBpbnRlcmZhei5cIiA6IFwiXCI7XG4gIH07XG4gIG1zZy50ZXh0Q29udGVudCA9IGR1cmFjaW9uID4gNTAwID8gXCJNw6FzIGRlIDUwMCBtcyBzZSBwZXJjaWJlIGxlbnRvIHBhcmEgdW5hIG1pY3JvaW50ZXJhY2Npw7NuOyByZXPDqXJ2YWxvIHBhcmEgdHJhbnNpY2lvbmVzIGdyYW5kZXMuXCIgOiAoYiA8IDAgfHwgYiA+IDEgfHwgZCA8IDAgfHwgZCA+IDEpID8gXCJMb3MgdmFsb3JlcyBmdWVyYSBkZSAw4oCTMSBwcm9kdWNlbiB1biByZWJvdGU6IMO6c2FsbyBjb24gbW9kZXJhY2nDs24uXCIgOiBcIlwiO1xuICByZXR1cm4gZWw7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2VzdGFkb19ib3RvbicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdwcmVzZXQnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgneDEnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgneTEnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgneDInKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgneTInKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZHVyYWNpb24nKSJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1545,6 +1662,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
