@@ -74,17 +74,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,10 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -474,6 +481,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-5.1" id="toc-ejercicio-5.1" class="nav-link" data-scroll-target="#ejercicio-5.1">Ejercicio 5.1</a></li>
   <li><a href="#ejercicio-5.2" id="toc-ejercicio-5.2" class="nav-link" data-scroll-target="#ejercicio-5.2">Ejercicio 5.2</a></li>
   </ul></li>
+  <li><a href="#lab-t5-embudo" id="toc-lab-t5-embudo" class="nav-link" data-scroll-target="#lab-t5-embudo">Laboratorio: el embudo de un flujo</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t5" id="toc-reto-t5" class="nav-link" data-scroll-target="#reto-t5">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
@@ -607,7 +616,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="fig-flujo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Diagrama de flujo. Inicio, elegir fecha y franja, lista de salas libres, elegir sala. Rombo: ¿ha iniciado sesión? Si no, pantalla de inicio de sesión que vuelve al flujo. Si sí, confirmar reserva. Rombo: ¿sigue libre? Si no, mensaje de error que vuelve a la lista de salas manteniendo la fecha. Si sí, confirmación y fin.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-flujo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/tema5_flujo.svg" class="img-fluid figure-img" alt="Diagrama de flujo. Inicio, elegir fecha y franja, lista de salas libres, elegir sala. Rombo: ¿ha iniciado sesión? Si no, pantalla de inicio de sesión que vuelve al flujo. Si sí, confirmar reserva. Rombo: ¿sigue libre? Si no, mensaje de error que vuelve a la lista de salas manteniendo la fecha. Si sí, confirmación y fin.">
+<a href="figuras/tema5_flujo.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Flujo de reserva de una sala con su camino principal, una alternativa (iniciar sesión) y un flujo de error (la sala se ocupa durante la reserva) que devuelve a la lista sin perder la fecha elegida."><img src="figuras/tema5_flujo.svg" class="img-fluid figure-img" alt="Diagrama de flujo. Inicio, elegir fecha y franja, lista de salas libres, elegir sala. Rombo: ¿ha iniciado sesión? Si no, pantalla de inicio de sesión que vuelve al flujo. Si sí, confirmar reserva. Rombo: ¿sigue libre? Si no, mensaje de error que vuelve a la lista de salas manteniendo la fecha. Si sí, confirmación y fin."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flujo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Flujo de reserva de una sala con su camino principal, una alternativa (iniciar sesión) y un flujo de error (la sala se ocupa durante la reserva) que devuelve a la lista sin perder la fecha elegida.
@@ -692,6 +701,88 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDVfZmluYWwifSwiY29k
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ1X2ZpbmFsIn0sImNvZGUiOiJpZiAoaXNUUlVFKGFsbC5lcXVhbChhcy5udW1lcmljKC5yZXN1bHQpLCAzMS43KSkpIHtcbiAgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IFwiQ29ycmVjdG86IGVsIDMxLDcgJSBjb21wbGV0YSBlbCByZWdpc3Ryby5cIilcbn0gZWxzZSB7XG4gIGxpc3QoY29ycmVjdCA9IEZBTFNFLCBtZXNzYWdlID0gXCJVc2EgbGEgY29sdW1uYSBhY3VtdWxhZG8gZW4gbGEgw7psdGltYSBmaWxhLlwiKVxufSJ9
 </script>
 </section>
+</section>
+<section id="lab-t5-embudo" class="level2">
+<h2 class="anchored" data-anchor-id="lab-t5-embudo">Laboratorio: el embudo de un flujo</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · cálculo en tu navegador</p>
+</div>
+<p>Un <strong>embudo</strong> muestra cuántas personas llegan a cada paso de un flujo. Ajusta las cifras del flujo de reserva de una sala de estudio y localiza el paso donde se pierde más gente: es el primero que conviene rediseñar.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="179" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 178;"><span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a>pasos_embudo <span class="op">=</span> [<span class="st">"Entran en «Reservar sala»"</span><span class="op">,</span> <span class="st">"Eligen fecha"</span><span class="op">,</span> <span class="st">"Eligen franja horaria"</span><span class="op">,</span> <span class="st">"Se identifican"</span><span class="op">,</span> <span class="st">"Confirman la reserva"</span>]</span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a>viewof cifras <span class="op">=</span> {</span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> caja <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div&gt;&lt;/div&gt;`</span><span class="op">,</span> ini <span class="op">=</span> [<span class="dv">1000</span><span class="op">,</span> <span class="dv">820</span><span class="op">,</span> <span class="dv">700</span><span class="op">,</span> <span class="dv">360</span><span class="op">,</span> <span class="dv">330</span>]<span class="op">;</span></span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> r <span class="op">=</span> pasos_embudo<span class="op">.</span><span class="fu">map</span>((t<span class="op">,</span> i) <span class="kw">=&gt;</span> { <span class="kw">const</span> c <span class="op">=</span> <span class="fu">rango</span>(t<span class="op">,</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">1000</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> ini[i]})<span class="op">;</span> c<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> e <span class="kw">=&gt;</span> { e<span class="op">.</span><span class="fu">stopPropagation</span>()<span class="op">;</span> caja<span class="op">.</span><span class="at">value</span> <span class="op">=</span> r<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">value</span>)<span class="op">;</span> caja<span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">Event</span>(<span class="st">"input"</span><span class="op">,</span> {<span class="dt">bubbles</span><span class="op">:</span> <span class="kw">true</span>}))<span class="op">;</span> })<span class="op">;</span> caja<span class="op">.</span><span class="fu">appendChild</span>(c)<span class="op">;</span> <span class="cf">return</span> c<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a>  caja<span class="op">.</span><span class="at">value</span> <span class="op">=</span> r<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">value</span>)<span class="op">;</span> <span class="cf">return</span> caja<span class="op">;</span></span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="189" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 188;"><span id="cb4-189"><a href="#cb4-189" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb4-190"><a href="#cb4-190" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> v <span class="op">=</span> cifras<span class="op">.</span><span class="fu">map</span>((x<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(x<span class="op">,</span> i <span class="op">?</span> cifras<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> i)<span class="op">.</span><span class="fu">reduce</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(a<span class="op">,</span> b)) <span class="op">:</span> x))<span class="op">;</span></span>
+<span id="cb4-191"><a href="#cb4-191" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> perdidas <span class="op">=</span> v<span class="op">.</span><span class="fu">map</span>((x<span class="op">,</span> i) <span class="kw">=&gt;</span> i <span class="op">?</span> (v[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">?</span> <span class="dv">1</span> <span class="op">-</span> x <span class="op">/</span> v[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">:</span> <span class="dv">0</span>) <span class="op">:</span> <span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb4-192"><a href="#cb4-192" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> peor <span class="op">=</span> perdidas<span class="op">.</span><span class="fu">indexOf</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>perdidas))<span class="op">;</span></span>
+<span id="cb4-193"><a href="#cb4-193" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> fmt <span class="op">=</span> <span class="kw">new</span> <span class="bu">Intl</span><span class="op">.</span><span class="fu">NumberFormat</span>(<span class="st">"es-ES"</span>)<span class="op">;</span></span>
+<span id="cb4-194"><a href="#cb4-194" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;table class="table table-sm"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Paso&lt;/th&gt;&lt;th scope="col"&gt;Personas&lt;/th&gt;&lt;th scope="col"&gt;Se pierden&lt;/th&gt;&lt;th scope="col"&gt;&lt;span class="visually-hidden"&gt;Barra&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;</span></span>
+<span id="cb4-195"><a href="#cb4-195" aria-hidden="true" tabindex="-1"></a><span class="vs">  </span><span class="sc">${</span>pasos_embudo<span class="op">.</span><span class="fu">map</span>((p<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;tr style="</span><span class="sc">${</span>i <span class="op">===</span> peor <span class="op">&amp;&amp;</span> i <span class="op">?</span> <span class="st">"font-weight:600"</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">"&gt;&lt;td&gt;</span><span class="sc">${</span>p<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td style="text-align:right"&gt;</span><span class="sc">${</span>fmt<span class="op">.</span><span class="fu">format</span>(v[i])<span class="sc">}</span><span class="vs">&lt;/td&gt;</span></span>
+<span id="cb4-196"><a href="#cb4-196" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;td style="text-align:right"&gt;</span><span class="sc">${</span>i <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> perdidas[i]) <span class="op">+</span> <span class="st">" %"</span> <span class="op">:</span> <span class="st">"—"</span><span class="sc">}</span><span class="vs">&lt;/td&gt;</span></span>
+<span id="cb4-197"><a href="#cb4-197" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;td style="width:40%"&gt;&lt;div style="height:.8rem;border-radius:2px;background:</span><span class="sc">${</span>i <span class="op">===</span> peor <span class="op">&amp;&amp;</span> i <span class="op">?</span> <span class="st">"#eb6834"</span> <span class="op">:</span> <span class="st">"#2a78d6"</span><span class="sc">}</span><span class="vs">;width:</span><span class="sc">${</span>v[<span class="dv">0</span>] <span class="op">?</span> <span class="dv">100</span> <span class="op">*</span> v[i] <span class="op">/</span> v[<span class="dv">0</span>] <span class="op">:</span> <span class="dv">0</span><span class="sc">}</span><span class="vs">%"&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`</span>)<span class="sc">}</span><span class="vs">&lt;/tbody&gt;&lt;/table&gt;</span></span>
+<span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;p&gt;Conversión total: &lt;strong&gt;</span><span class="sc">${</span>v[<span class="dv">0</span>] <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> v[<span class="dv">4</span>] <span class="op">/</span> v[<span class="dv">0</span>]) <span class="op">:</span> <span class="dv">0</span><span class="sc">}</span><span class="vs"> %&lt;/strong&gt;. </span><span class="sc">${</span>peor <span class="op">?</span> <span class="fu">html</span><span class="vs">`La mayor pérdida está en &lt;strong&gt;«</span><span class="sc">${</span>pasos_embudo[peor]<span class="sc">}</span><span class="vs">»&lt;/strong&gt; (</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> perdidas[peor])<span class="sc">}</span><span class="vs"> %).`</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">&lt;/p&gt;</span></span>
+<span id="cb4-199"><a href="#cb4-199" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;p class="small"&gt;Un paso no puede tener más personas que el anterior: el laboratorio lo corrige. Con las funciones del libro: &lt;code&gt;embudo()&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb4-200"><a href="#cb4-200" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-clasificar" id="ia-t5-ramas"><script type="application/json" class="ia-datos">{"categorias":["Principal","Alternativo","Error"],"enunciado":"","explicacion":"","items":[{"categoria":"Principal","explicacion":"","texto":"Busco un libro, lo encuentro y lo reservo"},{"categoria":"Alternativo","explicacion":"","texto":"Busco un libro, no está disponible y me apunto a la lista de\nespera"},{"categoria":"Error","explicacion":"","texto":"Al reservar, el sistema avisa de que la sesión ha caducado"},{"categoria":"Alternativo","explicacion":"Otro punto de entrada al mismo objetivo.","texto":"Reservo desde la ficha del libro que me envió un compañero"},{"categoria":"Error","explicacion":"","texto":"Introduzco un número de carné que no existe"}],"tipo":"clasificar","titulo":"¿Flujo principal, alternativo o de error?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-ordenar" id="ia-t5-pasos"><script type="application/json" class="ia-datos">{"enunciado":"","explicacion":"","items":["Iniciar sesión","Abrir «Mis préstamos»","Seleccionar el préstamo que vence","Pulsar «Renovar»","Ver la nueva fecha de devolución"],"tipo":"ordenar","titulo":"Ordena el flujo principal de «Renovar un préstamo»"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t5-notacion"><script type="application/json" class="ia-datos">{"categorias":["Inicio o fin","Pantalla o acción","Decisión","Conector"],"enunciado":"","explicacion":"","items":[{"categoria":"Inicio o fin","explicacion":"","texto":"Óvalo"},{"categoria":"Pantalla o acción","explicacion":"","texto":"Rectángulo"},{"categoria":"Decisión","explicacion":"","texto":"Rombo"},{"categoria":"Conector","explicacion":"","texto":"Flecha"}],"tipo":"clasificar","titulo":"¿Qué representa cada forma en un diagrama de flujo?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Errores frecuentes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Dibujar solo el camino feliz.</strong> Los flujos de error y alternativos son donde más se pierde la gente.</li>
+<li><strong>Confundir flujo con mapa del sitio.</strong> El flujo sigue una tarea; el mapa, la estructura.</li>
+<li><strong>Decisiones sin salida</strong>: cada rombo necesita al menos dos ramas etiquetadas.</li>
+<li><strong>Pasos que piden lo que el sistema ya sabe</strong> (volver a escribir el correo, el carné…).</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="reto-t5" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t5">Reto evaluable</h2>
@@ -870,23 +961,26 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -895,10 +989,12 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -906,13 +1002,13 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -925,6 +1021,9 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -951,10 +1050,14 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -983,7 +1086,7 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InJhbmdvID0gd2luZG93LkxhYi5yYW5nb1xucGFzb3NfZW1idWRvID0gW1wiRW50cmFuIGVuIMKrUmVzZXJ2YXIgc2FsYcK7XCIsIFwiRWxpZ2VuIGZlY2hhXCIsIFwiRWxpZ2VuIGZyYW5qYSBob3JhcmlhXCIsIFwiU2UgaWRlbnRpZmljYW5cIiwgXCJDb25maXJtYW4gbGEgcmVzZXJ2YVwiXVxudmlld29mIGNpZnJhcyA9IHtcbiAgY29uc3QgY2FqYSA9IGh0bWxgPGRpdj48L2Rpdj5gLCBpbmkgPSBbMTAwMCwgODIwLCA3MDAsIDM2MCwgMzMwXTtcbiAgY29uc3QgciA9IHBhc29zX2VtYnVkby5tYXAoKHQsIGkpID0+IHsgY29uc3QgYyA9IHJhbmdvKHQsIFswLCAxMDAwXSwge3N0ZXA6IDEwLCB2YWx1ZTogaW5pW2ldfSk7IGMuYWRkRXZlbnRMaXN0ZW5lcihcImlucHV0XCIsIGUgPT4geyBlLnN0b3BQcm9wYWdhdGlvbigpOyBjYWphLnZhbHVlID0gci5tYXAoeCA9PiB4LnZhbHVlKTsgY2FqYS5kaXNwYXRjaEV2ZW50KG5ldyBFdmVudChcImlucHV0XCIsIHtidWJibGVzOiB0cnVlfSkpOyB9KTsgY2FqYS5hcHBlbmRDaGlsZChjKTsgcmV0dXJuIGM7IH0pO1xuICBjYWphLnZhbHVlID0gci5tYXAoeCA9PiB4LnZhbHVlKTsgcmV0dXJuIGNhamE7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIGNvbnN0IHYgPSBjaWZyYXMubWFwKCh4LCBpKSA9PiBNYXRoLm1pbih4LCBpID8gY2lmcmFzLnNsaWNlKDAsIGkpLnJlZHVjZSgoYSwgYikgPT4gTWF0aC5taW4oYSwgYikpIDogeCkpO1xuICBjb25zdCBwZXJkaWRhcyA9IHYubWFwKCh4LCBpKSA9PiBpID8gKHZbaSAtIDFdID8gMSAtIHggLyB2W2kgLSAxXSA6IDApIDogMCk7XG4gIGNvbnN0IHBlb3IgPSBwZXJkaWRhcy5pbmRleE9mKE1hdGgubWF4KC4uLnBlcmRpZGFzKSk7XG4gIGNvbnN0IGZtdCA9IG5ldyBJbnRsLk51bWJlckZvcm1hdChcImVzLUVTXCIpO1xuICByZXR1cm4gaHRtbGA8ZGl2IHJvbGU9XCJzdGF0dXNcIj48dGFibGUgY2xhc3M9XCJ0YWJsZSB0YWJsZS1zbVwiPjx0aGVhZD48dHI+PHRoIHNjb3BlPVwiY29sXCI+UGFzbzwvdGg+PHRoIHNjb3BlPVwiY29sXCI+UGVyc29uYXM8L3RoPjx0aCBzY29wZT1cImNvbFwiPlNlIHBpZXJkZW48L3RoPjx0aCBzY29wZT1cImNvbFwiPjxzcGFuIGNsYXNzPVwidmlzdWFsbHktaGlkZGVuXCI+QmFycmE8L3NwYW4+PC90aD48L3RyPjwvdGhlYWQ+PHRib2R5PlxuICAke3Bhc29zX2VtYnVkby5tYXAoKHAsIGkpID0+IGh0bWxgPHRyIHN0eWxlPVwiJHtpID09PSBwZW9yICYmIGkgPyBcImZvbnQtd2VpZ2h0OjYwMFwiIDogXCJcIn1cIj48dGQ+JHtwfTwvdGQ+PHRkIHN0eWxlPVwidGV4dC1hbGlnbjpyaWdodFwiPiR7Zm10LmZvcm1hdCh2W2ldKX08L3RkPlxuICAgPHRkIHN0eWxlPVwidGV4dC1hbGlnbjpyaWdodFwiPiR7aSA/IE1hdGgucm91bmQoMTAwICogcGVyZGlkYXNbaV0pICsgXCIgJVwiIDogXCLigJRcIn08L3RkPlxuICAgPHRkIHN0eWxlPVwid2lkdGg6NDAlXCI+PGRpdiBzdHlsZT1cImhlaWdodDouOHJlbTtib3JkZXItcmFkaXVzOjJweDtiYWNrZ3JvdW5kOiR7aSA9PT0gcGVvciAmJiBpID8gXCIjZWI2ODM0XCIgOiBcIiMyYTc4ZDZcIn07d2lkdGg6JHt2WzBdID8gMTAwICogdltpXSAvIHZbMF0gOiAwfSVcIj48L2Rpdj48L3RkPjwvdHI+YCl9PC90Ym9keT48L3RhYmxlPlxuICA8cD5Db252ZXJzacOzbiB0b3RhbDogPHN0cm9uZz4ke3ZbMF0gPyBNYXRoLnJvdW5kKDEwMCAqIHZbNF0gLyB2WzBdKSA6IDB9ICU8L3N0cm9uZz4uICR7cGVvciA/IGh0bWxgTGEgbWF5b3IgcMOpcmRpZGEgZXN0w6EgZW4gPHN0cm9uZz7CqyR7cGFzb3NfZW1idWRvW3Blb3JdfcK7PC9zdHJvbmc+ICgke01hdGgucm91bmQoMTAwICogcGVyZGlkYXNbcGVvcl0pfSAlKS5gIDogXCJcIn08L3A+XG4gIDxwIGNsYXNzPVwic21hbGxcIj5VbiBwYXNvIG5vIHB1ZWRlIHRlbmVyIG3DoXMgcGVyc29uYXMgcXVlIGVsIGFudGVyaW9yOiBlbCBsYWJvcmF0b3JpbyBsbyBjb3JyaWdlLiBDb24gbGFzIGZ1bmNpb25lcyBkZWwgbGlicm86IDxjb2RlPmVtYnVkbygpPC9jb2RlPi48L3A+PC9kaXY+YDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnY2lmcmFzJykifV19
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1437,6 +1540,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

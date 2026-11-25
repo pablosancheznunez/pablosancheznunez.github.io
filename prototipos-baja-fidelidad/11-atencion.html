@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -39,17 +74,22 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -77,10 +117,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -434,6 +476,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#mecanismos-de-captación" id="toc-mecanismos-de-captación" class="nav-link" data-scroll-target="#mecanismos-de-captación">3. Mecanismos de captación</a></li>
   <li><a href="#diseñar-para-el-bienestar-digital" id="toc-diseñar-para-el-bienestar-digital" class="nav-link" data-scroll-target="#diseñar-para-el-bienestar-digital">4. Diseñar para el bienestar digital</a></li>
   <li><a href="#práctica" id="toc-práctica" class="nav-link" data-scroll-target="#práctica">Práctica</a></li>
+  <li><a href="#lab-t11-calor" id="toc-lab-t11-calor" class="nav-link" data-scroll-target="#lab-t11-calor">Laboratorio: mapa de calor simulado</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t11" id="toc-reto-t11" class="nav-link" data-scroll-target="#reto-t11">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
@@ -587,6 +631,93 @@ ul.task-list li input[type="checkbox"] {
 <section id="práctica" class="level2">
 <h2 class="anchored" data-anchor-id="práctica">Práctica</h2>
 <p>Elige una aplicación que uses a diario y activa durante un día su contador de tiempo de uso (o el del sistema operativo). Anota cada vez que la abres <strong>sin haberlo decidido</strong> y qué te llevó a hacerlo. Identifica qué mecanismos del apartado 3 intervienen.</p>
+<div id="fig-t11-patrones" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Dos esquemas de página. A la izquierda, líneas de texto con siete fijaciones numeradas que forman una F: dos barridos horizontales arriba y un descenso por el margen izquierdo. A la derecha, una página con logotipo, menú, imagen central, texto y un botón verde, con cuatro fijaciones que forman una Z.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-t11-patrones-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/t11_patrones.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Patrones de lectura en F y en Z. En páginas con mucho texto la mirada barre las primeras líneas y luego baja por el margen izquierdo; en páginas con poco texto salta en zigzag entre los elementos destacados."><img src="figuras/t11_patrones.svg" class="img-fluid figure-img" alt="Dos esquemas de página. A la izquierda, líneas de texto con siete fijaciones numeradas que forman una F: dos barridos horizontales arriba y un descenso por el margen izquierdo. A la derecha, una página con logotipo, menú, imagen central, texto y un botón verde, con cuatro fijaciones que forman una Z."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-t11-patrones-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Patrones de lectura en F y en Z. En páginas con mucho texto la mirada barre las primeras líneas y luego baja por el margen izquierdo; en páginas con poco texto salta en zigzag entre los elementos destacados.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="lab-t11-calor" class="level2">
+<h2 class="anchored" data-anchor-id="lab-t11-calor">Laboratorio: mapa de calor simulado</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · datos simulados (no son medidas reales)</p>
+</div>
+<p>Los <strong>mapas de calor</strong> de un estudio de seguimiento ocular (<em>eye tracking</em>) acumulan las fijaciones de muchas personas. Este laboratorio <strong>simula</strong> fijaciones a partir de los patrones en F y en Z para que veas cómo se forman: elige el tipo de página y el número de personas.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="91" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 90;"><span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>seleccion <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>viewof c_tipo <span class="op">=</span> <span class="fu">seleccion</span>(<span class="st">"Tipo de página"</span><span class="op">,</span> [[<span class="st">"F"</span><span class="op">,</span> <span class="st">"Texto denso (patrón en F)"</span>]<span class="op">,</span> [<span class="st">"Z"</span><span class="op">,</span> <span class="st">"Poco texto (patrón en Z)"</span>]]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"F"</span>})</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>viewof c_n <span class="op">=</span> <span class="fu">rango</span>(<span class="st">"Personas simuladas"</span><span class="op">,</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">60</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">20</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="98" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 97;"><span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> W <span class="op">=</span> <span class="dv">480</span><span class="op">,</span> H <span class="op">=</span> <span class="dv">320</span><span class="op">,</span> cv <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"canvas"</span>)<span class="op">;</span> cv<span class="op">.</span><span class="at">width</span> <span class="op">=</span> W<span class="op">;</span> cv<span class="op">.</span><span class="at">height</span> <span class="op">=</span> H<span class="op">;</span></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>  cv<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">maxWidth</span> <span class="op">=</span> <span class="st">"100%"</span><span class="op">;</span> cv<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">"role"</span><span class="op">,</span> <span class="st">"img"</span>)<span class="op">;</span></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>  cv<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">"aria-label"</span><span class="op">,</span> <span class="vs">`Mapa de calor simulado de </span><span class="sc">${</span>c_n<span class="sc">}</span><span class="vs"> personas sobre una página </span><span class="sc">${</span>c_tipo <span class="op">===</span> <span class="st">"F"</span> <span class="op">?</span> <span class="st">"de texto denso: el calor se concentra arriba y en el margen izquierdo"</span> <span class="op">:</span> <span class="st">"con poco texto: el calor se reparte en las cuatro esquinas, siguiendo una Z"</span><span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> g <span class="op">=</span> cv<span class="op">.</span><span class="fu">getContext</span>(<span class="st">"2d"</span>)<span class="op">;</span></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>  g<span class="op">.</span><span class="at">fillStyle</span> <span class="op">=</span> <span class="st">"#fff"</span><span class="op">;</span> g<span class="op">.</span><span class="fu">fillRect</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> W<span class="op">,</span> H)<span class="op">;</span> g<span class="op">.</span><span class="at">fillStyle</span> <span class="op">=</span> <span class="st">"#d9d8d4"</span><span class="op">;</span></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (c_tipo <span class="op">===</span> <span class="st">"F"</span>) <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">11</span><span class="op">;</span> i<span class="op">++</span>) g<span class="op">.</span><span class="fu">fillRect</span>(<span class="dv">30</span><span class="op">,</span> <span class="dv">30</span> <span class="op">+</span> i <span class="op">*</span> <span class="dv">25</span><span class="op">,</span> <span class="dv">420</span> <span class="op">-</span> (i <span class="op">%</span> <span class="dv">3</span>) <span class="op">*</span> <span class="dv">80</span><span class="op">,</span> <span class="dv">8</span>)<span class="op">;</span></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> { [[<span class="dv">30</span><span class="op">,</span> <span class="dv">25</span><span class="op">,</span> <span class="dv">90</span><span class="op">,</span> <span class="dv">35</span>]<span class="op">,</span> [<span class="dv">350</span><span class="op">,</span> <span class="dv">25</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">35</span>]<span class="op">,</span> [<span class="dv">110</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">260</span><span class="op">,</span> <span class="dv">110</span>]<span class="op">,</span> [<span class="dv">30</span><span class="op">,</span> <span class="dv">250</span><span class="op">,</span> <span class="dv">140</span><span class="op">,</span> <span class="dv">45</span>]<span class="op">,</span> [<span class="dv">300</span><span class="op">,</span> <span class="dv">250</span><span class="op">,</span> <span class="dv">150</span><span class="op">,</span> <span class="dv">45</span>]]<span class="op">.</span><span class="fu">forEach</span>(r <span class="kw">=&gt;</span> g<span class="op">.</span><span class="fu">fillRect</span>(<span class="op">...</span>r))<span class="op">;</span> }</span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> s <span class="op">=</span> <span class="dv">5</span><span class="op">;</span> <span class="kw">const</span> rnd <span class="op">=</span> () <span class="kw">=&gt;</span> (s <span class="op">=</span> (s <span class="op">*</span> <span class="dv">9301</span> <span class="op">+</span> <span class="dv">49297</span>) <span class="op">%</span> <span class="dv">233280</span>) <span class="op">/</span> <span class="dv">233280</span><span class="op">;</span></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> gauss <span class="op">=</span> () <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(<span class="op">-</span><span class="dv">2</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">log</span>(<span class="fu">rnd</span>() <span class="op">+</span> <span class="fl">1e-9</span>)) <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span>(<span class="dv">2</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">*</span> <span class="fu">rnd</span>())<span class="op">;</span></span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> base <span class="op">=</span> c_tipo <span class="op">===</span> <span class="st">"F"</span> <span class="op">?</span> [[<span class="dv">40</span><span class="op">,</span> <span class="dv">34</span>]<span class="op">,</span> [<span class="dv">200</span><span class="op">,</span> <span class="dv">34</span>]<span class="op">,</span> [<span class="dv">380</span><span class="op">,</span> <span class="dv">34</span>]<span class="op">,</span> [<span class="dv">40</span><span class="op">,</span> <span class="dv">84</span>]<span class="op">,</span> [<span class="dv">180</span><span class="op">,</span> <span class="dv">84</span>]<span class="op">,</span> [<span class="dv">300</span><span class="op">,</span> <span class="dv">84</span>]<span class="op">,</span> [<span class="dv">40</span><span class="op">,</span> <span class="dv">134</span>]<span class="op">,</span> [<span class="dv">40</span><span class="op">,</span> <span class="dv">184</span>]<span class="op">,</span> [<span class="dv">40</span><span class="op">,</span> <span class="dv">234</span>]<span class="op">,</span> [<span class="dv">40</span><span class="op">,</span> <span class="dv">284</span>]]</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>                              <span class="op">:</span> [[<span class="dv">70</span><span class="op">,</span> <span class="dv">42</span>]<span class="op">,</span> [<span class="dv">400</span><span class="op">,</span> <span class="dv">42</span>]<span class="op">,</span> [<span class="dv">240</span><span class="op">,</span> <span class="dv">155</span>]<span class="op">,</span> [<span class="dv">100</span><span class="op">,</span> <span class="dv">272</span>]<span class="op">,</span> [<span class="dv">375</span><span class="op">,</span> <span class="dv">272</span>]]<span class="op">;</span></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pts <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> p <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> p <span class="op">&lt;</span> c_n<span class="op">;</span> p<span class="op">++</span>) base<span class="op">.</span><span class="fu">forEach</span>(([x<span class="op">,</span> y]<span class="op">,</span> k) <span class="kw">=&gt;</span> { <span class="cf">if</span> (<span class="fu">rnd</span>() <span class="op">&lt;</span> (c_tipo <span class="op">===</span> <span class="st">"F"</span> <span class="op">?</span> <span class="dv">1</span> <span class="op">-</span> k <span class="op">*</span> <span class="fl">0.06</span> <span class="op">:</span> <span class="fl">0.9</span>)) pts<span class="op">.</span><span class="fu">push</span>([x <span class="op">+</span> <span class="fu">gauss</span>() <span class="op">*</span> <span class="dv">18</span><span class="op">,</span> y <span class="op">+</span> <span class="fu">gauss</span>() <span class="op">*</span> <span class="dv">10</span>])<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> capa <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"canvas"</span>)<span class="op">;</span> capa<span class="op">.</span><span class="at">width</span> <span class="op">=</span> W<span class="op">;</span> capa<span class="op">.</span><span class="at">height</span> <span class="op">=</span> H<span class="op">;</span> <span class="kw">const</span> c <span class="op">=</span> capa<span class="op">.</span><span class="fu">getContext</span>(<span class="st">"2d"</span>)<span class="op">;</span></span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>  pts<span class="op">.</span><span class="fu">forEach</span>(([x<span class="op">,</span> y]) <span class="kw">=&gt;</span> { <span class="kw">const</span> r <span class="op">=</span> c<span class="op">.</span><span class="fu">createRadialGradient</span>(x<span class="op">,</span> y<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> x<span class="op">,</span> y<span class="op">,</span> <span class="dv">30</span>)<span class="op">;</span> r<span class="op">.</span><span class="fu">addColorStop</span>(<span class="dv">0</span><span class="op">,</span> <span class="st">"rgba(0,0,0,0.12)"</span>)<span class="op">;</span> r<span class="op">.</span><span class="fu">addColorStop</span>(<span class="dv">1</span><span class="op">,</span> <span class="st">"rgba(0,0,0,0)"</span>)<span class="op">;</span> c<span class="op">.</span><span class="at">fillStyle</span> <span class="op">=</span> r<span class="op">;</span> c<span class="op">.</span><span class="fu">fillRect</span>(x <span class="op">-</span> <span class="dv">30</span><span class="op">,</span> y <span class="op">-</span> <span class="dv">30</span><span class="op">,</span> <span class="dv">60</span><span class="op">,</span> <span class="dv">60</span>)<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> img <span class="op">=</span> c<span class="op">.</span><span class="fu">getImageData</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> W<span class="op">,</span> H)<span class="op">,</span> d <span class="op">=</span> img<span class="op">.</span><span class="at">data</span><span class="op">;</span></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> d<span class="op">.</span><span class="at">length</span><span class="op">;</span> i <span class="op">+=</span> <span class="dv">4</span>) { <span class="kw">const</span> a <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(<span class="dv">1</span><span class="op">,</span> d[i <span class="op">+</span> <span class="dv">3</span>] <span class="op">/</span> <span class="dv">255</span> <span class="op">*</span> <span class="fl">1.6</span>)<span class="op">;</span> <span class="cf">if</span> (a <span class="op">&lt;</span> <span class="fl">0.03</span>) { d[i <span class="op">+</span> <span class="dv">3</span>] <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> <span class="cf">continue</span><span class="op">;</span> }</span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> col <span class="op">=</span> a <span class="op">&lt;</span> <span class="fl">0.33</span> <span class="op">?</span> [<span class="dv">42</span><span class="op">,</span> <span class="dv">120</span><span class="op">,</span> <span class="dv">214</span>] <span class="op">:</span> a <span class="op">&lt;</span> <span class="fl">0.66</span> <span class="op">?</span> [<span class="dv">237</span><span class="op">,</span> <span class="dv">161</span><span class="op">,</span> <span class="dv">0</span>] <span class="op">:</span> [<span class="dv">192</span><span class="op">,</span> <span class="dv">57</span><span class="op">,</span> <span class="dv">43</span>]<span class="op">;</span> d[i] <span class="op">=</span> col[<span class="dv">0</span>]<span class="op">;</span> d[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">=</span> col[<span class="dv">1</span>]<span class="op">;</span> d[i <span class="op">+</span> <span class="dv">2</span>] <span class="op">=</span> col[<span class="dv">2</span>]<span class="op">;</span> d[i <span class="op">+</span> <span class="dv">3</span>] <span class="op">=</span> <span class="dv">90</span> <span class="op">+</span> <span class="dv">130</span> <span class="op">*</span> a<span class="op">;</span> }</span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>  c<span class="op">.</span><span class="fu">putImageData</span>(img<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>)<span class="op">;</span> g<span class="op">.</span><span class="fu">drawImage</span>(capa<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;figure&gt;</span><span class="sc">${</span>cv<span class="sc">}</span><span class="vs">&lt;figcaption class="small"&gt;</span><span class="sc">${</span>pts<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> fijaciones simuladas. Azul: pocas; amarillo: bastantes; rojo: muchas. En un estudio real, el mapa depende de la tarea y de cada página: estos patrones son tendencias, no reglas.&lt;/figcaption&gt;&lt;/figure&gt;`</span><span class="op">;</span></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-clasificar" id="ia-t11-mecanismos"><script type="application/json" class="ia-datos">{"categorias":["Mecanismo de captación","Diseño para el bienestar"],"enunciado":"","explicacion":"","items":[{"categoria":"Mecanismo de captación","explicacion":"","texto":"Desplazamiento infinito sin final"},{"categoria":"Mecanismo de captación","explicacion":"","texto":"Reproducción automática del siguiente vídeo"},{"categoria":"Mecanismo de captación","explicacion":"","texto":"Recompensas variables al refrescar el contenido"},{"categoria":"Diseño para el bienestar","explicacion":"","texto":"Aviso «Has terminado las novedades de hoy»"},{"categoria":"Diseño para el bienestar","explicacion":"","texto":"Notificaciones agrupadas en un resumen diario"},{"categoria":"Mecanismo de captación","explicacion":"","texto":"Rachas que se pierden si un día no entras"},{"categoria":"Diseño para el bienestar","explicacion":"","texto":"Panel con el tiempo de uso y límites que elige la persona"}],"tipo":"clasificar","titulo":"¿Captación o bienestar?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t11-metricas"><script type="application/json" class="ia-datos">{"categorias":["Atención","Valor para la persona"],"enunciado":"","explicacion":"","items":[{"categoria":"Atención","explicacion":"","texto":"Tiempo medio en la aplicación"},{"categoria":"Atención","explicacion":"","texto":"Número de sesiones al día"},{"categoria":"Valor para la persona","explicacion":"","texto":"Porcentaje que consigue lo que vino a hacer"},{"categoria":"Valor para la persona","explicacion":"","texto":"Satisfacción declarada tras usar el servicio"},{"categoria":"Atención","explicacion":"","texto":"Clics en notificaciones"}],"tipo":"clasificar","titulo":"¿Qué mide en realidad?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-t11" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t11">Reto evaluable</h2>
@@ -761,23 +892,26 @@ W10=
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -786,10 +920,12 @@ W10=
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -797,13 +933,13 @@ W10=
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -816,6 +952,9 @@ W10=
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -842,10 +981,14 @@ W10=
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -874,7 +1017,7 @@ W10=
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InJhbmdvID0gd2luZG93LkxhYi5yYW5nb1xuc2VsZWNjaW9uID0gd2luZG93LkxhYi5zZWxlY2Npb25cbnZpZXdvZiBjX3RpcG8gPSBzZWxlY2Npb24oXCJUaXBvIGRlIHDDoWdpbmFcIiwgW1tcIkZcIiwgXCJUZXh0byBkZW5zbyAocGF0csOzbiBlbiBGKVwiXSwgW1wiWlwiLCBcIlBvY28gdGV4dG8gKHBhdHLDs24gZW4gWilcIl1dLCB7dmFsdWU6IFwiRlwifSlcbnZpZXdvZiBjX24gPSByYW5nbyhcIlBlcnNvbmFzIHNpbXVsYWRhc1wiLCBbMSwgNjBdLCB7c3RlcDogMSwgdmFsdWU6IDIwfSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgY29uc3QgVyA9IDQ4MCwgSCA9IDMyMCwgY3YgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwiY2FudmFzXCIpOyBjdi53aWR0aCA9IFc7IGN2LmhlaWdodCA9IEg7XG4gIGN2LnN0eWxlLm1heFdpZHRoID0gXCIxMDAlXCI7IGN2LnNldEF0dHJpYnV0ZShcInJvbGVcIiwgXCJpbWdcIik7XG4gIGN2LnNldEF0dHJpYnV0ZShcImFyaWEtbGFiZWxcIiwgYE1hcGEgZGUgY2Fsb3Igc2ltdWxhZG8gZGUgJHtjX259IHBlcnNvbmFzIHNvYnJlIHVuYSBww6FnaW5hICR7Y190aXBvID09PSBcIkZcIiA/IFwiZGUgdGV4dG8gZGVuc286IGVsIGNhbG9yIHNlIGNvbmNlbnRyYSBhcnJpYmEgeSBlbiBlbCBtYXJnZW4gaXpxdWllcmRvXCIgOiBcImNvbiBwb2NvIHRleHRvOiBlbCBjYWxvciBzZSByZXBhcnRlIGVuIGxhcyBjdWF0cm8gZXNxdWluYXMsIHNpZ3VpZW5kbyB1bmEgWlwifWApO1xuICBjb25zdCBnID0gY3YuZ2V0Q29udGV4dChcIjJkXCIpO1xuICBnLmZpbGxTdHlsZSA9IFwiI2ZmZlwiOyBnLmZpbGxSZWN0KDAsIDAsIFcsIEgpOyBnLmZpbGxTdHlsZSA9IFwiI2Q5ZDhkNFwiO1xuICBpZiAoY190aXBvID09PSBcIkZcIikgZm9yIChsZXQgaSA9IDA7IGkgPCAxMTsgaSsrKSBnLmZpbGxSZWN0KDMwLCAzMCArIGkgKiAyNSwgNDIwIC0gKGkgJSAzKSAqIDgwLCA4KTtcbiAgZWxzZSB7IFtbMzAsIDI1LCA5MCwgMzVdLCBbMzUwLCAyNSwgMTAwLCAzNV0sIFsxMTAsIDEwMCwgMjYwLCAxMTBdLCBbMzAsIDI1MCwgMTQwLCA0NV0sIFszMDAsIDI1MCwgMTUwLCA0NV1dLmZvckVhY2gociA9PiBnLmZpbGxSZWN0KC4uLnIpKTsgfVxuICBsZXQgcyA9IDU7IGNvbnN0IHJuZCA9ICgpID0+IChzID0gKHMgKiA5MzAxICsgNDkyOTcpICUgMjMzMjgwKSAvIDIzMzI4MDtcbiAgY29uc3QgZ2F1c3MgPSAoKSA9PiBNYXRoLnNxcnQoLTIgKiBNYXRoLmxvZyhybmQoKSArIDFlLTkpKSAqIE1hdGguY29zKDIgKiBNYXRoLlBJICogcm5kKCkpO1xuICBjb25zdCBiYXNlID0gY190aXBvID09PSBcIkZcIiA/IFtbNDAsIDM0XSwgWzIwMCwgMzRdLCBbMzgwLCAzNF0sIFs0MCwgODRdLCBbMTgwLCA4NF0sIFszMDAsIDg0XSwgWzQwLCAxMzRdLCBbNDAsIDE4NF0sIFs0MCwgMjM0XSwgWzQwLCAyODRdXVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgOiBbWzcwLCA0Ml0sIFs0MDAsIDQyXSwgWzI0MCwgMTU1XSwgWzEwMCwgMjcyXSwgWzM3NSwgMjcyXV07XG4gIGNvbnN0IHB0cyA9IFtdO1xuICBmb3IgKGxldCBwID0gMDsgcCA8IGNfbjsgcCsrKSBiYXNlLmZvckVhY2goKFt4LCB5XSwgaykgPT4geyBpZiAocm5kKCkgPCAoY190aXBvID09PSBcIkZcIiA/IDEgLSBrICogMC4wNiA6IDAuOSkpIHB0cy5wdXNoKFt4ICsgZ2F1c3MoKSAqIDE4LCB5ICsgZ2F1c3MoKSAqIDEwXSk7IH0pO1xuICBjb25zdCBjYXBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudChcImNhbnZhc1wiKTsgY2FwYS53aWR0aCA9IFc7IGNhcGEuaGVpZ2h0ID0gSDsgY29uc3QgYyA9IGNhcGEuZ2V0Q29udGV4dChcIjJkXCIpO1xuICBwdHMuZm9yRWFjaCgoW3gsIHldKSA9PiB7IGNvbnN0IHIgPSBjLmNyZWF0ZVJhZGlhbEdyYWRpZW50KHgsIHksIDAsIHgsIHksIDMwKTsgci5hZGRDb2xvclN0b3AoMCwgXCJyZ2JhKDAsMCwwLDAuMTIpXCIpOyByLmFkZENvbG9yU3RvcCgxLCBcInJnYmEoMCwwLDAsMClcIik7IGMuZmlsbFN0eWxlID0gcjsgYy5maWxsUmVjdCh4IC0gMzAsIHkgLSAzMCwgNjAsIDYwKTsgfSk7XG4gIGNvbnN0IGltZyA9IGMuZ2V0SW1hZ2VEYXRhKDAsIDAsIFcsIEgpLCBkID0gaW1nLmRhdGE7XG4gIGZvciAobGV0IGkgPSAwOyBpIDwgZC5sZW5ndGg7IGkgKz0gNCkgeyBjb25zdCBhID0gTWF0aC5taW4oMSwgZFtpICsgM10gLyAyNTUgKiAxLjYpOyBpZiAoYSA8IDAuMDMpIHsgZFtpICsgM10gPSAwOyBjb250aW51ZTsgfVxuICAgIGNvbnN0IGNvbCA9IGEgPCAwLjMzID8gWzQyLCAxMjAsIDIxNF0gOiBhIDwgMC42NiA/IFsyMzcsIDE2MSwgMF0gOiBbMTkyLCA1NywgNDNdOyBkW2ldID0gY29sWzBdOyBkW2kgKyAxXSA9IGNvbFsxXTsgZFtpICsgMl0gPSBjb2xbMl07IGRbaSArIDNdID0gOTAgKyAxMzAgKiBhOyB9XG4gIGMucHV0SW1hZ2VEYXRhKGltZywgMCwgMCk7IGcuZHJhd0ltYWdlKGNhcGEsIDAsIDApO1xuICByZXR1cm4gaHRtbGA8ZmlndXJlPiR7Y3Z9PGZpZ2NhcHRpb24gY2xhc3M9XCJzbWFsbFwiPiR7cHRzLmxlbmd0aH0gZmlqYWNpb25lcyBzaW11bGFkYXMuIEF6dWw6IHBvY2FzOyBhbWFyaWxsbzogYmFzdGFudGVzOyByb2pvOiBtdWNoYXMuIEVuIHVuIGVzdHVkaW8gcmVhbCwgZWwgbWFwYSBkZXBlbmRlIGRlIGxhIHRhcmVhIHkgZGUgY2FkYSBww6FnaW5hOiBlc3RvcyBwYXRyb25lcyBzb24gdGVuZGVuY2lhcywgbm8gcmVnbGFzLjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT5gO1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdjX3RpcG8nKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnY19uJykifV19
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1328,6 +1471,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

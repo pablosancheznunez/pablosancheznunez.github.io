@@ -200,7 +200,18 @@
     "href": "01-fundamentos.html#práctica",
     "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
     "section": "Práctica",
-    "text": "Práctica\nElige una aplicación que uses a diario. Dibuja en papel, en cinco minutos, su pantalla principal sin mirarla. Después compárala con la real y anota qué recordabas (la estructura, los elementos esenciales) y qué no (los detalles visuales). Lo que recuerdas es lo que la baja fidelidad debe capturar.",
+    "text": "Práctica\nElige una aplicación que uses a diario. Dibuja en papel, en cinco minutos, su pantalla principal sin mirarla. Después compárala con la real y anota qué recordabas (la estructura, los elementos esenciales) y qué no (los detalles visuales). Lo que recuerdas es lo que la baja fidelidad debe capturar.\n\n\n\n\n\n\nFigura 2: Coste relativo de cambiar una decisión de diseño según la fase. Cuanto antes se detecta un problema, más barato es corregirlo: por eso se prototipa en baja fidelidad.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html#actividades",
+    "href": "01-fundamentos.html#actividades",
+    "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\n\n\n\n\n\n\nAdvertenciaErrores frecuentes\n\n\n\n\nPulir demasiado pronto. Un esquema bonito invita a opinar sobre colores en lugar de sobre estructura.\nEnamorarse de la primera idea. La baja fidelidad sirve para explorar varias, no para decorar una.\nConfundir fidelidad con calidad. Un boceto puede ser un prototipo excelente si responde a la pregunta que se quería probar.\nNo decidir qué se quiere aprender antes de prototipar.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
@@ -339,6 +350,28 @@
     ]
   },
   {
+    "objectID": "02-investigacion.html#lab-t2-tarjetas",
+    "href": "02-investigacion.html#lab-t2-tarjetas",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "Laboratorio: ordenación de tarjetas (card sorting)",
+    "text": "Laboratorio: ordenación de tarjetas (card sorting)\n\n\nLaboratorio · datos simulados\n\nLa ordenación de tarjetas revela cómo agrupan las personas los contenidos, y sirve para diseñar la arquitectura de información. Agrupa estas diez funciones de la aplicación de una biblioteca en los grupos que te parezcan naturales (puedes renombrar los grupos). Después compara tu propuesta con la de 20 participantes simulados: la matriz muestra qué porcentaje de ellos puso cada par de tarjetas en el mismo grupo.\n\ntexto = window.Lab.texto\nseleccion = window.Lab.seleccion\narea = window.Lab.area\nrango = window.Lab.rango\nboton = window.Lab.boton\ncolor = window.Lab.color\ntarjetas = [\"Buscar en el catálogo\", \"Reservar un libro\", \"Renovar un préstamo\", \"Ver mis préstamos\", \"Pagar una multa\",\n  \"Cambiar la contraseña\", \"Elegir el idioma\", \"Horarios y sedes\", \"Contactar con la biblioteca\", \"Mis listas de lectura\"]\nviewof grupos = texto(\"Nombres de tus grupos (separados por comas)\", {value: \"Buscar, Mis préstamos, Mi cuenta, Información\", submit: \"Usar estos grupos\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof asignacion = {\n  const nombres = grupos.split(\",\").map(x =&gt; x.trim()).filter(Boolean);\n  const caja = html`&lt;div class=\"lab-tarjetas\"&gt;&lt;/div&gt;`;\n  const sels = tarjetas.map((t, i) =&gt; {\n    const s = seleccion(t, [[\"\", \"Elige un grupo…\"], ...nombres.map(n =&gt; [n, n])]);\n    s.addEventListener(\"input\", e =&gt; { e.stopPropagation(); caja.value = sels.map(x =&gt; x.value); caja.dispatchEvent(new Event(\"input\", {bubbles: true})); });\n    caja.appendChild(s); return s;\n  });\n  caja.value = sels.map(x =&gt; x.value);\n  return caja;\n}\n\n\n\n\n\n\n\nsimulados = {\n  // 20 participantes simulados: tres agrupaciones de base con algo de variación\n  const base = [0, 0, 1, 1, 1, 2, 2, 3, 3, 0];\n  let s = 11; const rnd = () =&gt; (s = (s * 9301 + 49297) % 233280) / 233280;\n  return Array.from({length: 20}, () =&gt; base.map((g, i) =&gt; {\n    const r = rnd();\n    if (i === 9 && r &lt; 0.45) return 1;       // «Mis listas» a veces con los préstamos\n    if (i === 4 && r &lt; 0.35) return 2;       // «Pagar una multa» a veces en la cuenta\n    if (i === 1 && r &lt; 0.3) return 1;        // «Reservar» a veces con los préstamos\n    return r &lt; 0.06 ? Math.floor(rnd() * 4) : g;\n  }));\n}\njuntos = tarjetas.map((_, i) =&gt; tarjetas.map((_, j) =&gt; simulados.filter(p =&gt; p[i] === p[j]).length / simulados.length))\n{\n  const tuyo = asignacion;\n  const completo = tuyo.every(Boolean);\n  let acuerdo = 0, pares = 0;\n  for (let i = 0; i &lt; 10; i++) for (let j = i + 1; j &lt; 10; j++) {\n    pares++; const t = tuyo[i] && tuyo[i] === tuyo[j]; const m = juntos[i][j] &gt;= 0.5;\n    if (t === m) acuerdo++;\n  }\n  const celda = 30, izq = 190, arriba = 190, w = izq + celda * 10 + 70, h = arriba + celda * 10 + 10;\n  const svg = [`&lt;svg viewBox=\"0 0 ${w} ${h}\" width=\"100%\" style=\"max-width:${w}px\" role=\"img\" aria-label=\"Matriz de similitud de las diez tarjetas según los participantes simulados\"&gt;`];\n  tarjetas.forEach((t, i) =&gt; {\n    svg.push(`&lt;text x=\"${izq - 6}\" y=\"${arriba + i * celda + 19}\" text-anchor=\"end\" font-size=\"11\" fill=\"currentColor\"&gt;${t}&lt;/text&gt;`);\n    svg.push(`&lt;text transform=\"translate(${izq + i * celda + 19},${arriba - 6}) rotate(-60)\" font-size=\"11\" fill=\"currentColor\"&gt;${t}&lt;/text&gt;`);\n    tarjetas.forEach((_, j) =&gt; {\n      const v = juntos[i][j], mismo = tuyo[i] && tuyo[i] === tuyo[j];\n      svg.push(`&lt;rect x=\"${izq + j * celda}\" y=\"${arriba + i * celda}\" width=\"${celda - 2}\" height=\"${celda - 2}\" rx=\"3\" fill=\"#2a78d6\" fill-opacity=\"${0.08 + 0.85 * v}\" stroke=\"${mismo && i !== j ? \"#eb6834\" : \"none\"}\" stroke-width=\"2.5\"/&gt;`);\n      svg.push(`&lt;text x=\"${izq + j * celda + 14}\" y=\"${arriba + i * celda + 19}\" text-anchor=\"middle\" font-size=\"9\" fill=\"${v &gt; 0.55 ? \"#fff\" : \"currentColor\"}\"&gt;${Math.round(v * 100)}&lt;/text&gt;`);\n    });\n  });\n  svg.push(\"&lt;/svg&gt;\");\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;${completo ? `&lt;strong&gt;Coincides con la mayoría en el ${Math.round(100 * acuerdo / pares)} % de los pares&lt;/strong&gt; (dos tarjetas juntas o separadas).` : \"Asigna un grupo a todas las tarjetas para comparar tu propuesta.\"}&lt;/p&gt;\n  &lt;p class=\"small\"&gt;Cada celda es el % de participantes que juntaron esas dos tarjetas; los bordes naranjas marcan los pares que tú has juntado.&lt;/p&gt;${svg.join(\"\")}`;\n  return d;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFíjate en las tarjetas que dividen a los participantes («Mis listas de lectura», «Pagar una multa»): son las que piden una etiqueta más clara o estar en dos sitios.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html#actividades",
+    "href": "02-investigacion.html#actividades",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
     "objectID": "02-investigacion.html#reto-t2",
     "href": "02-investigacion.html#reto-t2",
     "title": "Tema 2. La investigación como base del concepto creativo",
@@ -460,6 +493,17 @@
     ]
   },
   {
+    "objectID": "03-problema.html#actividades",
+    "href": "03-problema.html#actividades",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\n\n\n\n\n\n\nAdvertenciaErrores frecuentes\n\n\n\n\nEscribir la solución en el enunciado («falta un botón de…»).\nProblemas sin persona («el sistema es lento» ¿para quién? ¿cuándo?).\nHipótesis sin criterio de éxito: si no sabes qué resultado la refutaría, no es una hipótesis.\nSaltarse el acuerdo de alcance y descubrir a mitad del proyecto que cada miembro del equipo resolvía un problema distinto.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
     "objectID": "03-problema.html#reto-t3",
     "href": "03-problema.html#reto-t3",
     "title": "Tema 3. Definir el problema de diseño",
@@ -563,7 +607,40 @@
     "href": "04-metricas.html#práctica-en-r-medir-una-prueba-pequeña",
     "title": "Tema 4. Hitos, objetivos y métricas",
     "section": "Práctica en R: medir una prueba pequeña",
-    "text": "Práctica en R: medir una prueba pequeña\ntasa_exito() calcula la tasa con su intervalo; tiempo_tipico(), la media geométrica; puntuacion_sus(), el SUS de cada participante.\n\n\n\n\n\n\n\nEjercicio 4.1\nEn la prueba con el prototipo en papel, 3 de 8 participantes reservaron la sala sin ayuda. Calcula el límite superior del intervalo de confianza: ¿es probable que la tasa real llegue al 70 %?\n\n\n\n\n\n\n\n\nn es el número total de participantes.\n\n\nt &lt;- tasa_exito(exitos = 3, n = 8)\nt[\"superior\"]\nEl límite superior es 0,70 (0,696): aun en el mejor caso razonable, la tasa real apenas llegaría al 70 %. Con solo ocho personas ya sabemos lo importante: la tarea necesita cambios antes de seguir.\n\n\n\n\nEjercicio 4.2\nrespuestas_sus contiene las respuestas de 12 participantes a un prototipo navegable. Calcula la mediana de sus puntuaciones SUS.\n\n\n\n\n\n\n\n\nLa función de la mediana es median().\n\n\nsus &lt;- puntuacion_sus(respuestas_sus[, -1])\nmedian(sus)\n75: por encima del umbral de 70 que Bangor et al. consideran aceptable. Con aceptabilidad_sus(sus) puedes ver la categoría de cada participante.",
+    "text": "Práctica en R: medir una prueba pequeña\ntasa_exito() calcula la tasa con su intervalo; tiempo_tipico(), la media geométrica; puntuacion_sus(), el SUS de cada participante.\n\n\n\n\n\n\n\nEjercicio 4.1\nEn la prueba con el prototipo en papel, 3 de 8 participantes reservaron la sala sin ayuda. Calcula el límite superior del intervalo de confianza: ¿es probable que la tasa real llegue al 70 %?\n\n\n\n\n\n\n\n\nn es el número total de participantes.\n\n\nt &lt;- tasa_exito(exitos = 3, n = 8)\nt[\"superior\"]\nEl límite superior es 0,70 (0,696): aun en el mejor caso razonable, la tasa real apenas llegaría al 70 %. Con solo ocho personas ya sabemos lo importante: la tarea necesita cambios antes de seguir.\n\n\n\n\nEjercicio 4.2\nrespuestas_sus contiene las respuestas de 12 participantes a un prototipo navegable. Calcula la mediana de sus puntuaciones SUS.\n\n\n\n\n\n\n\n\nLa función de la mediana es median().\n\n\nsus &lt;- puntuacion_sus(respuestas_sus[, -1])\nmedian(sus)\n75: por encima del umbral de 70 que Bangor et al. consideran aceptable. Con aceptabilidad_sus(sus) puedes ver la categoría de cada participante.\n\n\n\n\n\n\n\n\nFigura 2: El marco HEART (Rodden, Hutchinson y Fu, 2010): cinco categorías para elegir las métricas de una experiencia.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html#lab-t4-sus",
+    "href": "04-metricas.html#lab-t4-sus",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "Laboratorio: la escala SUS",
+    "text": "Laboratorio: la escala SUS\n\n\nLaboratorio · cálculo en tu navegador\n\nResponde a los diez ítems de la System Usability Scale (Brooke, 1996) como si acabaras de usar el catálogo de tu biblioteca (1 = totalmente en desacuerdo, 5 = totalmente de acuerdo). Fíjate en que los ítems impares son positivos y los pares negativos: por eso se puntúan al revés.\n\nrango = window.Lab.rango\nitems_sus = [\"Creo que me gustaría usar este sistema con frecuencia.\", \"El sistema me pareció innecesariamente complejo.\",\n  \"Pensé que era fácil de usar.\", \"Creo que necesitaría ayuda de una persona técnica para poder usarlo.\",\n  \"Las funciones del sistema estaban bien integradas.\", \"Había demasiadas incoherencias en el sistema.\",\n  \"Imagino que la mayoría de la gente aprendería a usarlo muy rápido.\", \"El sistema me resultó muy engorroso de usar.\",\n  \"Me sentí muy seguro al usarlo.\", \"Tuve que aprender muchas cosas antes de poder manejarlo.\"]\nviewof respuestas = {\n  const caja = html`&lt;div class=\"lab-sus\"&gt;&lt;/div&gt;`;\n  const r = items_sus.map((t, i) =&gt; { const c = rango(`${i + 1}. ${t}`, [1, 5], {step: 1, value: 3}); c.addEventListener(\"input\", e =&gt; { e.stopPropagation(); caja.value = r.map(x =&gt; x.value); caja.dispatchEvent(new Event(\"input\", {bubbles: true})); }); caja.appendChild(c); return c; });\n  caja.value = r.map(x =&gt; x.value); return caja;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const puntos = respuestas.map((v, i) =&gt; i % 2 === 0 ? v - 1 : 5 - v);\n  const sus = 2.5 * puntos.reduce((a, b) =&gt; a + b, 0);\n  const banda = sus &lt; 50 ? [\"No aceptable\", \"lab-mal\"] : sus &lt; 70 ? [\"Marginal\", \"lab-medio\"] : [\"Aceptable\", \"lab-bien\"];\n  return html`&lt;div role=\"status\"&gt;&lt;p style=\"font-size:1.25rem\"&gt;&lt;strong&gt;SUS = ${sus.toFixed(1)}&lt;/strong&gt; · &lt;span class=\"${banda[1]}\" style=\"font-weight:600\"&gt;${banda[0]}&lt;/span&gt;&lt;/p&gt;\n  &lt;div style=\"position:relative;height:1.1rem;border-radius:4px;background:linear-gradient(90deg,#f6d3cd 0 50%,#fbe7b8 50% 70%,#d3efdc 70% 100%)\"&gt;\n    &lt;div style=\"position:absolute;left:calc(${sus}% - 2px);top:-4px;width:4px;height:1.6rem;background:currentColor\"&gt;&lt;/div&gt;&lt;/div&gt;\n  &lt;p class=\"small\"&gt;Cortes de aceptabilidad orientativos: menos de 50, no aceptable; 50-70, marginal; más de 70, aceptable (Bangor, Kortum y Miller). La media de referencia ronda 68. Con las funciones del libro: &lt;code&gt;puntuacion_sus()&lt;/code&gt; y &lt;code&gt;aceptabilidad_sus()&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;`;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html#lab-t4-intervalo",
+    "href": "04-metricas.html#lab-t4-intervalo",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "Laboratorio: cuánto dice una tasa de éxito con pocas personas",
+    "text": "Laboratorio: cuánto dice una tasa de éxito con pocas personas\n\n\nLaboratorio · cálculo en tu navegador\n\nEn una prueba con pocas personas, la tasa de éxito observada es solo una estimación. Mueve los controles y mira cómo cambia el intervalo de confianza del 95 % (Wald ajustado, el recomendado para muestras pequeñas).\n\nviewof n_int = rango(\"Participantes\", [3, 40], {step: 1, value: 8})\nviewof x_int = rango(\"Completaron la tarea\", [0, 40], {step: 1, value: 6})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const n = n_int, x = Math.min(x_int, n_int), z = 1.959964;\n  const nt = n + z * z, pt = (x + z * z / 2) / nt, m = z * Math.sqrt(pt * (1 - pt) / nt);\n  const li = Math.max(0, pt - m), ls = Math.min(1, pt + m), p = x / n;\n  return html`&lt;div role=\"status\"&gt;&lt;p&gt;&lt;strong&gt;${x} de ${n}&lt;/strong&gt; (${Math.round(100 * p)} %) → el valor real está, con un 95 % de confianza, entre el &lt;strong&gt;${Math.round(100 * li)} %&lt;/strong&gt; y el &lt;strong&gt;${Math.round(100 * ls)} %&lt;/strong&gt;.&lt;/p&gt;\n  &lt;svg viewBox=\"0 0 400 46\" width=\"100%\" style=\"max-width:600px\" role=\"img\" aria-label=\"Intervalo de ${Math.round(100 * li)} a ${Math.round(100 * ls)} por ciento\"&gt;\n    &lt;line x1=\"10\" x2=\"390\" y1=\"22\" y2=\"22\" stroke=\"#d9d8d4\" stroke-width=\"2\"/&gt;\n    ${[0, 25, 50, 75, 100].map(v =&gt; `&lt;text x=\"${10 + 3.8 * v}\" y=\"44\" font-size=\"10\" text-anchor=\"middle\" fill=\"currentColor\"&gt;${v} %&lt;/text&gt;`).join(\"\")}\n    &lt;rect x=\"${10 + 380 * li}\" y=\"14\" width=\"${380 * (ls - li)}\" height=\"16\" rx=\"4\" fill=\"#2a78d6\" fill-opacity=\".35\"/&gt;\n    &lt;circle cx=\"${10 + 380 * p}\" cy=\"22\" r=\"6\" fill=\"#eb6834\"/&gt;&lt;/svg&gt;\n  ${x_int &gt; n_int ? html`&lt;p class=\"small\"&gt;Hay más éxitos que participantes: se usa ${n}.&lt;/p&gt;` : \"\"}\n  &lt;p class=\"small\"&gt;Prueba 4 de 5 y después 40 de 50: la misma tasa, pero el intervalo se estrecha mucho.&lt;/p&gt;&lt;/div&gt;`;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html#actividades",
+    "href": "04-metricas.html#actividades",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
@@ -691,6 +768,28 @@
     ]
   },
   {
+    "objectID": "05-flujos.html#lab-t5-embudo",
+    "href": "05-flujos.html#lab-t5-embudo",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "Laboratorio: el embudo de un flujo",
+    "text": "Laboratorio: el embudo de un flujo\n\n\nLaboratorio · cálculo en tu navegador\n\nUn embudo muestra cuántas personas llegan a cada paso de un flujo. Ajusta las cifras del flujo de reserva de una sala de estudio y localiza el paso donde se pierde más gente: es el primero que conviene rediseñar.\n\nrango = window.Lab.rango\npasos_embudo = [\"Entran en «Reservar sala»\", \"Eligen fecha\", \"Eligen franja horaria\", \"Se identifican\", \"Confirman la reserva\"]\nviewof cifras = {\n  const caja = html`&lt;div&gt;&lt;/div&gt;`, ini = [1000, 820, 700, 360, 330];\n  const r = pasos_embudo.map((t, i) =&gt; { const c = rango(t, [0, 1000], {step: 10, value: ini[i]}); c.addEventListener(\"input\", e =&gt; { e.stopPropagation(); caja.value = r.map(x =&gt; x.value); caja.dispatchEvent(new Event(\"input\", {bubbles: true})); }); caja.appendChild(c); return c; });\n  caja.value = r.map(x =&gt; x.value); return caja;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const v = cifras.map((x, i) =&gt; Math.min(x, i ? cifras.slice(0, i).reduce((a, b) =&gt; Math.min(a, b)) : x));\n  const perdidas = v.map((x, i) =&gt; i ? (v[i - 1] ? 1 - x / v[i - 1] : 0) : 0);\n  const peor = perdidas.indexOf(Math.max(...perdidas));\n  const fmt = new Intl.NumberFormat(\"es-ES\");\n  return html`&lt;div role=\"status\"&gt;&lt;table class=\"table table-sm\"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=\"col\"&gt;Paso&lt;/th&gt;&lt;th scope=\"col\"&gt;Personas&lt;/th&gt;&lt;th scope=\"col\"&gt;Se pierden&lt;/th&gt;&lt;th scope=\"col\"&gt;&lt;span class=\"visually-hidden\"&gt;Barra&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;\n  ${pasos_embudo.map((p, i) =&gt; html`&lt;tr style=\"${i === peor && i ? \"font-weight:600\" : \"\"}\"&gt;&lt;td&gt;${p}&lt;/td&gt;&lt;td style=\"text-align:right\"&gt;${fmt.format(v[i])}&lt;/td&gt;\n   &lt;td style=\"text-align:right\"&gt;${i ? Math.round(100 * perdidas[i]) + \" %\" : \"—\"}&lt;/td&gt;\n   &lt;td style=\"width:40%\"&gt;&lt;div style=\"height:.8rem;border-radius:2px;background:${i === peor && i ? \"#eb6834\" : \"#2a78d6\"};width:${v[0] ? 100 * v[i] / v[0] : 0}%\"&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`)}&lt;/tbody&gt;&lt;/table&gt;\n  &lt;p&gt;Conversión total: &lt;strong&gt;${v[0] ? Math.round(100 * v[4] / v[0]) : 0} %&lt;/strong&gt;. ${peor ? html`La mayor pérdida está en &lt;strong&gt;«${pasos_embudo[peor]}»&lt;/strong&gt; (${Math.round(100 * perdidas[peor])} %).` : \"\"}&lt;/p&gt;\n  &lt;p class=\"small\"&gt;Un paso no puede tener más personas que el anterior: el laboratorio lo corrige. Con las funciones del libro: &lt;code&gt;embudo()&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;`;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
+    "objectID": "05-flujos.html#actividades",
+    "href": "05-flujos.html#actividades",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\n\n\n\n\n\n\nAdvertenciaErrores frecuentes\n\n\n\n\nDibujar solo el camino feliz. Los flujos de error y alternativos son donde más se pierde la gente.\nConfundir flujo con mapa del sitio. El flujo sigue una tarea; el mapa, la estructura.\nDecisiones sin salida: cada rombo necesita al menos dos ramas etiquetadas.\nPasos que piden lo que el sistema ya sabe (volver a escribir el correo, el carné…).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
     "objectID": "05-flujos.html#reto-t5",
     "href": "05-flujos.html#reto-t5",
     "title": "Tema 5. Flujos de usuario: modelado y representación",
@@ -805,7 +904,18 @@
     "href": "06-storyboards.html#práctica",
     "title": "Tema 6. Storyboards en el diseño de interacción",
     "section": "Práctica",
-    "text": "Práctica\nEscribe en cinco líneas un escenario para el proyecto de tu equipo: persona, situación, detonante, uso del producto y desenlace. Después dibújalo en cuatro viñetas en menos de diez minutos con la plantilla en PDF. Enséñaselo a alguien que no conozca el proyecto y pídele que te cuente la historia: si no la entiende sin tu ayuda, revisa el momento clave.",
+    "text": "Práctica\nEscribe en cinco líneas un escenario para el proyecto de tu equipo: persona, situación, detonante, uso del producto y desenlace. Después dibújalo en cuatro viñetas en menos de diez minutos con la plantilla en PDF. Enséñaselo a alguien que no conozca el proyecto y pídele que te cuente la historia: si no la entiende sin tu ayuda, revisa el momento clave.\n\n\n\n\n\n\nFigura 2: Plantilla de Crazy 8s, una técnica rápida para generar muchas ideas de pantalla antes de elegir una para el storyboard.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html#actividades",
+    "href": "06-storyboards.html#actividades",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
@@ -944,6 +1054,50 @@
     ]
   },
   {
+    "objectID": "07-wireframes.html#lab-t7-rejilla",
+    "href": "07-wireframes.html#lab-t7-rejilla",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "Laboratorio: calcula tu rejilla",
+    "text": "Laboratorio: calcula tu rejilla\n\n\nLaboratorio · cálculo en tu navegador\n\nAjusta la rejilla y mira cuánto mide cada columna y cuántos caracteres caben por línea si el texto ocupa un número de columnas. Una línea cómoda de lectura tiene entre 45 y 75 caracteres.\n\nrango = window.Lab.rango\nseleccion = window.Lab.seleccion\nviewof r_ancho = rango(\"Ancho de la pantalla (px)\", [320, 1920], {step: 8, value: 1440})\nviewof r_cols = rango(\"Columnas\", [2, 16], {step: 1, value: 12})\nviewof r_med = rango(\"Medianil (px)\", [8, 48], {step: 4, value: 24})\nviewof r_mar = rango(\"Margen lateral (px)\", [16, 200], {step: 8, value: 80})\nviewof r_span = rango(\"Columnas que ocupa el texto\", [1, 16], {step: 1, value: 5})\nviewof r_tam = rango(\"Tamaño del texto (px)\", [12, 24], {step: 1, value: 16})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const util = r_ancho - 2 * r_mar, col = (util - (r_cols - 1) * r_med) / r_cols;\n  const span = Math.min(r_span, r_cols), bloque = span * col + (span - 1) * r_med;\n  const cpl = Math.round(bloque / (r_tam * 0.5));\n  const ok = cpl &gt;= 45 && cpl &lt;= 75;\n  const esc = 600 / r_ancho;\n  const rects = Array.from({length: r_cols}, (_, i) =&gt; `&lt;rect x=\"${(r_mar + i * (col + r_med)) * esc}\" y=\"20\" width=\"${Math.max(col, 0) * esc}\" height=\"110\" fill=\"${i &lt; span ? \"#2a78d6\" : \"#e87ba4\"}\" fill-opacity=\"${i &lt; span ? .45 : .2}\"/&gt;`).join(\"\");\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = col &lt;= 0 ? \"&lt;p&gt;Con estos valores las columnas no caben: reduce el medianil, el margen o el número de columnas.&lt;/p&gt;\" :\n   `&lt;p&gt;Columna: &lt;strong&gt;${col.toFixed(1)} px&lt;/strong&gt; · bloque de texto (${span} columnas): &lt;strong&gt;${bloque.toFixed(0)} px&lt;/strong&gt; ·\n   unos &lt;strong&gt;${cpl} caracteres por línea&lt;/strong&gt; &lt;span class=\"${ok ? \"lab-bien\" : \"lab-medio\"}\" style=\"font-weight:600\"&gt;${ok ? \"· cómodo\" : cpl &lt; 45 ? \"· demasiado corto\" : \"· demasiado largo\"}&lt;/span&gt;&lt;/p&gt;\n   &lt;svg viewBox=\"0 0 600 140\" width=\"100%\" style=\"max-width:700px\" role=\"img\" aria-label=\"Rejilla de ${r_cols} columnas; el texto ocupa ${span}\"&gt;\n   &lt;rect x=\"0.5\" y=\"10.5\" width=\"599\" height=\"129\" rx=\"6\" fill=\"none\" stroke=\"currentColor\" stroke-opacity=\".4\"/&gt;${rects}&lt;/svg&gt;\n   &lt;p class=\"small\"&gt;Estimación con 0,5 em por carácter. Con las funciones del libro: &lt;code&gt;rejilla()&lt;/code&gt;, &lt;code&gt;ancho_bloque()&lt;/code&gt; y &lt;code&gt;caracteres_por_linea()&lt;/code&gt;.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#lab-t7-cinco",
+    "href": "07-wireframes.html#lab-t7-cinco",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "Laboratorio: prueba de los cinco segundos",
+    "text": "Laboratorio: prueba de los cinco segundos\n\n\nLaboratorio · se ejecuta en tu navegador\n\nEn una prueba de los cinco segundos se enseña una pantalla durante cinco segundos y después se pregunta qué se recuerda. Mide si la jerarquía visual comunica lo esencial. Pulsa Empezar, mira la pantalla y responde.\n\nviewof cinco = {\n  const caja = html`&lt;div class=\"lab-cinco\"&gt;\n    &lt;button type=\"button\" class=\"btn btn-primary btn-sm\"&gt;Empezar&lt;/button&gt;\n    &lt;p class=\"lab-cuenta\" role=\"status\" aria-live=\"polite\"&gt;&lt;/p&gt;\n    &lt;img alt=\"\" style=\"display:none;max-width:100%;border:1px solid #ccc;border-radius:6px\" src=\"figuras/t10_pago.svg\"&gt;\n  &lt;/div&gt;`;\n  const [b, cuenta, img] = [caja.querySelector(\"button\"), caja.querySelector(\".lab-cuenta\"), caja.querySelector(\"img\")];\n  caja.value = 0;\n  b.onclick = () =&gt; {\n    b.disabled = true; img.style.display = \"block\"; img.alt = \"Pantalla de pago de una tienda en línea\"; let t = 5;\n    cuenta.textContent = `Quedan ${t} segundos`;\n    const id = setInterval(() =&gt; { t--; cuenta.textContent = t ? `Quedan ${t} segundos` : \"Tiempo\";\n      if (!t) { clearInterval(id); img.style.display = \"none\"; caja.value++; caja.dispatchEvent(new Event(\"input\", {bubbles: true})); b.disabled = false; b.textContent = \"Volver a ver\"; } }, 1000);\n  };\n  return caja;\n}\n\n\n\n\n\n\n\ncinco === 0 ? html`&lt;p class=\"small\"&gt;Las preguntas aparecerán cuando termine el tiempo.&lt;/p&gt;` : (() =&gt; {\n  const preguntas = [[\"¿Qué tipo de pantalla era?\", [\"Un formulario de registro\", \"*La pantalla de pago de una tienda\", \"Un buscador\"]],\n    [\"¿Cuánto había que pagar?\", [\"25,00 €\", \"*29,99 €\", \"4,99 €\"]],\n    [\"¿Recuerdas si había algo añadido además del producto?\", [\"No había nada más\", \"*Un seguro de envío marcado\", \"Un cupón de descuento\"]]];\n  const d = html`&lt;form class=\"lab-preguntas\"&gt;&lt;/form&gt;`;\n  preguntas.forEach(([q, ops], k) =&gt; {\n    const fs = html`&lt;fieldset class=\"mb-2\"&gt;&lt;legend class=\"fs-6 fw-semibold\"&gt;${q}&lt;/legend&gt;&lt;/fieldset&gt;`;\n    ops.forEach((o, j) =&gt; { const id = `cinco-${k}-${j}`; fs.append(html`&lt;div class=\"form-check\"&gt;&lt;input class=\"form-check-input\" type=\"radio\" name=\"q${k}\" id=\"${id}\" value=\"${o.startsWith(\"*\") ? 1 : 0}\"&gt;&lt;label class=\"form-check-label\" for=\"${id}\"&gt;${o.replace(\"*\", \"\")}&lt;/label&gt;&lt;/div&gt;`); });\n    d.append(fs);\n  });\n  const res = html`&lt;p role=\"status\"&gt;&lt;/p&gt;`, b = html`&lt;button type=\"button\" class=\"btn btn-primary btn-sm\"&gt;Comprobar&lt;/button&gt;`;\n  b.onclick = () =&gt; { const ok = [0, 1, 2].filter(k =&gt; d.querySelector(`input[name=q${k}]:checked`)?.value === \"1\").length;\n    res.textContent = `${ok} de 3. La tercera es la clave: un seguro premarcado que pocas personas recuerdan haber visto es justo lo que busca un patrón engañoso (tema 10).`; };\n  d.append(b, res); return d;\n})()",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#lab-t7-arbol",
+    "href": "07-wireframes.html#lab-t7-arbol",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "Laboratorio: prueba de árbol (tree testing)",
+    "text": "Laboratorio: prueba de árbol (tree testing)\n\n\nLaboratorio · se ejecuta en tu navegador\n\nLa prueba de árbol evalúa la arquitectura de información sin diseño visual: solo el menú. Tu tarea: «Quieres saber hasta cuándo puedes quedarte un libro que tienes en préstamo». Navega por el menú y pulsa Lo encontré aquí cuando creas que has llegado.\n\narbol = ({n: \"Inicio\", h: [\n  {n: \"Catálogo\", h: [{n: \"Búsqueda simple\"}, {n: \"Búsqueda avanzada\"}, {n: \"Novedades\"}]},\n  {n: \"Servicios\", h: [{n: \"Préstamo\", h: [{n: \"Condiciones del préstamo\"}, {n: \"Préstamo interbibliotecario\"}]}, {n: \"Reserva de salas\"}, {n: \"Formación\"}]},\n  {n: \"Mi cuenta\", h: [{n: \"Mis préstamos\", meta: true}, {n: \"Mis reservas\"}, {n: \"Datos personales\"}]},\n  {n: \"La biblioteca\", h: [{n: \"Horarios\"}, {n: \"Sedes\"}, {n: \"Contacto\"}]}]})\nviewof prueba_arbol = {\n  const caja = html`&lt;div class=\"lab-arbol\"&gt;&lt;nav aria-label=\"Ruta\" class=\"small mb-2\"&gt;&lt;/nav&gt;&lt;div class=\"lab-arbol-opciones d-flex flex-column gap-1 align-items-start\"&gt;&lt;/div&gt;\n    &lt;div class=\"mt-2 d-flex gap-2\"&gt;&lt;button type=\"button\" class=\"btn btn-outline-primary btn-sm lab-atras\"&gt;Atrás&lt;/button&gt;&lt;button type=\"button\" class=\"btn btn-primary btn-sm lab-aqui\"&gt;Lo encontré aquí&lt;/button&gt;&lt;button type=\"button\" class=\"btn btn-outline-primary btn-sm lab-reinicio\"&gt;Empezar de nuevo&lt;/button&gt;&lt;/div&gt;\n    &lt;p role=\"status\" class=\"mt-2 lab-arbol-res\"&gt;&lt;/p&gt;&lt;/div&gt;`;\n  let ruta = [arbol], clics = 0, atras = 0, primero = null;\n  const [nav, ops, res] = [caja.querySelector(\"nav\"), caja.querySelector(\".lab-arbol-opciones\"), caja.querySelector(\".lab-arbol-res\")];\n  const pinta = () =&gt; {\n    nav.textContent = ruta.map(x =&gt; x.n).join(\" › \");\n    ops.innerHTML = \"\"; const actual = ruta[ruta.length - 1];\n    (actual.h || []).forEach(h =&gt; { const b = html`&lt;button type=\"button\" class=\"btn btn-outline-secondary btn-sm\"&gt;${h.n}${h.h ? \" ›\" : \"\"}&lt;/button&gt;`;\n      b.onclick = () =&gt; { clics++; if (primero === null) primero = h.n; ruta.push(h); pinta(); }; ops.append(b); });\n    if (!actual.h) ops.append(html`&lt;p class=\"small mb-0\"&gt;(Página final del menú)&lt;/p&gt;`);\n  };\n  caja.querySelector(\".lab-atras\").onclick = () =&gt; { if (ruta.length &gt; 1) { ruta.pop(); atras++; pinta(); } };\n  caja.querySelector(\".lab-reinicio\").onclick = () =&gt; { ruta = [arbol]; clics = 0; atras = 0; primero = null; res.textContent = \"\"; pinta(); };\n  caja.querySelector(\".lab-aqui\").onclick = () =&gt; {\n    const ok = !!ruta[ruta.length - 1].meta;\n    res.textContent = ok ? `Éxito ${atras ? \"indirecto\" : \"directo\"}: ${clics} clics${atras ? `, ${atras} vueltas atrás` : \"\"}. Primer clic: «${primero}».`\n      : `No es aquí. En una prueba real contaría como fracaso. Primer clic: «${primero ?? \"ninguno\"}». Pista: ¿dónde están tus cosas?`;\n  };\n  pinta(); caja.value = null; return caja;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEn una prueba real se mide con 30 o más personas: tasa de éxito, directividad (sin volver atrás) y primer clic. Si muchas empiezan por «Servicios › Préstamo», quizá la etiqueta engaña o hace falta un enlace también allí.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#actividades",
+    "href": "07-wireframes.html#actividades",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\n\n\n\n\n\n\nAdvertenciaErrores frecuentes\n\n\n\n\nTexto de relleno en todo: el «lorem ipsum» oculta si la jerarquía funciona con contenidos reales; usa textos realistas en títulos y botones.\nIgnorar la rejilla y alinear a ojo.\nNo anotar: un esquema sin notas deja al equipo adivinando qué hace cada elemento.\nDiseñar solo para escritorio: empieza por la pantalla más estrecha.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
     "objectID": "07-wireframes.html#reto-t7",
     "href": "07-wireframes.html#reto-t7",
     "title": "Tema 7. Esquemas de página en papel y en pantalla",
@@ -1059,6 +1213,17 @@
     "title": "Tema 8. Estados y transiciones en los esquemas",
     "section": "Práctica",
     "text": "Práctica\nElige un formulario de una web que uses (por ejemplo, la inscripción en una actividad). Dibuja su diagrama de estados: estados del botón de envío y de la pantalla, con los eventos y las condiciones. Busca al menos un caso que el formulario real no resuelva bien.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html#actividades",
+    "href": "08-estados.html#actividades",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
@@ -1186,6 +1351,17 @@
     ]
   },
   {
+    "objectID": "09-prototipos-papel.html#actividades",
+    "href": "09-prototipos-papel.html#actividades",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\n\n\n\n\n\n\nAdvertenciaErrores frecuentes\n\n\n\n\nAyudar demasiado pronto: el silencio incómodo es parte del método.\nPreguntar «¿Te gusta?»: lo que importa es si consigue la tarea.\nDefender el diseño ante la participante.\nAnalizar días después: anota los hallazgos al terminar cada sesión.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
     "objectID": "09-prototipos-papel.html#reto-t9",
     "href": "09-prototipos-papel.html#reto-t9",
     "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
@@ -1296,6 +1472,17 @@
     ]
   },
   {
+    "objectID": "10-sesgos.html#actividades",
+    "href": "10-sesgos.html#actividades",
+    "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
+    ]
+  },
+  {
     "objectID": "10-sesgos.html#reto-t10",
     "href": "10-sesgos.html#reto-t10",
     "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
@@ -1399,7 +1586,29 @@
     "href": "11-atencion.html#práctica",
     "title": "Tema 11. Economía de la atención y bienestar digital",
     "section": "Práctica",
-    "text": "Práctica\nElige una aplicación que uses a diario y activa durante un día su contador de tiempo de uso (o el del sistema operativo). Anota cada vez que la abres sin haberlo decidido y qué te llevó a hacerlo. Identifica qué mecanismos del apartado 3 intervienen.",
+    "text": "Práctica\nElige una aplicación que uses a diario y activa durante un día su contador de tiempo de uso (o el del sistema operativo). Anota cada vez que la abres sin haberlo decidido y qué te llevó a hacerlo. Identifica qué mecanismos del apartado 3 intervienen.\n\n\n\n\n\n\nFigura 1: Patrones de lectura en F y en Z. En páginas con mucho texto la mirada barre las primeras líneas y luego baja por el margen izquierdo; en páginas con poco texto salta en zigzag entre los elementos destacados.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html#lab-t11-calor",
+    "href": "11-atencion.html#lab-t11-calor",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "Laboratorio: mapa de calor simulado",
+    "text": "Laboratorio: mapa de calor simulado\n\n\nLaboratorio · datos simulados (no son medidas reales)\n\nLos mapas de calor de un estudio de seguimiento ocular (eye tracking) acumulan las fijaciones de muchas personas. Este laboratorio simula fijaciones a partir de los patrones en F y en Z para que veas cómo se forman: elige el tipo de página y el número de personas.\n\nrango = window.Lab.rango\nseleccion = window.Lab.seleccion\nviewof c_tipo = seleccion(\"Tipo de página\", [[\"F\", \"Texto denso (patrón en F)\"], [\"Z\", \"Poco texto (patrón en Z)\"]], {value: \"F\"})\nviewof c_n = rango(\"Personas simuladas\", [1, 60], {step: 1, value: 20})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const W = 480, H = 320, cv = document.createElement(\"canvas\"); cv.width = W; cv.height = H;\n  cv.style.maxWidth = \"100%\"; cv.setAttribute(\"role\", \"img\");\n  cv.setAttribute(\"aria-label\", `Mapa de calor simulado de ${c_n} personas sobre una página ${c_tipo === \"F\" ? \"de texto denso: el calor se concentra arriba y en el margen izquierdo\" : \"con poco texto: el calor se reparte en las cuatro esquinas, siguiendo una Z\"}`);\n  const g = cv.getContext(\"2d\");\n  g.fillStyle = \"#fff\"; g.fillRect(0, 0, W, H); g.fillStyle = \"#d9d8d4\";\n  if (c_tipo === \"F\") for (let i = 0; i &lt; 11; i++) g.fillRect(30, 30 + i * 25, 420 - (i % 3) * 80, 8);\n  else { [[30, 25, 90, 35], [350, 25, 100, 35], [110, 100, 260, 110], [30, 250, 140, 45], [300, 250, 150, 45]].forEach(r =&gt; g.fillRect(...r)); }\n  let s = 5; const rnd = () =&gt; (s = (s * 9301 + 49297) % 233280) / 233280;\n  const gauss = () =&gt; Math.sqrt(-2 * Math.log(rnd() + 1e-9)) * Math.cos(2 * Math.PI * rnd());\n  const base = c_tipo === \"F\" ? [[40, 34], [200, 34], [380, 34], [40, 84], [180, 84], [300, 84], [40, 134], [40, 184], [40, 234], [40, 284]]\n                              : [[70, 42], [400, 42], [240, 155], [100, 272], [375, 272]];\n  const pts = [];\n  for (let p = 0; p &lt; c_n; p++) base.forEach(([x, y], k) =&gt; { if (rnd() &lt; (c_tipo === \"F\" ? 1 - k * 0.06 : 0.9)) pts.push([x + gauss() * 18, y + gauss() * 10]); });\n  const capa = document.createElement(\"canvas\"); capa.width = W; capa.height = H; const c = capa.getContext(\"2d\");\n  pts.forEach(([x, y]) =&gt; { const r = c.createRadialGradient(x, y, 0, x, y, 30); r.addColorStop(0, \"rgba(0,0,0,0.12)\"); r.addColorStop(1, \"rgba(0,0,0,0)\"); c.fillStyle = r; c.fillRect(x - 30, y - 30, 60, 60); });\n  const img = c.getImageData(0, 0, W, H), d = img.data;\n  for (let i = 0; i &lt; d.length; i += 4) { const a = Math.min(1, d[i + 3] / 255 * 1.6); if (a &lt; 0.03) { d[i + 3] = 0; continue; }\n    const col = a &lt; 0.33 ? [42, 120, 214] : a &lt; 0.66 ? [237, 161, 0] : [192, 57, 43]; d[i] = col[0]; d[i + 1] = col[1]; d[i + 2] = col[2]; d[i + 3] = 90 + 130 * a; }\n  c.putImageData(img, 0, 0); g.drawImage(capa, 0, 0);\n  return html`&lt;figure&gt;${cv}&lt;figcaption class=\"small\"&gt;${pts.length} fijaciones simuladas. Azul: pocas; amarillo: bastantes; rojo: muchas. En un estudio real, el mapa depende de la tarea y de cada página: estos patrones son tendencias, no reglas.&lt;/figcaption&gt;&lt;/figure&gt;`;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html#actividades",
+    "href": "11-atencion.html#actividades",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
@@ -1521,6 +1730,28 @@
     "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
     "section": "Práctica en R: comprobar los colores",
     "text": "Práctica en R: comprobar los colores\n\n\n\n\n\n\n\nEjercicio 12.1\nEl color de acento #f29900 no cumple el contraste para texto sobre blanco. ¿Cumple al menos el mínimo de 3:1 para componentes (un icono, el borde de un campo)?\n\n\n\n\n\n\n\n\nLos tipos posibles son «normal», «grande» y «componente».\n\n\ncumple_wcag(\"#f29900\", \"#ffffff\", tipo = \"componente\")\nFALSE: su contraste es 2,25:1. Ni siquiera sirve como único indicador visual de un control; habría que oscurecerlo o acompañarlo de un borde con más contraste.\n\n\n\n\nEjercicio 12.2\nSimula cómo ve los colores de error y éxito una persona con deuteranopía y calcula la diferencia de luminosidad entre ellos con distinguibles(). Un valor cercano a 1 significa que no se distinguen por luminosidad.\n\n\n\n\n\n\n\n\nLos tipos son «protan», «deutan» y «tritan».\n\n\nd &lt;- simular_daltonismo(paleta_ejemplo[c(\"error\", \"exito\")], tipo = \"deutan\")\nd\ndistinguibles(d[1], d[2])\nAlrededor de 1,3: con deuteranopía, el rojo de error y el verde de éxito se convierten en dos marrones oliva casi iguales, muy lejos del 3:1 que se pide para distinguir componentes. Los mensajes deben llevar icono y texto.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#lab-t12-contraste",
+    "href": "12-inclusivo.html#lab-t12-contraste",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "Laboratorio: contraste y daltonismo",
+    "text": "Laboratorio: contraste y daltonismo\n\n\nLaboratorio · cálculo en tu navegador\n\nElige un color de texto y uno de fondo. El laboratorio calcula la razón de contraste de las WCAG 2.2, te dice qué niveles cumple y simula cómo ven la combinación las personas con los tres tipos principales de daltonismo (matrices de Machado, Oliveira y Fernandes, 2009).\n\ncolor = window.Lab.color\nviewof c_texto = color(\"Color del texto\", {value: \"#e8663a\"})\nviewof c_fondo = color(\"Color del fondo\", {value: \"#ffffff\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const rgb = h =&gt; [1, 3, 5].map(i =&gt; parseInt(h.slice(i, i + 2), 16) / 255);\n  const lin = c =&gt; c &lt;= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);\n  const L = h =&gt; { const [r, g, b] = rgb(h).map(lin); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };\n  const ratio = (a, b) =&gt; { const [x, y] = [L(a), L(b)].sort((p, q) =&gt; q - p); return (x + 0.05) / (y + 0.05); };\n  const M = {protan: [[0.152286, 1.052583, -0.204868], [0.114503, 0.786281, 0.099216], [-0.003882, -0.048116, 1.051998]],\n             deutan: [[0.367322, 0.860646, -0.227968], [0.280085, 0.672501, 0.047413], [-0.011820, 0.042940, 0.968881]],\n             tritan: [[1.255528, -0.076749, -0.178779], [-0.078411, 0.930809, 0.147602], [0.004733, 0.691367, 0.303900]]};\n  const sim = (h, t) =&gt; { const v = rgb(h).map(lin), m = M[t];\n    const o = m.map(f =&gt; Math.min(1, Math.max(0, f[0] * v[0] + f[1] * v[1] + f[2] * v[2])));\n    return \"#\" + o.map(c =&gt; Math.round(255 * (c &lt;= 0.0031308 ? 12.92 * c : 1.055 * Math.pow(c, 1 / 2.4) - 0.055)).toString(16).padStart(2, \"0\")).join(\"\"); };\n  const r = ratio(c_texto, c_fondo);\n  const marca = ok =&gt; ok ? \"✓ cumple\" : \"✗ no cumple\";\n  const muestra = (t, f, et) =&gt; `&lt;svg viewBox=\"0 0 160 92\" style=\"flex:1;min-width:9rem;max-width:14rem\" role=\"img\" aria-label=\"${et}: texto ${t} sobre fondo ${f}, contraste ${ratio(t, f).toFixed(2).replace(\".\", \",\")} a 1\"&gt;&lt;rect x=\".5\" y=\".5\" width=\"159\" height=\"91\" rx=\"6\" fill=\"${f}\" stroke=\"#bbb\"/&gt;&lt;text x=\"10\" y=\"20\" font-size=\"11\" fill=\"${t}\"&gt;${et}&lt;/text&gt;&lt;text x=\"10\" y=\"46\" font-size=\"19\" font-weight=\"600\" fill=\"${t}\"&gt;Reservar&lt;/text&gt;&lt;text x=\"10\" y=\"66\" font-size=\"13\" fill=\"${t}\"&gt;Texto de ejemplo&lt;/text&gt;&lt;text x=\"10\" y=\"84\" font-size=\"11\" fill=\"${t}\"&gt;${ratio(t, f).toFixed(2).replace(\".\", \",\")}:1&lt;/text&gt;&lt;/svg&gt;`;\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p style=\"font-size:1.2rem\"&gt;&lt;strong&gt;Contraste ${r.toFixed(2).replace(\".\", \",\")}:1&lt;/strong&gt;&lt;/p&gt;\n  &lt;ul&gt;&lt;li&gt;Texto normal, AA (4,5:1): &lt;strong&gt;${marca(r &gt;= 4.5)}&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Texto grande, AA (3:1): &lt;strong&gt;${marca(r &gt;= 3)}&lt;/strong&gt;&lt;/li&gt;\n  &lt;li&gt;Componentes y gráficos, AA (3:1): &lt;strong&gt;${marca(r &gt;= 3)}&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Texto normal, AAA (7:1): &lt;strong&gt;${marca(r &gt;= 7)}&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;\n  &lt;div style=\"display:flex;gap:.5rem;flex-wrap:wrap\" class=\"lab-muestras\"&gt;${muestra(c_texto, c_fondo, \"Visión típica\")}${muestra(sim(c_texto, \"protan\"), sim(c_fondo, \"protan\"), \"Protanopia\")}${muestra(sim(c_texto, \"deutan\"), sim(c_fondo, \"deutan\"), \"Deuteranopia\")}${muestra(sim(c_texto, \"tritan\"), sim(c_fondo, \"tritan\"), \"Tritanopia\")}&lt;/div&gt;\n  &lt;p class=\"small mt-2\"&gt;Con las funciones del libro: &lt;code&gt;contraste()&lt;/code&gt;, &lt;code&gt;cumple_wcag()&lt;/code&gt; y &lt;code&gt;simular_daltonismo()&lt;/code&gt;. Prueba el naranja por defecto: muy visible, pero no llega a 4,5:1 sobre blanco.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#actividades",
+    "href": "12-inclusivo.html#actividades",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\n\n\n\n\n\n\nAdvertenciaErrores frecuentes\n\n\n\n\nDejar la accesibilidad para el final: muchas barreras (orden de lectura, tamaños de toque, etiquetas) se deciden en el esquema.\nTransmitir información solo con color.\nPensar en la «persona media»: diseña también para los extremos (Holmes, 2018).\nPedir datos que no hacen falta, sobre todo sensibles.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
@@ -1659,6 +1890,17 @@
     ]
   },
   {
+    "objectID": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
+    "href": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Actividades interactivas y laboratorios",
+    "text": "Actividades interactivas y laboratorios\nAdemás de los ejercicios de R y la autoevaluación, cada tema tiene actividades de corrección inmediata (ordenar, clasificar, señalar zonas sobre una pantalla y escenarios con decisiones) y varios laboratorios que se usan sin programar: ordenación de tarjetas con una matriz de similitud, escala SUS, intervalo de confianza de una tasa de éxito, embudo de un flujo, calculadora de rejilla, prueba de los cinco segundos, prueba de árbol, mapa de calor simulado y comprobador de contraste con simulación de daltonismo. Todo se ejecuta en el navegador del estudiante, sin conexión a servicios externos, y los datos de los laboratorios son simulados. En el PDF y el EPUB las actividades aparecen en papel, con su solución.\nLas actividades están escritas en Markdown con la extensión interactivos (_extensions/interactivos/interactivos.lua), así que se pueden añadir o cambiar sin programar.\n\nDiapositivas de clase: cada tema tiene unas diapositivas con los objetivos, las figuras, las tablas principales, la lectura, preguntas para debatir y el reto, en diapositivas/ (F, pantalla completa; S, notas).",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
     "objectID": "91-guia-docente.html#funciones-del-libro",
     "href": "91-guia-docente.html#funciones-del-libro",
     "title": "Apéndice B — Guía para el profesorado",
@@ -1674,7 +1916,7 @@
     "href": "91-guia-docente.html#mantenimiento",
     "title": "Apéndice B — Guía para el profesorado",
     "section": "Mantenimiento",
-    "text": "Mantenimiento\nDesde la raíz del repositorio:\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras y plantillas en PDF\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\nEl flujo .github/workflows/comprobar.yml renderiza el libro y comprueba en un navegador real todos los ejercicios, las preguntas y la accesibilidad en modo claro y oscuro. Al publicar una versión nueva, actualiza version en CITATION.cff y vuelve a ejecutar preparar.py para que los navegadores renueven su copia.\nLos datos de todos los ejercicios son simulados; no hay datos de personas reales.",
+    "text": "Mantenimiento\nDesde la raíz del repositorio:\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras y plantillas en PDF\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\npython3 herramientas/diapositivas.py    # diapositivas de clase\nEl flujo .github/workflows/comprobar.yml renderiza el libro y comprueba en un navegador real todos los ejercicios, las preguntas y la accesibilidad en modo claro y oscuro. Al publicar una versión nueva, actualiza version en CITATION.cff y vuelve a ejecutar preparar.py para que los navegadores renueven su copia.\nLos datos de todos los ejercicios son simulados; no hay datos de personas reales.",
     "crumbs": [
       "Apéndices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"

@@ -74,17 +74,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,10 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -473,6 +480,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-4.1" id="toc-ejercicio-4.1" class="nav-link" data-scroll-target="#ejercicio-4.1">Ejercicio 4.1</a></li>
   <li><a href="#ejercicio-4.2" id="toc-ejercicio-4.2" class="nav-link" data-scroll-target="#ejercicio-4.2">Ejercicio 4.2</a></li>
   </ul></li>
+  <li><a href="#lab-t4-sus" id="toc-lab-t4-sus" class="nav-link" data-scroll-target="#lab-t4-sus">Laboratorio: la escala SUS</a></li>
+  <li><a href="#lab-t4-intervalo" id="toc-lab-t4-intervalo" class="nav-link" data-scroll-target="#lab-t4-intervalo">Laboratorio: cuánto dice una tasa de éxito con pocas personas</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t4" id="toc-reto-t4" class="nav-link" data-scroll-target="#reto-t4">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
@@ -673,7 +683,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="fig-intervalos" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de puntos con barras de error. En el eje horizontal, el número de participantes: 5, 10, 20, 40 y 80. Para todos el punto está en el 80 %, pero la barra de error se estrecha: con 5 va del 36 % al 98 %; con 80, del 70 % al 87 %.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-intervalos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/tema4_intervalos.svg" class="img-fluid figure-img" alt="Gráfico de puntos con barras de error. En el eje horizontal, el número de participantes: 5, 10, 20, 40 y 80. Para todos el punto está en el 80 %, pero la barra de error se estrecha: con 5 va del 36 % al 98 %; con 80, del 70 % al 87 %.">
+<a href="figuras/tema4_intervalos.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Intervalo de confianza al 95 % de una tasa de éxito del 80 % según el número de participantes (Wald ajustado). Con 5 personas, la tasa real podría estar entre el 36 % y el 98 %."><img src="figuras/tema4_intervalos.svg" class="img-fluid figure-img" alt="Gráfico de puntos con barras de error. En el eje horizontal, el número de participantes: 5, 10, 20, 40 y 80. Para todos el punto está en el 80 %, pero la barra de error se estrecha: con 5 va del 36 % al 98 %; con 80, del 70 % al 87 %."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-intervalos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Intervalo de confianza al 95 % de una tasa de éxito del 80 % según el número de participantes (Wald ajustado). Con 5 personas, la tasa real podría estar entre el 36 % y el 98 %.
@@ -743,7 +753,128 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfc3VzIn0sImNvZGUi
 <script type="exercise-check-t4_sus-contents">
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ0X3N1cyJ9LCJjb2RlIjoiaWYgKGlzVFJVRShhbGwuZXF1YWwoYXMubnVtZXJpYygucmVzdWx0KSwgNzUpKSkge1xuICBsaXN0KGNvcnJlY3QgPSBUUlVFLCBtZXNzYWdlID0gXCJDb3JyZWN0bzogbWVkaWFuYSBTVVMgPSA3NS5cIilcbn0gZWxzZSB7XG4gIGxpc3QoY29ycmVjdCA9IEZBTFNFLCBtZXNzYWdlID0gXCJBcGxpY2EgbWVkaWFuKCkgYWwgdmVjdG9yIHN1cy5cIilcbn0ifQ==
 </script>
+<div id="fig-t4-heart" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cinco tarjetas: H, felicidad (satisfacción, SUS, NPS); E, implicación (frecuencia e intensidad de uso); A, adopción (personas nuevas que lo empiezan a usar); R, retención (personas que vuelven); T, éxito en la tarea (tasa de éxito, tiempo, errores).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-t4-heart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/t4_heart.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: El marco HEART (Rodden, Hutchinson y Fu, 2010): cinco categorías para elegir las métricas de una experiencia."><img src="figuras/t4_heart.svg" class="img-fluid figure-img" alt="Cinco tarjetas: H, felicidad (satisfacción, SUS, NPS); E, implicación (frecuencia e intensidad de uso); A, adopción (personas nuevas que lo empiezan a usar); R, retención (personas que vuelven); T, éxito en la tarea (tasa de éxito, tiempo, errores)."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-t4-heart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: El marco HEART (Rodden, Hutchinson y Fu, 2010): cinco categorías para elegir las métricas de una experiencia.
+</figcaption>
+</figure>
+</div>
 </section>
+</section>
+<section id="lab-t4-sus" class="level2">
+<h2 class="anchored" data-anchor-id="lab-t4-sus">Laboratorio: la escala SUS</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · cálculo en tu navegador</p>
+</div>
+<p>Responde a los diez ítems de la <em>System Usability Scale</em> (Brooke, 1996) como si acabaras de usar el catálogo de tu biblioteca (1 = totalmente en desacuerdo, 5 = totalmente de acuerdo). Fíjate en que los ítems impares son positivos y los pares negativos: por eso se puntúan al revés.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="187" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 186;"><span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a>items_sus <span class="op">=</span> [<span class="st">"Creo que me gustaría usar este sistema con frecuencia."</span><span class="op">,</span> <span class="st">"El sistema me pareció innecesariamente complejo."</span><span class="op">,</span></span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Pensé que era fácil de usar."</span><span class="op">,</span> <span class="st">"Creo que necesitaría ayuda de una persona técnica para poder usarlo."</span><span class="op">,</span></span>
+<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Las funciones del sistema estaban bien integradas."</span><span class="op">,</span> <span class="st">"Había demasiadas incoherencias en el sistema."</span><span class="op">,</span></span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Imagino que la mayoría de la gente aprendería a usarlo muy rápido."</span><span class="op">,</span> <span class="st">"El sistema me resultó muy engorroso de usar."</span><span class="op">,</span></span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Me sentí muy seguro al usarlo."</span><span class="op">,</span> <span class="st">"Tuve que aprender muchas cosas antes de poder manejarlo."</span>]</span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a>viewof respuestas <span class="op">=</span> {</span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> caja <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div class="lab-sus"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> r <span class="op">=</span> items_sus<span class="op">.</span><span class="fu">map</span>((t<span class="op">,</span> i) <span class="kw">=&gt;</span> { <span class="kw">const</span> c <span class="op">=</span> <span class="fu">rango</span>(<span class="vs">`</span><span class="sc">${</span>i <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="vs">. </span><span class="sc">${</span>t<span class="sc">}</span><span class="vs">`</span><span class="op">,</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">5</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">;</span> c<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> e <span class="kw">=&gt;</span> { e<span class="op">.</span><span class="fu">stopPropagation</span>()<span class="op">;</span> caja<span class="op">.</span><span class="at">value</span> <span class="op">=</span> r<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">value</span>)<span class="op">;</span> caja<span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">Event</span>(<span class="st">"input"</span><span class="op">,</span> {<span class="dt">bubbles</span><span class="op">:</span> <span class="kw">true</span>}))<span class="op">;</span> })<span class="op">;</span> caja<span class="op">.</span><span class="fu">appendChild</span>(c)<span class="op">;</span> <span class="cf">return</span> c<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a>  caja<span class="op">.</span><span class="at">value</span> <span class="op">=</span> r<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">value</span>)<span class="op">;</span> <span class="cf">return</span> caja<span class="op">;</span></span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="201" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 200;"><span id="cb4-201"><a href="#cb4-201" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> puntos <span class="op">=</span> respuestas<span class="op">.</span><span class="fu">map</span>((v<span class="op">,</span> i) <span class="kw">=&gt;</span> i <span class="op">%</span> <span class="dv">2</span> <span class="op">===</span> <span class="dv">0</span> <span class="op">?</span> v <span class="op">-</span> <span class="dv">1</span> <span class="op">:</span> <span class="dv">5</span> <span class="op">-</span> v)<span class="op">;</span></span>
+<span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> sus <span class="op">=</span> <span class="fl">2.5</span> <span class="op">*</span> puntos<span class="op">.</span><span class="fu">reduce</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a <span class="op">+</span> b<span class="op">,</span> <span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> banda <span class="op">=</span> sus <span class="op">&lt;</span> <span class="dv">50</span> <span class="op">?</span> [<span class="st">"No aceptable"</span><span class="op">,</span> <span class="st">"lab-mal"</span>] <span class="op">:</span> sus <span class="op">&lt;</span> <span class="dv">70</span> <span class="op">?</span> [<span class="st">"Marginal"</span><span class="op">,</span> <span class="st">"lab-medio"</span>] <span class="op">:</span> [<span class="st">"Aceptable"</span><span class="op">,</span> <span class="st">"lab-bien"</span>]<span class="op">;</span></span>
+<span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;p style="font-size:1.25rem"&gt;&lt;strong&gt;SUS = </span><span class="sc">${</span>sus<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">&lt;/strong&gt; · &lt;span class="</span><span class="sc">${</span>banda[<span class="dv">1</span>]<span class="sc">}</span><span class="vs">" style="font-weight:600"&gt;</span><span class="sc">${</span>banda[<span class="dv">0</span>]<span class="sc">}</span><span class="vs">&lt;/span&gt;&lt;/p&gt;</span></span>
+<span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;div style="position:relative;height:1.1rem;border-radius:4px;background:linear-gradient(90deg,#f6d3cd 0 50%,#fbe7b8 50% 70%,#d3efdc 70% 100%)"&gt;</span></span>
+<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="position:absolute;left:calc(</span><span class="sc">${</span>sus<span class="sc">}</span><span class="vs">% - 2px);top:-4px;width:4px;height:1.6rem;background:currentColor"&gt;&lt;/div&gt;&lt;/div&gt;</span></span>
+<span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;p class="small"&gt;Cortes de aceptabilidad orientativos: menos de 50, no aceptable; 50-70, marginal; más de 70, aceptable (Bangor, Kortum y Miller). La media de referencia ronda 68. Con las funciones del libro: &lt;code&gt;puntuacion_sus()&lt;/code&gt; y &lt;code&gt;aceptabilidad_sus()&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lab-t4-intervalo" class="level2">
+<h2 class="anchored" data-anchor-id="lab-t4-intervalo">Laboratorio: cuánto dice una tasa de éxito con pocas personas</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · cálculo en tu navegador</p>
+</div>
+<p>En una prueba con pocas personas, la tasa de éxito observada es solo una estimación. Mueve los controles y mira cómo cambia el <strong>intervalo de confianza del 95 %</strong> (Wald ajustado, el recomendado para muestras pequeñas).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="225" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 224;"><span id="cb5-225"><a href="#cb5-225" aria-hidden="true" tabindex="-1"></a>viewof n_int <span class="op">=</span> <span class="fu">rango</span>(<span class="st">"Participantes"</span><span class="op">,</span> [<span class="dv">3</span><span class="op">,</span> <span class="dv">40</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">8</span>})</span>
+<span id="cb5-226"><a href="#cb5-226" aria-hidden="true" tabindex="-1"></a>viewof x_int <span class="op">=</span> <span class="fu">rango</span>(<span class="st">"Completaron la tarea"</span><span class="op">,</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">40</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">6</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="230" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 229;"><span id="cb6-230"><a href="#cb6-230" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb6-231"><a href="#cb6-231" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> n <span class="op">=</span> n_int<span class="op">,</span> x <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(x_int<span class="op">,</span> n_int)<span class="op">,</span> z <span class="op">=</span> <span class="fl">1.959964</span><span class="op">;</span></span>
+<span id="cb6-232"><a href="#cb6-232" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> nt <span class="op">=</span> n <span class="op">+</span> z <span class="op">*</span> z<span class="op">,</span> pt <span class="op">=</span> (x <span class="op">+</span> z <span class="op">*</span> z <span class="op">/</span> <span class="dv">2</span>) <span class="op">/</span> nt<span class="op">,</span> m <span class="op">=</span> z <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(pt <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> pt) <span class="op">/</span> nt)<span class="op">;</span></span>
+<span id="cb6-233"><a href="#cb6-233" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> li <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">0</span><span class="op">,</span> pt <span class="op">-</span> m)<span class="op">,</span> ls <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(<span class="dv">1</span><span class="op">,</span> pt <span class="op">+</span> m)<span class="op">,</span> p <span class="op">=</span> x <span class="op">/</span> n<span class="op">;</span></span>
+<span id="cb6-234"><a href="#cb6-234" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;p&gt;&lt;strong&gt;</span><span class="sc">${</span>x<span class="sc">}</span><span class="vs"> de </span><span class="sc">${</span>n<span class="sc">}</span><span class="vs">&lt;/strong&gt; (</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> p)<span class="sc">}</span><span class="vs"> %) → el valor real está, con un 95 % de confianza, entre el &lt;strong&gt;</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> li)<span class="sc">}</span><span class="vs"> %&lt;/strong&gt; y el &lt;strong&gt;</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> ls)<span class="sc">}</span><span class="vs"> %&lt;/strong&gt;.&lt;/p&gt;</span></span>
+<span id="cb6-235"><a href="#cb6-235" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;svg viewBox="0 0 400 46" width="100%" style="max-width:600px" role="img" aria-label="Intervalo de </span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> li)<span class="sc">}</span><span class="vs"> a </span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> ls)<span class="sc">}</span><span class="vs"> por ciento"&gt;</span></span>
+<span id="cb6-236"><a href="#cb6-236" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;line x1="10" x2="390" y1="22" y2="22" stroke="#d9d8d4" stroke-width="2"/&gt;</span></span>
+<span id="cb6-237"><a href="#cb6-237" aria-hidden="true" tabindex="-1"></a><span class="vs">    </span><span class="sc">${</span>[<span class="dv">0</span><span class="op">,</span> <span class="dv">25</span><span class="op">,</span> <span class="dv">50</span><span class="op">,</span> <span class="dv">75</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">.</span><span class="fu">map</span>(v <span class="kw">=&gt;</span> <span class="vs">`&lt;text x="</span><span class="sc">${</span><span class="dv">10</span> <span class="op">+</span> <span class="fl">3.8</span> <span class="op">*</span> v<span class="sc">}</span><span class="vs">" y="44" font-size="10" text-anchor="middle" fill="currentColor"&gt;</span><span class="sc">${</span>v<span class="sc">}</span><span class="vs"> %&lt;/text&gt;`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="sc">}</span></span>
+<span id="cb6-238"><a href="#cb6-238" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;rect x="</span><span class="sc">${</span><span class="dv">10</span> <span class="op">+</span> <span class="dv">380</span> <span class="op">*</span> li<span class="sc">}</span><span class="vs">" y="14" width="</span><span class="sc">${</span><span class="dv">380</span> <span class="op">*</span> (ls <span class="op">-</span> li)<span class="sc">}</span><span class="vs">" height="16" rx="4" fill="#2a78d6" fill-opacity=".35"/&gt;</span></span>
+<span id="cb6-239"><a href="#cb6-239" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;circle cx="</span><span class="sc">${</span><span class="dv">10</span> <span class="op">+</span> <span class="dv">380</span> <span class="op">*</span> p<span class="sc">}</span><span class="vs">" cy="22" r="6" fill="#eb6834"/&gt;&lt;/svg&gt;</span></span>
+<span id="cb6-240"><a href="#cb6-240" aria-hidden="true" tabindex="-1"></a><span class="vs">  </span><span class="sc">${</span>x_int <span class="op">&gt;</span> n_int <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;p class="small"&gt;Hay más éxitos que participantes: se usa </span><span class="sc">${</span>n<span class="sc">}</span><span class="vs">.&lt;/p&gt;`</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span></span>
+<span id="cb6-241"><a href="#cb6-241" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;p class="small"&gt;Prueba 4 de 5 y después 40 de 50: la misma tasa, pero el intervalo se estrecha mucho.&lt;/p&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb6-242"><a href="#cb6-242" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-clasificar" id="ia-t4-heart"><script type="application/json" class="ia-datos">{"categorias":["Felicidad","Implicación","Adopción","Retención","Éxito en la tarea"],"enunciado":"","explicacion":"","items":[{"categoria":"Felicidad","explicacion":"","texto":"Puntuación media en el cuestionario SUS"},{"categoria":"Implicación","explicacion":"","texto":"Número de búsquedas por persona y semana"},{"categoria":"Adopción","explicacion":"","texto":"Estudiantes de primero que activan su cuenta en el primer mes"},{"categoria":"Retención","explicacion":"","texto":"Porcentaje que vuelve a usar la aplicación al mes siguiente"},{"categoria":"Éxito en la tarea","explicacion":"","texto":"Porcentaje que consigue renovar un préstamo sin ayuda"},{"categoria":"Éxito en la tarea","explicacion":"","texto":"Tiempo medio para reservar una sala de estudio"}],"tipo":"clasificar","titulo":"¿Qué categoría de HEART mide?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t4-smart"><script type="application/json" class="ia-datos">{"categorias":["SMART","No SMART"],"enunciado":"","explicacion":"","items":[{"categoria":"No SMART","explicacion":"No es específico ni medible.","texto":"«Mejorar la experiencia de usuario.»"},{"categoria":"SMART","explicacion":"","texto":"«Que el 80 % de las personas participantes renueve un préstamo en\nmenos de un minuto en la prueba de diciembre.»"},{"categoria":"No SMART","explicacion":"","texto":"«Tener la mejor aplicación de bibliotecas del mundo.»"},{"categoria":"SMART","explicacion":"","texto":"«Reducir del 35 % al 20 % el abandono del formulario de registro\nantes de marzo.»"}],"tipo":"clasificar","titulo":"¿Es un objetivo SMART?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-t4" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t4">Reto evaluable</h2>
@@ -923,23 +1054,26 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -948,10 +1082,12 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -959,13 +1095,13 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -978,6 +1114,9 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -1004,10 +1143,14 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -1036,7 +1179,7 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InJhbmdvID0gd2luZG93LkxhYi5yYW5nb1xuaXRlbXNfc3VzID0gW1wiQ3JlbyBxdWUgbWUgZ3VzdGFyw61hIHVzYXIgZXN0ZSBzaXN0ZW1hIGNvbiBmcmVjdWVuY2lhLlwiLCBcIkVsIHNpc3RlbWEgbWUgcGFyZWNpw7MgaW5uZWNlc2FyaWFtZW50ZSBjb21wbGVqby5cIixcbiAgXCJQZW5zw6kgcXVlIGVyYSBmw6FjaWwgZGUgdXNhci5cIiwgXCJDcmVvIHF1ZSBuZWNlc2l0YXLDrWEgYXl1ZGEgZGUgdW5hIHBlcnNvbmEgdMOpY25pY2EgcGFyYSBwb2RlciB1c2FybG8uXCIsXG4gIFwiTGFzIGZ1bmNpb25lcyBkZWwgc2lzdGVtYSBlc3RhYmFuIGJpZW4gaW50ZWdyYWRhcy5cIiwgXCJIYWLDrWEgZGVtYXNpYWRhcyBpbmNvaGVyZW5jaWFzIGVuIGVsIHNpc3RlbWEuXCIsXG4gIFwiSW1hZ2lubyBxdWUgbGEgbWF5b3LDrWEgZGUgbGEgZ2VudGUgYXByZW5kZXLDrWEgYSB1c2FybG8gbXV5IHLDoXBpZG8uXCIsIFwiRWwgc2lzdGVtYSBtZSByZXN1bHTDsyBtdXkgZW5nb3Jyb3NvIGRlIHVzYXIuXCIsXG4gIFwiTWUgc2VudMOtIG11eSBzZWd1cm8gYWwgdXNhcmxvLlwiLCBcIlR1dmUgcXVlIGFwcmVuZGVyIG11Y2hhcyBjb3NhcyBhbnRlcyBkZSBwb2RlciBtYW5lamFybG8uXCJdXG52aWV3b2YgcmVzcHVlc3RhcyA9IHtcbiAgY29uc3QgY2FqYSA9IGh0bWxgPGRpdiBjbGFzcz1cImxhYi1zdXNcIj48L2Rpdj5gO1xuICBjb25zdCByID0gaXRlbXNfc3VzLm1hcCgodCwgaSkgPT4geyBjb25zdCBjID0gcmFuZ28oYCR7aSArIDF9LiAke3R9YCwgWzEsIDVdLCB7c3RlcDogMSwgdmFsdWU6IDN9KTsgYy5hZGRFdmVudExpc3RlbmVyKFwiaW5wdXRcIiwgZSA9PiB7IGUuc3RvcFByb3BhZ2F0aW9uKCk7IGNhamEudmFsdWUgPSByLm1hcCh4ID0+IHgudmFsdWUpOyBjYWphLmRpc3BhdGNoRXZlbnQobmV3IEV2ZW50KFwiaW5wdXRcIiwge2J1YmJsZXM6IHRydWV9KSk7IH0pOyBjYWphLmFwcGVuZENoaWxkKGMpOyByZXR1cm4gYzsgfSk7XG4gIGNhamEudmFsdWUgPSByLm1hcCh4ID0+IHgudmFsdWUpOyByZXR1cm4gY2FqYTtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgY29uc3QgcHVudG9zID0gcmVzcHVlc3Rhcy5tYXAoKHYsIGkpID0+IGkgJSAyID09PSAwID8gdiAtIDEgOiA1IC0gdik7XG4gIGNvbnN0IHN1cyA9IDIuNSAqIHB1bnRvcy5yZWR1Y2UoKGEsIGIpID0+IGEgKyBiLCAwKTtcbiAgY29uc3QgYmFuZGEgPSBzdXMgPCA1MCA/IFtcIk5vIGFjZXB0YWJsZVwiLCBcImxhYi1tYWxcIl0gOiBzdXMgPCA3MCA/IFtcIk1hcmdpbmFsXCIsIFwibGFiLW1lZGlvXCJdIDogW1wiQWNlcHRhYmxlXCIsIFwibGFiLWJpZW5cIl07XG4gIHJldHVybiBodG1sYDxkaXYgcm9sZT1cInN0YXR1c1wiPjxwIHN0eWxlPVwiZm9udC1zaXplOjEuMjVyZW1cIj48c3Ryb25nPlNVUyA9ICR7c3VzLnRvRml4ZWQoMSl9PC9zdHJvbmc+IMK3IDxzcGFuIGNsYXNzPVwiJHtiYW5kYVsxXX1cIiBzdHlsZT1cImZvbnQtd2VpZ2h0OjYwMFwiPiR7YmFuZGFbMF19PC9zcGFuPjwvcD5cbiAgPGRpdiBzdHlsZT1cInBvc2l0aW9uOnJlbGF0aXZlO2hlaWdodDoxLjFyZW07Ym9yZGVyLXJhZGl1czo0cHg7YmFja2dyb3VuZDpsaW5lYXItZ3JhZGllbnQoOTBkZWcsI2Y2ZDNjZCAwIDUwJSwjZmJlN2I4IDUwJSA3MCUsI2QzZWZkYyA3MCUgMTAwJSlcIj5cbiAgICA8ZGl2IHN0eWxlPVwicG9zaXRpb246YWJzb2x1dGU7bGVmdDpjYWxjKCR7c3VzfSUgLSAycHgpO3RvcDotNHB4O3dpZHRoOjRweDtoZWlnaHQ6MS42cmVtO2JhY2tncm91bmQ6Y3VycmVudENvbG9yXCI+PC9kaXY+PC9kaXY+XG4gIDxwIGNsYXNzPVwic21hbGxcIj5Db3J0ZXMgZGUgYWNlcHRhYmlsaWRhZCBvcmllbnRhdGl2b3M6IG1lbm9zIGRlIDUwLCBubyBhY2VwdGFibGU7IDUwLTcwLCBtYXJnaW5hbDsgbcOhcyBkZSA3MCwgYWNlcHRhYmxlIChCYW5nb3IsIEtvcnR1bSB5IE1pbGxlcikuIExhIG1lZGlhIGRlIHJlZmVyZW5jaWEgcm9uZGEgNjguIENvbiBsYXMgZnVuY2lvbmVzIGRlbCBsaWJybzogPGNvZGU+cHVudHVhY2lvbl9zdXMoKTwvY29kZT4geSA8Y29kZT5hY2VwdGFiaWxpZGFkX3N1cygpPC9jb2RlPi48L3A+PC9kaXY+YDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBuX2ludCA9IHJhbmdvKFwiUGFydGljaXBhbnRlc1wiLCBbMywgNDBdLCB7c3RlcDogMSwgdmFsdWU6IDh9KVxudmlld29mIHhfaW50ID0gcmFuZ28oXCJDb21wbGV0YXJvbiBsYSB0YXJlYVwiLCBbMCwgNDBdLCB7c3RlcDogMSwgdmFsdWU6IDZ9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoie1xuICBjb25zdCBuID0gbl9pbnQsIHggPSBNYXRoLm1pbih4X2ludCwgbl9pbnQpLCB6ID0gMS45NTk5NjQ7XG4gIGNvbnN0IG50ID0gbiArIHogKiB6LCBwdCA9ICh4ICsgeiAqIHogLyAyKSAvIG50LCBtID0geiAqIE1hdGguc3FydChwdCAqICgxIC0gcHQpIC8gbnQpO1xuICBjb25zdCBsaSA9IE1hdGgubWF4KDAsIHB0IC0gbSksIGxzID0gTWF0aC5taW4oMSwgcHQgKyBtKSwgcCA9IHggLyBuO1xuICByZXR1cm4gaHRtbGA8ZGl2IHJvbGU9XCJzdGF0dXNcIj48cD48c3Ryb25nPiR7eH0gZGUgJHtufTwvc3Ryb25nPiAoJHtNYXRoLnJvdW5kKDEwMCAqIHApfSAlKSDihpIgZWwgdmFsb3IgcmVhbCBlc3TDoSwgY29uIHVuIDk1ICUgZGUgY29uZmlhbnphLCBlbnRyZSBlbCA8c3Ryb25nPiR7TWF0aC5yb3VuZCgxMDAgKiBsaSl9ICU8L3N0cm9uZz4geSBlbCA8c3Ryb25nPiR7TWF0aC5yb3VuZCgxMDAgKiBscyl9ICU8L3N0cm9uZz4uPC9wPlxuICA8c3ZnIHZpZXdCb3g9XCIwIDAgNDAwIDQ2XCIgd2lkdGg9XCIxMDAlXCIgc3R5bGU9XCJtYXgtd2lkdGg6NjAwcHhcIiByb2xlPVwiaW1nXCIgYXJpYS1sYWJlbD1cIkludGVydmFsbyBkZSAke01hdGgucm91bmQoMTAwICogbGkpfSBhICR7TWF0aC5yb3VuZCgxMDAgKiBscyl9IHBvciBjaWVudG9cIj5cbiAgICA8bGluZSB4MT1cIjEwXCIgeDI9XCIzOTBcIiB5MT1cIjIyXCIgeTI9XCIyMlwiIHN0cm9rZT1cIiNkOWQ4ZDRcIiBzdHJva2Utd2lkdGg9XCIyXCIvPlxuICAgICR7WzAsIDI1LCA1MCwgNzUsIDEwMF0ubWFwKHYgPT4gYDx0ZXh0IHg9XCIkezEwICsgMy44ICogdn1cIiB5PVwiNDRcIiBmb250LXNpemU9XCIxMFwiIHRleHQtYW5jaG9yPVwibWlkZGxlXCIgZmlsbD1cImN1cnJlbnRDb2xvclwiPiR7dn0gJTwvdGV4dD5gKS5qb2luKFwiXCIpfVxuICAgIDxyZWN0IHg9XCIkezEwICsgMzgwICogbGl9XCIgeT1cIjE0XCIgd2lkdGg9XCIkezM4MCAqIChscyAtIGxpKX1cIiBoZWlnaHQ9XCIxNlwiIHJ4PVwiNFwiIGZpbGw9XCIjMmE3OGQ2XCIgZmlsbC1vcGFjaXR5PVwiLjM1XCIvPlxuICAgIDxjaXJjbGUgY3g9XCIkezEwICsgMzgwICogcH1cIiBjeT1cIjIyXCIgcj1cIjZcIiBmaWxsPVwiI2ViNjgzNFwiLz48L3N2Zz5cbiAgJHt4X2ludCA+IG5faW50ID8gaHRtbGA8cCBjbGFzcz1cInNtYWxsXCI+SGF5IG3DoXMgw6l4aXRvcyBxdWUgcGFydGljaXBhbnRlczogc2UgdXNhICR7bn0uPC9wPmAgOiBcIlwifVxuICA8cCBjbGFzcz1cInNtYWxsXCI+UHJ1ZWJhIDQgZGUgNSB5IGRlc3B1w6lzIDQwIGRlIDUwOiBsYSBtaXNtYSB0YXNhLCBwZXJvIGVsIGludGVydmFsbyBzZSBlc3RyZWNoYSBtdWNoby48L3A+PC9kaXY+YDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncmVzcHVlc3RhcycpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCduX2ludCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCd4X2ludCcpIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1490,6 +1633,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

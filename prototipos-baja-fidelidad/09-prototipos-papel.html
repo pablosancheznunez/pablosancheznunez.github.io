@@ -74,17 +74,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,10 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -474,6 +481,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-9.1" id="toc-ejercicio-9.1" class="nav-link" data-scroll-target="#ejercicio-9.1">Ejercicio 9.1</a></li>
   <li><a href="#ejercicio-9.2" id="toc-ejercicio-9.2" class="nav-link" data-scroll-target="#ejercicio-9.2">Ejercicio 9.2</a></li>
   </ul></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t9" id="toc-reto-t9" class="nav-link" data-scroll-target="#reto-t9">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
@@ -621,7 +629,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="fig-exito" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de puntos con barras de error para tres tareas, con dos series: papel y digital. Buscar un libro: papel 75 %, digital 100 %. Renovar un préstamo: papel 62,5 %, digital 87,5 %. Reservar una sala: papel 37,5 %, digital 62,5 %. Las barras de error son anchas y se solapan en todas las tareas.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-exito-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/tema9_exito.svg" class="img-fluid figure-img" alt="Gráfico de puntos con barras de error para tres tareas, con dos series: papel y digital. Buscar un libro: papel 75 %, digital 100 %. Renovar un préstamo: papel 62,5 %, digital 87,5 %. Reservar una sala: papel 37,5 %, digital 62,5 %. Las barras de error son anchas y se solapan en todas las tareas.">
+<a href="figuras/tema9_exito.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Tasa de éxito por tarea con el prototipo en papel y con el digital de baja fidelidad (datos simulados, 8 participantes por prototipo), con su intervalo al 95 %. «Reservar una sala» es la tarea problemática en los dos."><img src="figuras/tema9_exito.svg" class="img-fluid figure-img" alt="Gráfico de puntos con barras de error para tres tareas, con dos series: papel y digital. Buscar un libro: papel 75 %, digital 100 %. Renovar un préstamo: papel 62,5 %, digital 87,5 %. Reservar una sala: papel 37,5 %, digital 62,5 %. Las barras de error son anchas y se solapan en todas las tareas."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-exito-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Tasa de éxito por tarea con el prototipo en papel y con el digital de baja fidelidad (datos simulados, 8 participantes por prototipo), con su intervalo al 95 %. «Reservar una sala» es la tarea problemática en los dos.
@@ -692,6 +700,30 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDlfdGllbXBvIn0sImNv
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ5X3RpZW1wbyJ9LCJjb2RlIjoiZCA8LSBzdWJzZXQoc2VzaW9uZXNfcHJ1ZWJhLCBwcm90b3RpcG8gPT0gXCJwYXBlbFwiICYgdGFyZWEgPT0gXCJSZW5vdmFyIHVuIHByw6lzdGFtb1wiKVxuaWYgKGlzVFJVRShhbGwuZXF1YWwoYXMubnVtZXJpYygucmVzdWx0KSwgdGllbXBvX3RpcGljbyhkJHRpZW1wb19zKSkpKSB7XG4gIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBwYXN0ZTAoXCJDb3JyZWN0bzogXCIsIHJvdW5kKGFzLm51bWVyaWMoLnJlc3VsdCkpLCBcIiBzZWd1bmRvcy5cIikpXG59IGVsc2Uge1xuICBsaXN0KGNvcnJlY3QgPSBGQUxTRSwgbWVzc2FnZSA9IFwiVXNhIHRpZW1wb190aXBpY28oKSBjb24gbGEgY29sdW1uYSB0aWVtcG9fcy5cIilcbn0ifQ==
 </script>
 </section>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-clasificar" id="ia-t9-roles"><script type="application/json" class="ia-datos">{"categorias":["Facilitación","Ordenador humano","Observación"],"enunciado":"","explicacion":"","items":[{"categoria":"Facilitación","explicacion":"","texto":"Explica la tarea y pide a la persona que piense en voz alta"},{"categoria":"Ordenador humano","explicacion":"","texto":"Cambia las hojas de papel cuando la persona «pulsa» un botón"},{"categoria":"Observación","explicacion":"","texto":"Anota dónde duda la persona y qué dice, sin intervenir"},{"categoria":"Facilitación","explicacion":"","texto":"Responde «¿Qué esperarías que pasara?» cuando le preguntan"},{"categoria":"Ordenador humano","explicacion":"","texto":"Mantiene preparadas las pantallas de error y los menús\ndesplegables"}],"tipo":"clasificar","titulo":"¿Qué rol es?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-ordenar" id="ia-t9-sesion"><script type="application/json" class="ia-datos">{"enunciado":"","explicacion":"","items":["Dar la bienvenida y explicar que se prueba el diseño, no a la\npersona","Pedir el consentimiento para tomar notas","Plantear la primera tarea","Observar mientras piensa en voz alta, sin ayudar","Hacer preguntas de cierre","Agradecer y anotar los hallazgos en caliente"],"tipo":"ordenar","titulo":"Ordena la sesión de prueba con un prototipo en papel"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-escenario" id="ia-t9-bloqueo"><script type="application/json" class="ia-datos">{"enunciado":"<p>Durante una prueba, la participante lleva un minuto mirando la\npantalla de búsqueda sin saber qué hacer.<\/p>","inicio":"t9e-inicio","nodos":{"t9e-ayuda":{"final":true,"opciones":[],"texto":"<p>Al guiarla, pierdes el hallazgo más valioso de la sesión: la lupa no\nse ve o no se entiende. Anota el bloqueo y pregunta sin dirigir.<\/p>","titulo":"Has dado la respuesta","valor":"mal"},"t9e-bien":{"final":true,"opciones":[],"texto":"<p>Has respetado a la participante, has evitado guiarla y te llevas una\ncita textual que justifica el cambio: el icono necesita una\netiqueta.<\/p>","titulo":"Hallazgo registrado","valor":"bien"},"t9e-corte":{"final":true,"opciones":[],"texto":"<p>Anotar el fracaso está bien, pero sin preguntar no sabrás por qué\nocurrió.<\/p>","titulo":"Cortar sin más","valor":"regular"},"t9e-explica":{"final":true,"opciones":[],"texto":"<p>Ya tienes el hallazgo, pero explicar el diseño contamina las tareas\nsiguientes.<\/p>","titulo":"Explicar el diseño","valor":"regular"},"t9e-inicio":{"final":false,"opciones":[{"destino":"t9e-ayuda","texto":"Le digo: «Pulsa en la lupa de arriba»"},{"destino":"t9e-pregunta","texto":"Le pregunto: «¿Qué estás buscando ahora mismo en la pantalla?»"},{"destino":"t9e-corte","texto":"Doy la tarea por terminada sin decir nada"}],"texto":"<p>¿Qué haces?<\/p>","titulo":"Silencio","valor":""},"t9e-pregunta":{"final":false,"opciones":[{"destino":"t9e-explica","texto":"Le explico qué significa cada icono"},{"destino":"t9e-bien","texto":"Anoto la frase literal y le propongo pasar a la siguiente tarea si no lo\nencuentra"}],"texto":"<p>Responde: «Busco algo que diga “buscar”, pero solo veo iconos». ¿Y\nahora?<\/p>","titulo":"Pregunta abierta","valor":""}},"tipo":"escenario","titulo":"La participante se ha bloqueado"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Errores frecuentes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Ayudar demasiado pronto</strong>: el silencio incómodo es parte del método.</li>
+<li><strong>Preguntar «¿Te gusta?»</strong>: lo que importa es si consigue la tarea.</li>
+<li><strong>Defender el diseño</strong> ante la participante.</li>
+<li><strong>Analizar días después</strong>: anota los hallazgos al terminar cada sesión.</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="reto-t9" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t9">Reto evaluable</h2>
@@ -870,23 +902,26 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -895,10 +930,12 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -906,13 +943,13 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -925,6 +962,9 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -951,10 +991,14 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -1437,6 +1481,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

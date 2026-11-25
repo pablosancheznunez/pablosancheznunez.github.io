@@ -74,17 +74,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,10 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -475,6 +482,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-2.1" id="toc-ejercicio-2.1" class="nav-link" data-scroll-target="#ejercicio-2.1">Ejercicio 2.1</a></li>
   <li><a href="#ejercicio-2.2" id="toc-ejercicio-2.2" class="nav-link" data-scroll-target="#ejercicio-2.2">Ejercicio 2.2</a></li>
   </ul></li>
+  <li><a href="#lab-t2-tarjetas" id="toc-lab-t2-tarjetas" class="nav-link" data-scroll-target="#lab-t2-tarjetas">Laboratorio: ordenación de tarjetas (<em>card sorting</em>)</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t2" id="toc-reto-t2" class="nav-link" data-scroll-target="#reto-t2">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
@@ -572,7 +581,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="fig-metodos" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plano con un eje horizontal que va de cualitativo a cuantitativo y un eje vertical que va de comportamental (abajo) a actitudinal (arriba). Arriba a la izquierda, entrevistas y grupos de discusión; arriba a la derecha, encuestas; abajo a la izquierda, observación contextual y pruebas de usabilidad; abajo a la derecha, analítica web y pruebas A/B. La revisión heurística y el análisis de la competencia aparecen aparte, como métodos de inspección sin usuarios.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-metodos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/tema2_metodos.svg" class="img-fluid figure-img" alt="Plano con un eje horizontal que va de cualitativo a cuantitativo y un eje vertical que va de comportamental (abajo) a actitudinal (arriba). Arriba a la izquierda, entrevistas y grupos de discusión; arriba a la derecha, encuestas; abajo a la izquierda, observación contextual y pruebas de usabilidad; abajo a la derecha, analítica web y pruebas A/B. La revisión heurística y el análisis de la competencia aparecen aparte, como métodos de inspección sin usuarios.">
+<a href="figuras/tema2_metodos.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Mapa simplificado de métodos de investigación según Rohrer (2022). La pregunta de investigación decide el cuadrante."><img src="figuras/tema2_metodos.svg" class="img-fluid figure-img" alt="Plano con un eje horizontal que va de cualitativo a cuantitativo y un eje vertical que va de comportamental (abajo) a actitudinal (arriba). Arriba a la izquierda, entrevistas y grupos de discusión; arriba a la derecha, encuestas; abajo a la izquierda, observación contextual y pruebas de usabilidad; abajo a la derecha, analítica web y pruebas A/B. La revisión heurística y el análisis de la competencia aparecen aparte, como métodos de inspección sin usuarios."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-metodos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Mapa simplificado de métodos de investigación según Rohrer (2022). La pregunta de investigación decide el cuadrante.
@@ -736,6 +745,168 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDJfbWVub3IifSwiY29k
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQyX21lbm9yIn0sImNvZGUiOiJpZiAoaWRlbnRpY2FsKGFzLmNoYXJhY3RlcigucmVzdWx0KSwgXCJUaXBvZ3JhZsOtYSBkZSAxMiBweCBlbiBsb3MgYXZpc29zIGxlZ2FsZXNcIikpIHtcbiAgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IFwiQ29ycmVjdG86IGVzIGVsIMO6bHRpbW8gZGUgbGEgbGlzdGEgcHJpb3JpemFkYS5cIilcbn0gZWxzZSB7XG4gIGxpc3QoY29ycmVjdCA9IEZBTFNFLCBtZXNzYWdlID0gXCJVc2EgbnJvdyhwKSBwYXJhIGxsZWdhciBhIGxhIMO6bHRpbWEgZmlsYS5cIilcbn0ifQ==
 </script>
 </section>
+</section>
+<section id="lab-t2-tarjetas" class="level2">
+<h2 class="anchored" data-anchor-id="lab-t2-tarjetas">Laboratorio: ordenación de tarjetas (<em>card sorting</em>)</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · datos simulados</p>
+</div>
+<p>La <strong>ordenación de tarjetas</strong> revela cómo agrupan las personas los contenidos, y sirve para diseñar la arquitectura de información. Agrupa estas diez funciones de la aplicación de una biblioteca en los grupos que te parezcan naturales (puedes renombrar los grupos). Después compara tu propuesta con la de <strong>20 participantes simulados</strong>: la matriz muestra qué porcentaje de ellos puso cada par de tarjetas en el mismo grupo.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="204" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 203;"><span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">texto</span></span>
+<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a>seleccion <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
+<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
+<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
+<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a>boton <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">boton</span></span>
+<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a>color <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">color</span></span>
+<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>tarjetas <span class="op">=</span> [<span class="st">"Buscar en el catálogo"</span><span class="op">,</span> <span class="st">"Reservar un libro"</span><span class="op">,</span> <span class="st">"Renovar un préstamo"</span><span class="op">,</span> <span class="st">"Ver mis préstamos"</span><span class="op">,</span> <span class="st">"Pagar una multa"</span><span class="op">,</span></span>
+<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Cambiar la contraseña"</span><span class="op">,</span> <span class="st">"Elegir el idioma"</span><span class="op">,</span> <span class="st">"Horarios y sedes"</span><span class="op">,</span> <span class="st">"Contactar con la biblioteca"</span><span class="op">,</span> <span class="st">"Mis listas de lectura"</span>]</span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a>viewof grupos <span class="op">=</span> <span class="fu">texto</span>(<span class="st">"Nombres de tus grupos (separados por comas)"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"Buscar, Mis préstamos, Mi cuenta, Información"</span><span class="op">,</span> <span class="dt">submit</span><span class="op">:</span> <span class="st">"Usar estos grupos"</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-8" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="216" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 215;"><span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a>viewof asignacion <span class="op">=</span> {</span>
+<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> nombres <span class="op">=</span> grupos<span class="op">.</span><span class="fu">split</span>(<span class="st">","</span>)<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="fu">trim</span>())<span class="op">.</span><span class="fu">filter</span>(<span class="bu">Boolean</span>)<span class="op">;</span></span>
+<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> caja <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div class="lab-tarjetas"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> sels <span class="op">=</span> tarjetas<span class="op">.</span><span class="fu">map</span>((t<span class="op">,</span> i) <span class="kw">=&gt;</span> {</span>
+<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> s <span class="op">=</span> <span class="fu">seleccion</span>(t<span class="op">,</span> [[<span class="st">""</span><span class="op">,</span> <span class="st">"Elige un grupo…"</span>]<span class="op">,</span> <span class="op">...</span>nombres<span class="op">.</span><span class="fu">map</span>(n <span class="kw">=&gt;</span> [n<span class="op">,</span> n])])<span class="op">;</span></span>
+<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a>    s<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> e <span class="kw">=&gt;</span> { e<span class="op">.</span><span class="fu">stopPropagation</span>()<span class="op">;</span> caja<span class="op">.</span><span class="at">value</span> <span class="op">=</span> sels<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">value</span>)<span class="op">;</span> caja<span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">Event</span>(<span class="st">"input"</span><span class="op">,</span> {<span class="dt">bubbles</span><span class="op">:</span> <span class="kw">true</span>}))<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a>    caja<span class="op">.</span><span class="fu">appendChild</span>(s)<span class="op">;</span> <span class="cf">return</span> s<span class="op">;</span></span>
+<span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a>  caja<span class="op">.</span><span class="at">value</span> <span class="op">=</span> sels<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
+<span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> caja<span class="op">;</span></span>
+<span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="232" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 231;"><span id="cb5-232"><a href="#cb5-232" aria-hidden="true" tabindex="-1"></a>simulados <span class="op">=</span> {</span>
+<span id="cb5-233"><a href="#cb5-233" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 20 participantes simulados: tres agrupaciones de base con algo de variación</span></span>
+<span id="cb5-234"><a href="#cb5-234" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> base <span class="op">=</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb5-235"><a href="#cb5-235" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> s <span class="op">=</span> <span class="dv">11</span><span class="op">;</span> <span class="kw">const</span> rnd <span class="op">=</span> () <span class="kw">=&gt;</span> (s <span class="op">=</span> (s <span class="op">*</span> <span class="dv">9301</span> <span class="op">+</span> <span class="dv">49297</span>) <span class="op">%</span> <span class="dv">233280</span>) <span class="op">/</span> <span class="dv">233280</span><span class="op">;</span></span>
+<span id="cb5-236"><a href="#cb5-236" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>({<span class="dt">length</span><span class="op">:</span> <span class="dv">20</span>}<span class="op">,</span> () <span class="kw">=&gt;</span> base<span class="op">.</span><span class="fu">map</span>((g<span class="op">,</span> i) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-237"><a href="#cb5-237" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> r <span class="op">=</span> <span class="fu">rnd</span>()<span class="op">;</span></span>
+<span id="cb5-238"><a href="#cb5-238" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (i <span class="op">===</span> <span class="dv">9</span> <span class="op">&amp;&amp;</span> r <span class="op">&lt;</span> <span class="fl">0.45</span>) <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span>       <span class="co">// «Mis listas» a veces con los préstamos</span></span>
+<span id="cb5-239"><a href="#cb5-239" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (i <span class="op">===</span> <span class="dv">4</span> <span class="op">&amp;&amp;</span> r <span class="op">&lt;</span> <span class="fl">0.35</span>) <span class="cf">return</span> <span class="dv">2</span><span class="op">;</span>       <span class="co">// «Pagar una multa» a veces en la cuenta</span></span>
+<span id="cb5-240"><a href="#cb5-240" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (i <span class="op">===</span> <span class="dv">1</span> <span class="op">&amp;&amp;</span> r <span class="op">&lt;</span> <span class="fl">0.3</span>) <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span>        <span class="co">// «Reservar» a veces con los préstamos</span></span>
+<span id="cb5-241"><a href="#cb5-241" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> r <span class="op">&lt;</span> <span class="fl">0.06</span> <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="fu">rnd</span>() <span class="op">*</span> <span class="dv">4</span>) <span class="op">:</span> g<span class="op">;</span></span>
+<span id="cb5-242"><a href="#cb5-242" aria-hidden="true" tabindex="-1"></a>  }))<span class="op">;</span></span>
+<span id="cb5-243"><a href="#cb5-243" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-244"><a href="#cb5-244" aria-hidden="true" tabindex="-1"></a>juntos <span class="op">=</span> tarjetas<span class="op">.</span><span class="fu">map</span>((_<span class="op">,</span> i) <span class="kw">=&gt;</span> tarjetas<span class="op">.</span><span class="fu">map</span>((_<span class="op">,</span> j) <span class="kw">=&gt;</span> simulados<span class="op">.</span><span class="fu">filter</span>(p <span class="kw">=&gt;</span> p[i] <span class="op">===</span> p[j])<span class="op">.</span><span class="at">length</span> <span class="op">/</span> simulados<span class="op">.</span><span class="at">length</span>))</span>
+<span id="cb5-245"><a href="#cb5-245" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb5-246"><a href="#cb5-246" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> tuyo <span class="op">=</span> asignacion<span class="op">;</span></span>
+<span id="cb5-247"><a href="#cb5-247" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> completo <span class="op">=</span> tuyo<span class="op">.</span><span class="fu">every</span>(<span class="bu">Boolean</span>)<span class="op">;</span></span>
+<span id="cb5-248"><a href="#cb5-248" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> acuerdo <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> pares <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb5-249"><a href="#cb5-249" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">10</span><span class="op">;</span> i<span class="op">++</span>) <span class="cf">for</span> (<span class="kw">let</span> j <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span><span class="op">;</span> j <span class="op">&lt;</span> <span class="dv">10</span><span class="op">;</span> j<span class="op">++</span>) {</span>
+<span id="cb5-250"><a href="#cb5-250" aria-hidden="true" tabindex="-1"></a>    pares<span class="op">++;</span> <span class="kw">const</span> t <span class="op">=</span> tuyo[i] <span class="op">&amp;&amp;</span> tuyo[i] <span class="op">===</span> tuyo[j]<span class="op">;</span> <span class="kw">const</span> m <span class="op">=</span> juntos[i][j] <span class="op">&gt;=</span> <span class="fl">0.5</span><span class="op">;</span></span>
+<span id="cb5-251"><a href="#cb5-251" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (t <span class="op">===</span> m) acuerdo<span class="op">++;</span></span>
+<span id="cb5-252"><a href="#cb5-252" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-253"><a href="#cb5-253" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> celda <span class="op">=</span> <span class="dv">30</span><span class="op">,</span> izq <span class="op">=</span> <span class="dv">190</span><span class="op">,</span> arriba <span class="op">=</span> <span class="dv">190</span><span class="op">,</span> w <span class="op">=</span> izq <span class="op">+</span> celda <span class="op">*</span> <span class="dv">10</span> <span class="op">+</span> <span class="dv">70</span><span class="op">,</span> h <span class="op">=</span> arriba <span class="op">+</span> celda <span class="op">*</span> <span class="dv">10</span> <span class="op">+</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb5-254"><a href="#cb5-254" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> svg <span class="op">=</span> [<span class="vs">`&lt;svg viewBox="0 0 </span><span class="sc">${</span>w<span class="sc">}</span><span class="vs"> </span><span class="sc">${</span>h<span class="sc">}</span><span class="vs">" width="100%" style="max-width:</span><span class="sc">${</span>w<span class="sc">}</span><span class="vs">px" role="img" aria-label="Matriz de similitud de las diez tarjetas según los participantes simulados"&gt;`</span>]<span class="op">;</span></span>
+<span id="cb5-255"><a href="#cb5-255" aria-hidden="true" tabindex="-1"></a>  tarjetas<span class="op">.</span><span class="fu">forEach</span>((t<span class="op">,</span> i) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-256"><a href="#cb5-256" aria-hidden="true" tabindex="-1"></a>    svg<span class="op">.</span><span class="fu">push</span>(<span class="vs">`&lt;text x="</span><span class="sc">${</span>izq <span class="op">-</span> <span class="dv">6</span><span class="sc">}</span><span class="vs">" y="</span><span class="sc">${</span>arriba <span class="op">+</span> i <span class="op">*</span> celda <span class="op">+</span> <span class="dv">19</span><span class="sc">}</span><span class="vs">" text-anchor="end" font-size="11" fill="currentColor"&gt;</span><span class="sc">${</span>t<span class="sc">}</span><span class="vs">&lt;/text&gt;`</span>)<span class="op">;</span></span>
+<span id="cb5-257"><a href="#cb5-257" aria-hidden="true" tabindex="-1"></a>    svg<span class="op">.</span><span class="fu">push</span>(<span class="vs">`&lt;text transform="translate(</span><span class="sc">${</span>izq <span class="op">+</span> i <span class="op">*</span> celda <span class="op">+</span> <span class="dv">19</span><span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>arriba <span class="op">-</span> <span class="dv">6</span><span class="sc">}</span><span class="vs">) rotate(-60)" font-size="11" fill="currentColor"&gt;</span><span class="sc">${</span>t<span class="sc">}</span><span class="vs">&lt;/text&gt;`</span>)<span class="op">;</span></span>
+<span id="cb5-258"><a href="#cb5-258" aria-hidden="true" tabindex="-1"></a>    tarjetas<span class="op">.</span><span class="fu">forEach</span>((_<span class="op">,</span> j) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-259"><a href="#cb5-259" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> v <span class="op">=</span> juntos[i][j]<span class="op">,</span> mismo <span class="op">=</span> tuyo[i] <span class="op">&amp;&amp;</span> tuyo[i] <span class="op">===</span> tuyo[j]<span class="op">;</span></span>
+<span id="cb5-260"><a href="#cb5-260" aria-hidden="true" tabindex="-1"></a>      svg<span class="op">.</span><span class="fu">push</span>(<span class="vs">`&lt;rect x="</span><span class="sc">${</span>izq <span class="op">+</span> j <span class="op">*</span> celda<span class="sc">}</span><span class="vs">" y="</span><span class="sc">${</span>arriba <span class="op">+</span> i <span class="op">*</span> celda<span class="sc">}</span><span class="vs">" width="</span><span class="sc">${</span>celda <span class="op">-</span> <span class="dv">2</span><span class="sc">}</span><span class="vs">" height="</span><span class="sc">${</span>celda <span class="op">-</span> <span class="dv">2</span><span class="sc">}</span><span class="vs">" rx="3" fill="#2a78d6" fill-opacity="</span><span class="sc">${</span><span class="fl">0.08</span> <span class="op">+</span> <span class="fl">0.85</span> <span class="op">*</span> v<span class="sc">}</span><span class="vs">" stroke="</span><span class="sc">${</span>mismo <span class="op">&amp;&amp;</span> i <span class="op">!==</span> j <span class="op">?</span> <span class="st">"#eb6834"</span> <span class="op">:</span> <span class="st">"none"</span><span class="sc">}</span><span class="vs">" stroke-width="2.5"/&gt;`</span>)<span class="op">;</span></span>
+<span id="cb5-261"><a href="#cb5-261" aria-hidden="true" tabindex="-1"></a>      svg<span class="op">.</span><span class="fu">push</span>(<span class="vs">`&lt;text x="</span><span class="sc">${</span>izq <span class="op">+</span> j <span class="op">*</span> celda <span class="op">+</span> <span class="dv">14</span><span class="sc">}</span><span class="vs">" y="</span><span class="sc">${</span>arriba <span class="op">+</span> i <span class="op">*</span> celda <span class="op">+</span> <span class="dv">19</span><span class="sc">}</span><span class="vs">" text-anchor="middle" font-size="9" fill="</span><span class="sc">${</span>v <span class="op">&gt;</span> <span class="fl">0.55</span> <span class="op">?</span> <span class="st">"#fff"</span> <span class="op">:</span> <span class="st">"currentColor"</span><span class="sc">}</span><span class="vs">"&gt;</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(v <span class="op">*</span> <span class="dv">100</span>)<span class="sc">}</span><span class="vs">&lt;/text&gt;`</span>)<span class="op">;</span></span>
+<span id="cb5-262"><a href="#cb5-262" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb5-263"><a href="#cb5-263" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb5-264"><a href="#cb5-264" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">push</span>(<span class="st">"&lt;/svg&gt;"</span>)<span class="op">;</span></span>
+<span id="cb5-265"><a href="#cb5-265" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb5-266"><a href="#cb5-266" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;p&gt;</span><span class="sc">${</span>completo <span class="op">?</span> <span class="vs">`&lt;strong&gt;Coincides con la mayoría en el </span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> acuerdo <span class="op">/</span> pares)<span class="sc">}</span><span class="vs"> % de los pares&lt;/strong&gt; (dos tarjetas juntas o separadas).`</span> <span class="op">:</span> <span class="st">"Asigna un grupo a todas las tarjetas para comparar tu propuesta."</span><span class="sc">}</span><span class="vs">&lt;/p&gt;</span></span>
+<span id="cb5-267"><a href="#cb5-267" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;p class="small"&gt;Cada celda es el % de participantes que juntaron esas dos tarjetas; los bordes naranjas marcan los pares que tú has juntado.&lt;/p&gt;</span><span class="sc">${</span>svg<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb5-268"><a href="#cb5-268" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d<span class="op">;</span></span>
+<span id="cb5-269"><a href="#cb5-269" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<p><strong>Fíjate</strong> en las tarjetas que dividen a los participantes («Mis listas de lectura», «Pagar una multa»): son las que piden una etiqueta más clara o estar en dos sitios.</p>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-zonas" id="ia-t2-heuristica"><script type="application/json" class="ia-datos">{"alt":"Esquema de la pantalla «Renovar préstamos» de una biblioteca: cabecera con menú, lista de tres préstamos con casillas, un recuadro de novedades, dos campos de texto, dos botones azules iguales y un mensaje de error rojo; abajo a la derecha, un enlace de ayuda.","enunciado":"<p>Pulsa sobre las <strong>cinco<\/strong> zonas que incumplen alguna\nheurística de Nielsen y comprueba.<\/p>","explicacion":"","imagen":"figuras/t2_formulario.svg","tipo":"zonas","titulo":"Revisión heurística de un formulario","zonas":[{"correcta":false,"descripcion":"Cabecera con el menú principal | no | Es consistente y deja ver dónde estás.","explicacion":"","h":11,"w":98.8,"x":0.6,"y":0.8},{"correcta":false,"descripcion":"Lista de préstamos con casillas | no | Muestra el estado y la fecha de cada préstamo.","explicacion":"","h":24,"w":55,"x":5,"y":25},{"correcta":false,"descripcion":"Recuadro de novedades | no | Puede distraer, pero no impide la tarea.","explicacion":"","h":24,"w":29,"x":66,"y":25},{"correcta":false,"descripcion":"Campo con el texto «Introduce el código» | si | Sin etiqueta visible: el texto desaparece al escribir y no dice qué código es (heurísticas 6 y 10).","explicacion":"","h":7,"w":34,"x":5,"y":54},{"correcta":false,"descripcion":"Campo con el texto «AAAAMMDD» | si | Exige un formato rígido sin ejemplo ni calendario (5, prevención de errores).","explicacion":"","h":7,"w":34,"x":45,"y":54},{"correcta":false,"descripcion":"Botón «Ejecutar transacción OPAC» | si | Jerga del sistema en lugar del lenguaje de la persona: «Renovar» (2).","explicacion":"","h":9,"w":30,"x":5,"y":66},{"correcta":false,"descripcion":"Botón «Borrar todo» | si | Acción destructiva con el mismo peso que la principal y sin confirmación (3 y 5).","explicacion":"","h":9,"w":20,"x":38,"y":66},{"correcta":false,"descripcion":"Mensaje «Error 0x8F2» | si | No explica qué ha pasado ni cómo solucionarlo (9).","explicacion":"","h":7,"w":50,"x":5,"y":80},{"correcta":false,"descripcion":"Enlace de ayuda | no | Existe ayuda accesible (10).","explicacion":"","h":7,"w":10,"x":84,"y":90}]}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t2-metodos"><script type="application/json" class="ia-datos">{"categorias":["Cualitativo","Cuantitativo"],"enunciado":"","explicacion":"","items":[{"categoria":"Cualitativo","explicacion":"","texto":"Entrevistas en profundidad con ocho estudiantes"},{"categoria":"Cuantitativo","explicacion":"","texto":"Encuesta a 400 personas usuarias"},{"categoria":"Cualitativo","explicacion":"","texto":"Observación contextual en la sala de lectura"},{"categoria":"Cuantitativo","explicacion":"","texto":"Análisis de los registros de búsqueda del catálogo"},{"categoria":"Cuantitativo","explicacion":"","texto":"Prueba A/B de dos versiones de un botón"},{"categoria":"Cualitativo","explicacion":"","texto":"Estudio de diario durante dos semanas"}],"tipo":"clasificar","titulo":"¿Cualitativo o cuantitativo?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t2-heuristicas"><script type="application/json" class="ia-datos">{"categorias":["1 Visibilidad del estado","2 Mundo real","3 Control y libertad","5 Prevención de errores","6 Reconocer mejor que recordar","9 Recuperarse de errores"],"enunciado":"","explicacion":"","items":[{"categoria":"1 Visibilidad del estado","explicacion":"","texto":"Al subir un archivo grande no aparece ninguna barra de progreso"},{"categoria":"2 Mundo real","explicacion":"","texto":"Un icono de disquete significa «Exportar a PDF»"},{"categoria":"3 Control y libertad","explicacion":"","texto":"No hay forma de deshacer el envío de un formulario"},{"categoria":"5 Prevención de errores","explicacion":"","texto":"El formulario acepta una fecha de devolución anterior a la de\npréstamo"},{"categoria":"6 Reconocer mejor que recordar","explicacion":"","texto":"Hay que recordar el código de la sede escrito en la pantalla\nanterior"},{"categoria":"9 Recuperarse de errores","explicacion":"","texto":"El mensaje dice «Fallo de validación» sin indicar qué campo está\nmal"}],"tipo":"clasificar","titulo":"¿Qué heurística se incumple?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-t2" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t2">Reto evaluable</h2>
@@ -919,23 +1090,26 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -944,10 +1118,12 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -955,13 +1131,13 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -974,6 +1150,9 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -1000,10 +1179,14 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -1032,7 +1215,7 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRleHRvID0gd2luZG93LkxhYi50ZXh0b1xuc2VsZWNjaW9uID0gd2luZG93LkxhYi5zZWxlY2Npb25cbmFyZWEgPSB3aW5kb3cuTGFiLmFyZWFcbnJhbmdvID0gd2luZG93LkxhYi5yYW5nb1xuYm90b24gPSB3aW5kb3cuTGFiLmJvdG9uXG5jb2xvciA9IHdpbmRvdy5MYWIuY29sb3JcbnRhcmpldGFzID0gW1wiQnVzY2FyIGVuIGVsIGNhdMOhbG9nb1wiLCBcIlJlc2VydmFyIHVuIGxpYnJvXCIsIFwiUmVub3ZhciB1biBwcsOpc3RhbW9cIiwgXCJWZXIgbWlzIHByw6lzdGFtb3NcIiwgXCJQYWdhciB1bmEgbXVsdGFcIixcbiAgXCJDYW1iaWFyIGxhIGNvbnRyYXNlw7FhXCIsIFwiRWxlZ2lyIGVsIGlkaW9tYVwiLCBcIkhvcmFyaW9zIHkgc2VkZXNcIiwgXCJDb250YWN0YXIgY29uIGxhIGJpYmxpb3RlY2FcIiwgXCJNaXMgbGlzdGFzIGRlIGxlY3R1cmFcIl1cbnZpZXdvZiBncnVwb3MgPSB0ZXh0byhcIk5vbWJyZXMgZGUgdHVzIGdydXBvcyAoc2VwYXJhZG9zIHBvciBjb21hcylcIiwge3ZhbHVlOiBcIkJ1c2NhciwgTWlzIHByw6lzdGFtb3MsIE1pIGN1ZW50YSwgSW5mb3JtYWNpw7NuXCIsIHN1Ym1pdDogXCJVc2FyIGVzdG9zIGdydXBvc1wifSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBhc2lnbmFjaW9uID0ge1xuICBjb25zdCBub21icmVzID0gZ3J1cG9zLnNwbGl0KFwiLFwiKS5tYXAoeCA9PiB4LnRyaW0oKSkuZmlsdGVyKEJvb2xlYW4pO1xuICBjb25zdCBjYWphID0gaHRtbGA8ZGl2IGNsYXNzPVwibGFiLXRhcmpldGFzXCI+PC9kaXY+YDtcbiAgY29uc3Qgc2VscyA9IHRhcmpldGFzLm1hcCgodCwgaSkgPT4ge1xuICAgIGNvbnN0IHMgPSBzZWxlY2Npb24odCwgW1tcIlwiLCBcIkVsaWdlIHVuIGdydXBv4oCmXCJdLCAuLi5ub21icmVzLm1hcChuID0+IFtuLCBuXSldKTtcbiAgICBzLmFkZEV2ZW50TGlzdGVuZXIoXCJpbnB1dFwiLCBlID0+IHsgZS5zdG9wUHJvcGFnYXRpb24oKTsgY2FqYS52YWx1ZSA9IHNlbHMubWFwKHggPT4geC52YWx1ZSk7IGNhamEuZGlzcGF0Y2hFdmVudChuZXcgRXZlbnQoXCJpbnB1dFwiLCB7YnViYmxlczogdHJ1ZX0pKTsgfSk7XG4gICAgY2FqYS5hcHBlbmRDaGlsZChzKTsgcmV0dXJuIHM7XG4gIH0pO1xuICBjYWphLnZhbHVlID0gc2Vscy5tYXAoeCA9PiB4LnZhbHVlKTtcbiAgcmV0dXJuIGNhamE7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJzaW11bGFkb3MgPSB7XG4gIC8vIDIwIHBhcnRpY2lwYW50ZXMgc2ltdWxhZG9zOiB0cmVzIGFncnVwYWNpb25lcyBkZSBiYXNlIGNvbiBhbGdvIGRlIHZhcmlhY2nDs25cbiAgY29uc3QgYmFzZSA9IFswLCAwLCAxLCAxLCAxLCAyLCAyLCAzLCAzLCAwXTtcbiAgbGV0IHMgPSAxMTsgY29uc3Qgcm5kID0gKCkgPT4gKHMgPSAocyAqIDkzMDEgKyA0OTI5NykgJSAyMzMyODApIC8gMjMzMjgwO1xuICByZXR1cm4gQXJyYXkuZnJvbSh7bGVuZ3RoOiAyMH0sICgpID0+IGJhc2UubWFwKChnLCBpKSA9PiB7XG4gICAgY29uc3QgciA9IHJuZCgpO1xuICAgIGlmIChpID09PSA5ICYmIHIgPCAwLjQ1KSByZXR1cm4gMTsgICAgICAgLy8gwqtNaXMgbGlzdGFzwrsgYSB2ZWNlcyBjb24gbG9zIHByw6lzdGFtb3NcbiAgICBpZiAoaSA9PT0gNCAmJiByIDwgMC4zNSkgcmV0dXJuIDI7ICAgICAgIC8vIMKrUGFnYXIgdW5hIG11bHRhwrsgYSB2ZWNlcyBlbiBsYSBjdWVudGFcbiAgICBpZiAoaSA9PT0gMSAmJiByIDwgMC4zKSByZXR1cm4gMTsgICAgICAgIC8vIMKrUmVzZXJ2YXLCuyBhIHZlY2VzIGNvbiBsb3MgcHLDqXN0YW1vc1xuICAgIHJldHVybiByIDwgMC4wNiA/IE1hdGguZmxvb3Iocm5kKCkgKiA0KSA6IGc7XG4gIH0pKTtcbn1cbmp1bnRvcyA9IHRhcmpldGFzLm1hcCgoXywgaSkgPT4gdGFyamV0YXMubWFwKChfLCBqKSA9PiBzaW11bGFkb3MuZmlsdGVyKHAgPT4gcFtpXSA9PT0gcFtqXSkubGVuZ3RoIC8gc2ltdWxhZG9zLmxlbmd0aCkpXG57XG4gIGNvbnN0IHR1eW8gPSBhc2lnbmFjaW9uO1xuICBjb25zdCBjb21wbGV0byA9IHR1eW8uZXZlcnkoQm9vbGVhbik7XG4gIGxldCBhY3VlcmRvID0gMCwgcGFyZXMgPSAwO1xuICBmb3IgKGxldCBpID0gMDsgaSA8IDEwOyBpKyspIGZvciAobGV0IGogPSBpICsgMTsgaiA8IDEwOyBqKyspIHtcbiAgICBwYXJlcysrOyBjb25zdCB0ID0gdHV5b1tpXSAmJiB0dXlvW2ldID09PSB0dXlvW2pdOyBjb25zdCBtID0ganVudG9zW2ldW2pdID49IDAuNTtcbiAgICBpZiAodCA9PT0gbSkgYWN1ZXJkbysrO1xuICB9XG4gIGNvbnN0IGNlbGRhID0gMzAsIGl6cSA9IDE5MCwgYXJyaWJhID0gMTkwLCB3ID0gaXpxICsgY2VsZGEgKiAxMCArIDcwLCBoID0gYXJyaWJhICsgY2VsZGEgKiAxMCArIDEwO1xuICBjb25zdCBzdmcgPSBbYDxzdmcgdmlld0JveD1cIjAgMCAke3d9ICR7aH1cIiB3aWR0aD1cIjEwMCVcIiBzdHlsZT1cIm1heC13aWR0aDoke3d9cHhcIiByb2xlPVwiaW1nXCIgYXJpYS1sYWJlbD1cIk1hdHJpeiBkZSBzaW1pbGl0dWQgZGUgbGFzIGRpZXogdGFyamV0YXMgc2Vnw7puIGxvcyBwYXJ0aWNpcGFudGVzIHNpbXVsYWRvc1wiPmBdO1xuICB0YXJqZXRhcy5mb3JFYWNoKCh0LCBpKSA9PiB7XG4gICAgc3ZnLnB1c2goYDx0ZXh0IHg9XCIke2l6cSAtIDZ9XCIgeT1cIiR7YXJyaWJhICsgaSAqIGNlbGRhICsgMTl9XCIgdGV4dC1hbmNob3I9XCJlbmRcIiBmb250LXNpemU9XCIxMVwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIj4ke3R9PC90ZXh0PmApO1xuICAgIHN2Zy5wdXNoKGA8dGV4dCB0cmFuc2Zvcm09XCJ0cmFuc2xhdGUoJHtpenEgKyBpICogY2VsZGEgKyAxOX0sJHthcnJpYmEgLSA2fSkgcm90YXRlKC02MClcIiBmb250LXNpemU9XCIxMVwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIj4ke3R9PC90ZXh0PmApO1xuICAgIHRhcmpldGFzLmZvckVhY2goKF8sIGopID0+IHtcbiAgICAgIGNvbnN0IHYgPSBqdW50b3NbaV1bal0sIG1pc21vID0gdHV5b1tpXSAmJiB0dXlvW2ldID09PSB0dXlvW2pdO1xuICAgICAgc3ZnLnB1c2goYDxyZWN0IHg9XCIke2l6cSArIGogKiBjZWxkYX1cIiB5PVwiJHthcnJpYmEgKyBpICogY2VsZGF9XCIgd2lkdGg9XCIke2NlbGRhIC0gMn1cIiBoZWlnaHQ9XCIke2NlbGRhIC0gMn1cIiByeD1cIjNcIiBmaWxsPVwiIzJhNzhkNlwiIGZpbGwtb3BhY2l0eT1cIiR7MC4wOCArIDAuODUgKiB2fVwiIHN0cm9rZT1cIiR7bWlzbW8gJiYgaSAhPT0gaiA/IFwiI2ViNjgzNFwiIDogXCJub25lXCJ9XCIgc3Ryb2tlLXdpZHRoPVwiMi41XCIvPmApO1xuICAgICAgc3ZnLnB1c2goYDx0ZXh0IHg9XCIke2l6cSArIGogKiBjZWxkYSArIDE0fVwiIHk9XCIke2FycmliYSArIGkgKiBjZWxkYSArIDE5fVwiIHRleHQtYW5jaG9yPVwibWlkZGxlXCIgZm9udC1zaXplPVwiOVwiIGZpbGw9XCIke3YgPiAwLjU1ID8gXCIjZmZmXCIgOiBcImN1cnJlbnRDb2xvclwifVwiPiR7TWF0aC5yb3VuZCh2ICogMTAwKX08L3RleHQ+YCk7XG4gICAgfSk7XG4gIH0pO1xuICBzdmcucHVzaChcIjwvc3ZnPlwiKTtcbiAgY29uc3QgZCA9IGh0bWxgPGRpdiByb2xlPVwic3RhdHVzXCI+PC9kaXY+YDtcbiAgZC5pbm5lckhUTUwgPSBgPHA+JHtjb21wbGV0byA/IGA8c3Ryb25nPkNvaW5jaWRlcyBjb24gbGEgbWF5b3LDrWEgZW4gZWwgJHtNYXRoLnJvdW5kKDEwMCAqIGFjdWVyZG8gLyBwYXJlcyl9ICUgZGUgbG9zIHBhcmVzPC9zdHJvbmc+IChkb3MgdGFyamV0YXMganVudGFzIG8gc2VwYXJhZGFzKS5gIDogXCJBc2lnbmEgdW4gZ3J1cG8gYSB0b2RhcyBsYXMgdGFyamV0YXMgcGFyYSBjb21wYXJhciB0dSBwcm9wdWVzdGEuXCJ9PC9wPlxuICA8cCBjbGFzcz1cInNtYWxsXCI+Q2FkYSBjZWxkYSBlcyBlbCAlIGRlIHBhcnRpY2lwYW50ZXMgcXVlIGp1bnRhcm9uIGVzYXMgZG9zIHRhcmpldGFzOyBsb3MgYm9yZGVzIG5hcmFuamFzIG1hcmNhbiBsb3MgcGFyZXMgcXVlIHTDuiBoYXMganVudGFkby48L3A+JHtzdmcuam9pbihcIlwiKX1gO1xuICByZXR1cm4gZDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZ3J1cG9zJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2FzaWduYWNpb24nKSJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1486,6 +1669,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
