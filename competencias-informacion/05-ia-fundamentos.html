@@ -74,17 +74,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,10 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -410,6 +417,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./93-listas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Listas de comprobación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./91-guia-docente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Guía para el profesorado</span></a>
   </div>
 </li>
@@ -443,6 +455,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#ejercicio-6.1" id="toc-ejercicio-6.1" class="nav-link" data-scroll-target="#ejercicio-6.1">Ejercicio 6.1</a></li>
   </ul></li>
+  <li><a href="#lab-u5-modelo" id="toc-lab-u5-modelo" class="nav-link" data-scroll-target="#lab-u5-modelo">Laboratorio: un modelo de lenguaje en miniatura</a></li>
+  <li><a href="#lab-u5-verificar" id="toc-lab-u5-verificar" class="nav-link" data-scroll-target="#lab-u5-verificar">Laboratorio: verificar referencias</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-u5" id="toc-reto-u5" class="nav-link" data-scroll-target="#reto-u5">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
@@ -548,6 +563,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Lo que sabe depende de sus <strong>datos de entrenamiento</strong>: puede no conocer hechos recientes y reproducir los sesgos de esos datos.</li>
 <li>La forma de pedir importa: una <strong>instrucción</strong> (<em>prompt</em>) clara, con contexto, objetivo y formato, da mejores resultados.</li>
 </ul>
+<div id="fig-siguiente" class="quarto-float quarto-figure quarto-figure-center anchored" alt="El texto «La biblioteca ofrece …» entra en un recuadro «Modelo de lenguaje», que devuelve barras de probabilidad para la palabra siguiente: libros 46 %, acceso 31 %, servicios 15 %, café 5 % y dragones 3 %. Nota: probabilidades inventadas para ilustrar la idea.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-siguiente-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/u5_siguiente.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Cómo genera texto un modelo de lenguaje: estima la probabilidad de cada posible continuación y elige una; luego repite. Nada en el proceso comprueba que el resultado sea verdadero."><img src="figuras/u5_siguiente.svg" class="img-fluid figure-img" alt="El texto «La biblioteca ofrece …» entra en un recuadro «Modelo de lenguaje», que devuelve barras de probabilidad para la palabra siguiente: libros 46 %, acceso 31 %, servicios 15 %, café 5 % y dragones 3 %. Nota: probabilidades inventadas para ilustrar la idea."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-siguiente-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Cómo genera texto un modelo de lenguaje: estima la probabilidad de cada posible continuación y elige una; luego repite. Nada en el proceso comprueba que el resultado sea verdadero.
+</figcaption>
+</figure>
+</div>
 <p>Algunos sistemas combinan el modelo con un buscador o una base de documentos y responden a partir de lo que recuperan (<strong>generación aumentada por recuperación</strong>). Mejora la actualidad y permite enlazar fuentes, pero no elimina los errores: hay que comprobar que la fuente dice lo que el sistema afirma.</p>
 </section>
 <section id="aplicaciones-innovadoras-y-retos-técnicos" class="level2">
@@ -603,10 +628,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="fig-alucinacion" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A la izquierda, tres piezas: un apellido de autor del área, el nombre de una revista real y un título sobre el tema. Se combinan en una referencia completa y verosímil. Una flecha lleva a una lupa de verificación en una base de datos, que devuelve: no encontrada.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-alucinacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/u5_alucinacion.svg" class="img-fluid figure-img" alt="A la izquierda, tres piezas: un apellido de autor del área, el nombre de una revista real y un título sobre el tema. Se combinan en una referencia completa y verosímil. Una flecha lleva a una lupa de verificación en una base de datos, que devuelve: no encontrada.">
+<a href="figuras/u5_alucinacion.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Cómo surge una referencia inventada. El modelo combina piezas plausibles (un autor real, una revista real, un título del tema) en una referencia que no existe; solo la verificación en una base de datos lo detecta."><img src="figuras/u5_alucinacion.svg" class="img-fluid figure-img" alt="A la izquierda, tres piezas: un apellido de autor del área, el nombre de una revista real y un título sobre el tema. Se combinan en una referencia completa y verosímil. Una flecha lleva a una lupa de verificación en una base de datos, que devuelve: no encontrada."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-alucinacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Cómo surge una referencia inventada. El modelo combina piezas plausibles (un autor real, una revista real, un título del tema) en una referencia que no existe; solo la verificación en una base de datos lo detecta.
+Figura&nbsp;2: Cómo surge una referencia inventada. El modelo combina piezas plausibles (un autor real, una revista real, un título del tema) en una referencia que no existe; solo la verificación en una base de datos lo detecta.
 </figcaption>
 </figure>
 </div>
@@ -707,6 +732,246 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidTVfaW52ZW50YWRhcyJ9
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InU1X2ludmVudGFkYXMifSwiY29kZSI6ImlmIChpc1RSVUUoYWxsLmVxdWFsKGFzLm51bWVyaWMoLnJlc3VsdCksIDAuNCkpKSB7XG4gIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBcIkNvcnJlY3RvOiBlbCA0MCAlIG5vIGVzdMOhIGVuIGxhIGJhc2UgZGUgZGF0b3MuXCIpXG59IGVsc2Uge1xuICBsaXN0KGNvcnJlY3QgPSBGQUxTRSwgbWVzc2FnZSA9IFwiVXNhIGJhc2VfZGF0b3MgZGVudHJvIGRlICVpbiUuXCIpXG59In0=
 </script>
 </section>
+</section>
+<section id="lab-u5-modelo" class="level2">
+<h2 class="anchored" data-anchor-id="lab-u5-modelo">Laboratorio: un modelo de lenguaje en miniatura</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · se ejecuta en tu navegador</p>
+</div>
+<p>Este modelo de juguete ha «leído» solo una docena de frases sobre bibliotecas e información. Para cada palabra cuenta qué palabras la siguen y con qué frecuencia (un <strong>modelo de bigramas</strong>). Elige una palabra de inicio y la <strong>temperatura</strong>: con temperatura baja elige casi siempre la palabra más probable; con temperatura alta, se arriesga más. Genera varias frases: verás textos fluidos y <strong>plausibles</strong>, algunos de ellos falsos. Los grandes modelos son muchísimo más complejos, pero comparten esta idea: predecir lo siguiente, no comprobar la verdad.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="163" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 162;"><span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">texto</span></span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>seleccion <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>boton <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">boton</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="172" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 171;"><span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a>corpus <span class="op">=</span> <span class="vs">`la biblioteca ofrece libros y revistas a los estudiantes .</span></span>
+<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a><span class="vs">la biblioteca ofrece acceso a bases de datos científicas .</span></span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="vs">los estudiantes buscan artículos en bases de datos .</span></span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a><span class="vs">los estudiantes citan los artículos con su referencia .</span></span>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a><span class="vs">la referencia incluye el autor y el año del artículo .</span></span>
+<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a><span class="vs">el autor del artículo publica en una revista científica .</span></span>
+<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a><span class="vs">una revista científica revisa los artículos por pares .</span></span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="vs">los artículos revisados ofrecen información fiable .</span></span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a><span class="vs">la información fiable cita sus fuentes .</span></span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="vs">la desinformación imita la información fiable .</span></span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a><span class="vs">los estudiantes verifican la información en varias fuentes .</span></span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a><span class="vs">el catálogo de la biblioteca ofrece libros y artículos .`</span></span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a>modelo <span class="op">=</span> {</span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> m <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>()<span class="op">;</span></span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">const</span> f <span class="kw">of</span> corpus<span class="op">.</span><span class="fu">split</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)) {</span>
+<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> p <span class="op">=</span> f<span class="op">.</span><span class="fu">trim</span>()<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\s+</span><span class="ss">/</span>)<span class="op">;</span></span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">+</span> <span class="dv">1</span> <span class="op">&lt;</span> p<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="op">!</span>m<span class="op">.</span><span class="fu">has</span>(p[i])) m<span class="op">.</span><span class="fu">set</span>(p[i]<span class="op">,</span> <span class="kw">new</span> <span class="bu">Map</span>())<span class="op">;</span></span>
+<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> s <span class="op">=</span> m<span class="op">.</span><span class="fu">get</span>(p[i])<span class="op">;</span> s<span class="op">.</span><span class="fu">set</span>(p[i <span class="op">+</span> <span class="dv">1</span>]<span class="op">,</span> (s<span class="op">.</span><span class="fu">get</span>(p[i <span class="op">+</span> <span class="dv">1</span>]) <span class="op">||</span> <span class="dv">0</span>) <span class="op">+</span> <span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> m<span class="op">;</span></span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>viewof inicio <span class="op">=</span> <span class="fu">seleccion</span>(<span class="st">"Palabra de inicio"</span><span class="op">,</span> [<span class="op">...</span>modelo<span class="op">.</span><span class="fu">keys</span>()]<span class="op">.</span><span class="fu">filter</span>(w <span class="kw">=&gt;</span> w <span class="op">!==</span> <span class="st">"."</span>)<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a<span class="op">.</span><span class="fu">localeCompare</span>(b<span class="op">,</span> <span class="st">"es"</span>))<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"los"</span>})</span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a>viewof temperatura <span class="op">=</span> <span class="fu">rango</span>(<span class="st">"Temperatura"</span><span class="op">,</span> [<span class="fl">0.1</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">1</span>})</span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a>viewof generar <span class="op">=</span> <span class="fu">boton</span>(<span class="st">"Generar otra frase"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="202" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 201;"><span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a>probs <span class="op">=</span> (w<span class="op">,</span> t) <span class="kw">=&gt;</span> {</span>
+<span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> s <span class="op">=</span> modelo<span class="op">.</span><span class="fu">get</span>(w)<span class="op">;</span> <span class="cf">if</span> (<span class="op">!</span>s) <span class="cf">return</span> []<span class="op">;</span></span>
+<span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pares <span class="op">=</span> [<span class="op">...</span>s<span class="op">.</span><span class="fu">entries</span>()]<span class="op">,</span> pesos <span class="op">=</span> pares<span class="op">.</span><span class="fu">map</span>(([<span class="op">,</span> c]) <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span>(c<span class="op">,</span> <span class="dv">1</span> <span class="op">/</span> t))<span class="op">,</span> z <span class="op">=</span> pesos<span class="op">.</span><span class="fu">reduce</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a <span class="op">+</span> b<span class="op">,</span> <span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> pares<span class="op">.</span><span class="fu">map</span>(([p]<span class="op">,</span> i) <span class="kw">=&gt;</span> [p<span class="op">,</span> pesos[i] <span class="op">/</span> z])<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> b[<span class="dv">1</span>] <span class="op">-</span> a[<span class="dv">1</span>])<span class="op">;</span></span>
+<span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a>frase <span class="op">=</span> {</span>
+<span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a>  generar<span class="op">;</span></span>
+<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> out <span class="op">=</span> [inicio]<span class="op">;</span> <span class="kw">let</span> w <span class="op">=</span> inicio<span class="op">;</span></span>
+<span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> k <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> k <span class="op">&lt;</span> <span class="dv">18</span> <span class="op">&amp;&amp;</span> w <span class="op">!==</span> <span class="st">"."</span><span class="op">;</span> k<span class="op">++</span>) {</span>
+<span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> ps <span class="op">=</span> <span class="fu">probs</span>(w<span class="op">,</span> temperatura)<span class="op">;</span> <span class="cf">if</span> (<span class="op">!</span>ps<span class="op">.</span><span class="at">length</span>) <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> r <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>()<span class="op">,</span> acc <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> elegido <span class="op">=</span> ps[ps<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span>][<span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">const</span> [p<span class="op">,</span> q] <span class="kw">of</span> ps) { acc <span class="op">+=</span> q<span class="op">;</span> <span class="cf">if</span> (r <span class="op">&lt;=</span> acc) { elegido <span class="op">=</span> p<span class="op">;</span> <span class="cf">break</span><span class="op">;</span> } }</span>
+<span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a>    out<span class="op">.</span><span class="fu">push</span>(elegido)<span class="op">;</span> w <span class="op">=</span> elegido<span class="op">;</span></span>
+<span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> out<span class="op">.</span><span class="fu">join</span>(<span class="st">" "</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="st">" ."</span><span class="op">,</span> <span class="st">"."</span>)<span class="op">;</span></span>
+<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;p&gt;&lt;strong&gt;Frase generada:&lt;/strong&gt; «</span><span class="sc">${</span>frase<span class="sc">}</span><span class="vs">»&lt;/p&gt;</span></span>
+<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;p&gt;&lt;strong&gt;Qué puede seguir a «</span><span class="sc">${</span>inicio<span class="sc">}</span><span class="vs">»&lt;/strong&gt; con temperatura </span><span class="sc">${</span>temperatura<span class="sc">}</span><span class="vs">:&lt;/p&gt;</span></span>
+<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;table class="table table-sm"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Siguiente palabra&lt;/th&gt;&lt;th scope="col"&gt;Probabilidad&lt;/th&gt;&lt;th scope="col"&gt;&lt;span class="visually-hidden"&gt;Barra&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;</span></span>
+<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a><span class="sc">${</span><span class="fu">probs</span>(inicio<span class="op">,</span> temperatura)<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">6</span>)<span class="op">.</span><span class="fu">map</span>(([p<span class="op">,</span> q]) <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;tr&gt;&lt;td&gt;</span><span class="sc">${</span>p<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>(<span class="dv">100</span> <span class="op">*</span> q)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">0</span>)<span class="sc">}</span><span class="vs"> %&lt;/td&gt;&lt;td style="width:50%"&gt;&lt;div style="height:.8rem;border-radius:2px;background:#2a78d6;width:</span><span class="sc">${</span><span class="dv">100</span> <span class="op">*</span> q<span class="sc">}</span><span class="vs">%"&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`</span>)<span class="sc">}</span></span>
+<span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;`</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<p><strong>Prueba:</strong> genera frases desde «la» con temperatura 2. ¿Alguna afirma algo que el corpus no dice? Eso es, a pequeña escala, una alucinación.</p>
+</div>
+</section>
+<section id="lab-u5-verificar" class="level2">
+<h2 class="anchored" data-anchor-id="lab-u5-verificar">Laboratorio: verificar referencias</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · datos en vivo de doi.org y Crossref</p>
+</div>
+<p>Pega los DOI que te ha dado una IA (uno por línea; también vale el enlace completo). El laboratorio comprueba en <strong>doi.org</strong> si cada DOI existe y, si es de Crossref, trae el título y el año para que compruebes que coinciden con lo que te dijo la IA.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="238" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 237;"><span id="cb5-238"><a href="#cb5-238" aria-hidden="true" tabindex="-1"></a>viewof lista <span class="op">=</span> <span class="fu">area</span>(<span class="st">"DOI (uno por línea)"</span><span class="op">,</span> {<span class="dt">rows</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">submit</span><span class="op">:</span> <span class="st">"Verificar"</span><span class="op">,</span></span>
+<span id="cb5-239"><a href="#cb5-239" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="st">"10.1038/s41598-023-41032-5</span><span class="sc">\n</span><span class="st">10.1016/j.ipm.2019.102041</span><span class="sc">\n</span><span class="st">10.1093/jis/abc123</span><span class="sc">\n</span><span class="st">https://doi.org/10.1145/3442188.3445922"</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="244" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 243;"><span id="cb6-244"><a href="#cb6-244" aria-hidden="true" tabindex="-1"></a>verificacion <span class="op">=</span> {</span>
+<span id="cb6-245"><a href="#cb6-245" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> dois <span class="op">=</span> lista<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\n+</span><span class="ss">/</span>)<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="fu">trim</span>()<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss">https</span><span class="sc">?</span><span class="ss">:</span><span class="sc">\/\/(</span><span class="ss">dx</span><span class="sc">\.)?</span><span class="ss">doi</span><span class="sc">\.</span><span class="ss">org</span><span class="sc">\/</span><span class="ss">/i</span><span class="op">,</span> <span class="st">""</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss">doi:</span><span class="sc">\s*</span><span class="ss">/i</span><span class="op">,</span> <span class="st">""</span>))<span class="op">.</span><span class="fu">filter</span>(<span class="bu">Boolean</span>)<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">20</span>)<span class="op">;</span></span>
+<span id="cb6-246"><a href="#cb6-246" aria-hidden="true" tabindex="-1"></a>  <span class="kw">yield</span> {<span class="dt">cargando</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">;</span></span>
+<span id="cb6-247"><a href="#cb6-247" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> uno <span class="op">=</span> <span class="kw">async</span> d <span class="kw">=&gt;</span> {</span>
+<span id="cb6-248"><a href="#cb6-248" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">!</span><span class="ss">/</span><span class="sc">^</span><span class="ss">10</span><span class="sc">\.\d{4,9}\/\S+$</span><span class="ss">/</span><span class="op">.</span><span class="fu">test</span>(d)) <span class="cf">return</span> {d<span class="op">,</span> <span class="dt">estado</span><span class="op">:</span> <span class="st">"formato"</span><span class="op">,</span> <span class="dt">texto</span><span class="op">:</span> <span class="st">"No tiene formato de DOI."</span>}<span class="op">;</span></span>
+<span id="cb6-249"><a href="#cb6-249" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span> {</span>
+<span id="cb6-250"><a href="#cb6-250" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> h <span class="op">=</span> <span class="cf">await</span> (<span class="cf">await</span> <span class="fu">fetch</span>(<span class="st">"https://doi.org/api/handles/"</span> <span class="op">+</span> <span class="pp">encodeURI</span>(d)))<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
+<span id="cb6-251"><a href="#cb6-251" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (h<span class="op">.</span><span class="at">responseCode</span> <span class="op">!==</span> <span class="dv">1</span>) <span class="cf">return</span> {d<span class="op">,</span> <span class="dt">estado</span><span class="op">:</span> <span class="st">"no"</span><span class="op">,</span> <span class="dt">texto</span><span class="op">:</span> <span class="st">"No existe en doi.org."</span>}<span class="op">;</span></span>
+<span id="cb6-252"><a href="#cb6-252" aria-hidden="true" tabindex="-1"></a>      <span class="cf">try</span> {</span>
+<span id="cb6-253"><a href="#cb6-253" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> r <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(<span class="st">"https://api.crossref.org/works/"</span> <span class="op">+</span> <span class="pp">encodeURIComponent</span>(d))<span class="op">;</span></span>
+<span id="cb6-254"><a href="#cb6-254" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (r<span class="op">.</span><span class="at">ok</span>) { <span class="kw">const</span> m <span class="op">=</span> (<span class="cf">await</span> r<span class="op">.</span><span class="fu">json</span>())<span class="op">.</span><span class="at">message</span><span class="op">;</span></span>
+<span id="cb6-255"><a href="#cb6-255" aria-hidden="true" tabindex="-1"></a>          <span class="kw">const</span> anio <span class="op">=</span> (m<span class="op">.</span><span class="at">issued</span><span class="op">?.</span>[<span class="st">"date-parts"</span>]<span class="op">?.</span>[<span class="dv">0</span>]<span class="op">?.</span>[<span class="dv">0</span>]) <span class="op">??</span> <span class="st">"s. f."</span><span class="op">;</span></span>
+<span id="cb6-256"><a href="#cb6-256" aria-hidden="true" tabindex="-1"></a>          <span class="cf">return</span> {d<span class="op">,</span> <span class="dt">estado</span><span class="op">:</span> <span class="st">"si"</span><span class="op">,</span> <span class="dt">texto</span><span class="op">:</span> <span class="vs">`</span><span class="sc">${</span>(m<span class="op">.</span><span class="at">title</span> <span class="op">||</span> [<span class="st">""</span>])[<span class="dv">0</span>]<span class="sc">}</span><span class="vs"> (</span><span class="sc">${</span>anio<span class="sc">}</span><span class="vs">). </span><span class="sc">${</span>(m[<span class="st">"container-title"</span>] <span class="op">||</span> [<span class="st">""</span>])[<span class="dv">0</span>]<span class="sc">}</span><span class="vs">`</span>}<span class="op">;</span> }</span>
+<span id="cb6-257"><a href="#cb6-257" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">catch</span> (e) {}</span>
+<span id="cb6-258"><a href="#cb6-258" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> {d<span class="op">,</span> <span class="dt">estado</span><span class="op">:</span> <span class="st">"si"</span><span class="op">,</span> <span class="dt">texto</span><span class="op">:</span> <span class="st">"Existe (registrado fuera de Crossref, por ejemplo en DataCite)."</span>}<span class="op">;</span></span>
+<span id="cb6-259"><a href="#cb6-259" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">catch</span> (e) { <span class="cf">return</span> {d<span class="op">,</span> <span class="dt">estado</span><span class="op">:</span> <span class="st">"error"</span><span class="op">,</span> <span class="dt">texto</span><span class="op">:</span> <span class="st">"No se ha podido consultar (¿sin conexión?)."</span>}<span class="op">;</span> }</span>
+<span id="cb6-260"><a href="#cb6-260" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb6-261"><a href="#cb6-261" aria-hidden="true" tabindex="-1"></a>  <span class="kw">yield</span> {<span class="dt">filas</span><span class="op">:</span> <span class="cf">await</span> <span class="bu">Promise</span><span class="op">.</span><span class="fu">all</span>(dois<span class="op">.</span><span class="fu">map</span>(uno))}<span class="op">;</span></span>
+<span id="cb6-262"><a href="#cb6-262" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb7" data-startfrom="267" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 266;"><span id="cb7-267"><a href="#cb7-267" aria-hidden="true" tabindex="-1"></a>verificacion<span class="op">.</span><span class="at">cargando</span> <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;p role="status"&gt;Verificando…&lt;/p&gt;`</span> <span class="op">:</span> <span class="fu">html</span><span class="vs">`&lt;table class="table table-sm" role="status"&gt;</span></span>
+<span id="cb7-268"><a href="#cb7-268" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;caption&gt;</span><span class="sc">${</span>verificacion<span class="op">.</span><span class="at">filas</span><span class="op">.</span><span class="fu">filter</span>(f <span class="kw">=&gt;</span> f<span class="op">.</span><span class="at">estado</span> <span class="op">===</span> <span class="st">"si"</span>)<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> de </span><span class="sc">${</span>verificacion<span class="op">.</span><span class="at">filas</span><span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> DOI existen&lt;/caption&gt;</span></span>
+<span id="cb7-269"><a href="#cb7-269" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;DOI&lt;/th&gt;&lt;th scope="col"&gt;¿Existe?&lt;/th&gt;&lt;th scope="col"&gt;Lo que dice el registro&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;</span></span>
+<span id="cb7-270"><a href="#cb7-270" aria-hidden="true" tabindex="-1"></a><span class="sc">${</span>verificacion<span class="op">.</span><span class="at">filas</span><span class="op">.</span><span class="fu">map</span>(f <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;tr&gt;&lt;td&gt;&lt;code&gt;</span><span class="sc">${</span>f<span class="op">.</span><span class="at">d</span><span class="sc">}</span><span class="vs">&lt;/code&gt;&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>f<span class="op">.</span><span class="at">estado</span> <span class="op">===</span> <span class="st">"si"</span> <span class="op">?</span> <span class="st">"✓ Sí"</span> <span class="op">:</span> f<span class="op">.</span><span class="at">estado</span> <span class="op">===</span> <span class="st">"no"</span> <span class="op">?</span> <span class="st">"✗ No"</span> <span class="op">:</span> <span class="st">"?"</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>f<span class="op">.</span><span class="at">texto</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;/tr&gt;`</span>)<span class="sc">}</span></span>
+<span id="cb7-271"><a href="#cb7-271" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/tbody&gt;&lt;/table&gt;`</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<p>Un DOI que existe no basta: comprueba que <strong>el título, los autores y el año</strong> coinciden con la referencia que te dio la IA. Walters y Wilder (2023) encontraron, además de referencias inventadas, muchas referencias reales con errores en sus datos.</p>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-clasificar" id="ia-u5-riesgo"><script type="application/json" class="ia-datos">{"categorias":["Bajo","Medio","Alto","Inaceptable"],"enunciado":"","explicacion":"","items":[{"categoria":"Bajo","explicacion":"","texto":"Pedir que revise la ortografía de un texto que has escrito tú"},{"categoria":"Medio","explicacion":"Contrasta la explicación con una fuente fiable.","texto":"Pedir que te explique un concepto que no entiendes"},{"categoria":"Alto","explicacion":"Muchas pueden ser inventadas.","texto":"Pedir una lista de referencias para tu trabajo y copiarla sin\ncomprobar"},{"categoria":"Medio","explicacion":"El resumen puede omitir o inventar.","texto":"Pedir que resuma un artículo que no vas a leer"},{"categoria":"Inaceptable","explicacion":"","texto":"Entregar como propio un trabajo escrito por la IA"},{"categoria":"Bajo","explicacion":"","texto":"Generar ideas para elegir el tema del trabajo"},{"categoria":"Alto","explicacion":"Pone en riesgo la privacidad de terceros.","texto":"Subir los datos personales de los compañeros de un grupo para que\nreparta tareas"}],"tipo":"clasificar","titulo":"¿Cuánto riesgo tiene este uso?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-u5-reto"><script type="application/json" class="ia-datos">{"categorias":["Veracidad","Actualidad","Explicabilidad","Sesgos","Eficiencia","Detección"],"enunciado":"","explicacion":"","items":[{"categoria":"Actualidad","explicacion":"","texto":"El asistente no sabe quién ganó unas elecciones del mes pasado"},{"categoria":"Explicabilidad","explicacion":"","texto":"Nadie puede explicar por qué el modelo eligió esa respuesta"},{"categoria":"Sesgos","explicacion":"","texto":"El modelo asocia «enfermera» con mujer y «cirujano» con hombre"},{"categoria":"Eficiencia","explicacion":"","texto":"Entrenar un gran modelo consume tanta electricidad como cientos de\nhogares en un año"},{"categoria":"Detección","explicacion":"","texto":"Una profesora no puede saber con seguridad si un texto lo escribió\nuna IA"},{"categoria":"Veracidad","explicacion":"","texto":"El modelo cita un artículo que no existe"}],"tipo":"clasificar","titulo":"¿Qué reto técnico es?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Errores frecuentes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Usar la IA como buscador bibliográfico</strong> sin verificar cada referencia.</li>
+<li><strong>Preguntarle a la propia IA si la referencia existe</strong>: puede confirmarlo con total seguridad aunque sea falsa.</li>
+<li><strong>Tomar la fluidez por exactitud</strong>: un texto bien escrito no es un texto verdadero.</li>
+<li><strong>Delegar lo que la asignatura quiere que aprendas.</strong> La IA puede ayudarte a aprender, no aprender por ti.</li>
+<li><strong>No declarar el uso</strong> cuando el profesorado lo pide (capítulo siguiente).</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="reto-u5" class="level2">
 <h2 class="anchored" data-anchor-id="reto-u5">Reto evaluable</h2>
@@ -891,23 +1156,26 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -916,10 +1184,12 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -927,13 +1197,13 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -946,6 +1216,9 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -972,10 +1245,14 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -1004,7 +1281,7 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRleHRvID0gd2luZG93LkxhYi50ZXh0b1xuYXJlYSA9IHdpbmRvdy5MYWIuYXJlYVxuc2VsZWNjaW9uID0gd2luZG93LkxhYi5zZWxlY2Npb25cbnJhbmdvID0gd2luZG93LkxhYi5yYW5nb1xuYm90b24gPSB3aW5kb3cuTGFiLmJvdG9uXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJjb3JwdXMgPSBgbGEgYmlibGlvdGVjYSBvZnJlY2UgbGlicm9zIHkgcmV2aXN0YXMgYSBsb3MgZXN0dWRpYW50ZXMgLlxubGEgYmlibGlvdGVjYSBvZnJlY2UgYWNjZXNvIGEgYmFzZXMgZGUgZGF0b3MgY2llbnTDrWZpY2FzIC5cbmxvcyBlc3R1ZGlhbnRlcyBidXNjYW4gYXJ0w61jdWxvcyBlbiBiYXNlcyBkZSBkYXRvcyAuXG5sb3MgZXN0dWRpYW50ZXMgY2l0YW4gbG9zIGFydMOtY3Vsb3MgY29uIHN1IHJlZmVyZW5jaWEgLlxubGEgcmVmZXJlbmNpYSBpbmNsdXllIGVsIGF1dG9yIHkgZWwgYcOxbyBkZWwgYXJ0w61jdWxvIC5cbmVsIGF1dG9yIGRlbCBhcnTDrWN1bG8gcHVibGljYSBlbiB1bmEgcmV2aXN0YSBjaWVudMOtZmljYSAuXG51bmEgcmV2aXN0YSBjaWVudMOtZmljYSByZXZpc2EgbG9zIGFydMOtY3Vsb3MgcG9yIHBhcmVzIC5cbmxvcyBhcnTDrWN1bG9zIHJldmlzYWRvcyBvZnJlY2VuIGluZm9ybWFjacOzbiBmaWFibGUgLlxubGEgaW5mb3JtYWNpw7NuIGZpYWJsZSBjaXRhIHN1cyBmdWVudGVzIC5cbmxhIGRlc2luZm9ybWFjacOzbiBpbWl0YSBsYSBpbmZvcm1hY2nDs24gZmlhYmxlIC5cbmxvcyBlc3R1ZGlhbnRlcyB2ZXJpZmljYW4gbGEgaW5mb3JtYWNpw7NuIGVuIHZhcmlhcyBmdWVudGVzIC5cbmVsIGNhdMOhbG9nbyBkZSBsYSBiaWJsaW90ZWNhIG9mcmVjZSBsaWJyb3MgeSBhcnTDrWN1bG9zIC5gXG5tb2RlbG8gPSB7XG4gIGNvbnN0IG0gPSBuZXcgTWFwKCk7XG4gIGZvciAoY29uc3QgZiBvZiBjb3JwdXMuc3BsaXQoXCJcXG5cIikpIHtcbiAgICBjb25zdCBwID0gZi50cmltKCkuc3BsaXQoL1xccysvKTtcbiAgICBmb3IgKGxldCBpID0gMDsgaSArIDEgPCBwLmxlbmd0aDsgaSsrKSB7XG4gICAgICBpZiAoIW0uaGFzKHBbaV0pKSBtLnNldChwW2ldLCBuZXcgTWFwKCkpO1xuICAgICAgY29uc3QgcyA9IG0uZ2V0KHBbaV0pOyBzLnNldChwW2kgKyAxXSwgKHMuZ2V0KHBbaSArIDFdKSB8fCAwKSArIDEpO1xuICAgIH1cbiAgfVxuICByZXR1cm4gbTtcbn1cbnZpZXdvZiBpbmljaW8gPSBzZWxlY2Npb24oXCJQYWxhYnJhIGRlIGluaWNpb1wiLCBbLi4ubW9kZWxvLmtleXMoKV0uZmlsdGVyKHcgPT4gdyAhPT0gXCIuXCIpLnNvcnQoKGEsIGIpID0+IGEubG9jYWxlQ29tcGFyZShiLCBcImVzXCIpKSwge3ZhbHVlOiBcImxvc1wifSlcbnZpZXdvZiB0ZW1wZXJhdHVyYSA9IHJhbmdvKFwiVGVtcGVyYXR1cmFcIiwgWzAuMSwgMl0sIHtzdGVwOiAwLjEsIHZhbHVlOiAxfSlcbnZpZXdvZiBnZW5lcmFyID0gYm90b24oXCJHZW5lcmFyIG90cmEgZnJhc2VcIilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InByb2JzID0gKHcsIHQpID0+IHtcbiAgY29uc3QgcyA9IG1vZGVsby5nZXQodyk7IGlmICghcykgcmV0dXJuIFtdO1xuICBjb25zdCBwYXJlcyA9IFsuLi5zLmVudHJpZXMoKV0sIHBlc29zID0gcGFyZXMubWFwKChbLCBjXSkgPT4gTWF0aC5wb3coYywgMSAvIHQpKSwgeiA9IHBlc29zLnJlZHVjZSgoYSwgYikgPT4gYSArIGIsIDApO1xuICByZXR1cm4gcGFyZXMubWFwKChbcF0sIGkpID0+IFtwLCBwZXNvc1tpXSAvIHpdKS5zb3J0KChhLCBiKSA9PiBiWzFdIC0gYVsxXSk7XG59XG5mcmFzZSA9IHtcbiAgZ2VuZXJhcjtcbiAgY29uc3Qgb3V0ID0gW2luaWNpb107IGxldCB3ID0gaW5pY2lvO1xuICBmb3IgKGxldCBrID0gMDsgayA8IDE4ICYmIHcgIT09IFwiLlwiOyBrKyspIHtcbiAgICBjb25zdCBwcyA9IHByb2JzKHcsIHRlbXBlcmF0dXJhKTsgaWYgKCFwcy5sZW5ndGgpIGJyZWFrO1xuICAgIGxldCByID0gTWF0aC5yYW5kb20oKSwgYWNjID0gMCwgZWxlZ2lkbyA9IHBzW3BzLmxlbmd0aCAtIDFdWzBdO1xuICAgIGZvciAoY29uc3QgW3AsIHFdIG9mIHBzKSB7IGFjYyArPSBxOyBpZiAociA8PSBhY2MpIHsgZWxlZ2lkbyA9IHA7IGJyZWFrOyB9IH1cbiAgICBvdXQucHVzaChlbGVnaWRvKTsgdyA9IGVsZWdpZG87XG4gIH1cbiAgcmV0dXJuIG91dC5qb2luKFwiIFwiKS5yZXBsYWNlKFwiIC5cIiwgXCIuXCIpO1xufVxuaHRtbGA8ZGl2IHJvbGU9XCJzdGF0dXNcIj48cD48c3Ryb25nPkZyYXNlIGdlbmVyYWRhOjwvc3Ryb25nPiDCqyR7ZnJhc2V9wrs8L3A+XG48cD48c3Ryb25nPlF1w6kgcHVlZGUgc2VndWlyIGEgwqske2luaWNpb33Cuzwvc3Ryb25nPiBjb24gdGVtcGVyYXR1cmEgJHt0ZW1wZXJhdHVyYX06PC9wPlxuPHRhYmxlIGNsYXNzPVwidGFibGUgdGFibGUtc21cIj48dGhlYWQ+PHRyPjx0aCBzY29wZT1cImNvbFwiPlNpZ3VpZW50ZSBwYWxhYnJhPC90aD48dGggc2NvcGU9XCJjb2xcIj5Qcm9iYWJpbGlkYWQ8L3RoPjx0aCBzY29wZT1cImNvbFwiPjxzcGFuIGNsYXNzPVwidmlzdWFsbHktaGlkZGVuXCI+QmFycmE8L3NwYW4+PC90aD48L3RyPjwvdGhlYWQ+PHRib2R5PlxuJHtwcm9icyhpbmljaW8sIHRlbXBlcmF0dXJhKS5zbGljZSgwLCA2KS5tYXAoKFtwLCBxXSkgPT4gaHRtbGA8dHI+PHRkPiR7cH08L3RkPjx0ZD4keygxMDAgKiBxKS50b0ZpeGVkKDApfSAlPC90ZD48dGQgc3R5bGU9XCJ3aWR0aDo1MCVcIj48ZGl2IHN0eWxlPVwiaGVpZ2h0Oi44cmVtO2JvcmRlci1yYWRpdXM6MnB4O2JhY2tncm91bmQ6IzJhNzhkNjt3aWR0aDokezEwMCAqIHF9JVwiPjwvZGl2PjwvdGQ+PC90cj5gKX1cbjwvdGJvZHk+PC90YWJsZT48L2Rpdj5gXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgbGlzdGEgPSBhcmVhKFwiRE9JICh1bm8gcG9yIGzDrW5lYSlcIiwge3Jvd3M6IDUsIHN1Ym1pdDogXCJWZXJpZmljYXJcIixcbiAgdmFsdWU6IFwiMTAuMTAzOC9zNDE1OTgtMDIzLTQxMDMyLTVcXG4xMC4xMDE2L2ouaXBtLjIwMTkuMTAyMDQxXFxuMTAuMTA5My9qaXMvYWJjMTIzXFxuaHR0cHM6Ly9kb2kub3JnLzEwLjExNDUvMzQ0MjE4OC4zNDQ1OTIyXCJ9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC01IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmVyaWZpY2FjaW9uID0ge1xuICBjb25zdCBkb2lzID0gbGlzdGEuc3BsaXQoL1xcbisvKS5tYXAoeCA9PiB4LnRyaW0oKS5yZXBsYWNlKC9eaHR0cHM/OlxcL1xcLyhkeFxcLik/ZG9pXFwub3JnXFwvL2ksIFwiXCIpLnJlcGxhY2UoL15kb2k6XFxzKi9pLCBcIlwiKSkuZmlsdGVyKEJvb2xlYW4pLnNsaWNlKDAsIDIwKTtcbiAgeWllbGQge2NhcmdhbmRvOiB0cnVlfTtcbiAgY29uc3QgdW5vID0gYXN5bmMgZCA9PiB7XG4gICAgaWYgKCEvXjEwXFwuXFxkezQsOX1cXC9cXFMrJC8udGVzdChkKSkgcmV0dXJuIHtkLCBlc3RhZG86IFwiZm9ybWF0b1wiLCB0ZXh0bzogXCJObyB0aWVuZSBmb3JtYXRvIGRlIERPSS5cIn07XG4gICAgdHJ5IHtcbiAgICAgIGNvbnN0IGggPSBhd2FpdCAoYXdhaXQgZmV0Y2goXCJodHRwczovL2RvaS5vcmcvYXBpL2hhbmRsZXMvXCIgKyBlbmNvZGVVUkkoZCkpKS5qc29uKCk7XG4gICAgICBpZiAoaC5yZXNwb25zZUNvZGUgIT09IDEpIHJldHVybiB7ZCwgZXN0YWRvOiBcIm5vXCIsIHRleHRvOiBcIk5vIGV4aXN0ZSBlbiBkb2kub3JnLlwifTtcbiAgICAgIHRyeSB7XG4gICAgICAgIGNvbnN0IHIgPSBhd2FpdCBmZXRjaChcImh0dHBzOi8vYXBpLmNyb3NzcmVmLm9yZy93b3Jrcy9cIiArIGVuY29kZVVSSUNvbXBvbmVudChkKSk7XG4gICAgICAgIGlmIChyLm9rKSB7IGNvbnN0IG0gPSAoYXdhaXQgci5qc29uKCkpLm1lc3NhZ2U7XG4gICAgICAgICAgY29uc3QgYW5pbyA9IChtLmlzc3VlZD8uW1wiZGF0ZS1wYXJ0c1wiXT8uWzBdPy5bMF0pID8/IFwicy4gZi5cIjtcbiAgICAgICAgICByZXR1cm4ge2QsIGVzdGFkbzogXCJzaVwiLCB0ZXh0bzogYCR7KG0udGl0bGUgfHwgW1wiXCJdKVswXX0gKCR7YW5pb30pLiAkeyhtW1wiY29udGFpbmVyLXRpdGxlXCJdIHx8IFtcIlwiXSlbMF19YH07IH1cbiAgICAgIH0gY2F0Y2ggKGUpIHt9XG4gICAgICByZXR1cm4ge2QsIGVzdGFkbzogXCJzaVwiLCB0ZXh0bzogXCJFeGlzdGUgKHJlZ2lzdHJhZG8gZnVlcmEgZGUgQ3Jvc3NyZWYsIHBvciBlamVtcGxvIGVuIERhdGFDaXRlKS5cIn07XG4gICAgfSBjYXRjaCAoZSkgeyByZXR1cm4ge2QsIGVzdGFkbzogXCJlcnJvclwiLCB0ZXh0bzogXCJObyBzZSBoYSBwb2RpZG8gY29uc3VsdGFyICjCv3NpbiBjb25leGnDs24/KS5cIn07IH1cbiAgfTtcbiAgeWllbGQge2ZpbGFzOiBhd2FpdCBQcm9taXNlLmFsbChkb2lzLm1hcCh1bm8pKX07XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2ZXJpZmljYWNpb24uY2FyZ2FuZG8gPyBodG1sYDxwIHJvbGU9XCJzdGF0dXNcIj5WZXJpZmljYW5kb+KApjwvcD5gIDogaHRtbGA8dGFibGUgY2xhc3M9XCJ0YWJsZSB0YWJsZS1zbVwiIHJvbGU9XCJzdGF0dXNcIj5cbjxjYXB0aW9uPiR7dmVyaWZpY2FjaW9uLmZpbGFzLmZpbHRlcihmID0+IGYuZXN0YWRvID09PSBcInNpXCIpLmxlbmd0aH0gZGUgJHt2ZXJpZmljYWNpb24uZmlsYXMubGVuZ3RofSBET0kgZXhpc3RlbjwvY2FwdGlvbj5cbjx0aGVhZD48dHI+PHRoIHNjb3BlPVwiY29sXCI+RE9JPC90aD48dGggc2NvcGU9XCJjb2xcIj7Cv0V4aXN0ZT88L3RoPjx0aCBzY29wZT1cImNvbFwiPkxvIHF1ZSBkaWNlIGVsIHJlZ2lzdHJvPC90aD48L3RyPjwvdGhlYWQ+PHRib2R5PlxuJHt2ZXJpZmljYWNpb24uZmlsYXMubWFwKGYgPT4gaHRtbGA8dHI+PHRkPjxjb2RlPiR7Zi5kfTwvY29kZT48L3RkPjx0ZD4ke2YuZXN0YWRvID09PSBcInNpXCIgPyBcIuKckyBTw61cIiA6IGYuZXN0YWRvID09PSBcIm5vXCIgPyBcIuKclyBOb1wiIDogXCI/XCJ9PC90ZD48dGQ+JHtmLnRleHRvfTwvdGQ+PC90cj5gKX1cbjwvdGJvZHk+PC90YWJsZT5gXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2luaWNpbycpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCd0ZW1wZXJhdHVyYScpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdnZW5lcmFyJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2xpc3RhJykifV19
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1458,6 +1735,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

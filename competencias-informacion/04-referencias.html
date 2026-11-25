@@ -74,17 +74,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,10 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -410,6 +417,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./93-listas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Listas de comprobación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./91-guia-docente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Guía para el profesorado</span></a>
   </div>
 </li>
@@ -443,6 +455,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#ejercicio-4.1" id="toc-ejercicio-4.1" class="nav-link" data-scroll-target="#ejercicio-4.1">Ejercicio 4.1</a></li>
   </ul></li>
+  <li><a href="#lab-u4-doi" id="toc-lab-u4-doi" class="nav-link" data-scroll-target="#lab-u4-doi">Laboratorio: del DOI a la referencia</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-u4" id="toc-reto-u4" class="nav-link" data-scroll-target="#reto-u4">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
@@ -573,7 +587,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="fig-apa" class="quarto-float quarto-figure quarto-figure-center anchored" alt="La referencia de Bates (1989) en estilo APA, con cada parte subrayada en un color y rotulada debajo: autora, año, título del artículo, revista, volumen, número, páginas y DOI.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/u4_apa.svg" class="img-fluid figure-img" alt="La referencia de Bates (1989) en estilo APA, con cada parte subrayada en un color y rotulada debajo: autora, año, título del artículo, revista, volumen, número, páginas y DOI.">
+<a href="figuras/u4_apa.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Anatomía de una referencia de artículo en estilo APA 7: autores, año, título del artículo, revista en cursiva, volumen en cursiva, número, páginas y DOI como enlace."><img src="figuras/u4_apa.svg" class="img-fluid figure-img" alt="La referencia de Bates (1989) en estilo APA, con cada parte subrayada en un color y rotulada debajo: autora, año, título del artículo, revista, volumen, número, páginas y DOI."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Anatomía de una referencia de artículo en estilo APA 7: autores, año, título del artículo, revista en cursiva, volumen en cursiva, número, páginas y DOI como enlace.
@@ -672,6 +686,119 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidTRfb3JkZW4ifSwiY29k
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InU0X29yZGVuIn0sImNvZGUiOiJpZiAoc3RhcnRzV2l0aChhcy5jaGFyYWN0ZXIoLnJlc3VsdCksIFwiQmF0ZXNcIikpIHtcbiAgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IFwiQ29ycmVjdG86IEJhdGVzIHZhIGFudGVzIHF1ZSBCYXdkZW4uXCIpXG59IGVsc2Uge1xuICBsaXN0KGNvcnJlY3QgPSBGQUxTRSwgbWVzc2FnZSA9IFwiT3JkZW5hIGNvbiBzb3J0KCkuXCIpXG59In0=
 </script>
 </section>
+</section>
+<section id="lab-u4-doi" class="level2">
+<h2 class="anchored" data-anchor-id="lab-u4-doi">Laboratorio: del DOI a la referencia</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · datos en vivo de Crossref</p>
+</div>
+<p>Escribe un DOI y el laboratorio pide a <a href="https://www.crossref.org/">Crossref</a> la referencia en <strong>APA 7</strong>, igual que hace un gestor bibliográfico. Después, <strong>revísala</strong>: busca mayúsculas de más, cursivas que faltan o datos incompletos. Es exactamente lo que encontraron Gilmour y Cobus-Kuo (2011).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="152" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 151;"><span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">texto</span></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>seleccion <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>boton <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">boton</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="160" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 159;"><span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a>viewof doi <span class="op">=</span> <span class="fu">texto</span>(<span class="st">"DOI"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"10.1016/j.pragma.2013.07.012"</span><span class="op">,</span> <span class="dt">submit</span><span class="op">:</span> <span class="st">"Obtener la referencia"</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="165" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 164;"><span id="cb4-165"><a href="#cb4-165" aria-hidden="true" tabindex="-1"></a>referencia <span class="op">=</span> {</span>
+<span id="cb4-166"><a href="#cb4-166" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> limpio <span class="op">=</span> doi<span class="op">.</span><span class="fu">trim</span>()<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss">https</span><span class="sc">?</span><span class="ss">:</span><span class="sc">\/\/(</span><span class="ss">dx</span><span class="sc">\.)?</span><span class="ss">doi</span><span class="sc">\.</span><span class="ss">org</span><span class="sc">\/</span><span class="ss">/i</span><span class="op">,</span> <span class="st">""</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss">doi:</span><span class="sc">\s*</span><span class="ss">/i</span><span class="op">,</span> <span class="st">""</span>)<span class="op">;</span></span>
+<span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span><span class="ss">/</span><span class="sc">^</span><span class="ss">10</span><span class="sc">\.\d{4,9}\/\S+$</span><span class="ss">/</span><span class="op">.</span><span class="fu">test</span>(limpio)) { <span class="kw">yield</span> {<span class="dt">aviso</span><span class="op">:</span> <span class="st">"Eso no parece un DOI: empiezan por «10.» seguido de un prefijo y una barra."</span>}<span class="op">;</span> <span class="cf">return</span><span class="op">;</span> }</span>
+<span id="cb4-168"><a href="#cb4-168" aria-hidden="true" tabindex="-1"></a>  <span class="kw">yield</span> {<span class="dt">cargando</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">;</span></span>
+<span id="cb4-169"><a href="#cb4-169" aria-hidden="true" tabindex="-1"></a>  <span class="cf">try</span> {</span>
+<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> r <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(<span class="vs">`https://api.crossref.org/v1/works/</span><span class="sc">${</span><span class="pp">encodeURIComponent</span>(limpio)<span class="sc">}</span><span class="vs">/transform`</span><span class="op">,</span> {<span class="dt">headers</span><span class="op">:</span> {<span class="dt">Accept</span><span class="op">:</span> <span class="st">"text/x-bibliography; style=apa"</span>}})<span class="op">;</span></span>
+<span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (r<span class="op">.</span><span class="at">status</span> <span class="op">===</span> <span class="dv">404</span>) { <span class="kw">yield</span> {<span class="dt">aviso</span><span class="op">:</span> <span class="st">"Crossref no conoce ese DOI. Puede ser de otra agencia (DataCite, por ejemplo) o no existir: compruébalo en https://doi.org/"</span> <span class="op">+</span> limpio}<span class="op">;</span> <span class="cf">return</span><span class="op">;</span> }</span>
+<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a>    <span class="kw">yield</span> {<span class="dt">texto</span><span class="op">:</span> (<span class="cf">await</span> r<span class="op">.</span><span class="fu">text</span>())<span class="op">.</span><span class="fu">trim</span>()<span class="op">,</span> <span class="dt">doi</span><span class="op">:</span> limpio}<span class="op">;</span></span>
+<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">catch</span> (e) { <span class="kw">yield</span> {<span class="dt">aviso</span><span class="op">:</span> <span class="st">"No se ha podido consultar Crossref (¿estás sin conexión?)."</span>}<span class="op">;</span> }</span>
+<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="179" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 178;"><span id="cb5-179"><a href="#cb5-179" aria-hidden="true" tabindex="-1"></a>referencia<span class="op">.</span><span class="at">cargando</span> <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;p role="status"&gt;Consultando Crossref…&lt;/p&gt;`</span> <span class="op">:</span></span>
+<span id="cb5-180"><a href="#cb5-180" aria-hidden="true" tabindex="-1"></a>referencia<span class="op">.</span><span class="at">aviso</span> <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;p role="status"&gt;</span><span class="sc">${</span>referencia<span class="op">.</span><span class="at">aviso</span><span class="sc">}</span><span class="vs">&lt;/p&gt;`</span> <span class="op">:</span></span>
+<span id="cb5-181"><a href="#cb5-181" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;p&gt;&lt;strong&gt;Referencia generada:&lt;/strong&gt;&lt;/p&gt;&lt;blockquote class="lab-cita"&gt;</span><span class="sc">${</span>referencia<span class="op">.</span><span class="at">texto</span><span class="sc">}</span><span class="vs">&lt;/blockquote&gt;</span></span>
+<span id="cb5-182"><a href="#cb5-182" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;p class="small"&gt;¿Qué corregirías? En APA, el título del artículo va en minúscula salvo la primera palabra y los nombres propios, y la revista y el volumen van en cursiva (aquí se pierde el formato).&lt;/p&gt;&lt;/div&gt;`</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<p>Prueba también: <code>10.1108/eb024320</code>, <code>10.1038/s41598-023-41032-5</code> o el DOI de este libro, <code>10.5281/zenodo.24515144</code> (de DataCite, no de Crossref).</p>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-ordenar" id="ia-u4-apa"><script type="application/json" class="ia-datos">{"enunciado":"","explicacion":"","items":["Autores","Año entre paréntesis","Título del artículo","Nombre de la revista, en cursiva","Volumen, en cursiva, y número entre paréntesis","Páginas o número de artículo","DOI como enlace"],"tipo":"ordenar","titulo":"Las partes de una referencia de artículo en APA 7"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-u4-sistema"><script type="application/json" class="ia-datos">{"categorias":["Autor-fecha","Numérico"],"enunciado":"","explicacion":"","items":[{"categoria":"Autor-fecha","explicacion":"","texto":"(Bates, 1989)"},{"categoria":"Numérico","explicacion":"","texto":"[3]"},{"categoria":"Autor-fecha","explicacion":"","texto":"Lista ordenada alfabéticamente por apellido"},{"categoria":"Numérico","explicacion":"","texto":"Lista ordenada por orden de aparición"},{"categoria":"Autor-fecha","explicacion":"","texto":"Estilo APA 7"},{"categoria":"Numérico","explicacion":"","texto":"Estilo Vancouver"},{"categoria":"Numérico","explicacion":"","texto":"Estilo IEEE"},{"categoria":"Autor-fecha","explicacion":"","texto":"Estilo Harvard"}],"tipo":"clasificar","titulo":"¿Autor-fecha o numérico?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-u4-tipo"><script type="application/json" class="ia-datos">{"categorias":["Artículo de revista","Libro","Capítulo de libro","Página web","Norma legal"],"enunciado":"","explicacion":"","items":[{"categoria":"Libro","explicacion":"","texto":"Cruz Gil, C. (2015). <em>Modelos de búsqueda y recuperación de la\ninformación<\/em>. Trea."},{"categoria":"Artículo de revista","explicacion":"","texto":"Bates, M. J. (1989). The design of browsing… <em>Online Review<\/em>,\n<em>13<\/em>(5), 407-424."},{"categoria":"Norma legal","explicacion":"","texto":"Real Decreto Legislativo 1/1996… <em>Boletín Oficial del Estado<\/em>,\n97."},{"categoria":"Página web","explicacion":"","texto":"Caulfield, M. (2019, 19 de junio). <em>SIFT (The four moves)<\/em>.\nHapgood."},{"categoria":"Capítulo de libro","explicacion":"","texto":"Apellido, I. (2020). Título. En I. Editora (Ed.), <em>Título del\nlibro<\/em> (pp. 10-25). Editorial."}],"tipo":"clasificar","titulo":"¿Qué tipo de documento es?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Errores frecuentes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Mezclar estilos</strong> en el mismo trabajo (unas referencias en APA, otras copiadas de la web de la revista).</li>
+<li><strong>No revisar lo que genera el gestor</strong>: títulos en mayúsculas, nombres de revista abreviados o autores que faltan.</li>
+<li><strong>Citar la base de datos en lugar del documento</strong> («Fuente: Dialnet»).</li>
+<li><strong>Escribir «DOI: 10.…»</strong> en lugar del enlace completo <code>https://doi.org/10.…</code>.</li>
+<li><strong>Citas en el texto sin referencia</strong>, o referencias en la lista que no se citan en el texto.</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="reto-u4" class="level2">
 <h2 class="anchored" data-anchor-id="reto-u4">Reto evaluable</h2>
@@ -861,23 +988,26 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -886,10 +1016,12 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -897,13 +1029,13 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -916,6 +1048,9 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -942,10 +1077,14 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -974,7 +1113,7 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRleHRvID0gd2luZG93LkxhYi50ZXh0b1xuYXJlYSA9IHdpbmRvdy5MYWIuYXJlYVxuc2VsZWNjaW9uID0gd2luZG93LkxhYi5zZWxlY2Npb25cbnJhbmdvID0gd2luZG93LkxhYi5yYW5nb1xuYm90b24gPSB3aW5kb3cuTGFiLmJvdG9uXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgZG9pID0gdGV4dG8oXCJET0lcIiwge3ZhbHVlOiBcIjEwLjEwMTYvai5wcmFnbWEuMjAxMy4wNy4wMTJcIiwgc3VibWl0OiBcIk9idGVuZXIgbGEgcmVmZXJlbmNpYVwifSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InJlZmVyZW5jaWEgPSB7XG4gIGNvbnN0IGxpbXBpbyA9IGRvaS50cmltKCkucmVwbGFjZSgvXmh0dHBzPzpcXC9cXC8oZHhcXC4pP2RvaVxcLm9yZ1xcLy9pLCBcIlwiKS5yZXBsYWNlKC9eZG9pOlxccyovaSwgXCJcIik7XG4gIGlmICghL14xMFxcLlxcZHs0LDl9XFwvXFxTKyQvLnRlc3QobGltcGlvKSkgeyB5aWVsZCB7YXZpc286IFwiRXNvIG5vIHBhcmVjZSB1biBET0k6IGVtcGllemFuIHBvciDCqzEwLsK7IHNlZ3VpZG8gZGUgdW4gcHJlZmlqbyB5IHVuYSBiYXJyYS5cIn07IHJldHVybjsgfVxuICB5aWVsZCB7Y2FyZ2FuZG86IHRydWV9O1xuICB0cnkge1xuICAgIGNvbnN0IHIgPSBhd2FpdCBmZXRjaChgaHR0cHM6Ly9hcGkuY3Jvc3NyZWYub3JnL3YxL3dvcmtzLyR7ZW5jb2RlVVJJQ29tcG9uZW50KGxpbXBpbyl9L3RyYW5zZm9ybWAsIHtoZWFkZXJzOiB7QWNjZXB0OiBcInRleHQveC1iaWJsaW9ncmFwaHk7IHN0eWxlPWFwYVwifX0pO1xuICAgIGlmIChyLnN0YXR1cyA9PT0gNDA0KSB7IHlpZWxkIHthdmlzbzogXCJDcm9zc3JlZiBubyBjb25vY2UgZXNlIERPSS4gUHVlZGUgc2VyIGRlIG90cmEgYWdlbmNpYSAoRGF0YUNpdGUsIHBvciBlamVtcGxvKSBvIG5vIGV4aXN0aXI6IGNvbXBydcOpYmFsbyBlbiBodHRwczovL2RvaS5vcmcvXCIgKyBsaW1waW99OyByZXR1cm47IH1cbiAgICB5aWVsZCB7dGV4dG86IChhd2FpdCByLnRleHQoKSkudHJpbSgpLCBkb2k6IGxpbXBpb307XG4gIH0gY2F0Y2ggKGUpIHsgeWllbGQge2F2aXNvOiBcIk5vIHNlIGhhIHBvZGlkbyBjb25zdWx0YXIgQ3Jvc3NyZWYgKMK/ZXN0w6FzIHNpbiBjb25leGnDs24/KS5cIn07IH1cbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InJlZmVyZW5jaWEuY2FyZ2FuZG8gPyBodG1sYDxwIHJvbGU9XCJzdGF0dXNcIj5Db25zdWx0YW5kbyBDcm9zc3JlZuKApjwvcD5gIDpcbnJlZmVyZW5jaWEuYXZpc28gPyBodG1sYDxwIHJvbGU9XCJzdGF0dXNcIj4ke3JlZmVyZW5jaWEuYXZpc299PC9wPmAgOlxuaHRtbGA8ZGl2IHJvbGU9XCJzdGF0dXNcIj48cD48c3Ryb25nPlJlZmVyZW5jaWEgZ2VuZXJhZGE6PC9zdHJvbmc+PC9wPjxibG9ja3F1b3RlIGNsYXNzPVwibGFiLWNpdGFcIj4ke3JlZmVyZW5jaWEudGV4dG99PC9ibG9ja3F1b3RlPlxuPHAgY2xhc3M9XCJzbWFsbFwiPsK/UXXDqSBjb3JyZWdpcsOtYXM/IEVuIEFQQSwgZWwgdMOtdHVsbyBkZWwgYXJ0w61jdWxvIHZhIGVuIG1pbsO6c2N1bGEgc2Fsdm8gbGEgcHJpbWVyYSBwYWxhYnJhIHkgbG9zIG5vbWJyZXMgcHJvcGlvcywgeSBsYSByZXZpc3RhIHkgZWwgdm9sdW1lbiB2YW4gZW4gY3Vyc2l2YSAoYXF1w60gc2UgcGllcmRlIGVsIGZvcm1hdG8pLjwvcD48L2Rpdj5gXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2RvaScpIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1428,6 +1567,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

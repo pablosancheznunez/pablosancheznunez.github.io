@@ -39,17 +39,22 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -77,10 +82,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -375,6 +382,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./93-listas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Listas de comprobación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./91-guia-docente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Guía para el profesorado</span></a>
   </div>
 </li>
@@ -403,6 +415,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#uso-crítico-reflexivo-y-proactivo" id="toc-uso-crítico-reflexivo-y-proactivo" class="nav-link" data-scroll-target="#uso-crítico-reflexivo-y-proactivo">2. Uso crítico, reflexivo y proactivo</a></li>
   <li><a href="#identificar-seleccionar-y-evaluar-fuentes" id="toc-identificar-seleccionar-y-evaluar-fuentes" class="nav-link" data-scroll-target="#identificar-seleccionar-y-evaluar-fuentes">3. Identificar, seleccionar y evaluar fuentes</a></li>
   <li><a href="#las-redes-sociales-como-fuente-de-información-científica" id="toc-las-redes-sociales-como-fuente-de-información-científica" class="nav-link" data-scroll-target="#las-redes-sociales-como-fuente-de-información-científica">4. Las redes sociales como fuente de información científica</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#práctica" id="toc-práctica" class="nav-link" data-scroll-target="#práctica">Práctica</a></li>
   <li><a href="#reto-u1" id="toc-reto-u1" class="nav-link" data-scroll-target="#reto-u1">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -542,7 +555,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-lateral" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A la izquierda, una sola página web con una flecha que baja por ella: lectura vertical. A la derecha, la misma página con flechas que salen hacia tres pestañas: qué dicen otros de la fuente, qué dicen otras fuentes sobre lo mismo y la fuente original de la afirmación.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lateral-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/u1_lateral.svg" class="img-fluid figure-img" alt="A la izquierda, una sola página web con una flecha que baja por ella: lectura vertical. A la derecha, la misma página con flechas que salen hacia tres pestañas: qué dicen otros de la fuente, qué dicen otras fuentes sobre lo mismo y la fuente original de la afirmación.">
+<a href="figuras/u1_lateral.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Lectura vertical frente a lectura lateral. La lateral sale de la página para comprobar la fuente y la afirmación en otras fuentes."><img src="figuras/u1_lateral.svg" class="img-fluid figure-img" alt="A la izquierda, una sola página web con una flecha que baja por ella: lectura vertical. A la derecha, la misma página con flechas que salen hacia tres pestañas: qué dicen otros de la fuente, qué dicen otras fuentes sobre lo mismo y la fuente original de la afirmación."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lateral-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Lectura vertical frente a lectura lateral. La lateral sale de la página para comprobar la fuente y la afirmación en otras fuentes.
@@ -588,6 +601,16 @@ Figura&nbsp;1: Lectura vertical frente a lectura lateral. La lateral sale de la 
 </tr>
 </tbody>
 </table>
+<div id="fig-fuentes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Tres niveles apilados: arriba, fuentes terciarias (catálogos, bases de datos, enciclopedias, que ayudan a encontrar); en medio, secundarias (revisiones, manuales, noticias, que analizan o resumen); abajo, primarias (artículos de investigación, datos, leyes, entrevistas: información original). Flechas descienden de las terciarias a las primarias.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fuentes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/u1_fuentes.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Tipos de fuentes. Muchas veces encontramos primero una fuente terciaria o secundaria; el trabajo consiste en llegar hasta la primaria."><img src="figuras/u1_fuentes.svg" class="img-fluid figure-img" alt="Tres niveles apilados: arriba, fuentes terciarias (catálogos, bases de datos, enciclopedias, que ayudan a encontrar); en medio, secundarias (revisiones, manuales, noticias, que analizan o resumen); abajo, primarias (artículos de investigación, datos, leyes, entrevistas: información original). Flechas descienden de las terciarias a las primarias."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fuentes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Tipos de fuentes. Muchas veces encontramos primero una fuente terciaria o secundaria; el trabajo consiste en llegar hasta la primaria.
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="las-redes-sociales-como-fuente-de-información-científica" class="level2">
 <h2 class="anchored" data-anchor-id="las-redes-sociales-como-fuente-de-información-científica">4. Las redes sociales como fuente de información científica</h2>
@@ -597,6 +620,33 @@ Figura&nbsp;1: Lectura vertical frente a lectura lateral. La lateral sale de la 
 <li>Las menciones en redes miden <strong>atención</strong>, no calidad ni veracidad.</li>
 <li>Los preprints (versiones previas a la revisión por pares) se difunden mucho en redes y pueden cambiar o no publicarse.</li>
 </ul>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-clasificar" id="ia-u1-falsa"><script type="application/json" class="ia-datos">{"categorias":["Información errónea","Desinformación","Información maliciosa"],"enunciado":"<p>Decide para cada caso si es información errónea, desinformación o\ninformación maliciosa.<\/p>","explicacion":"","items":[{"categoria":"Información errónea","explicacion":"Es falso, pero lo comparte sin intención de engañar.","texto":"Tu tía reenvía por WhatsApp un remedio contra la gripe que cree\neficaz"},{"categoria":"Desinformación","explicacion":"Falso y creado para engañar.","texto":"Una granja de cuentas difunde un vídeo trucado de un candidato la\nvíspera de las elecciones"},{"categoria":"Información maliciosa","explicacion":"Es verdadero, pero se usa para causar daño.","texto":"Alguien publica la dirección real de una periodista para que la\nacosen"},{"categoria":"Información errónea","explicacion":"Error sin intención; la corrección es una buena práctica.","texto":"Un medio publica por error una cifra de paro equivocada y la corrige\nal día siguiente"},{"categoria":"Desinformación","explicacion":"Suplanta la reputación de una marca conocida para engañar.","texto":"Una web imita el diseño de un periódico para difundir una noticia\ninventada"},{"categoria":"Información maliciosa","explicacion":"Material real usado para dañar.","texto":"Se filtran correos privados auténticos de un científico, sacados de\ncontexto para desacreditarlo"}],"tipo":"clasificar","titulo":"¿Qué tipo de información falsa es?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-u1-heuristicos"><script type="application/json" class="ia-datos">{"categorias":["Reputación","Respaldo","Coherencia","Violación de expectativas","Intención persuasiva"],"enunciado":"<p>Metzger y Flanagin (2013) describen cinco heurísticos de\ncredibilidad. Identifica cuál actúa en cada situación.<\/p>","explicacion":"","items":[{"categoria":"Reputación","explicacion":"","texto":"Confías en un artículo porque aparece en la web de una universidad\nconocida"},{"categoria":"Respaldo","explicacion":"","texto":"Eliges un hotel porque tiene 4000 reseñas de cinco estrellas"},{"categoria":"Coherencia","explicacion":"Ojo: tres webs pueden copiar la misma fuente.","texto":"Crees un dato porque lo has visto en tres webs distintas"},{"categoria":"Violación de expectativas","explicacion":"","texto":"Desconfías de una web llena de faltas de ortografía y anuncios\nemergentes"},{"categoria":"Intención persuasiva","explicacion":"","texto":"Dudas de un estudio sobre azúcar financiado por un fabricante de\nrefrescos"}],"tipo":"clasificar","titulo":"¿Qué atajo mental está actuando?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-u1-tipos"><script type="application/json" class="ia-datos">{"categorias":["Primaria","Secundaria","Terciaria"],"enunciado":"","explicacion":"","items":[{"categoria":"Primaria","explicacion":"","texto":"Un artículo que presenta los resultados de un experimento"},{"categoria":"Primaria","explicacion":"","texto":"El conjunto de datos de una encuesta del INE"},{"categoria":"Secundaria","explicacion":"","texto":"Una revisión sistemática sobre el uso del móvil en clase"},{"categoria":"Secundaria","explicacion":"","texto":"Una noticia de prensa que resume un estudio"},{"categoria":"Primaria","explicacion":"","texto":"El texto del Reglamento europeo de IA publicado en el DOUE"},{"categoria":"Secundaria","explicacion":"","texto":"Un manual universitario"},{"categoria":"Terciaria","explicacion":"","texto":"El catálogo de la biblioteca de la universidad"},{"categoria":"Terciaria","explicacion":"","texto":"Una base de datos bibliográfica como Dialnet"}],"tipo":"clasificar","titulo":"Primaria, secundaria o terciaria"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-ordenar" id="ia-u1-sift"><script type="application/json" class="ia-datos">{"enunciado":"","explicacion":"","items":["Parar antes de leer o compartir","Investigar quién está detrás de la fuente","Buscar mejor cobertura en otras fuentes fiables","Rastrear la afirmación hasta su origen"],"tipo":"ordenar","titulo":"Los pasos de SIFT"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-escenario" id="ia-u1-escenario"><script type="application/json" class="ia-datos">{"enunciado":"<p>Un amigo comparte en una red social: «Un estudio demuestra que tres\ncafés al día reducen un 60 % el riesgo de alzhéimer». Tiene 20 000 «me\ngusta». (Caso inventado para practicar.)<\/p>","inicio":"u1e-inicio","nodos":{"u1e-bien":{"final":true,"opciones":[],"texto":"<p>Has hecho los cuatro movimientos de SIFT: parar, investigar la\nfuente, buscar mejor cobertura y rastrear el original. El titular es\n<strong>exagerado<\/strong>, no falso del todo: confunde asociación con\ncausa e inventa la cifra.<\/p>","titulo":"Juicio ajustado","valor":"bien"},"u1e-coherencia":{"final":true,"opciones":[],"texto":"<p>Muchas webs copian la misma nota de prensa: la repetición no es\nverificación. Te falta llegar al original.<\/p>","titulo":"Coherencia engañosa","valor":"mal"},"u1e-compartir":{"final":true,"opciones":[],"texto":"<p>Has usado el heurístico de respaldo: los «me gusta» miden\npopularidad, no veracidad. Y has amplificado algo sin comprobarlo.<\/p>","titulo":"Compartido","valor":"mal"},"u1e-extremo":{"final":true,"opciones":[],"texto":"<p>El estudio existe y es legítimo; lo que falla es el titular.\nDistingue entre la fuente original y cómo se ha contado.<\/p>","titulo":"Demasiado lejos","valor":"regular"},"u1e-fuente":{"final":false,"opciones":[{"destino":"u1e-vertical","texto":"Leo con atención la web: si parece seria, me fío"},{"destino":"u1e-lateral","texto":"Abro otra pestaña y busco qué se dice de esa web"}],"texto":"<p>La publicación enlaza a una web de nombre «saludnaturalhoy.info» que\nno conoces.<\/p>","titulo":"¿Quién lo publica?","valor":""},"u1e-inicio":{"final":false,"opciones":[{"destino":"u1e-compartir","texto":"Lo comparto: tiene muchos «me gusta» y me gusta el café"},{"destino":"u1e-fuente","texto":"Me paro y miro quién lo publica"}],"texto":"<p>¿Qué haces?<\/p>","titulo":"Lo ves en tu móvil","valor":""},"u1e-lateral":{"final":false,"opciones":[{"destino":"u1e-original","texto":"Busco el estudio original"},{"destino":"u1e-coherencia","texto":"Me basta con que lo publiquen otras webs parecidas"}],"texto":"<p>Descubres que la web vende complementos alimenticios. Buscas el\ntitular en otras fuentes.<\/p>","titulo":"Lectura lateral","valor":""},"u1e-original":{"final":false,"opciones":[{"destino":"u1e-bien","texto":"Concluyo que el titular exagera y no lo comparto (o lo comparto con el\ncontexto)"},{"destino":"u1e-extremo","texto":"Concluyo que el estudio es falso"}],"texto":"<p>Encuentras el artículo: es un estudio observacional que encuentra una\n<strong>asociación<\/strong> modesta entre consumo de café y menor\nriesgo, y advierte que no prueba causalidad. No aparece ningún «60 %»\npara tres cafés.<\/p>","titulo":"El estudio original","valor":""},"u1e-vertical":{"final":true,"opciones":[],"texto":"<p>La web tiene buen diseño y un apartado «Quiénes somos» muy\nprofesional. Pero el diseño se puede imitar: sin salir de la página no\nsabes quién está detrás. Prueba la lectura lateral.<\/p>","titulo":"Lectura vertical","valor":"regular"}},"tipo":"escenario","titulo":"Un titular sobre el café"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Errores frecuentes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Confundir popularidad con fiabilidad.</strong> Los «me gusta», las visitas y las menciones miden atención.</li>
+<li><strong>Quedarse en la página.</strong> Un buen diseño o un «Quiénes somos» convincente no prueban nada: sal de la página.</li>
+<li><strong>Tomar la repetición por confirmación.</strong> Diez webs que copian la misma nota de prensa son una sola fuente.</li>
+<li><strong>Leer solo el titular.</strong> El titular resume (y a veces exagera) lo que dice el estudio; lee al menos el resumen original.</li>
+<li><strong>Desconfiar de todo.</strong> El objetivo no es el escepticismo total, sino calibrar la confianza según la evidencia.</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="práctica" class="level2">
 <h2 class="anchored" data-anchor-id="práctica">Práctica</h2>
@@ -791,23 +841,26 @@ W10=
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -816,10 +869,12 @@ W10=
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -827,13 +882,13 @@ W10=
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -846,6 +901,9 @@ W10=
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -872,10 +930,14 @@ W10=
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -1358,6 +1420,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

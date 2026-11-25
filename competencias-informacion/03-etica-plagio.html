@@ -74,17 +74,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,10 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -410,6 +417,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./93-listas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Listas de comprobación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./91-guia-docente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Guía para el profesorado</span></a>
   </div>
 </li>
@@ -442,6 +454,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#ejercicio-3.1" id="toc-ejercicio-3.1" class="nav-link" data-scroll-target="#ejercicio-3.1">Ejercicio 3.1</a></li>
   </ul></li>
+  <li><a href="#lab-u3-detector" id="toc-lab-u3-detector" class="nav-link" data-scroll-target="#lab-u3-detector">Laboratorio: así ve un detector de coincidencias</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-u3" id="toc-reto-u3" class="nav-link" data-scroll-target="#reto-u3">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
@@ -540,6 +554,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>El <strong>derecho de cita</strong> (art. 32) permite incluir fragmentos de obras ajenas sin pedir permiso cuando se hace a título de cita o para su análisis, comentario o juicio crítico, con fines docentes o de investigación, en la medida justificada por ese fin, e <strong>indicando la fuente y el nombre del autor</strong>.</p>
 <p>Las <strong>licencias Creative Commons</strong> permiten a los autores autorizar de antemano ciertos usos. Se combinan cuatro condiciones: <strong>BY</strong> (reconocimiento, presente en todas), <strong>SA</strong> (compartir igual), <strong>NC</strong> (no comercial) y <strong>ND</strong> (sin obras derivadas). Este libro, por ejemplo, tiene licencia CC BY 4.0.</p>
+<div id="fig-licencias" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Tabla con las seis licencias Creative Commons en filas (BY, BY-SA, BY-ND, BY-NC, BY-NC-SA, BY-NC-ND) y cuatro columnas: copiar y distribuir (todas sí), uso comercial (no en las tres NC), obras derivadas (no en las dos ND) y misma licencia (obligatoria en las dos SA).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-licencias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/u3_licencias.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Qué permite cada licencia Creative Commons."><img src="figuras/u3_licencias.svg" class="img-fluid figure-img" alt="Tabla con las seis licencias Creative Commons en filas (BY, BY-SA, BY-ND, BY-NC, BY-NC-SA, BY-NC-ND) y cuatro columnas: copiar y distribuir (todas sí), uso comercial (no en las tres NC), obras derivadas (no en las dos ND) y misma licencia (obligatoria en las dos SA)."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-licencias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Qué permite cada licencia Creative Commons.
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="qué-es-el-plagio" class="level2">
 <h2 class="anchored" data-anchor-id="qué-es-el-plagio">3. Qué es el plagio</h2>
@@ -583,6 +607,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>En esta asignatura, el plagio o la copia en cualquier actividad supone <strong>perder la nota de esa actividad</strong>.</p>
+<div id="fig-espectro" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Seis recuadros en una línea, de rojo a verde: copia literal sin cita, mosaico, paráfrasis sin cita, paráfrasis con cita, cita textual con referencia e ideas propias distinguidas. Una flecha va de «Plagio» a «Uso ético».">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-espectro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/u3_espectro.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Del plagio al uso ético: lo que cambia no son las palabras, sino si reconoces la fuente."><img src="figuras/u3_espectro.svg" class="img-fluid figure-img" alt="Seis recuadros en una línea, de rojo a verde: copia literal sin cita, mosaico, paráfrasis sin cita, paráfrasis con cita, cita textual con referencia e ideas propias distinguidas. Una flecha va de «Plagio» a «Uso ético»."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-espectro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Del plagio al uso ético: lo que cambia no son las palabras, sino si reconoces la fuente.
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="cómo-escribir-con-fuentes-sin-plagiar" class="level2">
 <h2 class="anchored" data-anchor-id="cómo-escribir-con-fuentes-sin-plagiar">4. Cómo escribir con fuentes sin plagiar</h2>
@@ -631,6 +665,121 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidTNfY29waWEifSwiY29k
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InUzX2NvcGlhIn0sImNvZGUiOiJpZiAoaXNUUlVFKGFsbC5lcXVhbChhcy5udW1lcmljKC5yZXN1bHQpLCAxKSkpIHtcbiAgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IFwiQ29ycmVjdG86IHNpbWlsaXR1ZCAxLCBjb3BpYSBsaXRlcmFsLlwiKVxufSBlbHNlIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkNvbXBhcmEgb3JpZ2luYWwgY29uIGNvcGlhLlwiKVxufSJ9
 </script>
 </section>
+</section>
+<section id="lab-u3-detector" class="level2">
+<h2 class="anchored" data-anchor-id="lab-u3-detector">Laboratorio: así ve un detector de coincidencias</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · se ejecuta en tu navegador, sin enviar el texto a ningún sitio</p>
+</div>
+<p>Pega un texto original y tu versión. El laboratorio divide los dos en grupos de tres palabras (<strong>trigramas</strong>), calcula qué proporción comparten (similitud de Jaccard) y <strong>resalta</strong> en tu versión las palabras que forman parte de trigramas copiados. Prueba con una copia literal, una escritura en mosaico y una paráfrasis de verdad.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="156" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 155;"><span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">texto</span></span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a>seleccion <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a>boton <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">boton</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="165" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 164;"><span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a>viewof original <span class="op">=</span> <span class="fu">area</span>(<span class="st">"Texto original"</span><span class="op">,</span> {<span class="dt">rows</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"La lectura lateral consiste en salir de la página para comprobar qué dicen otras fuentes sobre ella y sobre lo que afirma."</span>})</span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a>viewof version <span class="op">=</span> <span class="fu">area</span>(<span class="st">"Tu versión"</span><span class="op">,</span> {<span class="dt">rows</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"La lectura lateral consiste en salir de la web para comprobar lo que dicen otras fuentes sobre ella y sobre lo que afirma."</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="170" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 169;"><span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> palabras <span class="op">=</span> t <span class="kw">=&gt;</span> t<span class="op">.</span><span class="fu">toLowerCase</span>()<span class="op">.</span><span class="fu">normalize</span>(<span class="st">"NFC"</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">[^\p{L}\p{N}\s]</span><span class="ss">/gu</span><span class="op">,</span> <span class="st">" "</span>)<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\s+</span><span class="ss">/</span>)<span class="op">.</span><span class="fu">filter</span>(<span class="bu">Boolean</span>)<span class="op">;</span></span>
+<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> tri <span class="op">=</span> p <span class="kw">=&gt;</span> { <span class="kw">const</span> s <span class="op">=</span> <span class="kw">new</span> <span class="bu">Set</span>()<span class="op">;</span> <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">+</span> <span class="dv">2</span> <span class="op">&lt;</span> p<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) s<span class="op">.</span><span class="fu">add</span>(p<span class="op">.</span><span class="fu">slice</span>(i<span class="op">,</span> i <span class="op">+</span> <span class="dv">3</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">" "</span>))<span class="op">;</span> <span class="cf">return</span> s<span class="op">;</span> }<span class="op">;</span></span>
+<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pa <span class="op">=</span> <span class="fu">palabras</span>(original)<span class="op">,</span> pb <span class="op">=</span> <span class="fu">palabras</span>(version)<span class="op">,</span> ta <span class="op">=</span> <span class="fu">tri</span>(pa)<span class="op">,</span> tb <span class="op">=</span> <span class="fu">tri</span>(pb)<span class="op">;</span></span>
+<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> comunes <span class="op">=</span> [<span class="op">...</span>tb]<span class="op">.</span><span class="fu">filter</span>(x <span class="kw">=&gt;</span> ta<span class="op">.</span><span class="fu">has</span>(x))<span class="op">;</span></span>
+<span id="cb4-175"><a href="#cb4-175" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> union <span class="op">=</span> <span class="kw">new</span> <span class="bu">Set</span>([<span class="op">...</span>ta<span class="op">,</span> <span class="op">...</span>tb])<span class="op">;</span></span>
+<span id="cb4-176"><a href="#cb4-176" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> j <span class="op">=</span> union<span class="op">.</span><span class="at">size</span> <span class="op">?</span> comunes<span class="op">.</span><span class="at">length</span> <span class="op">/</span> union<span class="op">.</span><span class="at">size</span> <span class="op">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-177"><a href="#cb4-177" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> marcadas <span class="op">=</span> <span class="kw">new</span> <span class="bu">Array</span>(pb<span class="op">.</span><span class="at">length</span>)<span class="op">.</span><span class="fu">fill</span>(<span class="kw">false</span>)<span class="op">;</span></span>
+<span id="cb4-178"><a href="#cb4-178" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">+</span> <span class="dv">2</span> <span class="op">&lt;</span> pb<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) <span class="cf">if</span> (ta<span class="op">.</span><span class="fu">has</span>(pb<span class="op">.</span><span class="fu">slice</span>(i<span class="op">,</span> i <span class="op">+</span> <span class="dv">3</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">" "</span>))) { marcadas[i] <span class="op">=</span> marcadas[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">=</span> marcadas[i <span class="op">+</span> <span class="dv">2</span>] <span class="op">=</span> <span class="kw">true</span><span class="op">;</span> }</span>
+<span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> veredicto <span class="op">=</span> j <span class="op">&gt;=</span> <span class="fl">0.8</span> <span class="op">?</span> <span class="st">"casi una copia literal"</span> <span class="op">:</span> j <span class="op">&gt;=</span> <span class="fl">0.25</span> <span class="op">?</span> <span class="st">"muchas coincidencias: posible escritura en mosaico"</span> <span class="op">:</span> j <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="st">"pocas coincidencias"</span> <span class="op">:</span> <span class="st">"sin coincidencias de tres palabras"</span><span class="op">;</span></span>
+<span id="cb4-180"><a href="#cb4-180" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;</span></span>
+<span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;p&gt;&lt;strong&gt;Similitud: </span><span class="sc">${</span>(<span class="dv">100</span> <span class="op">*</span> j)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">0</span>)<span class="sc">}</span><span class="vs"> %&lt;/strong&gt; (</span><span class="sc">${</span>comunes<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> trigramas compartidos de </span><span class="sc">${</span>union<span class="op">.</span><span class="at">size</span><span class="sc">}</span><span class="vs"> distintos) · </span><span class="sc">${</span>veredicto<span class="sc">}</span><span class="vs">.&lt;/p&gt;</span></span>
+<span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a><span class="vs">    </span><span class="sc">${</span>(() <span class="kw">=&gt;</span> { <span class="kw">const</span> p <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"p"</span>)<span class="op">;</span> p<span class="op">.</span><span class="at">className</span> <span class="op">=</span> <span class="st">"lab-resaltado"</span><span class="op">;</span> pb<span class="op">.</span><span class="fu">forEach</span>((w<span class="op">,</span> i) <span class="kw">=&gt;</span> { <span class="cf">if</span> (i) p<span class="op">.</span><span class="fu">append</span>(<span class="st">" "</span>)<span class="op">;</span> <span class="cf">if</span> (marcadas[i]) { <span class="kw">const</span> m <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"mark"</span>)<span class="op">;</span> m<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> w<span class="op">;</span> p<span class="op">.</span><span class="fu">append</span>(m)<span class="op">;</span> } <span class="cf">else</span> p<span class="op">.</span><span class="fu">append</span>(w)<span class="op">;</span> })<span class="op">;</span> <span class="cf">return</span> p<span class="op">;</span> })()<span class="sc">}</span></span>
+<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;p class="small"&gt;Recuerda: una similitud baja &lt;em&gt;no&lt;/em&gt; prueba que no haya plagio (una paráfrasis o una traducción sin cita lo son), y una alta tampoco lo prueba si el fragmento está citado.&lt;/p&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-clasificar" id="ia-u3-plagio"><script type="application/json" class="ia-datos">{"categorias":["Copia literal","Escritura en mosaico","Paráfrasis sin cita","Autoplagio","Trabajo hecho por otros","No es plagio"],"enunciado":"","explicacion":"","items":[{"categoria":"Copia literal","explicacion":"","texto":"Copias dos párrafos de Wikipedia sin comillas ni cita"},{"categoria":"Escritura en mosaico","explicacion":"","texto":"Cambias algunas palabras de un párrafo por sinónimos y mantienes su\nestructura"},{"categoria":"Paráfrasis sin cita","explicacion":"La idea sigue siendo ajena.","texto":"Explicas con tus palabras la idea de un artículo, pero no lo\ncitas"},{"categoria":"Autoplagio","explicacion":"","texto":"Entregas en una asignatura el trabajo que ya presentaste en otra"},{"categoria":"Trabajo hecho por otros","explicacion":"","texto":"Entregas un ensayo generado por un asistente de IA como si fuera\ntuyo"},{"categoria":"No es plagio","explicacion":"Es una cita correcta, amparada por el derecho de cita.","texto":"Reproduces entre comillas una frase breve con su referencia y la\ncomentas"},{"categoria":"No es plagio","explicacion":"Es conocimiento común.","texto":"Escribes que el agua hierve a 100 ºC a nivel del mar sin citar"}],"tipo":"clasificar","titulo":"¿Qué tipo de plagio es?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-escenario" id="ia-u3-licencia"><script type="application/json" class="ia-datos">{"enunciado":"<p>Vas a publicar unos apuntes propios en abierto. Responde y te diremos\nqué licencia encaja (las cuatro respuestas son válidas: es tu\ndecisión).<\/p>","inicio":"cc-com","nodos":{"cc-by":{"final":true,"opciones":[],"texto":"<p>La más abierta: solo exige reconocimiento. Es la que usan este libro\ny muchas revistas en acceso abierto.<\/p>","titulo":"CC BY","valor":"bien"},"cc-bync":{"final":true,"opciones":[],"texto":"<p>Reconocimiento y no comercial.<\/p>","titulo":"CC BY-NC","valor":"bien"},"cc-byncnd":{"final":true,"opciones":[],"texto":"<p>La más restrictiva: solo copiar y distribuir sin cambios, sin fines\ncomerciales y citando.<\/p>","titulo":"CC BY-NC-ND","valor":"bien"},"cc-byncsa":{"final":true,"opciones":[],"texto":"<p>Reconocimiento, no comercial y compartir igual.<\/p>","titulo":"CC BY-NC-SA","valor":"bien"},"cc-bynd":{"final":true,"opciones":[],"texto":"<p>Reconocimiento y sin obras derivadas: se puede redistribuir, también\ncomercialmente, pero sin cambios.<\/p>","titulo":"CC BY-ND","valor":"bien"},"cc-bysa":{"final":true,"opciones":[],"texto":"<p>Reconocimiento y compartir igual: las adaptaciones deben ser igual de\nabiertas (como Wikipedia).<\/p>","titulo":"CC BY-SA","valor":"bien"},"cc-com":{"final":false,"opciones":[{"destino":"cc-der-si","texto":"Sí, también comerciales"},{"destino":"cc-der-nc","texto":"No, solo usos no comerciales"}],"texto":"","titulo":"¿Permites usos comerciales?","valor":""},"cc-der-nc":{"final":false,"opciones":[{"destino":"cc-bync","texto":"Sí, y quien adapte puede elegir licencia"},{"destino":"cc-byncsa","texto":"Sí, pero con la misma licencia"},{"destino":"cc-byncnd","texto":"No, solo copias sin modificar"}],"texto":"<p>Solo usos no comerciales.<\/p>","titulo":"¿Permites obras derivadas?","valor":""},"cc-der-si":{"final":false,"opciones":[{"destino":"cc-by","texto":"Sí, y quien adapte puede elegir licencia"},{"destino":"cc-bysa","texto":"Sí, pero las adaptaciones deben llevar la misma licencia"},{"destino":"cc-bynd","texto":"No, solo copias sin modificar"}],"texto":"<p>Con usos comerciales permitidos.<\/p>","titulo":"¿Permites obras derivadas?","valor":""}},"tipo":"escenario","titulo":"¿Qué licencia Creative Commons eliges?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Errores frecuentes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>«Si cambio las palabras ya es mío».</strong> Las ideas, los datos y la estructura también se citan.</li>
+<li><strong>«Si está en internet, es libre».</strong> Que algo sea accesible no significa que sea de dominio público ni que su licencia permita reutilizarlo.</li>
+<li><strong>Citar solo al final.</strong> La referencia en la lista no basta: cada idea ajena necesita su cita en el lugar del texto donde la usas.</li>
+<li><strong>Fiarse del porcentaje</strong> de la herramienta de originalidad, en un sentido o en otro.</li>
+<li><strong>Olvidar las imágenes y las figuras</strong>: también tienen autor y licencia.</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="reto-u3" class="level2">
 <h2 class="anchored" data-anchor-id="reto-u3">Reto evaluable</h2>
@@ -816,23 +965,26 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -841,10 +993,12 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -852,13 +1006,13 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -871,6 +1025,9 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -897,10 +1054,14 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -929,7 +1090,7 @@ WyJkYXRvcy9MRUVNRS50eHQiXQ==
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRleHRvID0gd2luZG93LkxhYi50ZXh0b1xuYXJlYSA9IHdpbmRvdy5MYWIuYXJlYVxuc2VsZWNjaW9uID0gd2luZG93LkxhYi5zZWxlY2Npb25cbnJhbmdvID0gd2luZG93LkxhYi5yYW5nb1xuYm90b24gPSB3aW5kb3cuTGFiLmJvdG9uXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2Ygb3JpZ2luYWwgPSBhcmVhKFwiVGV4dG8gb3JpZ2luYWxcIiwge3Jvd3M6IDQsIHZhbHVlOiBcIkxhIGxlY3R1cmEgbGF0ZXJhbCBjb25zaXN0ZSBlbiBzYWxpciBkZSBsYSBww6FnaW5hIHBhcmEgY29tcHJvYmFyIHF1w6kgZGljZW4gb3RyYXMgZnVlbnRlcyBzb2JyZSBlbGxhIHkgc29icmUgbG8gcXVlIGFmaXJtYS5cIn0pXG52aWV3b2YgdmVyc2lvbiA9IGFyZWEoXCJUdSB2ZXJzacOzblwiLCB7cm93czogNCwgdmFsdWU6IFwiTGEgbGVjdHVyYSBsYXRlcmFsIGNvbnNpc3RlIGVuIHNhbGlyIGRlIGxhIHdlYiBwYXJhIGNvbXByb2JhciBsbyBxdWUgZGljZW4gb3RyYXMgZnVlbnRlcyBzb2JyZSBlbGxhIHkgc29icmUgbG8gcXVlIGFmaXJtYS5cIn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIGNvbnN0IHBhbGFicmFzID0gdCA9PiB0LnRvTG93ZXJDYXNlKCkubm9ybWFsaXplKFwiTkZDXCIpLnJlcGxhY2UoL1teXFxwe0x9XFxwe059XFxzXS9ndSwgXCIgXCIpLnNwbGl0KC9cXHMrLykuZmlsdGVyKEJvb2xlYW4pO1xuICBjb25zdCB0cmkgPSBwID0+IHsgY29uc3QgcyA9IG5ldyBTZXQoKTsgZm9yIChsZXQgaSA9IDA7IGkgKyAyIDwgcC5sZW5ndGg7IGkrKykgcy5hZGQocC5zbGljZShpLCBpICsgMykuam9pbihcIiBcIikpOyByZXR1cm4gczsgfTtcbiAgY29uc3QgcGEgPSBwYWxhYnJhcyhvcmlnaW5hbCksIHBiID0gcGFsYWJyYXModmVyc2lvbiksIHRhID0gdHJpKHBhKSwgdGIgPSB0cmkocGIpO1xuICBjb25zdCBjb211bmVzID0gWy4uLnRiXS5maWx0ZXIoeCA9PiB0YS5oYXMoeCkpO1xuICBjb25zdCB1bmlvbiA9IG5ldyBTZXQoWy4uLnRhLCAuLi50Yl0pO1xuICBjb25zdCBqID0gdW5pb24uc2l6ZSA/IGNvbXVuZXMubGVuZ3RoIC8gdW5pb24uc2l6ZSA6IDA7XG4gIGNvbnN0IG1hcmNhZGFzID0gbmV3IEFycmF5KHBiLmxlbmd0aCkuZmlsbChmYWxzZSk7XG4gIGZvciAobGV0IGkgPSAwOyBpICsgMiA8IHBiLmxlbmd0aDsgaSsrKSBpZiAodGEuaGFzKHBiLnNsaWNlKGksIGkgKyAzKS5qb2luKFwiIFwiKSkpIHsgbWFyY2FkYXNbaV0gPSBtYXJjYWRhc1tpICsgMV0gPSBtYXJjYWRhc1tpICsgMl0gPSB0cnVlOyB9XG4gIGNvbnN0IHZlcmVkaWN0byA9IGogPj0gMC44ID8gXCJjYXNpIHVuYSBjb3BpYSBsaXRlcmFsXCIgOiBqID49IDAuMjUgPyBcIm11Y2hhcyBjb2luY2lkZW5jaWFzOiBwb3NpYmxlIGVzY3JpdHVyYSBlbiBtb3NhaWNvXCIgOiBqID4gMCA/IFwicG9jYXMgY29pbmNpZGVuY2lhc1wiIDogXCJzaW4gY29pbmNpZGVuY2lhcyBkZSB0cmVzIHBhbGFicmFzXCI7XG4gIHJldHVybiBodG1sYDxkaXYgcm9sZT1cInN0YXR1c1wiPlxuICAgIDxwPjxzdHJvbmc+U2ltaWxpdHVkOiAkeygxMDAgKiBqKS50b0ZpeGVkKDApfSAlPC9zdHJvbmc+ICgke2NvbXVuZXMubGVuZ3RofSB0cmlncmFtYXMgY29tcGFydGlkb3MgZGUgJHt1bmlvbi5zaXplfSBkaXN0aW50b3MpIMK3ICR7dmVyZWRpY3RvfS48L3A+XG4gICAgJHsoKCkgPT4geyBjb25zdCBwID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudChcInBcIik7IHAuY2xhc3NOYW1lID0gXCJsYWItcmVzYWx0YWRvXCI7IHBiLmZvckVhY2goKHcsIGkpID0+IHsgaWYgKGkpIHAuYXBwZW5kKFwiIFwiKTsgaWYgKG1hcmNhZGFzW2ldKSB7IGNvbnN0IG0gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwibWFya1wiKTsgbS50ZXh0Q29udGVudCA9IHc7IHAuYXBwZW5kKG0pOyB9IGVsc2UgcC5hcHBlbmQodyk7IH0pOyByZXR1cm4gcDsgfSkoKX1cbiAgICA8cCBjbGFzcz1cInNtYWxsXCI+UmVjdWVyZGE6IHVuYSBzaW1pbGl0dWQgYmFqYSA8ZW0+bm88L2VtPiBwcnVlYmEgcXVlIG5vIGhheWEgcGxhZ2lvICh1bmEgcGFyw6FmcmFzaXMgbyB1bmEgdHJhZHVjY2nDs24gc2luIGNpdGEgbG8gc29uKSwgeSB1bmEgYWx0YSB0YW1wb2NvIGxvIHBydWViYSBzaSBlbCBmcmFnbWVudG8gZXN0w6EgY2l0YWRvLjwvcD48L2Rpdj5gO1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdvcmlnaW5hbCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCd2ZXJzaW9uJykifV19
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1383,6 +1544,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

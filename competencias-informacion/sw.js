@@ -9,7 +9,7 @@ const VERSION = "1.0.2";
 const CACHE = "competencias-informacion-" + VERSION;
 const BASE = new URL("./", self.location).pathname;
 
-const PAGINAS = ["", "index.html", "00-r-en-el-libro.html", "01-fuentes.html", "02-recuperacion.html", "03-etica-plagio.html", "04-referencias.html", "05-ia-fundamentos.html", "06-ia-etica.html", "90-citas.html", "91-guia-docente.html", "92-glosario.html", "search.json"];
+const PAGINAS = ["", "index.html", "00-r-en-el-libro.html", "01-fuentes.html", "02-recuperacion.html", "03-etica-plagio.html", "04-referencias.html", "05-ia-fundamentos.html", "06-ia-etica.html", "90-citas.html", "93-listas.html", "91-guia-docente.html", "92-glosario.html", "search.json"];
 
 self.addEventListener("install", (evento) => {
   evento.waitUntil(
