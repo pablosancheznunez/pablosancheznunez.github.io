@@ -1007,168 +1007,212 @@
     ]
   },
   {
+    "objectID": "94-laboratorio.html",
+    "href": "94-laboratorio.html",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "",
+    "text": "Laboratorio: el teorema central del límite\nEste apéndice reúne laboratorios y actividades para practicar las ideas del libro con simulaciones que se ejecutan en tu navegador.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#lab-tcl",
+    "href": "94-laboratorio.html#lab-tcl",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "",
+    "text": "Laboratorio · se ejecuta en tu navegador\n\nElige la forma de la población y el tamaño de cada muestra. El laboratorio extrae 3000 muestras, calcula sus medias y dibuja cómo se distribuyen. Aunque la población sea asimétrica o tenga dos picos, la distribución de las medias se acerca a una normal al crecer n, y su dispersión es σ/√n: el error típico.\n\nselT = window.Lab.seleccion\nrangoT = window.Lab.rango\nviewof poblacion = selT(\"Forma de la población\", [\"Normal\", \"Exponencial (asimétrica)\", \"Bimodal\", \"Uniforme\"], {value: \"Exponencial (asimétrica)\"})\nviewof nTcl = rangoT(\"Tamaño de cada muestra (n)\", [1, 100], {value: 5})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  let s = 2024; const azar = () =&gt; { s |= 0; s = s + 0x6D2B79F5 | 0; let t = Math.imul(s ^ s &gt;&gt;&gt; 15, 1 | s); t = t + Math.imul(t ^ t &gt;&gt;&gt; 7, 61 | t) ^ t; return ((t ^ t &gt;&gt;&gt; 14) &gt;&gt;&gt; 0) / 4294967296; };\n  const norm = () =&gt; Math.sqrt(-2 * Math.log(1 - azar())) * Math.cos(2 * Math.PI * azar());\n  const gen = {\"Normal\": () =&gt; 50 + 10 * norm(), \"Exponencial (asimétrica)\": () =&gt; -10 * Math.log(1 - azar()), \"Bimodal\": () =&gt; (azar() &lt; 0.5 ? 35 : 65) + 5 * norm(), \"Uniforme\": () =&gt; 100 * azar()}[poblacion];\n  const sigma = {\"Normal\": 10, \"Exponencial (asimétrica)\": 10, \"Bimodal\": Math.sqrt(250), \"Uniforme\": 100 / Math.sqrt(12)}[poblacion];\n  const pob = Array.from({length: 3000}, gen);\n  const medias = Array.from({length: 3000}, () =&gt; { let a = 0; for (let i = 0; i &lt; nTcl; i++) a += gen(); return a / nTcl; });\n  const media = (v) =&gt; v.reduce((a, b) =&gt; a + b, 0) / v.length, de = (v) =&gt; { const m = media(v); return Math.sqrt(v.reduce((a, b) =&gt; a + (b - m) ** 2, 0) / (v.length - 1)); };\n  const hist = (v, titulo, color) =&gt; { const lo = Math.min(...v), hi = Math.max(...v), k = 36, w = (hi - lo) / k || 1, c = Array(k).fill(0); v.forEach((x) =&gt; c[Math.min(k - 1, Math.floor((x - lo) / w))]++); const mx = Math.max(...c);\n    return `&lt;figure class=\"m-0\"&gt;&lt;svg viewBox=\"0 0 320 170\" width=\"100%\" role=\"img\" aria-label=\"${titulo}\" font-family=\"inherit\"&gt;${c.map((n, i) =&gt; `&lt;rect x=\"${10 + i * 300 / k}\" y=\"${140 - n / mx * 120}\" width=\"${300 / k - 1}\" height=\"${n / mx * 120}\" fill=\"${color}\"/&gt;`).join(\"\")}&lt;line x1=\"10\" x2=\"310\" y1=\"140\" y2=\"140\" stroke=\"currentColor\"/&gt;&lt;text x=\"10\" y=\"160\" font-size=\"12\" fill=\"currentColor\"&gt;${lo.toFixed(0)}&lt;/text&gt;&lt;text x=\"310\" y=\"160\" font-size=\"12\" fill=\"currentColor\" text-anchor=\"end\"&gt;${hi.toFixed(0)}&lt;/text&gt;&lt;/svg&gt;&lt;figcaption class=\"small text-center\"&gt;${titulo}&lt;/figcaption&gt;&lt;/figure&gt;`; };\n  const f = (x) =&gt; x.toFixed(2).replace(\".\", \",\");\n  const d = html`&lt;div role=\"status\" aria-live=\"polite\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;div class=\"row\"&gt;&lt;div class=\"col-sm-6\"&gt;${hist(pob, \"Población (3000 valores)\", \"#8a8a8a\")}&lt;/div&gt;&lt;div class=\"col-sm-6\"&gt;${hist(medias, `Medias de 3000 muestras de n = ${nTcl}`, \"#2a78d6\")}&lt;/div&gt;&lt;/div&gt;\n  &lt;table class=\"table table-sm mt-2\"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th scope=\"row\"&gt;Media de las medias&lt;/th&gt;&lt;td&gt;${f(media(medias))}&lt;/td&gt;&lt;td class=\"small\"&gt;≈ media de la población (${f(media(pob))})&lt;/td&gt;&lt;/tr&gt;\n  &lt;tr&gt;&lt;th scope=\"row\"&gt;Desviación típica de las medias&lt;/th&gt;&lt;td&gt;${f(de(medias))}&lt;/td&gt;&lt;td class=\"small\"&gt;teórica σ/√n = ${f(sigma / Math.sqrt(nTcl))}&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;\n  &lt;p&gt;${nTcl === 1 ? \"Con n = 1 las «medias» son valores sueltos: la distribución copia la de la población.\" : nTcl &lt; 15 && poblacion !== \"Normal\" ? \"Con muestras pequeñas todavía se nota la forma de la población. Sube n para ver cómo se aproxima a una normal.\" : \"La distribución de las medias es casi normal y mucho más estrecha que la población: por eso funcionan los intervalos de confianza y las pruebas basadas en la t.\"}&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#actividad-qué-prueba-usarías",
+    "href": "94-laboratorio.html#actividad-qué-prueba-usarías",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "Actividad: ¿qué prueba usarías?",
+    "text": "Actividad: ¿qué prueba usarías?\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#para-ver-y-seguir-aprendiendo",
+    "href": "94-laboratorio.html#para-ver-y-seguir-aprendiendo",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "Para ver y seguir aprendiendo",
+    "text": "Para ver y seguir aprendiendo\nSon enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.\n\nDance of the p values — Geoff Cumming, La Trobe University. Muestra con simulaciones lo mucho que cambia el valor p al repetir el mismo experimento.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
     "objectID": "91-guia-docente.html",
     "href": "91-guia-docente.html",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "",
     "text": "Propuesta de evaluación\nEl libro sirve como manual de un curso de doctorado de estadística aplicada de unas 30-40 horas (siete sesiones de 4-5 horas) o como material autónomo. No exige conocimientos previos de R.\nLa rúbrica común valora la pregunta y el diseño (20 %), el análisis correcto (30 %), la interpretación de la incertidumbre (25 %), la reproducibilidad (15 %) y la comunicación (10 %).",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#propuesta-de-evaluación",
     "href": "91-guia-docente.html#propuesta-de-evaluación",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "",
     "text": "Actividad\nPeso orientativo\nApoyo en el libro\n\n\n\n\nRetos evaluables (elegir 5 de 7)\n60 %\nUn reto por capítulo, con rúbrica en la plantilla de entrega\n\n\nAnálisis final con datos propios\n30 %\nIntegra los retos 1, 3, 5 y 6\n\n\nAutoevaluaciones y actividades\n10 %\nEn cada capítulo y en Aula Global",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#datos",
     "href": "91-guia-docente.html#datos",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Datos",
     "text": "Datos\ndatos/estudio.csv contiene 120 doctorandos ficticios simulados con semilla fija: grupo asignado al azar (tutoría o control), horas de estudio semanales, horas de sueño, ansiedad (10-60) y nota (0-10). El efecto simulado de la tutoría es pequeño y el estudio tiene poca potencia para detectarlo, a propósito: es el hilo que conecta los capítulos 3 a 6.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
     "href": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Actividades interactivas y laboratorios",
     "text": "Actividades interactivas y laboratorios\nLaboratorios que se usan sin programar: cuarteto de Anscombe, baile de los intervalos de confianza, distribución de los valores p, potencia, puntos con palanca en regresión y actualización bayesiana Beta-Binomial. En el PDF y el EPUB, las actividades aparecen en papel con su solución.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#autoevaluación-en-aula-global",
     "href": "91-guia-docente.html#autoevaluación-en-aula-global",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Autoevaluación en Aula Global",
     "text": "Autoevaluación en Aula Global\nLas preguntas están exportadas a Moodle XML en la carpeta moodle/ del repositorio.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#diapositivas",
     "href": "91-guia-docente.html#diapositivas",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Diapositivas",
     "text": "Diapositivas\ndiapositivas/ (F, pantalla completa; S, notas).",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#mantenimiento",
     "href": "91-guia-docente.html#mantenimiento",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Mantenimiento",
     "text": "Mantenimiento\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\npython3 herramientas/diapositivas.py    # diapositivas de clase",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "92-glosario.html",
     "href": "92-glosario.html",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "",
     "text": "Pensar con datos\nTérminos del libro ordenados por capítulo. Cada entrada enlaza con el capítulo donde se explica.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#pensar-con-datos",
     "href": "92-glosario.html#pensar-con-datos",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "",
     "text": "Población y muestra\nLa población es el conjunto sobre el que se quiere concluir; la muestra, la parte que se observa. → Capítulo 1\n\n\nVariable\nCaracterística que toma valores distintos en las unidades estudiadas: nominal, ordinal, discreta o continua. → Capítulo 1\n\n\nEstudio observacional\nEstudio en el que se mide sin intervenir; permite describir y encontrar asociaciones. → Capítulo 1\n\n\nExperimento aleatorizado\nEstudio en el que el azar decide quién recibe cada condición; permite inferir causas. → Capítulo 1\n\n\nVariable de confusión\nFactor que influye a la vez en la supuesta causa y en el efecto, y crea asociaciones engañosas. → Capítulo 1\n\n\nValidez interna y externa\nInterna: si la conclusión es correcta para la muestra. Externa: si se puede generalizar. → Capítulo 1",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#describir-y-visualizar",
     "href": "92-glosario.html#describir-y-visualizar",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Describir y visualizar",
     "text": "Describir y visualizar\n\nMedia y mediana\nLa media es el valor de equilibrio; la mediana, el valor central. La mediana resiste mejor los extremos. → Capítulo 2\n\n\nDesviación típica\nDistancia típica de los datos a su media. → Capítulo 2\n\n\nRango intercuartílico\nDiferencia entre los percentiles 75 y 25: amplitud del 50 % central de los datos. → Capítulo 2\n\n\nValor atípico\nObservación muy alejada del resto; hay que investigarla, no eliminarla sin justificación. → Capítulo 2\n\n\nCorrelación\nMedida de la fuerza de una relación lineal entre dos variables, entre −1 y 1. → Capítulo 2",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#estimar-con-incertidumbre",
     "href": "92-glosario.html#estimar-con-incertidumbre",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Estimar con incertidumbre",
     "text": "Estimar con incertidumbre\n\nDistribución muestral\nDistribución de un estadístico si el estudio se repitiera muchas veces. → Capítulo 3\n\n\nError típico\nDesviación típica de la distribución muestral; para una media, aproximadamente sd/√n. → Capítulo 3\n\n\nIntervalo de confianza\nIntervalo calculado con un procedimiento que, repetido, contiene el valor verdadero en un porcentaje fijado de las veces. → Capítulo 3\n\n\nEstimación\nCuantificación de un parámetro con su incertidumbre, en lugar de una decisión de sí o no. → Capítulo 3\n\n\nRemuestreo (bootstrap)\nAproximación a la distribución muestral remuestreando con reemplazo los propios datos. → Capítulo 3",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#contrastes-y-valores-p",
     "href": "92-glosario.html#contrastes-y-valores-p",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Contrastes y valores p",
     "text": "Contrastes y valores p\n\nHipótesis nula\nHipótesis de referencia, normalmente de ausencia de efecto, frente a la que se evalúan los datos. → Capítulo 4\n\n\nValor p\nProbabilidad de obtener datos tan extremos o más que los observados si la hipótesis nula y el modelo fueran ciertos. → Capítulo 4\n\n\nNivel de significación\nUmbral α, fijado de antemano, por debajo del cual se rechaza la hipótesis nula. → Capítulo 4\n\n\nError de tipo I y II\nTipo I: rechazar una nula cierta (falso positivo). Tipo II: no rechazar una nula falsa (falso negativo). → Capítulo 4\n\n\nPrueba t\nContraste para comparar medias; la versión de Welch no supone varianzas iguales. → Capítulo 4\n\n\nComparaciones múltiples\nProblema de hacer muchos contrastes: aumenta la probabilidad de algún falso positivo. → Capítulo 4",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tamaño-del-efecto-y-potencia",
     "href": "92-glosario.html#tamaño-del-efecto-y-potencia",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Tamaño del efecto y potencia",
     "text": "Tamaño del efecto y potencia\n\nTamaño del efecto\nMagnitud de un fenómeno, en unidades originales o estandarizada. → Capítulo 5\n\n\nd de Cohen\nDiferencia de medias dividida entre la desviación típica combinada. → Capítulo 5\n\n\nPotencia\nProbabilidad de detectar un efecto de un tamaño dado si existe. → Capítulo 5\n\n\nEfecto mínimo de interés\nEfecto más pequeño que tendría importancia teórica o práctica. → Capítulo 5\n\n\nJustificación de la muestra\nArgumento explícito de por qué se usa un tamaño de muestra concreto. → Capítulo 5",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#regresión",
     "href": "92-glosario.html#regresión",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Regresión",
     "text": "Regresión\n\nRegresión lineal\nModelo que expresa un resultado como combinación lineal de predictores más un error. → Capítulo 6\n\n\nCoeficiente\nCambio esperado en el resultado por unidad de un predictor, con los demás constantes. → Capítulo 6\n\n\nResiduo\nDiferencia entre el valor observado y el predicho por el modelo. → Capítulo 6\n\n\nR²\nProporción de la variabilidad del resultado explicada por el modelo. → Capítulo 6\n\n\nVariable centrada\nVariable a la que se resta su media para que el cero sea interpretable. → Capítulo 6\n\n\nSobreajuste\nModelo que se ajusta al ruido de la muestra y predice mal datos nuevos. → Capítulo 6",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#inferencia-bayesiana",
     "href": "92-glosario.html#inferencia-bayesiana",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Inferencia bayesiana",
     "text": "Inferencia bayesiana\n\nDistribución previa\nLo que se sabe o se supone de un parámetro antes de ver los datos. → Capítulo 7\n\n\nVerosimilitud\nCuán probables son los datos observados para cada valor del parámetro. → Capítulo 7\n\n\nDistribución posterior\nDistribución del parámetro una vez combinadas la previa y los datos. → Capítulo 7\n\n\nIntervalo de credibilidad\nIntervalo que contiene el parámetro con una probabilidad dada, según la posterior. → Capítulo 7\n\n\nFactor de Bayes\nCociente que compara cuánto mejor predicen los datos una hipótesis que otra. → Capítulo 7",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   }
 ]
