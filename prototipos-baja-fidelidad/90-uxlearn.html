@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Apéndice B — Las funciones del libro – Esquemas de página y prototipos de baja fidelidad</title>
+<title>Apéndice D — Las funciones del libro – Esquemas de página y prototipos de baja fidelidad</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,7 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./91-guia-docente.html" rel="next">
-<link href="./93-galeria.html" rel="prev">
+<link href="./95-casos.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -441,6 +441,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./94-patrones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Patrones de navegación e interfaz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./95-casos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dos casos completos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -478,7 +488,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./93-galeria.html">Apéndices</a></li><li class="breadcrumb-item"><a href="./90-uxlearn.html"><span class="chapter-title">Las funciones del libro</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-uxlearn" class="quarto-section-identifier">Apéndice B — Las funciones del libro</span></h1>
+<h1 class="title"><span id="sec-uxlearn" class="quarto-section-identifier">Apéndice D — Las funciones del libro</span></h1>
 </div>
 
 
@@ -503,11 +513,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="funciones" class="level2">
 <h2 class="anchored" data-anchor-id="funciones">Funciones</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Para…</th>
@@ -517,7 +522,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td>Relación de contraste entre dos colores (WCAG)</td>
+<td>Relación de <a href="92-glosario.html#gl-contraste" class="glos" data-def="Relación entre la luminancia de dos colores, de 1:1 a 21:1.">contraste</a> entre dos colores (<a href="92-glosario.html#gl-wcag" class="glos" data-def="Pautas de Accesibilidad para el Contenido Web del W3C; la versión actual es la 2.2 (2023).">WCAG</a>)</td>
 <td><code>contraste()</code></td>
 <td>12</td>
 </tr>
@@ -542,7 +547,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>12</td>
 </tr>
 <tr class="even">
-<td>Calcular una rejilla de columnas</td>
+<td>Calcular una <a href="92-glosario.html#gl-rejilla" class="glos" data-def="División del ancho de la pantalla en columnas, medianiles y márgenes para alinear los elementos.">rejilla</a> de columnas</td>
 <td><code>rejilla()</code>, <code>ancho_bloque()</code></td>
 <td>7</td>
 </tr>
@@ -554,7 +559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td>Escala tipográfica modular</td>
 <td><code>escala_tipografica()</code></td>
-<td>Alta fidelidad</td>
+<td>Alta <a href="92-glosario.html#gl-fidelidad" class="glos" data-def="Grado en que un prototipo se parece al producto final. Tiene varias dimensiones independientes: apariencia, datos, funcionalidad, interactividad y estructura espacial.">fidelidad</a></td>
 </tr>
 <tr class="odd">
 <td>Puntuación SUS y su aceptabilidad</td>
@@ -562,12 +567,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>4</td>
 </tr>
 <tr class="even">
-<td>Tasa de éxito con intervalo de confianza</td>
+<td><a href="92-glosario.html#gl-tasa-exito" class="glos" data-def="Proporción de participantes que completan una tarea.">Tasa de éxito</a> con <a href="92-glosario.html#gl-intervalo" class="glos" data-def="Rango de valores entre los que está probablemente el valor real de una métrica. Con muestras pequeñas es ancho.">intervalo de confianza</a></td>
 <td><code>tasa_exito()</code></td>
 <td>4, 9</td>
 </tr>
 <tr class="odd">
-<td>Tiempo típico (media geométrica)</td>
+<td>Tiempo típico (<a href="92-glosario.html#gl-media-geometrica" class="glos" data-def="Media de los logaritmos devuelta a la escala original; representa mejor el tiempo típico cuando hay valores muy altos.">media geométrica</a>)</td>
 <td><code>tiempo_tipico()</code></td>
 <td>4, 9</td>
 </tr>
@@ -577,7 +582,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>5</td>
 </tr>
 <tr class="odd">
-<td>Priorizar los hallazgos de una revisión heurística</td>
+<td>Priorizar los <a href="92-glosario.html#gl-hallazgo" class="glos" data-def="Observación de la investigación con su evidencia. Se distingue de la conclusión (insight), que la interpreta.">hallazgos</a> de una revisión heurística</td>
 <td><code>priorizar_hallazgos()</code></td>
 <td>2</td>
 </tr>
@@ -587,10 +592,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="datos-todos-simulados-salvo-las-taxonomías" class="level2">
 <h2 class="anchored" data-anchor-id="datos-todos-simulados-salvo-las-taxonomías">Datos (todos simulados, salvo las taxonomías)</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Objeto</th>
@@ -604,7 +605,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><code>sesiones_prueba</code></td>
-<td>8 participantes × 3 tareas × prototipo en papel y digital</td>
+<td>8 participantes × 3 tareas × <a href="92-glosario.html#gl-papel" class="glos" data-def="Prototipo hecho con hojas y piezas de papel que se manipulan durante una prueba.">prototipo en papel</a> y digital</td>
 </tr>
 <tr class="odd">
 <td><code>flujo_registro</code></td>
@@ -1303,8 +1304,8 @@ window._ojs.runtime.interpretFromScriptTags();
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./93-galeria.html" class="pagination-link" aria-label="Galería interactiva de esquemas">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Galería interactiva de esquemas</span></span>
+      <a href="./95-casos.html" class="pagination-link" aria-label="Dos casos completos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Dos casos completos</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -1327,6 +1328,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 

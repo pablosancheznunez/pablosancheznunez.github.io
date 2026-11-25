@@ -125,7 +125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -447,6 +447,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./94-patrones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Patrones de navegación e interfaz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./95-casos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dos casos completos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -481,6 +491,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#notación" id="toc-notación" class="nav-link" data-scroll-target="#notación">3. Notación</a></li>
   <li><a href="#flujos-coherentes-eficientes-y-sin-barreras" id="toc-flujos-coherentes-eficientes-y-sin-barreras" class="nav-link" data-scroll-target="#flujos-coherentes-eficientes-y-sin-barreras">4. Flujos coherentes, eficientes y sin barreras</a></li>
   <li><a href="#dónde-se-pierden-los-usuarios" id="toc-dónde-se-pierden-los-usuarios" class="nav-link" data-scroll-target="#dónde-se-pierden-los-usuarios">5. ¿Dónde se pierden los usuarios?</a></li>
+  <li><a href="#del-flujo-a-la-arquitectura-el-mapa-del-sitio" id="toc-del-flujo-a-la-arquitectura-el-mapa-del-sitio" class="nav-link" data-scroll-target="#del-flujo-a-la-arquitectura-el-mapa-del-sitio">6. Del flujo a la arquitectura: el mapa del sitio</a></li>
   <li><a href="#práctica-en-r-el-embudo-de-un-flujo-de-registro" id="toc-práctica-en-r-el-embudo-de-un-flujo-de-registro" class="nav-link" data-scroll-target="#práctica-en-r-el-embudo-de-un-flujo-de-registro">Práctica en R: el embudo de un flujo de registro</a>
   <ul class="collapse">
   <li><a href="#ejercicio-5.1" id="toc-ejercicio-5.1" class="nav-link" data-scroll-target="#ejercicio-5.1">Ejercicio 5.1</a></li>
@@ -497,7 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-fundamentos.html">Temas</a></li><li class="breadcrumb-item"><a href="./05-flujos.html"><span class="chapter-title">Tema 5. Flujos de usuario: modelado y representación</span></a></li></ol></nav>
@@ -565,21 +576,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lectura-obligatoria" class="level2">
 <h2 class="anchored" data-anchor-id="lectura-obligatoria">Lectura obligatoria</h2>
 <div class="lectura">
-<p>Kalbach, J. (2021). <em>Mapping experiences: A complete guide to customer alignment through journeys, blueprints, and diagrams</em> (2.ª ed.). O’Reilly. Capítulos sobre los diagramas de alineamiento y los mapas de tareas.</p>
+<p>Kalbach, J. (2021). <em>Mapping experiences: A complete guide to customer alignment through journeys, blueprints, and diagrams</em> (2.ª ed.). O’Reilly. Capítulos sobre los diagramas de alineamiento y los <a href="92-glosario.html#gl-mapa-tareas" class="glos" data-def="Representación ordenada de todas las tareas de un servicio, sin entrar en pantallas.">mapas de tareas</a>.</p>
 </div>
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
 <li>Nielsen Norman Group. <a href="https://www.nngroup.com/articles/user-journeys-vs-user-flows/">User journeys vs.&nbsp;user flows</a>. Diferencia entre el viaje completo y el flujo de una tarea.</li>
-<li>Nielsen Norman Group. <a href="https://www.nngroup.com/articles/wireflows/">Wireflows: A UX deliverable for workflows and apps</a>. Flujos dibujados con esquemas de página.</li>
+<li>Nielsen Norman Group. <a href="https://www.nngroup.com/articles/wireflows/">Wireflows: A UX deliverable for workflows and apps</a>. Flujos dibujados con <a href="92-glosario.html#gl-wireframe" class="glos" data-def="Wireframe. Representación de la estructura de una pantalla: qué elementos contiene, dónde están y qué importancia tienen, sin estilo visual.">esquemas de página</a>.</li>
 <li>Nielsen Norman Group. <a href="https://www.nngroup.com/articles/task-analysis/">Task analysis: Support users in achieving their goals</a>. Cómo descomponer una tarea.</li>
 </ul>
 </section>
 </section>
 <section id="de-la-tarea-al-flujo" class="level2">
 <h2 class="anchored" data-anchor-id="de-la-tarea-al-flujo">1. De la tarea al flujo</h2>
-<p>Antes de dibujar pantallas hay que entender la <strong>tarea</strong>: qué quiere conseguir la persona y qué pasos sigue. El <strong>análisis de tareas</strong> descompone un objetivo en subtareas y pasos. Por ejemplo, «reservar una sala de trabajo en grupo» se descompone en: elegir fecha y franja, ver salas libres, elegir una, identificarse, confirmar y recibir la confirmación.</p>
-<p>Un <strong>flujo de usuario</strong> representa el recorrido por el sistema para completar una tarea: qué ve la persona, qué decide y adónde la lleva cada decisión. No es lo mismo que un <strong>viaje de usuario</strong> (<em>user journey</em>), que cubre toda la experiencia, dentro y fuera del producto (enterarse de que existe la sala, desplazarse, usarla), ni que un <strong>mapa de tareas</strong>, que ordena todas las tareas del servicio sin entrar en pantallas.</p>
+<p>Antes de dibujar pantallas hay que entender la <strong>tarea</strong>: qué quiere conseguir la persona y qué pasos sigue. El <a href="92-glosario.html#gl-analisis-tareas" class="glos" data-def="Descomposición de un objetivo en subtareas y pasos."><strong>análisis de tareas</strong></a> descompone un objetivo en subtareas y pasos. Por ejemplo, «reservar una sala de trabajo en grupo» se descompone en: elegir fecha y franja, ver salas libres, elegir una, identificarse, confirmar y recibir la confirmación.</p>
+<p>Un <a href="92-glosario.html#gl-flujo" class="glos" data-def="Recorrido por el sistema para completar una tarea, con sus pantallas y decisiones."><strong>flujo de usuario</strong></a> representa el recorrido por el sistema para completar una tarea: qué ve la persona, qué decide y adónde la lleva cada decisión. No es lo mismo que un <strong>viaje de usuario</strong> (<em>user journey</em>), que cubre toda la experiencia, dentro y fuera del producto (enterarse de que existe la sala, desplazarse, usarla), ni que un <strong>mapa de tareas</strong>, que ordena todas las tareas del servicio sin entrar en pantallas.</p>
 </section>
 <section id="flujos-principal-alternativo-y-de-error" class="level2">
 <h2 class="anchored" data-anchor-id="flujos-principal-alternativo-y-de-error">2. Flujos principal, alternativo y de error</h2>
@@ -587,7 +598,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>Flujo principal</strong> (o «camino feliz»): el recorrido más directo cuando todo va bien.</li>
 <li><strong>Flujos alternativos</strong>: caminos válidos distintos (reservar desde el calendario o desde la ficha de la sala; reservar sin haber iniciado sesión).</li>
-<li><strong>Flujos de error</strong>: qué pasa cuando algo falla (la sala se ocupa mientras se reserva, la sesión caduca, falta un dato).</li>
+<li><a href="92-glosario.html#gl-flujo-error" class="glos" data-def="Camino que sigue la persona cuando algo falla."><strong>Flujos de error</strong></a>: qué pasa cuando algo falla (la sala se ocupa mientras se reserva, la sesión caduca, falta un dato).</li>
 </ul>
 <p>Los flujos de error son los que más se olvidan y los que más frustran. Un buen flujo de error explica qué ha pasado, conserva lo que la persona ya había hecho y le ofrece un camino para continuar (heurísticas 3, 5 y 9 de Nielsen, Tema 2).</p>
 </section>
@@ -608,7 +619,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>Rectángulo</td>
-<td>Pantalla o estado que ve la persona</td>
+<td>Pantalla o <a href="92-glosario.html#gl-estado" class="glos" data-def="Cada situación distinta en la que puede estar un componente o una pantalla.">estado</a> que ve la persona</td>
 </tr>
 <tr class="odd">
 <td>Rombo</td>
@@ -645,8 +656,203 @@ Figura&nbsp;1: Flujo de reserva de una sala con su camino principal, una alterna
 </section>
 <section id="dónde-se-pierden-los-usuarios" class="level2">
 <h2 class="anchored" data-anchor-id="dónde-se-pierden-los-usuarios">5. ¿Dónde se pierden los usuarios?</h2>
-<p>Cuando un flujo ya existe, la analítica muestra cuántas personas llegan a cada paso. Ese recorrido se representa como un <strong>embudo</strong>: para cada paso, cuántos continúan respecto al paso anterior y respecto al inicio. El paso con menos continuidad señala dónde hay que mirar primero, aunque no explica por qué: para eso se necesita investigación cualitativa (Tema 2).</p>
+<p>Cuando un flujo ya existe, la analítica muestra cuántas personas llegan a cada paso. Ese recorrido se representa como un <a href="92-glosario.html#gl-embudo" class="glos" data-def="Recuento de las personas que llegan a cada paso de un flujo, que muestra dónde se pierden."><strong>embudo</strong></a>: para cada paso, cuántos continúan respecto al paso anterior y respecto al inicio. El paso con menos continuidad señala dónde hay que mirar primero, aunque no explica por qué: para eso se necesita investigación cualitativa (Tema 2).</p>
 </section>
+<section id="del-flujo-a-la-arquitectura-el-mapa-del-sitio" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="del-flujo-a-la-arquitectura-el-mapa-del-sitio">6. Del flujo a la arquitectura: el mapa del sitio</h2>
+<p>El flujo describe <strong>una tarea</strong>; el <strong>mapa del sitio</strong> describe <strong>todo el espacio</strong> por el que se mueven las tareas: qué secciones hay y cómo se agrupan. Se construyen juntos: cada pantalla del flujo tiene que tener un lugar en el mapa, y cada sección del mapa debe servir al menos a una tarea importante.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 516.02 424.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 410.4)">
+<title>reservasala</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-410.4 501.62,-410.4 501.62,14.4 -14.4,14.4"></polygon>
+<!-- Inicio -->
+<g id="node1" class="node">
+<title>Inicio</title>
+<path fill="#e8f0fb" stroke="black" d="M260.22,-396C260.22,-396 230.22,-396 230.22,-396 224.22,-396 218.22,-390 218.22,-384 218.22,-384 218.22,-372 218.22,-372 218.22,-366 224.22,-360 230.22,-360 230.22,-360 260.22,-360 260.22,-360 266.22,-360 272.22,-366 272.22,-372 272.22,-372 272.22,-384 272.22,-384 272.22,-390 266.22,-396 260.22,-396"></path>
+<text text-anchor="middle" x="245.22" y="-374.7" font-family="Helvetica,sans-Serif" font-size="11.00">Inicio</text>
+</g>
+<!-- Buscar salas -->
+<g id="node2" class="node">
+<title>Buscar salas</title>
+<path fill="none" stroke="black" d="M115.69,-324C115.69,-324 60.74,-324 60.74,-324 54.74,-324 48.74,-318 48.74,-312 48.74,-312 48.74,-300 48.74,-300 48.74,-294 54.74,-288 60.74,-288 60.74,-288 115.69,-288 115.69,-288 121.69,-288 127.69,-294 127.69,-300 127.69,-300 127.69,-312 127.69,-312 127.69,-318 121.69,-324 115.69,-324"></path>
+<text text-anchor="middle" x="88.22" y="-302.7" font-family="Helvetica,sans-Serif" font-size="11.00">Buscar salas</text>
+</g>
+<!-- Inicio&#45;&gt;Buscar salas -->
+<g id="edge1" class="edge">
+<title>Inicio-&gt;Buscar salas</title>
+<path fill="none" stroke="black" d="M217.87,-364.81C192.57,-353.53 154.71,-336.65 126.42,-324.03"></path>
+</g>
+<!-- Mis reservas -->
+<g id="node3" class="node">
+<title>Mis reservas</title>
+<path fill="none" stroke="black" d="M228.56,-324C228.56,-324 173.87,-324 173.87,-324 167.87,-324 161.87,-318 161.87,-312 161.87,-312 161.87,-300 161.87,-300 161.87,-294 167.87,-288 173.87,-288 173.87,-288 228.56,-288 228.56,-288 234.56,-288 240.56,-294 240.56,-300 240.56,-300 240.56,-312 240.56,-312 240.56,-318 234.56,-324 228.56,-324"></path>
+<text text-anchor="middle" x="201.22" y="-302.7" font-family="Helvetica,sans-Serif" font-size="11.00">Mis reservas</text>
+</g>
+<!-- Inicio&#45;&gt;Mis reservas -->
+<g id="edge2" class="edge">
+<title>Inicio-&gt;Mis reservas</title>
+<path fill="none" stroke="black" d="M234.34,-359.7C227.52,-348.85 218.76,-334.92 211.97,-324.1"></path>
+</g>
+<!-- Mapa -->
+<g id="node4" class="node">
+<title>Mapa</title>
+<path fill="none" stroke="black" d="M304.22,-324C304.22,-324 274.22,-324 274.22,-324 268.22,-324 262.22,-318 262.22,-312 262.22,-312 262.22,-300 262.22,-300 262.22,-294 268.22,-288 274.22,-288 274.22,-288 304.22,-288 304.22,-288 310.22,-288 316.22,-294 316.22,-300 316.22,-300 316.22,-312 316.22,-312 316.22,-318 310.22,-324 304.22,-324"></path>
+<text text-anchor="middle" x="289.22" y="-302.7" font-family="Helvetica,sans-Serif" font-size="11.00">Mapa</text>
+</g>
+<!-- Inicio&#45;&gt;Mapa -->
+<g id="edge3" class="edge">
+<title>Inicio-&gt;Mapa</title>
+<path fill="none" stroke="black" d="M256.09,-359.7C262.91,-348.85 271.67,-334.92 278.46,-324.1"></path>
+</g>
+<!-- Perfil -->
+<g id="node5" class="node">
+<title>Perfil</title>
+<path fill="none" stroke="black" d="M386.22,-324C386.22,-324 356.22,-324 356.22,-324 350.22,-324 344.22,-318 344.22,-312 344.22,-312 344.22,-300 344.22,-300 344.22,-294 350.22,-288 356.22,-288 356.22,-288 386.22,-288 386.22,-288 392.22,-288 398.22,-294 398.22,-300 398.22,-300 398.22,-312 398.22,-312 398.22,-318 392.22,-324 386.22,-324"></path>
+<text text-anchor="middle" x="371.22" y="-302.7" font-family="Helvetica,sans-Serif" font-size="11.00">Perfil</text>
+</g>
+<!-- Inicio&#45;&gt;Perfil -->
+<g id="edge4" class="edge">
+<title>Inicio-&gt;Perfil</title>
+<path fill="none" stroke="black" d="M272.25,-361.98C293.36,-350.25 322.58,-334.02 343.8,-322.23"></path>
+</g>
+<!-- Lista -->
+<g id="node6" class="node">
+<title>Lista</title>
+<path fill="none" stroke="black" d="M79.22,-252C79.22,-252 49.22,-252 49.22,-252 43.22,-252 37.22,-246 37.22,-240 37.22,-240 37.22,-228 37.22,-228 37.22,-222 43.22,-216 49.22,-216 49.22,-216 79.22,-216 79.22,-216 85.22,-216 91.22,-222 91.22,-228 91.22,-228 91.22,-240 91.22,-240 91.22,-246 85.22,-252 79.22,-252"></path>
+<text text-anchor="middle" x="64.22" y="-230.7" font-family="Helvetica,sans-Serif" font-size="11.00">Lista</text>
+</g>
+<!-- Buscar salas&#45;&gt;Lista -->
+<g id="edge5" class="edge">
+<title>Buscar salas-&gt;Lista</title>
+<path fill="none" stroke="black" d="M82.28,-287.7C78.56,-276.85 73.79,-262.92 70.08,-252.1"></path>
+</g>
+<!-- Próximas -->
+<g id="node10" class="node">
+<title>Próximas</title>
+<path fill="none" stroke="black" d="M169.05,-252C169.05,-252 131.38,-252 131.38,-252 125.38,-252 119.38,-246 119.38,-240 119.38,-240 119.38,-228 119.38,-228 119.38,-222 125.38,-216 131.38,-216 131.38,-216 169.05,-216 169.05,-216 175.05,-216 181.05,-222 181.05,-228 181.05,-228 181.05,-240 181.05,-240 181.05,-246 175.05,-252 169.05,-252"></path>
+<text text-anchor="middle" x="150.22" y="-230.7" font-family="Helvetica,sans-Serif" font-size="11.00">Próximas</text>
+</g>
+<!-- Mis reservas&#45;&gt;Próximas -->
+<g id="edge9" class="edge">
+<title>Mis reservas-&gt;Próximas</title>
+<path fill="none" stroke="black" d="M188.61,-287.7C180.7,-276.85 170.55,-262.92 162.68,-252.1"></path>
+</g>
+<!-- Historial -->
+<g id="node11" class="node">
+<title>Historial</title>
+<path fill="none" stroke="black" d="M246.95,-252C246.95,-252 215.48,-252 215.48,-252 209.48,-252 203.48,-246 203.48,-240 203.48,-240 203.48,-228 203.48,-228 203.48,-222 209.48,-216 215.48,-216 215.48,-216 246.95,-216 246.95,-216 252.95,-216 258.95,-222 258.95,-228 258.95,-228 258.95,-240 258.95,-240 258.95,-246 252.95,-252 246.95,-252"></path>
+<text text-anchor="middle" x="231.22" y="-230.7" font-family="Helvetica,sans-Serif" font-size="11.00">Historial</text>
+</g>
+<!-- Mis reservas&#45;&gt;Historial -->
+<g id="edge10" class="edge">
+<title>Mis reservas-&gt;Historial</title>
+<path fill="none" stroke="black" d="M208.63,-287.7C213.28,-276.85 219.25,-262.92 223.88,-252.1"></path>
+</g>
+<!-- Avisos -->
+<g id="node14" class="node">
+<title>Avisos</title>
+<path fill="none" stroke="black" d="M323.22,-252C323.22,-252 293.22,-252 293.22,-252 287.22,-252 281.22,-246 281.22,-240 281.22,-240 281.22,-228 281.22,-228 281.22,-222 287.22,-216 293.22,-216 293.22,-216 323.22,-216 323.22,-216 329.22,-216 335.22,-222 335.22,-228 335.22,-228 335.22,-240 335.22,-240 335.22,-246 329.22,-252 323.22,-252"></path>
+<text text-anchor="middle" x="308.22" y="-230.7" font-family="Helvetica,sans-Serif" font-size="11.00">Avisos</text>
+</g>
+<!-- Perfil&#45;&gt;Avisos -->
+<g id="edge13" class="edge">
+<title>Perfil-&gt;Avisos</title>
+<path fill="none" stroke="black" d="M355.64,-287.7C345.88,-276.85 333.34,-262.92 323.61,-252.1"></path>
+</g>
+<!-- Normas -->
+<g id="node15" class="node">
+<title>Normas</title>
+<path fill="none" stroke="black" d="M399.22,-252C399.22,-252 369.21,-252 369.21,-252 363.21,-252 357.21,-246 357.21,-240 357.21,-240 357.21,-228 357.21,-228 357.21,-222 363.21,-216 369.21,-216 369.21,-216 399.22,-216 399.22,-216 405.22,-216 411.22,-222 411.22,-228 411.22,-228 411.22,-240 411.22,-240 411.22,-246 405.22,-252 399.22,-252"></path>
+<text text-anchor="middle" x="384.22" y="-230.7" font-family="Helvetica,sans-Serif" font-size="11.00">Normas</text>
+</g>
+<!-- Perfil&#45;&gt;Normas -->
+<g id="edge14" class="edge">
+<title>Perfil-&gt;Normas</title>
+<path fill="none" stroke="black" d="M374.43,-287.7C376.44,-276.85 379.03,-262.92 381.04,-252.1"></path>
+</g>
+<!-- Ayuda -->
+<g id="node16" class="node">
+<title>Ayuda</title>
+<path fill="none" stroke="black" d="M475.22,-252C475.22,-252 445.22,-252 445.22,-252 439.22,-252 433.22,-246 433.22,-240 433.22,-240 433.22,-228 433.22,-228 433.22,-222 439.22,-216 445.22,-216 445.22,-216 475.22,-216 475.22,-216 481.22,-216 487.22,-222 487.22,-228 487.22,-228 487.22,-240 487.22,-240 487.22,-246 481.22,-252 475.22,-252"></path>
+<text text-anchor="middle" x="460.22" y="-230.7" font-family="Helvetica,sans-Serif" font-size="11.00">Ayuda</text>
+</g>
+<!-- Perfil&#45;&gt;Ayuda -->
+<g id="edge15" class="edge">
+<title>Perfil-&gt;Ayuda</title>
+<path fill="none" stroke="black" d="M393.22,-287.7C407.01,-276.85 424.72,-262.92 438.47,-252.1"></path>
+</g>
+<!-- Ficha de sala -->
+<g id="node7" class="node">
+<title>Ficha de sala</title>
+<path fill="none" stroke="black" d="M86.14,-180C86.14,-180 28.29,-180 28.29,-180 22.29,-180 16.29,-174 16.29,-168 16.29,-168 16.29,-156 16.29,-156 16.29,-150 22.29,-144 28.29,-144 28.29,-144 86.14,-144 86.14,-144 92.14,-144 98.14,-150 98.14,-156 98.14,-156 98.14,-168 98.14,-168 98.14,-174 92.14,-180 86.14,-180"></path>
+<text text-anchor="middle" x="57.22" y="-158.7" font-family="Helvetica,sans-Serif" font-size="11.00">Ficha de sala</text>
+</g>
+<!-- Lista&#45;&gt;Ficha de sala -->
+<g id="edge6" class="edge">
+<title>Lista-&gt;Ficha de sala</title>
+<path fill="none" stroke="black" d="M62.48,-215.7C61.4,-204.85 60.01,-190.92 58.93,-180.1"></path>
+</g>
+<!-- Confirmar -->
+<g id="node8" class="node">
+<title>Confirmar</title>
+<path fill="none" stroke="black" d="M77.5,-108C77.5,-108 36.93,-108 36.93,-108 30.93,-108 24.93,-102 24.93,-96 24.93,-96 24.93,-84 24.93,-84 24.93,-78 30.93,-72 36.93,-72 36.93,-72 77.5,-72 77.5,-72 83.5,-72 89.5,-78 89.5,-84 89.5,-84 89.5,-96 89.5,-96 89.5,-102 83.5,-108 77.5,-108"></path>
+<text text-anchor="middle" x="57.22" y="-86.7" font-family="Helvetica,sans-Serif" font-size="11.00">Confirmar</text>
+</g>
+<!-- Ficha de sala&#45;&gt;Confirmar -->
+<g id="edge7" class="edge">
+<title>Ficha de sala-&gt;Confirmar</title>
+<path fill="none" stroke="black" d="M57.22,-143.7C57.22,-132.85 57.22,-118.92 57.22,-108.1"></path>
+</g>
+<!-- Reserva confirmada -->
+<g id="node9" class="node">
+<title>Reserva confirmada</title>
+<path fill="none" stroke="black" d="M102.65,-36C102.65,-36 11.78,-36 11.78,-36 5.78,-36 -0.22,-30 -0.22,-24 -0.22,-24 -0.22,-12 -0.22,-12 -0.22,-6 5.78,0 11.78,0 11.78,0 102.65,0 102.65,0 108.65,0 114.65,-6 114.65,-12 114.65,-12 114.65,-24 114.65,-24 114.65,-30 108.65,-36 102.65,-36"></path>
+<text text-anchor="middle" x="57.22" y="-14.7" font-family="Helvetica,sans-Serif" font-size="11.00">Reserva confirmada</text>
+</g>
+<!-- Confirmar&#45;&gt;Reserva confirmada -->
+<g id="edge8" class="edge">
+<title>Confirmar-&gt;Reserva confirmada</title>
+<path fill="none" stroke="black" d="M57.22,-71.7C57.22,-60.85 57.22,-46.92 57.22,-36.1"></path>
+</g>
+<!-- Cancelar -->
+<g id="node12" class="node">
+<title>Cancelar</title>
+<path fill="none" stroke="black" d="M168.24,-180C168.24,-180 132.19,-180 132.19,-180 126.19,-180 120.19,-174 120.19,-168 120.19,-168 120.19,-156 120.19,-156 120.19,-150 126.19,-144 132.19,-144 132.19,-144 168.24,-144 168.24,-144 174.24,-144 180.24,-150 180.24,-156 180.24,-156 180.24,-168 180.24,-168 180.24,-174 174.24,-180 168.24,-180"></path>
+<text text-anchor="middle" x="150.22" y="-158.7" font-family="Helvetica,sans-Serif" font-size="11.00">Cancelar</text>
+</g>
+<!-- Próximas&#45;&gt;Cancelar -->
+<g id="edge11" class="edge">
+<title>Próximas-&gt;Cancelar</title>
+<path fill="none" stroke="black" d="M150.22,-215.7C150.22,-204.85 150.22,-190.92 150.22,-180.1"></path>
+</g>
+<!-- Cómo llegar -->
+<g id="node13" class="node">
+<title>Cómo llegar</title>
+<path fill="none" stroke="black" d="M266.01,-180C266.01,-180 214.42,-180 214.42,-180 208.42,-180 202.42,-174 202.42,-168 202.42,-168 202.42,-156 202.42,-156 202.42,-150 208.42,-144 214.42,-144 214.42,-144 266.01,-144 266.01,-144 272.01,-144 278.01,-150 278.01,-156 278.01,-156 278.01,-168 278.01,-168 278.01,-174 272.01,-180 266.01,-180"></path>
+<text text-anchor="middle" x="240.22" y="-158.7" font-family="Helvetica,sans-Serif" font-size="11.00">Cómo llegar</text>
+</g>
+<!-- Próximas&#45;&gt;Cómo llegar -->
+<g id="edge12" class="edge">
+<title>Próximas-&gt;Cómo llegar</title>
+<path fill="none" stroke="black" d="M172.46,-215.7C186.41,-204.85 204.32,-190.92 218.22,-180.1"></path>
+</g>
+</g>
+</svg>
+</div>
+<p></p><figcaption> Mapa del sitio de ReservaSala. Las tareas principales (buscar y reservar) están a un toque de la pantalla de inicio.</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+<p>Para decidir cómo agrupar las secciones según el modelo mental de las personas, usa la <strong>ordenación de tarjetas</strong> (puedes practicarla en el <a href="./93-galeria.html#lab-galeria-tarjetas">laboratorio de la galería</a>) y, para comprobar que encuentran las cosas, la <strong>prueba de árbol</strong> del Tema 7.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Regla práctica.</strong> Las tareas más frecuentes deberían estar a uno o dos toques del inicio. Si una tarea frecuente queda en el tercer nivel del mapa, revisa la agrupación.</p>
+</div></div></section>
 <section id="práctica-en-r-el-embudo-de-un-flujo-de-registro" class="level2">
 <h2 class="anchored" data-anchor-id="práctica-en-r-el-embudo-de-un-flujo-de-registro">Práctica en R: el embudo de un flujo de registro</h2>
 <p><code>flujo_registro</code> contiene los usuarios que llegan a cada paso del registro en una aplicación de biblioteca (datos simulados). La función <code>embudo()</code> calcula la continuidad:</p>
@@ -717,13 +923,13 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ1
 </div>
 <p>Un <strong>embudo</strong> muestra cuántas personas llegan a cada paso de un flujo. Ajusta las cifras del flujo de reserva de una sala de estudio y localiza el paso donde se pierde más gente: es el primero que conviene rediseñar.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="179" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 178;"><span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
-<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a>pasos_embudo <span class="op">=</span> [<span class="st">"Entran en «Reservar sala»"</span><span class="op">,</span> <span class="st">"Eligen fecha"</span><span class="op">,</span> <span class="st">"Eligen franja horaria"</span><span class="op">,</span> <span class="st">"Se identifican"</span><span class="op">,</span> <span class="st">"Confirman la reserva"</span>]</span>
-<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a>viewof cifras <span class="op">=</span> {</span>
-<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> caja <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div&gt;&lt;/div&gt;`</span><span class="op">,</span> ini <span class="op">=</span> [<span class="dv">1000</span><span class="op">,</span> <span class="dv">820</span><span class="op">,</span> <span class="dv">700</span><span class="op">,</span> <span class="dv">360</span><span class="op">,</span> <span class="dv">330</span>]<span class="op">;</span></span>
-<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> r <span class="op">=</span> pasos_embudo<span class="op">.</span><span class="fu">map</span>((t<span class="op">,</span> i) <span class="kw">=&gt;</span> { <span class="kw">const</span> c <span class="op">=</span> <span class="fu">rango</span>(t<span class="op">,</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">1000</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> ini[i]})<span class="op">;</span> c<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> e <span class="kw">=&gt;</span> { e<span class="op">.</span><span class="fu">stopPropagation</span>()<span class="op">;</span> caja<span class="op">.</span><span class="at">value</span> <span class="op">=</span> r<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">value</span>)<span class="op">;</span> caja<span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">Event</span>(<span class="st">"input"</span><span class="op">,</span> {<span class="dt">bubbles</span><span class="op">:</span> <span class="kw">true</span>}))<span class="op">;</span> })<span class="op">;</span> caja<span class="op">.</span><span class="fu">appendChild</span>(c)<span class="op">;</span> <span class="cf">return</span> c<span class="op">;</span> })<span class="op">;</span></span>
-<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a>  caja<span class="op">.</span><span class="at">value</span> <span class="op">=</span> r<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">value</span>)<span class="op">;</span> <span class="cf">return</span> caja<span class="op">;</span></span>
-<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="204" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 203;"><span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
+<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a>pasos_embudo <span class="op">=</span> [<span class="st">"Entran en «Reservar sala»"</span><span class="op">,</span> <span class="st">"Eligen fecha"</span><span class="op">,</span> <span class="st">"Eligen franja horaria"</span><span class="op">,</span> <span class="st">"Se identifican"</span><span class="op">,</span> <span class="st">"Confirman la reserva"</span>]</span>
+<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a>viewof cifras <span class="op">=</span> {</span>
+<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> caja <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div&gt;&lt;/div&gt;`</span><span class="op">,</span> ini <span class="op">=</span> [<span class="dv">1000</span><span class="op">,</span> <span class="dv">820</span><span class="op">,</span> <span class="dv">700</span><span class="op">,</span> <span class="dv">360</span><span class="op">,</span> <span class="dv">330</span>]<span class="op">;</span></span>
+<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> r <span class="op">=</span> pasos_embudo<span class="op">.</span><span class="fu">map</span>((t<span class="op">,</span> i) <span class="kw">=&gt;</span> { <span class="kw">const</span> c <span class="op">=</span> <span class="fu">rango</span>(t<span class="op">,</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">1000</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> ini[i]})<span class="op">;</span> c<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> e <span class="kw">=&gt;</span> { e<span class="op">.</span><span class="fu">stopPropagation</span>()<span class="op">;</span> caja<span class="op">.</span><span class="at">value</span> <span class="op">=</span> r<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">value</span>)<span class="op">;</span> caja<span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">Event</span>(<span class="st">"input"</span><span class="op">,</span> {<span class="dt">bubbles</span><span class="op">:</span> <span class="kw">true</span>}))<span class="op">;</span> })<span class="op">;</span> caja<span class="op">.</span><span class="fu">appendChild</span>(c)<span class="op">;</span> <span class="cf">return</span> c<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a>  caja<span class="op">.</span><span class="at">value</span> <span class="op">=</span> r<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">value</span>)<span class="op">;</span> <span class="cf">return</span> caja<span class="op">;</span></span>
+<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -747,18 +953,18 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ1
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="189" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 188;"><span id="cb4-189"><a href="#cb4-189" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb4-190"><a href="#cb4-190" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> v <span class="op">=</span> cifras<span class="op">.</span><span class="fu">map</span>((x<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(x<span class="op">,</span> i <span class="op">?</span> cifras<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> i)<span class="op">.</span><span class="fu">reduce</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(a<span class="op">,</span> b)) <span class="op">:</span> x))<span class="op">;</span></span>
-<span id="cb4-191"><a href="#cb4-191" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> perdidas <span class="op">=</span> v<span class="op">.</span><span class="fu">map</span>((x<span class="op">,</span> i) <span class="kw">=&gt;</span> i <span class="op">?</span> (v[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">?</span> <span class="dv">1</span> <span class="op">-</span> x <span class="op">/</span> v[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">:</span> <span class="dv">0</span>) <span class="op">:</span> <span class="dv">0</span>)<span class="op">;</span></span>
-<span id="cb4-192"><a href="#cb4-192" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> peor <span class="op">=</span> perdidas<span class="op">.</span><span class="fu">indexOf</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>perdidas))<span class="op">;</span></span>
-<span id="cb4-193"><a href="#cb4-193" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> fmt <span class="op">=</span> <span class="kw">new</span> <span class="bu">Intl</span><span class="op">.</span><span class="fu">NumberFormat</span>(<span class="st">"es-ES"</span>)<span class="op">;</span></span>
-<span id="cb4-194"><a href="#cb4-194" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;table class="table table-sm"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Paso&lt;/th&gt;&lt;th scope="col"&gt;Personas&lt;/th&gt;&lt;th scope="col"&gt;Se pierden&lt;/th&gt;&lt;th scope="col"&gt;&lt;span class="visually-hidden"&gt;Barra&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;</span></span>
-<span id="cb4-195"><a href="#cb4-195" aria-hidden="true" tabindex="-1"></a><span class="vs">  </span><span class="sc">${</span>pasos_embudo<span class="op">.</span><span class="fu">map</span>((p<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;tr style="</span><span class="sc">${</span>i <span class="op">===</span> peor <span class="op">&amp;&amp;</span> i <span class="op">?</span> <span class="st">"font-weight:600"</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">"&gt;&lt;td&gt;</span><span class="sc">${</span>p<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td style="text-align:right"&gt;</span><span class="sc">${</span>fmt<span class="op">.</span><span class="fu">format</span>(v[i])<span class="sc">}</span><span class="vs">&lt;/td&gt;</span></span>
-<span id="cb4-196"><a href="#cb4-196" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;td style="text-align:right"&gt;</span><span class="sc">${</span>i <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> perdidas[i]) <span class="op">+</span> <span class="st">" %"</span> <span class="op">:</span> <span class="st">"—"</span><span class="sc">}</span><span class="vs">&lt;/td&gt;</span></span>
-<span id="cb4-197"><a href="#cb4-197" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;td style="width:40%"&gt;&lt;div style="height:.8rem;border-radius:2px;background:</span><span class="sc">${</span>i <span class="op">===</span> peor <span class="op">&amp;&amp;</span> i <span class="op">?</span> <span class="st">"#eb6834"</span> <span class="op">:</span> <span class="st">"#2a78d6"</span><span class="sc">}</span><span class="vs">;width:</span><span class="sc">${</span>v[<span class="dv">0</span>] <span class="op">?</span> <span class="dv">100</span> <span class="op">*</span> v[i] <span class="op">/</span> v[<span class="dv">0</span>] <span class="op">:</span> <span class="dv">0</span><span class="sc">}</span><span class="vs">%"&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`</span>)<span class="sc">}</span><span class="vs">&lt;/tbody&gt;&lt;/table&gt;</span></span>
-<span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;p&gt;Conversión total: &lt;strong&gt;</span><span class="sc">${</span>v[<span class="dv">0</span>] <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> v[<span class="dv">4</span>] <span class="op">/</span> v[<span class="dv">0</span>]) <span class="op">:</span> <span class="dv">0</span><span class="sc">}</span><span class="vs"> %&lt;/strong&gt;. </span><span class="sc">${</span>peor <span class="op">?</span> <span class="fu">html</span><span class="vs">`La mayor pérdida está en &lt;strong&gt;«</span><span class="sc">${</span>pasos_embudo[peor]<span class="sc">}</span><span class="vs">»&lt;/strong&gt; (</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> perdidas[peor])<span class="sc">}</span><span class="vs"> %).`</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">&lt;/p&gt;</span></span>
-<span id="cb4-199"><a href="#cb4-199" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;p class="small"&gt;Un paso no puede tener más personas que el anterior: el laboratorio lo corrige. Con las funciones del libro: &lt;code&gt;embudo()&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
-<span id="cb4-200"><a href="#cb4-200" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="214" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 213;"><span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> v <span class="op">=</span> cifras<span class="op">.</span><span class="fu">map</span>((x<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(x<span class="op">,</span> i <span class="op">?</span> cifras<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> i)<span class="op">.</span><span class="fu">reduce</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(a<span class="op">,</span> b)) <span class="op">:</span> x))<span class="op">;</span></span>
+<span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> perdidas <span class="op">=</span> v<span class="op">.</span><span class="fu">map</span>((x<span class="op">,</span> i) <span class="kw">=&gt;</span> i <span class="op">?</span> (v[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">?</span> <span class="dv">1</span> <span class="op">-</span> x <span class="op">/</span> v[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">:</span> <span class="dv">0</span>) <span class="op">:</span> <span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> peor <span class="op">=</span> perdidas<span class="op">.</span><span class="fu">indexOf</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>perdidas))<span class="op">;</span></span>
+<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> fmt <span class="op">=</span> <span class="kw">new</span> <span class="bu">Intl</span><span class="op">.</span><span class="fu">NumberFormat</span>(<span class="st">"es-ES"</span>)<span class="op">;</span></span>
+<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;table class="table table-sm"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Paso&lt;/th&gt;&lt;th scope="col"&gt;Personas&lt;/th&gt;&lt;th scope="col"&gt;Se pierden&lt;/th&gt;&lt;th scope="col"&gt;&lt;span class="visually-hidden"&gt;Barra&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;</span></span>
+<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a><span class="vs">  </span><span class="sc">${</span>pasos_embudo<span class="op">.</span><span class="fu">map</span>((p<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;tr style="</span><span class="sc">${</span>i <span class="op">===</span> peor <span class="op">&amp;&amp;</span> i <span class="op">?</span> <span class="st">"font-weight:600"</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">"&gt;&lt;td&gt;</span><span class="sc">${</span>p<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td style="text-align:right"&gt;</span><span class="sc">${</span>fmt<span class="op">.</span><span class="fu">format</span>(v[i])<span class="sc">}</span><span class="vs">&lt;/td&gt;</span></span>
+<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;td style="text-align:right"&gt;</span><span class="sc">${</span>i <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> perdidas[i]) <span class="op">+</span> <span class="st">" %"</span> <span class="op">:</span> <span class="st">"—"</span><span class="sc">}</span><span class="vs">&lt;/td&gt;</span></span>
+<span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;td style="width:40%"&gt;&lt;div style="height:.8rem;border-radius:2px;background:</span><span class="sc">${</span>i <span class="op">===</span> peor <span class="op">&amp;&amp;</span> i <span class="op">?</span> <span class="st">"#eb6834"</span> <span class="op">:</span> <span class="st">"#2a78d6"</span><span class="sc">}</span><span class="vs">;width:</span><span class="sc">${</span>v[<span class="dv">0</span>] <span class="op">?</span> <span class="dv">100</span> <span class="op">*</span> v[i] <span class="op">/</span> v[<span class="dv">0</span>] <span class="op">:</span> <span class="dv">0</span><span class="sc">}</span><span class="vs">%"&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`</span>)<span class="sc">}</span><span class="vs">&lt;/tbody&gt;&lt;/table&gt;</span></span>
+<span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;p&gt;Conversión total: &lt;strong&gt;</span><span class="sc">${</span>v[<span class="dv">0</span>] <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> v[<span class="dv">4</span>] <span class="op">/</span> v[<span class="dv">0</span>]) <span class="op">:</span> <span class="dv">0</span><span class="sc">}</span><span class="vs"> %&lt;/strong&gt;. </span><span class="sc">${</span>peor <span class="op">?</span> <span class="fu">html</span><span class="vs">`La mayor pérdida está en &lt;strong&gt;«</span><span class="sc">${</span>pasos_embudo[peor]<span class="sc">}</span><span class="vs">»&lt;/strong&gt; (</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> perdidas[peor])<span class="sc">}</span><span class="vs"> %).`</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">&lt;/p&gt;</span></span>
+<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;p class="small"&gt;Un paso no puede tener más personas que el anterior: el laboratorio lo corrige. Con las funciones del libro: &lt;code&gt;embudo()&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="expression">
 
@@ -1584,6 +1790,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

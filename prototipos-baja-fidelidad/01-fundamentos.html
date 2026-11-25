@@ -412,6 +412,16 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./94-patrones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Patrones de navegación e interfaz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./95-casos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dos casos completos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -489,9 +499,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Entender qué es un prototipo y qué significa su «fidelidad».</li>
+<li>Entender qué es un <a href="92-glosario.html#gl-prototipo" class="glos" data-def="Representación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo.">prototipo</a> y qué significa su «<a href="92-glosario.html#gl-fidelidad" class="glos" data-def="Grado en que un prototipo se parece al producto final. Tiene varias dimensiones independientes: apariencia, datos, funcionalidad, interactividad y estructura espacial.">fidelidad</a>».</li>
 <li>Distinguir para qué sirve la baja fidelidad y cuándo deja de ser suficiente.</li>
-<li>Situar los esquemas y prototipos de baja fidelidad en el ciclo de diseño centrado en las personas.</li>
+<li>Situar los esquemas y prototipos de baja fidelidad en el ciclo de <a href="92-glosario.html#gl-dcp" class="glos" data-def="Enfoque, descrito en la norma ISO 9241-210, que repite un ciclo de cuatro actividades: entender el contexto de uso, especificar requisitos, producir soluciones y evaluarlas.">diseño centrado en las personas</a>.</li>
 </ul>
 </div>
 </div>
@@ -519,7 +529,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <p><a href="plantillas/entrega_reto.qmd" class="btn btn-outline-primary btn-sm" download="entrega_reto.qmd">Plantilla de entrega del reto (.qmd)</a> <a href="plantillas/informe.scss" class="btn btn-outline-primary btn-sm" download="informe.scss">Tema de estilo (.scss)</a> <a href="plantillas/plantillas_esquemas.pdf" class="btn btn-outline-primary btn-sm" download="plantillas_esquemas.pdf">Plantillas para esquemas en papel (PDF)</a></p>
-<p>La plantilla <code>.qmd</code> y su tema <code>.scss</code> sirven para redactar la entrega de los retos: guárdalos en la misma carpeta. Las plantillas en PDF son marcos de móvil y escritorio con rejilla para imprimir y dibujar encima.</p>
+<p>La plantilla <code>.qmd</code> y su tema <code>.scss</code> sirven para redactar la entrega de los retos: guárdalos en la misma carpeta. Las plantillas en PDF son marcos de móvil y escritorio con <a href="92-glosario.html#gl-rejilla" class="glos" data-def="División del ancho de la pantalla en columnas, medianiles y márgenes para alinear los elementos.">rejilla</a> para imprimir y dibujar encima.</p>
 </div>
 </div>
 <section id="lectura-obligatoria" class="level2">
@@ -583,7 +593,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Interactividad</strong>: cómo responde a las acciones de la persona.</li>
 <li><strong>Estructura espacial</strong>: cómo se organizan los elementos en la pantalla y entre pantallas.</li>
 </ul>
-<p>Un esquema de página en escala de grises con textos reales tiene baja fidelidad visual pero alta fidelidad de datos. Esa mezcla es a menudo la mejor elección: con textos de relleno («lorem ipsum») no se puede comprobar si una persona entiende una etiqueta.</p>
+<p>Un <a href="92-glosario.html#gl-wireframe" class="glos" data-def="Wireframe. Representación de la estructura de una pantalla: qué elementos contiene, dónde están y qué importancia tienen, sin estilo visual.">esquema de página</a> en escala de grises con textos reales tiene baja fidelidad visual pero alta fidelidad de datos. Esa mezcla es a menudo la mejor elección: con textos de relleno («lorem ipsum») no se puede comprobar si una persona entiende una etiqueta.</p>
 <div id="fig-fidelidad" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Matriz con tres columnas (boceto en papel, esquema digital, prototipo de alta fidelidad) y cinco filas (apariencia, datos, funcionalidad, interactividad, estructura espacial). Cada celda indica el nivel de fidelidad con uno, dos o tres puntos. El boceto tiene un punto en casi todo; el esquema digital tiene tres puntos en estructura espacial y datos; el prototipo de alta fidelidad tiene tres en apariencia.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fidelidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -597,7 +607,7 @@ Figura&nbsp;1: Las cinco dimensiones de fidelidad de Lim et al.&nbsp;(2008) en t
 </section>
 <section id="para-qué-sirve-la-baja-fidelidad" class="level2">
 <h2 class="anchored" data-anchor-id="para-qué-sirve-la-baja-fidelidad">3. Para qué sirve la baja fidelidad</h2>
-<p>Buxton (2007) distingue entre <strong>bocetar</strong> y <strong>prototipar</strong>. El boceto sirve para explorar y generar alternativas: es rápido, barato, desechable, abundante y ambiguo, y por eso invita a la discusión. El prototipo sirve para comprobar y refinar una idea concreta. Los esquemas y prototipos de baja fidelidad están a medio camino: conservan la rapidez del boceto y ya permiten probar.</p>
+<p>Buxton (2007) distingue entre <strong>bocetar</strong> y <strong>prototipar</strong>. El <a href="92-glosario.html#gl-boceto" class="glos" data-def="Dibujo rápido, barato y ambiguo que sirve para explorar y generar alternativas, no para especificar.">boceto</a> sirve para explorar y generar alternativas: es rápido, barato, desechable, abundante y ambiguo, y por eso invita a la discusión. El prototipo sirve para comprobar y refinar una idea concreta. Los esquemas y prototipos de baja fidelidad están a medio camino: conservan la rapidez del boceto y ya permiten probar.</p>
 <p>Sus ventajas principales son:</p>
 <ul>
 <li><strong>Coste y velocidad.</strong> Se hacen en minutos y se cambian en segundos. Se pueden explorar varias alternativas en lugar de defender la primera.</li>
@@ -608,20 +618,15 @@ Figura&nbsp;1: Las cinco dimensiones de fidelidad de Lim et al.&nbsp;(2008) en t
 <p>Y sus límites, que Rudd et al.&nbsp;(1996) resumen en su debate:</p>
 <ul>
 <li>No sirven para evaluar el aspecto visual, la legibilidad final ni los tiempos de respuesta.</li>
-<li>Requieren un <strong>facilitador</strong> que «haga de ordenador», lo que puede introducir sesgos.</li>
+<li>Requieren un <a href="92-glosario.html#gl-facilitador" class="glos" data-def="Persona que dirige una sesión de prueba, lee las tareas y mantiene la neutralidad."><strong>facilitador</strong></a> que «haga de ordenador», lo que puede introducir sesgos.</li>
 <li>Comunican peor el diseño a quien no participó en él, por ejemplo a la dirección o a un cliente.</li>
 <li>No sirven como especificación para desarrollar: para eso hace falta la alta fidelidad (siguiente asignatura del máster).</li>
 </ul>
 </section>
 <section id="el-lugar-de-la-baja-fidelidad-en-el-ciclo-de-diseño" class="level2">
 <h2 class="anchored" data-anchor-id="el-lugar-de-la-baja-fidelidad-en-el-ciclo-de-diseño">4. El lugar de la baja fidelidad en el ciclo de diseño</h2>
-<p>La norma ISO 9241-210 describe el <strong>diseño centrado en las personas</strong> como un ciclo de cuatro actividades que se repiten: entender el contexto de uso, especificar los requisitos de las personas usuarias, producir soluciones de diseño y evaluarlas. La baja fidelidad es la manera más barata de dar las primeras vueltas a ese ciclo.</p>
+<p>La norma ISO 9241-210 describe el <strong>diseño centrado en las personas</strong> como un ciclo de cuatro actividades que se repiten: entender el <a href="92-glosario.html#gl-contexto" class="glos" data-def="Entorno físico, social y técnico en el que se usa un producto.">contexto de uso</a>, especificar los requisitos de las personas usuarias, producir soluciones de diseño y evaluarlas. La baja fidelidad es la manera más barata de dar las primeras vueltas a ese ciclo.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Momento</th>
@@ -637,12 +642,12 @@ Figura&nbsp;1: Las cinco dimensiones de fidelidad de Lim et al.&nbsp;(2008) en t
 </tr>
 <tr class="even">
 <td>Estructura</td>
-<td>Flujos de usuario, esquemas de página</td>
+<td><a href="92-glosario.html#gl-flujo" class="glos" data-def="Recorrido por el sistema para completar una tarea, con sus pantallas y decisiones.">Flujos de usuario</a>, esquemas de página</td>
 <td>Qué pantallas hacen falta y qué hay en cada una</td>
 </tr>
 <tr class="odd">
 <td>Validación temprana</td>
-<td>Prototipo en papel o digital navegable</td>
+<td><a href="92-glosario.html#gl-papel" class="glos" data-def="Prototipo hecho con hojas y piezas de papel que se manipulan durante una prueba.">Prototipo en papel</a> o digital navegable</td>
 <td>Si las personas entienden el flujo y encuentran lo que buscan</td>
 </tr>
 <tr class="even">
@@ -652,7 +657,7 @@ Figura&nbsp;1: Las cinco dimensiones de fidelidad de Lim et al.&nbsp;(2008) en t
 </tr>
 </tbody>
 </table>
-<p>Cada vuelta del ciclo es una <strong>iteración</strong>. La regla práctica es subir la fidelidad solo cuando la pregunta lo exige: no se prueba la tipografía de un flujo que todavía no funciona.</p>
+<p>Cada vuelta del ciclo es una <a href="92-glosario.html#gl-iteracion" class="glos" data-def="Cada vuelta del ciclo de diseño y evaluación."><strong>iteración</strong></a>. La regla práctica es subir la fidelidad solo cuando la pregunta lo exige: no se prueba la tipografía de un flujo que todavía no funciona.</p>
 </section>
 <section id="práctica" class="level2">
 <h2 class="anchored" data-anchor-id="práctica">Práctica</h2>
@@ -1482,6 +1487,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

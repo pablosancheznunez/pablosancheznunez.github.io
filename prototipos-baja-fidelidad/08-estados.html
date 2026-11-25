@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -412,6 +412,16 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./94-patrones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Patrones de navegación e interfaz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./95-casos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dos casos completos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -457,7 +467,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-fundamentos.html">Temas</a></li><li class="breadcrumb-item"><a href="./08-estados.html"><span class="chapter-title">Tema 8. Estados y transiciones en los esquemas</span></a></li></ol></nav>
@@ -490,8 +500,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Identificar los estados de los componentes y de las pantallas.</li>
-<li>Representar transiciones y enlaces entre pantallas.</li>
+<li>Identificar los <a href="92-glosario.html#gl-estado" class="glos" data-def="Cada situación distinta en la que puede estar un componente o una pantalla.">estados</a> de los componentes y de las pantallas.</li>
+<li>Representar <a href="92-glosario.html#gl-transicion" class="glos" data-def="Paso de un estado a otro, provocado por un evento.">transiciones</a> y enlaces entre pantallas.</li>
 <li>Construir esquemas digitales navegables con estados definidos.</li>
 </ul>
 </div>
@@ -543,11 +553,6 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="estados-de-los-componentes">2. Estados de los componentes</h2>
 <p>Los controles interactivos tienen estados que hay que diseñar y distinguir:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Estado</th>
@@ -567,9 +572,9 @@ ul.task-list li input[type="checkbox"] {
 <td>Que responde a la acción</td>
 </tr>
 <tr class="odd">
-<td><strong>Foco</strong></td>
+<td><a href="92-glosario.html#gl-foco" class="glos" data-def="Estado del elemento al que se ha llegado con el teclado; debe ser siempre visible."><strong>Foco</strong></a></td>
 <td>Se ha llegado con el teclado (tabulador)</td>
-<td>Dónde está el usuario: <strong>imprescindible</strong> para la accesibilidad</td>
+<td>Dónde está el usuario: <strong>imprescindible</strong> para la <a href="92-glosario.html#gl-accesibilidad" class="glos" data-def="Condición de un producto que pueden percibir, entender, navegar y usar las personas con discapacidad.">accesibilidad</a></td>
 </tr>
 <tr class="even">
 <td>Pulsado o activo</td>
@@ -593,9 +598,9 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>En baja fidelidad no se diseña el aspecto final de cada estado, pero sí se decide <strong>qué estados existen</strong> y se indican con anotaciones o con variantes simples (contorno grueso para el foco, trama para el desactivado).</p>
+<p>En baja <a href="92-glosario.html#gl-fidelidad" class="glos" data-def="Grado en que un prototipo se parece al producto final. Tiene varias dimensiones independientes: apariencia, datos, funcionalidad, interactividad y estructura espacial.">fidelidad</a> no se diseña el aspecto final de cada estado, pero sí se decide <strong>qué estados existen</strong> y se indican con <a href="92-glosario.html#gl-anotacion" class="glos" data-def="Nota numerada en un esquema que explica un comportamiento que el dibujo no muestra.">anotaciones</a> o con variantes simples (contorno grueso para el foco, trama para el desactivado).</p>
 </section>
-<section id="estados-de-las-pantallas" class="level2">
+<section id="estados-de-las-pantallas" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="estados-de-las-pantallas">3. Estados de las pantallas</h2>
 <p>Una pantalla que muestra datos tiene, como mínimo, estos estados:</p>
 <ul>
@@ -605,17 +610,111 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Error</strong>: algo ha fallado. Hay que explicar qué y cómo seguir.</li>
 <li><strong>Ideal</strong>: el contenido esperado.</li>
 </ul>
-</section>
+<p>La misma pantalla de ReservaSala, la lista de salas, en sus cinco estados:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">Ideal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Cargando</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Vacío</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Parcial</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Error</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="quarto-layout-panel" data-layout="[40,60]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figuras/g_lista.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Lista con seis salas disponibles."><img src="figuras/g_lista.svg" class="img-fluid figure-img" alt="Esquema de la lista de salas con filtros y seis salas con su capacidad y disponibilidad."></a></p>
+<figcaption>Lista con seis salas disponibles.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<p>El estado que se suele dibujar primero… y el único que muchos equipos dibujan. Muestra el contenido esperado con los filtros aplicados.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="quarto-layout-panel" data-layout="[40,60]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figuras/g_cargando.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Lista con bloques grises que imitan la estructura de las tarjetas mientras llega el contenido."><img src="figuras/g_cargando.svg" class="img-fluid figure-img" alt="Esquema de la lista en estado de carga: los filtros visibles y seis bloques grises con la forma de las tarjetas, sin texto."></a></p>
+<figcaption>Lista con bloques grises que imitan la estructura de las tarjetas mientras llega el contenido.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<p>Una <strong>pantalla esqueleto</strong> muestra la estructura mientras llegan los datos: la persona sabe qué va a ver y la espera parece más corta. Los filtros ya funcionan. Si la carga pasa de unos segundos, añade un mensaje.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="quarto-layout-panel" data-layout="[40,60]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figuras/g_vacio.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Mensaje que explica que no hay salas para 10 personas y ofrece alternativas."><img src="figuras/g_vacio.svg" class="img-fluid figure-img" alt="Esquema de estado vacío con un símbolo, el texto No hay salas para 10 personas, la explicación de que las más grandes son para 8 y alternativas."></a></p>
+<figcaption>Mensaje que explica que no hay salas para 10 personas y ofrece alternativas.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<p>El <a href="92-glosario.html#gl-vacio" class="glos" data-def="Estado de una pantalla cuando no hay contenido que mostrar.">estado vacío</a> <strong>explica por qué</strong> no hay resultados y <strong>qué hacer</strong>: no es un <a href="92-glosario.html#gl-callejon" class="glos" data-def="Punto de un flujo desde el que no se puede continuar, volver ni salir.">callejón sin salida</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="quarto-layout-panel" data-layout="[40,60]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figuras/g_parcial.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Una única sala disponible y un bloque con tres alternativas para ver más opciones."><img src="figuras/g_parcial.svg" class="img-fluid figure-img" alt="Esquema con un solo resultado, Sala 3.02, y debajo el bloque ¿Quieres más opciones? con tres enlaces: otra franja con 6 salas libres, quitar el filtro Silencio y ver otras bibliotecas."></a></p>
+<figcaption>Una única sala disponible y un bloque con tres alternativas para ver más opciones.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<p>Con poco contenido la pantalla parece rota. Aprovecha el espacio para <strong>ampliar la búsqueda</strong> con sugerencias concretas, que digan cuántos resultados darán.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div class="quarto-layout-panel" data-layout="[40,60]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figuras/g_error.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Aviso de que no se han podido cargar las salas, con botón para reintentar y la última información guardada."><img src="figuras/g_error.svg" class="img-fluid figure-img" alt="Esquema de error con un aviso naranja No hemos podido cargar las salas, explicación de la falta de conexión, botón Reintentar y dos salas de la última información guardada marcadas como Puede haber cambiado."></a></p>
+<figcaption>Aviso de que no se han podido cargar las salas, con botón para reintentar y la última información guardada.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<p>El mensaje dice <strong>qué ha pasado</strong> en lenguaje de la persona, <strong>conserva</strong> sus filtros y ofrece <strong>cómo seguir</strong> (reintentar). Mostrar los últimos datos guardados, avisando de que pueden haber cambiado, es mejor que una pantalla en blanco.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Pantallas esqueleto.</strong> Indican la estructura sin prometer contenido concreto. No las uses para cargas muy rápidas (menos de 1 s): el parpadeo molesta más que la espera.</p>
+</div></div></section>
 <section id="diagramas-de-estados" class="level2">
 <h2 class="anchored" data-anchor-id="diagramas-de-estados">4. Diagramas de estados</h2>
 <p>Harel (1987) propuso los <strong><em>statecharts</em></strong>, una notación para describir sistemas que cambian de estado según los eventos. En diseño de interacción se usa una versión simplificada: cada estado es una caja con nombre, cada transición es una flecha con el <strong>evento</strong> que la provoca y, si hace falta, la <strong>condición</strong>. Sirve para comprobar que no falta ningún caso: ¿qué pasa si se pulsa «Reservar» dos veces?, ¿y si se pierde la conexión mientras se carga?</p>
 <div id="fig-estados" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cinco cajas redondeadas unidas por flechas rotuladas. Reposo pasa a Cargando con el evento pulsar. Cargando pasa a Confirmado con reserva correcta y a Error con sala ocupada. Error vuelve a Reposo con elegir otra sala. Una flecha que sale y vuelve a Cargando indica que una segunda pulsación se ignora. Reposo pasa a Desactivado si no hay sala elegida.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-estados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figuras/tema8_estados.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Diagrama de estados del botón «Reservar»: de reposo a cargando al pulsar; de cargando a confirmado si la reserva funciona, o a error si la sala se ha ocupado; el error vuelve a reposo cuando se elige otra sala. Mientras carga, el botón no admite otra pulsación."><img src="figuras/tema8_estados.svg" class="img-fluid figure-img" alt="Cinco cajas redondeadas unidas por flechas rotuladas. Reposo pasa a Cargando con el evento pulsar. Cargando pasa a Confirmado con reserva correcta y a Error con sala ocupada. Error vuelve a Reposo con elegir otra sala. Una flecha que sale y vuelve a Cargando indica que una segunda pulsación se ignora. Reposo pasa a Desactivado si no hay sala elegida."></a>
+<a href="figuras/tema8_estados.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figura&nbsp;1: Diagrama de estados del botón «Reservar»: de reposo a cargando al pulsar; de cargando a confirmado si la reserva funciona, o a error si la sala se ha ocupado; el error vuelve a reposo cuando se elige otra sala. Mientras carga, el botón no admite otra pulsación."><img src="figuras/tema8_estados.svg" class="img-fluid figure-img" alt="Cinco cajas redondeadas unidas por flechas rotuladas. Reposo pasa a Cargando con el evento pulsar. Cargando pasa a Confirmado con reserva correcta y a Error con sala ocupada. Error vuelve a Reposo con elegir otra sala. Una flecha que sale y vuelve a Cargando indica que una segunda pulsación se ignora. Reposo pasa a Desactivado si no hay sala elegida."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-estados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Diagrama de estados del botón «Reservar»: de reposo a cargando al pulsar; de cargando a confirmado si la reserva funciona, o a error si la sala se ha ocupado; el error vuelve a reposo cuando se elige otra sala. Mientras carga, el botón no admite otra pulsación.
+Figura&nbsp;1: <a href="92-glosario.html#gl-diagrama-estados" class="glos" data-def="Representación de los estados de un sistema y de las transiciones entre ellos, basada en los statecharts de Harel (1987).">Diagrama de estados</a> del botón «Reservar»: de reposo a cargando al pulsar; de cargando a confirmado si la reserva funciona, o a error si la sala se ha ocupado; el error vuelve a reposo cuando se elige otra sala. Mientras carga, el botón no admite otra pulsación.
 </figcaption>
 </figure>
 </div>
@@ -628,7 +727,7 @@ Figura&nbsp;1: Diagrama de estados del botón «Reservar»: de reposo a cargando
 <li><strong>Adónde lleva</strong> y si se puede volver.</li>
 <li><strong>Qué se conserva</strong> (los datos del formulario, la posición en la lista).</li>
 </ul>
-<p>En un <strong>prototipo navegable</strong> digital, cada elemento interactivo se enlaza con la pantalla o el estado al que lleva. Para probar un flujo bastan los enlaces del camino principal y de los errores que interesa observar; no hace falta enlazar todo.</p>
+<p>En un <a href="92-glosario.html#gl-navegable" class="glos" data-def="Conjunto de pantallas enlazadas que se puede recorrer como si fuera el producto."><strong>prototipo navegable</strong></a> digital, cada elemento interactivo se enlaza con la pantalla o el estado al que lleva. Para probar un flujo bastan los enlaces del camino principal y de los errores que interesa observar; no hace falta enlazar todo.</p>
 </section>
 <section id="práctica" class="level2">
 <h2 class="anchored" data-anchor-id="práctica">Práctica</h2>
@@ -712,7 +811,7 @@ Figura&nbsp;1: Diagrama de estados del botón «Reservar»: de reposo a cargando
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>Reto del Tema 8 · Prototipo navegable con estados
+<span class="screen-reader-only">Importante</span>Reto del Tema 8 · <a href="92-glosario.html#gl-prototipo" class="glos" data-def="Representación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo.">Prototipo</a> navegable con estados
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1454,6 +1553,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

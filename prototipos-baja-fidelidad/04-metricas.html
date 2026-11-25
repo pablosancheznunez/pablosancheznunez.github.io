@@ -447,6 +447,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./94-patrones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Patrones de navegación e interfaz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./95-casos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dos casos completos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -530,8 +540,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Formular objetivos SMART para un proyecto de diseño.</li>
-<li>Definir hitos verificables.</li>
+<li>Formular <a href="92-glosario.html#gl-smart" class="glos" data-def="Objetivo específico, medible, alcanzable, relevante y con plazo.">objetivos SMART</a> para un proyecto de diseño.</li>
+<li>Definir <a href="92-glosario.html#gl-hito" class="glos" data-def="Punto del proyecto definido por un resultado comprobable.">hitos</a> verificables.</li>
 <li>Elegir métricas de éxito y calcularlas con muestras pequeñas sin sacar conclusiones exageradas.</li>
 </ul>
 </div>
@@ -620,16 +630,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>Ejemplo: «Antes del 15 de diciembre, al menos el 80 % de los participantes de la prueba con el prototipo navegable encontrarán el horario de la biblioteca sin ayuda en menos de 20 segundos».</p>
+<p>Ejemplo: «Antes del 15 de diciembre, al menos el 80 % de los participantes de la prueba con el <a href="92-glosario.html#gl-navegable" class="glos" data-def="Conjunto de pantallas enlazadas que se puede recorrer como si fuera el producto.">prototipo navegable</a> encontrarán el horario de la biblioteca sin ayuda en menos de 20 segundos».</p>
 </section>
 <section id="hitos-verificables" class="level2">
 <h2 class="anchored" data-anchor-id="hitos-verificables">2. Hitos verificables</h2>
-<p>Un <strong>hito</strong> es un punto del proyecto en el que se puede comprobar que algo está terminado. Se define por su <strong>resultado</strong>, no por la actividad: «flujo principal validado con cinco usuarios» es un hito; «trabajar en el flujo» no lo es. Un calendario de proyecto de baja fidelidad podría ser:</p>
+<p>Un <strong>hito</strong> es un punto del proyecto en el que se puede comprobar que algo está terminado. Se define por su <strong>resultado</strong>, no por la actividad: «flujo principal validado con cinco usuarios» es un hito; «trabajar en el flujo» no lo es. Un calendario de proyecto de baja <a href="92-glosario.html#gl-fidelidad" class="glos" data-def="Grado en que un prototipo se parece al producto final. Tiene varias dimensiones independientes: apariencia, datos, funcionalidad, interactividad y estructura espacial.">fidelidad</a> podría ser:</p>
 <ol type="1">
 <li><em>Brief</em> de diseño aprobado por el equipo (Tema 3).</li>
 <li>Flujos principal, alternativos y de error documentados (Tema 5).</li>
 <li>Esquemas de todas las pantallas del flujo principal (Tema 7).</li>
-<li>Prototipo navegable con estados y transiciones (Tema 8).</li>
+<li><a href="92-glosario.html#gl-prototipo" class="glos" data-def="Representación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo.">Prototipo</a> navegable con <a href="92-glosario.html#gl-estado" class="glos" data-def="Cada situación distinta en la que puede estar un componente o una pantalla.">estados</a> y <a href="92-glosario.html#gl-transicion" class="glos" data-def="Paso de un estado a otro, provocado por un evento.">transiciones</a> (Tema 8).</li>
 <li>Prueba con cinco participantes y lista priorizada de cambios (Tema 9).</li>
 </ol>
 </section>
@@ -637,11 +647,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="métricas-de-éxito-el-marco-heart">3. Métricas de éxito: el marco HEART</h2>
 <p>Rodden, Hutchinson y Fu (2010) propusieron en Google el marco <strong>HEART</strong>, que agrupa las métricas de la experiencia en cinco categorías:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Categoría</th>
@@ -673,7 +678,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><strong>T</strong>ask success (éxito en la tarea)</td>
 <td>Eficacia y eficiencia</td>
-<td>Tasa de éxito, tiempo en la tarea, errores</td>
+<td><a href="92-glosario.html#gl-tasa-exito" class="glos" data-def="Proporción de participantes que completan una tarea.">Tasa de éxito</a>, tiempo en la tarea, errores</td>
 </tr>
 </tbody>
 </table>
@@ -684,7 +689,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Las pruebas de prototipos se hacen con pocas personas, a menudo cinco. Con muestras así, una cifra sola engaña: «4 de 5 completaron la tarea» es un 80 %, pero el porcentaje real en la población podría estar bastante más abajo. Sauro y Lewis (2016) recomiendan:</p>
 <ul>
 <li><strong>Tasa de éxito con intervalo de confianza</strong> de Wald ajustado: indica entre qué valores está probablemente la tasa real.</li>
-<li><strong>Media geométrica</strong> para los tiempos: con pocas personas y alguna muy lenta, representa mejor el tiempo típico que la media aritmética.</li>
+<li><a href="92-glosario.html#gl-media-geometrica" class="glos" data-def="Media de los logaritmos devuelta a la escala original; representa mejor el tiempo típico cuando hay valores muy altos."><strong>Media geométrica</strong></a> para los tiempos: con pocas personas y alguna muy lenta, representa mejor el tiempo típico que la media aritmética.</li>
 <li><strong>SUS</strong> (<em>System Usability Scale</em>) para la satisfacción: diez afirmaciones con respuesta de 1 a 5 que dan una puntuación de 0 a 100. No es un porcentaje. Bangor et al.&nbsp;(2008) consideran «aceptable» una puntuación desde 70, «marginal» entre 50 y 70, y «no aceptable» por debajo de 50.</li>
 </ul>
 <div id="fig-intervalos" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de puntos con barras de error. En el eje horizontal, el número de participantes: 5, 10, 20, 40 y 80. Para todos el punto está en el 80 %, pero la barra de error se estrecha: con 5 va del 36 % al 98 %; con 80, del 70 % al 87 %.">
@@ -693,7 +698,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <a href="figuras/tema4_intervalos.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Intervalo de confianza al 95 % de una tasa de éxito del 80 % según el número de participantes (Wald ajustado). Con 5 personas, la tasa real podría estar entre el 36 % y el 98 %."><img src="figuras/tema4_intervalos.svg" class="img-fluid figure-img" alt="Gráfico de puntos con barras de error. En el eje horizontal, el número de participantes: 5, 10, 20, 40 y 80. Para todos el punto está en el 80 %, pero la barra de error se estrecha: con 5 va del 36 % al 98 %; con 80, del 70 % al 87 %."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-intervalos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Intervalo de confianza al 95 % de una tasa de éxito del 80 % según el número de participantes (Wald ajustado). Con 5 personas, la tasa real podría estar entre el 36 % y el 98 %.
+Figura&nbsp;1: <a href="92-glosario.html#gl-intervalo" class="glos" data-def="Rango de valores entre los que está probablemente el valor real de una métrica. Con muestras pequeñas es ancho.">Intervalo de confianza</a> al 95 % de una tasa de éxito del 80 % según el número de participantes (Wald ajustado). Con 5 personas, la tasa real podría estar entre el 36 % y el 98 %.
 </figcaption>
 </figure>
 </div>
@@ -711,7 +716,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic291
 </div>
 <section id="ejercicio-4.1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ejercicio-4.1">Ejercicio 4.1</h3>
-<p>En la prueba con el prototipo en papel, 3 de 8 participantes reservaron la sala sin ayuda. Calcula el <strong>límite superior</strong> del intervalo de confianza: ¿es probable que la tasa real llegue al 70 %?</p>
+<p>En la prueba con el <a href="92-glosario.html#gl-papel" class="glos" data-def="Prototipo hecho con hojas y piezas de papel que se manipulan durante una prueba.">prototipo en papel</a>, 3 de 8 participantes reservaron la sala sin ayuda. Calcula el <strong>límite superior</strong> del intervalo de confianza: ¿es probable que la tasa real llegue al 70 %?</p>
 <script type="exercise-setup-t4_intervalo-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfaW50ZXJ2YWxvIiwic2V0dXAiOnRydWV9LCJjb2RlIjoic291cmNlKFwiZGF0b3MvZnVuY2lvbmVzX3V4LlJcIikifQ==
 </script>
@@ -766,7 +771,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ0
 <a href="figuras/t4_heart.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: El marco HEART (Rodden, Hutchinson y Fu, 2010): cinco categorías para elegir las métricas de una experiencia."><img src="figuras/t4_heart.svg" class="img-fluid figure-img" alt="Cinco tarjetas: H, felicidad (satisfacción, SUS, NPS); E, implicación (frecuencia e intensidad de uso); A, adopción (personas nuevas que lo empiezan a usar); R, retención (personas que vuelven); T, éxito en la tarea (tasa de éxito, tiempo, errores)."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-t4-heart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2: El marco HEART (Rodden, Hutchinson y Fu, 2010): cinco categorías para elegir las métricas de una experiencia.
+Figura&nbsp;2: El <a href="92-glosario.html#gl-heart" class="glos" data-def="Agrupación de métricas de experiencia en satisfacción, implicación, adopción, retención y éxito en la tarea (Rodden et al., 2010).">marco HEART</a> (Rodden, Hutchinson y Fu, 2010): cinco categorías para elegir las métricas de una experiencia.
 </figcaption>
 </figure>
 </div>
@@ -1718,6 +1723,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

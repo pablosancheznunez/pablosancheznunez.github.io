@@ -444,6 +444,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./94-patrones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Patrones de navegación e interfaz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./95-casos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dos casos completos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -524,8 +534,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Reconocer los sesgos cognitivos que afectan a las personas usuarias y a quienes diseñan.</li>
-<li>Identificar patrones engañosos (<em>dark patterns</em>) con las taxonomías de la investigación.</li>
+<li>Reconocer los <a href="92-glosario.html#gl-sesgo" class="glos" data-def="Error sistemático en el juicio que se produce al usar atajos mentales.">sesgos cognitivos</a> que afectan a las personas usuarias y a quienes diseñan.</li>
+<li>Identificar <a href="92-glosario.html#gl-patron-enganoso" class="glos" data-def="Dark pattern o diseño engañoso. Solución de interfaz que engaña, presiona o dificulta decidir libremente.">patrones engañosos</a> (<em>dark patterns</em>) con las taxonomías de la investigación.</li>
 <li>Asumir la responsabilidad ética de las decisiones de diseño y conocer su marco legal básico.</li>
 </ul>
 </div>
@@ -572,13 +582,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="sesgos-cognitivos" class="level2">
 <h2 class="anchored" data-anchor-id="sesgos-cognitivos">1. Sesgos cognitivos</h2>
-<p>Tversky y Kahneman (1974) mostraron que, cuando decidimos con incertidumbre, usamos <strong>heurísticos</strong>: atajos mentales que suelen funcionar pero que producen errores sistemáticos, los <strong>sesgos</strong>. El diseño de interfaces influye en las decisiones aunque no lo pretenda. Algunos sesgos especialmente relevantes:</p>
+<p>Tversky y Kahneman (1974) mostraron que, cuando decidimos con incertidumbre, usamos <a href="92-glosario.html#gl-heuristico" class="glos" data-def="Atajo mental para decidir con incertidumbre (Tversky y Kahneman, 1974). No confundir con las heurísticas de usabilidad."><strong>heurísticos</strong></a>: atajos mentales que suelen funcionar pero que producen errores sistemáticos, los <strong>sesgos</strong>. El diseño de interfaces influye en las decisiones aunque no lo pretenda. Algunos sesgos especialmente relevantes:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Sesgo</th>
@@ -593,12 +598,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>Mostrar primero el plan más caro hace que el intermedio parezca barato</td>
 </tr>
 <tr class="even">
-<td><strong>Opción por defecto</strong></td>
+<td><a href="92-glosario.html#gl-defecto" class="glos" data-def="La opción que viene marcada; tendemos a no cambiarla."><strong>Opción por defecto</strong></a></td>
 <td>Tendemos a dejar lo que viene marcado</td>
 <td>Casilla del boletín premarcada</td>
 </tr>
 <tr class="odd">
-<td><strong>Encuadre</strong></td>
+<td><a href="92-glosario.html#gl-encuadre" class="glos" data-def="Manera de mirar una situación que abre soluciones nuevas; según Dorst (2011), el núcleo del pensamiento de diseño."><strong>Encuadre</strong></a></td>
 <td>La misma información se valora distinto según cómo se presente</td>
 <td>«95 % de éxito» frente a «5 % de fracaso»</td>
 </tr>
@@ -614,11 +619,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>Quien diseña también tiene sesgos: el <strong>sesgo de confirmación</strong> (buscar datos que confirman la idea propia), el <strong>falso consenso</strong> (creer que los usuarios piensan como el equipo) o el apego a la primera solución. La investigación (Tema 2) y las pruebas (Tema 9) son la defensa.</p>
+<p>Quien diseña también tiene sesgos: el <a href="92-glosario.html#gl-confirmacion" class="glos" data-def="Tendencia a buscar y valorar más los datos que confirman la idea propia."><strong>sesgo de confirmación</strong></a> (buscar datos que confirman la idea propia), el <strong>falso consenso</strong> (creer que los usuarios piensan como el equipo) o el apego a la primera solución. La investigación (Tema 2) y las pruebas (Tema 9) son la defensa.</p>
 </section>
 <section id="de-influir-a-manipular" class="level2">
 <h2 class="anchored" data-anchor-id="de-influir-a-manipular">2. De influir a manipular</h2>
-<p>Toda interfaz es una <strong>arquitectura de la decisión</strong>: alguna opción aparece primero, otra viene marcada. Influir es inevitable; la pregunta es <strong>a favor de quién</strong>. Un diseño es manipulador cuando aprovecha los sesgos para que la persona haga algo que no haría si entendiera la situación, en beneficio de otro.</p>
+<p>Toda interfaz es una <a href="92-glosario.html#gl-arquitectura-decision" class="glos" data-def="Forma en que se presentan las opciones, que influye en lo que se elige."><strong>arquitectura de la decisión</strong></a>: alguna opción aparece primero, otra viene marcada. Influir es inevitable; la pregunta es <strong>a favor de quién</strong>. Un diseño es manipulador cuando aprovecha los sesgos para que la persona haga algo que no haría si entendiera la situación, en beneficio de otro.</p>
 </section>
 <section id="patrones-engañosos" class="level2">
 <h2 class="anchored" data-anchor-id="patrones-engañosos">3. Patrones engañosos</h2>
@@ -722,7 +727,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQx
 </div>
 <div class="callout-body-container callout-body">
 <p>Propuesta de un compañero: al cancelar, mostrar «¿Seguro? Perderás tu prioridad para siempre» y un botón grande «Mantener reserva» y otro diminuto gris «Cancelar».</p>
-<p>Análisis: combina <strong>culpa</strong> (<em>confirmshaming</em>) e <strong>interferencia en la interfaz</strong> (jerarquía visual que empuja una opción). Además, la «pérdida de prioridad para siempre» es falsa.</p>
+<p>Análisis: combina <strong>culpa</strong> (<em>confirmshaming</em>) e <strong>interferencia en la interfaz</strong> (<a href="92-glosario.html#gl-jerarquia" class="glos" data-def="Orden de importancia de los elementos, comunicado con el tamaño, la posición, la agrupación y el contraste.">jerarquía visual</a> que empuja una opción). Además, la «pérdida de prioridad para siempre» es falsa.</p>
 <p>Alternativa ética: «¿Cancelar la reserva de la sala 2.3 para mañana a las 16:00? La sala quedará libre para otros estudiantes». Dos botones con el mismo peso: «Cancelar reserva» y «Volver». El objetivo de la biblioteca (que se cancele lo que no se usa) coincide con el del usuario.</p>
 </div>
 </div>
@@ -763,7 +768,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQx
 <li>Recorre el <strong>alta</strong> y la <strong>baja</strong> (o la cancelación) y documenta con capturas cada patrón engañoso que encuentres, clasificado con Gray et al.&nbsp;y con Mathur et al.</li>
 <li>Identifica qué <strong>sesgo cognitivo</strong> aprovecha cada patrón.</li>
 <li>Valora si alguno podría contravenir el art. 25 del Reglamento de Servicios Digitales o las reglas del consentimiento, y explica por qué (sin necesidad de un análisis jurídico completo).</li>
-<li>Rediseña en baja fidelidad <strong>una pantalla</strong> sin el patrón y explica cómo has equilibrado los intereses de la organización y de la persona.</li>
+<li>Rediseña en baja <a href="92-glosario.html#gl-fidelidad" class="glos" data-def="Grado en que un prototipo se parece al producto final. Tiene varias dimensiones independientes: apariencia, datos, funcionalidad, interactividad y estructura espacial.">fidelidad</a> <strong>una pantalla</strong> sin el patrón y explica cómo has equilibrado los intereses de la organización y de la persona.</li>
 </ol>
 <p><strong>Entrega:</strong> un informe hecho con la <a href="plantillas/entrega_reto.qmd">plantilla de entrega</a>. Se evalúa con la rúbrica que incluye la plantilla. Este reto <strong>no tiene solución en el libro</strong>: cada estudiante trabaja con un servicio distinto y la corrección la hace el profesorado.</p>
 </div>
@@ -1503,6 +1508,7 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
 
 
 
