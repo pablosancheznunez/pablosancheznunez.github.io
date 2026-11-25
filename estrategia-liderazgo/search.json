@@ -845,146 +845,190 @@
     ]
   },
   {
+    "objectID": "94-laboratorio.html",
+    "href": "94-laboratorio.html",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "",
+    "text": "Laboratorio: la matriz de Eisenhower\nEste apéndice reúne un laboratorio y un escenario ramificado para practicar en tu navegador.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#lab-eisenhower",
+    "href": "94-laboratorio.html#lab-eisenhower",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "",
+    "text": "Laboratorio · se ejecuta en tu navegador\n\nEscribe tus tareas de la semana (o usa las de ejemplo) y marca si son urgentes e importantes. La matriz las coloca en su cuadrante y te sugiere qué hacer con cada grupo.\n\n{\n  const ejemplo = [[\"Revisar la versión final del artículo\", true, true], [\"Responder correos de la lista del departamento\", true, false], [\"Escribir la introducción del proyecto (convocatoria en 3 meses)\", false, true], [\"Leer un artículo clave para la tesis\", false, true], [\"Reunión semanal sin orden del día\", true, false], [\"Rellenar el informe de seguimiento que vence mañana\", true, true], [\"Revisar redes sociales académicas\", false, false], [\"Preparar la formación de la doctoranda nueva\", false, true]];\n  const raiz = html`&lt;div class=\"eisen-lab\"&gt;&lt;/div&gt;`;\n  const tabla = html`&lt;table class=\"table table-sm align-middle\"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=\"col\"&gt;Tarea&lt;/th&gt;&lt;th scope=\"col\"&gt;Urgente&lt;/th&gt;&lt;th scope=\"col\"&gt;Importante&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;/tbody&gt;&lt;/table&gt;`;\n  const filas = ejemplo.map(([t, u, i], k) =&gt; { const id = \"eh\" + k + Math.random().toString(36).slice(2, 6); const tr = html`&lt;tr&gt;&lt;td&gt;&lt;label class=\"visually-hidden\" for=\"${id}t\"&gt;Tarea ${k + 1}&lt;/label&gt;&lt;input id=\"${id}t\" class=\"form-control form-control-sm\" value=\"${t}\"&gt;&lt;/td&gt;&lt;td&gt;&lt;input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Tarea ${k + 1} urgente\" ${u ? \"checked\" : \"\"}&gt;&lt;/td&gt;&lt;td&gt;&lt;input type=\"checkbox\" class=\"form-check-input\" aria-label=\"Tarea ${k + 1} importante\" ${i ? \"checked\" : \"\"}&gt;&lt;/td&gt;&lt;/tr&gt;`; tabla.tBodies[0].append(tr); return tr.querySelectorAll(\"input\"); });\n  const salida = html`&lt;div role=\"status\" aria-live=\"polite\"&gt;&lt;/div&gt;`;\n  const esc = (s) =&gt; s.replace(/[&&lt;&gt;]/g, (c) =&gt; ({\"&\": \"&amp;\", \"&lt;\": \"&lt;\", \"&gt;\": \"&gt;\"}[c]));\n  const cuad = [[\"Hacer ya\", \"Urgente e importante\", true, true, \"#fde2e1\"], [\"Planificar\", \"Importante, no urgente\", false, true, \"#e2f0e5\"], [\"Delegar o acotar\", \"Urgente, no importante\", true, false, \"#fdf1d8\"], [\"Eliminar\", \"Ni urgente ni importante\", false, false, \"#ebebeb\"]];\n  function dibujar() {\n    const tareas = filas.map(([t, u, i]) =&gt; ({t: t.value.trim(), u: u.checked, i: i.checked})).filter((x) =&gt; x.t);\n    const grupos = cuad.map(([n, desc, u, i, c]) =&gt; ({n, desc, c, ts: tareas.filter((x) =&gt; x.u === u && x.i === i)}));\n    const consejo = grupos[0].ts.length &gt; grupos[1].ts.length ? \"Tienes más tareas en «Hacer ya» que en «Planificar»: vives apagando fuegos. Reserva bloques fijos para lo importante antes de que se vuelva urgente.\" : grupos[1].ts.length ? \"Bien: lo importante no urgente tiene espacio. Ponle fecha y hora en tu agenda; si no, lo urgente lo desplazará.\" : \"No tienes tareas importantes a largo plazo: ¿dónde está tu tesis, tu próximo proyecto o tu formación?\";\n    salida.innerHTML = `&lt;div class=\"row g-2\"&gt;${grupos.map((g) =&gt; `&lt;div class=\"col-6\"&gt;&lt;div class=\"p-2 rounded h-100\" style=\"background:${g.c};color:#0b0b0b\"&gt;&lt;strong&gt;${g.n}&lt;/strong&gt; &lt;span class=\"small\"&gt;(${g.desc})&lt;/span&gt;&lt;ul class=\"mb-0 small\"&gt;${g.ts.map((x) =&gt; `&lt;li&gt;${esc(x.t)}&lt;/li&gt;`).join(\"\") || \"&lt;li&gt;&lt;em&gt;ninguna&lt;/em&gt;&lt;/li&gt;\"}&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;`).join(\"\")}&lt;/div&gt;&lt;p class=\"mt-2\"&gt;${consejo}&lt;/p&gt;`;\n  }\n  filas.forEach((f) =&gt; f.forEach((e) =&gt; e.addEventListener(\"input\", dibujar)));\n  raiz.append(tabla, salida); dibujar();\n  return raiz;\n}",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#escenario-un-conflicto-por-la-autoría",
+    "href": "94-laboratorio.html#escenario-un-conflicto-por-la-autoría",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "Escenario: un conflicto por la autoría",
+    "text": "Escenario: un conflicto por la autoría\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#para-ver-y-seguir-aprendiendo",
+    "href": "94-laboratorio.html#para-ver-y-seguir-aprendiendo",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "Para ver y seguir aprendiendo",
+    "text": "Para ver y seguir aprendiendo\nSon enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.\n\nBuilding a psychologically safe workplace — Amy Edmondson · TEDxHGSE (2014). La investigadora que acuñó el concepto explica cómo crear seguridad psicológica en un equipo.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
     "objectID": "91-guia-docente.html",
     "href": "91-guia-docente.html",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "",
     "text": "Propuesta de evaluación\nEl libro sirve como manual de un seminario de doctorado de unas 18-24 horas (seis sesiones) sobre competencias de estrategia, liderazgo y gestión, o como lectura autónoma. Cada capítulo combina una lectura obligatoria, un laboratorio, actividades y un reto aplicado a la situación real de cada participante.\nLa rúbrica común valora el análisis de la situación (25 %), el uso de marcos y evidencia (25 %), la viabilidad del plan (25 %), la reflexión personal (15 %) y la claridad (10 %).",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#propuesta-de-evaluación",
     "href": "91-guia-docente.html#propuesta-de-evaluación",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "",
     "text": "Actividad\nPeso orientativo\n\n\n\n\nRetos evaluables (elegir 4 de 6)\n60 %\n\n\nPresentación final: plan estratégico a tres años\n25 %\n\n\nAutoevaluaciones y participación\n15 %",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
     "href": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Actividades interactivas y laboratorios",
     "text": "Actividades interactivas y laboratorios\nLaboratorios: cartera de problemas (matriz de Alon), reparto del tiempo semanal, perfil de conductas de liderazgo, declaración de contribuciones CRediT, matriz de riesgos y matriz de decisión ponderada. Escenarios: una oferta de empleo inesperada, un error en los datos y la negociación del orden de autoría. En el PDF y el EPUB, las actividades aparecen en papel con su solución.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#recomendaciones",
     "href": "91-guia-docente.html#recomendaciones",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Recomendaciones",
     "text": "Recomendaciones\nMuchos retos tocan la situación personal y laboral de los participantes: conviene que la entrega pueda ser anónima o ficticia cuando la persona lo prefiera, y no pedir información sobre conflictos reales con terceros identificables. El laboratorio de liderazgo propone pedir valoraciones a otras personas: es opcional y puede sustituirse por una autoevaluación razonada.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#autoevaluación-en-aula-global-y-diapositivas",
     "href": "91-guia-docente.html#autoevaluación-en-aula-global-y-diapositivas",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Autoevaluación en Aula Global y diapositivas",
     "text": "Autoevaluación en Aula Global y diapositivas\nLas preguntas están exportadas a Moodle XML en moodle/. Las diapositivas de cada capítulo están en diapositivas/.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#mantenimiento",
     "href": "91-guia-docente.html#mantenimiento",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Mantenimiento",
     "text": "Mantenimiento\npython3 herramientas/preparar.py\npython3 herramientas/moodle.py\npython3 herramientas/figuras.py\npython3 herramientas/pdf.py\nquarto render\npython3 herramientas/diapositivas.py",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "92-glosario.html",
     "href": "92-glosario.html",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "",
     "text": "Pensar estratégicamente\nTérminos del libro ordenados por capítulo.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#pensar-estratégicamente",
     "href": "92-glosario.html#pensar-estratégicamente",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "",
     "text": "Estrategia\nConjunto coherente de decisiones sobre a qué dedicar recursos escasos para alcanzar objetivos a medio plazo. → Capítulo 1\n\n\nLínea de investigación\nSecuencia de preguntas conectadas en la que cada resultado facilita el siguiente. → Capítulo 1\n\n\nVentaja propia\nCombinación de conocimientos, datos, métodos, contactos y contexto que pocas personas tienen. → Capítulo 1\n\n\nCartera de proyectos\nConjunto de proyectos con riesgos distintos que se combinan para no depender de una sola apuesta. → Capítulo 1\n\n\nDAFO\nAnálisis de debilidades, amenazas, fortalezas y oportunidades. → Capítulo 1\n\n\nCoste de oportunidad\nValor de lo que se deja de hacer al elegir una opción. → Capítulo 1",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#diseñar-la-carrera",
     "href": "92-glosario.html#diseñar-la-carrera",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Diseñar la carrera",
     "text": "Diseñar la carrera\n\nPlan individual de desarrollo\nDocumento con autoevaluación, objetivos y acciones de carrera que se revisa periódicamente. → Capítulo 2\n\n\nCompetencias transferibles\nHabilidades útiles en muchos trabajos: comunicación, gestión, liderazgo, docencia, análisis. → Capítulo 2\n\n\nMentoría\nRelación de orientación profesional con una persona con más experiencia. → Capítulo 2\n\n\nRed profesional\nConjunto de contactos dentro y fuera de la academia que facilitan información y oportunidades. → Capítulo 2\n\n\nMatriz de Eisenhower\nClasificación de las tareas según su importancia y su urgencia. → Capítulo 2",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#liderar",
     "href": "92-glosario.html#liderar",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Liderar",
     "text": "Liderar\n\nLiderazgo\nProceso de influencia para que un grupo alcance objetivos compartidos. → Capítulo 3\n\n\nDesarrollo del líder\nAmpliación de las capacidades individuales para liderar (capital humano). → Capítulo 3\n\n\nDesarrollo del liderazgo\nAmpliación de la capacidad colectiva de un grupo para trabajar juntos (capital social). → Capítulo 3\n\n\nLiderazgo transformacional\nEstilo basado en la visión, el estímulo intelectual, la atención individual y el ejemplo. → Capítulo 3\n\n\nLiderazgo transaccional\nEstilo basado en acuerdos claros, reconocimiento por resultados y corrección de desviaciones. → Capítulo 3\n\n\nRetroalimentación 360°\nValoración de una persona por sus superiores, iguales y personas a su cargo. → Capítulo 3",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#equipos-supervisión-y-autoría",
     "href": "92-glosario.html#equipos-supervisión-y-autoría",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Equipos, supervisión y autoría",
     "text": "Equipos, supervisión y autoría\n\nSeguridad psicológica\nCreencia compartida de que en el equipo se pueden asumir riesgos interpersonales sin temor. → Capítulo 4\n\n\nAprendizaje en equipo\nConductas como pedir ayuda, comentar errores y buscar retroalimentación. → Capítulo 4\n\n\nSupervisión doctoral\nRelación de dirección y acompañamiento de una tesis; admite varias concepciones. → Capítulo 4\n\n\nAcuerdo de supervisión\nDocumento que fija expectativas, reuniones, plazos y criterios de autoría. → Capítulo 4\n\n\nCRediT\nTaxonomía de 14 roles de contribución a la investigación (ANSI/NISO Z39.104). → Capítulo 4\n\n\nAutoría honoraria\nFirmar un trabajo sin haber contribuido de forma sustancial. → Capítulo 4",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#proyectos-y-financiación",
     "href": "92-glosario.html#proyectos-y-financiación",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Proyectos y financiación",
     "text": "Proyectos y financiación\n\nObjetivo SMART\nObjetivo específico, medible, alcanzable, relevante y con plazo. → Capítulo 5\n\n\nPaquete de trabajo\nConjunto de tareas relacionadas con un responsable y unos entregables. → Capítulo 5\n\n\nHito\nMomento de control del proyecto. → Capítulo 5\n\n\nEntregable\nProducto concreto del proyecto: datos, informe, artículo, software. → Capítulo 5\n\n\nDiagrama de Gantt\nRepresentación de las tareas de un proyecto en el tiempo. → Capítulo 5\n\n\nMatriz de riesgos\nValoración de los riesgos por su probabilidad y su impacto. → Capítulo 5\n\n\nPlan de gestión de datos\nDocumento que describe cómo se recogerán, guardarán, compartirán y preservarán los datos. → Capítulo 5",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#decidir-y-negociar",
     "href": "92-glosario.html#decidir-y-negociar",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Decidir y negociar",
     "text": "Decidir y negociar\n\nHeurística\nAtajo mental que simplifica un juicio y puede producir errores sistemáticos. → Capítulo 6\n\n\nAnclaje\nTendencia a ajustar poco a partir de un valor inicial. → Capítulo 6\n\n\nDisponibilidad\nJuzgar la frecuencia de algo por la facilidad con que se recuerdan ejemplos. → Capítulo 6\n\n\nMatriz de decisión\nTabla que puntúa las opciones en criterios ponderados por su importancia. → Capítulo 6\n\n\nPremortem\nEjercicio de imaginar que un proyecto ha fracasado para identificar sus causas. → Capítulo 6\n\n\nIntereses y posiciones\nLa posición es lo que se pide; el interés, el motivo por el que se pide. → Capítulo 6\n\n\nMAAN\nMejor alternativa a un acuerdo negociado (BATNA). → Capítulo 6",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   }
 ]
