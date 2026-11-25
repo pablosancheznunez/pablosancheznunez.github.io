@@ -476,6 +476,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-5.2" id="toc-ejercicio-5.2" class="nav-link" data-scroll-target="#ejercicio-5.2">Ejercicio 5.2</a></li>
   </ul></li>
   <li><a href="#lab-t5-contraste" id="toc-lab-t5-contraste" class="nav-link" data-scroll-target="#lab-t5-contraste">Laboratorio: contraste y daltonismo</a></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t5" id="toc-reto-t5" class="nav-link" data-scroll-target="#reto-t5">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -759,6 +761,41 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ1
 </div>
 </div>
 </div>
+</div>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Colores que cumplen WCAG
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Paleta inicial: botón verde claro (#6BCB77) con texto blanco. Comprobación de contraste: alrededor de 2:1, <strong>no cumple</strong> el mínimo de 4,5:1 para texto normal (WCAG 2.1 AA).</p>
+<p>Solución: oscurecer el verde hasta superar 4,5:1 con texto blanco, o usar texto oscuro sobre el verde claro. Además:</p>
+<ul>
+<li>La disponibilidad no se indica solo con color: «Libre» / «Ocupada» en texto e icono.</li>
+<li>Se comprueba la paleta con simuladores de daltonismo (protanopia, deuteranopia).</li>
+<li>El modo oscuro tiene su propia paleta, comprobada de nuevo, no una inversión automática.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> ¿Qué contraste mínimo exige WCAG 2.1 AA para texto normal y para texto grande?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>4,5:1 para texto normal y 3:1 para texto grande (unos 24 px, o 18,5 px en negrita). Los componentes de interfaz y gráficos necesitan 3:1 con su entorno.</p>
+</div>
+<p><strong>Avanzado.</strong> Diseña la leyenda de disponibilidad de salas para que funcione en escala de grises.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Combinar color con texto («Libre», «Pocas horas», «Ocupada»), iconos distintos y, si se usan barras, patrones o rellenos diferentes. Comprobarlo convirtiendo la pantalla a grises.</p>
 </div>
 </section>
 <section id="actividades" class="level2">

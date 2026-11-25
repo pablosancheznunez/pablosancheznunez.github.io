@@ -207,6 +207,28 @@
     ]
   },
   {
+    "objectID": "01-fundamentos.html#caso-práctico-resuelto",
+    "href": "01-fundamentos.html#caso-práctico-resuelto",
+    "title": "Tema 1. Fundamentos del prototipado de alta fidelidad",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaCuándo pasar a alta fidelidad\n\n\n\nEl esquema de ReservaSala ya se ha probado en papel y el flujo funciona. Ahora la biblioteca necesita: (a) comprobar si el aspecto transmite confianza institucional, (b) medir tiempos reales de reserva y (c) entregar especificaciones a desarrollo. Las tres cosas exigen alta fidelidad: aspecto visual real, contenido real e interacción realista.\nLo que no conviene hacer todavía en alta fidelidad: explorar alternativas de estructura. Si aparece una duda de flujo, se vuelve a baja fidelidad: es más barato.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de alta fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html#ejercicios-graduados",
+    "href": "01-fundamentos.html#ejercicios-graduados",
+    "title": "Tema 1. Fundamentos del prototipado de alta fidelidad",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Indica para cada objetivo si basta la baja fidelidad o necesitas la alta: comparar tres estructuras de navegación; medir si el contraste del botón principal es suficiente; presentar el diseño final a la dirección.\n\nVer solución\nEstructuras: baja. Contraste: alta (depende del color real). Presentación final: alta (comunica el resultado a quien no participó en el proceso).\n\nAvanzado. Diseña un plan de prueba con un prototipo de alta fidelidad que mida el tiempo de reserva.\n\nVer solución\nTareas realistas, cinco a ocho participantes, registro del tiempo desde el inicio hasta la confirmación, tasa de éxito y errores, y una escala de satisfacción (por ejemplo, SUS) al final.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de alta fidelidad</span>"
+    ]
+  },
+  {
     "objectID": "01-fundamentos.html#actividades",
     "href": "01-fundamentos.html#actividades",
     "title": "Tema 1. Fundamentos del prototipado de alta fidelidad",
@@ -322,6 +344,28 @@
     "title": "Tema 2. Las maquetas en el proceso de diseño",
     "section": "Práctica",
     "text": "Práctica\nElige dos webs del mismo tipo (por ejemplo, dos catálogos de bibliotecas). Míralas durante un segundo cada una y anota tu primera impresión. Después analiza qué elementos (complejidad, densidad, tipografía, imágenes, parecido con lo esperado) la explican, con los hallazgos de Lindgaard et al. y Tuch et al.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. Las maquetas en el proceso de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "02-maquetas.html#caso-práctico-resuelto",
+    "href": "02-maquetas.html#caso-práctico-resuelto",
+    "title": "Tema 2. Las maquetas en el proceso de diseño",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaMaqueta con contenido real\n\n\n\nLa primera maqueta de la lista de salas usa nombres como «Sala 1, Sala 2» y horas inventadas. Al poner contenido real (nombres como «Sala de trabajo en grupo 2.14 — Biblioteca de Getafe», horarios reales con huecos irregulares), aparecen problemas: los nombres largos rompen la fila y las franjas libres no caben.\nSoluciones: abreviar en la lista y mostrar el nombre completo en el detalle; representar la disponibilidad con una barra horaria compacta en lugar de texto. Lección: el lorem ipsum oculta problemas de diseño.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. Las maquetas en el proceso de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "02-maquetas.html#ejercicios-graduados",
+    "href": "02-maquetas.html#ejercicios-graduados",
+    "title": "Tema 2. Las maquetas en el proceso de diseño",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Enumera tres tipos de contenido real que suelen romper una maqueta.\n\nVer solución\nTextos largos (nombres, traducciones al inglés, que suelen ocupar más), números grandes o con decimales y listas vacías o muy largas. También fotos con proporciones distintas.\n\nAvanzado. Rediseña la fila de sala para que funcione con nombres de 20 a 70 caracteres.\n\nVer solución\nPor ejemplo: nombre en dos líneas como máximo con elipsis, código de sala destacado, capacidad e iconos en una segunda línea y la barra de disponibilidad debajo; el detalle muestra el nombre completo.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. Las maquetas en el proceso de diseño</span>"
@@ -460,6 +504,28 @@
     ]
   },
   {
+    "objectID": "03-transicion.html#caso-práctico-resuelto",
+    "href": "03-transicion.html#caso-práctico-resuelto",
+    "title": "Tema 3. De la baja a la alta fidelidad",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDel esquema a la pantalla final, decisión a decisión\n\n\n\nPaso del esquema de confirmación a alta fidelidad:\n\nJerarquía: el título «Reserva confirmada» pasa a 24 px seminegrita; los datos de la reserva, a 16 px.\nColor: el verde se reserva para el estado de éxito; la acción secundaria («Cancelar») va en contorno.\nIconografía: iconos de calendario, reloj y ubicación junto a cada dato, siempre con texto.\nEspaciado: escala de 8 px; 24 px entre bloques, 8 px dentro de cada bloque.\nMicrointeracción: al confirmar, una animación breve (≤ 300 ms) que respeta la preferencia de reducir el movimiento.\n\nCada decisión se registra en la documentación para que desarrollo no tenga que adivinar.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. De la baja a la alta fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-transicion.html#ejercicios-graduados",
+    "href": "03-transicion.html#ejercicios-graduados",
+    "title": "Tema 3. De la baja a la alta fidelidad",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué elementos del esquema no deberían cambiar al pasar a alta fidelidad?\n\nVer solución\nLa estructura, la jerarquía de la información y el flujo validados. La alta fidelidad añade aspecto y detalle; si cambia la estructura, hay que volver a probarla.\n\nAvanzado. Escribe la ficha de decisiones (jerarquía, color, iconos, espaciado, movimiento) para la pantalla de lista de salas.\n\nVer solución\nDebe justificar cada decisión con un principio (contraste, consistencia, escala de espaciado, accesibilidad) y especificar valores concretos que desarrollo pueda aplicar.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. De la baja a la alta fidelidad</span>"
+    ]
+  },
+  {
     "objectID": "03-transicion.html#actividades",
     "href": "03-transicion.html#actividades",
     "title": "Tema 3. De la baja a la alta fidelidad",
@@ -586,6 +652,28 @@
     "title": "Tema 4. La tipografía en el diseño de interfaces",
     "section": "Laboratorio tipográfico",
     "text": "Laboratorio tipográfico\n\n\nLaboratorio · se ejecuta en tu navegador\n\nElige un tamaño base y una razón de escala modular: cada nivel de la jerarquía se obtiene multiplicando por la razón. Ajusta el interlineado y el ancho de la columna y mira el resultado con un texto real.\n\nrango = window.Lab.rango\nseleccion = window.Lab.seleccion\nviewof t_base = rango(\"Tamaño base (px)\", [12, 22], {step: 1, value: 16})\nviewof t_razon = seleccion(\"Razón de la escala\", [[\"1.125\", \"1,125 · segunda mayor\"], [\"1.2\", \"1,2 · tercera menor\"], [\"1.25\", \"1,25 · tercera mayor\"], [\"1.333\", \"1,333 · cuarta justa\"], [\"1.5\", \"1,5 · quinta justa\"], [\"1.618\", \"1,618 · proporción áurea\"]], {value: \"1.25\"})\nviewof t_inter = rango(\"Interlineado del texto\", [1.0, 2.0], {step: 0.05, value: 1.5, formato: x =&gt; x.toFixed(2).replace(\".\", \",\")})\nviewof t_medida = rango(\"Ancho de la columna (em)\", [20, 60], {step: 1, value: 34})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const r = +t_razon, b = t_base;\n  const niveles = [[\"Título 1\", 4], [\"Título 2\", 3], [\"Título 3\", 2], [\"Título 4\", 1], [\"Texto\", 0], [\"Pie\", -1]];\n  const px = k =&gt; b * Math.pow(r, k);\n  const cpl = Math.round(t_medida * 2);\n  const est = cpl &lt; 45 ? [\"corta\", \"lab-medio\"] : cpl &gt; 75 ? [\"larga\", \"lab-medio\"] : [\"cómoda\", \"lab-bien\"];\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;table class=\"table table-sm\"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=\"col\"&gt;Nivel&lt;/th&gt;&lt;th scope=\"col\"&gt;px&lt;/th&gt;&lt;th scope=\"col\"&gt;rem&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;\n    ${niveles.map(([n, k]) =&gt; `&lt;tr&gt;&lt;td&gt;${n}&lt;/td&gt;&lt;td&gt;${px(k).toFixed(1).replace(\".\", \",\")}&lt;/td&gt;&lt;td&gt;${(px(k) / 16).toFixed(3).replace(\".\", \",\")}&lt;/td&gt;&lt;/tr&gt;`).join(\"\")}&lt;/tbody&gt;&lt;/table&gt;\n    &lt;div class=\"lab-muestra-tipo\" style=\"max-width:${t_medida}em;font-size:${b}px;border:1px solid var(--bs-border-color);border-radius:6px;padding:1em\"&gt;\n      &lt;div style=\"font-size:${px(3)}px;line-height:1.2;font-weight:600;margin-bottom:.4em\"&gt;Reserva una sala de estudio&lt;/div&gt;\n      &lt;div style=\"font-size:${px(1)}px;line-height:1.3;font-weight:600;margin-bottom:.3em\"&gt;Elige el día y la franja&lt;/div&gt;\n      &lt;p style=\"line-height:${t_inter};margin:0 0 .6em\"&gt;Las salas se reservan con un máximo de siete días de antelación y durante un máximo de tres horas seguidas. Si no llegas en los primeros quince minutos, la reserva se libera para otra persona.&lt;/p&gt;\n      &lt;div style=\"font-size:${px(-1)}px;line-height:1.4\"&gt;Normas de uso actualizadas el 1 de septiembre.&lt;/div&gt;&lt;/div&gt;\n    &lt;p class=\"small mt-2\"&gt;Unos ${cpl} caracteres por línea: &lt;span class=\"${est[1]}\" style=\"font-weight:600\"&gt;${est[0]}&lt;/span&gt; (lo cómodo es 45-75). Con las funciones del libro: &lt;code&gt;escala_tipografica(${b}, ${r})&lt;/code&gt;.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. La tipografía en el diseño de interfaces</span>"
+    ]
+  },
+  {
+    "objectID": "04-tipografia.html#caso-práctico-resuelto",
+    "href": "04-tipografia.html#caso-práctico-resuelto",
+    "title": "Tema 4. La tipografía en el diseño de interfaces",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaUna escala tipográfica para ReservaSala\n\n\n\nSe elige una tipografía sin serifa de buena legibilidad en pantalla y una escala con razón 1,25 a partir de 16 px:\n\n\n\nUso\nTamaño\nPeso\nInterlineado\n\n\n\n\nTítulo de pantalla\n25 px\nSeminegrita\n1,2\n\n\nEncabezado de sección\n20 px\nSeminegrita\n1,3\n\n\nTexto\n16 px\nRegular\n1,5\n\n\nTexto secundario\n13 px\nRegular\n1,4\n\n\n\nReglas: no más de dos pesos por pantalla; longitud de línea de 45 a 75 caracteres en escritorio; los números de las horas con cifras tabulares para que se alineen en la lista.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. La tipografía en el diseño de interfaces</span>"
+    ]
+  },
+  {
+    "objectID": "04-tipografia.html#ejercicios-graduados",
+    "href": "04-tipografia.html#ejercicios-graduados",
+    "title": "Tema 4. La tipografía en el diseño de interfaces",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Calcula los tamaños de una escala de razón 1,2 a partir de 16 px (tres pasos hacia arriba).\n\nVer solución\n16 × 1,2 = 19,2 → 19 px; 19,2 × 1,2 = 23,04 → 23 px; 23,04 × 1,2 = 27,6 → 28 px.\n\nAvanzado. Explica por qué conviene usar cifras tabulares en la lista de horarios.\n\nVer solución\nPorque todas las cifras ocupan el mismo ancho y las horas quedan alineadas en columna, lo que facilita comparar franjas de un vistazo.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. La tipografía en el diseño de interfaces</span>"
@@ -724,6 +812,28 @@
     ]
   },
   {
+    "objectID": "05-color.html#caso-práctico-resuelto",
+    "href": "05-color.html#caso-práctico-resuelto",
+    "title": "Tema 5. Uso accesible del color",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaColores que cumplen WCAG\n\n\n\nPaleta inicial: botón verde claro (#6BCB77) con texto blanco. Comprobación de contraste: alrededor de 2:1, no cumple el mínimo de 4,5:1 para texto normal (WCAG 2.1 AA).\nSolución: oscurecer el verde hasta superar 4,5:1 con texto blanco, o usar texto oscuro sobre el verde claro. Además:\n\nLa disponibilidad no se indica solo con color: «Libre» / «Ocupada» en texto e icono.\nSe comprueba la paleta con simuladores de daltonismo (protanopia, deuteranopia).\nEl modo oscuro tiene su propia paleta, comprobada de nuevo, no una inversión automática.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Uso accesible del color</span>"
+    ]
+  },
+  {
+    "objectID": "05-color.html#ejercicios-graduados",
+    "href": "05-color.html#ejercicios-graduados",
+    "title": "Tema 5. Uso accesible del color",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué contraste mínimo exige WCAG 2.1 AA para texto normal y para texto grande?\n\nVer solución\n4,5:1 para texto normal y 3:1 para texto grande (unos 24 px, o 18,5 px en negrita). Los componentes de interfaz y gráficos necesitan 3:1 con su entorno.\n\nAvanzado. Diseña la leyenda de disponibilidad de salas para que funcione en escala de grises.\n\nVer solución\nCombinar color con texto («Libre», «Pocas horas», «Ocupada»), iconos distintos y, si se usan barras, patrones o rellenos diferentes. Comprobarlo convirtiendo la pantalla a grises.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Uso accesible del color</span>"
+    ]
+  },
+  {
     "objectID": "05-color.html#actividades",
     "href": "05-color.html#actividades",
     "title": "Tema 5. Uso accesible del color",
@@ -839,6 +949,28 @@
     "title": "Tema 6. Iconografía",
     "section": "Práctica",
     "text": "Práctica\nBusca diez iconos de la aplicación de tu banco o de tu universidad. Tápales la etiqueta y pide a dos personas que digan qué hacen. Anota cuántos aciertan y relaciona los fallos con la concreción y la distancia semántica de McDougall et al.\n\n\n\n\n\n\nFigura 1: Icono, etiqueta o las dos cosas. Salvo los pocos iconos universales, la etiqueta despeja la ambigüedad.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. Iconografía</span>"
+    ]
+  },
+  {
+    "objectID": "06-iconografia.html#caso-práctico-resuelto",
+    "href": "06-iconografia.html#caso-práctico-resuelto",
+    "title": "Tema 6. Iconografía",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaUn conjunto de iconos coherente\n\n\n\nRevisión de los iconos de ReservaSala: el de «capacidad» es una persona en un estilo relleno, el de «ubicación» es de contorno con otro grosor y el de «enchufe» procede de una tercera colección. Resultado: la pantalla parece descuidada.\nCorrección: una sola familia de iconos, mismo grosor de trazo (2 px), misma cuadrícula (24 × 24 px) y mismo estilo (contorno). Los iconos de función ambigua (por ejemplo, un engranaje para «preferencias de sala») llevan siempre una etiqueta de texto.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. Iconografía</span>"
+    ]
+  },
+  {
+    "objectID": "06-iconografia.html#ejercicios-graduados",
+    "href": "06-iconografia.html#ejercicios-graduados",
+    "title": "Tema 6. Iconografía",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué icono necesitaría siempre etiqueta: casa (inicio), lupa (buscar) o un rayo (enchufe disponible)?\n\nVer solución\nEl rayo: no tiene un significado convencional y podría interpretarse como «rápido» o «destacado». La casa y la lupa son convenciones muy asentadas, aunque una etiqueta sigue ayudando.\n\nAvanzado. Define las reglas de un sistema de iconos para la app (cuadrícula, trazo, esquinas, estados).\n\nVer solución\nCuadrícula de 24 px con zona segura de 2 px, trazo de 2 px, esquinas redondeadas de 2 px, versión rellena solo para el estado activo y tamaño táctil mínimo de 44 px alrededor.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. Iconografía</span>"
@@ -988,6 +1120,28 @@
     ]
   },
   {
+    "objectID": "07-composicion.html#caso-práctico-resuelto",
+    "href": "07-composicion.html#caso-práctico-resuelto",
+    "title": "Tema 7. Composición y proporción en pantalla",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaComponer la pantalla de detalle de sala\n\n\n\nLa pantalla de detalle tiene: foto, nombre, capacidad, equipamiento, barra de disponibilidad y botón de reserva. Primera composición: todos los elementos con el mismo peso visual; la mirada no sabe dónde ir.\nRecomposición con principios Gestalt y jerarquía:\n\nProximidad: capacidad y equipamiento agrupados en un bloque «Características».\nContraste y tamaño: la barra de disponibilidad es el elemento más grande tras la foto, porque es la decisión clave.\nAlineación a una retícula de 4 columnas en móvil.\nAcción principal fija en la parte inferior, al alcance del pulgar.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Composición y proporción en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-composicion.html#ejercicios-graduados",
+    "href": "07-composicion.html#ejercicios-graduados",
+    "title": "Tema 7. Composición y proporción en pantalla",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué principio Gestalt se aplica al agrupar capacidad y equipamiento en un bloque?\n\nVer solución\nProximidad (y región común si se encierran en un contenedor).\n\nAvanzado. Dibuja la versión de escritorio de la pantalla de detalle sobre una retícula de 12 columnas.\n\nVer solución\nPor ejemplo: foto en 7 columnas a la izquierda, información y reserva en 5 columnas a la derecha, con la disponibilidad junto al botón. La jerarquía debe ser la misma que en móvil.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Composición y proporción en pantalla</span>"
+    ]
+  },
+  {
     "objectID": "07-composicion.html#actividades",
     "href": "07-composicion.html#actividades",
     "title": "Tema 7. Composición y proporción en pantalla",
@@ -1114,6 +1268,28 @@
     "title": "Tema 8. Espacio negativo y respiración visual",
     "section": "Laboratorio: densidad de información",
     "text": "Laboratorio: densidad de información\n\n\nLaboratorio · se ejecuta en tu navegador\n\nAjusta el relleno y el espacio entre elementos de una lista de préstamos y mira cuántos caben en una pantalla de móvil de 640 px de alto. Más densidad muestra más datos; menos densidad facilita la lectura y el toque. No hay un valor correcto: depende de la tarea.\n\nrango = window.Lab.rango\nviewof d_rel = rango(\"Relleno interior (px)\", [4, 28], {step: 2, value: 12})\nviewof d_sep = rango(\"Separación entre elementos (px)\", [0, 24], {step: 2, value: 8})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const alto = 2 * d_rel + 40, total = 640 - 60;\n  const caben = Math.floor((total + d_sep) / (alto + d_sep));\n  const libros = [\"Diseño de interacción\", \"Usabilidad web\", \"Manual de Quarto\", \"Tipografía digital\", \"Color y accesibilidad\", \"Sistemas de diseño\", \"Arquitectura de información\", \"Investigación con usuarios\", \"Escribir para la web\", \"Psicología del diseño\", \"Diseño inclusivo\", \"Prototipado rápido\", \"Métricas de UX\", \"Diseño de servicios\"];\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;Caben &lt;strong&gt;${caben}&lt;/strong&gt; préstamos sin desplazarse · altura de cada fila: ${alto} px ${alto &lt; 44 ? '&lt;span class=\"lab-medio\" style=\"font-weight:600\"&gt;(menos de 44 px: difícil de tocar)&lt;/span&gt;' : \"\"}&lt;/p&gt;\n  &lt;div style=\"width:240px;height:320px;overflow:hidden;border:2px solid var(--bs-border-color);border-radius:16px;padding:8px;background:var(--bs-body-bg)\" aria-hidden=\"true\"&gt;\n   &lt;div style=\"transform:scale(.5);transform-origin:0 0;width:460px\"&gt;\n    &lt;div style=\"font-weight:600;font-size:20px;margin:6px 0 16px\"&gt;Mis préstamos&lt;/div&gt;\n    ${libros.map(l =&gt; `&lt;div style=\"padding:${d_rel}px;margin-bottom:${d_sep}px;border-radius:8px;background:rgba(42,120,214,.1)\"&gt;&lt;div style=\"font-weight:600;font-size:16px\"&gt;${l}&lt;/div&gt;&lt;div style=\"font-size:13px;opacity:.8\"&gt;Vence el 02/12&lt;/div&gt;&lt;/div&gt;`).join(\"\")}\n   &lt;/div&gt;&lt;/div&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Espacio negativo y respiración visual</span>"
+    ]
+  },
+  {
+    "objectID": "08-espacio.html#caso-práctico-resuelto",
+    "href": "08-espacio.html#caso-práctico-resuelto",
+    "title": "Tema 8. Espacio negativo y respiración visual",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaMás espacio, más claridad\n\n\n\nLa pantalla de inicio de ReservaSala intenta mostrar a la vez noticias de la biblioteca, salas favoritas, reservas activas y un buscador. Con márgenes de 8 px todo parece un bloque compacto.\nRediseño: escala de espaciado de 8 px (8, 16, 24, 32, 48), márgenes laterales de 16 px, 32 px entre secciones y eliminación de las noticias (que van a otra sección). La pantalla muestra menos, pero se entiende antes: la reserva activa y el buscador destacan solos.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Espacio negativo y respiración visual</span>"
+    ]
+  },
+  {
+    "objectID": "08-espacio.html#ejercicios-graduados",
+    "href": "08-espacio.html#ejercicios-graduados",
+    "title": "Tema 8. Espacio negativo y respiración visual",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Indica qué valor de la escala de 8 px usarías entre una etiqueta y su campo, entre campos y entre secciones.\n\nVer solución\nEtiqueta-campo: 8 px. Entre campos: 16 o 24 px. Entre secciones: 32 o 48 px. La relación entre espacios comunica qué está relacionado.\n\nAvanzado. Rediseña una pantalla saturada de una app que uses a diario aplicando la escala de espaciado.\n\nVer solución\nDocumenta antes y después, explica qué elementos eliminaste o reagrupaste y por qué, y cómo cambia la jerarquía.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Espacio negativo y respiración visual</span>"
@@ -1263,6 +1439,28 @@
     ]
   },
   {
+    "objectID": "09-sistemas.html#caso-práctico-resuelto",
+    "href": "09-sistemas.html#caso-práctico-resuelto",
+    "title": "Tema 9. Bibliotecas y sistemas de diseño",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDel diseño suelto a un sistema\n\n\n\nEn la tercera iteración hay cuatro variantes del botón principal con radios y alturas distintas. Se crea un sistema mínimo:\n\nTokens: color.primario, color.exito, espacio.2 (16 px), radio.m (8 px), fuente.texto (16 px).\nComponentes: botón (primario, secundario, texto; estados normal, foco, desactivado, cargando), fila de sala, barra de disponibilidad, tarjeta de reserva.\nDocumentación: cuándo usar cada variante, accesibilidad (foco visible, contraste) y ejemplos de uso incorrecto.\n\nAl cambiar un token (por ejemplo, el color primario para adaptarlo a la marca de la universidad), todas las pantallas se actualizan de forma coherente.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Bibliotecas y sistemas de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "09-sistemas.html#ejercicios-graduados",
+    "href": "09-sistemas.html#ejercicios-graduados",
+    "title": "Tema 9. Bibliotecas y sistemas de diseño",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué estados mínimos debe documentar un botón?\n\nVer solución\nNormal, hover (en escritorio), foco (visible para teclado), pulsado, desactivado y cargando. Cada uno con su especificación de color y contraste.\n\nAvanzado. Define los tokens de color de ReservaSala en modo claro y oscuro con nombres semánticos.\n\nVer solución\nNombres por función (fondo, superficie, texto, texto-secundario, primario, exito, error, borde), no por color («verde»), con valores para cada modo y contraste comprobado en ambos.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Bibliotecas y sistemas de diseño</span>"
+    ]
+  },
+  {
     "objectID": "09-sistemas.html#actividades",
     "href": "09-sistemas.html#actividades",
     "title": "Tema 9. Bibliotecas y sistemas de diseño",
@@ -1384,6 +1582,28 @@
     ]
   },
   {
+    "objectID": "10-critica.html#caso-práctico-resuelto",
+    "href": "10-critica.html#caso-práctico-resuelto",
+    "title": "Tema 10. Críticas de diseño",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaUna sesión de crítica bien conducida\n\n\n\nSe presenta la pantalla de reserva al equipo. Estructura de la crítica:\n\nContexto (2 min): objetivo de la pantalla, usuario y fase del proyecto.\nQué tipo de comentarios se buscan: jerarquía y claridad de la acción; no el color de marca, que ya está decidido.\nComentarios en forma de observación + impacto + pregunta: «La barra de disponibilidad y el botón compiten; ¿cuál debe mirarse primero?».\nCierre: resumen de decisiones y próximos pasos.\n\nLo que se evita: «No me gusta», soluciones impuestas sin entender el problema y debates sobre gustos personales.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Críticas de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "10-critica.html#ejercicios-graduados",
+    "href": "10-critica.html#ejercicios-graduados",
+    "title": "Tema 10. Críticas de diseño",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Reformula este comentario como una crítica útil: «El botón es feo».\n\nVer solución\nEjemplo: «El botón de reservar tiene poco contraste con el fondo y se confunde con el de cancelar; puede que el usuario dude cuál es la acción principal. ¿Qué pasaría si fuera relleno y el otro de contorno?».\n\nAvanzado. Prepara la presentación de un diseño tuyo para una crítica de diez minutos.\n\nVer solución\nIncluye objetivo, usuario, restricciones, qué está decidido, qué buscas que comenten y dos preguntas concretas para el equipo.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Críticas de diseño</span>"
+    ]
+  },
+  {
     "objectID": "10-critica.html#actividades",
     "href": "10-critica.html#actividades",
     "title": "Tema 10. Críticas de diseño",
@@ -1499,6 +1719,28 @@
     "title": "Tema 11. Documentación, entrega y traspaso",
     "section": "Práctica",
     "text": "Práctica\nToma una pantalla de tu proyecto y pide a un compañero que la «construya» describiéndola solo con lo que ve en el archivo. Anota cada pregunta que te haga: cada una es una ruptura de diseño que la especificación debería haber resuelto.\n\n\n\n\n\n\nFigura 1: Una pantalla anotada para el traspaso: medidas, tokens y estados.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Documentación, entrega y traspaso</span>"
+    ]
+  },
+  {
+    "objectID": "11-entrega.html#caso-práctico-resuelto",
+    "href": "11-entrega.html#caso-práctico-resuelto",
+    "title": "Tema 11. Documentación, entrega y traspaso",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaEntrega a desarrollo sin ambigüedades\n\n\n\nPaquete de entrega de la pantalla de reserva:\n\nEspecificaciones: medidas, tokens usados, comportamiento en distintos tamaños.\nEstados: cargando, vacío, error, éxito y desactivado de cada componente.\nInteracciones: qué pasa al pulsar, duración de las animaciones, gestos.\nAccesibilidad: orden de foco, textos alternativos, etiquetas para lectores de pantalla, contraste comprobado.\nContenido: textos finales, mensajes de error y su tono.\nCasos límite: nombres largos, sin conexión, sesión caducada.\n\nUna reunión breve de traspaso y un canal para dudas evitan que desarrollo «rellene huecos» con decisiones propias.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Documentación, entrega y traspaso</span>"
+    ]
+  },
+  {
+    "objectID": "11-entrega.html#ejercicios-graduados",
+    "href": "11-entrega.html#ejercicios-graduados",
+    "title": "Tema 11. Documentación, entrega y traspaso",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Enumera cinco casos límite de la pantalla de reserva que deberían especificarse.\n\nVer solución\nSin conexión; sala ocupada mientras se confirma; nombre de sala muy largo; usuario sin permisos (por ejemplo, de otra universidad); reserva en la franja que ya ha empezado.\n\nAvanzado. Redacta la especificación completa de la barra de disponibilidad (aspecto, estados, interacción y accesibilidad).\n\nVer solución\nDebe incluir tamaño y tokens, cómo se representan las horas libres y ocupadas (no solo con color), qué pasa al pulsar una franja, cómo se anuncia a un lector de pantalla («Libre de 16:00 a 18:00») y cómo se comporta en pantallas estrechas.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Documentación, entrega y traspaso</span>"

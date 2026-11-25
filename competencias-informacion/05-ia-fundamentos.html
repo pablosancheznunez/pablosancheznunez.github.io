@@ -457,6 +457,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#lab-u5-modelo" id="toc-lab-u5-modelo" class="nav-link" data-scroll-target="#lab-u5-modelo">Laboratorio: un modelo de lenguaje en miniatura</a></li>
   <li><a href="#lab-u5-verificar" id="toc-lab-u5-verificar" class="nav-link" data-scroll-target="#lab-u5-verificar">Laboratorio: verificar referencias</a></li>
+  <li><a href="#casos-prácticos-resueltos" id="toc-casos-prácticos-resueltos" class="nav-link" data-scroll-target="#casos-prácticos-resueltos">Casos prácticos resueltos</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-u5" id="toc-reto-u5" class="nav-link" data-scroll-target="#reto-u5">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -947,6 +949,76 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InU1
 </div>
 </div>
 <p>Un DOI que existe no basta: comprueba que <strong>el título, los autores y el año</strong> coinciden con la referencia que te dio la IA. Walters y Wilder (2023) encontraron, además de referencias inventadas, muchas referencias reales con errores en sus datos.</p>
+</div>
+</section>
+<section id="casos-prácticos-resueltos" class="level2">
+<h2 class="anchored" data-anchor-id="casos-prácticos-resueltos">Casos prácticos resueltos</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Caso 1 · Auditar una bibliografía generada por una IA
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le pides a un asistente cinco referencias sobre «reproducibilidad en psicología». Procedimiento para cada referencia:</p>
+<ol type="1">
+<li><strong>¿Tiene DOI?</strong> Ábrelo en <code>https://doi.org/</code> seguido del DOI. Si no resuelve, sospecha.</li>
+<li><strong>Si resuelve, compara</strong> título, autores, revista y año con lo que dio la IA: a veces el DOI existe pero corresponde a otro artículo.</li>
+<li><strong>Si no tiene DOI</strong>, busca el título exacto entre comillas en Google Académico, Crossref o OpenAlex.</li>
+<li><strong>Clasifica</strong> cada referencia: correcta, con errores (año, autores, páginas) o <strong>inventada</strong>.</li>
+<li><strong>No uses</strong> ninguna referencia que no hayas localizado y leído al menos en su resumen.</li>
+</ol>
+<p><strong>Resultado frecuente:</strong> algunas referencias son reales, otras mezclan autores de un trabajo con el título de otro, y alguna no existe. Es lo que se conoce como <strong>alucinación</strong>: el modelo genera texto plausible, no consulta una base de datos (salvo que use una herramienta de búsqueda, e incluso entonces conviene verificar).</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Caso 2 · Mejorar una instrucción (prompt)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Instrucción vaga:</strong> «Háblame de la ciencia abierta».</p>
+<p><strong>Instrucción mejorada:</strong> &gt; Actúa como tutor de un estudiante de grado de Información y Documentación. Explica en 300 palabras qué es la ciencia abierta, con tres ejemplos de prácticas (acceso abierto, datos abiertos, preregistro). Usa un lenguaje claro. No incluyas referencias bibliográficas: las buscaré yo en bases de datos. Al final, propón tres preguntas para comprobar si lo he entendido.</p>
+<p>Elementos que mejoran el resultado: <strong>rol</strong>, <strong>destinatario</strong>, <strong>tarea concreta</strong>, <strong>extensión</strong>, <strong>formato</strong> y <strong>límites</strong> (aquí, evitar referencias que podrían ser inventadas).</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Caso 3 · Un dato que suena bien
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Una IA afirma: «El 70 % de los estudios de psicología no se puede replicar, según el proyecto de 2015». Verificación: el proyecto de la Open Science Collaboration (2015) replicó 100 estudios y obtuvo resultados significativos en la misma dirección en un 36 % de las réplicas, frente al 97 % de los originales. La cifra de la IA es una simplificación que mezcla criterios: hay que ir a la fuente y citar el dato exacto con su definición.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> ¿Por qué un modelo de lenguaje puede inventar una referencia que parece correcta?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Porque genera la secuencia de palabras más probable a partir de patrones de su entrenamiento: produce algo con la forma de una referencia (autores plausibles, revista real, año) sin comprobar que exista.</p>
+</div>
+<p><strong>Intermedio.</strong> Reescribe esta instrucción para que sea útil y segura: «Hazme el marco teórico de mi TFG».</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Ejemplo: «Mi TFG trata sobre [tema]. Propón una estructura de cinco apartados para el marco teórico, con los conceptos clave de cada uno y los términos de búsqueda en español e inglés que debería usar en Dialnet y Scopus. No redactes el texto ni inventes referencias». Así la IA ayuda a planificar y no sustituye tu trabajo.</p>
+</div>
+<p><strong>Avanzado.</strong> Pide a dos asistentes de IA distintos diez referencias sobre un tema de tu interés, audítalas todas con el procedimiento del caso 1 y compara las tasas de error.</p>
+<div class="webex-solution">
+<button>Ver orientación</button>
+<p>Presenta una tabla con cada referencia, su estado (correcta, con errores, inventada) y la evidencia (DOI, búsqueda). Indica la fecha y el modelo usado: los resultados cambian con las versiones.</p>
 </div>
 </section>
 <section id="actividades" class="level2">

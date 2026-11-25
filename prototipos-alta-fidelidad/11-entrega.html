@@ -436,6 +436,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#control-de-versiones" id="toc-control-de-versiones" class="nav-link" data-scroll-target="#control-de-versiones">3. Control de versiones</a></li>
   <li><a href="#presentar-y-acompañar" id="toc-presentar-y-acompañar" class="nav-link" data-scroll-target="#presentar-y-acompañar">4. Presentar y acompañar</a></li>
   <li><a href="#práctica" id="toc-práctica" class="nav-link" data-scroll-target="#práctica">Práctica</a></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t11" id="toc-reto-t11" class="nav-link" data-scroll-target="#reto-t11">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -608,6 +610,44 @@ ul.task-list li input[type="checkbox"] {
 Figura&nbsp;1: Una pantalla anotada para el traspaso: medidas, <em>tokens</em> y estados.
 </figcaption>
 </figure>
+</div>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Entrega a desarrollo sin ambigüedades
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Paquete de entrega de la pantalla de reserva:</p>
+<ul>
+<li><strong>Especificaciones:</strong> medidas, tokens usados, comportamiento en distintos tamaños.</li>
+<li><strong>Estados:</strong> cargando, vacío, error, éxito y desactivado de cada componente.</li>
+<li><strong>Interacciones:</strong> qué pasa al pulsar, duración de las animaciones, gestos.</li>
+<li><strong>Accesibilidad:</strong> orden de foco, textos alternativos, etiquetas para lectores de pantalla, contraste comprobado.</li>
+<li><strong>Contenido:</strong> textos finales, mensajes de error y su tono.</li>
+<li><strong>Casos límite:</strong> nombres largos, sin conexión, sesión caducada.</li>
+</ul>
+<p>Una reunión breve de traspaso y un canal para dudas evitan que desarrollo «rellene huecos» con decisiones propias.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> Enumera cinco casos límite de la pantalla de reserva que deberían especificarse.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Sin conexión; sala ocupada mientras se confirma; nombre de sala muy largo; usuario sin permisos (por ejemplo, de otra universidad); reserva en la franja que ya ha empezado.</p>
+</div>
+<p><strong>Avanzado.</strong> Redacta la especificación completa de la barra de disponibilidad (aspecto, estados, interacción y accesibilidad).</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Debe incluir tamaño y tokens, cómo se representan las horas libres y ocupadas (no solo con color), qué pasa al pulsar una franja, cómo se anuncia a un lector de pantalla («Libre de 16:00 a 18:00») y cómo se comporta en pantallas estrechas.</p>
 </div>
 </section>
 <section id="actividades" class="level2">

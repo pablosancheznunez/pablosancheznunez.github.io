@@ -457,6 +457,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-2.2" id="toc-ejercicio-2.2" class="nav-link" data-scroll-target="#ejercicio-2.2">Ejercicio 2.2</a></li>
   </ul></li>
   <li><a href="#lab-u2-openalex" id="toc-lab-u2-openalex" class="nav-link" data-scroll-target="#lab-u2-openalex">Laboratorio: operadores booleanos en vivo</a></li>
+  <li><a href="#casos-prácticos-resueltos" id="toc-casos-prácticos-resueltos" class="nav-link" data-scroll-target="#casos-prácticos-resueltos">Casos prácticos resueltos</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-u2" id="toc-reto-u2" class="nav-link" data-scroll-target="#reto-u2">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -822,6 +824,138 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InUy
 </div>
 </div>
 <p><strong>Prueba:</strong> añade un sinónimo a A con OR y mira cómo cambia <code>A AND B</code>; después, pon una frase entre comillas y compárala con las mismas palabras sin comillas.</p>
+</div>
+</section>
+<section id="casos-prácticos-resueltos" class="level2">
+<h2 class="anchored" data-anchor-id="casos-prácticos-resueltos">Casos prácticos resueltos</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Caso 1 · De la pregunta a la ecuación de búsqueda
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Pregunta:</strong> ¿cómo afecta el uso del teléfono móvil al rendimiento académico de los estudiantes universitarios?</p>
+<ol type="1">
+<li><strong>Divide la pregunta en conceptos:</strong> (a) teléfono móvil, (b) rendimiento académico, (c) universitarios.</li>
+<li><strong>Reúne sinónimos y términos en inglés</strong> para cada concepto:</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concepto</th>
+<th>Términos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Teléfono móvil</td>
+<td>«teléfono móvil», smartphone<em>, «mobile phone</em>», «cell phone*»</td>
+</tr>
+<tr class="even">
+<td>Rendimiento académico</td>
+<td>«rendimiento académico», «academic performance», «academic achievement», grades</td>
+</tr>
+<tr class="odd">
+<td>Universitarios</td>
+<td>universit<em>, «higher education», «college student</em>»</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="1">
+<li><strong>Combina con OR dentro de cada concepto y con AND entre conceptos:</strong></li>
+</ol>
+<p><code>(smartphone* OR "mobile phone*" OR "cell phone*") AND ("academic performance" OR "academic achievement" OR grades) AND (universit* OR "higher education" OR "college student*")</code></p>
+<ol start="4" type="1">
+<li><strong>Limita los campos</strong> si hay demasiado ruido: busca en título, resumen y palabras clave (en Scopus, <code>TITLE-ABS-KEY(...)</code>).</li>
+<li><strong>Documenta</strong> la base de datos, la fecha, la ecuación exacta y el número de resultados.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Caso 2 · Demasiados o demasiado pocos resultados
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>12 000 resultados (poca precisión):</strong> restringe a título y resumen; añade un concepto con AND; filtra por años, idioma o tipo de documento; usa frases exactas entre comillas.</li>
+<li><strong>8 resultados (poca exhaustividad):</strong> añade sinónimos con OR; usa truncamiento (<code>educa*</code> recupera educación, educativo, education…); quita el concepto menos esencial; busca en más bases de datos; revisa las referencias de los artículos relevantes (búsqueda «en bola de nieve»).</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Caso 3 · La misma búsqueda en tres plataformas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Plataforma</th>
+<th>Fortaleza</th>
+<th>Cuidado con</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Dialnet</strong></td>
+<td>Producción en español, revistas y tesis de universidades españolas</td>
+<td>Menor cobertura internacional</td>
+</tr>
+<tr class="even">
+<td><strong>Scopus / Web of Science</strong></td>
+<td>Cobertura internacional seleccionada, búsqueda por campos, citas</td>
+<td>Acceso por suscripción institucional; menos literatura en español</td>
+</tr>
+<tr class="odd">
+<td><strong>Google Académico</strong></td>
+<td>Amplitud, texto completo, versiones gratuitas</td>
+<td>Poca precisión, sin búsqueda reproducible; operadores limitados (<code>intitle:</code>, comillas, <code>-</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Lo recomendable es combinar: empezar en una base especializada o multidisciplinar y completar con Google Académico para localizar el texto completo.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> ¿Qué recupera <code>educa* AND (virtual OR online)</code>?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Documentos que contienen cualquier palabra que empiece por <em>educa</em> (educación, educativo, education, educational…) <strong>y</strong> al menos una de las palabras <em>virtual</em> u <em>online</em>.</p>
+</div>
+<p><strong>Intermedio.</strong> Escribe la ecuación de búsqueda para la pregunta: «¿Qué efecto tiene la gamificación en la motivación del alumnado de secundaria?».</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Una posible solución: <code>(gamif* OR "serious game*" OR "game-based learning") AND (motivat* OR engagement) AND ("secondary school*" OR "secondary education" OR "high school*" OR secundaria)</code>. Hay otras correctas si respetan la estructura: OR dentro de cada concepto, AND entre conceptos.</p>
+</div>
+<p><strong>Avanzado.</strong> Ejecuta tu ecuación en dos bases de datos, anota resultados, revisa los 20 primeros de cada una y calcula qué proporción es pertinente (precisión aproximada). Propón un ajuste para mejorarla.</p>
+<div class="webex-solution">
+<button>Ver orientación</button>
+<p>Presenta una tabla con base, fecha, ecuación, número de resultados y pertinentes entre los 20 primeros. El ajuste debe justificarse: si la precisión es baja, restringir campos o añadir conceptos; si se pierden documentos clave conocidos, ampliar sinónimos.</p>
 </div>
 </section>
 <section id="actividades" class="level2">

@@ -76,4 +76,23 @@
 .laboratorio .btn.btn-outline-primary { background-color: transparent; border-color: var(--bs-primary); color: var(--bs-primary); }
 .laboratorio .btn.btn-outline-primary:hover { background-color: var(--bs-primary); color: var(--bs-body-bg); }
 .laboratorio mark { background: rgba(237, 161, 0, .35); color: inherit; padding: 0 .1em; }
-.laboratorio .lab-valor { min-width: 2.5rem; font-variant-numeric: tabular-nums; }
+.laboratorio .lab-valor { min-width: 2.5rem; flex-shrink: 0; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.lab-tarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0 1rem; }
+.lab-sus .lab-campo .form-label { font-size: .95rem; }
+.lab-bien { color: #1a7f37; } .lab-medio { color: #8a5d00; } .lab-mal { color: #a52a1a; }
+.quarto-dark .lab-bien { color: #5fd38a; } .quarto-dark .lab-medio { color: #f0c050; } .quarto-dark .lab-mal { color: #ff8a7a; }
+/* botón de demostración de estados */
+.lab-boton { font: inherit; font-weight: 600; padding: .55rem 1.4rem; min-height: 44px; border-radius: 8px; border: 2px solid #000e78;
+  background: #000e78; color: #fff; cursor: pointer; display: inline-flex; align-items: center; gap: .5rem; transition: background .15s, transform .05s; }
+.lab-boton:hover { background: #1f2fa0; }
+.lab-boton:active { transform: translateY(1px); background: #000a55; }
+.lab-boton:focus-visible { outline: 3px solid #eda100; outline-offset: 3px; }
+.lab-boton:disabled { background: #e9e8e4; border-color: #b9b8b3; color: #5b5a55; cursor: not-allowed; }
+.lab-boton.lab-error { background: #fff; color: #a52a1a; border-color: #a52a1a; }
+.lab-boton.lab-exito { background: #0f6b45; border-color: #0f6b45; }
+.lab-giro { width: 1em; height: 1em; border: 2px solid rgba(255,255,255,.5); border-top-color: #fff; border-radius: 50%; animation: lab-giro 0.8s linear infinite; }
+@keyframes lab-giro { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .lab-giro { animation-duration: 2.5s; } .lab-boton { transition: none; } }
+.quarto-dark .lab-boton:not(:disabled):not(.lab-error):not(.lab-exito) { background: #8fb3ff; border-color: #8fb3ff; color: #111; }
+.quarto-dark .lab-boton.lab-error { background: transparent; color: #ff8a7a; border-color: #ff8a7a; }
+.quarto-dark .ia code, .quarto-dark .laboratorio code { background: rgba(255, 255, 255, .1); color: #f0f0f0; }

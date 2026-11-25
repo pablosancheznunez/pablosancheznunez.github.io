@@ -207,6 +207,28 @@
     ]
   },
   {
+    "objectID": "01-fundamentos.html#caso-práctico-resuelto",
+    "href": "01-fundamentos.html#caso-práctico-resuelto",
+    "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDe la idea al primer esquema en 30 minutos\n\n\n\nLa biblioteca quiere una app, ReservaSala, para reservar salas de estudio. Antes de abrir ninguna herramienta:\n\nBocetar alternativas (10 min): seis miniaturas de la pantalla principal (lista de salas, mapa, calendario, buscador por hora…). La cantidad importa más que la calidad.\nElegir y combinar (5 min): la lista por franja horaria es la más rápida para quien ya sabe cuándo quiere estudiar; el mapa ayuda a quien no conoce el edificio. Se combina: lista con un botón «ver en el mapa».\nEsquema de baja fidelidad (15 min): cajas grises, texto real (no lorem ipsum) y ningún color. Lo importante es la jerarquía: franja horaria arriba, salas disponibles después, acción principal «Reservar» visible.\n\nPor qué funciona: se exploran varias ideas antes de comprometerse con una, y el esquema se discute por su estructura, no por su estética.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html#ejercicios-graduados",
+    "href": "01-fundamentos.html#ejercicios-graduados",
+    "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Dibuja tres miniaturas distintas de la pantalla de confirmación de una reserva.\n\nVer solución\nDeben diferenciarse en la estructura (por ejemplo: resumen con botón; tarjeta con código QR; pantalla con opción de añadir al calendario), no solo en detalles. Cada miniatura debe mostrar la información esencial: sala, fecha, hora y cómo cancelar.\n\nAvanzado. Explica, con el enfoque de Buxton, si en este punto del proyecto necesitas un boceto o un prototipo y por qué.\n\nVer solución\nAl principio, para explorar alternativas, conviene el boceto: rápido, barato y ambiguo. Cuando ya hay una dirección clara y se quiere comprobar si funciona con usuarios, se pasa a un prototipo.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
+    ]
+  },
+  {
     "objectID": "01-fundamentos.html#actividades",
     "href": "01-fundamentos.html#actividades",
     "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
@@ -361,6 +383,28 @@
     ]
   },
   {
+    "objectID": "02-investigacion.html#caso-práctico-resuelto",
+    "href": "02-investigacion.html#caso-práctico-resuelto",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDe las entrevistas al concepto\n\n\n\nSe entrevista a ocho estudiantes sobre cómo buscan sitio para estudiar. Proceso de síntesis:\n\nTranscribir citas relevantes en notas (una idea por nota): «Voy a la biblioteca y doy vueltas buscando una sala libre», «En época de exámenes no hay nada a partir de las 10».\nMapa de afinidad: agrupar las notas por temas emergentes: incertidumbre sobre la disponibilidad, picos de demanda, trabajo en grupo.\nInsights: «Los estudiantes pierden tiempo porque no saben qué salas están libres antes de llegar».\nConcepto creativo: «Saber antes de salir de casa dónde vas a estudiar».\n\nEl concepto orienta todo el diseño posterior: la información de disponibilidad debe ser lo primero que se ve.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
+    "objectID": "02-investigacion.html#ejercicios-graduados",
+    "href": "02-investigacion.html#ejercicios-graduados",
+    "title": "Tema 2. La investigación como base del concepto creativo",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Convierte esta observación en un insight: «Muchos estudiantes reservan salas y no aparecen».\n\nVer solución\nUn insight explica el porqué: «Los estudiantes reservan por precaución en varias franjas porque temen quedarse sin sala, y no cancelan porque hacerlo es incómodo». Sugiere soluciones (cancelación fácil, recordatorios, liberación automática).\n\nAvanzado. Diseña un guion de entrevista de seis preguntas abiertas para entender cómo estudian en grupo.\n\nVer solución\nPreguntas abiertas y sobre comportamientos concretos pasados («Cuéntame la última vez que…»), sin sugerir soluciones ni respuestas («¿Te gustaría una app que…?» es una pregunta sesgada).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
+    ]
+  },
+  {
     "objectID": "02-investigacion.html#actividades",
     "href": "02-investigacion.html#actividades",
     "title": "Tema 2. La investigación como base del concepto creativo",
@@ -487,6 +531,28 @@
     "title": "Tema 3. Definir el problema de diseño",
     "section": "Práctica",
     "text": "Práctica\nEn parejas, cada uno redacta el enunciado del problema a partir de los mismos tres hallazgos de investigación. Comparad los enunciados: ¿proponéis el mismo encuadre? ¿Alguno contiene una solución escondida? Reescribidlos hasta que ninguno la contenga.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "03-problema.html#caso-práctico-resuelto",
+    "href": "03-problema.html#caso-práctico-resuelto",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaFormular el problema de diseño\n\n\n\nA partir de la investigación:\n\nPersona: Lucía, estudiante de tercer curso que prepara exámenes con dos compañeros.\nDeclaración del problema (POV): Lucía necesita saber qué salas estarán libres para su grupo antes de ir a la biblioteca porque pierde hasta media hora buscando sitio en época de exámenes.\nPregunta «¿Cómo podríamos…?» (HMW): ¿Cómo podríamos ayudar a los grupos a asegurar una sala adecuada sin desplazarse en vano?\n\nUna buena pregunta HMW no es tan amplia que no oriente («¿cómo mejorar la biblioteca?») ni tan estrecha que imponga la solución («¿cómo hacer una app de reservas?»).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "03-problema.html#ejercicios-graduados",
+    "href": "03-problema.html#ejercicios-graduados",
+    "title": "Tema 3. Definir el problema de diseño",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Reescribe esta pregunta demasiado estrecha: «¿Cómo podríamos añadir un botón de reserva al mapa?».\n\nVer solución\nUna versión con el nivel adecuado: «¿Cómo podríamos ayudar a los estudiantes a encontrar y asegurar un sitio para estudiar en el momento que lo necesitan?».\n\nAvanzado. Escribe la declaración del problema para una segunda persona: un doctorando que necesita una sala silenciosa varias horas.\n\nVer solución\nEstructura: usuario + necesidad + motivo basado en la investigación. Por ejemplo: «Javier necesita una sala silenciosa durante bloques largos porque escribe su tesis y las interrupciones le hacen perder la concentración».",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
@@ -636,6 +702,28 @@
     ]
   },
   {
+    "objectID": "04-metricas.html#caso-práctico-resuelto",
+    "href": "04-metricas.html#caso-práctico-resuelto",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaMétricas con el marco HEART\n\n\n\nLa biblioteca quiere saber si ReservaSala funciona. Con el marco HEART (Google):\n\n\n\n\n\n\n\n\n\nDimensión\nObjetivo\nSeñal\nMétrica\n\n\n\n\nHappiness\nQue la app guste\nValoración tras reservar\nSatisfacción media (1-5)\n\n\nEngagement\nQue se use a menudo\nReservas por usuario\nReservas por estudiante y mes\n\n\nAdoption\nQue la usen estudiantes nuevos\nPrimera reserva\n% de estudiantes que reservan al menos una vez\n\n\nRetention\nQue vuelvan\nReservas en meses sucesivos\n% de usuarios activos al mes siguiente\n\n\nTask success\nQue reservar sea fácil\nReservas completadas\nTasa de finalización y tiempo medio de reserva\n\n\n\nAdemás, una métrica propia del problema: % de reservas no presentadas, que debería bajar.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
+    "objectID": "04-metricas.html#ejercicios-graduados",
+    "href": "04-metricas.html#ejercicios-graduados",
+    "title": "Tema 4. Hitos, objetivos y métricas",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Define un objetivo, una señal y una métrica de task success para la cancelación de reservas.\n\nVer solución\nObjetivo: cancelar es rápido. Señal: cancelaciones completadas desde la notificación. Métrica: tiempo medio de cancelación y tasa de cancelaciones iniciadas que se completan.\n\nAvanzado. Explica por qué el número total de descargas no es una buena métrica de éxito.\n\nVer solución\nEs una métrica de vanidad: crece siempre y no dice si la app resuelve el problema. Son mejores las métricas ligadas a objetivos (reservas completadas, no presentados, retención).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
+    ]
+  },
+  {
     "objectID": "04-metricas.html#actividades",
     "href": "04-metricas.html#actividades",
     "title": "Tema 4. Hitos, objetivos y métricas",
@@ -779,6 +867,28 @@
     ]
   },
   {
+    "objectID": "05-flujos.html#caso-práctico-resuelto",
+    "href": "05-flujos.html#caso-práctico-resuelto",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaUn flujo de reserva con caminos alternativos\n\n\n\nFlujo principal (happy path): abrir la app → elegir franja → ver salas libres → elegir sala → confirmar → recibir confirmación.\nCaminos alternativos que el esquema debe contemplar:\n\nNo hay salas libres en la franja: proponer franjas cercanas o lista de espera.\nGrupo grande: filtrar por capacidad antes de mostrar salas.\nSesión caducada al confirmar: volver al paso de confirmación sin perder la selección.\nCancelar desde la confirmación o desde una notificación.\n\nRepresentarlo con un diagrama de flujo (rectángulos para pantallas, rombos para decisiones) revela pantallas que faltan antes de dibujarlas.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
+    "objectID": "05-flujos.html#ejercicios-graduados",
+    "href": "05-flujos.html#ejercicios-graduados",
+    "title": "Tema 5. Flujos de usuario: modelado y representación",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Añade al flujo el caso «la sala reservada está ocupada al llegar».\n\nVer solución\nNueva rama tras «llegar a la sala»: decisión «¿Está libre?» → no → pantalla «Notificar incidencia» con opción de buscar otra sala disponible ahora y aviso al personal.\n\nAvanzado. Cuenta cuántas pantallas distintas necesita el flujo completo con sus alternativas.\n\nVer solución\nAproximadamente: inicio, selección de franja, lista de salas, detalle de sala, confirmación, error de disponibilidad, lista de espera, cancelación e incidencia. Lo importante es que cada decisión del diagrama tenga su pantalla de destino.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
+    ]
+  },
+  {
     "objectID": "05-flujos.html#actividades",
     "href": "05-flujos.html#actividades",
     "title": "Tema 5. Flujos de usuario: modelado y representación",
@@ -905,6 +1015,28 @@
     "title": "Tema 6. Storyboards en el diseño de interacción",
     "section": "Práctica",
     "text": "Práctica\nEscribe en cinco líneas un escenario para el proyecto de tu equipo: persona, situación, detonante, uso del producto y desenlace. Después dibújalo en cuatro viñetas en menos de diez minutos con la plantilla en PDF. Enséñaselo a alguien que no conozca el proyecto y pídele que te cuente la historia: si no la entiende sin tu ayuda, revisa el momento clave.\n\n\n\n\n\n\nFigura 2: Plantilla de Crazy 8s, una técnica rápida para generar muchas ideas de pantalla antes de elegir una para el storyboard.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html#caso-práctico-resuelto",
+    "href": "06-storyboards.html#caso-práctico-resuelto",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaUn storyboard de seis viñetas\n\n\n\nPara comunicar el concepto a la dirección de la biblioteca:\n\nLucía en casa, agobiada: examen en tres días.\nAbre ReservaSala y ve las salas libres esta tarde.\nReserva una sala para cuatro e invita a sus compañeros.\nRecibe un recordatorio 30 minutos antes.\nLlega y la sala está lista; marca su llegada con un código.\nEl grupo estudia; la biblioteca registra menos salas vacías reservadas.\n\nCada viñeta muestra contexto, acción y emoción. El storyboard no detalla la interfaz: cuenta por qué importa.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
+    ]
+  },
+  {
+    "objectID": "06-storyboards.html#ejercicios-graduados",
+    "href": "06-storyboards.html#ejercicios-graduados",
+    "title": "Tema 6. Storyboards en el diseño de interacción",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Dibuja un storyboard de cuatro viñetas para el caso de un estudiante que no encuentra sala.\n\nVer solución\nDebe mostrar el problema (la frustración), el momento en que usa la app, la solución propuesta (alternativas o lista de espera) y el resultado emocional.\n\nAvanzado. ¿Qué viñeta del ejemplo podría eliminarse sin perder el mensaje? Justifícalo.\n\nVer solución\nPor ejemplo, la viñeta 5 si el foco es encontrar sala; pero si el objetivo de la biblioteca es reducir las reservas no presentadas, la confirmación de llegada es esencial. Depende del mensaje.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
@@ -1087,6 +1219,28 @@
     ]
   },
   {
+    "objectID": "07-wireframes.html#caso-práctico-resuelto",
+    "href": "07-wireframes.html#caso-práctico-resuelto",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaEsquema de la lista de salas, revisado\n\n\n\nPrimera versión: una lista con foto grande de cada sala. Problemas detectados en revisión: solo caben dos salas en pantalla y la información clave (hora libre, capacidad) queda abajo.\nSegunda versión:\n\nCabecera fija con la franja horaria seleccionada y un filtro de capacidad.\nCada sala como fila compacta: nombre, capacidad, planta y horas libres, con la acción «Reservar» a la derecha.\nFoto solo en el detalle de la sala.\n\nResultado: seis salas visibles por pantalla y la comparación es inmediata. Las anotaciones del esquema explican el comportamiento (qué pasa al pulsar, qué se ordena primero).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-wireframes.html#ejercicios-graduados",
+    "href": "07-wireframes.html#ejercicios-graduados",
+    "title": "Tema 7. Esquemas de página en papel y en pantalla",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Anota el esquema de la lista con cinco comentarios de comportamiento.\n\nVer solución\nEjemplos: orden por disponibilidad más cercana; la fila completa es pulsable; el filtro recuerda la última capacidad; las salas sin disponibilidad se muestran atenuadas al final; tirar hacia abajo actualiza.\n\nAvanzado. Dibuja la versión para escritorio de la misma pantalla aprovechando el ancho.\n\nVer solución\nPor ejemplo: lista a la izquierda y mapa del edificio a la derecha, sincronizados (al pasar por una sala se resalta en el mapa). La jerarquía debe mantenerse.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
+    ]
+  },
+  {
     "objectID": "07-wireframes.html#actividades",
     "href": "07-wireframes.html#actividades",
     "title": "Tema 7. Esquemas de página en papel y en pantalla",
@@ -1213,6 +1367,28 @@
     "title": "Tema 8. Estados y transiciones en los esquemas",
     "section": "Práctica",
     "text": "Práctica\nElige un formulario de una web que uses (por ejemplo, la inscripción en una actividad). Dibuja su diagrama de estados: estados del botón de envío y de la pantalla, con los eventos y las condiciones. Busca al menos un caso que el formulario real no resuelva bien.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html#caso-práctico-resuelto",
+    "href": "08-estados.html#caso-práctico-resuelto",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaTodos los estados de una pantalla\n\n\n\nLa lista de salas no tiene un solo aspecto. Estados que hay que esquematizar:\n\n\n\n\n\n\n\nEstado\nQué ve el usuario\n\n\n\n\nCargando\nEsqueleto de filas grises\n\n\nVacío\n«No hay salas libres en esta franja», con franjas alternativas\n\n\nError\n«No se pudo cargar la disponibilidad», con «Reintentar»\n\n\nParcial\nPocas salas: se sugiere ampliar la franja\n\n\nIdeal\nLa lista completa\n\n\n\nOlvidar estos estados es uno de los fallos más frecuentes: el equipo de desarrollo los resuelve improvisando.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
+    ]
+  },
+  {
+    "objectID": "08-estados.html#ejercicios-graduados",
+    "href": "08-estados.html#ejercicios-graduados",
+    "title": "Tema 8. Estados y transiciones en los esquemas",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Escribe el texto del estado vacío para un usuario que filtra salas para diez personas.\n\nVer solución\nEjemplo: «No hay salas para 10 personas libres esta tarde. Las más grandes son para 8. ¿Quieres ver salas para 8 o probar otra franja?». Explica el motivo y ofrece salidas.\n\nAvanzado. Dibuja la transición entre el estado «Cargando» y el «Ideal» con un diagrama de estados.\n\nVer solución\nEstados: Cargando → (éxito) Ideal / Parcial / Vacío; Cargando → (fallo) Error → (Reintentar) Cargando. Cada flecha indica el evento que provoca el cambio.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
@@ -1351,6 +1527,28 @@
     ]
   },
   {
+    "objectID": "09-prototipos-papel.html#caso-práctico-resuelto",
+    "href": "09-prototipos-papel.html#caso-práctico-resuelto",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaUna prueba con prototipo en papel\n\n\n\nSe recortan las pantallas en papel y se prueba con cinco estudiantes. Roles: facilitador (da la tarea y anima a pensar en voz alta), «ordenador» (cambia las pantallas sin hablar) y observador (anota).\nTarea: «Reserva una sala para tu grupo de cuatro mañana de 16 a 18 h».\nHallazgos: tres de cinco no vieron el filtro de capacidad; dos pensaron que el botón «Reservar» ya confirmaba la reserva. Cambios: mover el filtro junto a la franja y añadir una pantalla de confirmación con resumen. Coste del cambio: diez minutos de dibujo.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
+    "objectID": "09-prototipos-papel.html#ejercicios-graduados",
+    "href": "09-prototipos-papel.html#ejercicios-graduados",
+    "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Escribe dos tareas de prueba más, realistas y sin pistas sobre la interfaz.\n\nVer solución\nEjemplos: «Tu grupo ya no puede ir mañana: anula lo que hayas reservado»; «Necesitas un sitio silencioso para estudiar solo esta tarde». No deben mencionar nombres de botones ni secciones.\n\nAvanzado. ¿Por qué el «ordenador» no debe hablar durante la prueba?\n\nVer solución\nPorque una explicación cambiaría el comportamiento del participante: se trata de ver qué entiende la interfaz por sí sola.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
+    ]
+  },
+  {
     "objectID": "09-prototipos-papel.html#actividades",
     "href": "09-prototipos-papel.html#actividades",
     "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
@@ -1466,6 +1664,28 @@
     "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
     "section": "Práctica en R: dos taxonomías",
     "text": "Práctica en R: dos taxonomías\npatrones_enganosos reúne las categorías de Gray et al. (2018) y Mathur et al. (2019), con un ejemplo inventado de cada una.\n\n\n\n\n\n\n\nEjercicio 10.1\n¿Qué categorías aparecen en las dos taxonomías? intersect() devuelve los elementos comunes a dos vectores.\n\n\n\n\n\n\n\n\nCopia el valor exacto de la columna fuente para el segundo estudio, con el año entre paréntesis.\n\n\ngray   &lt;- g$categoria[g$fuente == \"Gray et al. (2018)\"]\nmathur &lt;- g$categoria[g$fuente == \"Mathur et al. (2019)\"]\nintersect(gray, mathur)\nOcultación, obstrucción y acción forzada. Son los patrones más estables en la literatura; los de urgencia, escasez y prueba social son más propios del comercio electrónico.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
+    ]
+  },
+  {
+    "objectID": "10-sesgos.html#caso-práctico-resuelto",
+    "href": "10-sesgos.html#caso-práctico-resuelto",
+    "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDetectar y corregir un patrón engañoso\n\n\n\nPropuesta de un compañero: al cancelar, mostrar «¿Seguro? Perderás tu prioridad para siempre» y un botón grande «Mantener reserva» y otro diminuto gris «Cancelar».\nAnálisis: combina culpa (confirmshaming) e interferencia en la interfaz (jerarquía visual que empuja una opción). Además, la «pérdida de prioridad para siempre» es falsa.\nAlternativa ética: «¿Cancelar la reserva de la sala 2.3 para mañana a las 16:00? La sala quedará libre para otros estudiantes». Dos botones con el mismo peso: «Cancelar reserva» y «Volver». El objetivo de la biblioteca (que se cancele lo que no se usa) coincide con el del usuario.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
+    ]
+  },
+  {
+    "objectID": "10-sesgos.html#ejercicios-graduados",
+    "href": "10-sesgos.html#ejercicios-graduados",
+    "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Identifica el sesgo cognitivo que explotaría mostrar «¡Solo queda 1 sala!» cuando no es cierto.\n\nVer solución\nLa escasez (y la aversión a la pérdida). Si es falso, es un patrón engañoso; si es verdad, informar de la disponibilidad real es legítimo.\n\nAvanzado. Propón una forma honesta de reducir las reservas no presentadas.\n\nVer solución\nRecordatorios con cancelación de un toque, liberación automática si no se confirma la llegada en 15 minutos (anunciada con claridad) y estadísticas visibles del uso de las salas.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
@@ -1598,6 +1818,28 @@
     "title": "Tema 11. Economía de la atención y bienestar digital",
     "section": "Laboratorio: mapa de calor simulado",
     "text": "Laboratorio: mapa de calor simulado\n\n\nLaboratorio · datos simulados (no son medidas reales)\n\nLos mapas de calor de un estudio de seguimiento ocular (eye tracking) acumulan las fijaciones de muchas personas. Este laboratorio simula fijaciones a partir de los patrones en F y en Z para que veas cómo se forman: elige el tipo de página y el número de personas.\n\nrango = window.Lab.rango\nseleccion = window.Lab.seleccion\nviewof c_tipo = seleccion(\"Tipo de página\", [[\"F\", \"Texto denso (patrón en F)\"], [\"Z\", \"Poco texto (patrón en Z)\"]], {value: \"F\"})\nviewof c_n = rango(\"Personas simuladas\", [1, 60], {step: 1, value: 20})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const W = 480, H = 320, cv = document.createElement(\"canvas\"); cv.width = W; cv.height = H;\n  cv.style.maxWidth = \"100%\"; cv.setAttribute(\"role\", \"img\");\n  cv.setAttribute(\"aria-label\", `Mapa de calor simulado de ${c_n} personas sobre una página ${c_tipo === \"F\" ? \"de texto denso: el calor se concentra arriba y en el margen izquierdo\" : \"con poco texto: el calor se reparte en las cuatro esquinas, siguiendo una Z\"}`);\n  const g = cv.getContext(\"2d\");\n  g.fillStyle = \"#fff\"; g.fillRect(0, 0, W, H); g.fillStyle = \"#d9d8d4\";\n  if (c_tipo === \"F\") for (let i = 0; i &lt; 11; i++) g.fillRect(30, 30 + i * 25, 420 - (i % 3) * 80, 8);\n  else { [[30, 25, 90, 35], [350, 25, 100, 35], [110, 100, 260, 110], [30, 250, 140, 45], [300, 250, 150, 45]].forEach(r =&gt; g.fillRect(...r)); }\n  let s = 5; const rnd = () =&gt; (s = (s * 9301 + 49297) % 233280) / 233280;\n  const gauss = () =&gt; Math.sqrt(-2 * Math.log(rnd() + 1e-9)) * Math.cos(2 * Math.PI * rnd());\n  const base = c_tipo === \"F\" ? [[40, 34], [200, 34], [380, 34], [40, 84], [180, 84], [300, 84], [40, 134], [40, 184], [40, 234], [40, 284]]\n                              : [[70, 42], [400, 42], [240, 155], [100, 272], [375, 272]];\n  const pts = [];\n  for (let p = 0; p &lt; c_n; p++) base.forEach(([x, y], k) =&gt; { if (rnd() &lt; (c_tipo === \"F\" ? 1 - k * 0.06 : 0.9)) pts.push([x + gauss() * 18, y + gauss() * 10]); });\n  const capa = document.createElement(\"canvas\"); capa.width = W; capa.height = H; const c = capa.getContext(\"2d\");\n  pts.forEach(([x, y]) =&gt; { const r = c.createRadialGradient(x, y, 0, x, y, 30); r.addColorStop(0, \"rgba(0,0,0,0.12)\"); r.addColorStop(1, \"rgba(0,0,0,0)\"); c.fillStyle = r; c.fillRect(x - 30, y - 30, 60, 60); });\n  const img = c.getImageData(0, 0, W, H), d = img.data;\n  for (let i = 0; i &lt; d.length; i += 4) { const a = Math.min(1, d[i + 3] / 255 * 1.6); if (a &lt; 0.03) { d[i + 3] = 0; continue; }\n    const col = a &lt; 0.33 ? [42, 120, 214] : a &lt; 0.66 ? [237, 161, 0] : [192, 57, 43]; d[i] = col[0]; d[i + 1] = col[1]; d[i + 2] = col[2]; d[i + 3] = 90 + 130 * a; }\n  c.putImageData(img, 0, 0); g.drawImage(capa, 0, 0);\n  return html`&lt;figure&gt;${cv}&lt;figcaption class=\"small\"&gt;${pts.length} fijaciones simuladas. Azul: pocas; amarillo: bastantes; rojo: muchas. En un estudio real, el mapa depende de la tarea y de cada página: estos patrones son tendencias, no reglas.&lt;/figcaption&gt;&lt;/figure&gt;`;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html#caso-práctico-resuelto",
+    "href": "11-atencion.html#caso-práctico-resuelto",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaNotificaciones que respetan la atención\n\n\n\nPrimera propuesta: notificar cada vez que se libera una sala. Resultado previsible: decenas de avisos al día, que los usuarios silencian.\nRediseño centrado en el bienestar:\n\nSolo notificaciones solicitadas («avísame si se libera una sala esta tarde para 4»).\nUn recordatorio antes de la reserva, configurable.\nSin notificaciones promocionales ni de «racha de estudio».\nHorario silencioso por defecto por la noche.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
+    ]
+  },
+  {
+    "objectID": "11-atencion.html#ejercicios-graduados",
+    "href": "11-atencion.html#ejercicios-graduados",
+    "title": "Tema 11. Economía de la atención y bienestar digital",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Clasifica estas notificaciones en útiles o intrusivas: recordatorio de tu reserva; «Hace 3 días que no reservas»; aviso de que tu sala de espera está libre.\n\nVer solución\nÚtiles: el recordatorio y el aviso solicitado. Intrusiva: «Hace 3 días que no reservas», que busca la interacción, no ayudar.\n\nAvanzado. Propón una métrica que indique que la app respeta la atención de los usuarios.\n\nVer solución\nPor ejemplo, la proporción de notificaciones que llevan a una acción útil (abrir la reserva, cancelar) frente a las ignoradas, o la tasa de usuarios que desactivan las notificaciones.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
@@ -1741,6 +1983,28 @@
     "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
     "section": "Laboratorio: contraste y daltonismo",
     "text": "Laboratorio: contraste y daltonismo\n\n\nLaboratorio · cálculo en tu navegador\n\nElige un color de texto y uno de fondo. El laboratorio calcula la razón de contraste de las WCAG 2.2, te dice qué niveles cumple y simula cómo ven la combinación las personas con los tres tipos principales de daltonismo (matrices de Machado, Oliveira y Fernandes, 2009).\n\ncolor = window.Lab.color\nviewof c_texto = color(\"Color del texto\", {value: \"#e8663a\"})\nviewof c_fondo = color(\"Color del fondo\", {value: \"#ffffff\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const rgb = h =&gt; [1, 3, 5].map(i =&gt; parseInt(h.slice(i, i + 2), 16) / 255);\n  const lin = c =&gt; c &lt;= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);\n  const L = h =&gt; { const [r, g, b] = rgb(h).map(lin); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };\n  const ratio = (a, b) =&gt; { const [x, y] = [L(a), L(b)].sort((p, q) =&gt; q - p); return (x + 0.05) / (y + 0.05); };\n  const M = {protan: [[0.152286, 1.052583, -0.204868], [0.114503, 0.786281, 0.099216], [-0.003882, -0.048116, 1.051998]],\n             deutan: [[0.367322, 0.860646, -0.227968], [0.280085, 0.672501, 0.047413], [-0.011820, 0.042940, 0.968881]],\n             tritan: [[1.255528, -0.076749, -0.178779], [-0.078411, 0.930809, 0.147602], [0.004733, 0.691367, 0.303900]]};\n  const sim = (h, t) =&gt; { const v = rgb(h).map(lin), m = M[t];\n    const o = m.map(f =&gt; Math.min(1, Math.max(0, f[0] * v[0] + f[1] * v[1] + f[2] * v[2])));\n    return \"#\" + o.map(c =&gt; Math.round(255 * (c &lt;= 0.0031308 ? 12.92 * c : 1.055 * Math.pow(c, 1 / 2.4) - 0.055)).toString(16).padStart(2, \"0\")).join(\"\"); };\n  const r = ratio(c_texto, c_fondo);\n  const marca = ok =&gt; ok ? \"✓ cumple\" : \"✗ no cumple\";\n  const muestra = (t, f, et) =&gt; `&lt;svg viewBox=\"0 0 160 92\" style=\"flex:1;min-width:9rem;max-width:14rem\" role=\"img\" aria-label=\"${et}: texto ${t} sobre fondo ${f}, contraste ${ratio(t, f).toFixed(2).replace(\".\", \",\")} a 1\"&gt;&lt;rect x=\".5\" y=\".5\" width=\"159\" height=\"91\" rx=\"6\" fill=\"${f}\" stroke=\"#bbb\"/&gt;&lt;text x=\"10\" y=\"20\" font-size=\"11\" fill=\"${t}\"&gt;${et}&lt;/text&gt;&lt;text x=\"10\" y=\"46\" font-size=\"19\" font-weight=\"600\" fill=\"${t}\"&gt;Reservar&lt;/text&gt;&lt;text x=\"10\" y=\"66\" font-size=\"13\" fill=\"${t}\"&gt;Texto de ejemplo&lt;/text&gt;&lt;text x=\"10\" y=\"84\" font-size=\"11\" fill=\"${t}\"&gt;${ratio(t, f).toFixed(2).replace(\".\", \",\")}:1&lt;/text&gt;&lt;/svg&gt;`;\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p style=\"font-size:1.2rem\"&gt;&lt;strong&gt;Contraste ${r.toFixed(2).replace(\".\", \",\")}:1&lt;/strong&gt;&lt;/p&gt;\n  &lt;ul&gt;&lt;li&gt;Texto normal, AA (4,5:1): &lt;strong&gt;${marca(r &gt;= 4.5)}&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Texto grande, AA (3:1): &lt;strong&gt;${marca(r &gt;= 3)}&lt;/strong&gt;&lt;/li&gt;\n  &lt;li&gt;Componentes y gráficos, AA (3:1): &lt;strong&gt;${marca(r &gt;= 3)}&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Texto normal, AAA (7:1): &lt;strong&gt;${marca(r &gt;= 7)}&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;\n  &lt;div style=\"display:flex;gap:.5rem;flex-wrap:wrap\" class=\"lab-muestras\"&gt;${muestra(c_texto, c_fondo, \"Visión típica\")}${muestra(sim(c_texto, \"protan\"), sim(c_fondo, \"protan\"), \"Protanopia\")}${muestra(sim(c_texto, \"deutan\"), sim(c_fondo, \"deutan\"), \"Deuteranopia\")}${muestra(sim(c_texto, \"tritan\"), sim(c_fondo, \"tritan\"), \"Tritanopia\")}&lt;/div&gt;\n  &lt;p class=\"small mt-2\"&gt;Con las funciones del libro: &lt;code&gt;contraste()&lt;/code&gt;, &lt;code&gt;cumple_wcag()&lt;/code&gt; y &lt;code&gt;simular_daltonismo()&lt;/code&gt;. Prueba el naranja por defecto: muy visible, pero no llega a 4,5:1 sobre blanco.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#caso-práctico-resuelto",
+    "href": "12-inclusivo.html#caso-práctico-resuelto",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaRevisión de accesibilidad de un esquema\n\n\n\nRevisión del esquema de reserva con criterios WCAG antes de pasar a alta fidelidad:\n\nInformación no solo por color: las salas ocupadas no se distinguen solo en gris; llevan el texto «Ocupada».\nObjetivos táctiles de al menos 44 × 44 px para los botones de franja.\nOrden de lectura y foco anotados en el esquema: cabecera, filtros, lista, acción.\nEtiquetas visibles en los campos (no solo marcadores de posición).\nLenguaje claro y alternativas: el mapa del edificio tiene una vista en lista equivalente para lectores de pantalla.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
+    ]
+  },
+  {
+    "objectID": "12-inclusivo.html#ejercicios-graduados",
+    "href": "12-inclusivo.html#ejercicios-graduados",
+    "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Anota en un esquema el orden de foco para navegar con teclado la pantalla de confirmación.\n\nVer solución\nOrden lógico: título (resumen de la reserva) → datos de la reserva → «Añadir al calendario» → «Cancelar reserva» → «Volver al inicio». El foco inicial debe ir al título para que el lector de pantalla anuncie el resultado.\n\nAvanzado. Propón cómo hacer accesible el mapa interactivo del edificio.\n\nVer solución\nOfrecer una alternativa equivalente (lista por plantas), etiquetas accesibles en cada sala del mapa, navegación con teclado y no depender del color para indicar disponibilidad.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"

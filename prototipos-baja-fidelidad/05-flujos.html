@@ -482,6 +482,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-5.2" id="toc-ejercicio-5.2" class="nav-link" data-scroll-target="#ejercicio-5.2">Ejercicio 5.2</a></li>
   </ul></li>
   <li><a href="#lab-t5-embudo" id="toc-lab-t5-embudo" class="nav-link" data-scroll-target="#lab-t5-embudo">Laboratorio: el embudo de un flujo</a></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t5" id="toc-reto-t5" class="nav-link" data-scroll-target="#reto-t5">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -758,6 +760,43 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ1
 </div>
 </div>
 </div>
+</div>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Un flujo de reserva con caminos alternativos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Flujo principal (<em>happy path</em>): abrir la app → elegir franja → ver salas libres → elegir sala → confirmar → recibir confirmación.</p>
+<p>Caminos alternativos que el esquema debe contemplar:</p>
+<ul>
+<li><strong>No hay salas libres</strong> en la franja: proponer franjas cercanas o lista de espera.</li>
+<li><strong>Grupo grande</strong>: filtrar por capacidad antes de mostrar salas.</li>
+<li><strong>Sesión caducada</strong> al confirmar: volver al paso de confirmación sin perder la selección.</li>
+<li><strong>Cancelar</strong> desde la confirmación o desde una notificación.</li>
+</ul>
+<p>Representarlo con un diagrama de flujo (rectángulos para pantallas, rombos para decisiones) revela pantallas que faltan antes de dibujarlas.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> Añade al flujo el caso «la sala reservada está ocupada al llegar».</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Nueva rama tras «llegar a la sala»: decisión «¿Está libre?» → no → pantalla «Notificar incidencia» con opción de buscar otra sala disponible ahora y aviso al personal.</p>
+</div>
+<p><strong>Avanzado.</strong> Cuenta cuántas pantallas distintas necesita el flujo completo con sus alternativas.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Aproximadamente: inicio, selección de franja, lista de salas, detalle de sala, confirmación, error de disponibilidad, lista de espera, cancelación e incidencia. Lo importante es que cada decisión del diagrama tenga su pantalla de destino.</p>
 </div>
 </section>
 <section id="actividades" class="level2">

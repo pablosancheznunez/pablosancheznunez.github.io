@@ -442,6 +442,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#diagramas-de-estados" id="toc-diagramas-de-estados" class="nav-link" data-scroll-target="#diagramas-de-estados">4. Diagramas de estados</a></li>
   <li><a href="#transiciones-y-enlaces-entre-pantallas" id="toc-transiciones-y-enlaces-entre-pantallas" class="nav-link" data-scroll-target="#transiciones-y-enlaces-entre-pantallas">5. Transiciones y enlaces entre pantallas</a></li>
   <li><a href="#práctica" id="toc-práctica" class="nav-link" data-scroll-target="#práctica">Práctica</a></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t8" id="toc-reto-t8" class="nav-link" data-scroll-target="#reto-t8">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -626,6 +628,70 @@ Figura&nbsp;1: Diagrama de estados del botón «Reservar»: de reposo a cargando
 <section id="práctica" class="level2">
 <h2 class="anchored" data-anchor-id="práctica">Práctica</h2>
 <p>Elige un formulario de una web que uses (por ejemplo, la inscripción en una actividad). Dibuja su diagrama de estados: estados del botón de envío y de la pantalla, con los eventos y las condiciones. Busca al menos un caso que el formulario real no resuelva bien.</p>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Todos los estados de una pantalla
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La lista de salas no tiene un solo aspecto. Estados que hay que esquematizar:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Estado</th>
+<th>Qué ve el usuario</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Cargando</strong></td>
+<td>Esqueleto de filas grises</td>
+</tr>
+<tr class="even">
+<td><strong>Vacío</strong></td>
+<td>«No hay salas libres en esta franja», con franjas alternativas</td>
+</tr>
+<tr class="odd">
+<td><strong>Error</strong></td>
+<td>«No se pudo cargar la disponibilidad», con «Reintentar»</td>
+</tr>
+<tr class="even">
+<td><strong>Parcial</strong></td>
+<td>Pocas salas: se sugiere ampliar la franja</td>
+</tr>
+<tr class="odd">
+<td><strong>Ideal</strong></td>
+<td>La lista completa</td>
+</tr>
+</tbody>
+</table>
+<p>Olvidar estos estados es uno de los fallos más frecuentes: el equipo de desarrollo los resuelve improvisando.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> Escribe el texto del estado vacío para un usuario que filtra salas para diez personas.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Ejemplo: «No hay salas para 10 personas libres esta tarde. Las más grandes son para 8. ¿Quieres ver salas para 8 o probar otra franja?». Explica el motivo y ofrece salidas.</p>
+</div>
+<p><strong>Avanzado.</strong> Dibuja la transición entre el estado «Cargando» y el «Ideal» con un diagrama de estados.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Estados: Cargando → (éxito) Ideal / Parcial / Vacío; Cargando → (fallo) Error → (Reintentar) Cargando. Cada flecha indica el evento que provoca el cambio.</p>
+</div>
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
