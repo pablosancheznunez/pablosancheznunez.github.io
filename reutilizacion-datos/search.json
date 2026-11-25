@@ -292,6 +292,28 @@
     ]
   },
   {
+    "objectID": "00-datos-abiertos.html#caso-práctico-resuelto",
+    "href": "00-datos-abiertos.html#caso-práctico-resuelto",
+    "title": "Tema 0. Introducción a los datos abiertos y la reutilización de la información",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaValorar un conjunto con las cinco estrellas de Berners-Lee\n\n\n\nUn ayuntamiento publica el calendario de actividades culturales de sus bibliotecas. Revisión paso a paso:\n\n¿Licencia abierta? La página dice «Reutilización permitida citando la fuente» y remite al aviso legal con CC BY 4.0: sí, ★.\n¿Estructurado? Se publica en PDF: legible por personas, no por máquinas. Se queda en ★.\nMejora propuesta: publicarlo también en XLSX (★★) y en CSV o JSON (★★★, formato no propietario).\nSiguiente paso: dar URI a cada biblioteca y actividad (★★★★) y enlazarlas con otros conjuntos, por ejemplo con el directorio de equipamientos municipales (★★★★★).\n\nCada estrella facilita la reutilización, pero ya con tres (CSV con licencia abierta) se pueden construir servicios útiles.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 0. Introducción a los datos abiertos y la reutilización de la información</span>"
+    ]
+  },
+  {
+    "objectID": "00-datos-abiertos.html#ejercicios-graduados",
+    "href": "00-datos-abiertos.html#ejercicios-graduados",
+    "title": "Tema 0. Introducción a los datos abiertos y la reutilización de la información",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Cuántas estrellas tiene una hoja de cálculo XLSX con licencia CC BY?\n\nVer solución\nDos: datos estructurados con licencia abierta, pero en un formato propietario. En CSV tendría tres.\n\nAvanzado. Elige un conjunto de datos de un portal autonómico y valóralo con las cinco estrellas, proponiendo mejoras concretas para subir dos niveles.\n\nVer solución\nLa valoración debe justificar cada estrella con evidencias (licencia, formato, uso de URI, enlaces) y las mejoras deben ser realistas para el organismo (por ejemplo, añadir CSV y un identificador estable).",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 0. Introducción a los datos abiertos y la reutilización de la información</span>"
+    ]
+  },
+  {
     "objectID": "00-datos-abiertos.html#actividades",
     "href": "00-datos-abiertos.html#actividades",
     "title": "Tema 0. Introducción a los datos abiertos y la reutilización de la información",
@@ -468,6 +490,28 @@
     ]
   },
   {
+    "objectID": "01-risp.html#caso-práctico-resuelto",
+    "href": "01-risp.html#caso-práctico-resuelto",
+    "title": "Tema 1. Reutilización de la información del sector público (RISP)",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNota¿Se puede reutilizar este conjunto para un servicio comercial?\n\n\n\nUna empresa quiere crear una app de pago con los datos de aparcamientos de un ayuntamiento. Comprobaciones según la normativa de reutilización (Ley 37/2007 y la Directiva (UE) 2019/1024):\n\nCondiciones de uso: el portal aplica las condiciones generales de reutilización con licencia CC BY 4.0. Permiten el uso comercial con atribución.\nDatos personales: los datos de ocupación son agregados por aparcamiento; no hay datos personales.\nTarifas: la regla general es la reutilización gratuita o limitada a los costes marginales.\nObligaciones: citar la fuente, no desnaturalizar los datos, no sugerir que el ayuntamiento patrocina la app e indicar la fecha de la última actualización.\n\nConclusión: puede reutilizarlos comercialmente si cumple las condiciones de atribución.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 1. Reutilización de la información del sector público (RISP)</span>"
+    ]
+  },
+  {
+    "objectID": "01-risp.html#ejercicios-graduados",
+    "href": "01-risp.html#ejercicios-graduados",
+    "title": "Tema 1. Reutilización de la información del sector público (RISP)",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué tipo de datos promueve especialmente la Directiva (UE) 2019/1024 por su alto potencial económico y social?\n\nVer solución\nLos conjuntos de datos de alto valor (high-value datasets), definidos por un reglamento de ejecución de 2023 en seis categorías: geoespaciales, observación de la Tierra y medio ambiente, meteorológicos, estadísticos, sociedades y propiedad de sociedades, y movilidad.\n\nAvanzado. Analiza las condiciones de reutilización de dos portales de datos (uno estatal y uno municipal) y compáralas en una tabla.\n\nVer solución\nCompara licencia, uso comercial, atribución exigida, existencia de tarifas, exclusiones (por ejemplo, datos con derechos de terceros) y cómo se comunican las actualizaciones.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 1. Reutilización de la información del sector público (RISP)</span>"
+    ]
+  },
+  {
     "objectID": "01-risp.html#actividades",
     "href": "01-risp.html#actividades",
     "title": "Tema 1. Reutilización de la información del sector público (RISP)",
@@ -633,6 +677,28 @@
     ]
   },
   {
+    "objectID": "02-proyectos.html#caso-práctico-resuelto",
+    "href": "02-proyectos.html#caso-práctico-resuelto",
+    "title": "Tema 2. Proyectos relevantes de reutilización de datos abiertos",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaAnalizar un proyecto de reutilización como un caso de negocio\n\n\n\nProyecto de ejemplo: un servicio que combina datos abiertos de calidad del aire y de tráfico para recomendar rutas en bicicleta. Análisis:\n\n\n\n\n\n\n\nElemento\nRespuesta\n\n\n\n\nDatos de origen\nCalidad del aire (ayuntamiento, por horas), intensidad de tráfico, carril bici (geoespacial)\n\n\nValor añadido\nIntegración, cálculo de rutas, alertas personalizadas\n\n\nUsuarios\nCiclistas urbanos; también ayuntamientos interesados en la información agregada\n\n\nModelo de ingresos\nApp gratuita con informes de pago para administraciones\n\n\nRiesgos\nCambios en el formato de los datos de origen, interrupciones del servicio, calidad desigual entre ciudades\n\n\n\nLa dependencia de datos externos se mitiga con contratos de servicio, si existen, supervisión de las fuentes y validación automática al cargar.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 2. Proyectos relevantes de reutilización de datos abiertos</span>"
+    ]
+  },
+  {
+    "objectID": "02-proyectos.html#ejercicios-graduados",
+    "href": "02-proyectos.html#ejercicios-graduados",
+    "title": "Tema 2. Proyectos relevantes de reutilización de datos abiertos",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Identifica los datos de origen y el valor añadido de un servicio que muestra en tiempo real la llegada de autobuses.\n\nVer solución\nDatos: posiciones de los vehículos y horarios publicados por el operador (por ejemplo, en GTFS y GTFS-Realtime). Valor añadido: cálculo de tiempos de llegada, interfaz cómoda, avisos y combinación con otras redes.\n\nAvanzado. Elige un proyecto real de reutilización del catálogo de datos.gob.es y analízalo con la tabla del caso.\n\nVer solución\nDocumenta las fuentes reales que usa, cómo genera valor, quiénes son sus usuarios, cómo se financia y qué riesgos tiene por depender de datos públicos.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 2. Proyectos relevantes de reutilización de datos abiertos</span>"
+    ]
+  },
+  {
     "objectID": "02-proyectos.html#actividades",
     "href": "02-proyectos.html#actividades",
     "title": "Tema 2. Proyectos relevantes de reutilización de datos abiertos",
@@ -792,6 +858,28 @@
     "title": "Tema 3. Gestión documental y open data",
     "section": "Laboratorio: comprueba la calidad de un CSV",
     "text": "Laboratorio: comprueba la calidad de un CSV\n\n\nLaboratorio · se ejecuta en tu navegador; tus datos no salen de él\n\nPega un CSV (o abre uno de tu ordenador) y pulsa Revisar. El laboratorio detecta el separador y revisa cinco dimensiones de calidad: completitud (celdas vacías), unicidad (filas duplicadas), validez (números y fechas mal escritos), consistencia (variantes de un mismo valor) y formato (espacios sobrantes).\n\narea = window.Lab.area\nviewof csv_txt = area(\"CSV\", {rows: 8, submit: \"Revisar\", value: `municipio;biblioteca;prestamos;fecha\nMadrid;Biblioteca Eugenio Trías;12450;2024-01-31\nmadrid ;Biblioteca Eugenio Trías;12450;2024-01-31\nGetafe;Biblioteca Ricardo de la Vega;;2024-01-31\nGetafe;Biblioteca Ricardo de la Vega;3.210;31/01/2024\nLeganés;Biblioteca Central;n/d;2024-01-31`})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof fichero = {\n  const c = html`&lt;div class=\"mb-2\"&gt;&lt;label class=\"form-label\" for=\"lab-csv-f\"&gt;…o abre un CSV de tu ordenador&lt;/label&gt;&lt;input id=\"lab-csv-f\" type=\"file\" accept=\".csv,text/csv\" class=\"form-control form-control-sm\"&gt;&lt;/div&gt;`;\n  c.value = null;\n  c.querySelector(\"input\").onchange = async e =&gt; { const f = e.target.files[0]; if (!f) return; c.value = await f.text(); c.dispatchEvent(new Event(\"input\", {bubbles: true})); };\n  return c;\n}\n\n\n\n\n\n\n\n{\n  const txt = (fichero ?? csv_txt).replace(/^﻿/, \"\");\n  const lineas = txt.split(/\\r?\\n/).filter(l =&gt; l.trim() !== \"\");\n  if (lineas.length &lt; 2) return html`&lt;p role=\"status\"&gt;Hacen falta una cabecera y al menos una fila.&lt;/p&gt;`;\n  const sep = [\";\", \",\", \"\\t\", \"|\"].map(s =&gt; [s, lineas[0].split(s).length]).sort((a, b) =&gt; b[1] - a[1])[0][0];\n  const filas = lineas.map(l =&gt; l.split(sep));\n  const cab = filas[0].map(x =&gt; x.trim()), datos = filas.slice(1);\n  const nomSep = {\";\": \"punto y coma\", \",\": \"coma\", \"\\t\": \"tabulador\", \"|\": \"barra vertical\"}[sep];\n  const problemas = [];\n  const largas = datos.filter(f =&gt; f.length !== cab.length).length;\n  if (largas) problemas.push([\"Estructura\", `${largas} filas no tienen ${cab.length} columnas`]);\n  const vacios = cab.map((c, j) =&gt; [c, datos.filter(f =&gt; !(f[j] ?? \"\").trim() || /^(n\\/?d|na|null|-|\\?)$/i.test((f[j] ?? \"\").trim())).length]).filter(x =&gt; x[1]);\n  vacios.forEach(([c, n]) =&gt; problemas.push([\"Completitud\", `«${c}»: ${n} valores vacíos o del tipo «n/d»`]));\n  const norm = f =&gt; f.map(x =&gt; x.trim().toLowerCase()).join(\"¦\");\n  const vistos = new Map(); let dup = 0; datos.forEach(f =&gt; { const k = norm(f); if (vistos.has(k)) dup++; else vistos.set(k, 1); });\n  if (dup) problemas.push([\"Unicidad\", `${dup} filas duplicadas (sin distinguir mayúsculas ni espacios)`]);\n  cab.forEach((c, j) =&gt; {\n    const v = datos.map(f =&gt; (f[j] ?? \"\").trim()).filter(x =&gt; x && !/^(n\\/?d|na|null|-|\\?)$/i.test(x));\n    const nums = v.filter(x =&gt; /^-?\\d+([.,]\\d+)*$/.test(x));\n    if (nums.length &gt;= v.length * 0.6 && nums.length) {\n      const miles = nums.filter(x =&gt; /^\\d{1,3}([.]\\d{3})+$/.test(x)).length;\n      if (miles) problemas.push([\"Validez\", `«${c}»: ${miles} números con punto de miles (p. ej. 3.210): ¿tres mil o tres?`]);\n      const raros = v.length - nums.length; if (raros) problemas.push([\"Validez\", `«${c}»: ${raros} valores no numéricos en una columna numérica`]);\n    }\n    const iso = v.filter(x =&gt; /^\\d{4}-\\d{2}-\\d{2}$/.test(x)).length, dmy = v.filter(x =&gt; /^\\d{1,2}\\/\\d{1,2}\\/\\d{4}$/.test(x)).length;\n    if (iso && dmy) problemas.push([\"Consistencia\", `«${c}»: fechas en dos formatos (${iso} AAAA-MM-DD y ${dmy} DD/MM/AAAA)`]);\n    const grupos = new Map(); v.forEach(x =&gt; { const k = x.toLowerCase().normalize(\"NFD\").replace(/[̀-ͯ]/g, \"\").trim(); grupos.set(k, (grupos.get(k) || new Set()).add(x)); });\n    const variantes = [...grupos.values()].filter(s =&gt; s.size &gt; 1);\n    if (variantes.length) problemas.push([\"Consistencia\", `«${c}»: variantes de un mismo valor: ${variantes.slice(0, 3).map(s =&gt; [...s].map(x =&gt; \"«\" + x + \"»\").join(\" / \")).join(\"; \")}`]);\n    const esp = datos.filter(f =&gt; f[j] !== undefined && f[j] !== f[j].trim()).length;\n    if (esp) problemas.push([\"Formato\", `«${c}»: ${esp} valores con espacios al principio o al final`]);\n  });\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;Separador: &lt;strong&gt;${nomSep}&lt;/strong&gt; · ${cab.length} columnas · ${datos.length} filas.&lt;/p&gt;` +\n    (problemas.length ? `&lt;table class=\"table table-sm\"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=\"col\"&gt;Dimensión&lt;/th&gt;&lt;th scope=\"col\"&gt;Problema&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;${problemas.map(([a, b]) =&gt; `&lt;tr&gt;&lt;td&gt;${a}&lt;/td&gt;&lt;td&gt;${b.replace(/&lt;/g, \"&lt;\")}&lt;/td&gt;&lt;/tr&gt;`).join(\"\")}&lt;/tbody&gt;&lt;/table&gt;`\n      : `&lt;p class=\"lab-bien\" style=\"font-weight:600\"&gt;No se han detectado problemas con estas comprobaciones.&lt;/p&gt;`) +\n    `&lt;p class=\"small\"&gt;Son comprobaciones automáticas básicas: no sustituyen a revisar el significado de los datos. En R, el capítulo usa &lt;code&gt;datareuseR&lt;/code&gt; para hacer lo mismo de forma reproducible.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 3. Gestión documental y *open data*</span>"
+    ]
+  },
+  {
+    "objectID": "03-calidad.html#caso-práctico-resuelto",
+    "href": "03-calidad.html#caso-práctico-resuelto",
+    "title": "Tema 3. Gestión documental y open data",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaUna ficha de metadatos que permite reutilizar\n\n\n\nConjunto: «Préstamos en bibliotecas municipales, 2024». Metadatos mínimos para que alguien pueda reutilizarlo sin preguntar:\n\nTítulo y descripción clara: qué se cuenta (préstamos, no usuarios), unidad y periodo.\nOrganismo publicador y contacto.\nLicencia (CC BY 4.0).\nFrecuencia de actualización (mensual) y fecha de la última actualización.\nCobertura temporal y geográfica.\nFormato y distribución (CSV, UTF-8, separador «;»).\nDiccionario de datos: cada columna con su significado, tipo y valores permitidos.\nCalidad: limitaciones conocidas (por ejemplo, la biblioteca X cerró por obras en marzo).\n\nSin diccionario de datos, una columna llamada «TIPO» con valores 1, 2 y 3 es inutilizable.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 3. Gestión documental y *open data*</span>"
+    ]
+  },
+  {
+    "objectID": "03-calidad.html#ejercicios-graduados",
+    "href": "03-calidad.html#ejercicios-graduados",
+    "title": "Tema 3. Gestión documental y open data",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué información falta si un CSV no indica su codificación ni su separador?\n\nVer solución\nCómo leerlo correctamente: sin la codificación (UTF-8, Latin-1) pueden corromperse las tildes y la «ñ»; sin el separador (coma, punto y coma) las columnas se leen mal, sobre todo cuando se usa la coma decimal.\n\nAvanzado. Redacta el diccionario de datos completo de un conjunto que hayas usado en el curso.\n\nVer solución\nCada columna con nombre, descripción, tipo, unidad, valores permitidos o rango, tratamiento de los valores perdidos y ejemplo.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 3. Gestión documental y *open data*</span>"
@@ -974,6 +1062,28 @@
     ]
   },
   {
+    "objectID": "04-interoperabilidad.html#caso-práctico-resuelto",
+    "href": "04-interoperabilidad.html#caso-práctico-resuelto",
+    "title": "Tema 4. Normalización e interoperabilidad",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDescribir un catálogo con DCAT-AP\n\n\n\nPara que un portal intercambie metadatos con datos.gob.es y con el portal europeo, cada conjunto se describe con el vocabulario DCAT-AP (en España, el perfil DCAT-AP-ES):\n\n\n\n\n\n\n\n\nConcepto\nClase DCAT\nEjemplo\n\n\n\n\nCatálogo\ndcat:Catalog\nPortal de datos del ayuntamiento\n\n\nConjunto de datos\ndcat:Dataset\nPréstamos en bibliotecas, 2024\n\n\nDistribución\ndcat:Distribution\nEl CSV y el JSON de ese conjunto\n\n\nServicio\ndcat:DataService\nLa API que da acceso a los datos\n\n\n\nPropiedades habituales del conjunto: dct:title, dct:description, dct:publisher, dcat:keyword, dcat:theme, dct:temporal, dct:spatial, dct:accrualPeriodicity. De la distribución: dcat:accessURL o dcat:downloadURL, dct:format, dct:license.\nAl usar vocabularios controlados (por ejemplo, los temas del sector público), los buscadores de los portales agregadores clasifican bien los datos.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 4. Normalización e interoperabilidad</span>"
+    ]
+  },
+  {
+    "objectID": "04-interoperabilidad.html#ejercicios-graduados",
+    "href": "04-interoperabilidad.html#ejercicios-graduados",
+    "title": "Tema 4. Normalización e interoperabilidad",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Es una distribución o un conjunto de datos el archivo CSV con los préstamos de 2024?\n\nVer solución\nUna distribución: es una forma concreta (formato, URL) de acceder al conjunto de datos «Préstamos en bibliotecas, 2024», que puede tener otras distribuciones (JSON, API).\n\nAvanzado. Escribe en Turtle la descripción DCAT de un conjunto con dos distribuciones.\n\nVer solución\nDebe declarar un dcat:Dataset con título, descripción, publicador, licencia y periodicidad, y dos dcat:Distribution enlazadas con dcat:distribution, cada una con formato y URL de descarga.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 4. Normalización e interoperabilidad</span>"
+    ]
+  },
+  {
     "objectID": "04-interoperabilidad.html#actividades",
     "href": "04-interoperabilidad.html#actividades",
     "title": "Tema 4. Normalización e interoperabilidad",
@@ -1122,6 +1232,28 @@
     "title": "Tema 5. Empresas infomediarias y oportunidades de negocio",
     "section": "Práctica en R",
     "text": "Práctica en R\n\nPaso 1. Un servicio de valor añadido: enriquecer los préstamos (apartado 3)\nCruzamos el CSV limpio con una tabla de población para calcular préstamos por cada 1.000 habitantes, un indicador que ninguna de las dos fuentes ofrece por separado.\n\n\n\n\n\n\nLas cifras de población son ficticias y redondeadas, inventadas para el ejercicio. En un servicio real se usarían las del Padrón continuo del INE.\n\n\n\n\n\n\n\n\n\n\n\nEjercicio 5.1\nAñade a enriquecido la columna por_mil (préstamos por cada 1.000 habitantes, redondeada a un decimal) y devuelve la tabla ordenada de mayor a menor.\n\n\n\n\n\n\n\n\n«Por cada 1.000 habitantes»: multiplica el cociente por 1000.\n\n\nenriquecido$por_mil &lt;- round(enriquecido$prestamos / enriquecido$habitantes * 1000, 1)\nenriquecido[order(enriquecido$por_mil, decreasing = TRUE), ]\nGetafe queda en cabeza, pero tiene dos bibliotecas en la muestra y los demás municipios una. Un buen servicio de valor añadido debe explicar estas limitaciones a sus clientes.\n\n\n\n\nPaso 2. ¿Es viable un servicio freemium? (apartados 2 y 4)\nImagina una empresa que ofrece a las bibliotecas un panel con sus préstamos comparados con los de otros municipios, a partir de datos abiertos. La versión básica es gratuita; la avanzada cuesta una cuota mensual.\n\n\n\n\n\n\n¿Cómo cambia el resultado con el número de usuarios? Prueba otros valores de conversión y precio:\n\n\n\n\n\n\n\n\nSimulador del punto de equilibrio\nMueve los controles y observa cómo cambia el número de usuarios gratuitos necesarios para cubrir los costes.\n\nviewof conversion_pct = Inputs.range([1, 12], { value: 4, step: 0.5, label: \"Conversión (%)\" })\nviewof precio_mes = Inputs.range([2, 30], { value: 9, step: 1, label: \"Precio (€/mes)\" })\nviewof costes_mes = Inputs.range([500, 8000], { value: 2700, step: 100, label: \"Costes fijos (€/mes)\" })\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEjercicio 5.2\n¿Cuántos usuarios de la versión gratuita necesita la empresa para cubrir los costes fijos (punto de equilibrio)? Despeja de usuarios × conversión × precio = costes fijos.\n\n\n\n\n\n\n\n\nLo que aporta cada usuario gratuito, de media, es la conversión por el precio.\n\n\ncostes_fijos / (conversion * precio)\n7.500 usuarios. Cada usuario gratuito aporta de media 0,36 € al mes.\n\n\n\n\nEjercicio 5.3\nLa empresa mejora la versión de pago y consigue una conversión del 6 % manteniendo el precio. ¿Cuál es ahora el resultado mensual (ingresos menos costes) con 5.000 usuarios?\n\n\n\n\n\n\n\n\ningresos_mensuales(usuarios = 5000, conversion = 0.06, precio = 9) - costes_fijos\n\n\n\n\nPaso 3. Obligaciones al combinar licencias (apartado 4)\nCodificamos la tabla de licencias como un data frame y escribimos una función que, dadas varias fuentes, acumula sus obligaciones.\n\n\n\n\n\n\nany() es TRUE si al menos una fuente lo exige; all() es TRUE solo si todas lo permiten.\n\n\nEjercicio 5.4\nUn servicio combina el padrón municipal (CC BY 4.0) con datos de OpenStreetMap (ODbL 1.0). Calcula sus obligaciones.\n\n\n\n\n\n\n\n\nEscribe los nombres de las licencias exactamente como aparecen en la tabla licencias.\n\n\nobligaciones(c(\"CC BY 4.0\", \"ODbL 1.0\"))\nHay que atribuir ambas fuentes y, si se distribuye la base de datos derivada, hacerlo con ODbL. El uso comercial está permitido.\n\n\n\n\nEjercicio 5.5\nSi se añade una tercera fuente con licencia CC BY-NC 4.0, ¿puede la empresa vender el servicio? Devuelve solo el valor de uso_comercial.\n\n\n\n\n\n\n\n\no &lt;- obligaciones(c(\"CC BY 4.0\", \"ODbL 1.0\", \"CC BY-NC 4.0\"))\no[[\"uso_comercial\"]]\nFALSE: basta una fuente no comercial para que el servicio no pueda venderse. Por eso CC BY-NC no es una licencia abierta según la Open Definition (Tema 0).\n\n\n\n\n\n\n\n\nFigura 2: La cadena de valor de los datos abiertos.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 5. Empresas infomediarias y oportunidades de negocio</span>"
+    ]
+  },
+  {
+    "objectID": "05-infomediarias.html#caso-práctico-resuelto",
+    "href": "05-infomediarias.html#caso-práctico-resuelto",
+    "title": "Tema 5. Empresas infomediarias y oportunidades de negocio",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDiseñar un servicio infomediario viable\n\n\n\nUna empresa infomediaria quiere ofrecer a bibliotecas informes comparativos de uso basados en datos abiertos de varias comunidades autónomas.\n\nNecesidad: las bibliotecas quieren compararse con otras parecidas, pero los datos están dispersos y en formatos distintos.\nDatos: estadísticas de bibliotecas públicas abiertas, población por municipio (INE), equipamientos.\nProceso: extracción automática, normalización de nombres y unidades, control de calidad, cálculo de indicadores comparables.\nProducto: panel e informe anual con municipios similares (por población y presupuesto).\nModelo: suscripción para redes de bibliotecas; versión gratuita con indicadores básicos.\nDiferenciación: el valor no está en los datos (abiertos para todos), sino en la integración, la limpieza y el análisis.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 5. Empresas infomediarias y oportunidades de negocio</span>"
+    ]
+  },
+  {
+    "objectID": "05-infomediarias.html#ejercicios-graduados",
+    "href": "05-infomediarias.html#ejercicios-graduados",
+    "title": "Tema 5. Empresas infomediarias y oportunidades de negocio",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Por qué una empresa puede cobrar por un servicio basado en datos abiertos gratuitos?\n\nVer solución\nPorque cobra por el valor añadido: integración de fuentes, limpieza, actualización continua, análisis, visualización y soporte, que tienen un coste y ahorran trabajo al cliente.\n\nAvanzado. Esboza el modelo de negocio (lienzo de propuesta de valor) de un servicio infomediario para el sector de la información.\n\nVer solución\nDebe describir el segmento de clientes, sus problemas, la propuesta de valor, los datos abiertos que se usan, los recursos y actividades clave, los ingresos y los costes, y los riesgos de dependencia de las fuentes.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 5. Empresas infomediarias y oportunidades de negocio</span>"

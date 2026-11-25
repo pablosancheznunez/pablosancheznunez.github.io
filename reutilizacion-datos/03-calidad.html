@@ -473,6 +473,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-3.8" id="toc-ejercicio-3.8" class="nav-link" data-scroll-target="#ejercicio-3.8">Ejercicio 3.8</a></li>
   </ul></li>
   <li><a href="#lab-t3-calidad" id="toc-lab-t3-calidad" class="nav-link" data-scroll-target="#lab-t3-calidad">Laboratorio: comprueba la calidad de un CSV</a></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t3" id="toc-reto-t3" class="nav-link" data-scroll-target="#reto-t3">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -1253,6 +1255,46 @@ Figura&nbsp;3: El ciclo de vida de los datos: cada fase tiene responsables y doc
 </div>
 </div>
 </div>
+</div>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Una ficha de metadatos que permite reutilizar
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Conjunto: «Préstamos en bibliotecas municipales, 2024». Metadatos mínimos para que alguien pueda reutilizarlo sin preguntar:</p>
+<ul>
+<li><strong>Título y descripción</strong> clara: qué se cuenta (préstamos, no usuarios), unidad y periodo.</li>
+<li><strong>Organismo publicador</strong> y contacto.</li>
+<li><strong>Licencia</strong> (CC BY 4.0).</li>
+<li><strong>Frecuencia de actualización</strong> (mensual) y <strong>fecha de la última actualización</strong>.</li>
+<li><strong>Cobertura temporal y geográfica.</strong></li>
+<li><strong>Formato y distribución</strong> (CSV, UTF-8, separador «;»).</li>
+<li><strong>Diccionario de datos</strong>: cada columna con su significado, tipo y valores permitidos.</li>
+<li><strong>Calidad</strong>: limitaciones conocidas (por ejemplo, la biblioteca X cerró por obras en marzo).</li>
+</ul>
+<p>Sin diccionario de datos, una columna llamada «TIPO» con valores 1, 2 y 3 es inutilizable.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> ¿Qué información falta si un CSV no indica su codificación ni su separador?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Cómo leerlo correctamente: sin la codificación (UTF-8, Latin-1) pueden corromperse las tildes y la «ñ»; sin el separador (coma, punto y coma) las columnas se leen mal, sobre todo cuando se usa la coma decimal.</p>
+</div>
+<p><strong>Avanzado.</strong> Redacta el diccionario de datos completo de un conjunto que hayas usado en el curso.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Cada columna con nombre, descripción, tipo, unidad, valores permitidos o rango, tratamiento de los valores perdidos y ejemplo.</p>
 </div>
 </section>
 <section id="actividades" class="level2">

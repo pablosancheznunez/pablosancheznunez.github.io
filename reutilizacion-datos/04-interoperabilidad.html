@@ -466,6 +466,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-4.5" id="toc-ejercicio-4.5" class="nav-link" data-scroll-target="#ejercicio-4.5">Ejercicio 4.5</a></li>
   </ul></li>
   <li><a href="#lab-t4-formatos" id="toc-lab-t4-formatos" class="nav-link" data-scroll-target="#lab-t4-formatos">Laboratorio: del CSV al JSON y al RDF</a></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t4" id="toc-reto-t4" class="nav-link" data-scroll-target="#reto-t4">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -1132,6 +1134,73 @@ Figura&nbsp;2: El modelo DCAT: un catálogo contiene conjuntos de datos, y cada 
 </div>
 </div>
 <p>En el RDF, <code>wd:Q2807</code> no es un texto: es el identificador de Madrid en Wikidata. Esa es la diferencia entre la tercera estrella (un CSV) y la quinta (datos enlazados). Los URI <code>example.org</code> son de ejemplo.</p>
+</div>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Describir un catálogo con DCAT-AP
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para que un portal intercambie metadatos con datos.gob.es y con el portal europeo, cada conjunto se describe con el vocabulario <strong>DCAT-AP</strong> (en España, el perfil DCAT-AP-ES):</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concepto</th>
+<th>Clase DCAT</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Catálogo</td>
+<td><code>dcat:Catalog</code></td>
+<td>Portal de datos del ayuntamiento</td>
+</tr>
+<tr class="even">
+<td>Conjunto de datos</td>
+<td><code>dcat:Dataset</code></td>
+<td>Préstamos en bibliotecas, 2024</td>
+</tr>
+<tr class="odd">
+<td>Distribución</td>
+<td><code>dcat:Distribution</code></td>
+<td>El CSV y el JSON de ese conjunto</td>
+</tr>
+<tr class="even">
+<td>Servicio</td>
+<td><code>dcat:DataService</code></td>
+<td>La API que da acceso a los datos</td>
+</tr>
+</tbody>
+</table>
+<p>Propiedades habituales del conjunto: <code>dct:title</code>, <code>dct:description</code>, <code>dct:publisher</code>, <code>dcat:keyword</code>, <code>dcat:theme</code>, <code>dct:temporal</code>, <code>dct:spatial</code>, <code>dct:accrualPeriodicity</code>. De la distribución: <code>dcat:accessURL</code> o <code>dcat:downloadURL</code>, <code>dct:format</code>, <code>dct:license</code>.</p>
+<p>Al usar vocabularios controlados (por ejemplo, los temas del sector público), los buscadores de los portales agregadores clasifican bien los datos.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> ¿Es una distribución o un conjunto de datos el archivo CSV con los préstamos de 2024?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Una distribución: es una forma concreta (formato, URL) de acceder al conjunto de datos «Préstamos en bibliotecas, 2024», que puede tener otras distribuciones (JSON, API).</p>
+</div>
+<p><strong>Avanzado.</strong> Escribe en Turtle la descripción DCAT de un conjunto con dos distribuciones.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Debe declarar un <code>dcat:Dataset</code> con título, descripción, publicador, licencia y periodicidad, y dos <code>dcat:Distribution</code> enlazadas con <code>dcat:distribution</code>, cada una con formato y URL de descarga.</p>
 </div>
 </section>
 <section id="actividades" class="level2">

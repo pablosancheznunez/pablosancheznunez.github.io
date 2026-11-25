@@ -465,6 +465,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#paso-4.-consultar-el-catálogo-nacional-en-directo-apartado-1" id="toc-paso-4.-consultar-el-catálogo-nacional-en-directo-apartado-1" class="nav-link" data-scroll-target="#paso-4.-consultar-el-catálogo-nacional-en-directo-apartado-1">Paso 4. Consultar el catálogo nacional en directo (apartado 1)</a></li>
   <li><a href="#ejercicio-2.6" id="toc-ejercicio-2.6" class="nav-link" data-scroll-target="#ejercicio-2.6">Ejercicio 2.6</a></li>
   </ul></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t2" id="toc-reto-t2" class="nav-link" data-scroll-target="#reto-t2">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -941,6 +943,70 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDJfYXBpIn0sImNvZGUi
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQyX2FwaSJ9LCJjb2RlIjoiZXNwZXJhZG8gPC0gd2l0aCguZW52aXJfcmVzdWx0LCBzdW0oc2FwcGx5KGl0ZW1zLCBmdW5jdGlvbihpdCkgXCJDU1ZcIiAlaW4lIGZvcm1hdG9zX2RlKGl0KSkpKVxub3JpZ2VuIDwtIGlmIChpZGVudGljYWwoYXR0cihnZXQoXCJpdGVtc1wiLCBlbnZpciA9IC5lbnZpcl9yZXN1bHQpLCBcIm9yaWdlblwiKSwgXCJhcGlcIikpIFwiY29uc3VsdGEgZW4gZGlyZWN0b1wiIGVsc2UgXCJjb3BpYSBndWFyZGFkYVwiXG5pZiAoaXNUUlVFKGFsbC5lcXVhbChhcy5udW1lcmljKC5yZXN1bHQpLCBlc3BlcmFkbykpKSB7XG4gIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBwYXN0ZTAoXCJDb3JyZWN0bzogXCIsIGVzcGVyYWRvLCBcIiBkZSBcIiwgbGVuZ3RoKGdldChcIml0ZW1zXCIsIGVudmlyID0gLmVudmlyX3Jlc3VsdCkpLCBcIiBjb25qdW50b3MgKFwiLCBvcmlnZW4sIFwiKS5cIikpXG59IGVsc2Uge1xuICBsaXN0KGNvcnJlY3QgPSBGQUxTRSwgbWVzc2FnZSA9IFwiRXNjcmliZSBsYSBldGlxdWV0YSBcXFwiQ1NWXFxcIiwgZW4gbWF5w7pzY3VsYXMuXCIpXG59In0=
 </script>
 </section>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Analizar un proyecto de reutilización como un caso de negocio
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Proyecto de ejemplo: un servicio que combina datos abiertos de calidad del aire y de tráfico para recomendar rutas en bicicleta. Análisis:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Elemento</th>
+<th>Respuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Datos de origen</strong></td>
+<td>Calidad del aire (ayuntamiento, por horas), intensidad de tráfico, carril bici (geoespacial)</td>
+</tr>
+<tr class="even">
+<td><strong>Valor añadido</strong></td>
+<td>Integración, cálculo de rutas, alertas personalizadas</td>
+</tr>
+<tr class="odd">
+<td><strong>Usuarios</strong></td>
+<td>Ciclistas urbanos; también ayuntamientos interesados en la información agregada</td>
+</tr>
+<tr class="even">
+<td><strong>Modelo de ingresos</strong></td>
+<td>App gratuita con informes de pago para administraciones</td>
+</tr>
+<tr class="odd">
+<td><strong>Riesgos</strong></td>
+<td>Cambios en el formato de los datos de origen, interrupciones del servicio, calidad desigual entre ciudades</td>
+</tr>
+</tbody>
+</table>
+<p>La dependencia de datos externos se mitiga con contratos de servicio, si existen, supervisión de las fuentes y validación automática al cargar.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> Identifica los datos de origen y el valor añadido de un servicio que muestra en tiempo real la llegada de autobuses.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Datos: posiciones de los vehículos y horarios publicados por el operador (por ejemplo, en GTFS y GTFS-Realtime). Valor añadido: cálculo de tiempos de llegada, interfaz cómoda, avisos y combinación con otras redes.</p>
+</div>
+<p><strong>Avanzado.</strong> Elige un proyecto real de reutilización del catálogo de datos.gob.es y analízalo con la tabla del caso.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Documenta las fuentes reales que usa, cómo genera valor, quiénes son sus usuarios, cómo se financia y qué riesgos tiene por depender de datos públicos.</p>
+</div>
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
