@@ -449,6 +449,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-6.1-un-mensaje-json-rpc-python" id="toc-ejercicio-6.1-un-mensaje-json-rpc-python" class="nav-link" data-scroll-target="#ejercicio-6.1-un-mensaje-json-rpc-python">Ejercicio 6.1 · Un mensaje JSON-RPC (Python)</a></li>
   <li><a href="#ejercicio-6.2-un-esquema-de-entrada-python" id="toc-ejercicio-6.2-un-esquema-de-entrada-python" class="nav-link" data-scroll-target="#ejercicio-6.2-un-esquema-de-entrada-python">Ejercicio 6.2 · Un esquema de entrada (Python)</a></li>
   </ul></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-p6" id="toc-reto-p6" class="nav-link" data-scroll-target="#reto-p6">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -800,6 +802,78 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicDZfc2NoZW1hIn0sImNv
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InA2X3NjaGVtYSJ9LCJjb2RlIjoiciA9IGxpc3QocmVzdWx0KSBpZiByZXN1bHQgaXMgbm90IE5vbmUgZWxzZSBbXVxuaWYgciA9PSBbXCJjb25zdWx0YVwiXTpcbiAgICBmZWVkYmFjayA9IHtcImNvcnJlY3RcIjogVHJ1ZSwgXCJtZXNzYWdlXCI6IFwiQ29ycmVjdG86IHNvbG8gY29uc3VsdGEgZXMgb2JsaWdhdG9yaWEuXCJ9XG5lbGlmIFwiYW5pb1wiIGluIHI6XG4gICAgZmVlZGJhY2sgPSB7XCJjb3JyZWN0XCI6IEZhbHNlLCBcIm1lc3NhZ2VcIjogXCJhbmlvIGVzIG9wY2lvbmFsOiBubyBkZWJlIGVzdGFyIGVuIHJlcXVpcmVkLlwifVxuZWxzZTpcbiAgICBmZWVkYmFjayA9IHtcImNvcnJlY3RcIjogRmFsc2UsIFwibWVzc2FnZVwiOiBcIkVzY3JpYmUgW1xcXCJjb25zdWx0YVxcXCJdLlwifVxuZmVlZGJhY2sifQ==
 </script>
 </section>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Diseñar un servidor MCP con permisos mínimos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Objetivo: que un asistente pueda consultar la bibliografía de tu tesis y comprobar referencias.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Capacidad</th>
+<th>Tipo</th>
+<th>Permisos</th>
+<th>Riesgo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>buscar_referencia(texto)</code></td>
+<td>Herramienta</td>
+<td>Solo lectura de la biblioteca Zotero exportada</td>
+<td>Bajo</td>
+</tr>
+<tr class="even">
+<td><code>verificar_doi(doi)</code></td>
+<td>Herramienta</td>
+<td>Llamada a la API de Crossref</td>
+<td>Bajo; el contenido externo se trata como datos</td>
+</tr>
+<tr class="odd">
+<td><code>biblioteca://tesis</code></td>
+<td>Recurso</td>
+<td>Lectura del archivo BibTeX</td>
+<td>Bajo</td>
+</tr>
+<tr class="even">
+<td><code>añadir_referencia(...)</code></td>
+<td>—</td>
+<td><strong>No se implementa</strong>: escribir exige revisión humana</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Decisiones: transporte stdio (local), sin claves en el código, registro de todas las llamadas y documentación de qué datos ve el asistente.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> ¿Qué tipo de capacidad MCP sería «plantilla para revisar el formato APA de una referencia»?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Una plantilla (<em>prompt</em>): una instrucción predefinida que la persona elige usar.</p>
+</div>
+<p><strong>Avanzado.</strong> Implementa en Python con FastMCP las dos herramientas de solo lectura de la tabla y pruébalas con el MCP Inspector.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Cada herramienta debe tener anotaciones de tipo, <em>docstring</em> clara, manejo de errores (DOI inexistente, sin conexión) y devolver datos estructurados; el análisis de riesgos va en el README.</p>
+</div>
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>

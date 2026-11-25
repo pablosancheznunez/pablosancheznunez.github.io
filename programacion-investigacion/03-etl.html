@@ -449,6 +449,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-3.3-cargar-en-sqlite-python" id="toc-ejercicio-3.3-cargar-en-sqlite-python" class="nav-link" data-scroll-target="#ejercicio-3.3-cargar-en-sqlite-python">Ejercicio 3.3 · Cargar en SQLite (Python)</a></li>
   <li><a href="#ejercicio-3.4-aplanar-json-r" id="toc-ejercicio-3.4-aplanar-json-r" class="nav-link" data-scroll-target="#ejercicio-3.4-aplanar-json-r">Ejercicio 3.4 · Aplanar JSON (R)</a></li>
   </ul></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-p3" id="toc-reto-p3" class="nav-link" data-scroll-target="#reto-p3">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -767,6 +769,84 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicDNfanNvbl9yIn0sImNv
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InAzX2pzb25fciJ9LCJjb2RlIjoieCA8LSBqc29ubGl0ZTo6ZnJvbUpTT04oXCJkYXRvcy9vcGVuYWxleF9tdWVzdHJhLmpzb25cIilcbmlmIChpc1RSVUUoYWxsLmVxdWFsKGFzLm51bWVyaWMoLnJlc3VsdCksIHN1bSh4JHJlc3VsdHMkb3Blbl9hY2Nlc3MkaXNfb2EpKSkpIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBwYXN0ZShcIkNvcnJlY3RvOlwiLCBzdW0oeCRyZXN1bHRzJG9wZW5fYWNjZXNzJGlzX29hKSwgXCJkZSAzMC5cIikpIGVsc2VcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIlVzYSBlbCBjYW1wbyBpc19vYS5cIikifQ==
 </script>
 </section>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Un registro de cambios del ETL
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Al limpiar <code>publicaciones.csv</code>, el registro de cambios documenta cada paso:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Paso</th>
+<th>Filas antes</th>
+<th>Filas después</th>
+<th>Motivo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lectura</td>
+<td>—</td>
+<td>62</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Normalizar DOI</td>
+<td>62</td>
+<td>62</td>
+<td>Formatos distintos unificados</td>
+</tr>
+<tr class="odd">
+<td>Eliminar duplicados (título + autores)</td>
+<td>62</td>
+<td>60</td>
+<td>2 registros repetidos</td>
+</tr>
+<tr class="even">
+<td>Año no numérico («s.f.»)</td>
+<td>60</td>
+<td>60</td>
+<td>Marcado como ausente, no eliminado</td>
+</tr>
+<tr class="odd">
+<td>Validación</td>
+<td>60</td>
+<td>60</td>
+<td>Años entre 2019 y 2024, citas ≥ 0</td>
+</tr>
+</tbody>
+</table>
+<p>Este registro va en la sección de métodos: cualquier lector sabe qué se hizo con los datos.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> ¿Por qué conviene marcar los años «s.f.» como ausentes en lugar de borrar esas filas?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Porque el resto de la información del registro sigue siendo útil para otros análisis; borrar filas reduce la muestra y puede introducir sesgos. Los análisis por año excluirán los ausentes de forma explícita.</p>
+</div>
+<p><strong>Avanzado.</strong> Añade a tu ETL una función de validación que falle con un mensaje claro si algún año está fuera de rango o hay DOI duplicados.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>En Python, con <code>assert</code> o lanzando <code>ValueError</code> con un mensaje; en R, con <code>stopifnot()</code> o <code>stop()</code>. La validación debe ejecutarse siempre al final del proceso.</p>
+</div>
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>

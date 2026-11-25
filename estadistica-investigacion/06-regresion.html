@@ -448,6 +448,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-6.1" id="toc-ejercicio-6.1" class="nav-link" data-scroll-target="#ejercicio-6.1">Ejercicio 6.1</a></li>
   <li><a href="#ejercicio-6.2" id="toc-ejercicio-6.2" class="nav-link" data-scroll-target="#ejercicio-6.2">Ejercicio 6.2</a></li>
   </ul></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-c6" id="toc-reto-c6" class="nav-link" data-scroll-target="#reto-c6">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -677,6 +679,41 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiYzZfcjIifSwiY29kZSI6
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM2X3IyIn0sImNvZGUiOiJkZCA8LSByZWFkLmNzdihcImRhdG9zL2VzdHVkaW8uY3N2XCIpXG5pZiAoaXNUUlVFKGFsbC5lcXVhbChhcy5udW1lcmljKC5yZXN1bHQpLCBzdW1tYXJ5KGxtKG5vdGEgfiBob3JhcyArIHN1ZW5vLCBkYXRhID0gZGQpKSRyLnNxdWFyZWQpKSkgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IFwiQ29ycmVjdG8uXCIpIGVsc2VcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkHDsWFkZSBzdWVubyBhbCBtb2RlbG8uXCIpIn0=
 </script>
 </section>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Interpretar los coeficientes de una regresión
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Modelo: <code>nota ~ horas + sueno</code> con los datos del libro. Supongamos que el resultado es: intersección 4,1; horas 0,05; sueño 0,30.</p>
+<ul>
+<li><strong>horas = 0,05:</strong> por cada hora semanal más de estudio, la nota aumenta en promedio 0,05 puntos, <strong>manteniendo constante</strong> el sueño.</li>
+<li><strong>sueno = 0,30:</strong> cada hora más de sueño se asocia con 0,3 puntos más, a igualdad de horas de estudio.</li>
+<li><strong>Intersección:</strong> nota prevista con 0 horas de estudio y 0 de sueño: no tiene sentido sustantivo; centrar las variables la hace interpretable (nota prevista para valores medios).</li>
+<li><strong>R²</strong> indica la proporción de la variación explicada, no si el modelo es causal ni si está bien especificado: hay que revisar los residuos.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> ¿Qué significa un coeficiente de 0,30 para «sueño» en la regresión anterior?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Que, a igualdad de horas de estudio, cada hora adicional de sueño se asocia con 0,3 puntos más de nota media en la muestra. No implica causalidad.</p>
+</div>
+<p><strong>Avanzado.</strong> Ajusta el modelo con las variables centradas e interpreta de nuevo la intersección.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Con <code>scale(x, scale = FALSE)</code> o restando la media, la intersección pasa a ser la nota prevista para un doctorando con horas y sueño medios; los demás coeficientes no cambian.</p>
+</div>
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>

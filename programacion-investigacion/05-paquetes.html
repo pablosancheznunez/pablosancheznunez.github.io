@@ -444,6 +444,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-5.1-validar-las-entradas-r" id="toc-ejercicio-5.1-validar-las-entradas-r" class="nav-link" data-scroll-target="#ejercicio-5.1-validar-las-entradas-r">Ejercicio 5.1 · Validar las entradas (R)</a></li>
   <li><a href="#ejercicio-5.2-pruebas-con-assert-python" id="toc-ejercicio-5.2-pruebas-con-assert-python" class="nav-link" data-scroll-target="#ejercicio-5.2-pruebas-con-assert-python">Ejercicio 5.2 · Pruebas con assert (Python)</a></li>
   </ul></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-p5" id="toc-reto-p5" class="nav-link" data-scroll-target="#reto-p5">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -661,6 +663,45 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicDVfcHkifSwiY29kZSI6
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InA1X3B5In0sImNvZGUiOiJmZWVkYmFjayA9IHtcImNvcnJlY3RcIjogVHJ1ZSwgXCJtZXNzYWdlXCI6IFwiQ29ycmVjdG86IGxhcyB0cmVzIHBydWViYXMgcGFzYW4uXCJ9IGlmIHJlc3VsdCBpcyBUcnVlIGVsc2Uge1wiY29ycmVjdFwiOiBGYWxzZSwgXCJtZXNzYWdlXCI6IFwiQWxndW5hIHBydWViYSBmYWxsYTogcGFzYSBlbCB0ZXh0byBhIG1pbsO6c2N1bGFzIGNvbiAubG93ZXIoKS5cIn1cbmZlZWRiYWNrIn0=
 </script>
 </section>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>De tres scripts a un paquete en una mañana
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tres proyectos copian las mismas funciones (<code>normaliza_doi</code>, <code>indice_h</code>, <code>lee_openalex</code>). Pasos:</p>
+<ol type="1">
+<li><code>usethis::create_package("bibliometrica")</code>.</li>
+<li>Mover cada función a <code>R/</code> con documentación roxygen2 y <code>@export</code>.</li>
+<li>Declarar dependencias: <code>usethis::use_package("jsonlite")</code>.</li>
+<li>Una prueba por función con casos normales y extremos.</li>
+<li><code>devtools::check()</code> hasta 0 errores, 0 avisos y 0 notas.</li>
+<li>Sustituir el código copiado en los proyectos por <code>library(bibliometrica)</code>.</li>
+<li>GitHub + Zenodo para la versión 0.1.0 con DOI.</li>
+</ol>
+<p>Resultado: un único lugar donde corregir errores, documentación accesible con <code>?indice_h</code> y un software citable.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> ¿En qué archivo se declara que el paquete depende de jsonlite?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>En <code>DESCRIPTION</code>, en el campo <code>Imports</code> (lo añade <code>usethis::use_package()</code>).</p>
+</div>
+<p><strong>Avanzado.</strong> Añade una viñeta (<code>usethis::use_vignette()</code>) a tu paquete con un ejemplo completo de uso sobre datos reales.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>La viñeta debe ejecutarse durante <code>check()</code>, usar datos pequeños incluidos en el paquete o descargables con caché, y mostrar el flujo completo de principio a fin.</p>
+</div>
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>

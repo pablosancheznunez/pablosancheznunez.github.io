@@ -445,6 +445,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-4.2-procesar-la-respuesta-python" id="toc-ejercicio-4.2-procesar-la-respuesta-python" class="nav-link" data-scroll-target="#ejercicio-4.2-procesar-la-respuesta-python">Ejercicio 4.2 · Procesar la respuesta (Python)</a></li>
   <li><a href="#ejercicio-4.3-autores-por-país-r" id="toc-ejercicio-4.3-autores-por-país-r" class="nav-link" data-scroll-target="#ejercicio-4.3-autores-por-país-r">Ejercicio 4.3 · Autores por país (R)</a></li>
   </ul></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-p4" id="toc-reto-p4" class="nav-link" data-scroll-target="#reto-p4">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -786,6 +788,44 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicDRfcGFpcyJ9LCJjb2Rl
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InA0X3BhaXMifSwiY29kZSI6InggPC0ganNvbmxpdGU6OmZyb21KU09OKFwiZGF0b3Mvb3BlbmFsZXhfbXVlc3RyYS5qc29uXCIsIHNpbXBsaWZ5VmVjdG9yID0gRkFMU0UpXG5lc3AgPC0gc3VtKHNhcHBseSh4JHJlc3VsdHMsIGZ1bmN0aW9uKHcpIFwiRVNcIiAlaW4lIHVubGlzdChsYXBwbHkodyRhdXRob3JzaGlwcywgZnVuY3Rpb24oYSkgYSRjb3VudHJpZXMpKSkpXG5pZiAoaXNUUlVFKGFsbC5lcXVhbChhcy5udW1lcmljKC5yZXN1bHQpLCBlc3ApKSkgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IHBhc3RlKFwiQ29ycmVjdG86XCIsIGVzcCwgXCJ0cmFiYWpvcyBjb24gYXV0b3LDrWEgZXNwYcOxb2xhIGVuIGxhIG11ZXN0cmEuXCIpKSBlbHNlXG4gIGxpc3QoY29ycmVjdCA9IEZBTFNFLCBtZXNzYWdlID0gXCJVc2EgZWwgY8OzZGlnbyBFUy5cIikifQ==
 </script>
 </section>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Descargar todos los resultados con paginación por cursor
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Necesitas todos los artículos de 2024 sobre «research software» en OpenAlex (unos pocos miles). Procedimiento:</p>
+<ol type="1">
+<li><strong>Primera petición</strong> con <code>cursor=*</code> y <code>per_page=200</code>.</li>
+<li>Guardar <code>results</code> y leer <code>meta.next_cursor</code>.</li>
+<li>Repetir con el nuevo cursor hasta que sea nulo.</li>
+<li><strong>Pausa</strong> breve entre peticiones y reintento si aparece un 429.</li>
+<li><strong>Guardar cada página</strong> en disco (<code>pagina_001.json</code>…) para no repetir la descarga si algo falla.</li>
+<li>Anotar la fecha y la consulta exacta.</li>
+</ol>
+<p>Comprobación: el número de registros descargados debe coincidir con <code>meta.count</code> de la primera respuesta (salvo cambios durante la descarga).</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> ¿Por qué se guarda cada página en disco y no solo el resultado final?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Para poder reanudar la descarga si falla a mitad, no repetir peticiones y conservar los datos brutos tal como llegaron.</p>
+</div>
+<p><strong>Avanzado.</strong> Escribe la función de descarga con cursor en R con httr2, guardando cada página y registrando el número total de resultados.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Usa un bucle <code>while</code> con <code>req_url_query(cursor = cursor)</code>, <code>resp_body_json()</code>, <code>jsonlite::write_json()</code> para cada página y <code>Sys.sleep()</code> entre peticiones; termina cuando <code>next_cursor</code> sea <code>NULL</code>.</p>
+</div>
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>

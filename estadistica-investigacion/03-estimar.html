@@ -448,6 +448,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-3.1" id="toc-ejercicio-3.1" class="nav-link" data-scroll-target="#ejercicio-3.1">Ejercicio 3.1</a></li>
   <li><a href="#ejercicio-3.2" id="toc-ejercicio-3.2" class="nav-link" data-scroll-target="#ejercicio-3.2">Ejercicio 3.2</a></li>
   </ul></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-c3" id="toc-reto-c3" class="nav-link" data-scroll-target="#reto-c3">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -705,6 +707,40 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiYzNfaWM5OSJ9LCJjb2Rl
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImMzX2ljOTkifSwiY29kZSI6ImRkIDwtIHJlYWQuY3N2KFwiZGF0b3MvZXN0dWRpby5jc3ZcIilcbmlmIChpc1RSVUUoYWxsLmVxdWFsKGFzLm51bWVyaWMoLnJlc3VsdCksIGFzLm51bWVyaWModC50ZXN0KGRkJG5vdGEsIGNvbmYubGV2ZWwgPSAwLjk5KSRjb25mLmludCkpKSkgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IFwiQ29ycmVjdG8uXCIpIGVsc2VcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkVzY3JpYmUgY29uZi5sZXZlbCA9IDAuOTkuXCIpIn0=
 </script>
 </section>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Interpretar un intervalo de confianza
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En una muestra de 120 doctorandos, la media de horas de sueño es 6,8 con un intervalo de confianza del 95 % de [6,6; 7,0].</p>
+<ul>
+<li><strong>Interpretación correcta:</strong> el procedimiento que genera estos intervalos captura el valor poblacional en el 95 % de las muestras; los valores entre 6,6 y 7,0 son compatibles con los datos.</li>
+<li><strong>Interpretación incorrecta:</strong> «hay un 95 % de probabilidad de que la media verdadera esté entre 6,6 y 7,0» (en el enfoque frecuentista, el parámetro es fijo; la probabilidad se refiere al procedimiento).</li>
+<li><strong>Precisión:</strong> un intervalo estrecho indica una estimación precisa; para reducirlo a la mitad hace falta aproximadamente cuadruplicar la muestra.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> Si con n = 100 el margen de error es ±0,4, ¿qué margen aproximado tendrás con n = 400?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Aproximadamente ±0,2: el error típico depende de 1/√n, y √400 = 2 × √100.</p>
+</div>
+<p><strong>Avanzado.</strong> Simula en R 100 intervalos de confianza de muestras de una población conocida y cuenta cuántos contienen el valor verdadero.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Deberían ser alrededor de 95. Este ejercicio muestra que la confianza es una propiedad del procedimiento, no de un intervalo concreto.</p>
+</div>
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>

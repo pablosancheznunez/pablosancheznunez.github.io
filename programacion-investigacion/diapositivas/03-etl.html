@@ -214,6 +214,57 @@ Pablo Sánchez-Núñez
 </tbody>
 </table>
 </section>
+<section id="un-registro-de-cambios-del-etl" class="slide level2">
+<h2>Un registro de cambios del ETL</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Paso</th>
+<th>Filas antes</th>
+<th>Filas después</th>
+<th>Motivo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lectura</td>
+<td>—</td>
+<td>62</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Normalizar DOI</td>
+<td>62</td>
+<td>62</td>
+<td>Formatos distintos unificados</td>
+</tr>
+<tr class="odd">
+<td>Eliminar duplicados (título + autores)</td>
+<td>62</td>
+<td>60</td>
+<td>2 registros repetidos</td>
+</tr>
+<tr class="even">
+<td>Año no numérico («s.f.»)</td>
+<td>60</td>
+<td>60</td>
+<td>Marcado como ausente, no eliminado</td>
+</tr>
+<tr class="odd">
+<td>Validación</td>
+<td>60</td>
+<td>60</td>
+<td>Años entre 2019 y 2024, citas ≥ 0</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="lectura-obligatoria" class="slide level2">
 <h2>Lectura obligatoria</h2>
 <p>Wickham, H. (2014). <a href="https://doi.org/10.18637/jss.v059.i10">Tidy data</a>. <em>Journal of Statistical Software</em>, 59(10), 1-23.</p>

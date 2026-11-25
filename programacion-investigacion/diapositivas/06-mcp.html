@@ -204,6 +204,51 @@ Pablo Sánchez-Núñez
 </tbody>
 </table>
 </section>
+<section id="diseñar-un-servidor-mcp-con-permisos-mínimos" class="slide level2">
+<h2>Diseñar un servidor MCP con permisos mínimos</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Capacidad</th>
+<th>Tipo</th>
+<th>Permisos</th>
+<th>Riesgo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>buscar_referencia(texto)</code></td>
+<td>Herramienta</td>
+<td>Solo lectura de la biblioteca Zotero exportada</td>
+<td>Bajo</td>
+</tr>
+<tr class="even">
+<td><code>verificar_doi(doi)</code></td>
+<td>Herramienta</td>
+<td>Llamada a la API de Crossref</td>
+<td>Bajo; el contenido externo se trata como datos</td>
+</tr>
+<tr class="odd">
+<td><code>biblioteca://tesis</code></td>
+<td>Recurso</td>
+<td>Lectura del archivo BibTeX</td>
+<td>Bajo</td>
+</tr>
+<tr class="even">
+<td><code>añadir_referencia(...)</code></td>
+<td>—</td>
+<td><strong>No se implementa</strong>: escribir exige revisión humana</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="lectura-obligatoria" class="slide level2">
 <h2>Lectura obligatoria</h2>
 <p>Hou, X.; Zhao, Y.; Wang, S.; Wang, H. (2025). <a href="https://doi.org/10.48550/arXiv.2503.23278">Model Context Protocol (MCP): Landscape, security threats, and future research directions</a>. <em>arXiv</em>, 2503.23278.</p>

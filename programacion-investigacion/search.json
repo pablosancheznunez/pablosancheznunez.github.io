@@ -127,6 +127,28 @@
     ]
   },
   {
+    "objectID": "01-flujo.html#caso-práctico-resuelto",
+    "href": "01-flujo.html#caso-práctico-resuelto",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaRescatar un proyecto desordenado\n\n\n\nUna carpeta real de tesis: datos_final.xlsx, datos_final_v2_BUENO.xlsx, analisis.R, analisis_copia.R, grafico1.png… Plan de rescate en una tarde:\n\nEstructura: crear datos/brutos, datos/procesados, codigo, resultados; mover los originales a brutos y no tocarlos más.\nIdentificar el script vigente comparando fechas y contenido; borrar las copias tras guardarlas en Git.\nGit: git init, un primer commit con todo y, a partir de ahí, cambios pequeños con mensajes claros.\nUn script maestro que ejecute en orden: limpieza → análisis → figuras.\nEntorno: renv::init() o uv init para fijar versiones.\nREADME con cómo reproducir los resultados.\n\nPrueba final: clonar el repositorio en otra carpeta y ejecutar el script maestro sin tocar nada.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
+    "objectID": "01-flujo.html#ejercicios-graduados",
+    "href": "01-flujo.html#ejercicios-graduados",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué mensaje de commit es mejor: «cambios» o «Excluye cuestionarios incompletos antes del análisis»?\n\nVer solución\nEl segundo: explica qué cambia y por qué, y permite encontrar el cambio más tarde en el historial.\n\nAvanzado. Aplica el plan de rescate a un proyecto tuyo y documenta en el README los pasos para reproducirlo.\n\nVer solución\nEl README debe indicar requisitos, cómo instalar el entorno, el orden de ejecución, qué produce cada script y la licencia de los datos y del código.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
     "objectID": "01-flujo.html#actividades",
     "href": "01-flujo.html#actividades",
     "title": "Capítulo 1. Un flujo de trabajo reproducible",
@@ -209,6 +231,28 @@
     "title": "Capítulo 2. Python para investigar",
     "section": "Ejercicios",
     "text": "Ejercicios\n\nEjercicio 2.1 · Comprensión de listas\nCuenta cuántos artículos de la lista tienen al menos 10 citas.\n\n\n\n\n\n\n\n«Al menos 10» es mayor o igual: &gt;=.\n\n\ncitas = [12, 0, 45, 7, 3, 10, 28, 1]\nlen([c for c in citas if c &gt;= 10])\nCuatro artículos: 12, 45, 10 y 28.\n\n\n\n\nEjercicio 2.2 · Una función\nCompleta la función para que devuelva el índice h de una lista de citas: el mayor número h tal que h artículos tienen al menos h citas.\n\n\n\n\n\n\n\nEl artículo en la posición p (ordenados de más a menos citados) cuenta si tiene al menos p citas.\n\n\ndef indice_h(citas):\n    \"\"\"Calcula el índice h de una lista de citas.\"\"\"\n    ordenadas = sorted(citas, reverse=True)\n    h = 0\n    for posicion, c in enumerate(ordenadas, start=1):\n        if c &gt;= posicion:\n            h = posicion\n    return h\n\nindice_h([12, 0, 45, 7, 3, 10, 28, 1])\nh = 5: hay cinco artículos con al menos cinco citas (45, 28, 12, 10, 7).\n\n\n\n\nEjercicio 2.3 · pandas\n¿Cuál es la mediana de citas de las publicaciones? Convierte primero la columna a número.\n\n\n\n\n\n\n\n\nEl método de pandas para la mediana se llama igual que en inglés.\n\n\ncitas = pd.to_numeric(pub[\"citas\"], errors=\"coerce\")\ncitas.median()\nLos valores no numéricos («NA», «n/d», vacíos) se convierten en NaN y no cuentan.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Python para investigar</span>"
+    ]
+  },
+  {
+    "objectID": "02-python.html#caso-práctico-resuelto",
+    "href": "02-python.html#caso-práctico-resuelto",
+    "title": "Capítulo 2. Python para investigar",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDe un bucle a pandas\n\n\n\nTarea: calcular la media de citas por año.\nVersión con bucle y diccionarios:\nsuma, n = {}, {}\nfor fila in registros:\n    a = fila[\"anio\"]; suma[a] = suma.get(a, 0) + fila[\"citas\"]; n[a] = n.get(a, 0) + 1\nmedias = {a: suma[a] / n[a] for a in suma}\nVersión con pandas, vectorizada:\nmedias = pub.groupby(\"anio\")[\"citas\"].mean()\nLa segunda es más corta, más legible y menos propensa a errores. El bucle sigue siendo útil para entender qué hace groupby o para estructuras que no son tablas (JSON anidado).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Python para investigar</span>"
+    ]
+  },
+  {
+    "objectID": "02-python.html#ejercicios-graduados",
+    "href": "02-python.html#ejercicios-graduados",
+    "title": "Capítulo 2. Python para investigar",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué devuelve [c * 2 for c in [1, 2, 3] if c &gt; 1]?\n\nVer solución\n[4, 6]: filtra los elementos mayores que 1 y los multiplica por 2.\n\nAvanzado. Escribe una función que reciba un DataFrame de publicaciones y devuelva, por año, el número de artículos, la mediana de citas y el porcentaje en acceso abierto.\n\nVer solución\nPuede usarse groupby('anio').agg(n=('id', 'count'), mediana=('citas', 'median'), oa=('oa', 'mean')) y multiplicar oa por 100. Conviene documentarla y probarla con un DataFrame pequeño.",
     "crumbs": [
       "Capítulos",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Python para investigar</span>"
@@ -325,6 +369,28 @@
     ]
   },
   {
+    "objectID": "03-etl.html#caso-práctico-resuelto",
+    "href": "03-etl.html#caso-práctico-resuelto",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaUn registro de cambios del ETL\n\n\n\nAl limpiar publicaciones.csv, el registro de cambios documenta cada paso:\n\n\n\n\n\n\n\n\n\nPaso\nFilas antes\nFilas después\nMotivo\n\n\n\n\nLectura\n—\n62\n\n\n\nNormalizar DOI\n62\n62\nFormatos distintos unificados\n\n\nEliminar duplicados (título + autores)\n62\n60\n2 registros repetidos\n\n\nAño no numérico («s.f.»)\n60\n60\nMarcado como ausente, no eliminado\n\n\nValidación\n60\n60\nAños entre 2019 y 2024, citas ≥ 0\n\n\n\nEste registro va en la sección de métodos: cualquier lector sabe qué se hizo con los datos.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html#ejercicios-graduados",
+    "href": "03-etl.html#ejercicios-graduados",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Por qué conviene marcar los años «s.f.» como ausentes en lugar de borrar esas filas?\n\nVer solución\nPorque el resto de la información del registro sigue siendo útil para otros análisis; borrar filas reduce la muestra y puede introducir sesgos. Los análisis por año excluirán los ausentes de forma explícita.\n\nAvanzado. Añade a tu ETL una función de validación que falle con un mensaje claro si algún año está fuera de rango o hay DOI duplicados.\n\nVer solución\nEn Python, con assert o lanzando ValueError con un mensaje; en R, con stopifnot() o stop(). La validación debe ejecutarse siempre al final del proceso.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
     "objectID": "03-etl.html#actividades",
     "href": "03-etl.html#actividades",
     "title": "Capítulo 3. ETL: extraer, transformar y cargar",
@@ -435,6 +501,28 @@
     ]
   },
   {
+    "objectID": "04-api.html#caso-práctico-resuelto",
+    "href": "04-api.html#caso-práctico-resuelto",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDescargar todos los resultados con paginación por cursor\n\n\n\nNecesitas todos los artículos de 2024 sobre «research software» en OpenAlex (unos pocos miles). Procedimiento:\n\nPrimera petición con cursor=* y per_page=200.\nGuardar results y leer meta.next_cursor.\nRepetir con el nuevo cursor hasta que sea nulo.\nPausa breve entre peticiones y reintento si aparece un 429.\nGuardar cada página en disco (pagina_001.json…) para no repetir la descarga si algo falla.\nAnotar la fecha y la consulta exacta.\n\nComprobación: el número de registros descargados debe coincidir con meta.count de la primera respuesta (salvo cambios durante la descarga).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
+    "objectID": "04-api.html#ejercicios-graduados",
+    "href": "04-api.html#ejercicios-graduados",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Por qué se guarda cada página en disco y no solo el resultado final?\n\nVer solución\nPara poder reanudar la descarga si falla a mitad, no repetir peticiones y conservar los datos brutos tal como llegaron.\n\nAvanzado. Escribe la función de descarga con cursor en R con httr2, guardando cada página y registrando el número total de resultados.\n\nVer solución\nUsa un bucle while con req_url_query(cursor = cursor), resp_body_json(), jsonlite::write_json() para cada página y Sys.sleep() entre peticiones; termina cuando next_cursor sea NULL.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
     "objectID": "04-api.html#actividades",
     "href": "04-api.html#actividades",
     "title": "Capítulo 4. Consumir API académicas",
@@ -539,6 +627,28 @@
     "title": "Capítulo 5. Crear paquetes de R y de Python",
     "section": "Ejercicios",
     "text": "Ejercicios\n\nEjercicio 5.1 · Validar las entradas (R)\nCompleta la función para que rechace las citas negativas con stopifnot(), y comprueba que devuelve el índice h correcto.\n\n\n\n\n\n\n\nLas citas deben ser mayores o iguales que cero: &gt;=.\n\n\nindice_h &lt;- function(citas) {\n  stopifnot(is.numeric(citas), all(citas &gt;= 0, na.rm = TRUE))\n  citas &lt;- sort(citas[!is.na(citas)], decreasing = TRUE)\n  sum(citas &gt;= seq_along(citas))\n}\nindice_h(c(12, 0, 45, 7, 3, 10, 28, 1))\n\n\n\n\nEjercicio 5.2 · Pruebas con assert (Python)\nEscribe la función normaliza_doi para que pasen las tres pruebas. La última línea devuelve True si todo va bien.\n\n\n\n\n\n\n\nPara pasar a minúsculas se usa .lower().\n\n\ndef normaliza_doi(doi):\n    \"\"\"Minúsculas, sin espacios, sin prefijo de URL ni 'doi:'.\"\"\"\n    doi = doi.strip().lower()\n    for prefijo in (\"https://doi.org/\", \"doi:\"):\n        if doi.startswith(prefijo):\n            doi = doi[len(prefijo):]\n    return doi.strip()\n\nassert normaliza_doi(\"10.1/ABC\") == \"10.1/abc\"\nassert normaliza_doi(\" https://doi.org/10.1/x \") == \"10.1/x\"\nassert normaliza_doi(\"DOI: 10.1/Y\") == \"10.1/y\"\nTrue\nEn un paquete, estas pruebas irían en tests/test_doi.py y se ejecutarían con uv run pytest.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html#caso-práctico-resuelto",
+    "href": "05-paquetes.html#caso-práctico-resuelto",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDe tres scripts a un paquete en una mañana\n\n\n\nTres proyectos copian las mismas funciones (normaliza_doi, indice_h, lee_openalex). Pasos:\n\nusethis::create_package(\"bibliometrica\").\nMover cada función a R/ con documentación roxygen2 y @export.\nDeclarar dependencias: usethis::use_package(\"jsonlite\").\nUna prueba por función con casos normales y extremos.\ndevtools::check() hasta 0 errores, 0 avisos y 0 notas.\nSustituir el código copiado en los proyectos por library(bibliometrica).\nGitHub + Zenodo para la versión 0.1.0 con DOI.\n\nResultado: un único lugar donde corregir errores, documentación accesible con ?indice_h y un software citable.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html#ejercicios-graduados",
+    "href": "05-paquetes.html#ejercicios-graduados",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿En qué archivo se declara que el paquete depende de jsonlite?\n\nVer solución\nEn DESCRIPTION, en el campo Imports (lo añade usethis::use_package()).\n\nAvanzado. Añade una viñeta (usethis::use_vignette()) a tu paquete con un ejemplo completo de uso sobre datos reales.\n\nVer solución\nLa viñeta debe ejecutarse durante check(), usar datos pequeños incluidos en el paquete o descargables con caché, y mostrar el flujo completo de principio a fin.",
     "crumbs": [
       "Capítulos",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
@@ -671,6 +781,28 @@
     "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
     "section": "Ejercicios",
     "text": "Ejercicios\n\nEjercicio 6.1 · Un mensaje JSON-RPC (Python)\nConstruye el mensaje que envía el cliente para llamar a la herramienta metadatos_doi con el DOI 10.1038/sdata.2016.18.\n\n\n\n\n\n\n\nEl método para ejecutar una herramienta es tools/call.\n\n\nimport json\nmensaje = {\n    \"jsonrpc\": \"2.0\",\n    \"id\": 7,\n    \"method\": \"tools/call\",\n    \"params\": {\"name\": \"metadatos_doi\", \"arguments\": {\"doi\": \"10.1038/sdata.2016.18\"}},\n}\njson.dumps(mensaje)\n\n\n\n\nEjercicio 6.2 · Un esquema de entrada (Python)\nLas herramientas describen sus argumentos con JSON Schema. Completa el esquema de una herramienta buscar_openalex con un argumento obligatorio consulta (texto) y uno opcional anio (entero), y comprueba que consulta es obligatoria.\n\n\n\n\n\n\n\nrequired es una lista con los nombres de los argumentos obligatorios, entre comillas.\n\n\nesquema = {\n    \"type\": \"object\",\n    \"properties\": {\n        \"consulta\": {\"type\": \"string\", \"description\": \"Términos de búsqueda\"},\n        \"anio\": {\"type\": \"integer\", \"description\": \"Año de publicación\"},\n    },\n    \"required\": [\"consulta\"],\n}\nesquema[\"required\"]\nCon FastMCP no hace falta escribir el esquema a mano: se genera a partir de las anotaciones de tipo (consulta: str, anio: int | None = None).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#caso-práctico-resuelto",
+    "href": "06-mcp.html#caso-práctico-resuelto",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDiseñar un servidor MCP con permisos mínimos\n\n\n\nObjetivo: que un asistente pueda consultar la bibliografía de tu tesis y comprobar referencias.\n\n\n\n\n\n\n\n\n\nCapacidad\nTipo\nPermisos\nRiesgo\n\n\n\n\nbuscar_referencia(texto)\nHerramienta\nSolo lectura de la biblioteca Zotero exportada\nBajo\n\n\nverificar_doi(doi)\nHerramienta\nLlamada a la API de Crossref\nBajo; el contenido externo se trata como datos\n\n\nbiblioteca://tesis\nRecurso\nLectura del archivo BibTeX\nBajo\n\n\nañadir_referencia(...)\n—\nNo se implementa: escribir exige revisión humana\n—\n\n\n\nDecisiones: transporte stdio (local), sin claves en el código, registro de todas las llamadas y documentación de qué datos ve el asistente.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#ejercicios-graduados",
+    "href": "06-mcp.html#ejercicios-graduados",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué tipo de capacidad MCP sería «plantilla para revisar el formato APA de una referencia»?\n\nVer solución\nUna plantilla (prompt): una instrucción predefinida que la persona elige usar.\n\nAvanzado. Implementa en Python con FastMCP las dos herramientas de solo lectura de la tabla y pruébalas con el MCP Inspector.\n\nVer solución\nCada herramienta debe tener anotaciones de tipo, docstring clara, manejo de errores (DOI inexistente, sin conexión) y devolver datos estructurados; el análisis de riesgos va en el README.",
     "crumbs": [
       "Capítulos",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"

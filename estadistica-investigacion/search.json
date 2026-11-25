@@ -116,6 +116,28 @@
     ]
   },
   {
+    "objectID": "01-pensar.html#caso-práctico-resuelto",
+    "href": "01-pensar.html#caso-práctico-resuelto",
+    "title": "Capítulo 1. Pensar con datos",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDe la pregunta al análisis: un plan antes de mirar los datos\n\n\n\nPregunta: ¿duermen menos los doctorandos con más ansiedad?\n\nTipo de pregunta: asociación (no causal), en una muestra observacional.\nVariables: ansiedad (escala continua), horas de sueño (continua); covariables posibles: horas de trabajo, grupo.\nAnálisis previsto: correlación y regresión lineal del sueño sobre la ansiedad, con intervalo de confianza.\nDecisiones fijadas antes: exclusiones (cuestionarios incompletos), tratamiento de valores extremos, umbral de significación o, mejor, interpretación por el tamaño del efecto.\nInterpretación prevista: «se asocia con», nunca «causa».\n\nEscribir el plan antes de ver los datos (y, si es posible, preregistrarlo) protege frente al «jardín de los senderos que se bifurcan».",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Pensar con datos</span>"
+    ]
+  },
+  {
+    "objectID": "01-pensar.html#ejercicios-graduados",
+    "href": "01-pensar.html#ejercicios-graduados",
+    "title": "Capítulo 1. Pensar con datos",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Clasifica la pregunta «¿Mejora la nota un taller de técnicas de estudio asignado al azar?»: descriptiva, de asociación o causal.\n\nVer solución\nCausal: hay una intervención asignada al azar, lo que permite atribuir las diferencias al taller.\n\nAvanzado. Escribe un plan de análisis de cinco puntos para una pregunta de tu tesis.\n\nVer solución\nDebe incluir tipo de pregunta, variables y unidades, análisis principal, decisiones fijadas de antemano y cómo se interpretará un resultado nulo.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Pensar con datos</span>"
+    ]
+  },
+  {
     "objectID": "01-pensar.html#actividades",
     "href": "01-pensar.html#actividades",
     "title": "Capítulo 1. Pensar con datos",
@@ -215,6 +237,28 @@
     ]
   },
   {
+    "objectID": "02-describir.html#caso-práctico-resuelto",
+    "href": "02-describir.html#caso-práctico-resuelto",
+    "title": "Capítulo 2. Describir y visualizar",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDescribir una variable asimétrica\n\n\n\nLas citas de un grupo de 20 artículos: 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 8, 9, 10, 12, 140.\n\nMedia: 11,4. Mediana: 4,5. La media se dispara por un solo artículo.\nDesviación típica muy alta; el rango intercuartílico (de 2 a 7,5) describe mejor la dispersión típica.\nGráfico: un histograma o un diagrama de caja muestra la asimetría y el valor atípico; un gráfico de barras con la media lo ocultaría.\n\nRegla práctica: con distribuciones asimétricas, informa de la mediana y el rango intercuartílico, y muestra los datos.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Describir y visualizar</span>"
+    ]
+  },
+  {
+    "objectID": "02-describir.html#ejercicios-graduados",
+    "href": "02-describir.html#ejercicios-graduados",
+    "title": "Capítulo 2. Describir y visualizar",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué medida de tendencia central usarías para los ingresos de una población? ¿Por qué?\n\nVer solución\nLa mediana: los ingresos son muy asimétricos y unos pocos valores muy altos elevan la media.\n\nAvanzado. Con el conjunto estudio.csv del libro, describe la variable horas con medidas y un gráfico adecuados y justifica la elección.\n\nVer solución\nComprueba primero la forma de la distribución; si es aproximadamente simétrica, media y desviación típica son adecuadas; si no, mediana y rango intercuartílico. El gráfico debe mostrar la distribución, no solo un resumen.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Describir y visualizar</span>"
+    ]
+  },
+  {
     "objectID": "02-describir.html#actividades",
     "href": "02-describir.html#actividades",
     "title": "Capítulo 2. Describir y visualizar",
@@ -308,6 +352,28 @@
     "title": "Capítulo 3. Estimar con incertidumbre",
     "section": "3. Remuestreo: el bootstrap",
     "text": "3. Remuestreo: el bootstrap\nCuando no hay una fórmula sencilla (por ejemplo, para una mediana), el bootstrap aproxima la distribución muestral remuestreando con reemplazo los propios datos muchas veces.\n\n\n\n\n\n\n\nEjercicio 3.1\nCalcula el error típico de la nota media: la desviación típica entre la raíz del tamaño de la muestra.\n\n\n\n\n\n\n\n\nLa raíz cuadrada en R es sqrt().\n\n\nsd(d$nota) / sqrt(nrow(d))\nUnos 0,14 puntos. El IC 95 % es, aproximadamente, la media ± 2 errores típicos.\n\n\n\n\nEjercicio 3.2\nCalcula el intervalo de confianza del 99 % de la nota media.\n\n\n\n\n\n\n\n\nEl 99 % se escribe 0.99.\n\n\nt.test(d$nota, conf.level = 0.99)$conf.int\nMás ancho que el del 95 %: más confianza exige un intervalo mayor.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Estimar con incertidumbre</span>"
+    ]
+  },
+  {
+    "objectID": "03-estimar.html#caso-práctico-resuelto",
+    "href": "03-estimar.html#caso-práctico-resuelto",
+    "title": "Capítulo 3. Estimar con incertidumbre",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaInterpretar un intervalo de confianza\n\n\n\nEn una muestra de 120 doctorandos, la media de horas de sueño es 6,8 con un intervalo de confianza del 95 % de [6,6; 7,0].\n\nInterpretación correcta: el procedimiento que genera estos intervalos captura el valor poblacional en el 95 % de las muestras; los valores entre 6,6 y 7,0 son compatibles con los datos.\nInterpretación incorrecta: «hay un 95 % de probabilidad de que la media verdadera esté entre 6,6 y 7,0» (en el enfoque frecuentista, el parámetro es fijo; la probabilidad se refiere al procedimiento).\nPrecisión: un intervalo estrecho indica una estimación precisa; para reducirlo a la mitad hace falta aproximadamente cuadruplicar la muestra.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Estimar con incertidumbre</span>"
+    ]
+  },
+  {
+    "objectID": "03-estimar.html#ejercicios-graduados",
+    "href": "03-estimar.html#ejercicios-graduados",
+    "title": "Capítulo 3. Estimar con incertidumbre",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Si con n = 100 el margen de error es ±0,4, ¿qué margen aproximado tendrás con n = 400?\n\nVer solución\nAproximadamente ±0,2: el error típico depende de 1/√n, y √400 = 2 × √100.\n\nAvanzado. Simula en R 100 intervalos de confianza de muestras de una población conocida y cuenta cuántos contienen el valor verdadero.\n\nVer solución\nDeberían ser alrededor de 95. Este ejercicio muestra que la confianza es una propiedad del procedimiento, no de un intervalo concreto.",
     "crumbs": [
       "Capítulos",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Estimar con incertidumbre</span>"
@@ -424,6 +490,28 @@
     ]
   },
   {
+    "objectID": "04-contrastes.html#caso-práctico-resuelto",
+    "href": "04-contrastes.html#caso-práctico-resuelto",
+    "title": "Capítulo 4. Contrastes y valores p",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaLeer bien un valor p\n\n\n\nUn estudio informa: diferencia de 3 puntos en la nota entre quienes hicieron un taller y quienes no; t(118) = 2,1; p = 0,038.\nLo que significa: si no hubiera ninguna diferencia en la población, sería poco frecuente (en torno al 4 % de las veces) observar una diferencia como esta o mayor.\nLo que no significa:\n\nNo es la probabilidad de que la hipótesis nula sea cierta.\nNo dice que el efecto sea grande o importante: hay que mirar el tamaño del efecto y su intervalo.\np = 0,038 y p = 0,052 no son resultados opuestos: la evidencia es muy parecida.\n\nInforme completo: diferencia de 3 puntos, IC 95 % [0,2; 5,8], d de Cohen ≈ 0,38, p = 0,038.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Contrastes y valores *p*</span>"
+    ]
+  },
+  {
+    "objectID": "04-contrastes.html#ejercicios-graduados",
+    "href": "04-contrastes.html#ejercicios-graduados",
+    "title": "Capítulo 4. Contrastes y valores p",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Un estudio obtiene p = 0,30. ¿Demuestra que no hay efecto?\n\nVer solución\nNo: un resultado no significativo no demuestra la ausencia de efecto. Puede deberse a poca potencia; hay que mirar el intervalo de confianza para ver qué efectos son compatibles con los datos.\n\nAvanzado. Busca en un artículo de tu campo un resultado con valor p y reescribe su descripción con tamaño del efecto e intervalo de confianza.\n\nVer solución\nLa reescritura debe sustituir «significativo» por la magnitud del efecto con su incertidumbre y valorar su relevancia práctica.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Contrastes y valores *p*</span>"
+    ]
+  },
+  {
     "objectID": "04-contrastes.html#actividades",
     "href": "04-contrastes.html#actividades",
     "title": "Capítulo 4. Contrastes y valores p",
@@ -523,6 +611,28 @@
     ]
   },
   {
+    "objectID": "05-efecto-potencia.html#caso-práctico-resuelto",
+    "href": "05-efecto-potencia.html#caso-práctico-resuelto",
+    "title": "Capítulo 5. Tamaño del efecto y potencia",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaCalcular el tamaño muestral antes de empezar\n\n\n\nQuieres comparar la ansiedad de dos grupos. Estudios previos sugieren un efecto pequeño-moderado, d = 0,3. Con α = 0,05 bilateral y potencia del 80 %:\n\nEn R: power.t.test(delta = 0.3, sd = 1, sig.level = 0.05, power = 0.8) devuelve unas 176 personas por grupo.\nSi solo puedes reclutar 50 por grupo, la potencia para d = 0,3 es de un 32 %: lo más probable es no detectar el efecto aunque exista.\n\nOpciones: colaborar con otros grupos para aumentar la muestra, usar un diseño intrasujeto (más eficiente), medir con menos error o plantear el estudio como piloto y estimar el efecto en lugar de contrastarlo.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Tamaño del efecto y potencia</span>"
+    ]
+  },
+  {
+    "objectID": "05-efecto-potencia.html#ejercicios-graduados",
+    "href": "05-efecto-potencia.html#ejercicios-graduados",
+    "title": "Capítulo 5. Tamaño del efecto y potencia",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué pasa con el tamaño muestral necesario si el efecto esperado se reduce a la mitad?\n\nVer solución\nSe multiplica aproximadamente por cuatro, porque el tamaño muestral depende del inverso del cuadrado del efecto.\n\nAvanzado. Calcula con power.t.test el tamaño muestral para d = 0,2, 0,5 y 0,8 y comenta qué implicaciones tiene para tu investigación.\n\nVer solución\nAproximadamente 394, 64 y 26 por grupo. Los efectos pequeños, frecuentes en las ciencias sociales, exigen muestras grandes.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Tamaño del efecto y potencia</span>"
+    ]
+  },
+  {
     "objectID": "05-efecto-potencia.html#actividades",
     "href": "05-efecto-potencia.html#actividades",
     "title": "Capítulo 5. Tamaño del efecto y potencia",
@@ -616,6 +726,28 @@
     "title": "Capítulo 6. Regresión",
     "section": "Laboratorio: un punto puede cambiarlo todo",
     "text": "Laboratorio: un punto puede cambiarlo todo\n\n\nLaboratorio · se ejecuta en tu navegador\n\nDiez puntos sin relación aparente y un undécimo que puedes mover. Un punto alejado en el eje x (con mucha palanca) puede crear o destruir una pendiente.\n\nrango = window.Lab.rango\nviewof q_x = rango(\"Posición x del punto móvil\", [0, 20], {step: 0.5, value: 5})\nviewof q_y = rango(\"Posición y del punto móvil\", [0, 20], {step: 0.5, value: 5})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const base = [[2, 5], [3, 7], [4, 4], [5, 6], [5.5, 5], [6, 7.5], [6.5, 4.5], [7, 6], [8, 5], [9, 6.5]];\n  const pts = base.concat([[q_x, q_y]]);\n  const n = pts.length, mx = pts.reduce((s, p) =&gt; s + p[0], 0) / n, my = pts.reduce((s, p) =&gt; s + p[1], 0) / n;\n  const sxy = pts.reduce((s, p) =&gt; s + (p[0] - mx) * (p[1] - my), 0), sxx = pts.reduce((s, p) =&gt; s + (p[0] - mx) ** 2, 0), syy = pts.reduce((s, p) =&gt; s + (p[1] - my) ** 2, 0);\n  const b = sxy / sxx, a = my - b * mx, r = sxy / Math.sqrt(sxx * syy);\n  const X = x =&gt; 30 + x * 22, Y = y =&gt; 220 - y * 10;\n  const f = v =&gt; v.toFixed(2).replace(\".\", \",\");\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;Pendiente = &lt;strong&gt;${f(b)}&lt;/strong&gt; · &lt;em&gt;r&lt;/em&gt; = ${f(r)}&lt;/p&gt;\n   &lt;svg viewBox=\"0 0 480 240\" width=\"100%\" style=\"max-width:480px\" role=\"img\" aria-label=\"Diagrama de dispersión con once puntos y su recta; pendiente ${f(b)}\"&gt;\n   &lt;line x1=\"30\" y1=\"220\" x2=\"470\" y2=\"220\" stroke=\"currentColor\" stroke-opacity=\".4\"/&gt;&lt;line x1=\"30\" y1=\"10\" x2=\"30\" y2=\"220\" stroke=\"currentColor\" stroke-opacity=\".4\"/&gt;\n   &lt;line x1=\"${X(0)}\" y1=\"${Y(a)}\" x2=\"${X(20)}\" y2=\"${Y(a + b * 20)}\" stroke=\"#2a78d6\" stroke-width=\"2\"/&gt;\n   ${base.map(p =&gt; `&lt;circle cx=\"${X(p[0])}\" cy=\"${Y(p[1])}\" r=\"5\" fill=\"#2a78d6\"/&gt;`).join(\"\")}\n   &lt;circle cx=\"${X(q_x)}\" cy=\"${Y(q_y)}\" r=\"7\" fill=\"#eb6834\"/&gt;&lt;/svg&gt;\n   &lt;p class=\"small\"&gt;Lleva el punto naranja a x = 20, y = 20: aparece una relación «fuerte» creada por un solo dato. Revisa siempre los puntos influyentes (en R, &lt;code&gt;cooks.distance()&lt;/code&gt;).&lt;/p&gt;`;\n  return d;\n}\n\n\n\n\n\n\n\n\nEjercicio 6.1\nUsa el modelo m1 para predecir la nota de alguien que estudia 20 horas a la semana.\n\n\n\n\n\n\n\n\nSustituye el hueco por 20.\n\n\npredict(m1, newdata = data.frame(horas = 20))\nUnos 7,2 puntos. Con interval = \"prediction\" verás el intervalo para una persona concreta, mucho más ancho que el de la media.\n\n\n\n\nEjercicio 6.2\nCalcula el R² del modelo con horas y sueño.\n\n\n\n\n\n\n\n\nLa variable del sueño se llama sueno.\n\n\nm &lt;- lm(nota ~ horas + sueno, data = d)\nsummary(m)$r.squared\nAlgo mayor que con solo las horas. El R² siempre sube al añadir predictores, aunque no aporten nada: por eso existe el R² ajustado.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Regresión</span>"
+    ]
+  },
+  {
+    "objectID": "06-regresion.html#caso-práctico-resuelto",
+    "href": "06-regresion.html#caso-práctico-resuelto",
+    "title": "Capítulo 6. Regresión",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaInterpretar los coeficientes de una regresión\n\n\n\nModelo: nota ~ horas + sueno con los datos del libro. Supongamos que el resultado es: intersección 4,1; horas 0,05; sueño 0,30.\n\nhoras = 0,05: por cada hora semanal más de estudio, la nota aumenta en promedio 0,05 puntos, manteniendo constante el sueño.\nsueno = 0,30: cada hora más de sueño se asocia con 0,3 puntos más, a igualdad de horas de estudio.\nIntersección: nota prevista con 0 horas de estudio y 0 de sueño: no tiene sentido sustantivo; centrar las variables la hace interpretable (nota prevista para valores medios).\nR² indica la proporción de la variación explicada, no si el modelo es causal ni si está bien especificado: hay que revisar los residuos.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Regresión</span>"
+    ]
+  },
+  {
+    "objectID": "06-regresion.html#ejercicios-graduados",
+    "href": "06-regresion.html#ejercicios-graduados",
+    "title": "Capítulo 6. Regresión",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué significa un coeficiente de 0,30 para «sueño» en la regresión anterior?\n\nVer solución\nQue, a igualdad de horas de estudio, cada hora adicional de sueño se asocia con 0,3 puntos más de nota media en la muestra. No implica causalidad.\n\nAvanzado. Ajusta el modelo con las variables centradas e interpreta de nuevo la intersección.\n\nVer solución\nCon scale(x, scale = FALSE) o restando la media, la intersección pasa a ser la nota prevista para un doctorando con horas y sueño medios; los demás coeficientes no cambian.",
     "crumbs": [
       "Capítulos",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Regresión</span>"
@@ -726,6 +858,28 @@
     "title": "Capítulo 7. Introducción a la inferencia bayesiana",
     "section": "4. ¿Cuándo usar el enfoque bayesiano?",
     "text": "4. ¿Cuándo usar el enfoque bayesiano?\n\nCuando hay información previa legítima que conviene incorporar.\nCon muestras pequeñas o modelos complejos (multinivel), donde las previas estabilizan las estimaciones.\nCuando se quiere cuantificar la evidencia a favor de la nula.\nCuando se quiere hablar en términos de probabilidad de los parámetros.\n\nEn R, paquetes como brms o rstanarm ajustan modelos bayesianos con una sintaxis parecida a lm(), y BayesFactor calcula factores de Bayes. Fuera del navegador, son el siguiente paso natural tras este capítulo.\n\nEjercicio 7.1\nCon una previa Beta(1, 1) y 15 aprobados de 20, calcula la media de la posterior: (a + k) / (a + b + n).\n\n\n\n\n\n\n\nEl denominador suma a, b y el número de observaciones n.\n\n\na &lt;- 1; b &lt;- 1; k &lt;- 15; n &lt;- 20\n(a + k) / (a + b + n)\n0,727: un poco por debajo de la proporción observada (0,75), atraída hacia la media de la previa (0,5).\n\n\n\n\nEjercicio 7.2\nCalcula el intervalo de credibilidad del 95 % de esa posterior, Beta(16, 6).\n\n\n\n\n\n\n\nEl límite superior es el cuantil 0,975.\n\n\nqbeta(c(0.025, 0.975), 16, 6)",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 7. Introducción a la inferencia bayesiana</span>"
+    ]
+  },
+  {
+    "objectID": "07-bayes.html#caso-práctico-resuelto",
+    "href": "07-bayes.html#caso-práctico-resuelto",
+    "title": "Capítulo 7. Introducción a la inferencia bayesiana",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaActualizar una creencia con datos\n\n\n\nQuieres estimar la proporción de doctorandos que publican durante el primer año. A priori, por estudios previos, crees que ronda el 20 % (distribución Beta(2, 8)). Observas 15 que publican de 40.\n\nPosterior: Beta(2 + 15, 8 + 25) = Beta(17, 33).\nMedia posterior: 17 / 50 = 0,34. Los datos (15/40 = 0,375) acercan la estimación hacia ellos, moderados por la información previa.\nIntervalo de credibilidad del 95 %: aproximadamente [0,22; 0,47]; aquí sí puede decirse que hay un 95 % de probabilidad (según el modelo) de que la proporción esté en ese intervalo.\n\nCon más datos, la información previa pesa cada vez menos.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 7. Introducción a la inferencia bayesiana</span>"
+    ]
+  },
+  {
+    "objectID": "07-bayes.html#ejercicios-graduados",
+    "href": "07-bayes.html#ejercicios-graduados",
+    "title": "Capítulo 7. Introducción a la inferencia bayesiana",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. Con una previa Beta(1, 1) y 15 éxitos en 20 intentos, ¿cuál es la media posterior?\n\nVer solución\n(1 + 15) / (1 + 1 + 20) = 16 / 22 ≈ 0,73.\n\nAvanzado. Compara la posterior con tres previas distintas (poco informativa, optimista y pesimista) para los mismos datos y comenta la sensibilidad del resultado.\n\nVer solución\nCon pocos datos, la previa influye bastante; con muchos, las tres posteriores convergen. Informar del análisis de sensibilidad es una buena práctica.",
     "crumbs": [
       "Capítulos",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 7. Introducción a la inferencia bayesiana</span>"

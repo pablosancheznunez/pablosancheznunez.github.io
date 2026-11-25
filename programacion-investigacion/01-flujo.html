@@ -447,6 +447,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-1.1-python" id="toc-ejercicio-1.1-python" class="nav-link" data-scroll-target="#ejercicio-1.1-python">Ejercicio 1.1 · Python</a></li>
   <li><a href="#ejercicio-1.2-r" id="toc-ejercicio-1.2-r" class="nav-link" data-scroll-target="#ejercicio-1.2-r">Ejercicio 1.2 · R</a></li>
   </ul></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-p1" id="toc-reto-p1" class="nav-link" data-scroll-target="#reto-p1">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -777,6 +779,44 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicDFfbm9tYnJlX3IifSwi
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InAxX25vbWJyZV9yIn0sImNvZGUiOiJpZiAoaWRlbnRpY2FsKC5yZXN1bHQsIFwiMjAyNi0wMy0wN19lbmN1ZXN0YS5jc3ZcIikpIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBcIkNvcnJlY3RvLlwiKSBlbHNlXG4gIGxpc3QoY29ycmVjdCA9IEZBTFNFLCBtZXNzYWdlID0gXCJEZWJlIHF1ZWRhciAyMDI2LTAzLTA3X2VuY3Vlc3RhLmNzdlwiKSJ9
 </script>
 </section>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Rescatar un proyecto desordenado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Una carpeta real de tesis: <code>datos_final.xlsx</code>, <code>datos_final_v2_BUENO.xlsx</code>, <code>analisis.R</code>, <code>analisis_copia.R</code>, <code>grafico1.png</code>… Plan de rescate en una tarde:</p>
+<ol type="1">
+<li><strong>Estructura:</strong> crear <code>datos/brutos</code>, <code>datos/procesados</code>, <code>codigo</code>, <code>resultados</code>; mover los originales a <code>brutos</code> y no tocarlos más.</li>
+<li><strong>Identificar el script vigente</strong> comparando fechas y contenido; borrar las copias tras guardarlas en Git.</li>
+<li><strong>Git:</strong> <code>git init</code>, un primer <em>commit</em> con todo y, a partir de ahí, cambios pequeños con mensajes claros.</li>
+<li><strong>Un script maestro</strong> que ejecute en orden: limpieza → análisis → figuras.</li>
+<li><strong>Entorno:</strong> <code>renv::init()</code> o <code>uv init</code> para fijar versiones.</li>
+<li><strong>README</strong> con cómo reproducir los resultados.</li>
+</ol>
+<p>Prueba final: clonar el repositorio en otra carpeta y ejecutar el script maestro sin tocar nada.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> ¿Qué mensaje de <em>commit</em> es mejor: «cambios» o «Excluye cuestionarios incompletos antes del análisis»?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>El segundo: explica qué cambia y por qué, y permite encontrar el cambio más tarde en el historial.</p>
+</div>
+<p><strong>Avanzado.</strong> Aplica el plan de rescate a un proyecto tuyo y documenta en el README los pasos para reproducirlo.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>El README debe indicar requisitos, cómo instalar el entorno, el orden de ejecución, qué produce cada script y la licencia de los datos y del código.</p>
+</div>
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>

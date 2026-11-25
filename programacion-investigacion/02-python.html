@@ -443,6 +443,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-2.2-una-función" id="toc-ejercicio-2.2-una-función" class="nav-link" data-scroll-target="#ejercicio-2.2-una-función">Ejercicio 2.2 · Una función</a></li>
   <li><a href="#ejercicio-2.3-pandas" id="toc-ejercicio-2.3-pandas" class="nav-link" data-scroll-target="#ejercicio-2.3-pandas">Ejercicio 2.3 · pandas</a></li>
   </ul></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-p2" id="toc-reto-p2" class="nav-link" data-scroll-target="#reto-p2">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
@@ -645,6 +647,43 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicDJfcGFuZGFzIn0sImNv
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InAyX3BhbmRhcyJ9LCJjb2RlIjoiaW1wb3J0IHBhbmRhcyBhcyBwZFxuZXNwZXJhZG8gPSBwZC50b19udW1lcmljKHBkLnJlYWRfY3N2KFwiZGF0b3MvcHVibGljYWNpb25lcy5jc3ZcIilbXCJjaXRhc1wiXSwgZXJyb3JzPVwiY29lcmNlXCIpLm1lZGlhbigpXG5pZiByZXN1bHQgPT0gZXNwZXJhZG86XG4gICAgZmVlZGJhY2sgPSB7XCJjb3JyZWN0XCI6IFRydWUsIFwibWVzc2FnZVwiOiBmXCJDb3JyZWN0bzogbWVkaWFuYSA9IHtlc3BlcmFkbzpnfSBjaXRhcy5cIn1cbmVsc2U6XG4gICAgZmVlZGJhY2sgPSB7XCJjb3JyZWN0XCI6IEZhbHNlLCBcIm1lc3NhZ2VcIjogXCJVc2EgLm1lZGlhbigpLlwifVxuZmVlZGJhY2sifQ==
 </script>
 </section>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>De un bucle a pandas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tarea: calcular la media de citas por año.</p>
+<p>Versión con bucle y diccionarios:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>suma, n <span class="op">=</span> {}, {}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fila <span class="kw">in</span> registros:</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> fila[<span class="st">"anio"</span>]<span class="op">;</span> suma[a] <span class="op">=</span> suma.get(a, <span class="dv">0</span>) <span class="op">+</span> fila[<span class="st">"citas"</span>]<span class="op">;</span> n[a] <span class="op">=</span> n.get(a, <span class="dv">0</span>) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>medias <span class="op">=</span> {a: suma[a] <span class="op">/</span> n[a] <span class="cf">for</span> a <span class="kw">in</span> suma}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Versión con pandas, vectorizada:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>medias <span class="op">=</span> pub.groupby(<span class="st">"anio"</span>)[<span class="st">"citas"</span>].mean()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La segunda es más corta, más legible y menos propensa a errores. El bucle sigue siendo útil para entender qué hace <code>groupby</code> o para estructuras que no son tablas (JSON anidado).</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> ¿Qué devuelve <code>[c * 2 for c in [1, 2, 3] if c &gt; 1]</code>?</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p><code>[4, 6]</code>: filtra los elementos mayores que 1 y los multiplica por 2.</p>
+</div>
+<p><strong>Avanzado.</strong> Escribe una función que reciba un DataFrame de publicaciones y devuelva, por año, el número de artículos, la mediana de citas y el porcentaje en acceso abierto.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Puede usarse <code>groupby('anio').agg(n=('id', 'count'), mediana=('citas', 'median'), oa=('oa', 'mean'))</code> y multiplicar <code>oa</code> por 100. Conviene documentarla y probarla con un DataFrame pequeño.</p>
+</div>
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
