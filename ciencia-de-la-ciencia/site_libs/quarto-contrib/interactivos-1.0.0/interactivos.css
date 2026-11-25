@@ -76,4 +76,4 @@
 .laboratorio .btn.btn-outline-primary { background-color: transparent; border-color: var(--bs-primary); color: var(--bs-primary); }
 .laboratorio .btn.btn-outline-primary:hover { background-color: var(--bs-primary); color: var(--bs-body-bg); }
 .laboratorio mark { background: rgba(237, 161, 0, .35); color: inherit; padding: 0 .1em; }
-.laboratorio .lab-valor { min-width: 2.5rem; font-variant-numeric: tabular-nums; }
+.laboratorio .lab-valor { min-width: 2.5rem; flex-shrink: 0; white-space: nowrap; font-variant-numeric: tabular-nums; }

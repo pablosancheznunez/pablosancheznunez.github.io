@@ -1,6 +1,6 @@
 # Usar R en este libro
-# Ciencia de la ciencia y metaciencia
-# Pablo Sánchez-Núñez (UC3M) · https://doi.org/
+# Investigación sobre la investigación
+# Pablo Sánchez-Núñez (UC3M) · https://doi.org/10.5281/zenodo.24528120
 # Licencia del código: MIT · Libro: https://pablosancheznunez.com/ciencia-de-la-ciencia/
 #
 # Script con todo el código del capítulo, para ejecutarlo en RStudio o Positron.
