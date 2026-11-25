@@ -74,7 +74,7 @@
     banner.innerHTML =
       '<p>This site uses cookies from Google Analytics and Microsoft Clarity to understand how visitors use it. ' +
       'They are only set if you accept, and you can change your choice at any time. ' +
-      '<a href="/cookies/">Cookie policy</a></p>' +
+      '<a href="/cookies/" target="_blank" rel="noopener">Cookie policy</a></p>' +
       '<div class="cookie-actions"><button type="button" data-consent="granted">Accept</button>' +
       '<button type="button" data-consent="denied">Reject</button></div>';
     banner.addEventListener('click', function (e) {
