@@ -1,0 +1,1020 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Estadística para la investigación",
+    "section": "",
+    "text": "Presentación\nCasi todas las tesis acaban necesitando estadística, y casi todos los errores estadísticos publicados se deben a lo mismo: confundir lo que dicen los datos con lo que queremos que digan. Este libro no es un recetario de pruebas. Enseña a pensar con datos: formular bien la pregunta, describir antes de contrastar, estimar con su incertidumbre, interpretar un valor p sin mitos, planificar la muestra con la potencia y comunicar los resultados con honestidad.\nTodo se practica en R, en tu navegador, con un conjunto de datos simulado de 120 doctorandos ficticios (horas de estudio, sueño, ansiedad y nota en un examen de métodos) y con laboratorios que simulan miles de estudios para que veas cómo se comportan los métodos.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#mapa-del-libro",
+    "href": "index.html#mapa-del-libro",
+    "title": "Estadística para la investigación",
+    "section": "Mapa del libro",
+    "text": "Mapa del libro\n\n\n\nCapítulo\nPregunta\n\n\n\n\n1. Pensar con datos\n¿Qué pregunta hago y qué diseño puede responderla?\n\n\n2. Describir y visualizar\n¿Cómo son mis datos antes de cualquier prueba?\n\n\n3. Estimar con incertidumbre\n¿Qué rango de valores es compatible con mis datos?\n\n\n4. Contrastes y valores p\n¿Qué dice (y qué no) un valor p?\n\n\n5. Tamaño del efecto y potencia\n¿Cuánto importa el efecto y cuántos datos necesito?\n\n\n6. Regresión\n¿Cómo se relacionan varias variables a la vez?\n\n\n7. Introducción a la inferencia bayesiana\n¿Cómo actualizar lo que sabía con lo que observo?\n\n\n\nSi nunca has usado R, empieza por Usar R en este libro; el apéndice Chuleta de R reúne todas las funciones del libro.\nTu progreso se guarda solo en tu navegador. El libro funciona sin conexión una vez visitado.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html",
+    "href": "00-r-en-el-libro.html",
+    "title": "Usar R en este libro",
+    "section": "",
+    "text": "Cómo funcionan las celdas\nTodos los capítulos tienen ejercicios de R que se ejecutan en tu navegador, sin instalar nada. Este capítulo te explica lo justo en quince minutos; si ya usas R, puedes saltarlo.\nCada bloque de código tiene un botón Run Code. Puedes cambiar el código y volver a ejecutarlo; Start Over recupera la versión original. La primera vez que abres una página, el navegador descarga el motor de R (unos segundos).\nCon &lt;- se guarda un valor en un objeto. Un vector reúne varios valores con c(). Los textos van entre comillas:",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html#cómo-funcionan-las-celdas",
+    "href": "00-r-en-el-libro.html#cómo-funcionan-las-celdas",
+    "title": "Usar R en este libro",
+    "section": "",
+    "text": "Ejercicio 1\nDe 480 participantes, 24 abandonan el estudio. Calcula la proporción de abandonos.\n\n\n\n\n\n\n\nSustituye el hueco por el número total de participantes.\n\n\npertinentes &lt;- 24\nresultados &lt;- 480\npertinentes / resultados\n0,05: un 5 % de abandonos.\n\n\n\n\nEjercicio 2\n¿Cuántas filas tiene el conjunto de datos del libro? Usa nrow().\n\n\n\n\n\n\n\n\nLa función que cuenta filas es nrow().\n\n\nnrow(d)\n120 doctorandos ficticios. ncol(d) daría el número de columnas.",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html#autoevaluación",
+    "href": "00-r-en-el-libro.html#autoevaluación",
+    "title": "Usar R en este libro",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nEn R, los textos se escriben entre comillas. VERDADEROFALSO\nPara crear un vector con varios valores se usa la función length()c()toupper()\nlength(c(\"a\", \"b\", \"c\")) devuelve \nPara hacer los ejercicios del libro hay que instalar R en el ordenador. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nSin comillas, R buscaría un objeto con ese nombre.\nc() combina valores en un vector.\nTres elementos.\nSe ejecutan en el navegador con webR.",
+    "crumbs": [
+      "Usar R en este libro"
+    ]
+  },
+  {
+    "objectID": "01-pensar.html",
+    "href": "01-pensar.html",
+    "title": "Capítulo 1. Pensar con datos",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Pensar con datos</span>"
+    ]
+  },
+  {
+    "objectID": "01-pensar.html#lectura-obligatoria",
+    "href": "01-pensar.html#lectura-obligatoria",
+    "title": "Capítulo 1. Pensar con datos",
+    "section": "",
+    "text": "Leek, J. T.; Peng, R. D. (2015). What is the question? Science, 347(6228), 1314-1315.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Pensar con datos</span>"
+    ]
+  },
+  {
+    "objectID": "01-pensar.html#primero-la-pregunta",
+    "href": "01-pensar.html#primero-la-pregunta",
+    "title": "Capítulo 1. Pensar con datos",
+    "section": "1. Primero, la pregunta",
+    "text": "1. Primero, la pregunta\nLeek y Peng (2015) sostienen que el error estadístico más frecuente no es de cálculo, sino de pregunta: usar un análisis que responde a una pregunta distinta de la que se quería responder. Proponen seis tipos:\n\n\n\n\n\n\n\n\nTipo\nPregunta\nEjemplo\n\n\n\n\nDescriptiva\n¿Cómo son estos datos?\n¿Cuántas horas estudian, de media, los doctorandos de la muestra?\n\n\nExploratoria\n¿Qué patrones aparecen?\n¿Parece que quienes duermen más sacan mejor nota?\n\n\nInferencial\n¿Se mantiene el patrón en la población?\n¿Existe esa relación en todos los doctorandos de la universidad?\n\n\nPredictiva\n¿Puedo predecir un valor para alguien nuevo?\n¿Qué nota sacará una persona que estudia 20 horas?\n\n\nCausal\n¿Qué pasa si cambio una variable?\n¿Mejora la nota una tutoría semanal?\n\n\nMecanicista\n¿Por qué ocurre, paso a paso?\n¿Por qué vía actúa la tutoría: más horas, menos ansiedad…?\n\n\n\nCada tipo exige más que el anterior. Una correlación responde a una pregunta exploratoria o inferencial, no a una causal.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Pensar con datos</span>"
+    ]
+  },
+  {
+    "objectID": "01-pensar.html#variables-y-escalas",
+    "href": "01-pensar.html#variables-y-escalas",
+    "title": "Capítulo 1. Pensar con datos",
+    "section": "2. Variables y escalas",
+    "text": "2. Variables y escalas\n\n\n\n\n\n\n\n\n\nTipo\nValores\nEjemplos en nuestros datos\nResúmenes típicos\n\n\n\n\nCategórica nominal\nCategorías sin orden\ngrupo (tutoría, control)\nFrecuencias, proporciones\n\n\nCategórica ordinal\nCategorías con orden\nNivel de acuerdo de 1 a 5\nMediana, percentiles\n\n\nCuantitativa discreta\nRecuentos\nNúmero de artículos publicados\nMedia, mediana\n\n\nCuantitativa continua\nCualquier valor en un intervalo\nhoras, sueno, nota\nMedia, desviación típica, cuantiles",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Pensar con datos</span>"
+    ]
+  },
+  {
+    "objectID": "01-pensar.html#diseños-quién-decide-quién-recibe-qué",
+    "href": "01-pensar.html#diseños-quién-decide-quién-recibe-qué",
+    "title": "Capítulo 1. Pensar con datos",
+    "section": "3. Diseños: quién decide quién recibe qué",
+    "text": "3. Diseños: quién decide quién recibe qué\n\nEn un estudio observacional, el investigador mide lo que ocurre sin intervenir. Puede describir y encontrar asociaciones, pero las variables de confusión (factores que influyen a la vez en la supuesta causa y en el efecto) amenazan cualquier conclusión causal.\nEn un experimento aleatorizado, el azar decide quién recibe el tratamiento. Si la muestra es suficiente, la aleatorización equilibra en promedio las variables de confusión, medidas y no medidas: por eso permite inferir causas.\nEntre ambos están los cuasiexperimentos (diferencias en diferencias, regresión discontinua, variables instrumentales), que aprovechan situaciones naturales para aproximarse a una comparación justa.\n\n\n\n\n\n\n\nImportanteEn nuestros datos\n\n\n\ngrupo se asignó al azar (es un experimento simulado), así que la diferencia entre grupos estima el efecto causal de la tutoría. En cambio, horas, sueno y ansiedad se observaron: su relación con la nota es una asociación, que puede deberse a confusores (por ejemplo, la motivación).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Pensar con datos</span>"
+    ]
+  },
+  {
+    "objectID": "01-pensar.html#validez-interna-y-externa",
+    "href": "01-pensar.html#validez-interna-y-externa",
+    "title": "Capítulo 1. Pensar con datos",
+    "section": "4. Validez: interna y externa",
+    "text": "4. Validez: interna y externa\nLa validez interna pregunta si la conclusión es correcta para la muestra estudiada (¿hay confusión, sesgo de medida, abandonos?). La validez externa pregunta si se puede generalizar a otras personas, contextos o momentos. Una muestra de doctorandos de una sola universidad puede tener buena validez interna y una validez externa limitada.\n\nEjercicio 1.1\n¿Qué proporción del grupo de tutoría tiene una nota de 5 o más? Completa el código.\n\n\n\n\n\n\n\n\nEl grupo se llama tutoria (sin tilde).\n\n\ntut &lt;- d[d$grupo == \"tutoria\", ]\nmean(tut$nota &gt;= 5)\nLa media de un vector lógico es la proporción de TRUE. Es una pregunta descriptiva sobre la muestra.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Pensar con datos</span>"
+    ]
+  },
+  {
+    "objectID": "01-pensar.html#actividades",
+    "href": "01-pensar.html#actividades",
+    "title": "Capítulo 1. Pensar con datos",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Pensar con datos</span>"
+    ]
+  },
+  {
+    "objectID": "01-pensar.html#reto-c1",
+    "href": "01-pensar.html#reto-c1",
+    "title": "Capítulo 1. Pensar con datos",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 1 · La pregunta de tu tesis\n\n\n\n\nEscribe la pregunta principal de un estudio de tu tesis y clasifícala con la tipología de Leek y Peng.\nHaz una tabla de variables: nombre, tipo, cómo se mide y su papel (resultado, exposición, covariable).\nDibuja un diagrama causal sencillo (con flechas) con al menos dos posibles confusores.\nJustifica qué diseño puede responder a tu pregunta y qué limitaciones de validez interna y externa tendrá.\n\nEntrega: con la plantilla de entrega. Este reto no tiene solución en el libro.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Pensar con datos</span>"
+    ]
+  },
+  {
+    "objectID": "01-pensar.html#autoevaluación",
+    "href": "01-pensar.html#autoevaluación",
+    "title": "Capítulo 1. Pensar con datos",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nUna correlación entre horas de sueño y nota demuestra que dormir más mejora la nota. VERDADEROFALSO\nUna variable que influye a la vez en la supuesta causa y en el efecto se llama variable de \nLa aleatorización equilibra, en promedio, los confusores solo medidosmedidos y no medidossolo no medidos\nEl nivel de acuerdo de 1 a 5 es una variable nominalordinalcontinua\nGeneralizar los resultados a otras universidades es una cuestión de validez internaexterna\nSegún Leek y Peng, el error más frecuente es responder con el análisis a una pregunta distinta de la planteada. VERDADEROFALSO\nEn mean(x &gt;= 5), el resultado es la media de xla proporción de valores mayores o iguales que 5el número de valores mayores que 5\n¿Qué tipo de pregunta exige más del diseño?\n\n Descriptiva Exploratoria Causal o mecanicista\n\n\nVer explicaciones\n\nPuede haber confusores (motivación, salud…).\nConfounder.\nEsa es su gran ventaja.\nCategorías ordenadas.\nExterna: generalización.\nWhat is the question?\nMedia de un lógico = proporción.\nHacen falta diseños que controlen la confusión.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Pensar con datos</span>"
+    ]
+  },
+  {
+    "objectID": "02-describir.html",
+    "href": "02-describir.html",
+    "title": "Capítulo 2. Describir y visualizar",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Describir y visualizar</span>"
+    ]
+  },
+  {
+    "objectID": "02-describir.html#lectura-obligatoria",
+    "href": "02-describir.html#lectura-obligatoria",
+    "title": "Capítulo 2. Describir y visualizar",
+    "section": "",
+    "text": "Weissgerber, T. L.; Milic, N. M.; Winham, S. J.; Garovic, V. D. (2015). Beyond bar and line graphs: Time for a new data presentation paradigm. PLOS Biology, 13(4), e1002128.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Describir y visualizar</span>"
+    ]
+  },
+  {
+    "objectID": "02-describir.html#centro-y-dispersión",
+    "href": "02-describir.html#centro-y-dispersión",
+    "title": "Capítulo 2. Describir y visualizar",
+    "section": "1. Centro y dispersión",
+    "text": "1. Centro y dispersión\n\n\n\n\n\n\n\n\nMedida\nQué resume\nCuándo usarla\n\n\n\n\nMedia\nValor «de equilibrio»\nDistribuciones aproximadamente simétricas\n\n\nMediana\nValor central\nDistribuciones asimétricas o con atípicos\n\n\nDesviación típica\nDistancia típica a la media\nJunto a la media\n\n\nRango intercuartílico (IQR)\nAmplitud del 50 % central\nJunto a la mediana",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Describir y visualizar</span>"
+    ]
+  },
+  {
+    "objectID": "02-describir.html#mostrar-los-datos-no-solo-las-medias",
+    "href": "02-describir.html#mostrar-los-datos-no-solo-las-medias",
+    "title": "Capítulo 2. Describir y visualizar",
+    "section": "2. Mostrar los datos, no solo las medias",
+    "text": "2. Mostrar los datos, no solo las medias\nWeissgerber et al. (2015) revisaron artículos de fisiología y encontraron que la mayoría presentaba datos continuos con gráficos de barras de medias. El problema: distribuciones muy distintas (con atípicos, bimodales, con pocos datos) producen la misma barra. Recomiendan gráficos que muestren cada observación (diagramas de puntos o de dispersión) o, con muchos datos, diagramas de caja o de violín.\n\n\n\n\n\n\nFigura 1: La misma media puede esconder datos muy distintos. Las cuatro muestras tienen la misma media y casi la misma barra, pero sus puntos cuentan historias diferentes.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Describir y visualizar</span>"
+    ]
+  },
+  {
+    "objectID": "02-describir.html#relaciones-entre-dos-variables",
+    "href": "02-describir.html#relaciones-entre-dos-variables",
+    "title": "Capítulo 2. Describir y visualizar",
+    "section": "3. Relaciones entre dos variables",
+    "text": "3. Relaciones entre dos variables\nLa correlación de Pearson (r) mide la fuerza de una relación lineal entre −1 y 1. No mide relaciones curvas, es sensible a atípicos y no implica causalidad. Antes de calcularla, dibuja el diagrama de dispersión.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Describir y visualizar</span>"
+    ]
+  },
+  {
+    "objectID": "02-describir.html#lab-c2-cuarteto",
+    "href": "02-describir.html#lab-c2-cuarteto",
+    "title": "Capítulo 2. Describir y visualizar",
+    "section": "Laboratorio: el mismo resumen, datos distintos",
+    "text": "Laboratorio: el mismo resumen, datos distintos\n\n\nLaboratorio · se ejecuta en tu navegador\n\nEl cuarteto de Anscombe (1973) son cuatro conjuntos de datos con la misma media, la misma varianza y la misma correlación (r ≈ 0,82). Elige uno y mira el gráfico.\n\nseleccion = window.Lab.seleccion\nanscombe = ({\n  x: [10, 8, 13, 9, 11, 14, 6, 4, 12, 7, 5], x4: [8, 8, 8, 8, 8, 8, 8, 19, 8, 8, 8],\n  y1: [8.04, 6.95, 7.58, 8.81, 8.33, 9.96, 7.24, 4.26, 10.84, 4.82, 5.68],\n  y2: [9.14, 8.14, 8.74, 8.77, 9.26, 8.10, 6.13, 3.10, 9.13, 7.26, 4.74],\n  y3: [7.46, 6.77, 12.74, 7.11, 7.81, 8.84, 6.08, 5.39, 8.15, 6.42, 5.73],\n  y4: [6.58, 5.76, 7.71, 8.84, 8.47, 7.04, 5.25, 12.50, 5.56, 7.91, 6.89]})\nviewof conjunto = seleccion(\"Conjunto\", [[\"1\", \"I: relación lineal con ruido\"], [\"2\", \"II: relación curva\"], [\"3\", \"III: lineal con un atípico\"], [\"4\", \"IV: un solo punto palanca\"]], {value: \"1\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const k = +conjunto, xs = k === 4 ? anscombe.x4 : anscombe.x, ys = anscombe[\"y\" + k];\n  const n = xs.length, mx = xs.reduce((a, b) =&gt; a + b) / n, my = ys.reduce((a, b) =&gt; a + b) / n;\n  const sxy = xs.reduce((s, x, i) =&gt; s + (x - mx) * (ys[i] - my), 0), sxx = xs.reduce((s, x) =&gt; s + (x - mx) ** 2, 0), syy = ys.reduce((s, y) =&gt; s + (y - my) ** 2, 0);\n  const r = sxy / Math.sqrt(sxx * syy), b = sxy / sxx, a = my - b * mx;\n  const X = x =&gt; 40 + (x - 3) * 26, Y = y =&gt; 220 - (y - 2) * 16;\n  const pts = xs.map((x, i) =&gt; `&lt;circle cx=\"${X(x)}\" cy=\"${Y(ys[i])}\" r=\"5\" fill=\"#2a78d6\"/&gt;`).join(\"\");\n  const f = v =&gt; v.toFixed(2).replace(\".\", \",\");\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;Media de x = ${f(mx)} · media de y = ${f(my)} · &lt;em&gt;r&lt;/em&gt; = ${f(r)} · recta: y = ${f(a)} + ${f(b)}·x&lt;/p&gt;\n   &lt;svg viewBox=\"0 0 480 240\" width=\"100%\" style=\"max-width:480px\" role=\"img\" aria-label=\"Diagrama de dispersión del conjunto ${k} de Anscombe con su recta de regresión\"&gt;\n   &lt;line x1=\"40\" y1=\"220\" x2=\"470\" y2=\"220\" stroke=\"currentColor\" stroke-opacity=\".4\"/&gt;&lt;line x1=\"40\" y1=\"10\" x2=\"40\" y2=\"220\" stroke=\"currentColor\" stroke-opacity=\".4\"/&gt;\n   &lt;line x1=\"${X(3)}\" y1=\"${Y(a + b * 3)}\" x2=\"${X(19.5)}\" y2=\"${Y(a + b * 19.5)}\" stroke=\"#eb6834\" stroke-width=\"2\"/&gt;${pts}&lt;/svg&gt;\n   &lt;p class=\"small\"&gt;Los cuatro resúmenes son casi idénticos; los gráficos no. Moraleja: dibuja siempre antes de resumir.&lt;/p&gt;`;\n  return d;\n}\n\n\n\n\n\n\n\n\nEjercicio 2.1\nCalcula la mediana de las horas de estudio de cada grupo.\n\n\n\n\n\n\n\n\ntapply(variable, grupo, función) aplica la función a cada grupo; la función es median.\n\n\ntapply(d$horas, d$grupo, median)\n\n\n\n\nEjercicio 2.2\nCalcula la correlación entre ansiedad y sueño. ¿Es positiva o negativa?\n\n\n\n\n\n\n\n\nLa columna del sueño se llama sueno (sin eñe).\n\n\ncor(d$ansiedad, d$sueno)\nNegativa: en estos datos simulados, quienes duermen más tienden a tener menos ansiedad. Es una asociación, no una prueba de causalidad.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Describir y visualizar</span>"
+    ]
+  },
+  {
+    "objectID": "02-describir.html#actividades",
+    "href": "02-describir.html#actividades",
+    "title": "Capítulo 2. Describir y visualizar",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Describir y visualizar</span>"
+    ]
+  },
+  {
+    "objectID": "02-describir.html#reto-c2",
+    "href": "02-describir.html#reto-c2",
+    "title": "Capítulo 2. Describir y visualizar",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 2 · Rehacer una figura\n\n\n\n\nBusca en tu campo un artículo que presente datos continuos con un gráfico de barras de medias.\nExplica qué información oculta (tamaño de la muestra, distribución, atípicos).\nCon los datos del libro (o con datos tuyos), crea en R una figura que muestre cada observación y escribe un pie de figura completo y autosuficiente.\nAñade una tabla descriptiva con las medidas de centro y dispersión adecuadas.\n\nEntrega: con la plantilla de entrega. Este reto no tiene solución en el libro.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Describir y visualizar</span>"
+    ]
+  },
+  {
+    "objectID": "02-describir.html#autoevaluación",
+    "href": "02-describir.html#autoevaluación",
+    "title": "Capítulo 2. Describir y visualizar",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nCon una distribución muy asimétrica, la mediana describe mejor el valor típico que la media. VERDADEROFALSO\nLa medida de dispersión que acompaña a la mediana es el rango \nUna correlación de Pearson igual a 0 significa que no hay ninguna relación entre las variables. VERDADEROFALSO\nSegún Weissgerber et al. (2015), para datos continuos con muestras pequeñas conviene usar gráficos de barrasgráficos que muestren cada observacióngráficos de tarta\nLos cuatro conjuntos del cuarteto de Anscombe tienen gráficos idénticosresúmenes estadísticos casi idénticoscorrelaciones muy distintas\ntapply(d$nota, d$grupo, mean) calcula la media globalla media de la nota en cada grupola nota de cada persona\nLa correlación de Pearson mide la fuerza de una relación \n¿Qué debes hacer antes de calcular una correlación?\n\n Un contraste de hipótesis Dibujar el diagrama de dispersión Eliminar los valores atípicos\n\n\nVer explicaciones\n\nLa media se deja arrastrar por los extremos.\nIQR: percentil 75 menos percentil 25.\nPuede haber una relación curva fuerte con r ≈ 0.\nPuntos individuales, cajas o violines.\nEsa es su lección.\nUna media por grupo.\nSolo lineal.\nY no eliminar atípicos sin justificarlo.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Describir y visualizar</span>"
+    ]
+  },
+  {
+    "objectID": "03-estimar.html",
+    "href": "03-estimar.html",
+    "title": "Capítulo 3. Estimar con incertidumbre",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Estimar con incertidumbre</span>"
+    ]
+  },
+  {
+    "objectID": "03-estimar.html#lectura-obligatoria",
+    "href": "03-estimar.html#lectura-obligatoria",
+    "title": "Capítulo 3. Estimar con incertidumbre",
+    "section": "",
+    "text": "Cumming, G. (2014). The new statistics: Why and how. Psychological Science, 25(1), 7-29.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Estimar con incertidumbre</span>"
+    ]
+  },
+  {
+    "objectID": "03-estimar.html#una-muestra-es-una-de-muchas-posibles",
+    "href": "03-estimar.html#una-muestra-es-una-de-muchas-posibles",
+    "title": "Capítulo 3. Estimar con incertidumbre",
+    "section": "1. Una muestra es una de muchas posibles",
+    "text": "1. Una muestra es una de muchas posibles\nSi repitieras el estudio con otros 120 doctorandos, la media sería otra. La distribución muestral describe cómo varía un estadístico (la media, una diferencia, una pendiente) de muestra en muestra. Su desviación típica es el error típico: para una media, aproximadamente sd / sqrt(n). Cuanto mayor es la muestra, más precisa es la estimación, pero la precisión crece con la raíz de n: para reducir el error a la mitad hace falta cuadruplicar la muestra.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Estimar con incertidumbre</span>"
+    ]
+  },
+  {
+    "objectID": "03-estimar.html#el-intervalo-de-confianza",
+    "href": "03-estimar.html#el-intervalo-de-confianza",
+    "title": "Capítulo 3. Estimar con incertidumbre",
+    "section": "2. El intervalo de confianza",
+    "text": "2. El intervalo de confianza\nUn intervalo de confianza del 95 % es un procedimiento que, si se repitiera el estudio muchas veces, contendría el valor verdadero en el 95 % de las repeticiones. Para un estudio concreto, una forma práctica de leerlo (Cumming, 2014) es: el intervalo reúne los valores del parámetro razonablemente compatibles con los datos, y los valores del centro son más plausibles que los de los extremos.\n\n\n\n\n\n\nAdvertenciaInterpretaciones erróneas frecuentes\n\n\n\n\n«Hay un 95 % de probabilidad de que el valor verdadero esté en este intervalo». En la estadística frecuentista, el valor verdadero es fijo: o está o no está; el 95 % se refiere al procedimiento.\n«El 95 % de los datos está dentro del intervalo». El intervalo es para el parámetro (la media), no para las observaciones individuales.\n«Si dos intervalos se solapan, no hay diferencia». Pueden solaparse algo y la diferencia ser significativa: hay que calcular el intervalo de la diferencia.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Estimar con incertidumbre</span>"
+    ]
+  },
+  {
+    "objectID": "03-estimar.html#lab-c3-baile",
+    "href": "03-estimar.html#lab-c3-baile",
+    "title": "Capítulo 3. Estimar con incertidumbre",
+    "section": "Laboratorio: el baile de los intervalos",
+    "text": "Laboratorio: el baile de los intervalos\n\n\nLaboratorio · simulación en tu navegador\n\nSimulamos 50 estudios de la misma población (media verdadera = 50, desviación típica = 10). Cada línea es el intervalo de confianza de un estudio; en naranja, los que no contienen el valor verdadero. Cambia el tamaño de la muestra y el nivel de confianza, y pulsa Repetir.\n\nrango = window.Lab.rango\nseleccion = window.Lab.seleccion\nboton = window.Lab.boton\nviewof b_n = rango(\"Tamaño de cada muestra\", [5, 200], {step: 5, value: 20})\nviewof b_conf = seleccion(\"Nivel de confianza\", [[\"0.8\", \"80 %\"], [\"0.9\", \"90 %\"], [\"0.95\", \"95 %\"], [\"0.99\", \"99 %\"]], {value: \"0.95\"})\nviewof b_rep = boton(\"Repetir con 50 estudios nuevos\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  b_rep;\n  const z = {\"0.8\": 1.2816, \"0.9\": 1.6449, \"0.95\": 1.96, \"0.99\": 2.5758}[b_conf];\n  const nrm = () =&gt; Math.sqrt(-2 * Math.log(Math.random() || 1e-9)) * Math.cos(2 * Math.PI * Math.random());\n  const ics = Array.from({length: 50}, () =&gt; { const x = Array.from({length: b_n}, () =&gt; 50 + 10 * nrm());\n    const m = x.reduce((a, b) =&gt; a + b) / b_n, s = Math.sqrt(x.reduce((a, v) =&gt; a + (v - m) ** 2, 0) / (b_n - 1)), e = z * s / Math.sqrt(b_n);\n    return [m - e, m, m + e]; });\n  const fuera = ics.filter(([l, , u]) =&gt; l &gt; 50 || u &lt; 50).length;\n  const X = v =&gt; 20 + (v - 30) * 11;\n  const lin = ics.map(([l, m, u], i) =&gt; { const mal = l &gt; 50 || u &lt; 50; const c = mal ? \"#eb6834\" : \"#2a78d6\";\n    return `&lt;line x1=\"${X(Math.max(30, l))}\" x2=\"${X(Math.min(70, u))}\" y1=\"${10 + i * 6}\" y2=\"${10 + i * 6}\" stroke=\"${c}\" stroke-width=\"2.5\"/&gt;&lt;circle cx=\"${X(m)}\" cy=\"${10 + i * 6}\" r=\"1.8\" fill=\"${c}\"/&gt;`; }).join(\"\");\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;${50 - fuera} de 50 intervalos contienen la media verdadera (${fuera} no, en naranja). Lo esperado: ${Math.round(50 * +b_conf)}.&lt;/p&gt;\n   &lt;svg viewBox=\"0 0 480 320\" width=\"100%\" style=\"max-width:480px\" role=\"img\" aria-label=\"50 intervalos de confianza; ${fuera} no contienen el valor verdadero\"&gt;\n   &lt;line x1=\"${X(50)}\" x2=\"${X(50)}\" y1=\"4\" y2=\"312\" stroke=\"currentColor\" stroke-dasharray=\"4 3\"/&gt;${lin}\n   &lt;text x=\"${X(50) + 4}\" y=\"318\" font-size=\"10\" fill=\"currentColor\"&gt;media verdadera = 50&lt;/text&gt;&lt;/svg&gt;\n   &lt;p class=\"small\"&gt;Con muestras pequeñas, los intervalos son anchos y saltan mucho de un estudio a otro. Cualquier estudio concreto puede ser uno de los naranjas, y no hay forma de saberlo.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Estimar con incertidumbre</span>"
+    ]
+  },
+  {
+    "objectID": "03-estimar.html#remuestreo-el-bootstrap",
+    "href": "03-estimar.html#remuestreo-el-bootstrap",
+    "title": "Capítulo 3. Estimar con incertidumbre",
+    "section": "3. Remuestreo: el bootstrap",
+    "text": "3. Remuestreo: el bootstrap\nCuando no hay una fórmula sencilla (por ejemplo, para una mediana), el bootstrap aproxima la distribución muestral remuestreando con reemplazo los propios datos muchas veces.\n\n\n\n\n\n\n\nEjercicio 3.1\nCalcula el error típico de la nota media: la desviación típica entre la raíz del tamaño de la muestra.\n\n\n\n\n\n\n\n\nLa raíz cuadrada en R es sqrt().\n\n\nsd(d$nota) / sqrt(nrow(d))\nUnos 0,14 puntos. El IC 95 % es, aproximadamente, la media ± 2 errores típicos.\n\n\n\n\nEjercicio 3.2\nCalcula el intervalo de confianza del 99 % de la nota media.\n\n\n\n\n\n\n\n\nEl 99 % se escribe 0.99.\n\n\nt.test(d$nota, conf.level = 0.99)$conf.int\nMás ancho que el del 95 %: más confianza exige un intervalo mayor.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Estimar con incertidumbre</span>"
+    ]
+  },
+  {
+    "objectID": "03-estimar.html#actividades",
+    "href": "03-estimar.html#actividades",
+    "title": "Capítulo 3. Estimar con incertidumbre",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Estimar con incertidumbre</span>"
+    ]
+  },
+  {
+    "objectID": "03-estimar.html#reto-c3",
+    "href": "03-estimar.html#reto-c3",
+    "title": "Capítulo 3. Estimar con incertidumbre",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 3 · Reescribe unos resultados en clave de estimación\n\n\n\n\nToma un artículo de tu campo que informe solo de valores p («la diferencia fue significativa, p &lt; 0,05»).\nCon los datos que dé (medias, desviaciones, n), calcula los intervalos de confianza de los efectos principales.\nReescribe el párrafo de resultados centrado en cuánto efecto y con qué precisión, al estilo de Cumming (2014).\nDiscute si las conclusiones del artículo cambian con esta lectura.\n\nEntrega: con la plantilla de entrega. Este reto no tiene solución en el libro.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Estimar con incertidumbre</span>"
+    ]
+  },
+  {
+    "objectID": "03-estimar.html#autoevaluación",
+    "href": "03-estimar.html#autoevaluación",
+    "title": "Capítulo 3. Estimar con incertidumbre",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nPara reducir a la mitad el error típico de una media hay que multiplicar la muestra por 2410\nUn intervalo del 99 % es más estrecho que uno del 95 % con los mismos datos. VERDADEROFALSO\nEl IC 95 % contiene el 95 % de las observaciones individuales. VERDADEROFALSO\nLa desviación típica de la distribución muestral de un estadístico se llama error \nRemuestrear con reemplazo los propios datos para estimar la incertidumbre es el \nSi dos intervalos se solapan un poco, la diferencia nunca puede ser significativa. VERDADEROFALSO\nEn el laboratorio, con intervalos del 95 %, ¿cuántos de cada 50 esperas que no contengan la media verdadera? 02 o 325\n¿Qué propone Cumming con la «nueva estadística»?\n\n Abandonar los datos cuantitativos Centrarse en estimar efectos con intervalos y acumular evidencia con metaanálisis Usar solo valores p más pequeños\n\n\nVer explicaciones\n\nPrecisión ∝ raíz de n.\nMás confianza, más anchura.\nEs para el parámetro.\nStandard error.\nEfron, 1979.\nHay que mirar el intervalo de la diferencia.\nEl 5 % de 50 es 2,5.\nEstimación y metaanálisis.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. Estimar con incertidumbre</span>"
+    ]
+  },
+  {
+    "objectID": "04-contrastes.html",
+    "href": "04-contrastes.html",
+    "title": "Capítulo 4. Contrastes y valores p",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Contrastes y valores *p*</span>"
+    ]
+  },
+  {
+    "objectID": "04-contrastes.html#lectura-obligatoria",
+    "href": "04-contrastes.html#lectura-obligatoria",
+    "title": "Capítulo 4. Contrastes y valores p",
+    "section": "",
+    "text": "Wasserstein, R. L.; Lazar, N. A. (2016). The ASA statement on p-values: Context, process, and purpose. The American Statistician, 70(2), 129-133.\n\n\nLecturas complementarias\n\nGreenland, S.; Senn, S. J.; Rothman, K. J.; Carlin, J. B.; Poole, C.; Goodman, S. N.; Altman, D. G. (2016). Statistical tests, P values, confidence intervals, and power: A guide to misinterpretations. European Journal of Epidemiology, 31(4), 337-350.\nHalsey, L. G.; Curran-Everett, D.; Vowler, S. L.; Drummond, G. B. (2015). The fickle P value generates irreproducible results. Nature Methods, 12(3), 179-185.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Contrastes y valores *p*</span>"
+    ]
+  },
+  {
+    "objectID": "04-contrastes.html#la-lógica-del-contraste",
+    "href": "04-contrastes.html#la-lógica-del-contraste",
+    "title": "Capítulo 4. Contrastes y valores p",
+    "section": "1. La lógica del contraste",
+    "text": "1. La lógica del contraste\n\nSe plantea una hipótesis nula (H₀), normalmente «no hay efecto» o «no hay diferencia».\nSe calcula un estadístico que mide cuánto se alejan los datos de lo que predice H₀.\nEl valor p es la probabilidad de obtener un estadístico tan extremo o más que el observado si H₀ y todos los supuestos del modelo fueran ciertos.\nSi p es menor que un umbral α fijado de antemano (por convención, 0,05), se rechaza H₀.\n\nEste procedimiento controla a largo plazo dos errores: el de tipo I (rechazar H₀ cuando es cierta, con probabilidad α) y el de tipo II (no rechazarla cuando es falsa, con probabilidad β; la potencia es 1 − β, capítulo 5).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Contrastes y valores *p*</span>"
+    ]
+  },
+  {
+    "objectID": "04-contrastes.html#seis-principios-de-la-asa",
+    "href": "04-contrastes.html#seis-principios-de-la-asa",
+    "title": "Capítulo 4. Contrastes y valores p",
+    "section": "2. Seis principios de la ASA",
+    "text": "2. Seis principios de la ASA\nEn 2016, la American Statistical Association publicó por primera vez una declaración sobre un procedimiento concreto (Wasserstein y Lazar, 2016):\n\nLos valores p pueden indicar cuán incompatibles son los datos con un modelo estadístico concreto.\nNo miden la probabilidad de que la hipótesis sea cierta, ni la de que los datos se deban solo al azar.\nLas conclusiones científicas y las decisiones no deberían basarse solo en si p supera un umbral.\nUna inferencia correcta exige informar de todo con transparencia.\nUn valor p no mide el tamaño del efecto ni la importancia del resultado.\nPor sí solo, un valor p no es una buena medida de la evidencia sobre un modelo o una hipótesis.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Contrastes y valores *p*</span>"
+    ]
+  },
+  {
+    "objectID": "04-contrastes.html#lab-c4-p",
+    "href": "04-contrastes.html#lab-c4-p",
+    "title": "Capítulo 4. Contrastes y valores p",
+    "section": "3. Laboratorio: ¿cómo se distribuyen los valores p?",
+    "text": "3. Laboratorio: ¿cómo se distribuyen los valores p?\n\n\nLaboratorio · simulación en tu navegador\n\nSimulamos 2000 estudios con dos grupos. Si no hay efecto, los valores p se reparten de manera uniforme entre 0 y 1: un 5 % cae por debajo de 0,05 por puro azar. Si hay efecto, se amontonan cerca de 0, tanto más cuanto mayor es la potencia.\n\nrango = window.Lab.rango\nviewof p_d = rango(\"Tamaño del efecto real (d de Cohen)\", [0, 1], {step: 0.05, value: 0, formato: x =&gt; x.toFixed(2).replace(\".\", \",\")})\nviewof p_n = rango(\"Personas por grupo\", [5, 100], {step: 5, value: 20})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  let s = 3; const u = () =&gt; (s = (s * 16807) % 2147483647) / 2147483647;\n  const nrm = () =&gt; Math.sqrt(-2 * Math.log(u())) * Math.cos(2 * Math.PI * u());\n  const Phi = z =&gt; { const t = 1 / (1 + 0.2316419 * Math.abs(z)), d = 0.3989423 * Math.exp(-z * z / 2);\n    const p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274)))); return z &gt; 0 ? 1 - p : p; };\n  const ps = Array.from({length: 2000}, () =&gt; { let a = 0, b = 0; for (let i = 0; i &lt; p_n; i++) { a += nrm(); b += nrm() + p_d; }\n    const z = (b / p_n - a / p_n) / Math.sqrt(2 / p_n); return 2 * (1 - Phi(Math.abs(z))); });\n  const bins = Array(20).fill(0); ps.forEach(p =&gt; bins[Math.min(19, Math.floor(p * 20))]++);\n  const max = Math.max(...bins), sig = ps.filter(p =&gt; p &lt; 0.05).length / 2000;\n  const barras = bins.map((v, i) =&gt; `&lt;rect x=\"${30 + i * 22}\" y=\"${180 - 160 * v / max}\" width=\"20\" height=\"${160 * v / max}\" fill=\"${i === 0 ? \"#eb6834\" : \"#2a78d6\"}\"/&gt;`).join(\"\");\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;&lt;strong&gt;${(100 * sig).toFixed(1).replace(\".\", \",\")} %&lt;/strong&gt; de los estudios obtiene &lt;em&gt;p&lt;/em&gt; &lt; 0,05 ${p_d === 0 ? \"(todos son falsos positivos)\" : \"(es la potencia, aproximadamente)\"}.&lt;/p&gt;\n   &lt;svg viewBox=\"0 0 480 205\" width=\"100%\" style=\"max-width:480px\" role=\"img\" aria-label=\"Histograma de 2000 valores p entre 0 y 1\"&gt;${barras}\n   &lt;line x1=\"30\" x2=\"470\" y1=\"180\" y2=\"180\" stroke=\"currentColor\" stroke-opacity=\".4\"/&gt;\n   &lt;text x=\"30\" y=\"198\" font-size=\"10\" fill=\"currentColor\"&gt;0&lt;/text&gt;&lt;text x=\"250\" y=\"198\" font-size=\"10\" text-anchor=\"middle\" fill=\"currentColor\"&gt;0,5&lt;/text&gt;&lt;text x=\"470\" y=\"198\" font-size=\"10\" text-anchor=\"end\" fill=\"currentColor\"&gt;1&lt;/text&gt;&lt;/svg&gt;\n   &lt;p class=\"small\"&gt;En naranja, la barra de &lt;em&gt;p&lt;/em&gt; &lt; 0,05. Prueba d = 0,5 con 20 por grupo y después con 80: el mismo efecto, valores &lt;em&gt;p&lt;/em&gt; muy distintos de un estudio a otro.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Contrastes y valores *p*</span>"
+    ]
+  },
+  {
+    "objectID": "04-contrastes.html#contrastes-básicos-en-r",
+    "href": "04-contrastes.html#contrastes-básicos-en-r",
+    "title": "Capítulo 4. Contrastes y valores p",
+    "section": "4. Contrastes básicos en R",
+    "text": "4. Contrastes básicos en R\n\n\n\n\n\n\n\n\n\nPregunta\nDatos\nContraste\nEn R\n\n\n\n\n¿Difieren dos medias?\nDos grupos independientes\nt de Welch\nt.test(y ~ grupo)\n\n\n¿Cambia una medida antes y después?\nMedidas emparejadas\nt emparejada\nt.test(antes, despues, paired = TRUE)\n\n\n¿Difieren dos distribuciones sin suponer normalidad?\nDos grupos\nWilcoxon-Mann-Whitney\nwilcox.test(y ~ grupo)\n\n\n¿Difieren varias medias?\nTres o más grupos\nANOVA\naov(y ~ grupo)\n\n\n¿Están asociadas dos variables categóricas?\nTabla de frecuencias\nJi cuadrado\nchisq.test(tabla)\n\n\n¿Hay relación lineal?\nDos cuantitativas\nCorrelación\ncor.test(x, y)\n\n\n\n\n\n\n\n\n\nLa salida da el estadístico t, los grados de libertad, el valor p, el intervalo de confianza de la diferencia y las medias. Lee primero el intervalo: la tutoría podría mejorar la nota en casi un punto o empeorarla ligeramente; los datos son compatibles con un efecto nulo, pero también con uno moderado. «No significativo» no es «no hay efecto».",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Contrastes y valores *p*</span>"
+    ]
+  },
+  {
+    "objectID": "04-contrastes.html#muchas-pruebas-muchos-falsos-positivos",
+    "href": "04-contrastes.html#muchas-pruebas-muchos-falsos-positivos",
+    "title": "Capítulo 4. Contrastes y valores p",
+    "section": "5. Muchas pruebas, muchos falsos positivos",
+    "text": "5. Muchas pruebas, muchos falsos positivos\nCon 20 contrastes independientes y α = 0,05, la probabilidad de al menos un falso positivo es 1 − 0,95²⁰ ≈ 64 %. Las correcciones (Bonferroni, Holm, tasa de falsos descubrimientos) ajustan los valores p cuando se hacen muchas pruebas:\n\n\n\n\n\n\n\nEjercicio 4.1\n¿Está asociada la ansiedad con la nota? Calcula cor.test() y extrae el valor p.\n\n\n\n\n\n\n\n\nEl elemento con el valor p se llama p.value.\n\n\ncor.test(d$ansiedad, d$nota)$p.value\nMira también $conf.int: el intervalo de la correlación dice más que el valor p.\n\n\n\n\nEjercicio 4.2\nCalcula la probabilidad de al menos un falso positivo al hacer 10 contrastes independientes con α = 0,05.\n\n\n\n\n\n\n\nEl exponente es el número de contrastes.\n\n\n1 - (1 - 0.05)^10\nAlrededor del 40 %.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Contrastes y valores *p*</span>"
+    ]
+  },
+  {
+    "objectID": "04-contrastes.html#actividades",
+    "href": "04-contrastes.html#actividades",
+    "title": "Capítulo 4. Contrastes y valores p",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Contrastes y valores *p*</span>"
+    ]
+  },
+  {
+    "objectID": "04-contrastes.html#reto-c4",
+    "href": "04-contrastes.html#reto-c4",
+    "title": "Capítulo 4. Contrastes y valores p",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 4 · Auditoría de los valores p\n\n\n\n\nElige dos artículos de tu campo y localiza todas las afirmaciones basadas en valores p.\nClasifícalas según los seis principios de la ASA: ¿cuáles son correctas y cuáles caen en alguno de los errores de Greenland et al. (2016)?\nComprueba si informan de tamaños del efecto e intervalos y si corrigen las comparaciones múltiples.\nReescribe dos conclusiones con un lenguaje correcto.\n\nEntrega: con la plantilla de entrega. Este reto no tiene solución en el libro.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Contrastes y valores *p*</span>"
+    ]
+  },
+  {
+    "objectID": "04-contrastes.html#autoevaluación",
+    "href": "04-contrastes.html#autoevaluación",
+    "title": "Capítulo 4. Contrastes y valores p",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nEl valor p es la probabilidad de que la hipótesis nula sea cierta. VERDADEROFALSO\nSi no hay efecto, los valores p se distribuyen de forma concentrada cerca de 0uniforme entre 0 y 1concentrada cerca de 1\nRechazar la hipótesis nula cuando es cierta es un error de tipo III\n«No significativo» equivale a «no hay efecto». VERDADEROFALSO\nPara medidas antes y después en las mismas personas se usa la prueba t \nCon 20 contrastes independientes y α = 0,05, la probabilidad de al menos un falso positivo es aproximadamente 5 %20 %64 %100 %\nUn valor p pequeño indica que el efecto es grande. VERDADEROFALSO\n¿Qué debe leerse primero en la salida de t.test()?\n\n Los grados de libertad El intervalo de confianza de la diferencia, que dice cuánto efecto es compatible con los datos El nombre del contraste\n\n\nVer explicaciones\n\nPrincipio 2 de la ASA.\nUniforme bajo H₀.\nTipo I: falso positivo.\nAusencia de evidencia no es evidencia de ausencia.\nPaired.\n1 − 0,95²⁰ ≈ 0,64.\nCon muestras enormes, efectos diminutos dan p minúsculos.\nEstimación antes que dicotomía.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Contrastes y valores *p*</span>"
+    ]
+  },
+  {
+    "objectID": "05-efecto-potencia.html",
+    "href": "05-efecto-potencia.html",
+    "title": "Capítulo 5. Tamaño del efecto y potencia",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Tamaño del efecto y potencia</span>"
+    ]
+  },
+  {
+    "objectID": "05-efecto-potencia.html#lectura-obligatoria",
+    "href": "05-efecto-potencia.html#lectura-obligatoria",
+    "title": "Capítulo 5. Tamaño del efecto y potencia",
+    "section": "",
+    "text": "Lakens, D. (2022). Sample size justification. Collabra: Psychology, 8(1), 33267.\n\n\nLecturas complementarias\n\nLakens, D. (2013). Calculating and reporting effect sizes to facilitate cumulative science: A practical primer for t-tests and ANOVAs. Frontiers in Psychology, 4, 863.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Tamaño del efecto y potencia</span>"
+    ]
+  },
+  {
+    "objectID": "05-efecto-potencia.html#cuánto-no-solo-si",
+    "href": "05-efecto-potencia.html#cuánto-no-solo-si",
+    "title": "Capítulo 5. Tamaño del efecto y potencia",
+    "section": "1. Cuánto, no solo si",
+    "text": "1. Cuánto, no solo si\nUn tamaño del efecto cuantifica la magnitud de un fenómeno. Puede expresarse en las unidades originales (la tutoría sube la nota 0,4 puntos) o de forma estandarizada, sin unidades, para comparar estudios:\n\n\n\n\n\n\n\n\nMedida\nPara\nFórmula o función\n\n\n\n\nDiferencia de medias\nDos grupos, unidades comprensibles\nmean(a) - mean(b)\n\n\nd de Cohen\nDos grupos, estandarizado\ndiferencia / desviación típica combinada\n\n\nr\nRelación entre dos variables\ncor(x, y)\n\n\nR²\nVariación explicada por un modelo\nsummary(lm(...))$r.squared\n\n\nRazón de odds, riesgo relativo\nResultados binarios\nglm(..., family = binomial)\n\n\n\nLas etiquetas de Cohen (d = 0,2 pequeño, 0,5 mediano, 0,8 grande) eran orientativas y él mismo pedía usarlas solo cuando no hubiera nada mejor. Lo que importa es si el efecto es relevante en su contexto: medio punto de nota puede ser mucho o poco según para qué.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Tamaño del efecto y potencia</span>"
+    ]
+  },
+  {
+    "objectID": "05-efecto-potencia.html#potencia",
+    "href": "05-efecto-potencia.html#potencia",
+    "title": "Capítulo 5. Tamaño del efecto y potencia",
+    "section": "2. Potencia",
+    "text": "2. Potencia\nLa potencia es la probabilidad de detectar un efecto de un tamaño dado si existe. Depende de cuatro cosas, y conocidas tres se calcula la cuarta:\n\nEl tamaño del efecto que se quiere detectar.\nLa variabilidad de los datos.\nEl tamaño de la muestra.\nEl umbral α.\n\nUna potencia del 80 % es la convención mínima; muchos estudios publicados tienen bastante menos (véase el capítulo 3 de Ciencia de la ciencia y metaciencia). Con poca potencia, los resultados significativos tienden a exagerar el efecto y a no replicarse.\n\n\n\n\n\n\nNuestro estudio solo tenía un 39 % de potencia para ese efecto: no es extraño que la diferencia no fuera significativa. Para tener un 80 %, harían falta unas 167 personas por grupo.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Tamaño del efecto y potencia</span>"
+    ]
+  },
+  {
+    "objectID": "05-efecto-potencia.html#lab-c5-potencia",
+    "href": "05-efecto-potencia.html#lab-c5-potencia",
+    "title": "Capítulo 5. Tamaño del efecto y potencia",
+    "section": "Laboratorio: potencia",
+    "text": "Laboratorio: potencia\n\n\nLaboratorio · cálculo en tu navegador\n\nAjusta el efecto (d) y la muestra, y mira cómo se solapan las distribuciones del estadístico bajo la hipótesis nula (gris) y bajo el efecto real (azul). La potencia es el área azul más allá del valor crítico.\n\nrango = window.Lab.rango\nviewof w_d = rango(\"Efecto (d de Cohen)\", [0.1, 1.2], {step: 0.05, value: 0.4, formato: x =&gt; x.toFixed(2).replace(\".\", \",\")})\nviewof w_n = rango(\"Personas por grupo\", [5, 300], {step: 5, value: 60})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const Phi = z =&gt; { const t = 1 / (1 + 0.2316419 * Math.abs(z)), d = 0.3989423 * Math.exp(-z * z / 2);\n    const p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274)))); return z &gt; 0 ? 1 - p : p; };\n  const ncp = w_d * Math.sqrt(w_n / 2), zc = 1.96, pot = 1 - Phi(zc - ncp) + Phi(-zc - ncp);\n  const dens = (x, m) =&gt; Math.exp(-((x - m) ** 2) / 2) / Math.sqrt(2 * Math.PI);\n  const X = x =&gt; 20 + (x + 4) * 440 / 14, Y = y =&gt; 170 - y * 380;\n  const curva = m =&gt; Array.from({length: 281}, (_, i) =&gt; { const x = -4 + i * 0.05; return `${X(x)},${Y(dens(x, m))}`; }).join(\" \");\n  const area = Array.from({length: 281}, (_, i) =&gt; -4 + i * 0.05).filter(x =&gt; x &gt;= zc);\n  const poly = `${X(zc)},${Y(0)} ` + area.map(x =&gt; `${X(x)},${Y(dens(x, ncp))}`).join(\" \") + ` ${X(10)},${Y(0)}`;\n  const nec = Math.ceil(2 * ((1.96 + 0.8416) / w_d) ** 2);\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p style=\"font-size:1.15rem\"&gt;Potencia ≈ &lt;strong&gt;${Math.round(100 * Math.min(pot, 0.999))} %&lt;/strong&gt; &lt;span class=\"${pot &gt;= .8 ? \"lab-bien\" : pot &gt;= .5 ? \"lab-medio\" : \"lab-mal\"}\" style=\"font-weight:600\"&gt;${pot &gt;= .8 ? \"· suficiente\" : \"· insuficiente\"}&lt;/span&gt; · para el 80 % harían falta unas &lt;strong&gt;${nec}&lt;/strong&gt; personas por grupo.&lt;/p&gt;\n   &lt;svg viewBox=\"0 0 480 190\" width=\"100%\" style=\"max-width:480px\" role=\"img\" aria-label=\"Dos curvas normales; potencia ${Math.round(100 * pot)} por ciento\"&gt;\n   &lt;polygon points=\"${poly}\" fill=\"#2a78d6\" fill-opacity=\".35\"/&gt;\n   &lt;polyline points=\"${curva(0)}\" fill=\"none\" stroke=\"#8a8984\" stroke-width=\"2\"/&gt;&lt;polyline points=\"${curva(ncp)}\" fill=\"none\" stroke=\"#2a78d6\" stroke-width=\"2\"/&gt;\n   &lt;line x1=\"${X(zc)}\" x2=\"${X(zc)}\" y1=\"10\" y2=\"170\" stroke=\"#eb6834\" stroke-dasharray=\"4 3\"/&gt;\n   &lt;line x1=\"20\" x2=\"460\" y1=\"170\" y2=\"170\" stroke=\"currentColor\" stroke-opacity=\".4\"/&gt;\n   &lt;text x=\"${X(zc) + 4}\" y=\"20\" font-size=\"10\" fill=\"currentColor\"&gt;valor crítico&lt;/text&gt;&lt;/svg&gt;\n   &lt;p class=\"small\"&gt;Aproximación normal para la prueba bilateral con α = 0,05; &lt;code&gt;power.t.test()&lt;/code&gt; da el valor exacto.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Tamaño del efecto y potencia</span>"
+    ]
+  },
+  {
+    "objectID": "05-efecto-potencia.html#justificar-el-tamaño-de-la-muestra",
+    "href": "05-efecto-potencia.html#justificar-el-tamaño-de-la-muestra",
+    "title": "Capítulo 5. Tamaño del efecto y potencia",
+    "section": "3. Justificar el tamaño de la muestra",
+    "text": "3. Justificar el tamaño de la muestra\nLakens (2022) distingue seis formas legítimas de justificar una muestra: medir a toda la población, limitaciones de recursos, análisis de potencia a priori, búsqueda de una precisión dada (anchura del intervalo), heurísticos y ninguna justificación (que hay que reconocer). Para el análisis de potencia, la clave es el efecto mínimo de interés: el más pequeño que tendría importancia teórica o práctica, no el que esperamos ni el de un estudio piloto pequeño (que suele estar inflado).\n\nEjercicio 5.1\n¿Cuántas personas por grupo harían falta para detectar una diferencia de 0,5 puntos (sd = 1,3) con una potencia del 90 %?\n\n\n\n\n\n\n\nEl 90 % se escribe 0.9.\n\n\npower.t.test(delta = 0.5, sd = 1.3, power = 0.9)$n\nUnas 143 por grupo (redondea siempre hacia arriba).\n\n\n\n\nEjercicio 5.2\nCalcula la d de Cohen de la diferencia en horas de estudio entre los grupos.\n\n\n\n\n\n\n\n\nFalta la varianza del segundo grupo: var(b).\n\n\n(mean(a) - mean(b)) / sqrt((var(a) + var(b)) / 2)\nUn efecto muy pequeño: la aleatorización produjo grupos parecidos en horas de estudio.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Tamaño del efecto y potencia</span>"
+    ]
+  },
+  {
+    "objectID": "05-efecto-potencia.html#actividades",
+    "href": "05-efecto-potencia.html#actividades",
+    "title": "Capítulo 5. Tamaño del efecto y potencia",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Tamaño del efecto y potencia</span>"
+    ]
+  },
+  {
+    "objectID": "05-efecto-potencia.html#reto-c5",
+    "href": "05-efecto-potencia.html#reto-c5",
+    "title": "Capítulo 5. Tamaño del efecto y potencia",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 5 · Justifica tu muestra\n\n\n\n\nPara tu próximo estudio, define el efecto mínimo de interés y justifícalo (teoría, relevancia práctica, coste).\nHaz un análisis de potencia con R para varios escenarios y presenta una curva de potencia.\nSi tus recursos limitan la muestra, calcula qué efectos podrás detectar con ella (análisis de sensibilidad).\nRedacta el párrafo de justificación de la muestra para tu preregistro o tu artículo, siguiendo a Lakens (2022).\n\nEntrega: con la plantilla de entrega. Este reto no tiene solución en el libro.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Tamaño del efecto y potencia</span>"
+    ]
+  },
+  {
+    "objectID": "05-efecto-potencia.html#autoevaluación",
+    "href": "05-efecto-potencia.html#autoevaluación",
+    "title": "Capítulo 5. Tamaño del efecto y potencia",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nLa d de Cohen es la diferencia de medias dividida entre la desviación típica \nLas etiquetas de Cohen (0,2; 0,5; 0,8) deben usarse siempre para decidir si un efecto es importante. VERDADEROFALSO\nLa potencia es la probabilidad de cometer un falso positivodetectar un efecto si existeque la hipótesis sea cierta\nPara un análisis de potencia, lo mejor es usar el efecto de un estudio piloto pequeño. VERDADEROFALSO\nSi conoces el efecto, la variabilidad y α, puedes calcular la mediamuestra necesaria para una potencia dadacorrelación\nNuestro estudio (60 por grupo) tenía una potencia de alrededor del 10 %39 %80 %99 % para detectar 0,4 puntos\nEl efecto más pequeño que tendría importancia teórica o práctica se llama efecto mínimo de \n¿Por qué un resultado no significativo en un estudio con poca potencia es poco informativo?\n\n Porque los estudios pequeños tienen más errores de cálculo Porque aunque exista un efecto relevante, el estudio tenía pocas probabilidades de detectarlo Porque el valor p es siempre mayor que 0,5\n\n\nVer explicaciones\n\nPooled standard deviation.\nSon orientativas; importa el contexto.\n1 − β.\nLos pilotos pequeños dan efectos muy inciertos y a menudo inflados.\nEs el análisis a priori.\npower.t.test(n = 60, delta = 0.4, sd = 1.3).\nSmallest effect size of interest (SESOI).\nLa ausencia de significación no distingue «no hay efecto» de «no tenía forma de verlo».",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Tamaño del efecto y potencia</span>"
+    ]
+  },
+  {
+    "objectID": "06-regresion.html",
+    "href": "06-regresion.html",
+    "title": "Capítulo 6. Regresión",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Regresión</span>"
+    ]
+  },
+  {
+    "objectID": "06-regresion.html#lectura-obligatoria",
+    "href": "06-regresion.html#lectura-obligatoria",
+    "title": "Capítulo 6. Regresión",
+    "section": "",
+    "text": "Schielzeth, H. (2010). Simple means to improve the interpretability of regression coefficients. Methods in Ecology and Evolution, 1(2), 103-113.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Regresión</span>"
+    ]
+  },
+  {
+    "objectID": "06-regresion.html#la-recta-que-mejor-se-ajusta",
+    "href": "06-regresion.html#la-recta-que-mejor-se-ajusta",
+    "title": "Capítulo 6. Regresión",
+    "section": "1. La recta que mejor se ajusta",
+    "text": "1. La recta que mejor se ajusta\nLa regresión lineal modela una variable resultado como una combinación lineal de predictores más un error:\nnota = b0 + b1 · horas + error\nb1 es el cambio esperado en la nota por cada hora más de estudio; b0, la nota esperada con 0 horas (a menudo, sin sentido práctico: por eso conviene centrar los predictores, como recomienda Schielzeth, 2010).\n\n\n\n\n\n\nCada hora más de estudio se asocia con unos 0,14 puntos más de nota (IC 95 %: 0,09 a 0,19). El R² indica qué proporción de la variabilidad de la nota explica el modelo (aquí, en torno al 22 %).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Regresión</span>"
+    ]
+  },
+  {
+    "objectID": "06-regresion.html#varios-predictores-a-la-vez",
+    "href": "06-regresion.html#varios-predictores-a-la-vez",
+    "title": "Capítulo 6. Regresión",
+    "section": "2. Varios predictores a la vez",
+    "text": "2. Varios predictores a la vez\nEn la regresión múltiple, cada coeficiente es la asociación con el resultado manteniendo constantes los demás predictores del modelo.\n\n\n\n\n\n\nCon los predictores centrados, la constante es la nota esperada en el grupo de referencia (control) para alguien con horas, sueño y ansiedad medios. Fíjate en que el coeficiente de grupotutoria (el efecto de la tutoría ajustado por las demás variables) se estima con algo más de precisión que en la simple comparación de medias: ajustar por covariables que predicen el resultado aumenta la precisión en un experimento.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Regresión</span>"
+    ]
+  },
+  {
+    "objectID": "06-regresion.html#comprobar-los-supuestos",
+    "href": "06-regresion.html#comprobar-los-supuestos",
+    "title": "Capítulo 6. Regresión",
+    "section": "3. Comprobar los supuestos",
+    "text": "3. Comprobar los supuestos\nLa regresión lineal supone, sobre todo: relación lineal, independencia de los errores, varianza constante y, para los intervalos con muestras pequeñas, errores aproximadamente normales. Se comprueba mirando los residuos:\n\n\n\n\n\n\nBuscas que los residuos no formen patrones (curvas, embudos) y que los puntos del gráfico Q-Q sigan la recta.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Regresión</span>"
+    ]
+  },
+  {
+    "objectID": "06-regresion.html#lab-c6-palanca",
+    "href": "06-regresion.html#lab-c6-palanca",
+    "title": "Capítulo 6. Regresión",
+    "section": "Laboratorio: un punto puede cambiarlo todo",
+    "text": "Laboratorio: un punto puede cambiarlo todo\n\n\nLaboratorio · se ejecuta en tu navegador\n\nDiez puntos sin relación aparente y un undécimo que puedes mover. Un punto alejado en el eje x (con mucha palanca) puede crear o destruir una pendiente.\n\nrango = window.Lab.rango\nviewof q_x = rango(\"Posición x del punto móvil\", [0, 20], {step: 0.5, value: 5})\nviewof q_y = rango(\"Posición y del punto móvil\", [0, 20], {step: 0.5, value: 5})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const base = [[2, 5], [3, 7], [4, 4], [5, 6], [5.5, 5], [6, 7.5], [6.5, 4.5], [7, 6], [8, 5], [9, 6.5]];\n  const pts = base.concat([[q_x, q_y]]);\n  const n = pts.length, mx = pts.reduce((s, p) =&gt; s + p[0], 0) / n, my = pts.reduce((s, p) =&gt; s + p[1], 0) / n;\n  const sxy = pts.reduce((s, p) =&gt; s + (p[0] - mx) * (p[1] - my), 0), sxx = pts.reduce((s, p) =&gt; s + (p[0] - mx) ** 2, 0), syy = pts.reduce((s, p) =&gt; s + (p[1] - my) ** 2, 0);\n  const b = sxy / sxx, a = my - b * mx, r = sxy / Math.sqrt(sxx * syy);\n  const X = x =&gt; 30 + x * 22, Y = y =&gt; 220 - y * 10;\n  const f = v =&gt; v.toFixed(2).replace(\".\", \",\");\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;Pendiente = &lt;strong&gt;${f(b)}&lt;/strong&gt; · &lt;em&gt;r&lt;/em&gt; = ${f(r)}&lt;/p&gt;\n   &lt;svg viewBox=\"0 0 480 240\" width=\"100%\" style=\"max-width:480px\" role=\"img\" aria-label=\"Diagrama de dispersión con once puntos y su recta; pendiente ${f(b)}\"&gt;\n   &lt;line x1=\"30\" y1=\"220\" x2=\"470\" y2=\"220\" stroke=\"currentColor\" stroke-opacity=\".4\"/&gt;&lt;line x1=\"30\" y1=\"10\" x2=\"30\" y2=\"220\" stroke=\"currentColor\" stroke-opacity=\".4\"/&gt;\n   &lt;line x1=\"${X(0)}\" y1=\"${Y(a)}\" x2=\"${X(20)}\" y2=\"${Y(a + b * 20)}\" stroke=\"#2a78d6\" stroke-width=\"2\"/&gt;\n   ${base.map(p =&gt; `&lt;circle cx=\"${X(p[0])}\" cy=\"${Y(p[1])}\" r=\"5\" fill=\"#2a78d6\"/&gt;`).join(\"\")}\n   &lt;circle cx=\"${X(q_x)}\" cy=\"${Y(q_y)}\" r=\"7\" fill=\"#eb6834\"/&gt;&lt;/svg&gt;\n   &lt;p class=\"small\"&gt;Lleva el punto naranja a x = 20, y = 20: aparece una relación «fuerte» creada por un solo dato. Revisa siempre los puntos influyentes (en R, &lt;code&gt;cooks.distance()&lt;/code&gt;).&lt;/p&gt;`;\n  return d;\n}\n\n\n\n\n\n\n\n\nEjercicio 6.1\nUsa el modelo m1 para predecir la nota de alguien que estudia 20 horas a la semana.\n\n\n\n\n\n\n\n\nSustituye el hueco por 20.\n\n\npredict(m1, newdata = data.frame(horas = 20))\nUnos 7,2 puntos. Con interval = \"prediction\" verás el intervalo para una persona concreta, mucho más ancho que el de la media.\n\n\n\n\nEjercicio 6.2\nCalcula el R² del modelo con horas y sueño.\n\n\n\n\n\n\n\n\nLa variable del sueño se llama sueno.\n\n\nm &lt;- lm(nota ~ horas + sueno, data = d)\nsummary(m)$r.squared\nAlgo mayor que con solo las horas. El R² siempre sube al añadir predictores, aunque no aporten nada: por eso existe el R² ajustado.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Regresión</span>"
+    ]
+  },
+  {
+    "objectID": "06-regresion.html#actividades",
+    "href": "06-regresion.html#actividades",
+    "title": "Capítulo 6. Regresión",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Regresión</span>"
+    ]
+  },
+  {
+    "objectID": "06-regresion.html#reto-c6",
+    "href": "06-regresion.html#reto-c6",
+    "title": "Capítulo 6. Regresión",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 6 · Un modelo bien contado\n\n\n\n\nCon los datos del libro (o con los tuyos), plantea una pregunta y ajusta un modelo de regresión múltiple justificado (no un modelo con «todo lo que hay»).\nCentra los predictores continuos e interpreta cada coeficiente con su intervalo, en las unidades originales.\nComprueba los supuestos con los residuos y revisa los puntos influyentes.\nEscribe el párrafo de resultados y un párrafo de limitaciones sobre causalidad.\n\nEntrega: con la plantilla de entrega. Este reto no tiene solución en el libro.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Regresión</span>"
+    ]
+  },
+  {
+    "objectID": "06-regresion.html#autoevaluación",
+    "href": "06-regresion.html#autoevaluación",
+    "title": "Capítulo 6. Regresión",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nEn una regresión múltiple, cada coeficiente se interpreta manteniendo constantes los demás predictores del modelo. VERDADEROFALSO\nRestar la media a un predictor se llama \nEl R² siempre aumenta al añadir predictores. VERDADEROFALSO\nUn residuo es el valor predichola diferencia entre el valor observado y el predichoel coeficiente de una variable\nUn coeficiente de regresión en un estudio observacional prueba una relación causal. VERDADEROFALSO\nUn punto con un valor de x muy alejado del resto tiene mucha \nEn un experimento, ajustar por covariables que predicen el resultado introduce sesgo siempresuele mejorar la precisión del efectono cambia nada\n¿Qué intervalo es más ancho?\n\n El de la nota media esperada para quienes estudian 20 horas El de la nota de una persona concreta que estudia 20 horas Son iguales\n\n\nVer explicaciones\n\n«Ceteris paribus», dentro del modelo.\nHace interpretable la constante.\nPor eso existe el R² ajustado.\nObservado menos predicho.\nAsociación ajustada, no causa.\nLeverage.\nReduce el error típico del efecto.\nEl de predicción incluye la variabilidad individual.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Regresión</span>"
+    ]
+  },
+  {
+    "objectID": "07-bayes.html",
+    "href": "07-bayes.html",
+    "title": "Capítulo 7. Introducción a la inferencia bayesiana",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 7. Introducción a la inferencia bayesiana</span>"
+    ]
+  },
+  {
+    "objectID": "07-bayes.html#lectura-obligatoria",
+    "href": "07-bayes.html#lectura-obligatoria",
+    "title": "Capítulo 7. Introducción a la inferencia bayesiana",
+    "section": "",
+    "text": "Kruschke, J. K.; Liddell, T. M. (2018). The Bayesian new statistics: Hypothesis testing, estimation, meta-analysis, and power analysis from a Bayesian perspective. Psychonomic Bulletin & Review, 25(1), 178-206.\n\n\nLecturas complementarias\n\nWagenmakers, E.-J.; Marsman, M.; Jamil, T.; Ly, A.; Verhagen, J.; Love, J. et al. (2018). Bayesian inference for psychology. Part I: Theoretical advantages and practical ramifications. Psychonomic Bulletin & Review, 25(1), 35-57.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 7. Introducción a la inferencia bayesiana</span>"
+    ]
+  },
+  {
+    "objectID": "07-bayes.html#probabilidad-como-grado-de-creencia",
+    "href": "07-bayes.html#probabilidad-como-grado-de-creencia",
+    "title": "Capítulo 7. Introducción a la inferencia bayesiana",
+    "section": "1. Probabilidad como grado de creencia",
+    "text": "1. Probabilidad como grado de creencia\nEn la estadística frecuentista, la probabilidad describe frecuencias a largo plazo y los parámetros son fijos. En la bayesiana, la probabilidad expresa incertidumbre sobre los parámetros, y se actualiza con los datos mediante el teorema de Bayes:\n\nposterior ∝ verosimilitud × previa\n\n\nLa distribución previa recoge lo que se sabía (o se supone) antes de los datos.\nLa verosimilitud dice qué valores del parámetro hacen más probables los datos observados.\nLa distribución posterior combina ambas: es lo que se sabe después.\n\nSu gran ventaja es responder directamente a la pregunta que solemos querer: ¿qué valores del parámetro son creíbles dados los datos? Su gran exigencia es explicitar y justificar la previa.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 7. Introducción a la inferencia bayesiana</span>"
+    ]
+  },
+  {
+    "objectID": "07-bayes.html#un-caso-que-se-calcula-a-mano-una-proporción",
+    "href": "07-bayes.html#un-caso-que-se-calcula-a-mano-una-proporción",
+    "title": "Capítulo 7. Introducción a la inferencia bayesiana",
+    "section": "2. Un caso que se calcula a mano: una proporción",
+    "text": "2. Un caso que se calcula a mano: una proporción\nQueremos estimar la proporción de doctorandos que aprueban un examen. Con una previa Beta(a, b) y k aprobados de n, la posterior es Beta(a + k, b + n − k). La previa Beta(1, 1) es plana: todos los valores entre 0 y 1 igual de creíbles.\n\n\n\n\n\n\nEl intervalo de credibilidad del 95 % sí admite la lectura intuitiva: dada la previa y los datos, hay un 95 % de probabilidad de que la proporción esté entre esos valores.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 7. Introducción a la inferencia bayesiana</span>"
+    ]
+  },
+  {
+    "objectID": "07-bayes.html#lab-c7-beta",
+    "href": "07-bayes.html#lab-c7-beta",
+    "title": "Capítulo 7. Introducción a la inferencia bayesiana",
+    "section": "Laboratorio: actualizar con los datos",
+    "text": "Laboratorio: actualizar con los datos\n\n\nLaboratorio · cálculo en tu navegador\n\nElige una previa (su media y cuánta información aporta, en «observaciones equivalentes») y unos datos. Mira cómo la posterior se desplaza desde la previa hacia los datos y cómo los datos dominan cuando son abundantes.\n\nrango = window.Lab.rango\nviewof b_media = rango(\"Media de la previa\", [0.05, 0.95], {step: 0.05, value: 0.5, formato: x =&gt; x.toFixed(2).replace(\".\", \",\")})\nviewof b_peso = rango(\"Peso de la previa (observaciones equivalentes)\", [2, 200], {step: 2, value: 2})\nviewof b_n = rango(\"Observaciones (n)\", [0, 200], {step: 1, value: 20})\nviewof b_k = rango(\"Éxitos observados\", [0, 200], {step: 1, value: 15})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const n = b_n, k = Math.min(b_k, b_n), a = b_media * b_peso, b = (1 - b_media) * b_peso;\n  const lgamma = z =&gt; { const c = [76.18009172947146, -86.50532032941677, 24.01409824083091, -1.231739572450155, 0.1208650973866179e-2, -0.5395239384953e-5];\n    let x = z, y = z, t = x + 5.5; t -= (x + 0.5) * Math.log(t); let s = 1.000000000190015; for (const ci of c) s += ci / ++y; return -t + Math.log(2.5066282746310005 * s / x); };\n  const dbeta = (x, p, q) =&gt; x &lt;= 0 || x &gt;= 1 ? 0 : Math.exp((p - 1) * Math.log(x) + (q - 1) * Math.log(1 - x) - (lgamma(p) + lgamma(q) - lgamma(p + q)));\n  const xs = Array.from({length: 199}, (_, i) =&gt; (i + 1) / 200);\n  const prev = xs.map(x =&gt; dbeta(x, a, b)), post = xs.map(x =&gt; dbeta(x, a + k, b + n - k)), ver = xs.map(x =&gt; n ? Math.exp(k * Math.log(x) + (n - k) * Math.log(1 - x)) : 1);\n  const norm = v =&gt; { const m = Math.max(...v.filter(Number.isFinite)); return v.map(y =&gt; y / m); };\n  const X = x =&gt; 20 + x * 440, Y = y =&gt; 170 - y * 150;\n  const linea = (v, c, ds) =&gt; `&lt;polyline points=\"${norm(v).map((y, i) =&gt; `${X(xs[i])},${Y(y)}`).join(\" \")}\" fill=\"none\" stroke=\"${c}\" stroke-width=\"2.2\" ${ds ? `stroke-dasharray=\"${ds}\"` : \"\"}/&gt;`;\n  const pa = a + k, pb = b + n - k, media = pa / (pa + pb);\n  const cdf = []; let acc = 0; post.forEach(p =&gt; { acc += p; cdf.push(acc); }); const tot = acc;\n  const q = p =&gt; xs[cdf.findIndex(c =&gt; c / tot &gt;= p)];\n  const f = v =&gt; v.toFixed(2).replace(\".\", \",\");\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;Posterior: Beta(${f(pa)}; ${f(pb)}) · media &lt;strong&gt;${f(media)}&lt;/strong&gt; · intervalo de credibilidad del 95 % ≈ [${f(q(.025))}; ${f(q(.975))}]&lt;/p&gt;\n   &lt;svg viewBox=\"0 0 480 190\" width=\"100%\" style=\"max-width:480px\" role=\"img\" aria-label=\"Curvas de la previa, la verosimilitud y la posterior\"&gt;\n   &lt;line x1=\"20\" x2=\"460\" y1=\"170\" y2=\"170\" stroke=\"currentColor\" stroke-opacity=\".4\"/&gt;\n   ${linea(prev, \"#8a8984\", \"5 4\")}${n ? linea(ver, \"#1baf7a\", \"2 3\") : \"\"}${linea(post, \"#2a78d6\")}\n   &lt;text x=\"20\" y=\"186\" font-size=\"10\" fill=\"currentColor\"&gt;0&lt;/text&gt;&lt;text x=\"460\" y=\"186\" font-size=\"10\" text-anchor=\"end\" fill=\"currentColor\"&gt;1&lt;/text&gt;&lt;/svg&gt;\n   &lt;p class=\"small\"&gt;Gris discontinua: previa · verde punteada: verosimilitud (los datos) · azul: posterior. Curvas reescaladas a la misma altura. ${b_k &gt; b_n ? \"Hay más éxitos que observaciones: se usa k = n.\" : \"\"}&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 7. Introducción a la inferencia bayesiana</span>"
+    ]
+  },
+  {
+    "objectID": "07-bayes.html#contrastar-hipótesis-el-factor-de-bayes",
+    "href": "07-bayes.html#contrastar-hipótesis-el-factor-de-bayes",
+    "title": "Capítulo 7. Introducción a la inferencia bayesiana",
+    "section": "3. Contrastar hipótesis: el factor de Bayes",
+    "text": "3. Contrastar hipótesis: el factor de Bayes\nEl factor de Bayes (BF₁₀) compara cuánto mejor predicen los datos una hipótesis (H₁) que otra (H₀). Un BF₁₀ = 6 significa que los datos son seis veces más probables bajo H₁ que bajo H₀. A diferencia del valor p, puede aportar evidencia a favor de la hipótesis nula. Depende, eso sí, de cómo se defina la previa de H₁.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 7. Introducción a la inferencia bayesiana</span>"
+    ]
+  },
+  {
+    "objectID": "07-bayes.html#cuándo-usar-el-enfoque-bayesiano",
+    "href": "07-bayes.html#cuándo-usar-el-enfoque-bayesiano",
+    "title": "Capítulo 7. Introducción a la inferencia bayesiana",
+    "section": "4. ¿Cuándo usar el enfoque bayesiano?",
+    "text": "4. ¿Cuándo usar el enfoque bayesiano?\n\nCuando hay información previa legítima que conviene incorporar.\nCon muestras pequeñas o modelos complejos (multinivel), donde las previas estabilizan las estimaciones.\nCuando se quiere cuantificar la evidencia a favor de la nula.\nCuando se quiere hablar en términos de probabilidad de los parámetros.\n\nEn R, paquetes como brms o rstanarm ajustan modelos bayesianos con una sintaxis parecida a lm(), y BayesFactor calcula factores de Bayes. Fuera del navegador, son el siguiente paso natural tras este capítulo.\n\nEjercicio 7.1\nCon una previa Beta(1, 1) y 15 aprobados de 20, calcula la media de la posterior: (a + k) / (a + b + n).\n\n\n\n\n\n\n\nEl denominador suma a, b y el número de observaciones n.\n\n\na &lt;- 1; b &lt;- 1; k &lt;- 15; n &lt;- 20\n(a + k) / (a + b + n)\n0,727: un poco por debajo de la proporción observada (0,75), atraída hacia la media de la previa (0,5).\n\n\n\n\nEjercicio 7.2\nCalcula el intervalo de credibilidad del 95 % de esa posterior, Beta(16, 6).\n\n\n\n\n\n\n\nEl límite superior es el cuantil 0,975.\n\n\nqbeta(c(0.025, 0.975), 16, 6)",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 7. Introducción a la inferencia bayesiana</span>"
+    ]
+  },
+  {
+    "objectID": "07-bayes.html#actividades",
+    "href": "07-bayes.html#actividades",
+    "title": "Capítulo 7. Introducción a la inferencia bayesiana",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 7. Introducción a la inferencia bayesiana</span>"
+    ]
+  },
+  {
+    "objectID": "07-bayes.html#reto-c7",
+    "href": "07-bayes.html#reto-c7",
+    "title": "Capítulo 7. Introducción a la inferencia bayesiana",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 7 · Dos lecturas de los mismos datos\n\n\n\n\nElige un resultado de tu tesis o de un artículo con una proporción o una diferencia de medias.\nAnalízalo de forma frecuentista (intervalo y valor p) y bayesiana (posterior e intervalo de credibilidad) con al menos dos previas distintas: una poco informativa y otra informativa justificada.\nCompara las conclusiones y discute la sensibilidad a la previa.\nExplica, para un público no especialista, qué significa cada intervalo.\n\nEntrega: con la plantilla de entrega. Este reto no tiene solución en el libro.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 7. Introducción a la inferencia bayesiana</span>"
+    ]
+  },
+  {
+    "objectID": "07-bayes.html#autoevaluación",
+    "href": "07-bayes.html#autoevaluación",
+    "title": "Capítulo 7. Introducción a la inferencia bayesiana",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nEn la inferencia bayesiana, la posterior es proporcional a la verosimilitud por la \nCon previa Beta(1, 1) y 15 éxitos de 20, la posterior es Beta(15, 5)Beta(16, 6)Beta(1, 1)\nEl intervalo de credibilidad admite la lectura «hay un 95 % de probabilidad de que el parámetro esté aquí». VERDADEROFALSO\nUn factor de Bayes puede aportar evidencia a favor de la hipótesis nula. VERDADEROFALSO\nCon muchos datos, la posterior depende sobre todo de la previalos datosel investigador\nUn paquete de R para ajustar modelos bayesianos con sintaxis parecida a lm() es ggplot2brmsdplyr\nEl enfoque bayesiano no necesita justificar ninguna decisión. VERDADEROFALSO\n¿Qué hace la previa con una muestra pequeña?\n\n No tiene ningún efecto Atrae la estimación hacia sus valores y la estabiliza Hace que el intervalo sea infinito\n\n\nVer explicaciones\n\nTeorema de Bayes.\na + k = 16; b + n − k = 6.\nEsa es su ventaja interpretativa.\nA diferencia del valor p.\nLos datos dominan cuando abundan.\nBayesian regression models using Stan.\nLa previa debe justificarse y analizarse su sensibilidad.\nEfecto de contracción (shrinkage).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Capítulo 7. Introducción a la inferencia bayesiana</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html",
+    "href": "90-chuleta.html",
+    "title": "Apéndice A — Chuleta de R",
+    "section": "",
+    "text": "Datos\nTodas las funciones que usa el libro, agrupadas por tarea.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta de R</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html#datos",
+    "href": "90-chuleta.html#datos",
+    "title": "Apéndice A — Chuleta de R",
+    "section": "",
+    "text": "Tarea\nCódigo\n\n\n\n\nLeer un CSV\nd &lt;- read.csv(\"datos/estudio.csv\")\n\n\nVer la estructura\nstr(d), head(d), summary(d)\n\n\nUna columna\nd$nota\n\n\nFiltrar filas\nd[d$grupo == \"tutoria\", ]\n\n\nCrear una columna\nd$horas_c &lt;- d$horas - mean(d$horas)\n\n\nFrecuencias\ntable(d$grupo)",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta de R</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html#describir",
+    "href": "90-chuleta.html#describir",
+    "title": "Apéndice A — Chuleta de R",
+    "section": "Describir",
+    "text": "Describir\n\n\n\nTarea\nCódigo\n\n\n\n\nMedia, mediana\nmean(x), median(x)\n\n\nDesviación típica, IQR\nsd(x), IQR(x)\n\n\nCuantiles\nquantile(x, c(0.25, 0.5, 0.75))\n\n\nResumen por grupo\ntapply(d$nota, d$grupo, mean)\n\n\nProporción que cumple algo\nmean(x &gt;= 5)\n\n\nCorrelación\ncor(x, y)",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta de R</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html#gráficos",
+    "href": "90-chuleta.html#gráficos",
+    "title": "Apéndice A — Chuleta de R",
+    "section": "Gráficos",
+    "text": "Gráficos\n\n\n\n\n\n\n\nTarea\nCódigo\n\n\n\n\nPuntos por grupo\nstripchart(y ~ g, data = d, vertical = TRUE, method = \"jitter\")\n\n\nCaja\nboxplot(y ~ g, data = d)\n\n\nDispersión\nplot(x, y)\n\n\nHistograma\nhist(x)\n\n\nRecta de regresión\nabline(lm(y ~ x))",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta de R</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html#inferencia",
+    "href": "90-chuleta.html#inferencia",
+    "title": "Apéndice A — Chuleta de R",
+    "section": "Inferencia",
+    "text": "Inferencia\n\n\n\nTarea\nCódigo\n\n\n\n\nIC de una media\nt.test(x)$conf.int\n\n\nDos grupos\nt.test(y ~ g, data = d)\n\n\nEmparejado\nt.test(a, b, paired = TRUE)\n\n\nNo paramétrico\nwilcox.test(y ~ g, data = d)\n\n\nCorrelación con IC\ncor.test(x, y)\n\n\nTabla de contingencia\nchisq.test(table(a, b))\n\n\nCorregir comparaciones múltiples\np.adjust(p, method = \"holm\")\n\n\nBootstrap\nreplicate(2000, median(sample(x, replace = TRUE)))",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta de R</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html#efecto-y-potencia",
+    "href": "90-chuleta.html#efecto-y-potencia",
+    "title": "Apéndice A — Chuleta de R",
+    "section": "Efecto y potencia",
+    "text": "Efecto y potencia\n\n\n\n\n\n\n\nTarea\nCódigo\n\n\n\n\nPotencia de un estudio\npower.t.test(n = 60, delta = 0.4, sd = 1.3)\n\n\nMuestra necesaria\npower.t.test(delta = 0.4, sd = 1.3, power = 0.8)\n\n\nd de Cohen\n(mean(a) - mean(b)) / sqrt((var(a) + var(b)) / 2)",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta de R</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html#modelos",
+    "href": "90-chuleta.html#modelos",
+    "title": "Apéndice A — Chuleta de R",
+    "section": "Modelos",
+    "text": "Modelos\n\n\n\nTarea\nCódigo\n\n\n\n\nRegresión\nm &lt;- lm(y ~ x1 + x2, data = d)\n\n\nCoeficientes e IC\nsummary(m)$coefficients, confint(m)\n\n\nR²\nsummary(m)$r.squared\n\n\nPredicción\npredict(m, newdata = data.frame(x1 = 20, x2 = 7))\n\n\nResiduos\nresid(m), fitted(m), qqnorm(resid(m))\n\n\nPuntos influyentes\ncooks.distance(m)",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta de R</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html#bayes-proporción",
+    "href": "90-chuleta.html#bayes-proporción",
+    "title": "Apéndice A — Chuleta de R",
+    "section": "Bayes (proporción)",
+    "text": "Bayes (proporción)\n\n\n\n\n\n\n\nTarea\nCódigo\n\n\n\n\nPosterior Beta\nBeta(a + k, b + n - k)\n\n\nIntervalo de credibilidad\nqbeta(c(0.025, 0.975), a + k, b + n - k)\n\n\nDensidad\ncurve(dbeta(x, a + k, b + n - k), 0, 1)",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta de R</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html",
+    "href": "91-guia-docente.html",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "",
+    "text": "Propuesta de evaluación\nEl libro sirve como manual de un curso de doctorado de estadística aplicada de unas 30-40 horas (siete sesiones de 4-5 horas) o como material autónomo. No exige conocimientos previos de R.\nLa rúbrica común valora la pregunta y el diseño (20 %), el análisis correcto (30 %), la interpretación de la incertidumbre (25 %), la reproducibilidad (15 %) y la comunicación (10 %).",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#propuesta-de-evaluación",
+    "href": "91-guia-docente.html#propuesta-de-evaluación",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "",
+    "text": "Actividad\nPeso orientativo\nApoyo en el libro\n\n\n\n\nRetos evaluables (elegir 5 de 7)\n60 %\nUn reto por capítulo, con rúbrica en la plantilla de entrega\n\n\nAnálisis final con datos propios\n30 %\nIntegra los retos 1, 3, 5 y 6\n\n\nAutoevaluaciones y actividades\n10 %\nEn cada capítulo y en Aula Global",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#datos",
+    "href": "91-guia-docente.html#datos",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Datos",
+    "text": "Datos\ndatos/estudio.csv contiene 120 doctorandos ficticios simulados con semilla fija: grupo asignado al azar (tutoría o control), horas de estudio semanales, horas de sueño, ansiedad (10-60) y nota (0-10). El efecto simulado de la tutoría es pequeño y el estudio tiene poca potencia para detectarlo, a propósito: es el hilo que conecta los capítulos 3 a 6.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
+    "href": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Actividades interactivas y laboratorios",
+    "text": "Actividades interactivas y laboratorios\nLaboratorios que se usan sin programar: cuarteto de Anscombe, baile de los intervalos de confianza, distribución de los valores p, potencia, puntos con palanca en regresión y actualización bayesiana Beta-Binomial. En el PDF y el EPUB, las actividades aparecen en papel con su solución.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#autoevaluación-en-aula-global",
+    "href": "91-guia-docente.html#autoevaluación-en-aula-global",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Autoevaluación en Aula Global",
+    "text": "Autoevaluación en Aula Global\nLas preguntas están exportadas a Moodle XML en la carpeta moodle/ del repositorio.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#diapositivas",
+    "href": "91-guia-docente.html#diapositivas",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Diapositivas",
+    "text": "Diapositivas\ndiapositivas/ (F, pantalla completa; S, notas).",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#mantenimiento",
+    "href": "91-guia-docente.html#mantenimiento",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Mantenimiento",
+    "text": "Mantenimiento\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\npython3 herramientas/diapositivas.py    # diapositivas de clase",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html",
+    "href": "92-glosario.html",
+    "title": "Apéndice C — Glosario",
+    "section": "",
+    "text": "Pensar con datos\nTérminos del libro ordenados por capítulo. Cada entrada enlaza con el capítulo donde se explica.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#pensar-con-datos",
+    "href": "92-glosario.html#pensar-con-datos",
+    "title": "Apéndice C — Glosario",
+    "section": "",
+    "text": "Población y muestra\nLa población es el conjunto sobre el que se quiere concluir; la muestra, la parte que se observa. → Capítulo 1\n\n\nVariable\nCaracterística que toma valores distintos en las unidades estudiadas: nominal, ordinal, discreta o continua. → Capítulo 1\n\n\nEstudio observacional\nEstudio en el que se mide sin intervenir; permite describir y encontrar asociaciones. → Capítulo 1\n\n\nExperimento aleatorizado\nEstudio en el que el azar decide quién recibe cada condición; permite inferir causas. → Capítulo 1\n\n\nVariable de confusión\nFactor que influye a la vez en la supuesta causa y en el efecto, y crea asociaciones engañosas. → Capítulo 1\n\n\nValidez interna y externa\nInterna: si la conclusión es correcta para la muestra. Externa: si se puede generalizar. → Capítulo 1",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#describir-y-visualizar",
+    "href": "92-glosario.html#describir-y-visualizar",
+    "title": "Apéndice C — Glosario",
+    "section": "Describir y visualizar",
+    "text": "Describir y visualizar\n\nMedia y mediana\nLa media es el valor de equilibrio; la mediana, el valor central. La mediana resiste mejor los extremos. → Capítulo 2\n\n\nDesviación típica\nDistancia típica de los datos a su media. → Capítulo 2\n\n\nRango intercuartílico\nDiferencia entre los percentiles 75 y 25: amplitud del 50 % central de los datos. → Capítulo 2\n\n\nValor atípico\nObservación muy alejada del resto; hay que investigarla, no eliminarla sin justificación. → Capítulo 2\n\n\nCorrelación\nMedida de la fuerza de una relación lineal entre dos variables, entre −1 y 1. → Capítulo 2",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#estimar-con-incertidumbre",
+    "href": "92-glosario.html#estimar-con-incertidumbre",
+    "title": "Apéndice C — Glosario",
+    "section": "Estimar con incertidumbre",
+    "text": "Estimar con incertidumbre\n\nDistribución muestral\nDistribución de un estadístico si el estudio se repitiera muchas veces. → Capítulo 3\n\n\nError típico\nDesviación típica de la distribución muestral; para una media, aproximadamente sd/√n. → Capítulo 3\n\n\nIntervalo de confianza\nIntervalo calculado con un procedimiento que, repetido, contiene el valor verdadero en un porcentaje fijado de las veces. → Capítulo 3\n\n\nEstimación\nCuantificación de un parámetro con su incertidumbre, en lugar de una decisión de sí o no. → Capítulo 3\n\n\nRemuestreo (bootstrap)\nAproximación a la distribución muestral remuestreando con reemplazo los propios datos. → Capítulo 3",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#contrastes-y-valores-p",
+    "href": "92-glosario.html#contrastes-y-valores-p",
+    "title": "Apéndice C — Glosario",
+    "section": "Contrastes y valores p",
+    "text": "Contrastes y valores p\n\nHipótesis nula\nHipótesis de referencia, normalmente de ausencia de efecto, frente a la que se evalúan los datos. → Capítulo 4\n\n\nValor p\nProbabilidad de obtener datos tan extremos o más que los observados si la hipótesis nula y el modelo fueran ciertos. → Capítulo 4\n\n\nNivel de significación\nUmbral α, fijado de antemano, por debajo del cual se rechaza la hipótesis nula. → Capítulo 4\n\n\nError de tipo I y II\nTipo I: rechazar una nula cierta (falso positivo). Tipo II: no rechazar una nula falsa (falso negativo). → Capítulo 4\n\n\nPrueba t\nContraste para comparar medias; la versión de Welch no supone varianzas iguales. → Capítulo 4\n\n\nComparaciones múltiples\nProblema de hacer muchos contrastes: aumenta la probabilidad de algún falso positivo. → Capítulo 4",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#tamaño-del-efecto-y-potencia",
+    "href": "92-glosario.html#tamaño-del-efecto-y-potencia",
+    "title": "Apéndice C — Glosario",
+    "section": "Tamaño del efecto y potencia",
+    "text": "Tamaño del efecto y potencia\n\nTamaño del efecto\nMagnitud de un fenómeno, en unidades originales o estandarizada. → Capítulo 5\n\n\nd de Cohen\nDiferencia de medias dividida entre la desviación típica combinada. → Capítulo 5\n\n\nPotencia\nProbabilidad de detectar un efecto de un tamaño dado si existe. → Capítulo 5\n\n\nEfecto mínimo de interés\nEfecto más pequeño que tendría importancia teórica o práctica. → Capítulo 5\n\n\nJustificación de la muestra\nArgumento explícito de por qué se usa un tamaño de muestra concreto. → Capítulo 5",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#regresión",
+    "href": "92-glosario.html#regresión",
+    "title": "Apéndice C — Glosario",
+    "section": "Regresión",
+    "text": "Regresión\n\nRegresión lineal\nModelo que expresa un resultado como combinación lineal de predictores más un error. → Capítulo 6\n\n\nCoeficiente\nCambio esperado en el resultado por unidad de un predictor, con los demás constantes. → Capítulo 6\n\n\nResiduo\nDiferencia entre el valor observado y el predicho por el modelo. → Capítulo 6\n\n\nR²\nProporción de la variabilidad del resultado explicada por el modelo. → Capítulo 6\n\n\nVariable centrada\nVariable a la que se resta su media para que el cero sea interpretable. → Capítulo 6\n\n\nSobreajuste\nModelo que se ajusta al ruido de la muestra y predice mal datos nuevos. → Capítulo 6",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#inferencia-bayesiana",
+    "href": "92-glosario.html#inferencia-bayesiana",
+    "title": "Apéndice C — Glosario",
+    "section": "Inferencia bayesiana",
+    "text": "Inferencia bayesiana\n\nDistribución previa\nLo que se sabe o se supone de un parámetro antes de ver los datos. → Capítulo 7\n\n\nVerosimilitud\nCuán probables son los datos observados para cada valor del parámetro. → Capítulo 7\n\n\nDistribución posterior\nDistribución del parámetro una vez combinadas la previa y los datos. → Capítulo 7\n\n\nIntervalo de credibilidad\nIntervalo que contiene el parámetro con una probabilidad dada, según la posterior. → Capítulo 7\n\n\nFactor de Bayes\nCociente que compara cuánto mejor predicen los datos una hipótesis que otra. → Capítulo 7",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  }
+]

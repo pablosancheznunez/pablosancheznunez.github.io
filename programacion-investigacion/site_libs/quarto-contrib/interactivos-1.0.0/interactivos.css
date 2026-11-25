@@ -1,0 +1,98 @@
+/* Interactivos: usan los colores del tema (claro u oscuro) a través de Bootstrap */
+.ia { border: 1px solid var(--bs-border-color, #dee2e6); border-left: 4px solid #1baf7a; border-radius: .4rem;
+  padding: .8rem 1rem; margin: 1.3rem 0; background: rgba(127, 127, 127, .05); }
+.ia.ia-hecho { border-left-color: #1a7f37; }
+.ia-cabecera { display: flex; gap: .6rem; align-items: baseline; flex-wrap: wrap; margin-bottom: .4rem; }
+.ia-etiqueta { font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: #0b6b4a; }
+[data-bs-theme="dark"] .ia-etiqueta, .quarto-dark .ia-etiqueta { color: #6ee0b0; }
+.ia-titulo { font-weight: 600; }
+.ia-enunciado > :last-child { margin-bottom: .5rem; }
+.ia-pie { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .6rem; }
+.ia-aviso { margin-top: .4rem; font-weight: 500; min-height: 1.2em; }
+.ia-explicacion { margin-top: .5rem; padding-top: .5rem; border-top: 1px dashed var(--bs-border-color, #ccc); }
+.ia-sinjs { font-style: italic; }
+.ia-bien { box-shadow: inset 4px 0 0 #1a7f37; background: rgba(26, 127, 55, .1) !important; }
+.ia-mal { box-shadow: inset 4px 0 0 #c0392b; background: rgba(192, 57, 43, .1) !important; }
+.ia-bien::after { content: " ✓"; color: #1a7f37; font-weight: 700; }
+.ia-mal::after { content: " ✗"; color: #c0392b; font-weight: 700; }
+.quarto-dark .ia-bien::after { color: #5fd38a; } .quarto-dark .ia-mal::after { color: #ff8a7a; }
+
+/* ordenar */
+.ia-lista { list-style: decimal; padding-left: 1.6rem; margin: 0; }
+.ia-item { display: flex; align-items: center; gap: .5rem; padding: .35rem .5rem; margin: .25rem 0; border: 1px solid var(--bs-border-color, #dee2e6);
+  border-radius: .3rem; background: var(--bs-body-bg, #fff); cursor: grab; }
+.ia-item.ia-arrastrando { opacity: .5; }
+.ia-item .ia-texto { flex: 1; }
+.ia-item .ia-texto p { margin: 0; }
+.ia-asa { opacity: .5; }
+.ia-mover { padding: 0 .45rem; line-height: 1.4; }
+.ia-item.ia-bien::after, .ia-item.ia-mal::after { content: none; }
+
+/* clasificar */
+.ia-fila { display: grid; grid-template-columns: 1fr minmax(9rem, 14rem); gap: .3rem .8rem; align-items: center;
+  padding: .35rem .5rem; border-bottom: 1px solid var(--bs-border-color, #eee); }
+.ia-fila .ia-texto p { margin: 0; }
+.ia-fila .ia-nota { grid-column: 1 / -1; font-size: .9rem; opacity: .9; }
+.ia-fila.ia-bien::after, .ia-fila.ia-mal::after { content: none; }
+
+/* zonas */
+.ia-lienzo { position: relative; display: inline-block; max-width: 100%; }
+.ia-lienzo img { display: block; max-width: 100%; height: auto; }
+.ia-zona { position: absolute; border: 2px dashed rgba(42, 120, 214, .75); background: rgba(42, 120, 214, .06); border-radius: .25rem;
+  padding: 0; cursor: pointer; }
+.ia-zona:hover, .ia-zona:focus-visible { background: rgba(42, 120, 214, .18); outline: 3px solid #2a78d6; outline-offset: 1px; }
+.ia-zona[aria-pressed="true"] { background: rgba(237, 161, 0, .28); border: 3px solid #b37800; }
+.ia-zona.ia-bien { border: 3px solid #1a7f37; background: rgba(26, 127, 55, .22) !important; box-shadow: none; }
+.ia-zona.ia-mal { border: 3px solid #c0392b; background: rgba(192, 57, 43, .22) !important; box-shadow: none; }
+.ia-zona::after { content: none !important; }
+.ia-zona-num { position: absolute; top: -.7rem; left: -.7rem; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: #1f5fae; color: #fff;
+  font-size: .75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.ia-leyenda { margin: .6rem 0 0; padding-left: 1.6rem; }
+.ia-leyenda li { padding: .1rem .3rem; }
+.ia-leyenda .ia-nota { font-size: .9rem; }
+
+/* escenario */
+.ia-paso { border-left: 3px solid var(--bs-border-color, #ccc); padding: .2rem 0 .2rem .8rem; margin: .6rem 0; }
+.ia-paso:focus { outline: none; }
+.ia-paso-titulo { font-size: 1rem; margin: 0 0 .3rem; }
+.ia-opciones { display: flex; flex-direction: column; gap: .35rem; align-items: flex-start; }
+.ia-opciones button { text-align: left; white-space: normal; }
+.ia-opciones button.ia-elegida { font-weight: 600; }
+.ia-opciones button:disabled:not(.ia-elegida) { opacity: .55; }
+.ia-final-bien { border-left-color: #1a7f37; }
+.ia-final-mal { border-left-color: #c0392b; }
+.ia-final-regular { border-left-color: #b37800; }
+
+/* laboratorios con Observable */
+.laboratorio { border: 1px solid var(--bs-border-color, #dee2e6); border-left: 4px solid #2a78d6; border-radius: .4rem; padding: .8rem 1rem; margin: 1.3rem 0; }
+.laboratorio > .laboratorio-etiqueta { font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: #1f5fae; }
+.quarto-dark .laboratorio > .laboratorio-etiqueta { color: #8fc0ff; }
+.ia-lista { list-style: none; padding-left: 0; counter-reset: ia; }
+.ia-item::before { counter-increment: ia; content: counter(ia) "."; font-weight: 600; min-width: 1.4rem; }
+.ia-paso-titulo { font-weight: 600; }
+/* los laboratorios no necesitan el botón de copiar y sus botones usan el color del tema */
+.laboratorio .code-copy-button, .laboratorio .code-copy-outer-scaffold > button { display: none !important; }
+.laboratorio .btn.btn-primary { background-color: var(--bs-primary); border-color: var(--bs-primary); color: var(--bs-body-bg); }
+.laboratorio .btn.btn-outline-primary { background-color: transparent; border-color: var(--bs-primary); color: var(--bs-primary); }
+.laboratorio .btn.btn-outline-primary:hover { background-color: var(--bs-primary); color: var(--bs-body-bg); }
+.laboratorio mark { background: rgba(237, 161, 0, .35); color: inherit; padding: 0 .1em; }
+.laboratorio .lab-valor { min-width: 2.5rem; flex-shrink: 0; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.lab-tarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0 1rem; }
+.lab-sus .lab-campo .form-label { font-size: .95rem; }
+.lab-bien { color: #1a7f37; } .lab-medio { color: #8a5d00; } .lab-mal { color: #a52a1a; }
+.quarto-dark .lab-bien { color: #5fd38a; } .quarto-dark .lab-medio { color: #f0c050; } .quarto-dark .lab-mal { color: #ff8a7a; }
+/* botón de demostración de estados */
+.lab-boton { font: inherit; font-weight: 600; padding: .55rem 1.4rem; min-height: 44px; border-radius: 8px; border: 2px solid #000e78;
+  background: #000e78; color: #fff; cursor: pointer; display: inline-flex; align-items: center; gap: .5rem; transition: background .15s, transform .05s; }
+.lab-boton:hover { background: #1f2fa0; }
+.lab-boton:active { transform: translateY(1px); background: #000a55; }
+.lab-boton:focus-visible { outline: 3px solid #eda100; outline-offset: 3px; }
+.lab-boton:disabled { background: #e9e8e4; border-color: #b9b8b3; color: #5b5a55; cursor: not-allowed; }
+.lab-boton.lab-error { background: #fff; color: #a52a1a; border-color: #a52a1a; }
+.lab-boton.lab-exito { background: #0f6b45; border-color: #0f6b45; }
+.lab-giro { width: 1em; height: 1em; border: 2px solid rgba(255,255,255,.5); border-top-color: #fff; border-radius: 50%; animation: lab-giro 0.8s linear infinite; }
+@keyframes lab-giro { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .lab-giro { animation-duration: 2.5s; } .lab-boton { transition: none; } }
+.quarto-dark .lab-boton:not(:disabled):not(.lab-error):not(.lab-exito) { background: #8fb3ff; border-color: #8fb3ff; color: #111; }
+.quarto-dark .lab-boton.lab-error { background: transparent; color: #ff8a7a; border-color: #ff8a7a; }
+.quarto-dark .ia code, .quarto-dark .laboratorio code { background: rgba(255, 255, 255, .1); color: #f0f0f0; }

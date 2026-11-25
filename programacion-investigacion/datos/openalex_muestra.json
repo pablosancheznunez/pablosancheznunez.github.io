@@ -1,0 +1,1319 @@
+{
+ "meta": {
+  "count": 883,
+  "per_page": 30,
+  "page": 1,
+  "nota": "Muestra descargada de api.openalex.org el 25-11-2026 (filtro: title.search:research software, 2021-2024, artículos; orden: citas). Datos CC0."
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W3006568433",
+   "doi": "https://doi.org/10.1007/s10664-021-10072-8",
+   "title": "Sampling in software engineering research: a critical review and guidelines",
+   "publication_year": 2022,
+   "cited_by_count": 690,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "green"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Sebastian Baltes"
+     },
+     "countries": [
+      "AU"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Paul Ralph"
+     },
+     "countries": [
+      "CA"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Empirical Software Engineering"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3157093692",
+   "doi": "https://doi.org/10.1145/3447580",
+   "title": "PLS-SEM for Software Engineering Research: An Introduction and Survey",
+   "publication_year": 2021,
+   "cited_by_count": 346,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Daniel Russo"
+     },
+     "countries": [
+      "DK"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Klaas-Jan Stol"
+     },
+     "countries": [
+      "IE"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "ACM Computing Surveys"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W4387108406",
+   "doi": "https://doi.org/10.29322/ijsrp.13.08.2023.p14015",
+   "title": "A Comprehensive Research Analysis of Software Development Life Cycle (SDLC) Agile & Waterfall Model Advantages, Disadvantages, and Application Suitability in Software Quality Engineering",
+   "publication_year": 2023,
+   "cited_by_count": 254,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Shravan Pargaonkar"
+     },
+     "countries": []
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "International Journal of Scientific and Research Publications"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3144411758",
+   "doi": "https://doi.org/10.1016/j.future.2021.03.011",
+   "title": "DoS and DDoS attacks in Software Defined Networks: A survey of existing solutions and research challenges",
+   "publication_year": 2021,
+   "cited_by_count": 237,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Lubna Fayez Eliyan"
+     },
+     "countries": [
+      "QA"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Roberto Di Pietro"
+     },
+     "countries": [
+      "QA"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Future Generation Computer Systems"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3129752970",
+   "doi": "https://doi.org/10.12688/wellcomeopenres.16619.2",
+   "title": "BoneJ2 - refactoring established research software",
+   "publication_year": 2021,
+   "cited_by_count": 236,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "gold"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Richard Domander"
+     },
+     "countries": [
+      "GB"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Alessandro Felder"
+     },
+     "countries": [
+      "GB"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Michael Doube"
+     },
+     "countries": [
+      "GB",
+      "HK"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Wellcome Open Research"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W4321091273",
+   "doi": "https://doi.org/10.3390/su15043618",
+   "title": "Sustainable Energy Research Trend: A Bibliometric Analysis Using VOSviewer, RStudio Bibliometrix, and CiteSpace Software Tools",
+   "publication_year": 2023,
+   "cited_by_count": 227,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "gold"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Abidin KEMEÇ"
+     },
+     "countries": [
+      "TR"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Ayşenur Altınay"
+     },
+     "countries": [
+      "TR"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Sustainability"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W4200632538",
+   "doi": "https://doi.org/10.7566/jpsj.91.091013",
+   "title": "Persistent Homology Analysis for Materials Research and Persistent Homology Software: HomCloud",
+   "publication_year": 2022,
+   "cited_by_count": 182,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Ippei Obayashi"
+     },
+     "countries": [
+      "JP"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Takenobu Nakamura"
+     },
+     "countries": [
+      "JP"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Yasuaki Hiraoka"
+     },
+     "countries": [
+      "JP"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Journal of the Physical Society of Japan"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3113352959",
+   "doi": "https://doi.org/10.1186/s12874-021-01252-7",
+   "title": "Facilitating harmonized data quality assessments. A data quality framework for observational health research data collections with software implementations in R",
+   "publication_year": 2021,
+   "cited_by_count": 146,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "gold"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Carsten Oliver Schmidt"
+     },
+     "countries": [
+      "DE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Stephan Struckmann"
+     },
+     "countries": [
+      "DE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Cornelia Enzenbach"
+     },
+     "countries": [
+      "DE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Achim Reineke"
+     },
+     "countries": [
+      "DE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Jürgen Stausberg"
+     },
+     "countries": [
+      "DE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Stefan Damerow"
+     },
+     "countries": [
+      "DE"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "BMC Medical Research Methodology"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3120722172",
+   "doi": "https://doi.org/10.7759/cureus.12639",
+   "title": "Trends in the Usage of Statistical Software and Their Associated Study Designs in Health Sciences Research: A Bibliometric Analysis",
+   "publication_year": 2021,
+   "cited_by_count": 145,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "diamond"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Emad Masuadi"
+     },
+     "countries": [
+      "SA"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Mohamud Mohamud"
+     },
+     "countries": [
+      "SA"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Muhannad Almutairi"
+     },
+     "countries": [
+      "SA"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Abdulaziz Alsunaidi"
+     },
+     "countries": [
+      "SA"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Abdulmohsen Khalid Alswayed"
+     },
+     "countries": [
+      "SA"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Omar A Aldhafeeri"
+     },
+     "countries": [
+      "SA"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Cureus"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3135618694",
+   "doi": "https://doi.org/10.1111/isj.12336",
+   "title": "Issues, challenges, and a proposed theoretical core of agile software development research",
+   "publication_year": 2021,
+   "cited_by_count": 144,
+   "open_access": {
+    "is_oa": false,
+    "oa_status": "closed"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Corey Baham"
+     },
+     "countries": [
+      "US"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Rudy Hirschheim"
+     },
+     "countries": [
+      "US"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Information Systems Journal"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W4402277954",
+   "doi": "https://doi.org/10.1016/j.xpro.2024.103269",
+   "title": "Protocol for conducting bibliometric analysis in biomedicine and related research using CiteSpace and VOSviewer software",
+   "publication_year": 2024,
+   "cited_by_count": 138,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "gold"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Qiang Du"
+     },
+     "countries": [
+      "CN"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Rui Zhao"
+     },
+     "countries": [
+      "CN"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Qianyi Wan"
+     },
+     "countries": [
+      "CN"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Siyu Li"
+     },
+     "countries": [
+      "CN"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Huanyu Li"
+     },
+     "countries": [
+      "CN"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Daofeng Wang"
+     },
+     "countries": [
+      "CN"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "STAR Protocols"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3150736300",
+   "doi": "https://doi.org/10.3390/electronics10080880",
+   "title": "A Topical Review on Machine Learning, Software Defined Networking, Internet of Things Applications: Research Limitations and Challenges",
+   "publication_year": 2021,
+   "cited_by_count": 132,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "gold"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Imran Imran"
+     },
+     "countries": [
+      "PK"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Zeba Ghaffar"
+     },
+     "countries": [
+      "PK"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Abdullah S. Alshahrani"
+     },
+     "countries": [
+      "SA"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Muhammad Fayaz"
+     },
+     "countries": [
+      "KG"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Ahmed Mohammed Alghamdi"
+     },
+     "countries": [
+      "SA"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Jeonghwan Gwak"
+     },
+     "countries": [
+      "KR"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Electronics"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3197518744",
+   "doi": "https://doi.org/10.1007/s10664-021-10026-0",
+   "title": "Topic modeling in software engineering research",
+   "publication_year": 2021,
+   "cited_by_count": 127,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Camila Costa Silva"
+     },
+     "countries": [
+      "NZ"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Matthias Galster"
+     },
+     "countries": [
+      "NZ"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Fabian Gilson"
+     },
+     "countries": [
+      "NZ"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Empirical Software Engineering"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W4385295624",
+   "doi": "https://doi.org/10.1017/sjp.2023.21",
+   "title": "Fuzzy-Set Qualitative Comparative Analysis (fsQCA) in Organizational Psychology: Theoretical Overview, Research Guidelines, and A Step-By-Step Tutorial Using R Software",
+   "publication_year": 2023,
+   "cited_by_count": 126,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Nicola Cangialosi"
+     },
+     "countries": [
+      "IT"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "The Spanish Journal of Psychology"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3123466959",
+   "doi": "https://doi.org/10.1016/j.infsof.2021.106514",
+   "title": "Case Study Research in Software Engineering—It is a Case, and it is a Study, but is it a Case Study?",
+   "publication_year": 2021,
+   "cited_by_count": 117,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Claes Wohlin"
+     },
+     "countries": [
+      "SE"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Information and Software Technology"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W4391407086",
+   "doi": "https://doi.org/10.1109/access.2024.3360868",
+   "title": "Machine Learning and Deep Learning Techniques for Distributed Denial of Service Anomaly Detection in Software Defined Networks—Current Research Solutions",
+   "publication_year": 2024,
+   "cited_by_count": 110,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "gold"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Nura Shifa Musa"
+     },
+     "countries": [
+      "AE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Nada Masood Mirza"
+     },
+     "countries": [
+      "AE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Saida Hafsa Rafique"
+     },
+     "countries": [
+      "AE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Amira Mahamat Abdallah"
+     },
+     "countries": [
+      "AE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "M. Thangavel"
+     },
+     "countries": [
+      "AE"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "IEEE Access"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W4386475806",
+   "doi": "https://doi.org/10.1016/j.infsof.2023.107329",
+   "title": "Threats to validity in software engineering research: A critical reflection",
+   "publication_year": 2023,
+   "cited_by_count": 108,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Roberto Verdecchia"
+     },
+     "countries": [
+      "IT"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Emelie Engström"
+     },
+     "countries": [
+      "SE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Patricia Lago"
+     },
+     "countries": [
+      "NL"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Per Runeson"
+     },
+     "countries": [
+      "SE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Qunying Song"
+     },
+     "countries": [
+      "SE"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Information and Software Technology"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3211722405",
+   "doi": "https://doi.org/10.4258/hir.2021.27.4.341",
+   "title": "Research Development Using REDCap Software",
+   "publication_year": 2021,
+   "cited_by_count": 104,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "gold"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Klauss Kleydmann Sabino Garcia"
+     },
+     "countries": [
+      "BR"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Amanda Amaral Abrahão"
+     },
+     "countries": [
+      "BR"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Healthcare Informatics Research"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3179432987",
+   "doi": "https://doi.org/10.1016/j.infsof.2021.106678",
+   "title": "Guiding the selection of research methodology in industry–academia collaboration in software engineering",
+   "publication_year": 2021,
+   "cited_by_count": 97,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Claes Wohlin"
+     },
+     "countries": [
+      "SE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Per Runeson"
+     },
+     "countries": [
+      "SE"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Information and Software Technology"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3037778009",
+   "doi": "https://doi.org/10.1002/smr.2607",
+   "title": "Qualitative software engineering research: Reflections and guidelines",
+   "publication_year": 2023,
+   "cited_by_count": 95,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "green"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Per Lenberg"
+     },
+     "countries": [
+      "SE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "ROBERT H. FELDT"
+     },
+     "countries": [
+      "SE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Lucas Gren"
+     },
+     "countries": [
+      "SE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Lars Göran Wallgren Tengberg"
+     },
+     "countries": [
+      "SE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Inga Tidefors"
+     },
+     "countries": [
+      "SE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Daniel Graziotin"
+     },
+     "countries": [
+      "DE"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Journal of Software Evolution and Process"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W4308206523",
+   "doi": "https://doi.org/10.1177/15344843221138381",
+   "title": "Using Qualitative Data Analysis Software to Support Digital Research Workflows",
+   "publication_year": 2022,
+   "cited_by_count": 93,
+   "open_access": {
+    "is_oa": false,
+    "oa_status": "closed"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Trena M. Paulus"
+     },
+     "countries": [
+      "US"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Human Resource Development Review"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3139299242",
+   "doi": "https://doi.org/10.1016/j.patter.2021.100222",
+   "title": "Taking a fresh look at FAIR for research software",
+   "publication_year": 2021,
+   "cited_by_count": 93,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "gold"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Daniel S. Katz"
+     },
+     "countries": [
+      "US"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Morane Gruenpeter"
+     },
+     "countries": [
+      "FR"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Tom Honeyman"
+     },
+     "countries": [
+      "AU"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Patterns"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W4387479084",
+   "doi": "https://doi.org/10.1109/ojcoms.2023.3323200",
+   "title": "Software-Defined UAV Networks for 6G Systems: Requirements, Opportunities, Emerging Techniques, Challenges, and Research Directions",
+   "publication_year": 2023,
+   "cited_by_count": 87,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "gold"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Md. Abu Baker Siddiki Abir"
+     },
+     "countries": [
+      "BD"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Mostafa Zaman Chowdhury"
+     },
+     "countries": [
+      "BD"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Yeong Min Jang"
+     },
+     "countries": [
+      "KR"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "IEEE Open Journal of the Communications Society"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W4390045990",
+   "doi": "https://doi.org/10.1007/s10515-023-00407-8",
+   "title": "Large language models for qualitative research in software engineering: exploring opportunities and challenges",
+   "publication_year": 2023,
+   "cited_by_count": 86,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "green"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Muneera Bano"
+     },
+     "countries": [
+      "AU"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Rashina Hoda"
+     },
+     "countries": [
+      "AU"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Didar Zowghi"
+     },
+     "countries": [
+      "AU"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Christoph Treude"
+     },
+     "countries": [
+      "AU"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Automated Software Engineering"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W4385753058",
+   "doi": "https://doi.org/10.1016/j.infsof.2023.107316",
+   "title": "Sustainable software engineering: Reflections on advances in research and practice",
+   "publication_year": 2023,
+   "cited_by_count": 84,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Colin C. Venters"
+     },
+     "countries": [
+      "CH",
+      "GB"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Rafael Capilla"
+     },
+     "countries": [
+      "ES",
+      "FI"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Elisa Yumi Nakagawa"
+     },
+     "countries": [
+      "BR",
+      "FI"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Stefanie Betz"
+     },
+     "countries": [
+      "DE",
+      "FI"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Birgit Penzenstadler"
+     },
+     "countries": [
+      "FI",
+      "SE"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Tom Crick"
+     },
+     "countries": [
+      "GB"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Information and Software Technology"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3200063813",
+   "doi": "https://doi.org/10.1016/j.matpr.2021.08.272",
+   "title": "IoT research in supply chain management and logistics: A bibliometric analysis using vosviewer software",
+   "publication_year": 2021,
+   "cited_by_count": 84,
+   "open_access": {
+    "is_oa": false,
+    "oa_status": "closed"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Rupinder Katoch"
+     },
+     "countries": [
+      "IN"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Materials Today Proceedings"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W4229002261",
+   "doi": "https://doi.org/10.7717/peerj-cs.963",
+   "title": "A survey of the state of the practice for research software in the United States",
+   "publication_year": 2022,
+   "cited_by_count": 81,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "gold"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Jeffrey C. Carver"
+     },
+     "countries": [
+      "US"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Nicholas Weber"
+     },
+     "countries": [
+      "US"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Karthik Ram"
+     },
+     "countries": [
+      "US"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Sandra Gesing"
+     },
+     "countries": []
+    },
+    {
+     "author": {
+      "display_name": "Daniel S. Katz"
+     },
+     "countries": [
+      "US"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "PeerJ Computer Science"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3159212895",
+   "doi": "https://doi.org/10.1177/13607804211003579",
+   "title": "Bridging the Gap Between Methodology and Qualitative Data Analysis Software: A Practical Guide for Educators and Qualitative Researchers",
+   "publication_year": 2021,
+   "cited_by_count": 79,
+   "open_access": {
+    "is_oa": false,
+    "oa_status": "closed"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Neringa Kalpokaite"
+     },
+     "countries": [
+      "ES"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Ivana Radivojevic"
+     },
+     "countries": []
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Sociological Research Online"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W4386951870",
+   "doi": "https://doi.org/10.1109/tai.2023.3318183",
+   "title": "Ethical Aspects of ChatGPT in Software Engineering Research",
+   "publication_year": 2023,
+   "cited_by_count": 77,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "green"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Muhammad Azeem Akbar"
+     },
+     "countries": [
+      "FI"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Arif Ali Khan"
+     },
+     "countries": [
+      "FI"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Peng Liang"
+     },
+     "countries": [
+      "CN"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "IEEE Transactions on Artificial Intelligence"
+    }
+   }
+  },
+  {
+   "id": "https://openalex.org/W3140558569",
+   "doi": "https://doi.org/10.1098/rsta.2020.0079",
+   "title": "The case for free and open source software in research and scholarship",
+   "publication_year": 2021,
+   "cited_by_count": 77,
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "green"
+   },
+   "authorships": [
+    {
+     "author": {
+      "display_name": "Laura Fortunato"
+     },
+     "countries": [
+      "GB",
+      "US"
+     ]
+    },
+    {
+     "author": {
+      "display_name": "Mark C. Galassi"
+     },
+     "countries": [
+      "US"
+     ]
+    }
+   ],
+   "primary_location": {
+    "source": {
+     "display_name": "Philosophical Transactions of the Royal Society A Mathematical Physical and Engineering Sciences"
+    }
+   }
+  }
+ ]
+}
