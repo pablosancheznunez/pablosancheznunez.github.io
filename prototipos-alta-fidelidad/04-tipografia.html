@@ -74,17 +74,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,10 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -468,6 +475,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-4.1" id="toc-ejercicio-4.1" class="nav-link" data-scroll-target="#ejercicio-4.1">Ejercicio 4.1</a></li>
   <li><a href="#ejercicio-4.2" id="toc-ejercicio-4.2" class="nav-link" data-scroll-target="#ejercicio-4.2">Ejercicio 4.2</a></li>
   </ul></li>
+  <li><a href="#lab-t4-tipo" id="toc-lab-t4-tipo" class="nav-link" data-scroll-target="#lab-t4-tipo">Laboratorio tipográfico</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t4" id="toc-reto-t4" class="nav-link" data-scroll-target="#reto-t4">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
@@ -571,7 +580,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="fig-escala" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Seis líneas de texto «Biblioteca» de tamaño creciente, de 12,8 a 48,8 píxeles, con su tamaño en píxeles y en rem a la izquierda. El tamaño de 16 px aparece marcado como texto base.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-escala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/tema4_escala.svg" class="img-fluid figure-img" alt="Seis líneas de texto «Biblioteca» de tamaño creciente, de 12,8 a 48,8 píxeles, con su tamaño en píxeles y en rem a la izquierda. El tamaño de 16 px aparece marcado como texto base.">
+<a href="figuras/tema4_escala.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Escala modular de base 16 px y razón 1,25: cada paso multiplica el anterior por 1,25. Los tamaños se redondean al aplicarlos."><img src="figuras/tema4_escala.svg" class="img-fluid figure-img" alt="Seis líneas de texto «Biblioteca» de tamaño creciente, de 12,8 a 48,8 píxeles, con su tamaño en píxeles y en rem a la izquierda. El tamaño de 16 px aparece marcado como texto base."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-escala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Escala modular de base 16 px y razón 1,25: cada paso multiplica el anterior por 1,25. Los tamaños se redondean al aplicarlos.
@@ -654,6 +663,94 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDRfbGluZWEifSwiY29k
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ0X2xpbmVhIn0sImNvZGUiOiJpZiAoaWRlbnRpY2FsKGFzLm51bWVyaWMoLnJlc3VsdCksIDgwKSkge1xuICBsaXN0KGNvcnJlY3QgPSBUUlVFLCBtZXNzYWdlID0gXCJDb3JyZWN0bzogdW5vcyA4MCBjYXJhY3RlcmVzLCBhbGdvIGxhcmdvLlwiKVxufSBlbHNlIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkVsIGFuY2hvIGVzIDcyMC5cIilcbn0ifQ==
 </script>
 </section>
+</section>
+<section id="lab-t4-tipo" class="level2">
+<h2 class="anchored" data-anchor-id="lab-t4-tipo">Laboratorio tipográfico</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · se ejecuta en tu navegador</p>
+</div>
+<p>Elige un tamaño base y una <strong>razón</strong> de escala modular: cada nivel de la jerarquía se obtiene multiplicando por la razón. Ajusta el interlineado y el ancho de la columna y mira el resultado con un texto real.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="162" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 161;"><span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a>seleccion <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a>viewof t_base <span class="op">=</span> <span class="fu">rango</span>(<span class="st">"Tamaño base (px)"</span><span class="op">,</span> [<span class="dv">12</span><span class="op">,</span> <span class="dv">22</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">16</span>})</span>
+<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a>viewof t_razon <span class="op">=</span> <span class="fu">seleccion</span>(<span class="st">"Razón de la escala"</span><span class="op">,</span> [[<span class="st">"1.125"</span><span class="op">,</span> <span class="st">"1,125 · segunda mayor"</span>]<span class="op">,</span> [<span class="st">"1.2"</span><span class="op">,</span> <span class="st">"1,2 · tercera menor"</span>]<span class="op">,</span> [<span class="st">"1.25"</span><span class="op">,</span> <span class="st">"1,25 · tercera mayor"</span>]<span class="op">,</span> [<span class="st">"1.333"</span><span class="op">,</span> <span class="st">"1,333 · cuarta justa"</span>]<span class="op">,</span> [<span class="st">"1.5"</span><span class="op">,</span> <span class="st">"1,5 · quinta justa"</span>]<span class="op">,</span> [<span class="st">"1.618"</span><span class="op">,</span> <span class="st">"1,618 · proporción áurea"</span>]]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"1.25"</span>})</span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a>viewof t_inter <span class="op">=</span> <span class="fu">rango</span>(<span class="st">"Interlineado del texto"</span><span class="op">,</span> [<span class="fl">1.0</span><span class="op">,</span> <span class="fl">2.0</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">1.5</span><span class="op">,</span> <span class="dt">formato</span><span class="op">:</span> x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="st">"."</span><span class="op">,</span> <span class="st">","</span>)})</span>
+<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a>viewof t_medida <span class="op">=</span> <span class="fu">rango</span>(<span class="st">"Ancho de la columna (em)"</span><span class="op">,</span> [<span class="dv">20</span><span class="op">,</span> <span class="dv">60</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">34</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="171" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 170;"><span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> r <span class="op">=</span> <span class="op">+</span>t_razon<span class="op">,</span> b <span class="op">=</span> t_base<span class="op">;</span></span>
+<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> niveles <span class="op">=</span> [[<span class="st">"Título 1"</span><span class="op">,</span> <span class="dv">4</span>]<span class="op">,</span> [<span class="st">"Título 2"</span><span class="op">,</span> <span class="dv">3</span>]<span class="op">,</span> [<span class="st">"Título 3"</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> [<span class="st">"Título 4"</span><span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span> [<span class="st">"Texto"</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">,</span> [<span class="st">"Pie"</span><span class="op">,</span> <span class="op">-</span><span class="dv">1</span>]]<span class="op">;</span></span>
+<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> px <span class="op">=</span> k <span class="kw">=&gt;</span> b <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span>(r<span class="op">,</span> k)<span class="op">;</span></span>
+<span id="cb4-175"><a href="#cb4-175" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> cpl <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(t_medida <span class="op">*</span> <span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb4-176"><a href="#cb4-176" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> est <span class="op">=</span> cpl <span class="op">&lt;</span> <span class="dv">45</span> <span class="op">?</span> [<span class="st">"corta"</span><span class="op">,</span> <span class="st">"lab-medio"</span>] <span class="op">:</span> cpl <span class="op">&gt;</span> <span class="dv">75</span> <span class="op">?</span> [<span class="st">"larga"</span><span class="op">,</span> <span class="st">"lab-medio"</span>] <span class="op">:</span> [<span class="st">"cómoda"</span><span class="op">,</span> <span class="st">"lab-bien"</span>]<span class="op">;</span></span>
+<span id="cb4-177"><a href="#cb4-177" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb4-178"><a href="#cb4-178" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;table class="table table-sm"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Nivel&lt;/th&gt;&lt;th scope="col"&gt;px&lt;/th&gt;&lt;th scope="col"&gt;rem&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;</span></span>
+<span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a><span class="vs">    </span><span class="sc">${</span>niveles<span class="op">.</span><span class="fu">map</span>(([n<span class="op">,</span> k]) <span class="kw">=&gt;</span> <span class="vs">`&lt;tr&gt;&lt;td&gt;</span><span class="sc">${</span>n<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span><span class="fu">px</span>(k)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="st">"."</span><span class="op">,</span> <span class="st">","</span>)<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>(<span class="fu">px</span>(k) <span class="op">/</span> <span class="dv">16</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="st">"."</span><span class="op">,</span> <span class="st">","</span>)<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;/tr&gt;`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="sc">}</span><span class="vs">&lt;/tbody&gt;&lt;/table&gt;</span></span>
+<span id="cb4-180"><a href="#cb4-180" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div class="lab-muestra-tipo" style="max-width:</span><span class="sc">${</span>t_medida<span class="sc">}</span><span class="vs">em;font-size:</span><span class="sc">${</span>b<span class="sc">}</span><span class="vs">px;border:1px solid var(--bs-border-color);border-radius:6px;padding:1em"&gt;</span></span>
+<span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div style="font-size:</span><span class="sc">${</span><span class="fu">px</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">px;line-height:1.2;font-weight:600;margin-bottom:.4em"&gt;Reserva una sala de estudio&lt;/div&gt;</span></span>
+<span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div style="font-size:</span><span class="sc">${</span><span class="fu">px</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">px;line-height:1.3;font-weight:600;margin-bottom:.3em"&gt;Elige el día y la franja&lt;/div&gt;</span></span>
+<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;p style="line-height:</span><span class="sc">${</span>t_inter<span class="sc">}</span><span class="vs">;margin:0 0 .6em"&gt;Las salas se reservan con un máximo de siete días de antelación y durante un máximo de tres horas seguidas. Si no llegas en los primeros quince minutos, la reserva se libera para otra persona.&lt;/p&gt;</span></span>
+<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div style="font-size:</span><span class="sc">${</span><span class="fu">px</span>(<span class="op">-</span><span class="dv">1</span>)<span class="sc">}</span><span class="vs">px;line-height:1.4"&gt;Normas de uso actualizadas el 1 de septiembre.&lt;/div&gt;&lt;/div&gt;</span></span>
+<span id="cb4-185"><a href="#cb4-185" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;p class="small mt-2"&gt;Unos </span><span class="sc">${</span>cpl<span class="sc">}</span><span class="vs"> caracteres por línea: &lt;span class="</span><span class="sc">${</span>est[<span class="dv">1</span>]<span class="sc">}</span><span class="vs">" style="font-weight:600"&gt;</span><span class="sc">${</span>est[<span class="dv">0</span>]<span class="sc">}</span><span class="vs">&lt;/span&gt; (lo cómodo es 45-75). Con las funciones del libro: &lt;code&gt;escala_tipografica(</span><span class="sc">${</span>b<span class="sc">}</span><span class="vs">, </span><span class="sc">${</span>r<span class="sc">}</span><span class="vs">)&lt;/code&gt;.&lt;/p&gt;`</span><span class="op">;</span></span>
+<span id="cb4-186"><a href="#cb4-186" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d<span class="op">;</span></span>
+<span id="cb4-187"><a href="#cb4-187" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-clasificar" id="ia-t4a-familia"><script type="application/json" class="ia-datos">{"categorias":["Sin serifa humanista","Serifa","Monoespaciada","Ninguna de estas"],"enunciado":"","explicacion":"","items":[{"categoria":"Sin serifa humanista","explicacion":"Formas abiertas, buena legibilidad a tamaños pequeños.","texto":"Texto de interfaz en pantallas pequeñas"},{"categoria":"Monoespaciada","explicacion":"","texto":"Fragmentos de código o números de referencia que hay que alinear"},{"categoria":"Serifa","explicacion":"También funcionan bien muchas sin serifa: lo importante es la\nlegibilidad.","texto":"Textos largos de lectura continua en una revista digital"},{"categoria":"Ninguna de estas","explicacion":"Las decorativas no sirven para la interfaz.","texto":"Una tipografía decorativa de caligrafía para los botones"}],"tipo":"clasificar","titulo":"¿Qué familia elegirías?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t4a-errores"><script type="application/json" class="ia-datos">{"categorias":["Buena práctica","Mala práctica"],"enunciado":"","explicacion":"","items":[{"categoria":"Buena práctica","explicacion":"","texto":"Definir los tamaños en rem para que respeten el ajuste del\nnavegador"},{"categoria":"Mala práctica","explicacion":"","texto":"Usar seis tamaños distintos sin relación entre ellos"},{"categoria":"Mala práctica","explicacion":"Crea ríos de espacio blanco.","texto":"Justificar el texto en columnas estrechas"},{"categoria":"Buena práctica","explicacion":"","texto":"Interlineado de 1,4-1,6 para el texto de párrafo"},{"categoria":"Mala práctica","explicacion":"","texto":"Escribir títulos largos todo en mayúsculas"},{"categoria":"Buena práctica","explicacion":"","texto":"Limitar el número de pesos a dos o tres"}],"tipo":"clasificar","titulo":"¿Buena o mala práctica tipográfica?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-t4" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t4">Reto evaluable</h2>
@@ -835,23 +932,26 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -860,10 +960,12 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -871,13 +973,13 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -890,6 +992,9 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -916,10 +1021,14 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -948,7 +1057,7 @@ WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InJhbmdvID0gd2luZG93LkxhYi5yYW5nb1xuc2VsZWNjaW9uID0gd2luZG93LkxhYi5zZWxlY2Npb25cbnZpZXdvZiB0X2Jhc2UgPSByYW5nbyhcIlRhbWHDsW8gYmFzZSAocHgpXCIsIFsxMiwgMjJdLCB7c3RlcDogMSwgdmFsdWU6IDE2fSlcbnZpZXdvZiB0X3Jhem9uID0gc2VsZWNjaW9uKFwiUmF6w7NuIGRlIGxhIGVzY2FsYVwiLCBbW1wiMS4xMjVcIiwgXCIxLDEyNSDCtyBzZWd1bmRhIG1heW9yXCJdLCBbXCIxLjJcIiwgXCIxLDIgwrcgdGVyY2VyYSBtZW5vclwiXSwgW1wiMS4yNVwiLCBcIjEsMjUgwrcgdGVyY2VyYSBtYXlvclwiXSwgW1wiMS4zMzNcIiwgXCIxLDMzMyDCtyBjdWFydGEganVzdGFcIl0sIFtcIjEuNVwiLCBcIjEsNSDCtyBxdWludGEganVzdGFcIl0sIFtcIjEuNjE4XCIsIFwiMSw2MTggwrcgcHJvcG9yY2nDs24gw6F1cmVhXCJdXSwge3ZhbHVlOiBcIjEuMjVcIn0pXG52aWV3b2YgdF9pbnRlciA9IHJhbmdvKFwiSW50ZXJsaW5lYWRvIGRlbCB0ZXh0b1wiLCBbMS4wLCAyLjBdLCB7c3RlcDogMC4wNSwgdmFsdWU6IDEuNSwgZm9ybWF0bzogeCA9PiB4LnRvRml4ZWQoMikucmVwbGFjZShcIi5cIiwgXCIsXCIpfSlcbnZpZXdvZiB0X21lZGlkYSA9IHJhbmdvKFwiQW5jaG8gZGUgbGEgY29sdW1uYSAoZW0pXCIsIFsyMCwgNjBdLCB7c3RlcDogMSwgdmFsdWU6IDM0fSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgY29uc3QgciA9ICt0X3Jhem9uLCBiID0gdF9iYXNlO1xuICBjb25zdCBuaXZlbGVzID0gW1tcIlTDrXR1bG8gMVwiLCA0XSwgW1wiVMOtdHVsbyAyXCIsIDNdLCBbXCJUw610dWxvIDNcIiwgMl0sIFtcIlTDrXR1bG8gNFwiLCAxXSwgW1wiVGV4dG9cIiwgMF0sIFtcIlBpZVwiLCAtMV1dO1xuICBjb25zdCBweCA9IGsgPT4gYiAqIE1hdGgucG93KHIsIGspO1xuICBjb25zdCBjcGwgPSBNYXRoLnJvdW5kKHRfbWVkaWRhICogMik7XG4gIGNvbnN0IGVzdCA9IGNwbCA8IDQ1ID8gW1wiY29ydGFcIiwgXCJsYWItbWVkaW9cIl0gOiBjcGwgPiA3NSA/IFtcImxhcmdhXCIsIFwibGFiLW1lZGlvXCJdIDogW1wiY8OzbW9kYVwiLCBcImxhYi1iaWVuXCJdO1xuICBjb25zdCBkID0gaHRtbGA8ZGl2IHJvbGU9XCJzdGF0dXNcIj48L2Rpdj5gO1xuICBkLmlubmVySFRNTCA9IGA8dGFibGUgY2xhc3M9XCJ0YWJsZSB0YWJsZS1zbVwiPjx0aGVhZD48dHI+PHRoIHNjb3BlPVwiY29sXCI+Tml2ZWw8L3RoPjx0aCBzY29wZT1cImNvbFwiPnB4PC90aD48dGggc2NvcGU9XCJjb2xcIj5yZW08L3RoPjwvdHI+PC90aGVhZD48dGJvZHk+XG4gICAgJHtuaXZlbGVzLm1hcCgoW24sIGtdKSA9PiBgPHRyPjx0ZD4ke259PC90ZD48dGQ+JHtweChrKS50b0ZpeGVkKDEpLnJlcGxhY2UoXCIuXCIsIFwiLFwiKX08L3RkPjx0ZD4keyhweChrKSAvIDE2KS50b0ZpeGVkKDMpLnJlcGxhY2UoXCIuXCIsIFwiLFwiKX08L3RkPjwvdHI+YCkuam9pbihcIlwiKX08L3Rib2R5PjwvdGFibGU+XG4gICAgPGRpdiBjbGFzcz1cImxhYi1tdWVzdHJhLXRpcG9cIiBzdHlsZT1cIm1heC13aWR0aDoke3RfbWVkaWRhfWVtO2ZvbnQtc2l6ZToke2J9cHg7Ym9yZGVyOjFweCBzb2xpZCB2YXIoLS1icy1ib3JkZXItY29sb3IpO2JvcmRlci1yYWRpdXM6NnB4O3BhZGRpbmc6MWVtXCI+XG4gICAgICA8ZGl2IHN0eWxlPVwiZm9udC1zaXplOiR7cHgoMyl9cHg7bGluZS1oZWlnaHQ6MS4yO2ZvbnQtd2VpZ2h0OjYwMDttYXJnaW4tYm90dG9tOi40ZW1cIj5SZXNlcnZhIHVuYSBzYWxhIGRlIGVzdHVkaW88L2Rpdj5cbiAgICAgIDxkaXYgc3R5bGU9XCJmb250LXNpemU6JHtweCgxKX1weDtsaW5lLWhlaWdodDoxLjM7Zm9udC13ZWlnaHQ6NjAwO21hcmdpbi1ib3R0b206LjNlbVwiPkVsaWdlIGVsIGTDrWEgeSBsYSBmcmFuamE8L2Rpdj5cbiAgICAgIDxwIHN0eWxlPVwibGluZS1oZWlnaHQ6JHt0X2ludGVyfTttYXJnaW46MCAwIC42ZW1cIj5MYXMgc2FsYXMgc2UgcmVzZXJ2YW4gY29uIHVuIG3DoXhpbW8gZGUgc2lldGUgZMOtYXMgZGUgYW50ZWxhY2nDs24geSBkdXJhbnRlIHVuIG3DoXhpbW8gZGUgdHJlcyBob3JhcyBzZWd1aWRhcy4gU2kgbm8gbGxlZ2FzIGVuIGxvcyBwcmltZXJvcyBxdWluY2UgbWludXRvcywgbGEgcmVzZXJ2YSBzZSBsaWJlcmEgcGFyYSBvdHJhIHBlcnNvbmEuPC9wPlxuICAgICAgPGRpdiBzdHlsZT1cImZvbnQtc2l6ZToke3B4KC0xKX1weDtsaW5lLWhlaWdodDoxLjRcIj5Ob3JtYXMgZGUgdXNvIGFjdHVhbGl6YWRhcyBlbCAxIGRlIHNlcHRpZW1icmUuPC9kaXY+PC9kaXY+XG4gICAgPHAgY2xhc3M9XCJzbWFsbCBtdC0yXCI+VW5vcyAke2NwbH0gY2FyYWN0ZXJlcyBwb3IgbMOtbmVhOiA8c3BhbiBjbGFzcz1cIiR7ZXN0WzFdfVwiIHN0eWxlPVwiZm9udC13ZWlnaHQ6NjAwXCI+JHtlc3RbMF19PC9zcGFuPiAobG8gY8OzbW9kbyBlcyA0NS03NSkuIENvbiBsYXMgZnVuY2lvbmVzIGRlbCBsaWJybzogPGNvZGU+ZXNjYWxhX3RpcG9ncmFmaWNhKCR7Yn0sICR7cn0pPC9jb2RlPi48L3A+YDtcbiAgcmV0dXJuIGQ7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3RfYmFzZScpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCd0X3Jhem9uJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3RfaW50ZXInKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgndF9tZWRpZGEnKSJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1402,6 +1511,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

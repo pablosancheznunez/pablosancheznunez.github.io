@@ -200,7 +200,18 @@
     "href": "01-fundamentos.html#práctica",
     "title": "Tema 1. Fundamentos del prototipado de alta fidelidad",
     "section": "Práctica",
-    "text": "Práctica\nToma uno de los prototipos de baja fidelidad que hiciste en la asignatura anterior. Escribe tres preguntas sobre él que no puedas responder sin subir la fidelidad, y para cada una indica el tipo de prototipo de la tabla del apartado 4 que usarías.",
+    "text": "Práctica\nToma uno de los prototipos de baja fidelidad que hiciste en la asignatura anterior. Escribe tres preguntas sobre él que no puedas responder sin subir la fidelidad, y para cada una indica el tipo de prototipo de la tabla del apartado 4 que usarías.\n\n\n\n\n\n\nFigura 1: Qué preguntas puede responder cada nivel de fidelidad.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de alta fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "01-fundamentos.html#actividades",
+    "href": "01-fundamentos.html#actividades",
+    "title": "Tema 1. Fundamentos del prototipado de alta fidelidad",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\n\n\n\n\n\n\nAdvertenciaErrores frecuentes\n\n\n\n\nSaltarse la baja fidelidad y defender decisiones de estructura que nadie ha probado.\nConfundir pulido con validado: una maqueta bonita puede esconder un flujo que no funciona.\nEl efecto «ya está hecho»: quien ve un prototipo muy pulido opina menos sobre la estructura.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de alta fidelidad</span>"
@@ -317,6 +328,17 @@
     ]
   },
   {
+    "objectID": "02-maquetas.html#actividades",
+    "href": "02-maquetas.html#actividades",
+    "title": "Tema 2. Las maquetas en el proceso de diseño",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. Las maquetas en el proceso de diseño</span>"
+    ]
+  },
+  {
     "objectID": "02-maquetas.html#reto-t2",
     "href": "02-maquetas.html#reto-t2",
     "title": "Tema 2. Las maquetas en el proceso de diseño",
@@ -420,7 +442,29 @@
     "href": "03-transicion.html#práctica",
     "title": "Tema 3. De la baja a la alta fidelidad",
     "section": "Práctica",
-    "text": "Práctica\nToma una pantalla de un prototipo de baja fidelidad tuyo. Súbela a alta fidelidad por capas (tipografía, color, iconos) y, en cada capa, comprueba con su esquema original que la jerarquía no ha cambiado.",
+    "text": "Práctica\nToma una pantalla de un prototipo de baja fidelidad tuyo. Súbela a alta fidelidad por capas (tipografía, color, iconos) y, en cada capa, comprueba con su esquema original que la jerarquía no ha cambiado.\n\n\n\n\n\n\nFigura 1: El mismo diseño en baja y en alta fidelidad.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. De la baja a la alta fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-transicion.html#lab-t3-estados",
+    "href": "03-transicion.html#lab-t3-estados",
+    "title": "Tema 3. De la baja a la alta fidelidad",
+    "section": "Laboratorio: estados de un componente",
+    "text": "Laboratorio: estados de un componente\n\n\nLaboratorio · se ejecuta en tu navegador\n\nUn componente de alta fidelidad no es una imagen: tiene estados. Prueba el botón con el ratón y con el teclado (tabulador para el foco, Intro o espacio para pulsarlo). Activa los estados que el diseño debe especificar y comprueba cómo se ven.\n\nseleccion = window.Lab.seleccion\nviewof estado_boton = seleccion(\"Estado forzado\", [[\"reposo\", \"Reposo (interactivo)\"], [\"desactivado\", \"Desactivado\"], [\"cargando\", \"Cargando\"], [\"error\", \"Error\"], [\"exito\", \"Éxito\"]], {value: \"reposo\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const e = estado_boton;\n  const etiqueta = {reposo: \"Reservar\", desactivado: \"Reservar\", cargando: \"Reservando…\", error: \"Reintentar\", exito: \"Reservado ✓\"}[e];\n  const ayuda = {reposo: \"Pasa el ratón, pulsa o usa el tabulador: verás los estados :hover, :active y :focus-visible.\",\n    desactivado: \"Desactivado: no responde. Explica por qué cerca del botón («No se puede reservar: ya tienes 5 reservas»).\",\n    cargando: \"Cargando: evita el doble envío y comunica que el sistema trabaja (aria-busy).\",\n    error: \"Error: el mensaje dice qué pasó y la acción permite recuperarse.\",\n    exito: \"Éxito: confirma el resultado sin obligar a buscarlo.\"}[e];\n  const d = document.createElement(\"div\"); d.className = \"lab-estados\";\n  const b = document.createElement(\"button\"); b.type = \"button\"; b.className = \"lab-boton lab-\" + e;\n  if (e === \"desactivado\") b.disabled = true;\n  b.setAttribute(\"aria-busy\", String(e === \"cargando\"));\n  if (e === \"cargando\") { const g = document.createElement(\"span\"); g.className = \"lab-giro\"; g.setAttribute(\"aria-hidden\", \"true\"); b.append(g); }\n  b.append(etiqueta); d.append(b);\n  if (e === \"error\") { const p = document.createElement(\"p\"); p.className = \"lab-mal small mt-1 mb-0\"; p.textContent = \"No se ha podido reservar: comprueba tu conexión.\"; d.append(p); }\n  const st = document.createElement(\"p\"); st.className = \"small mt-2\"; st.setAttribute(\"role\", \"status\"); st.textContent = ayuda; d.append(st);\n  let n = 0;\n  if (e === \"reposo\") b.onclick = () =&gt; { n++; st.textContent = `Pulsado ${n} ${n === 1 ? \"vez\" : \"veces\"}. ¿Has visto el cambio al pulsar y el anillo de foco con el teclado?`; };\n  return d;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. De la baja a la alta fidelidad</span>"
+    ]
+  },
+  {
+    "objectID": "03-transicion.html#actividades",
+    "href": "03-transicion.html#actividades",
+    "title": "Tema 3. De la baja a la alta fidelidad",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. De la baja a la alta fidelidad</span>"
@@ -537,6 +581,28 @@
     ]
   },
   {
+    "objectID": "04-tipografia.html#lab-t4-tipo",
+    "href": "04-tipografia.html#lab-t4-tipo",
+    "title": "Tema 4. La tipografía en el diseño de interfaces",
+    "section": "Laboratorio tipográfico",
+    "text": "Laboratorio tipográfico\n\n\nLaboratorio · se ejecuta en tu navegador\n\nElige un tamaño base y una razón de escala modular: cada nivel de la jerarquía se obtiene multiplicando por la razón. Ajusta el interlineado y el ancho de la columna y mira el resultado con un texto real.\n\nrango = window.Lab.rango\nseleccion = window.Lab.seleccion\nviewof t_base = rango(\"Tamaño base (px)\", [12, 22], {step: 1, value: 16})\nviewof t_razon = seleccion(\"Razón de la escala\", [[\"1.125\", \"1,125 · segunda mayor\"], [\"1.2\", \"1,2 · tercera menor\"], [\"1.25\", \"1,25 · tercera mayor\"], [\"1.333\", \"1,333 · cuarta justa\"], [\"1.5\", \"1,5 · quinta justa\"], [\"1.618\", \"1,618 · proporción áurea\"]], {value: \"1.25\"})\nviewof t_inter = rango(\"Interlineado del texto\", [1.0, 2.0], {step: 0.05, value: 1.5, formato: x =&gt; x.toFixed(2).replace(\".\", \",\")})\nviewof t_medida = rango(\"Ancho de la columna (em)\", [20, 60], {step: 1, value: 34})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const r = +t_razon, b = t_base;\n  const niveles = [[\"Título 1\", 4], [\"Título 2\", 3], [\"Título 3\", 2], [\"Título 4\", 1], [\"Texto\", 0], [\"Pie\", -1]];\n  const px = k =&gt; b * Math.pow(r, k);\n  const cpl = Math.round(t_medida * 2);\n  const est = cpl &lt; 45 ? [\"corta\", \"lab-medio\"] : cpl &gt; 75 ? [\"larga\", \"lab-medio\"] : [\"cómoda\", \"lab-bien\"];\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;table class=\"table table-sm\"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=\"col\"&gt;Nivel&lt;/th&gt;&lt;th scope=\"col\"&gt;px&lt;/th&gt;&lt;th scope=\"col\"&gt;rem&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;\n    ${niveles.map(([n, k]) =&gt; `&lt;tr&gt;&lt;td&gt;${n}&lt;/td&gt;&lt;td&gt;${px(k).toFixed(1).replace(\".\", \",\")}&lt;/td&gt;&lt;td&gt;${(px(k) / 16).toFixed(3).replace(\".\", \",\")}&lt;/td&gt;&lt;/tr&gt;`).join(\"\")}&lt;/tbody&gt;&lt;/table&gt;\n    &lt;div class=\"lab-muestra-tipo\" style=\"max-width:${t_medida}em;font-size:${b}px;border:1px solid var(--bs-border-color);border-radius:6px;padding:1em\"&gt;\n      &lt;div style=\"font-size:${px(3)}px;line-height:1.2;font-weight:600;margin-bottom:.4em\"&gt;Reserva una sala de estudio&lt;/div&gt;\n      &lt;div style=\"font-size:${px(1)}px;line-height:1.3;font-weight:600;margin-bottom:.3em\"&gt;Elige el día y la franja&lt;/div&gt;\n      &lt;p style=\"line-height:${t_inter};margin:0 0 .6em\"&gt;Las salas se reservan con un máximo de siete días de antelación y durante un máximo de tres horas seguidas. Si no llegas en los primeros quince minutos, la reserva se libera para otra persona.&lt;/p&gt;\n      &lt;div style=\"font-size:${px(-1)}px;line-height:1.4\"&gt;Normas de uso actualizadas el 1 de septiembre.&lt;/div&gt;&lt;/div&gt;\n    &lt;p class=\"small mt-2\"&gt;Unos ${cpl} caracteres por línea: &lt;span class=\"${est[1]}\" style=\"font-weight:600\"&gt;${est[0]}&lt;/span&gt; (lo cómodo es 45-75). Con las funciones del libro: &lt;code&gt;escala_tipografica(${b}, ${r})&lt;/code&gt;.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. La tipografía en el diseño de interfaces</span>"
+    ]
+  },
+  {
+    "objectID": "04-tipografia.html#actividades",
+    "href": "04-tipografia.html#actividades",
+    "title": "Tema 4. La tipografía en el diseño de interfaces",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. La tipografía en el diseño de interfaces</span>"
+    ]
+  },
+  {
     "objectID": "04-tipografia.html#reto-t4",
     "href": "04-tipografia.html#reto-t4",
     "title": "Tema 4. La tipografía en el diseño de interfaces",
@@ -647,6 +713,28 @@
     ]
   },
   {
+    "objectID": "05-color.html#lab-t5-contraste",
+    "href": "05-color.html#lab-t5-contraste",
+    "title": "Tema 5. Uso accesible del color",
+    "section": "Laboratorio: contraste y daltonismo",
+    "text": "Laboratorio: contraste y daltonismo\n\n\nLaboratorio · cálculo en tu navegador\n\nElige un color de texto y uno de fondo. El laboratorio calcula la razón de contraste de las WCAG 2.2, te dice qué niveles cumple y simula cómo ven la combinación las personas con los tres tipos principales de daltonismo (matrices de Machado, Oliveira y Fernandes, 2009).\n\ncolor = window.Lab.color\nviewof c_texto = color(\"Color del texto\", {value: \"#e8663a\"})\nviewof c_fondo = color(\"Color del fondo\", {value: \"#ffffff\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const rgb = h =&gt; [1, 3, 5].map(i =&gt; parseInt(h.slice(i, i + 2), 16) / 255);\n  const lin = c =&gt; c &lt;= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);\n  const L = h =&gt; { const [r, g, b] = rgb(h).map(lin); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };\n  const ratio = (a, b) =&gt; { const [x, y] = [L(a), L(b)].sort((p, q) =&gt; q - p); return (x + 0.05) / (y + 0.05); };\n  const M = {protan: [[0.152286, 1.052583, -0.204868], [0.114503, 0.786281, 0.099216], [-0.003882, -0.048116, 1.051998]],\n             deutan: [[0.367322, 0.860646, -0.227968], [0.280085, 0.672501, 0.047413], [-0.011820, 0.042940, 0.968881]],\n             tritan: [[1.255528, -0.076749, -0.178779], [-0.078411, 0.930809, 0.147602], [0.004733, 0.691367, 0.303900]]};\n  const sim = (h, t) =&gt; { const v = rgb(h).map(lin), m = M[t];\n    const o = m.map(f =&gt; Math.min(1, Math.max(0, f[0] * v[0] + f[1] * v[1] + f[2] * v[2])));\n    return \"#\" + o.map(c =&gt; Math.round(255 * (c &lt;= 0.0031308 ? 12.92 * c : 1.055 * Math.pow(c, 1 / 2.4) - 0.055)).toString(16).padStart(2, \"0\")).join(\"\"); };\n  const r = ratio(c_texto, c_fondo);\n  const marca = ok =&gt; ok ? \"✓ cumple\" : \"✗ no cumple\";\n  const muestra = (t, f, et) =&gt; `&lt;svg viewBox=\"0 0 160 92\" style=\"flex:1;min-width:9rem;max-width:14rem\" role=\"img\" aria-label=\"${et}: texto ${t} sobre fondo ${f}, contraste ${ratio(t, f).toFixed(2).replace(\".\", \",\")} a 1\"&gt;&lt;rect x=\".5\" y=\".5\" width=\"159\" height=\"91\" rx=\"6\" fill=\"${f}\" stroke=\"#bbb\"/&gt;&lt;text x=\"10\" y=\"20\" font-size=\"11\" fill=\"${t}\"&gt;${et}&lt;/text&gt;&lt;text x=\"10\" y=\"46\" font-size=\"19\" font-weight=\"600\" fill=\"${t}\"&gt;Reservar&lt;/text&gt;&lt;text x=\"10\" y=\"66\" font-size=\"13\" fill=\"${t}\"&gt;Texto de ejemplo&lt;/text&gt;&lt;text x=\"10\" y=\"84\" font-size=\"11\" fill=\"${t}\"&gt;${ratio(t, f).toFixed(2).replace(\".\", \",\")}:1&lt;/text&gt;&lt;/svg&gt;`;\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p style=\"font-size:1.2rem\"&gt;&lt;strong&gt;Contraste ${r.toFixed(2).replace(\".\", \",\")}:1&lt;/strong&gt;&lt;/p&gt;\n  &lt;ul&gt;&lt;li&gt;Texto normal, AA (4,5:1): &lt;strong&gt;${marca(r &gt;= 4.5)}&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Texto grande, AA (3:1): &lt;strong&gt;${marca(r &gt;= 3)}&lt;/strong&gt;&lt;/li&gt;\n  &lt;li&gt;Componentes y gráficos, AA (3:1): &lt;strong&gt;${marca(r &gt;= 3)}&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Texto normal, AAA (7:1): &lt;strong&gt;${marca(r &gt;= 7)}&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;\n  &lt;div style=\"display:flex;gap:.5rem;flex-wrap:wrap\" class=\"lab-muestras\"&gt;${muestra(c_texto, c_fondo, \"Visión típica\")}${muestra(sim(c_texto, \"protan\"), sim(c_fondo, \"protan\"), \"Protanopia\")}${muestra(sim(c_texto, \"deutan\"), sim(c_fondo, \"deutan\"), \"Deuteranopia\")}${muestra(sim(c_texto, \"tritan\"), sim(c_fondo, \"tritan\"), \"Tritanopia\")}&lt;/div&gt;\n  &lt;p class=\"small mt-2\"&gt;Con las funciones del libro: &lt;code&gt;contraste()&lt;/code&gt;, &lt;code&gt;cumple_wcag()&lt;/code&gt; y &lt;code&gt;simular_daltonismo()&lt;/code&gt;. Prueba el naranja por defecto: muy visible, pero no llega a 4,5:1 sobre blanco. Busca el naranja más parecido que sí cumpla.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Uso accesible del color</span>"
+    ]
+  },
+  {
+    "objectID": "05-color.html#actividades",
+    "href": "05-color.html#actividades",
+    "title": "Tema 5. Uso accesible del color",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\n\n\n\n\n\n\nAdvertenciaErrores frecuentes\n\n\n\n\nComprobar el contraste a ojo en una pantalla brillante.\nElegir la paleta de marca y luego «arreglar» la accesibilidad: comprueba el contraste al definir los colores.\nOlvidar el modo oscuro: los mismos colores no funcionan igual sobre fondos oscuros.\nEl gris claro sobre blanco para textos secundarios: elegante, pero a menudo ilegible.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Uso accesible del color</span>"
+    ]
+  },
+  {
     "objectID": "05-color.html#reto-t5",
     "href": "05-color.html#reto-t5",
     "title": "Tema 5. Uso accesible del color",
@@ -750,7 +838,18 @@
     "href": "06-iconografia.html#práctica",
     "title": "Tema 6. Iconografía",
     "section": "Práctica",
-    "text": "Práctica\nBusca diez iconos de la aplicación de tu banco o de tu universidad. Tápales la etiqueta y pide a dos personas que digan qué hacen. Anota cuántos aciertan y relaciona los fallos con la concreción y la distancia semántica de McDougall et al.",
+    "text": "Práctica\nBusca diez iconos de la aplicación de tu banco o de tu universidad. Tápales la etiqueta y pide a dos personas que digan qué hacen. Anota cuántos aciertan y relaciona los fallos con la concreción y la distancia semántica de McDougall et al.\n\n\n\n\n\n\nFigura 1: Icono, etiqueta o las dos cosas. Salvo los pocos iconos universales, la etiqueta despeja la ambigüedad.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. Iconografía</span>"
+    ]
+  },
+  {
+    "objectID": "06-iconografia.html#actividades",
+    "href": "06-iconografia.html#actividades",
+    "title": "Tema 6. Iconografía",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. Iconografía</span>"
@@ -860,7 +959,40 @@
     "href": "07-composicion.html#práctica-en-r-medidas-de-la-composición",
     "title": "Tema 7. Composición y proporción en pantalla",
     "section": "Práctica en R: medidas de la composición",
-    "text": "Práctica en R: medidas de la composición\n\n\n\n\n\n\n\nEjercicio 7.1\nEn tableta (1024 px, 8 columnas, medianil de 24 px y margen de 32 px), ¿cuánto mide un módulo que ocupa todas las columnas?\n\n\n\n\n\n\n\n\nOcupa todas las columnas de la rejilla de tableta: 8.\n\n\nancho_bloque(n = 8, ancho = 1024, columnas = 8, medianil = 24, margen = 32)\n960 px: el ancho total menos los dos márgenes (1024 − 64).",
+    "text": "Práctica en R: medidas de la composición\n\n\n\n\n\n\n\nEjercicio 7.1\nEn tableta (1024 px, 8 columnas, medianil de 24 px y margen de 32 px), ¿cuánto mide un módulo que ocupa todas las columnas?\n\n\n\n\n\n\n\n\nOcupa todas las columnas de la rejilla de tableta: 8.\n\n\nancho_bloque(n = 8, ancho = 1024, columnas = 8, medianil = 24, margen = 32)\n960 px: el ancho total menos los dos márgenes (1024 − 64).\n\n\n\n\n\n\n\n\nFigura 2: Cuatro principios de la Gestalt que se usan a diario en composición.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Composición y proporción en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-composicion.html#lab-t7-proximidad",
+    "href": "07-composicion.html#lab-t7-proximidad",
+    "title": "Tema 7. Composición y proporción en pantalla",
+    "section": "Laboratorio: proximidad",
+    "text": "Laboratorio: proximidad\n\n\nLaboratorio · se ejecuta en tu navegador\n\nCambia el espacio horizontal y vertical entre los puntos. Cuando los puntos están más cerca en vertical que en horizontal, ves columnas; cuando están más cerca en horizontal, ves filas. Es el principio que hace que una etiqueta «pertenezca» a su campo si está más cerca de él que del siguiente.\n\nrango = window.Lab.rango\nviewof g_h = rango(\"Espacio horizontal\", [10, 60], {step: 2, value: 40})\nviewof g_v = rango(\"Espacio vertical\", [10, 60], {step: 2, value: 16})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const pts = []; for (let i = 0; i &lt; 5; i++) for (let j = 0; j &lt; 6; j++) pts.push(`&lt;circle cx=\"${20 + j * g_h}\" cy=\"${20 + i * g_v}\" r=\"6\" fill=\"#2a78d6\"/&gt;`);\n  const w = 40 + 5 * g_h, h = 40 + 4 * g_v;\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;svg viewBox=\"0 0 ${w} ${h}\" width=\"${w}\" height=\"${h}\" style=\"max-width:100%\" role=\"img\" aria-label=\"Seis columnas y cinco filas de puntos\"&gt;${pts.join(\"\")}&lt;/svg&gt;\n   &lt;p&gt;Lo más probable es que veas &lt;strong&gt;${g_h &gt; g_v * 1.3 ? \"columnas\" : g_v &gt; g_h * 1.3 ? \"filas\" : \"una retícula sin grupos claros\"}&lt;/strong&gt;.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Composición y proporción en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-composicion.html#lab-t7-adaptable",
+    "href": "07-composicion.html#lab-t7-adaptable",
+    "title": "Tema 7. Composición y proporción en pantalla",
+    "section": "Laboratorio: de la rejilla al diseño adaptable",
+    "text": "Laboratorio: de la rejilla al diseño adaptable\n\n\nLaboratorio · se ejecuta en tu navegador\n\nMueve el ancho de la ventana y mira cómo se reorganizan seis tarjetas según tres puntos de ruptura (600 y 1024 px).\n\nviewof a_ancho = rango(\"Ancho de la ventana (px)\", [320, 1440], {step: 8, value: 800})\n\n\n\n\n\n\n\n{\n  const cols = a_ancho &lt; 600 ? 1 : a_ancho &lt; 1024 ? 2 : 3;\n  const nombre = cols === 1 ? \"móvil: 1 columna\" : cols === 2 ? \"tableta: 2 columnas\" : \"escritorio: 3 columnas\";\n  const esc = Math.min(1, 640 / a_ancho), w = a_ancho * esc, pad = 16 * esc, gap = 12 * esc;\n  const cw = (w - 2 * pad - (cols - 1) * gap) / cols, ch = 70 * Math.max(esc, .55);\n  const r = []; for (let k = 0; k &lt; 6; k++) { const c = k % cols, f = Math.floor(k / cols);\n    r.push(`&lt;rect x=\"${pad + c * (cw + gap)}\" y=\"${pad + f * (ch + gap)}\" width=\"${cw}\" height=\"${ch}\" rx=\"6\" fill=\"#dbe8f8\" stroke=\"#2a78d6\"/&gt;&lt;text x=\"${pad + c * (cw + gap) + 8}\" y=\"${pad + f * (ch + gap) + 20}\" font-size=\"12\" fill=\"#0b0b0b\"&gt;Sala ${k + 1}&lt;/text&gt;`); }\n  const h = 2 * pad + Math.ceil(6 / cols) * (ch + gap);\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;&lt;strong&gt;${a_ancho} px&lt;/strong&gt; → ${nombre}&lt;/p&gt;&lt;svg viewBox=\"0 0 ${w} ${h}\" width=\"${w}\" style=\"max-width:100%;border:1px solid var(--bs-border-color);border-radius:8px;background:#fff\" role=\"img\" aria-label=\"${nombre}\"&gt;${r.join(\"\")}&lt;/svg&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Composición y proporción en pantalla</span>"
+    ]
+  },
+  {
+    "objectID": "07-composicion.html#actividades",
+    "href": "07-composicion.html#actividades",
+    "title": "Tema 7. Composición y proporción en pantalla",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Composición y proporción en pantalla</span>"
@@ -971,6 +1103,28 @@
     "title": "Tema 8. Espacio negativo y respiración visual",
     "section": "Práctica",
     "text": "Práctica\nToma la captura de una pantalla densa de un servicio que uses. Sin quitar ningún contenido, redistribuye el espacio: agrupa por proximidad, separa las secciones y aísla la acción principal. Compara la primera impresión de las dos versiones con otra persona.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Espacio negativo y respiración visual</span>"
+    ]
+  },
+  {
+    "objectID": "08-espacio.html#lab-t8-densidad",
+    "href": "08-espacio.html#lab-t8-densidad",
+    "title": "Tema 8. Espacio negativo y respiración visual",
+    "section": "Laboratorio: densidad de información",
+    "text": "Laboratorio: densidad de información\n\n\nLaboratorio · se ejecuta en tu navegador\n\nAjusta el relleno y el espacio entre elementos de una lista de préstamos y mira cuántos caben en una pantalla de móvil de 640 px de alto. Más densidad muestra más datos; menos densidad facilita la lectura y el toque. No hay un valor correcto: depende de la tarea.\n\nrango = window.Lab.rango\nviewof d_rel = rango(\"Relleno interior (px)\", [4, 28], {step: 2, value: 12})\nviewof d_sep = rango(\"Separación entre elementos (px)\", [0, 24], {step: 2, value: 8})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const alto = 2 * d_rel + 40, total = 640 - 60;\n  const caben = Math.floor((total + d_sep) / (alto + d_sep));\n  const libros = [\"Diseño de interacción\", \"Usabilidad web\", \"Manual de Quarto\", \"Tipografía digital\", \"Color y accesibilidad\", \"Sistemas de diseño\", \"Arquitectura de información\", \"Investigación con usuarios\", \"Escribir para la web\", \"Psicología del diseño\", \"Diseño inclusivo\", \"Prototipado rápido\", \"Métricas de UX\", \"Diseño de servicios\"];\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p&gt;Caben &lt;strong&gt;${caben}&lt;/strong&gt; préstamos sin desplazarse · altura de cada fila: ${alto} px ${alto &lt; 44 ? '&lt;span class=\"lab-medio\" style=\"font-weight:600\"&gt;(menos de 44 px: difícil de tocar)&lt;/span&gt;' : \"\"}&lt;/p&gt;\n  &lt;div style=\"width:240px;height:320px;overflow:hidden;border:2px solid var(--bs-border-color);border-radius:16px;padding:8px;background:var(--bs-body-bg)\" aria-hidden=\"true\"&gt;\n   &lt;div style=\"transform:scale(.5);transform-origin:0 0;width:460px\"&gt;\n    &lt;div style=\"font-weight:600;font-size:20px;margin:6px 0 16px\"&gt;Mis préstamos&lt;/div&gt;\n    ${libros.map(l =&gt; `&lt;div style=\"padding:${d_rel}px;margin-bottom:${d_sep}px;border-radius:8px;background:rgba(42,120,214,.1)\"&gt;&lt;div style=\"font-weight:600;font-size:16px\"&gt;${l}&lt;/div&gt;&lt;div style=\"font-size:13px;opacity:.8\"&gt;Vence el 02/12&lt;/div&gt;&lt;/div&gt;`).join(\"\")}\n   &lt;/div&gt;&lt;/div&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Espacio negativo y respiración visual</span>"
+    ]
+  },
+  {
+    "objectID": "08-espacio.html#actividades",
+    "href": "08-espacio.html#actividades",
+    "title": "Tema 8. Espacio negativo y respiración visual",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Espacio negativo y respiración visual</span>"
@@ -1091,7 +1245,29 @@
     "href": "09-sistemas.html#práctica",
     "title": "Tema 9. Bibliotecas y sistemas de diseño",
     "section": "Práctica",
-    "text": "Práctica\nElige un componente de Material Design 3 y otro del GOV.UK Design System (por ejemplo, el botón). Compara su documentación: variantes, estados, reglas de uso y accesibilidad. ¿Qué incluye uno que no incluya el otro?",
+    "text": "Práctica\nElige un componente de Material Design 3 y otro del GOV.UK Design System (por ejemplo, el botón). Compara su documentación: variantes, estados, reglas de uso y accesibilidad. ¿Qué incluye uno que no incluya el otro?\n\n\n\n\n\n\nFigura 2: Las tres capas de los design tokens: primitivos, semánticos y de componente.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Bibliotecas y sistemas de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "09-sistemas.html#lab-t9-tokens",
+    "href": "09-sistemas.html#lab-t9-tokens",
+    "title": "Tema 9. Bibliotecas y sistemas de diseño",
+    "section": "Laboratorio: explorador de tokens",
+    "text": "Laboratorio: explorador de tokens\n\n\nLaboratorio · se ejecuta en tu navegador\n\nEdita los tokens (en JSON) y pulsa Aplicar: la tarjeta y el botón cambian a la vez, porque leen los mismos valores. El laboratorio comprueba además el contraste entre el texto del botón y su fondo.\n\narea = window.Lab.area\nviewof tokens_txt = area(\"Tokens (JSON)\", {rows: 9, submit: \"Aplicar\", value: `{\n  \"color-accion\": \"#000e78\",\n  \"color-sobre-accion\": \"#ffffff\",\n  \"color-fondo\": \"#f6f6f4\",\n  \"color-texto\": \"#1c1c1c\",\n  \"espacio\": 16,\n  \"radio\": 8,\n  \"tamano-texto\": 16\n}`})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  let t; try { t = JSON.parse(tokens_txt); } catch (e) { return html`&lt;p role=\"status\" class=\"lab-mal\"&gt;El JSON no es válido: ${e.message}&lt;/p&gt;`; }\n  const lin = c =&gt; c &lt;= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);\n  const L = h =&gt; { const v = [1, 3, 5].map(i =&gt; lin(parseInt(String(h).slice(i, i + 2), 16) / 255)); return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2]; };\n  const ratio = (a, b) =&gt; { const [x, y] = [L(a), L(b)].sort((p, q) =&gt; q - p); return (x + 0.05) / (y + 0.05); };\n  const ok = /^#[0-9a-f]{6}$/i;\n  for (const k of [\"color-accion\", \"color-sobre-accion\", \"color-fondo\", \"color-texto\"]) if (!ok.test(t[k] || \"\")) return html`&lt;p role=\"status\" class=\"lab-mal\"&gt;Falta «${k}» o no es un color #rrggbb.&lt;/p&gt;`;\n  const rb = ratio(t[\"color-accion\"], t[\"color-sobre-accion\"]), rt = ratio(t[\"color-texto\"], t[\"color-fondo\"]);\n  const e = +t[\"espacio\"] || 16, r = +t[\"radio\"] || 0, f = +t[\"tamano-texto\"] || 16;\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;div style=\"background:${t[\"color-fondo\"]};color:${t[\"color-texto\"]};padding:${e}px;border-radius:${r}px;max-width:22rem;font-size:${f}px;border:1px solid #ccc\"&gt;\n    &lt;div style=\"font-weight:600;font-size:${f * 1.25}px;margin-bottom:${e / 2}px\"&gt;Sala de estudio 2&lt;/div&gt;\n    &lt;div style=\"margin-bottom:${e}px\"&gt;Libre de 10:00 a 13:00&lt;/div&gt;\n    &lt;span style=\"display:inline-block;background:${t[\"color-accion\"]};color:${t[\"color-sobre-accion\"]};padding:${e / 2}px ${e}px;border-radius:${r}px;font-weight:600\"&gt;Reservar&lt;/span&gt;&lt;/div&gt;\n   &lt;p class=\"mt-2\"&gt;Botón: &lt;strong&gt;${rb.toFixed(2).replace(\".\", \",\")}:1&lt;/strong&gt; &lt;span class=\"${rb &gt;= 4.5 ? \"lab-bien\" : \"lab-mal\"}\" style=\"font-weight:600\"&gt;${rb &gt;= 4.5 ? \"✓ AA\" : \"✗ no llega a 4,5:1\"}&lt;/span&gt; ·\n   Texto: &lt;strong&gt;${rt.toFixed(2).replace(\".\", \",\")}:1&lt;/strong&gt; &lt;span class=\"${rt &gt;= 4.5 ? \"lab-bien\" : \"lab-mal\"}\" style=\"font-weight:600\"&gt;${rt &gt;= 4.5 ? \"✓ AA\" : \"✗ no llega a 4,5:1\"}&lt;/span&gt;&lt;/p&gt;`;\n  return d;\n}\n\n\n\n\n\n\nPrueba: cambia color-accion a #2a78d6. El botón sigue siendo legible con texto blanco, pero ¿cumple 4,5:1?",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Bibliotecas y sistemas de diseño</span>"
+    ]
+  },
+  {
+    "objectID": "09-sistemas.html#actividades",
+    "href": "09-sistemas.html#actividades",
+    "title": "Tema 9. Bibliotecas y sistemas de diseño",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Bibliotecas y sistemas de diseño</span>"
@@ -1208,6 +1384,17 @@
     ]
   },
   {
+    "objectID": "10-critica.html#actividades",
+    "href": "10-critica.html#actividades",
+    "title": "Tema 10. Críticas de diseño",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Críticas de diseño</span>"
+    ]
+  },
+  {
     "objectID": "10-critica.html#reto-t10",
     "href": "10-critica.html#reto-t10",
     "title": "Tema 10. Críticas de diseño",
@@ -1311,7 +1498,18 @@
     "href": "11-entrega.html#práctica",
     "title": "Tema 11. Documentación, entrega y traspaso",
     "section": "Práctica",
-    "text": "Práctica\nToma una pantalla de tu proyecto y pide a un compañero que la «construya» describiéndola solo con lo que ve en el archivo. Anota cada pregunta que te haga: cada una es una ruptura de diseño que la especificación debería haber resuelto.",
+    "text": "Práctica\nToma una pantalla de tu proyecto y pide a un compañero que la «construya» describiéndola solo con lo que ve en el archivo. Anota cada pregunta que te haga: cada una es una ruptura de diseño que la especificación debería haber resuelto.\n\n\n\n\n\n\nFigura 1: Una pantalla anotada para el traspaso: medidas, tokens y estados.",
+    "crumbs": [
+      "Temas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Documentación, entrega y traspaso</span>"
+    ]
+  },
+  {
+    "objectID": "11-entrega.html#actividades",
+    "href": "11-entrega.html#actividades",
+    "title": "Tema 11. Documentación, entrega y traspaso",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\n\n\n\n\n\n\nAdvertenciaErrores frecuentes\n\n\n\n\n«Tirar el diseño por encima del muro»: entregar y desaparecer.\nEspecificar solo el camino feliz: faltan estados, errores y textos largos.\nMedidas sueltas en lugar de tokens: cada desarrollador interpreta un 15 o un 16 px a su manera.\nNo revisar la implementación: el traspaso termina cuando el diseño funciona en producción.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Documentación, entrega y traspaso</span>"
@@ -1450,6 +1648,17 @@
     ]
   },
   {
+    "objectID": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
+    "href": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
+    "title": "Apéndice B — Guía para el profesorado",
+    "section": "Actividades interactivas y laboratorios",
+    "text": "Actividades interactivas y laboratorios\nAdemás de los ejercicios de R y la autoevaluación, cada tema tiene actividades de corrección inmediata (ordenar, clasificar y escenarios con decisiones) y laboratorios que se usan sin programar: estados de un componente, escala tipográfica modular, contraste con simulación de daltonismo, proximidad de la Gestalt, diseño adaptable, densidad de información y un explorador de design tokens. Todo se ejecuta en el navegador del estudiante, sin servicios externos. En el PDF y el EPUB las actividades aparecen en papel, con su solución.\nLas actividades están escritas en Markdown con la extensión interactivos (_extensions/interactivos/interactivos.lua), así que se pueden añadir o cambiar sin programar.\n\nDiapositivas de clase: cada tema tiene unas diapositivas con los objetivos, las figuras, las tablas principales, la lectura, preguntas para debatir y el reto, en diapositivas/ (F, pantalla completa; S, notas).",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
     "objectID": "91-guia-docente.html#funciones-del-libro",
     "href": "91-guia-docente.html#funciones-del-libro",
     "title": "Apéndice B — Guía para el profesorado",
@@ -1465,7 +1674,7 @@
     "href": "91-guia-docente.html#mantenimiento",
     "title": "Apéndice B — Guía para el profesorado",
     "section": "Mantenimiento",
-    "text": "Mantenimiento\nDesde la raíz del repositorio:\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\nEl flujo .github/workflows/comprobar.yml renderiza el libro y comprueba en un navegador real todos los ejercicios, las preguntas y la accesibilidad en modo claro y oscuro. Al publicar una versión nueva, actualiza version en CITATION.cff y vuelve a ejecutar preparar.py para que los navegadores renueven su copia.\nLos datos de todos los ejercicios son simulados; no hay datos de personas reales.",
+    "text": "Mantenimiento\nDesde la raíz del repositorio:\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\npython3 herramientas/diapositivas.py    # diapositivas de clase\nEl flujo .github/workflows/comprobar.yml renderiza el libro y comprueba en un navegador real todos los ejercicios, las preguntas y la accesibilidad en modo claro y oscuro. Al publicar una versión nueva, actualiza version en CITATION.cff y vuelve a ejecutar preparar.py para que los navegadores renueven su copia.\nLos datos de todos los ejercicios son simulados; no hay datos de personas reales.",
     "crumbs": [
       "Apéndices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"

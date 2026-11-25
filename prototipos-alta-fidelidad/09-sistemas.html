@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -39,17 +74,22 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -77,10 +117,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -430,6 +472,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sistemas-de-referencia" id="toc-sistemas-de-referencia" class="nav-link" data-scroll-target="#sistemas-de-referencia">4. Sistemas de referencia</a></li>
   <li><a href="#gobernanza" id="toc-gobernanza" class="nav-link" data-scroll-target="#gobernanza">5. Gobernanza</a></li>
   <li><a href="#práctica" id="toc-práctica" class="nav-link" data-scroll-target="#práctica">Práctica</a></li>
+  <li><a href="#lab-t9-tokens" id="toc-lab-t9-tokens" class="nav-link" data-scroll-target="#lab-t9-tokens">Laboratorio: explorador de <em>tokens</em></a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t9" id="toc-reto-t9" class="nav-link" data-scroll-target="#reto-t9">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
@@ -578,7 +622,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-atomico" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cinco columnas de izquierda a derecha, cada una más grande que la anterior: átomos (un botón, un campo, una etiqueta), moléculas (un buscador), organismos (una cabecera con buscador), plantillas (la estructura de la página de resultados) y páginas (la página de resultados con libros reales).">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-atomico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/tema9_atomico.svg" class="img-fluid figure-img" alt="Cinco columnas de izquierda a derecha, cada una más grande que la anterior: átomos (un botón, un campo, una etiqueta), moléculas (un buscador), organismos (una cabecera con buscador), plantillas (la estructura de la página de resultados) y páginas (la página de resultados con libros reales).">
+<a href="figuras/tema9_atomico.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Los cinco niveles del diseño atómico de Frost (2016), con un ejemplo del catálogo de una biblioteca en cada uno."><img src="figuras/tema9_atomico.svg" class="img-fluid figure-img" alt="Cinco columnas de izquierda a derecha, cada una más grande que la anterior: átomos (un botón, un campo, una etiqueta), moléculas (un buscador), organismos (una cabecera con buscador), plantillas (la estructura de la página de resultados) y páginas (la página de resultados con libros reales)."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-atomico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Los cinco niveles del diseño atómico de Frost (2016), con un ejemplo del catálogo de una biblioteca en cada uno.
@@ -602,6 +646,83 @@ Figura&nbsp;1: Los cinco niveles del diseño atómico de Frost (2016), con un ej
 <section id="práctica" class="level2">
 <h2 class="anchored" data-anchor-id="práctica">Práctica</h2>
 <p>Elige un componente de Material Design 3 y otro del GOV.UK Design System (por ejemplo, el botón). Compara su documentación: variantes, estados, reglas de uso y accesibilidad. ¿Qué incluye uno que no incluya el otro?</p>
+<div id="fig-t9-tokens" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Tres columnas de recuadros conectadas por flechas. Primitivos: azul-900 #000e78, gris-50 #f6f6f4, espacio-4 16 px, radio-2 8 px. Semánticos: color-accion apunta a azul-900, color-fondo a gris-50, espacio-componente a espacio-4, radio-control a radio-2. De componente: boton-fondo apunta a color-accion, boton-relleno a espacio-componente, boton-radio a radio-control, tarjeta-fondo a color-fondo.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-t9-tokens-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/t9_tokens.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Las tres capas de los design tokens: primitivos, semánticos y de componente."><img src="figuras/t9_tokens.svg" class="img-fluid figure-img" alt="Tres columnas de recuadros conectadas por flechas. Primitivos: azul-900 #000e78, gris-50 #f6f6f4, espacio-4 16 px, radio-2 8 px. Semánticos: color-accion apunta a azul-900, color-fondo a gris-50, espacio-componente a espacio-4, radio-control a radio-2. De componente: boton-fondo apunta a color-accion, boton-relleno a espacio-componente, boton-radio a radio-control, tarjeta-fondo a color-fondo."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-t9-tokens-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Las tres capas de los <em>design tokens</em>: primitivos, semánticos y de componente.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="lab-t9-tokens" class="level2">
+<h2 class="anchored" data-anchor-id="lab-t9-tokens">Laboratorio: explorador de <em>tokens</em></h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · se ejecuta en tu navegador</p>
+</div>
+<p>Edita los <em>tokens</em> (en JSON) y pulsa <strong>Aplicar</strong>: la tarjeta y el botón cambian a la vez, porque leen los mismos valores. El laboratorio comprueba además el contraste entre el texto del botón y su fondo.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="95" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 94;"><span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>viewof tokens_txt <span class="op">=</span> <span class="fu">area</span>(<span class="st">"Tokens (JSON)"</span><span class="op">,</span> {<span class="dt">rows</span><span class="op">:</span> <span class="dv">9</span><span class="op">,</span> <span class="dt">submit</span><span class="op">:</span> <span class="st">"Aplicar"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="vs">`{</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="vs">  "color-accion": "#000e78",</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="vs">  "color-sobre-accion": "#ffffff",</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="vs">  "color-fondo": "#f6f6f4",</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="vs">  "color-texto": "#1c1c1c",</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="vs">  "espacio": 16,</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="vs">  "radio": 8,</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="vs">  "tamano-texto": 16</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="vs">}`</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="108" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 107;"><span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> t<span class="op">;</span> <span class="cf">try</span> { t <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(tokens_txt)<span class="op">;</span> } <span class="cf">catch</span> (e) { <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;p role="status" class="lab-mal"&gt;El JSON no es válido: </span><span class="sc">${</span>e<span class="op">.</span><span class="at">message</span><span class="sc">}</span><span class="vs">&lt;/p&gt;`</span><span class="op">;</span> }</span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> lin <span class="op">=</span> c <span class="kw">=&gt;</span> c <span class="op">&lt;=</span> <span class="fl">0.04045</span> <span class="op">?</span> c <span class="op">/</span> <span class="fl">12.92</span> <span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span>((c <span class="op">+</span> <span class="fl">0.055</span>) <span class="op">/</span> <span class="fl">1.055</span><span class="op">,</span> <span class="fl">2.4</span>)<span class="op">;</span></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> L <span class="op">=</span> h <span class="kw">=&gt;</span> { <span class="kw">const</span> v <span class="op">=</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">5</span>]<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="fu">lin</span>(<span class="pp">parseInt</span>(<span class="bu">String</span>(h)<span class="op">.</span><span class="fu">slice</span>(i<span class="op">,</span> i <span class="op">+</span> <span class="dv">2</span>)<span class="op">,</span> <span class="dv">16</span>) <span class="op">/</span> <span class="dv">255</span>))<span class="op">;</span> <span class="cf">return</span> <span class="fl">0.2126</span> <span class="op">*</span> v[<span class="dv">0</span>] <span class="op">+</span> <span class="fl">0.7152</span> <span class="op">*</span> v[<span class="dv">1</span>] <span class="op">+</span> <span class="fl">0.0722</span> <span class="op">*</span> v[<span class="dv">2</span>]<span class="op">;</span> }<span class="op">;</span></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> ratio <span class="op">=</span> (a<span class="op">,</span> b) <span class="kw">=&gt;</span> { <span class="kw">const</span> [x<span class="op">,</span> y] <span class="op">=</span> [<span class="fu">L</span>(a)<span class="op">,</span> <span class="fu">L</span>(b)]<span class="op">.</span><span class="fu">sort</span>((p<span class="op">,</span> q) <span class="kw">=&gt;</span> q <span class="op">-</span> p)<span class="op">;</span> <span class="cf">return</span> (x <span class="op">+</span> <span class="fl">0.05</span>) <span class="op">/</span> (y <span class="op">+</span> <span class="fl">0.05</span>)<span class="op">;</span> }<span class="op">;</span></span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> ok <span class="op">=</span> <span class="ss">/</span><span class="sc">^</span><span class="ss">#</span><span class="sc">[0-9a-f]{6}$</span><span class="ss">/i</span><span class="op">;</span></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">const</span> k <span class="kw">of</span> [<span class="st">"color-accion"</span><span class="op">,</span> <span class="st">"color-sobre-accion"</span><span class="op">,</span> <span class="st">"color-fondo"</span><span class="op">,</span> <span class="st">"color-texto"</span>]) <span class="cf">if</span> (<span class="op">!</span>ok<span class="op">.</span><span class="fu">test</span>(t[k] <span class="op">||</span> <span class="st">""</span>)) <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;p role="status" class="lab-mal"&gt;Falta «</span><span class="sc">${</span>k<span class="sc">}</span><span class="vs">» o no es un color #rrggbb.&lt;/p&gt;`</span><span class="op">;</span></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> rb <span class="op">=</span> <span class="fu">ratio</span>(t[<span class="st">"color-accion"</span>]<span class="op">,</span> t[<span class="st">"color-sobre-accion"</span>])<span class="op">,</span> rt <span class="op">=</span> <span class="fu">ratio</span>(t[<span class="st">"color-texto"</span>]<span class="op">,</span> t[<span class="st">"color-fondo"</span>])<span class="op">;</span></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> e <span class="op">=</span> <span class="op">+</span>t[<span class="st">"espacio"</span>] <span class="op">||</span> <span class="dv">16</span><span class="op">,</span> r <span class="op">=</span> <span class="op">+</span>t[<span class="st">"radio"</span>] <span class="op">||</span> <span class="dv">0</span><span class="op">,</span> f <span class="op">=</span> <span class="op">+</span>t[<span class="st">"tamano-texto"</span>] <span class="op">||</span> <span class="dv">16</span><span class="op">;</span></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;div style="background:</span><span class="sc">${</span>t[<span class="st">"color-fondo"</span>]<span class="sc">}</span><span class="vs">;color:</span><span class="sc">${</span>t[<span class="st">"color-texto"</span>]<span class="sc">}</span><span class="vs">;padding:</span><span class="sc">${</span>e<span class="sc">}</span><span class="vs">px;border-radius:</span><span class="sc">${</span>r<span class="sc">}</span><span class="vs">px;max-width:22rem;font-size:</span><span class="sc">${</span>f<span class="sc">}</span><span class="vs">px;border:1px solid #ccc"&gt;</span></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="font-weight:600;font-size:</span><span class="sc">${</span>f <span class="op">*</span> <span class="fl">1.25</span><span class="sc">}</span><span class="vs">px;margin-bottom:</span><span class="sc">${</span>e <span class="op">/</span> <span class="dv">2</span><span class="sc">}</span><span class="vs">px"&gt;Sala de estudio 2&lt;/div&gt;</span></span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="margin-bottom:</span><span class="sc">${</span>e<span class="sc">}</span><span class="vs">px"&gt;Libre de 10:00 a 13:00&lt;/div&gt;</span></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;span style="display:inline-block;background:</span><span class="sc">${</span>t[<span class="st">"color-accion"</span>]<span class="sc">}</span><span class="vs">;color:</span><span class="sc">${</span>t[<span class="st">"color-sobre-accion"</span>]<span class="sc">}</span><span class="vs">;padding:</span><span class="sc">${</span>e <span class="op">/</span> <span class="dv">2</span><span class="sc">}</span><span class="vs">px </span><span class="sc">${</span>e<span class="sc">}</span><span class="vs">px;border-radius:</span><span class="sc">${</span>r<span class="sc">}</span><span class="vs">px;font-weight:600"&gt;Reservar&lt;/span&gt;&lt;/div&gt;</span></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;p class="mt-2"&gt;Botón: &lt;strong&gt;</span><span class="sc">${</span>rb<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="st">"."</span><span class="op">,</span> <span class="st">","</span>)<span class="sc">}</span><span class="vs">:1&lt;/strong&gt; &lt;span class="</span><span class="sc">${</span>rb <span class="op">&gt;=</span> <span class="fl">4.5</span> <span class="op">?</span> <span class="st">"lab-bien"</span> <span class="op">:</span> <span class="st">"lab-mal"</span><span class="sc">}</span><span class="vs">" style="font-weight:600"&gt;</span><span class="sc">${</span>rb <span class="op">&gt;=</span> <span class="fl">4.5</span> <span class="op">?</span> <span class="st">"✓ AA"</span> <span class="op">:</span> <span class="st">"✗ no llega a 4,5:1"</span><span class="sc">}</span><span class="vs">&lt;/span&gt; ·</span></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="vs">   Texto: &lt;strong&gt;</span><span class="sc">${</span>rt<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="st">"."</span><span class="op">,</span> <span class="st">","</span>)<span class="sc">}</span><span class="vs">:1&lt;/strong&gt; &lt;span class="</span><span class="sc">${</span>rt <span class="op">&gt;=</span> <span class="fl">4.5</span> <span class="op">?</span> <span class="st">"lab-bien"</span> <span class="op">:</span> <span class="st">"lab-mal"</span><span class="sc">}</span><span class="vs">" style="font-weight:600"&gt;</span><span class="sc">${</span>rt <span class="op">&gt;=</span> <span class="fl">4.5</span> <span class="op">?</span> <span class="st">"✓ AA"</span> <span class="op">:</span> <span class="st">"✗ no llega a 4,5:1"</span><span class="sc">}</span><span class="vs">&lt;/span&gt;&lt;/p&gt;`</span><span class="op">;</span></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d<span class="op">;</span></span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<p><strong>Prueba:</strong> cambia <code>color-accion</code> a <code>#2a78d6</code>. El botón sigue siendo legible con texto blanco, pero ¿cumple 4,5:1?</p>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-ordenar" id="ia-t9a-atomico"><script type="application/json" class="ia-datos">{"enunciado":"","explicacion":"","items":["Átomos (un botón, una etiqueta)","Moléculas (un campo de búsqueda con su botón)","Organismos (una cabecera completa)","Plantillas (la estructura de una página)","Páginas (la plantilla con contenido real)"],"tipo":"ordenar","titulo":"Los niveles del diseño atómico (Frost, 2016), de menor a mayor"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t9a-capa"><script type="application/json" class="ia-datos">{"categorias":["Primitivo","Semántico","De componente"],"enunciado":"","explicacion":"","items":[{"categoria":"Primitivo","explicacion":"","texto":"<code>azul-900: #000e78<\/code>"},{"categoria":"Semántico","explicacion":"","texto":"<code>color-error: rojo-700<\/code>"},{"categoria":"De componente","explicacion":"","texto":"<code>boton-primario-fondo: color-accion<\/code>"},{"categoria":"Primitivo","explicacion":"","texto":"<code>espacio-8: 32px<\/code>"},{"categoria":"Semántico","explicacion":"","texto":"<code>color-texto-secundario: gris-700<\/code>"},{"categoria":"De componente","explicacion":"","texto":"<code>tarjeta-sombra: sombra-2<\/code>"}],"tipo":"clasificar","titulo":"¿Qué capa de token es?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t9a-gobernanza"><script type="application/json" class="ia-datos">{"categorias":["Sí","No"],"enunciado":"","explicacion":"","items":[{"categoria":"Sí","explicacion":"","texto":"Un registro de cambios con versiones semánticas"},{"categoria":"No","explicacion":"","texto":"Cada equipo crea su propio botón «porque es un caso especial»"},{"categoria":"Sí","explicacion":"","texto":"Un canal para proponer componentes nuevos y criterios para\naceptarlos"},{"categoria":"No","explicacion":"","texto":"La documentación solo vive en la cabeza de quien creó el sistema"}],"tipo":"clasificar","titulo":"¿Buena gobernanza del sistema?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-t9" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t9">Reto evaluable</h2>
@@ -788,23 +909,26 @@ W10=
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -813,10 +937,12 @@ W10=
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -824,13 +950,13 @@ W10=
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -843,6 +969,9 @@ W10=
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -869,10 +998,14 @@ W10=
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -901,7 +1034,7 @@ W10=
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImFyZWEgPSB3aW5kb3cuTGFiLmFyZWFcbnZpZXdvZiB0b2tlbnNfdHh0ID0gYXJlYShcIlRva2VucyAoSlNPTilcIiwge3Jvd3M6IDksIHN1Ym1pdDogXCJBcGxpY2FyXCIsIHZhbHVlOiBge1xuICBcImNvbG9yLWFjY2lvblwiOiBcIiMwMDBlNzhcIixcbiAgXCJjb2xvci1zb2JyZS1hY2Npb25cIjogXCIjZmZmZmZmXCIsXG4gIFwiY29sb3ItZm9uZG9cIjogXCIjZjZmNmY0XCIsXG4gIFwiY29sb3ItdGV4dG9cIjogXCIjMWMxYzFjXCIsXG4gIFwiZXNwYWNpb1wiOiAxNixcbiAgXCJyYWRpb1wiOiA4LFxuICBcInRhbWFuby10ZXh0b1wiOiAxNlxufWB9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoie1xuICBsZXQgdDsgdHJ5IHsgdCA9IEpTT04ucGFyc2UodG9rZW5zX3R4dCk7IH0gY2F0Y2ggKGUpIHsgcmV0dXJuIGh0bWxgPHAgcm9sZT1cInN0YXR1c1wiIGNsYXNzPVwibGFiLW1hbFwiPkVsIEpTT04gbm8gZXMgdsOhbGlkbzogJHtlLm1lc3NhZ2V9PC9wPmA7IH1cbiAgY29uc3QgbGluID0gYyA9PiBjIDw9IDAuMDQwNDUgPyBjIC8gMTIuOTIgOiBNYXRoLnBvdygoYyArIDAuMDU1KSAvIDEuMDU1LCAyLjQpO1xuICBjb25zdCBMID0gaCA9PiB7IGNvbnN0IHYgPSBbMSwgMywgNV0ubWFwKGkgPT4gbGluKHBhcnNlSW50KFN0cmluZyhoKS5zbGljZShpLCBpICsgMiksIDE2KSAvIDI1NSkpOyByZXR1cm4gMC4yMTI2ICogdlswXSArIDAuNzE1MiAqIHZbMV0gKyAwLjA3MjIgKiB2WzJdOyB9O1xuICBjb25zdCByYXRpbyA9IChhLCBiKSA9PiB7IGNvbnN0IFt4LCB5XSA9IFtMKGEpLCBMKGIpXS5zb3J0KChwLCBxKSA9PiBxIC0gcCk7IHJldHVybiAoeCArIDAuMDUpIC8gKHkgKyAwLjA1KTsgfTtcbiAgY29uc3Qgb2sgPSAvXiNbMC05YS1mXXs2fSQvaTtcbiAgZm9yIChjb25zdCBrIG9mIFtcImNvbG9yLWFjY2lvblwiLCBcImNvbG9yLXNvYnJlLWFjY2lvblwiLCBcImNvbG9yLWZvbmRvXCIsIFwiY29sb3ItdGV4dG9cIl0pIGlmICghb2sudGVzdCh0W2tdIHx8IFwiXCIpKSByZXR1cm4gaHRtbGA8cCByb2xlPVwic3RhdHVzXCIgY2xhc3M9XCJsYWItbWFsXCI+RmFsdGEgwqske2t9wrsgbyBubyBlcyB1biBjb2xvciAjcnJnZ2JiLjwvcD5gO1xuICBjb25zdCByYiA9IHJhdGlvKHRbXCJjb2xvci1hY2Npb25cIl0sIHRbXCJjb2xvci1zb2JyZS1hY2Npb25cIl0pLCBydCA9IHJhdGlvKHRbXCJjb2xvci10ZXh0b1wiXSwgdFtcImNvbG9yLWZvbmRvXCJdKTtcbiAgY29uc3QgZSA9ICt0W1wiZXNwYWNpb1wiXSB8fCAxNiwgciA9ICt0W1wicmFkaW9cIl0gfHwgMCwgZiA9ICt0W1widGFtYW5vLXRleHRvXCJdIHx8IDE2O1xuICBjb25zdCBkID0gaHRtbGA8ZGl2IHJvbGU9XCJzdGF0dXNcIj48L2Rpdj5gO1xuICBkLmlubmVySFRNTCA9IGA8ZGl2IHN0eWxlPVwiYmFja2dyb3VuZDoke3RbXCJjb2xvci1mb25kb1wiXX07Y29sb3I6JHt0W1wiY29sb3ItdGV4dG9cIl19O3BhZGRpbmc6JHtlfXB4O2JvcmRlci1yYWRpdXM6JHtyfXB4O21heC13aWR0aDoyMnJlbTtmb250LXNpemU6JHtmfXB4O2JvcmRlcjoxcHggc29saWQgI2NjY1wiPlxuICAgIDxkaXYgc3R5bGU9XCJmb250LXdlaWdodDo2MDA7Zm9udC1zaXplOiR7ZiAqIDEuMjV9cHg7bWFyZ2luLWJvdHRvbToke2UgLyAyfXB4XCI+U2FsYSBkZSBlc3R1ZGlvIDI8L2Rpdj5cbiAgICA8ZGl2IHN0eWxlPVwibWFyZ2luLWJvdHRvbToke2V9cHhcIj5MaWJyZSBkZSAxMDowMCBhIDEzOjAwPC9kaXY+XG4gICAgPHNwYW4gc3R5bGU9XCJkaXNwbGF5OmlubGluZS1ibG9jaztiYWNrZ3JvdW5kOiR7dFtcImNvbG9yLWFjY2lvblwiXX07Y29sb3I6JHt0W1wiY29sb3Itc29icmUtYWNjaW9uXCJdfTtwYWRkaW5nOiR7ZSAvIDJ9cHggJHtlfXB4O2JvcmRlci1yYWRpdXM6JHtyfXB4O2ZvbnQtd2VpZ2h0OjYwMFwiPlJlc2VydmFyPC9zcGFuPjwvZGl2PlxuICAgPHAgY2xhc3M9XCJtdC0yXCI+Qm90w7NuOiA8c3Ryb25nPiR7cmIudG9GaXhlZCgyKS5yZXBsYWNlKFwiLlwiLCBcIixcIil9OjE8L3N0cm9uZz4gPHNwYW4gY2xhc3M9XCIke3JiID49IDQuNSA/IFwibGFiLWJpZW5cIiA6IFwibGFiLW1hbFwifVwiIHN0eWxlPVwiZm9udC13ZWlnaHQ6NjAwXCI+JHtyYiA+PSA0LjUgPyBcIuKckyBBQVwiIDogXCLinJcgbm8gbGxlZ2EgYSA0LDU6MVwifTwvc3Bhbj4gwrdcbiAgIFRleHRvOiA8c3Ryb25nPiR7cnQudG9GaXhlZCgyKS5yZXBsYWNlKFwiLlwiLCBcIixcIil9OjE8L3N0cm9uZz4gPHNwYW4gY2xhc3M9XCIke3J0ID49IDQuNSA/IFwibGFiLWJpZW5cIiA6IFwibGFiLW1hbFwifVwiIHN0eWxlPVwiZm9udC13ZWlnaHQ6NjAwXCI+JHtydCA+PSA0LjUgPyBcIuKckyBBQVwiIDogXCLinJcgbm8gbGxlZ2EgYSA0LDU6MVwifTwvc3Bhbj48L3A+YDtcbiAgcmV0dXJuIGQ7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3Rva2Vuc190eHQnKSJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1355,6 +1488,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

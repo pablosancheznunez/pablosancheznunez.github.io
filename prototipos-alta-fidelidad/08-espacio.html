@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -39,17 +74,22 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b716ff655272be844393faffa9976a6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d74d2ae42744266d07463f832a16b689.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -77,10 +117,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
+<script src="laboratorio.js"></script>
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="fuentes/fuentes.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -429,6 +471,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#espacio-y-jerarquía" id="toc-espacio-y-jerarquía" class="nav-link" data-scroll-target="#espacio-y-jerarquía">3. Espacio y jerarquía</a></li>
   <li><a href="#densidad-de-información" id="toc-densidad-de-información" class="nav-link" data-scroll-target="#densidad-de-información">4. Densidad de información</a></li>
   <li><a href="#práctica" id="toc-práctica" class="nav-link" data-scroll-target="#práctica">Práctica</a></li>
+  <li><a href="#lab-t8-densidad" id="toc-lab-t8-densidad" class="nav-link" data-scroll-target="#lab-t8-densidad">Laboratorio: densidad de información</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-t8" id="toc-reto-t8" class="nav-link" data-scroll-target="#reto-t8">Reto evaluable</a></li>
   <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
   <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
@@ -558,7 +602,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-espacio" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Dos versiones de un mismo formulario de reserva. A la izquierda, todos los elementos están separados por la misma distancia corta y las etiquetas quedan a medio camino entre dos campos. A la derecha, cada etiqueta está pegada a su campo, hay más espacio entre los grupos y el botón Reservar tiene espacio a su alrededor.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-espacio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figuras/tema8_espacio.svg" class="img-fluid figure-img" alt="Dos versiones de un mismo formulario de reserva. A la izquierda, todos los elementos están separados por la misma distancia corta y las etiquetas quedan a medio camino entre dos campos. A la derecha, cada etiqueta está pegada a su campo, hay más espacio entre los grupos y el botón Reservar tiene espacio a su alrededor.">
+<a href="figuras/tema8_espacio.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: El mismo contenido con espacio insuficiente y uniforme (izquierda) y con espacios jerarquizados (derecha): la etiqueta, más cerca de su campo; las secciones, más separadas entre sí; la acción principal, aislada."><img src="figuras/tema8_espacio.svg" class="img-fluid figure-img" alt="Dos versiones de un mismo formulario de reserva. A la izquierda, todos los elementos están separados por la misma distancia corta y las etiquetas quedan a medio camino entre dos campos. A la derecha, cada etiqueta está pegada a su campo, hay más espacio entre los grupos y el botón Reservar tiene espacio a su alrededor."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-espacio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: El mismo contenido con espacio insuficiente y uniforme (izquierda) y con espacios jerarquizados (derecha): la etiqueta, más cerca de su campo; las secciones, más separadas entre sí; la acción principal, aislada.
@@ -574,6 +618,66 @@ Figura&nbsp;1: El mismo contenido con espacio insuficiente y uniforme (izquierda
 <section id="práctica" class="level2">
 <h2 class="anchored" data-anchor-id="práctica">Práctica</h2>
 <p>Toma la captura de una pantalla densa de un servicio que uses. Sin quitar ningún contenido, redistribuye el espacio: agrupa por proximidad, separa las secciones y aísla la acción principal. Compara la primera impresión de las dos versiones con otra persona.</p>
+</section>
+<section id="lab-t8-densidad" class="level2">
+<h2 class="anchored" data-anchor-id="lab-t8-densidad">Laboratorio: densidad de información</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · se ejecuta en tu navegador</p>
+</div>
+<p>Ajusta el <strong>relleno</strong> y el <strong>espacio entre elementos</strong> de una lista de préstamos y mira cuántos caben en una pantalla de móvil de 640 px de alto. Más densidad muestra más datos; menos densidad facilita la lectura y el toque. No hay un valor correcto: depende de la tarea.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="78" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 77;"><span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>viewof d_rel <span class="op">=</span> <span class="fu">rango</span>(<span class="st">"Relleno interior (px)"</span><span class="op">,</span> [<span class="dv">4</span><span class="op">,</span> <span class="dv">28</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">12</span>})</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>viewof d_sep <span class="op">=</span> <span class="fu">rango</span>(<span class="st">"Separación entre elementos (px)"</span><span class="op">,</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">24</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">8</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="84" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 83;"><span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> alto <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> d_rel <span class="op">+</span> <span class="dv">40</span><span class="op">,</span> total <span class="op">=</span> <span class="dv">640</span> <span class="op">-</span> <span class="dv">60</span><span class="op">;</span></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> caben <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>((total <span class="op">+</span> d_sep) <span class="op">/</span> (alto <span class="op">+</span> d_sep))<span class="op">;</span></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> libros <span class="op">=</span> [<span class="st">"Diseño de interacción"</span><span class="op">,</span> <span class="st">"Usabilidad web"</span><span class="op">,</span> <span class="st">"Manual de Quarto"</span><span class="op">,</span> <span class="st">"Tipografía digital"</span><span class="op">,</span> <span class="st">"Color y accesibilidad"</span><span class="op">,</span> <span class="st">"Sistemas de diseño"</span><span class="op">,</span> <span class="st">"Arquitectura de información"</span><span class="op">,</span> <span class="st">"Investigación con usuarios"</span><span class="op">,</span> <span class="st">"Escribir para la web"</span><span class="op">,</span> <span class="st">"Psicología del diseño"</span><span class="op">,</span> <span class="st">"Diseño inclusivo"</span><span class="op">,</span> <span class="st">"Prototipado rápido"</span><span class="op">,</span> <span class="st">"Métricas de UX"</span><span class="op">,</span> <span class="st">"Diseño de servicios"</span>]<span class="op">;</span></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;p&gt;Caben &lt;strong&gt;</span><span class="sc">${</span>caben<span class="sc">}</span><span class="vs">&lt;/strong&gt; préstamos sin desplazarse · altura de cada fila: </span><span class="sc">${</span>alto<span class="sc">}</span><span class="vs"> px </span><span class="sc">${</span>alto <span class="op">&lt;</span> <span class="dv">44</span> <span class="op">?</span> <span class="st">'&lt;span class="lab-medio" style="font-weight:600"&gt;(menos de 44 px: difícil de tocar)&lt;/span&gt;'</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">&lt;/p&gt;</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;div style="width:240px;height:320px;overflow:hidden;border:2px solid var(--bs-border-color);border-radius:16px;padding:8px;background:var(--bs-body-bg)" aria-hidden="true"&gt;</span></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;div style="transform:scale(.5);transform-origin:0 0;width:460px"&gt;</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="font-weight:600;font-size:20px;margin:6px 0 16px"&gt;Mis préstamos&lt;/div&gt;</span></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="vs">    </span><span class="sc">${</span>libros<span class="op">.</span><span class="fu">map</span>(l <span class="kw">=&gt;</span> <span class="vs">`&lt;div style="padding:</span><span class="sc">${</span>d_rel<span class="sc">}</span><span class="vs">px;margin-bottom:</span><span class="sc">${</span>d_sep<span class="sc">}</span><span class="vs">px;border-radius:8px;background:rgba(42,120,214,.1)"&gt;&lt;div style="font-weight:600;font-size:16px"&gt;</span><span class="sc">${</span>l<span class="sc">}</span><span class="vs">&lt;/div&gt;&lt;div style="font-size:13px;opacity:.8"&gt;Vence el 02/12&lt;/div&gt;&lt;/div&gt;`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="sc">}</span></span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;/div&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d<span class="op">;</span></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-clasificar" id="ia-t8a-tipo"><script type="application/json" class="ia-datos">{"categorias":["Macroespacio","Microespacio"],"enunciado":"","explicacion":"","items":[{"categoria":"Macroespacio","explicacion":"","texto":"Márgenes laterales de la página"},{"categoria":"Microespacio","explicacion":"","texto":"Interlineado de un párrafo"},{"categoria":"Macroespacio","explicacion":"","texto":"Separación entre la cabecera y el contenido"},{"categoria":"Microespacio","explicacion":"","texto":"Espacio entre un icono y su etiqueta"},{"categoria":"Macroespacio","explicacion":"","texto":"Separación entre secciones de una página"},{"categoria":"Microespacio","explicacion":"","texto":"Espaciado entre letras de un título"}],"tipo":"clasificar","titulo":"¿Macroespacio o microespacio?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t8a-densidad"><script type="application/json" class="ia-datos">{"categorias":["Más densa","Más aireada"],"enunciado":"","explicacion":"","items":[{"categoria":"Más densa","explicacion":"Usuarias expertas que comparan muchos datos.","texto":"Un panel de control que una bibliotecaria consulta todo el día"},{"categoria":"Más aireada","explicacion":"","texto":"La página de bienvenida para estudiantes de primero"},{"categoria":"Más densa","explicacion":"","texto":"Una tabla de estadísticas de préstamo para comparar meses"},{"categoria":"Más aireada","explicacion":"","texto":"Un formulario para personas mayores"}],"tipo":"clasificar","titulo":"¿Más o menos densidad?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-t8" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t8">Reto evaluable</h2>
@@ -748,23 +852,26 @@ W10=
 
   function registro(datos) {
     var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
     r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
     r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
     return r;
   }
 
-  function pintar(caja, totalEj, totalPr) {
+  function pintar(caja, totalEj, totalPr, totalIa) {
     var r = registro(leer());
-    var hechos = r.ej.length + r.pr.length, total = totalEj + totalPr;
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
     var partes = [];
     if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
     if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
     caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
       '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
       '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
       '<button type="button">Borrar el progreso del capítulo</button>';
     caja.querySelector('button').addEventListener('click', function () {
-      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr);
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
     });
   }
 
@@ -773,10 +880,12 @@ W10=
     var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
       .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var lista = preguntas();
-    if (!nombres.length && !lista.length) return;
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
 
     var d = leer(); var r = registro(d);
-    r.totalEj = nombres.length; r.totalPr = lista.length; d[pagina] = r; guardar(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
 
     var caja = document.createElement('div');
     caja.className = 'progreso-capitulo';
@@ -784,13 +893,13 @@ W10=
     var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
     if (!cabecera) return;
     cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
-    pintar(caja, nombres.length, lista.length);
+    pintar(caja, nombres.length, lista.length, nIa);
 
     function anotar(tipo, valor) {
       var d = leer(); var r = registro(d);
       if (r[tipo].indexOf(valor) === -1) {
-        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length;
-        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length);
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
       }
     }
 
@@ -803,6 +912,9 @@ W10=
         if (el) anotar('ej', mapa[el.id]);
       });
     }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
 
     // Preguntas: se anotan al pulsar «Mostrar respuestas»
     document.addEventListener('click', function (e) {
@@ -829,10 +941,14 @@ W10=
     var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
     filas.forEach(function (x) {
       var celda = 'Sin empezar';
-      if (x.r && (x.r.totalEj || x.r.totalPr)) {
-        var h = x.r.ej.length + x.r.pr.length, t = x.r.totalEj + x.r.totalPr;
-        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' +
-          x.r.ej.length + '/' + x.r.totalEj + ' ejercicios · ' + x.r.pr.length + '/' + x.r.totalPr + ' preguntas';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
       }
       html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
     });
@@ -861,7 +977,7 @@ W10=
 })();
 </script>
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InJhbmdvID0gd2luZG93LkxhYi5yYW5nb1xudmlld29mIGRfcmVsID0gcmFuZ28oXCJSZWxsZW5vIGludGVyaW9yIChweClcIiwgWzQsIDI4XSwge3N0ZXA6IDIsIHZhbHVlOiAxMn0pXG52aWV3b2YgZF9zZXAgPSByYW5nbyhcIlNlcGFyYWNpw7NuIGVudHJlIGVsZW1lbnRvcyAocHgpXCIsIFswLCAyNF0sIHtzdGVwOiAyLCB2YWx1ZTogOH0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIGNvbnN0IGFsdG8gPSAyICogZF9yZWwgKyA0MCwgdG90YWwgPSA2NDAgLSA2MDtcbiAgY29uc3QgY2FiZW4gPSBNYXRoLmZsb29yKCh0b3RhbCArIGRfc2VwKSAvIChhbHRvICsgZF9zZXApKTtcbiAgY29uc3QgbGlicm9zID0gW1wiRGlzZcOxbyBkZSBpbnRlcmFjY2nDs25cIiwgXCJVc2FiaWxpZGFkIHdlYlwiLCBcIk1hbnVhbCBkZSBRdWFydG9cIiwgXCJUaXBvZ3JhZsOtYSBkaWdpdGFsXCIsIFwiQ29sb3IgeSBhY2Nlc2liaWxpZGFkXCIsIFwiU2lzdGVtYXMgZGUgZGlzZcOxb1wiLCBcIkFycXVpdGVjdHVyYSBkZSBpbmZvcm1hY2nDs25cIiwgXCJJbnZlc3RpZ2FjacOzbiBjb24gdXN1YXJpb3NcIiwgXCJFc2NyaWJpciBwYXJhIGxhIHdlYlwiLCBcIlBzaWNvbG9nw61hIGRlbCBkaXNlw7FvXCIsIFwiRGlzZcOxbyBpbmNsdXNpdm9cIiwgXCJQcm90b3RpcGFkbyByw6FwaWRvXCIsIFwiTcOpdHJpY2FzIGRlIFVYXCIsIFwiRGlzZcOxbyBkZSBzZXJ2aWNpb3NcIl07XG4gIGNvbnN0IGQgPSBodG1sYDxkaXYgcm9sZT1cInN0YXR1c1wiPjwvZGl2PmA7XG4gIGQuaW5uZXJIVE1MID0gYDxwPkNhYmVuIDxzdHJvbmc+JHtjYWJlbn08L3N0cm9uZz4gcHLDqXN0YW1vcyBzaW4gZGVzcGxhemFyc2UgwrcgYWx0dXJhIGRlIGNhZGEgZmlsYTogJHthbHRvfSBweCAke2FsdG8gPCA0NCA/ICc8c3BhbiBjbGFzcz1cImxhYi1tZWRpb1wiIHN0eWxlPVwiZm9udC13ZWlnaHQ6NjAwXCI+KG1lbm9zIGRlIDQ0IHB4OiBkaWbDrWNpbCBkZSB0b2Nhcik8L3NwYW4+JyA6IFwiXCJ9PC9wPlxuICA8ZGl2IHN0eWxlPVwid2lkdGg6MjQwcHg7aGVpZ2h0OjMyMHB4O292ZXJmbG93OmhpZGRlbjtib3JkZXI6MnB4IHNvbGlkIHZhcigtLWJzLWJvcmRlci1jb2xvcik7Ym9yZGVyLXJhZGl1czoxNnB4O3BhZGRpbmc6OHB4O2JhY2tncm91bmQ6dmFyKC0tYnMtYm9keS1iZylcIiBhcmlhLWhpZGRlbj1cInRydWVcIj5cbiAgIDxkaXYgc3R5bGU9XCJ0cmFuc2Zvcm06c2NhbGUoLjUpO3RyYW5zZm9ybS1vcmlnaW46MCAwO3dpZHRoOjQ2MHB4XCI+XG4gICAgPGRpdiBzdHlsZT1cImZvbnQtd2VpZ2h0OjYwMDtmb250LXNpemU6MjBweDttYXJnaW46NnB4IDAgMTZweFwiPk1pcyBwcsOpc3RhbW9zPC9kaXY+XG4gICAgJHtsaWJyb3MubWFwKGwgPT4gYDxkaXYgc3R5bGU9XCJwYWRkaW5nOiR7ZF9yZWx9cHg7bWFyZ2luLWJvdHRvbToke2Rfc2VwfXB4O2JvcmRlci1yYWRpdXM6OHB4O2JhY2tncm91bmQ6cmdiYSg0MiwxMjAsMjE0LC4xKVwiPjxkaXYgc3R5bGU9XCJmb250LXdlaWdodDo2MDA7Zm9udC1zaXplOjE2cHhcIj4ke2x9PC9kaXY+PGRpdiBzdHlsZT1cImZvbnQtc2l6ZToxM3B4O29wYWNpdHk6LjhcIj5WZW5jZSBlbCAwMi8xMjwvZGl2PjwvZGl2PmApLmpvaW4oXCJcIil9XG4gICA8L2Rpdj48L2Rpdj5gO1xuICByZXR1cm4gZDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZF9yZWwnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZF9zZXAnKSJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -1315,6 +1431,38 @@ window._ojs.runtime.interpretFromScriptTags();
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

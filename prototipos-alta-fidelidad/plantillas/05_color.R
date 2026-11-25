@@ -1,6 +1,6 @@
 # Tema 5. Uso accesible del color
 # Diseño e interacción en prototipos de alta fidelidad
-# Pablo Sánchez-Núñez (UC3M) · https://doi.org/
+# Pablo Sánchez-Núñez (UC3M) · https://doi.org/10.5281/zenodo.24515142
 # Licencia del código: MIT · Libro: https://pablosancheznunez.com/prototipos-alta-fidelidad/
 #
 # Script con todo el código del capítulo, para ejecutarlo en RStudio o Positron.

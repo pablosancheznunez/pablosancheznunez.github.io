@@ -5,7 +5,7 @@
    - webR, paquetes, estilos, figuras y datos: primero la copia; si no está,
      la red, y se guarda.
    Cambia VERSION en cada versión publicada para renovar la caché. */
-const VERSION = "1.0.2";
+const VERSION = "1.1.0";
 const CACHE = "prototipos-alta-fidelidad-" + VERSION;
 const BASE = new URL("./", self.location).pathname;
 
