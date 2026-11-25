@@ -1589,212 +1589,256 @@
     ]
   },
   {
+    "objectID": "94-laboratorio.html",
+    "href": "94-laboratorio.html",
+    "title": "Apéndice A — Laboratorio interactivo",
+    "section": "",
+    "text": "Laboratorio: la maldición del ganador y la replicación\nEste apéndice reúne laboratorios y actividades para practicar las ideas del libro con simulaciones que se ejecutan en tu navegador.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#lab-ganador",
+    "href": "94-laboratorio.html#lab-ganador",
+    "title": "Apéndice A — Laboratorio interactivo",
+    "section": "",
+    "text": "Laboratorio · se ejecuta en tu navegador\n\nSi solo se publican los resultados significativos, los efectos publicados están inflados, sobre todo con muestras pequeñas. Elige el efecto real y el tamaño de muestra: el laboratorio simula 2000 estudios, «publica» los significativos y calcula qué pasaría al replicarlos.\n\nrangoG = window.Lab.rango\nviewof dReal = rangoG(\"Efecto real (d de Cohen)\", [0.1, 0.8], {step: 0.05, value: 0.3, formato: (x) =&gt; x.toFixed(2).replace(\".\", \",\")})\nviewof nGrupo = rangoG(\"Participantes por grupo\", [10, 200], {step: 5, value: 30})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  let semilla = 12345; const azar = () =&gt; { semilla |= 0; semilla = semilla + 0x6D2B79F5 | 0; let t = Math.imul(semilla ^ semilla &gt;&gt;&gt; 15, 1 | semilla); t = t + Math.imul(t ^ t &gt;&gt;&gt; 7, 61 | t) ^ t; return ((t ^ t &gt;&gt;&gt; 14) &gt;&gt;&gt; 0) / 4294967296; };\n  const normal = () =&gt; Math.sqrt(-2 * Math.log(1 - azar())) * Math.cos(2 * Math.PI * azar());\n  const Phi = (z) =&gt; { const t = 1 / (1 + 0.2316419 * Math.abs(z)), d = 0.3989423 * Math.exp(-z * z / 2); const p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274)))); return z &gt; 0 ? 1 - p : p; };\n  const se = Math.sqrt(2 / nGrupo);\n  const est = Array.from({length: 2000}, () =&gt; dReal + se * normal());\n  const sig = est.filter((d) =&gt; d / se &gt; 1.96);\n  const potencia = sig.length / est.length;\n  const dPub = sig.length ? sig.reduce((a, b) =&gt; a + b, 0) / sig.length : NaN;\n  const potRep = 1 - Phi(1.96 - dReal / se);\n  const nPlan = Math.ceil(2 * Math.pow((1.96 + 0.84) / dPub, 2));\n  const potPlan = 1 - Phi(1.96 - dReal / Math.sqrt(2 / nPlan));\n  const lo = -0.6, hi = 1.6, bins = 44, w = (hi - lo) / bins, cuenta = Array(bins).fill(0), cuentaS = Array(bins).fill(0);\n  est.forEach((d) =&gt; { const i = Math.floor((d - lo) / w); if (i &gt;= 0 && i &lt; bins) { cuenta[i]++; if (d / se &gt; 1.96) cuentaS[i]++; } });\n  const mx = Math.max(...cuenta), W = 640, H = 220, x = (v) =&gt; 30 + (v - lo) / (hi - lo) * (W - 50), y = (c) =&gt; H - 30 - c / mx * (H - 50);\n  let svg = `&lt;svg viewBox=\"0 0 ${W} ${H}\" width=\"100%\" style=\"max-width:680px\" role=\"img\" aria-label=\"Histograma de 2000 efectos estimados; los significativos se muestran en color oscuro\" font-family=\"inherit\"&gt;`;\n  cuenta.forEach((c, i) =&gt; { const x0 = x(lo + i * w); svg += `&lt;rect x=\"${x0}\" y=\"${y(c)}\" width=\"${x(lo + (i + 1) * w) - x0 - 1}\" height=\"${H - 30 - y(c)}\" fill=\"#c9cfd6\"/&gt;&lt;rect x=\"${x0}\" y=\"${y(cuentaS[i])}\" width=\"${x(lo + (i + 1) * w) - x0 - 1}\" height=\"${H - 30 - y(cuentaS[i])}\" fill=\"#2a78d6\"/&gt;`; });\n  svg += `&lt;line x1=\"30\" x2=\"${W - 20}\" y1=\"${H - 30}\" y2=\"${H - 30}\" stroke=\"currentColor\"/&gt;`;\n  [0, 0.5, 1, 1.5].forEach((v) =&gt; svg += `&lt;text x=\"${x(v)}\" y=\"${H - 12}\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\"&gt;${String(v).replace(\".\", \",\")}&lt;/text&gt;`);\n  svg += `&lt;line x1=\"${x(dReal)}\" x2=\"${x(dReal)}\" y1=\"10\" y2=\"${H - 30}\" stroke=\"#b3261e\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/&gt;&lt;text x=\"${x(dReal) + 4}\" y=\"22\" font-size=\"12\" fill=\"#b3261e\"&gt;efecto real&lt;/text&gt;`;\n  if (!isNaN(dPub)) svg += `&lt;line x1=\"${x(dPub)}\" x2=\"${x(dPub)}\" y1=\"30\" y2=\"${H - 30}\" stroke=\"#1c6b3a\" stroke-width=\"2\"/&gt;&lt;text x=\"${x(dPub) + 4}\" y=\"42\" font-size=\"12\" fill=\"#1c6b3a\"&gt;media publicada&lt;/text&gt;`;\n  svg += \"&lt;/svg&gt;\";\n  const f = (v, k = 2) =&gt; v.toFixed(k).replace(\".\", \",\");\n  const d = html`&lt;div role=\"status\" aria-live=\"polite\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `${svg}&lt;p class=\"small\"&gt;Gris: todos los estudios. Azul: los significativos (p &lt; 0,05), que son los que se «publican».&lt;/p&gt;\n  &lt;ul&gt;&lt;li&gt;Potencia del diseño: &lt;strong&gt;${Math.round(potencia * 100)} %&lt;/strong&gt; de los estudios salen significativos.&lt;/li&gt;\n  &lt;li&gt;Efecto medio publicado: &lt;strong&gt;${isNaN(dPub) ? \"—\" : f(dPub)}&lt;/strong&gt;, frente al real ${f(dReal)}: ${isNaN(dPub) ? \"\" : `&lt;strong&gt;${f(dPub / dReal, 1)} veces mayor&lt;/strong&gt;`}.&lt;/li&gt;\n  &lt;li&gt;Una réplica con la misma muestra solo saldría significativa el &lt;strong&gt;${Math.round(potRep * 100)} %&lt;/strong&gt; de las veces.&lt;/li&gt;\n  &lt;li&gt;Si planificas la réplica para tener un 80 % de potencia con el efecto publicado, usarías ${isNaN(nPlan) ? \"—\" : nPlan} por grupo, pero su potencia real sería del &lt;strong&gt;${Math.round(potPlan * 100)} %&lt;/strong&gt;.&lt;/li&gt;&lt;/ul&gt;\n  &lt;p&gt;${potencia &lt; 0.5 ? \"Con poca potencia, lo publicado exagera el efecto y las réplicas «fracasan» aunque el efecto exista. Planifica las réplicas con un efecto más prudente (por ejemplo, la mitad del publicado) o con el menor efecto de interés.\" : \"Con potencia alta, la inflación es pequeña: los resultados publicados se parecen al efecto real.\"}&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#actividad-práctica-cuestionable-o-correcta",
+    "href": "94-laboratorio.html#actividad-práctica-cuestionable-o-correcta",
+    "title": "Apéndice A — Laboratorio interactivo",
+    "section": "Actividad: ¿práctica cuestionable o correcta?",
+    "text": "Actividad: ¿práctica cuestionable o correcta?\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#para-ver-y-seguir-aprendiendo",
+    "href": "94-laboratorio.html#para-ver-y-seguir-aprendiendo",
+    "title": "Apéndice A — Laboratorio interactivo",
+    "section": "Para ver y seguir aprendiendo",
+    "text": "Para ver y seguir aprendiendo\nSon enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.\n\nIs Most Published Research Wrong? — Veritasium (2016). Unos 12 minutos sobre valores p, p-hacking y la crisis de replicación, a partir del artículo de Ioannidis (2005).",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
     "objectID": "91-guia-docente.html",
     "href": "91-guia-docente.html",
-    "title": "Apéndice A — Guía para el profesorado",
+    "title": "Apéndice B — Guía para el profesorado",
     "section": "",
     "text": "Propuesta de evaluación\nEste libro sirve como manual de un curso de doctorado de unas 40-48 horas sobre investigación sobre la investigación, o de dos cursos independientes: Fundamentos (parte I, capítulos 1-6) y Métodos de la metaciencia (parte II, capítulos 7-12). También puede leerse de forma autónoma. Cada capítulo equivale a una sesión de 3-4 horas con lectura previa.\nLa parte II usa un conjunto de datos real descargado de OpenAlex (datos/metaciencia_openalex.json: los 80 artículos más citados que citan a la Open Science Collaboration, 2015) para que todos los métodos se practiquen sobre los mismos datos. Los retos de la parte II están pensados para que cada estudiante pueda hacerlos solo, con datos existentes y codificación propia.\nLa rúbrica común de los retos valora la pregunta y las fuentes (20 %), el rigor del análisis (30 %), la interpretación crítica (25 %), la reproducibilidad de datos y código (15 %) y la presentación (10 %). Los retos no tienen solución en el libro: cada persona trabaja sobre su propio campo.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#propuesta-de-evaluación",
     "href": "91-guia-docente.html#propuesta-de-evaluación",
-    "title": "Apéndice A — Guía para el profesorado",
+    "title": "Apéndice B — Guía para el profesorado",
     "section": "",
     "text": "Actividad\nPeso orientativo\nApoyo en el libro\n\n\n\n\nRetos evaluables (elegir 4 de 6)\n60 %\nUn reto por capítulo, con rúbrica en la plantilla de entrega\n\n\nPresentación de una lectura obligatoria\n20 %\nDiapositivas y preguntas para debatir de cada capítulo\n\n\nParticipación y autoevaluaciones\n20 %\nAutoevaluaciones y actividades interactivas",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
     "href": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
-    "title": "Apéndice A — Guía para el profesorado",
+    "title": "Apéndice B — Guía para el profesorado",
     "section": "Actividades interactivas y laboratorios",
     "text": "Actividades interactivas y laboratorios\nCada capítulo incluye actividades de corrección inmediata y laboratorios que se usan sin programar: índice h, valor predictivo positivo de un resultado significativo, simulación de p-hacking y escenarios de decisión (análisis que no sale, planificación de prácticas abiertas, comisión de selección). Los ejercicios de R se ejecutan en el navegador con webR. En el PDF y el EPUB, las actividades aparecen en papel con su solución.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#autoevaluación-en-aula-global",
     "href": "91-guia-docente.html#autoevaluación-en-aula-global",
-    "title": "Apéndice A — Guía para el profesorado",
+    "title": "Apéndice B — Guía para el profesorado",
     "section": "Autoevaluación en Aula Global",
     "text": "Autoevaluación en Aula Global\nLas preguntas de autoevaluación están exportadas a Moodle XML en la carpeta moodle/ del repositorio. Se importan desde Banco de preguntas → Importar → Formato Moodle XML.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#diapositivas",
     "href": "91-guia-docente.html#diapositivas",
-    "title": "Apéndice A — Guía para el profesorado",
+    "title": "Apéndice B — Guía para el profesorado",
     "section": "Diapositivas",
     "text": "Diapositivas\nCada capítulo tiene diapositivas con los objetivos, las figuras, las tablas, la lectura obligatoria, preguntas para debatir y el reto: diapositivas/ (F, pantalla completa; S, notas).",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#mantenimiento",
     "href": "91-guia-docente.html#mantenimiento",
-    "title": "Apéndice A — Guía para el profesorado",
+    "title": "Apéndice B — Guía para el profesorado",
     "section": "Mantenimiento",
     "text": "Mantenimiento\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\npython3 herramientas/diapositivas.py    # diapositivas de clase\nLos datos de las simulaciones son generados con semilla fija y no corresponden a personas reales.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "92-glosario.html",
     "href": "92-glosario.html",
-    "title": "Apéndice B — Glosario",
+    "title": "Apéndice C — Glosario",
     "section": "",
     "text": "Qué es la ciencia de la ciencia\nTérminos del libro ordenados por capítulo. Cada entrada enlaza con el capítulo donde se explica.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#qué-es-la-ciencia-de-la-ciencia",
     "href": "92-glosario.html#qué-es-la-ciencia-de-la-ciencia",
-    "title": "Apéndice B — Glosario",
+    "title": "Apéndice C — Glosario",
     "section": "",
     "text": "Ciencia de la ciencia\nScience of science. Estudio científico de cómo se produce, comunica y evalúa el conocimiento, con datos sobre publicaciones, citas, colaboraciones y financiación. → Capítulo 1\n\n\nMetaciencia\nInvestigación sobre la fiabilidad de los métodos y resultados científicos y sobre las reformas que la mejoran. También, metainvestigación. → Capítulo 1\n\n\nInvestigación sobre la investigación\nResearch on research (RoR). Estudio de qué hace que la investigación sea mejor y más útil, con atención especial a la financiación y la política científica. → Capítulo 1\n\n\nCienciometría\nEstudio cuantitativo de la ciencia, sobre todo a partir de publicaciones y citas. → Capítulo 1\n\n\nEfecto Mateo\nAcumulación de reconocimiento en quienes ya lo tienen, descrita por Merton (1968). → Capítulo 1\n\n\nLey de Price\nObservación de que una pequeña parte de los autores produce una gran parte de las publicaciones de un campo. → Capítulo 1",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#medir-la-ciencia",
     "href": "92-glosario.html#medir-la-ciencia",
-    "title": "Apéndice B — Glosario",
+    "title": "Apéndice C — Glosario",
     "section": "Medir la ciencia",
     "text": "Medir la ciencia\n\nCita\nReferencia de un documento a otro. Mide uso o visibilidad, no calidad. → Capítulo 2\n\n\nÍndice h\nMayor número h tal que h trabajos tienen al menos h citas cada uno (Hirsch, 2005). → Capítulo 2\n\n\nFactor de impacto\nMedia de citas recibidas en un año por los artículos que una revista publicó en los dos años anteriores. Es un indicador de revista. → Capítulo 2\n\n\nNormalización por campo\nComparación de las citas de un trabajo con la media de los trabajos del mismo campo, año y tipo. → Capítulo 2\n\n\nDistribución asimétrica\nDistribución en la que pocos casos acumulan valores muy altos; la media no representa lo típico. → Capítulo 2\n\n\nAltmetría\nIndicadores basados en menciones en redes sociales, noticias, documentos de políticas o gestores de referencias. → Capítulo 2\n\n\nManifiesto de Leiden\nDiez principios para el uso responsable de los indicadores en la evaluación (Hicks et al., 2015). → Capítulo 2",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#reproducibilidad",
     "href": "92-glosario.html#reproducibilidad",
-    "title": "Apéndice B — Glosario",
+    "title": "Apéndice C — Glosario",
     "section": "Reproducibilidad",
     "text": "Reproducibilidad\n\nReproducibilidad\nObtener los mismos resultados con los mismos datos y el mismo código. → Capítulo 3\n\n\nReplicabilidad\nObtener resultados coherentes con datos nuevos recogidos con el mismo método. → Capítulo 3\n\n\nPotencia estadística\nProbabilidad de que un estudio detecte un efecto si existe. → Capítulo 3\n\n\nValor predictivo positivo\nProbabilidad de que un resultado significativo corresponda a un efecto real. → Capítulo 3\n\n\nFalso positivo\nResultado significativo cuando no existe un efecto real (error de tipo I). → Capítulo 3\n\n\nMaldición del ganador\nTendencia de los estudios pequeños que resultan significativos a sobrestimar el tamaño del efecto. → Capítulo 3",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#prácticas-cuestionables",
     "href": "92-glosario.html#prácticas-cuestionables",
-    "title": "Apéndice B — Glosario",
+    "title": "Apéndice C — Glosario",
     "section": "Prácticas cuestionables",
     "text": "Prácticas cuestionables\n\nPrácticas cuestionables\nDecisiones que no son fraude pero aumentan la probabilidad de resultados falsos, como informar solo de lo significativo. → Capítulo 4\n\n\np-hacking\nProbar análisis o decisiones hasta obtener un resultado significativo. → Capítulo 4\n\n\nHARKing\nHypothesizing after the results are known: presentar como hipótesis previa lo descubierto tras ver los datos. → Capítulo 4\n\n\nGrados de libertad del investigador\nDecisiones que se pueden tomar al recoger y analizar los datos y que cambian el resultado. → Capítulo 4\n\n\nSesgo de publicación\nDependencia de la publicación respecto del resultado: se publican más los resultados positivos. → Capítulo 4\n\n\nParada opcional\nDecidir cuándo dejar de recoger datos según el resultado provisional. → Capítulo 4",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#reformas",
     "href": "92-glosario.html#reformas",
-    "title": "Apéndice B — Glosario",
+    "title": "Apéndice C — Glosario",
     "section": "Reformas",
     "text": "Reformas\n\nCiencia abierta\nConjunto de prácticas que hacen accesibles y transparentes las publicaciones, los datos, el código, los métodos y la evaluación. → Capítulo 5\n\n\nPreregistro\nPlan del estudio registrado con fecha antes de analizar los datos. → Capítulo 5\n\n\nInforme registrado\nFormato de publicación en el que la revista acepta el estudio antes de conocer los resultados. → Capítulo 5\n\n\nDatos FAIR\nDatos localizables, accesibles, interoperables y reutilizables. → Capítulo 5\n\n\nInsignias de prácticas abiertas\nDistintivos que algunas revistas conceden a los artículos que comparten datos, materiales o preregistros. → Capítulo 5\n\n\nPreprint\nVersión de un trabajo difundida antes de la revisión por pares. → Capítulo 5",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#evaluación",
     "href": "92-glosario.html#evaluación",
-    "title": "Apéndice B — Glosario",
+    "title": "Apéndice C — Glosario",
     "section": "Evaluación",
     "text": "Evaluación\n\nEvaluación responsable\nEvaluación basada en el juicio experto, apoyada por indicadores bien usados y coherente con la misión de lo evaluado. → Capítulo 6\n\n\nCoARA\nCoalición para el avance de la evaluación de la investigación, creada en 2022 en torno a un acuerdo europeo con diez compromisos. → Capítulo 6\n\n\nDORA\nDeclaración de San Francisco sobre la evaluación de la investigación (2012). → Capítulo 6\n\n\nPrincipios de Hong Kong\nCinco principios para evaluar a las personas investigadoras fomentando la integridad (Moher et al., 2020). → Capítulo 6\n\n\nCV narrativo\nCurrículo que presenta contribuciones seleccionadas y explicadas en lugar de listas exhaustivas. → Capítulo 6\n\n\nRevisión por pares\nEvaluación de un trabajo o una propuesta por especialistas del área. → Capítulo 6\n\n\nCRediT\nTaxonomía de 14 roles para declarar la contribución de cada persona a un trabajo. → Capítulo 6",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#fuentes-de-datos",
     "href": "92-glosario.html#fuentes-de-datos",
-    "title": "Apéndice B — Glosario",
+    "title": "Apéndice C — Glosario",
     "section": "Fuentes de datos",
     "text": "Fuentes de datos\n\nBase de datos bibliográfica\nFuente que indexa publicaciones con sus metadatos y, a menudo, sus citas (Web of Science, Scopus, Dimensions, OpenAlex). → Capítulo 7\n\n\nCobertura\nConjunto de documentos, campos, idiomas y años que recoge una fuente. → Capítulo 7\n\n\nIdentificador persistente\nCódigo estable que identifica sin ambigüedad un objeto, persona u organización (DOI, ORCID, ROR). → Capítulo 7\n\n\nDesambiguación de autores\nAsignación correcta de las publicaciones a cada persona pese a homónimos y variantes del nombre. → Capítulo 7\n\n\nMetadatos abiertos\nMetadatos de la investigación que cualquiera puede reutilizar sin restricciones. → Capítulo 7",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#bibliometría-e-indicadores",
     "href": "92-glosario.html#bibliometría-e-indicadores",
-    "title": "Apéndice B — Glosario",
+    "title": "Apéndice C — Glosario",
     "section": "Bibliometría e indicadores",
     "text": "Bibliometría e indicadores\n\nRecuento completo\nCada unidad que participa en un trabajo suma una publicación completa. → Capítulo 8\n\n\nRecuento fraccionario\nEl trabajo se reparte entre las unidades participantes, de modo que la suma es uno. → Capítulo 8\n\n\nMNCS\nMedia de las citaciones normalizadas por campo, año y tipo de documento de un conjunto de trabajos. → Capítulo 8\n\n\nIndicador de percentil\nProporción de trabajos de una unidad que están entre los más citados de su campo y año, como PP(top 10 %). → Capítulo 8\n\n\nVentana de citación\nPeriodo fijo tras la publicación en el que se cuentan las citas. → Capítulo 8",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#redes-y-mapas",
     "href": "92-glosario.html#redes-y-mapas",
-    "title": "Apéndice B — Glosario",
+    "title": "Apéndice C — Glosario",
     "section": "Redes y mapas",
     "text": "Redes y mapas\n\nCocitación\nRelación entre dos documentos citados juntos por un tercero. → Capítulo 9\n\n\nAcoplamiento bibliográfico\nRelación entre dos documentos que comparten referencias. → Capítulo 9\n\n\nRed de coautoría\nRed en la que personas, instituciones o países se unen al firmar juntos. → Capítulo 9\n\n\nCentralidad\nMedida de la importancia de un nodo en una red (grado, intermediación…). → Capítulo 9\n\n\nDetección de comunidades\nAlgoritmos que agrupan los nodos más conectados entre sí (Louvain, Leiden). → Capítulo 9\n\n\nMapa de la ciencia\nRepresentación visual de la estructura de un campo a partir de redes bibliométricas. → Capítulo 9",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#textos",
     "href": "92-glosario.html#textos",
-    "title": "Apéndice B — Glosario",
+    "title": "Apéndice C — Glosario",
     "section": "Textos",
     "text": "Textos\n\nTokenización\nDivisión de un texto en unidades de análisis. → Capítulo 10\n\n\ntf-idf\nPonderación que valora los términos frecuentes en un documento pero raros en el corpus. → Capítulo 10\n\n\nModelo de temas\nModelo que descubre grupos de palabras que coaparecen (LDA, STM). → Capítulo 10\n\n\nEmbedding\nRepresentación de un texto como vector numérico que captura su significado. → Capítulo 10\n\n\nValidación\nContraste de una medida automática con una codificación humana de referencia. → Capítulo 10\n\n\nPrecisión y exhaustividad\nProporción de aciertos entre lo marcado (precisión) y entre lo existente (exhaustividad). → Capítulo 10",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#síntesis-de-la-evidencia",
     "href": "92-glosario.html#síntesis-de-la-evidencia",
-    "title": "Apéndice B — Glosario",
+    "title": "Apéndice C — Glosario",
     "section": "Síntesis de la evidencia",
     "text": "Síntesis de la evidencia\n\nRevisión sistemática\nRevisión con protocolo, búsqueda exhaustiva y criterios explícitos. → Capítulo 11\n\n\nRevisión de alcance\nRevisión que mapea qué se ha investigado y cómo (scoping review). → Capítulo 11\n\n\nMetaanálisis\nCombinación estadística de los resultados de varios estudios. → Capítulo 11\n\n\nHeterogeneidad\nVariación de los efectos entre estudios más allá del azar (τ², I²). → Capítulo 11\n\n\nGráfico de embudo\nGráfico del efecto de cada estudio frente a su precisión, para detectar asimetrías. → Capítulo 11\n\n\np-curve\nAnálisis de la distribución de los valores p significativos para valorar si hay un efecto real. → Capítulo 11\n\n\nPrueba GRIM\nComprobación de si una media de datos enteros es posible con el tamaño muestral declarado. → Capítulo 11",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#diseños-de-investigación",
     "href": "92-glosario.html#diseños-de-investigación",
-    "title": "Apéndice B — Glosario",
+    "title": "Apéndice C — Glosario",
     "section": "Diseños de investigación",
     "text": "Diseños de investigación\n\nInferencia causal\nEstimación del efecto de una intervención frente a lo que habría ocurrido sin ella. → Capítulo 12\n\n\nExperimento de campo\nExperimento aleatorizado en un entorno real. → Capítulo 12\n\n\nDiferencias en diferencias\nComparación del cambio antes y después entre un grupo afectado y otro no afectado. → Capítulo 12\n\n\nRegresión discontinua\nComparación de casos justo a ambos lados de un umbral de asignación. → Capítulo 12\n\n\nMuchos analistas\nDiseño en el que varios equipos analizan los mismos datos para responder la misma pregunta. → Capítulo 12\n\n\nAnálisis multiverso\nEjecución de todas las combinaciones razonables de decisiones analíticas. → Capítulo 12\n\n\nMétodos mixtos\nCombinación de métodos cuantitativos y cualitativos en un mismo estudio. → Capítulo 12",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
     ]
   }
 ]
