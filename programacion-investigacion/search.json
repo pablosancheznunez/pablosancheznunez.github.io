@@ -919,157 +919,201 @@
     ]
   },
   {
+    "objectID": "94-laboratorio.html",
+    "href": "94-laboratorio.html",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "",
+    "text": "Laboratorio: de JSON a tabla\nEste apéndice reúne laboratorios y actividades para practicar las ideas del libro en tu navegador.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#lab-json",
+    "href": "94-laboratorio.html#lab-json",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "",
+    "text": "Laboratorio · se ejecuta en tu navegador\n\nLas API devuelven JSON anidado: objetos dentro de objetos y listas dentro de registros. Para analizarlo hay que aplanarlo en una tabla. Edita el JSON (tiene la forma de una respuesta de OpenAlex, simplificada) y elige qué hacer con las listas.\n\nareaJ = window.Lab.area\nselJ = window.Lab.seleccion\nviewof jsonTxt = areaJ(\"JSON de la respuesta\", {rows: 12, value: JSON.stringify({meta: {count: 2}, results: [\n  {id: \"W1\", title: \"Open data reuse in libraries\", publication_year: 2023, open_access: {is_oa: true, oa_status: \"gold\"}, authorships: [{author: {display_name: \"Ana Ruiz\"}}, {author: {display_name: \"Luis Gil\"}}], concepts: [\"Open data\", \"Libraries\"]},\n  {id: \"W2\", title: \"Reproducible research software\", publication_year: 2024, open_access: {is_oa: false, oa_status: \"closed\"}, authorships: [{author: {display_name: \"Marta Sanz\"}}], concepts: [\"Software\"]}]}, null, 2)})\nviewof modoListas = selJ(\"Listas de objetos (authorships)\", [\"Unir en una celda con «; »\", \"Una fila por autor\"], {value: \"Unir en una celda con «; »\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const d = html`&lt;div role=\"status\" aria-live=\"polite\"&gt;&lt;/div&gt;`;\n  const esc = (s) =&gt; String(s).replace(/[&&lt;&gt;]/g, (c) =&gt; ({\"&\": \"&amp;\", \"&lt;\": \"&lt;\", \"&gt;\": \"&gt;\"}[c]));\n  let datos;\n  try { datos = JSON.parse(jsonTxt); } catch (e) { d.innerHTML = `&lt;p class=\"text-danger\"&gt;⚠ JSON no válido: ${esc(e.message)}. Revisa comas, comillas y llaves.&lt;/p&gt;`; return d; }\n  const registros = Array.isArray(datos) ? datos : Array.isArray(datos.results) ? datos.results : [datos];\n  const plano = (o, pre = \"\", out = {}) =&gt; { for (const [k, v] of Object.entries(o)) { const c = pre ? pre + \".\" + k : k;\n    if (v && typeof v === \"object\" && !Array.isArray(v)) plano(v, c, out);\n    else if (Array.isArray(v)) out[c] = v.map((x) =&gt; x && typeof x === \"object\" ? Object.values(plano(x)).join(\" \") : x).join(\"; \");\n    else out[c] = v; } return out; };\n  let filas = [];\n  if (modoListas.startsWith(\"Una fila\")) registros.forEach((r) =&gt; { const {authorships = [], ...resto} = r; const base = plano(resto); (authorships.length ? authorships : [{}]).forEach((a) =&gt; filas.push({...base, ...plano(a, \"authorships\")})); });\n  else filas = registros.map((r) =&gt; plano(r));\n  const cols = [...new Set(filas.flatMap(Object.keys))];\n  const r = `library(jsonlite)\\nrespuesta &lt;- fromJSON(\"respuesta.json\", flatten = TRUE)\\ntabla &lt;- respuesta$results${modoListas.startsWith(\"Una fila\") ? \"\\n# una fila por autor\\ntabla &lt;- tidyr::unnest(tabla, authorships)\" : \"\\n# listas a texto\\ntabla$authorships &lt;- vapply(tabla$authorships, function(a) paste(a$author.display_name, collapse = \\\"; \\\"), \\\"\\\")\"}`;\n  const py = `import json\\nimport pandas as pd\\n\\nwith open(\"respuesta.json\") as f:\\n    datos = json.load(f)\\n${modoListas.startsWith(\"Una fila\") ? 'tabla = pd.json_normalize(datos[\"results\"], record_path=\"authorships\",\\n                          meta=[\"id\", \"title\", \"publication_year\"], sep=\".\")' : 'tabla = pd.json_normalize(datos[\"results\"], sep=\".\")'}`;\n  d.innerHTML = `&lt;p&gt;&lt;strong&gt;${filas.length} filas × ${cols.length} columnas&lt;/strong&gt;&lt;/p&gt;&lt;div class=\"table-responsive\"&gt;&lt;table class=\"table table-sm\"&gt;&lt;thead&gt;&lt;tr&gt;${cols.map((c) =&gt; `&lt;th scope=\"col\"&gt;&lt;code&gt;${esc(c)}&lt;/code&gt;&lt;/th&gt;`).join(\"\")}&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;${filas.map((f) =&gt; `&lt;tr&gt;${cols.map((c) =&gt; `&lt;td&gt;${f[c] === undefined ? \"&lt;em&gt;NA&lt;/em&gt;\" : esc(f[c])}&lt;/td&gt;`).join(\"\")}&lt;/tr&gt;`).join(\"\")}&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;\n  &lt;div class=\"row\"&gt;&lt;div class=\"col-md-6\"&gt;&lt;p class=\"small mb-1\"&gt;En R&lt;/p&gt;&lt;pre class=\"sourceCode\"&gt;&lt;code&gt;${esc(r)}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=\"col-md-6\"&gt;&lt;p class=\"small mb-1\"&gt;En Python&lt;/p&gt;&lt;pre class=\"sourceCode\"&gt;&lt;code&gt;${esc(py)}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;`;\n  return d;\n}\n\n\n\n\n\n\nFíjate en que «una fila por autor» multiplica las filas: si después cuentas artículos, cuenta valores distintos de id, no filas.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#actividad-monta-un-flujo-etl",
+    "href": "94-laboratorio.html#actividad-monta-un-flujo-etl",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "Actividad: monta un flujo ETL",
+    "text": "Actividad: monta un flujo ETL\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#para-ver-y-seguir-aprendiendo",
+    "href": "94-laboratorio.html#para-ver-y-seguir-aprendiendo",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "Para ver y seguir aprendiendo",
+    "text": "Para ver y seguir aprendiendo\nSon enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.\n\nCode Smells and Feels — Jenny Bryan · useR! 2018. Cómo reconocer el código «que huele mal» en R y refactorizarlo. Diapositivas y materiales en su repositorio.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
     "objectID": "91-guia-docente.html",
     "href": "91-guia-docente.html",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "",
     "text": "Propuesta de evaluación\nEl libro sirve como manual de un curso de doctorado de unas 24-30 horas (seis sesiones prácticas más trabajo autónomo) o como material de autoaprendizaje. No exige experiencia previa en programación, aunque se aprovecha mejor con nociones básicas de R o de Python.\nLa rúbrica común valora que funcione y sea correcto (30 %), la reproducibilidad (25 %), la calidad del código (20 %), la documentación (15 %) y la reflexión (10 %).",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#propuesta-de-evaluación",
     "href": "91-guia-docente.html#propuesta-de-evaluación",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "",
     "text": "Actividad\nPeso orientativo\n\n\n\n\nRetos evaluables (elegir 4 de 6)\n60 %\n\n\nProyecto final: repositorio con ETL, API y paquete o servidor MCP, con DOI\n30 %\n\n\nAutoevaluaciones\n10 %",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#ejercicios-en-el-navegador",
     "href": "91-guia-docente.html#ejercicios-en-el-navegador",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Ejercicios en el navegador",
     "text": "Ejercicios en el navegador\nLos ejercicios de Python usan Pyodide y los de R webR, alojados en el propio sitio (no dependen de servidores externos). La primera carga de Python tarda algo más porque descarga pandas. Los ejercicios se corrigen automáticamente al pulsar Run Code. Dos laboratorios consultan API en directo (OpenAlex y Crossref) y necesitan conexión; el resto funciona sin ella.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#laboratorios-y-actividades",
     "href": "91-guia-docente.html#laboratorios-y-actividades",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Laboratorios y actividades",
     "text": "Laboratorios y actividades\nLaboratorios: generador de .gitignore, probador de expresiones regulares para DOI, consulta en directo a OpenAlex y servidor MCP simulado con llamada real a Crossref. Escenario: inyección de instrucciones en un servidor MCP. En el PDF y el EPUB, las actividades aparecen en papel con su solución.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#recomendaciones",
     "href": "91-guia-docente.html#recomendaciones",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Recomendaciones",
     "text": "Recomendaciones\n\nPide que todos los retos se entreguen como repositorios públicos o privados con historial de commits: el historial muestra el proceso.\nEl uso de asistentes de IA para programar es habitual: pide en la entrega la declaración de uso de IA (incluida en la plantilla) y valora que el estudiante entienda y pruebe el código.\nPara el capítulo 6, insiste en el análisis de riesgos antes que en la cantidad de herramientas.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#autoevaluación-en-aula-global-y-diapositivas",
     "href": "91-guia-docente.html#autoevaluación-en-aula-global-y-diapositivas",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Autoevaluación en Aula Global y diapositivas",
     "text": "Autoevaluación en Aula Global y diapositivas\nLas preguntas están exportadas a Moodle XML en moodle/. Las diapositivas de cada capítulo están en diapositivas/.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#mantenimiento",
     "href": "91-guia-docente.html#mantenimiento",
-    "title": "Apéndice B — Guía para el profesorado",
+    "title": "Apéndice C — Guía para el profesorado",
     "section": "Mantenimiento",
     "text": "Mantenimiento\npython3 herramientas/preparar.py\npython3 herramientas/moodle.py\npython3 herramientas/figuras.py\npython3 herramientas/pdf.py\nquarto render\npython3 herramientas/diapositivas.py",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "92-glosario.html",
     "href": "92-glosario.html",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "",
     "text": "Flujo de trabajo reproducible\nTérminos del libro ordenados por capítulo.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#flujo-de-trabajo-reproducible",
     "href": "92-glosario.html#flujo-de-trabajo-reproducible",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "",
     "text": "Reproducibilidad computacional\nPosibilidad de obtener los mismos resultados con los mismos datos y el mismo código. → Capítulo 1\n\n\nControl de versiones\nRegistro de los cambios de los archivos de un proyecto, con su autoría y su motivo. → Capítulo 1\n\n\nCommit\nInstantánea de los cambios en Git, con un mensaje que explica el porqué. → Capítulo 1\n\n\nRama\nLínea de trabajo paralela en un repositorio de Git. → Capítulo 1\n\n\nEntorno\nEspacio aislado con las dependencias de un proyecto. → Capítulo 1\n\n\nArchivo de bloqueo\nArchivo que registra las versiones exactas de las dependencias (uv.lock, renv.lock). → Capítulo 1",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#python-para-investigar",
     "href": "92-glosario.html#python-para-investigar",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Python para investigar",
     "text": "Python para investigar\n\nLista\nColección ordenada y modificable de elementos en Python. → Capítulo 2\n\n\nDiccionario\nColección de pares clave-valor en Python. → Capítulo 2\n\n\nComprensión de listas\nExpresión que crea una lista transformando o filtrando otra. → Capítulo 2\n\n\nFunción\nBloque de código con nombre que recibe argumentos y devuelve un resultado. → Capítulo 2\n\n\nDataFrame\nTabla de datos con columnas de distinto tipo (pandas en Python, data.frame en R). → Capítulo 2\n\n\nVectorización\nAplicar una operación a un vector o columna entera sin bucles explícitos. → Capítulo 2",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#etl",
     "href": "92-glosario.html#etl",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "ETL",
     "text": "ETL\n\nETL\nExtraer, transformar y cargar datos. → Capítulo 3\n\n\nDatos tidy\nDatos en los que cada variable es una columna, cada observación una fila y cada unidad una tabla. → Capítulo 3\n\n\nExpresión regular\nPatrón que describe un conjunto de cadenas de texto. → Capítulo 3\n\n\nNormalización\nLlevar valores a un formato único y coherente. → Capítulo 3\n\n\nDeduplicación\nDetección y eliminación de registros repetidos. → Capítulo 3\n\n\nSQLite\nBase de datos relacional que se guarda en un único archivo. → Capítulo 3\n\n\nIdempotencia\nPropiedad de un proceso que da el mismo resultado aunque se ejecute varias veces. → Capítulo 3",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#api",
     "href": "92-glosario.html#api",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "API",
     "text": "API\n\nAPI\nInterfaz que permite a un programa pedir datos o servicios a otro. → Capítulo 4\n\n\nREST\nEstilo de API web en el que cada recurso tiene una URL y se usa con métodos HTTP. → Capítulo 4\n\n\nJSON\nFormato de texto para datos estructurados con objetos y listas. → Capítulo 4\n\n\nCódigo de estado HTTP\nNúmero que indica el resultado de una petición (200, 404, 429…). → Capítulo 4\n\n\nPaginación\nDivisión de los resultados de una API en páginas sucesivas. → Capítulo 4\n\n\nLímite de uso\nNúmero máximo de peticiones permitidas en un periodo. → Capítulo 4\n\n\nClave de API\nCredencial que identifica a quien usa una API; se guarda fuera del código. → Capítulo 4",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#paquetes",
     "href": "92-glosario.html#paquetes",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "Paquetes",
     "text": "Paquetes\n\nPaquete\nForma estándar de distribuir código reutilizable con documentación, pruebas y dependencias. → Capítulo 5\n\n\nCompendio de investigación\nProyecto de análisis organizado como un paquete con datos, código y manuscrito. → Capítulo 5\n\n\nDESCRIPTION\nArchivo de un paquete de R con sus metadatos y dependencias. → Capítulo 5\n\n\nPrueba unitaria\nComprobación automática de que una función da el resultado esperado. → Capítulo 5\n\n\nR CMD check\nRevisión completa de un paquete de R antes de publicarlo. → Capítulo 5\n\n\npyproject.toml\nArchivo de metadatos y dependencias de un proyecto de Python. → Capítulo 5\n\n\nVersionado semántico\nNumeración MAJOR.MINOR.PATCH según el tipo de cambio. → Capítulo 5",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#mcp",
     "href": "92-glosario.html#mcp",
-    "title": "Apéndice C — Glosario",
+    "title": "Apéndice D — Glosario",
     "section": "MCP",
     "text": "MCP\n\nMCP\nModel Context Protocol: estándar abierto para conectar aplicaciones de IA con herramientas y datos. → Capítulo 6\n\n\nAnfitrión, cliente y servidor\nLa aplicación (anfitrión) mantiene un cliente por cada servidor que ofrece capacidades. → Capítulo 6\n\n\nHerramienta (tool)\nFunción que el modelo puede decidir llamar, con argumentos descritos en JSON Schema. → Capítulo 6\n\n\nRecurso (resource)\nDatos que la aplicación puede leer, identificados por una URI. → Capítulo 6\n\n\nPlantilla (prompt)\nInstrucción predefinida que la persona elige usar. → Capítulo 6\n\n\nJSON-RPC\nProtocolo de llamadas remotas con mensajes JSON (id, method, params, result). → Capítulo 6\n\n\nTransporte\nCanal de los mensajes MCP: stdio (local) o HTTP (remoto). → Capítulo 6\n\n\nInyección de instrucciones\nAtaque en el que un contenido externo incluye órdenes dirigidas al modelo. → Capítulo 6",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
     ]
   }
 ]
