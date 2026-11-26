@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -539,7 +559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="el-intervalo-de-confianza" class="level2">
 <h2 class="anchored" data-anchor-id="el-intervalo-de-confianza">2. El intervalo de confianza</h2>
-<p>Un <strong>intervalo de confianza del 95 %</strong> es un procedimiento que, si se repitiera el estudio muchas veces, contendría el valor verdadero en el 95 % de las repeticiones. Para un estudio concreto, una forma práctica de leerlo (Cumming, 2014) es: el intervalo reúne los <strong>valores del parámetro razonablemente compatibles con los datos</strong>, y los valores del centro son más plausibles que los de los extremos.</p>
+<p>Un <strong>intervalo de confianza del 95 %</strong> es un procedimiento que, si se repitiera el estudio muchas veces, contendría el valor verdadero en el 95 % de las repeticiones. Para un estudio concreto, una forma práctica de leerlo <span class="citation" data-cites="cumming2014">(<a href="#ref-cumming2014" role="doc-biblioref">Cumming, 2014</a>)</span> es: el intervalo reúne los <strong>valores del parámetro razonablemente compatibles con los datos</strong>, y los valores del centro son más plausibles que los de los extremos.</p>
 <div class="callout callout-style-simple callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -767,7 +787,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImMz
 <ol type="1">
 <li>Toma un artículo de tu campo que informe solo de valores <em>p</em> («la diferencia fue significativa, <em>p</em> &lt; 0,05»).</li>
 <li>Con los datos que dé (medias, desviaciones, <em>n</em>), calcula los <strong>intervalos de confianza</strong> de los efectos principales.</li>
-<li>Reescribe el párrafo de resultados centrado en <strong>cuánto</strong> efecto y con <strong>qué precisión</strong>, al estilo de Cumming (2014).</li>
+<li>Reescribe el párrafo de resultados centrado en <strong>cuánto</strong> efecto y con <strong>qué precisión</strong>, al estilo de <span class="citation" data-cites="cumming2014">Cumming (<a href="#ref-cumming2014" role="doc-biblioref">2014</a>)</span>.</li>
 <li>Discute si las conclusiones del artículo cambian con esta lectura.</li>
 </ol>
 <p><strong>Entrega:</strong> con la <a href="plantillas/entrega_reto.qmd">plantilla de entrega</a>. Este reto <strong>no tiene solución en el libro</strong>.</p>
@@ -822,6 +842,11 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC03IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9lc3R1ZGlvLmNzdiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-cumming2014" class="csl-entry" role="listitem">
+Cumming, G. (2014). <span>The new statistics: Why and how</span>. <em>Psychological Science</em>, <em>25</em>(1), 7-29. <a href="https://doi.org/10.1177/0956797613504966">https://doi.org/10.1177/0956797613504966</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

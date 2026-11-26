@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -580,7 +600,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZCA8
 </section>
 <section id="mostrar-los-datos-no-solo-las-medias" class="level2">
 <h2 class="anchored" data-anchor-id="mostrar-los-datos-no-solo-las-medias">2. Mostrar los datos, no solo las medias</h2>
-<p>Weissgerber et al.&nbsp;(2015) revisaron artículos de fisiología y encontraron que la mayoría presentaba datos continuos con <strong>gráficos de barras</strong> de medias. El problema: distribuciones muy distintas (con atípicos, bimodales, con pocos datos) producen la misma barra. Recomiendan <strong>gráficos que muestren cada observación</strong> (diagramas de puntos o de dispersión) o, con muchos datos, <strong>diagramas de caja</strong> o de violín.</p>
+<p><span class="citation" data-cites="weissgerber2015">Weissgerber et&nbsp;al. (<a href="#ref-weissgerber2015" role="doc-biblioref">2015</a>)</span> revisaron artículos de fisiología y encontraron que la mayoría presentaba datos continuos con <strong>gráficos de barras</strong> de medias. El problema: distribuciones muy distintas (con atípicos, bimodales, con pocos datos) producen la misma barra. Recomiendan <strong>gráficos que muestren cada observación</strong> (diagramas de puntos o de dispersión) o, con muchos datos, <strong>diagramas de caja</strong> o de violín.</p>
 <div id="fig-c2-barras" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A la izquierda, cuatro barras de igual altura con barras de error. A la derecha, los puntos de las mismas cuatro muestras: una simétrica, otra con un valor atípico muy alto, otra bimodal y otra con solo tres observaciones.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-c2-barras-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -794,7 +814,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImMy
 <li>Con una distribución muy asimétrica, la mediana describe mejor el valor típico que la media. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>La medida de dispersión que acompaña a la mediana es el rango <input class="webex-solveme nospaces ignorecase" size="18" aria-label="Escribe tu respuesta" data-answer="[&quot;intercuartílico&quot;,&quot;intercuartilico&quot;]"></li>
 <li>Una correlación de Pearson igual a 0 significa que no hay ninguna relación entre las variables. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
-<li>Según Weissgerber et al.&nbsp;(2015), para datos continuos con muestras pequeñas conviene usar <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">gráficos de barras</option><option value="answer">gráficos que muestren cada observación</option><option value="x">gráficos de tarta</option></select></li>
+<li>Según <span class="citation" data-cites="weissgerber2015">Weissgerber et&nbsp;al. (<a href="#ref-weissgerber2015" role="doc-biblioref">2015</a>)</span>, para datos continuos con muestras pequeñas conviene usar <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">gráficos de barras</option><option value="answer">gráficos que muestren cada observación</option><option value="x">gráficos de tarta</option></select></li>
 <li>Los cuatro conjuntos del cuarteto de Anscombe tienen <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">gráficos idénticos</option><option value="answer">resúmenes estadísticos casi idénticos</option><option value="x">correlaciones muy distintas</option></select></li>
 <li><code>tapply(d$nota, d$grupo, mean)</code> calcula <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">la media global</option><option value="answer">la media de la nota en cada grupo</option><option value="x">la nota de cada persona</option></select></li>
 <li>La correlación de Pearson mide la fuerza de una relación <input class="webex-solveme nospaces ignorecase" size="8" aria-label="Escribe tu respuesta" data-answer="[&quot;lineal&quot;]"></li>
@@ -834,6 +854,11 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC04IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9lc3R1ZGlvLmNzdiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-weissgerber2015" class="csl-entry" role="listitem">
+Weissgerber, T. L., Milic, N. M., Winham, S. J., y Garovic, V. D. (2015). <span>Beyond bar and line graphs: Time for a new data presentation paradigm</span>. <em>PLOS Biology</em>, <em>13</em>(4), e1002128. <a href="https://doi.org/10.1371/journal.pbio.1002128">https://doi.org/10.1371/journal.pbio.1002128</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

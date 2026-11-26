@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -539,8 +559,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Greenland, S.; Senn, S. J.; Rothman, K. J.; Carlin, J. B.; Poole, C.; Goodman, S. N.; Altman, D. G. (2016). <a href="https://doi.org/10.1007/s10654-016-0149-3">Statistical tests, <em>P</em> values, confidence intervals, and power: A guide to misinterpretations</a>. <em>European Journal of Epidemiology</em>, 31(4), 337-350.</li>
-<li>Halsey, L. G.; Curran-Everett, D.; Vowler, S. L.; Drummond, G. B. (2015). <a href="https://doi.org/10.1038/nmeth.3288">The fickle <em>P</em> value generates irreproducible results</a>. <em>Nature Methods</em>, 12(3), 179-185.</li>
+<li><span class="citation" data-cites="greenland2016">Greenland et&nbsp;al. (<a href="#ref-greenland2016" role="doc-biblioref">2016</a>)</span></li>
+<li><span class="citation" data-cites="halsey2015">Halsey et&nbsp;al. (<a href="#ref-halsey2015" role="doc-biblioref">2015</a>)</span></li>
 </ul>
 </section>
 </section>
@@ -556,7 +576,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="seis-principios-de-la-asa" class="level2">
 <h2 class="anchored" data-anchor-id="seis-principios-de-la-asa">2. Seis principios de la ASA</h2>
-<p>En 2016, la American Statistical Association publicó por primera vez una declaración sobre un procedimiento concreto (Wasserstein y Lazar, 2016):</p>
+<p>En 2016, la American Statistical Association publicó por primera vez una declaración sobre un procedimiento concreto <span class="citation" data-cites="wasserstein2016">(<a href="#ref-wasserstein2016" role="doc-biblioref">Wasserstein y Lazar, 2016</a>)</span>:</p>
 <ol type="1">
 <li>Los valores <em>p</em> pueden indicar cuán incompatibles son los datos con un modelo estadístico concreto.</li>
 <li><strong>No miden</strong> la probabilidad de que la hipótesis sea cierta, ni la de que los datos se deban solo al azar.</li>
@@ -801,7 +821,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM0
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>Elige dos artículos de tu campo y localiza todas las afirmaciones basadas en valores <em>p</em>.</li>
-<li>Clasifícalas según los seis principios de la ASA: ¿cuáles son correctas y cuáles caen en alguno de los errores de Greenland et al.&nbsp;(2016)?</li>
+<li>Clasifícalas según los seis principios de la ASA: ¿cuáles son correctas y cuáles caen en alguno de los errores de <span class="citation" data-cites="greenland2016">Greenland et&nbsp;al. (<a href="#ref-greenland2016" role="doc-biblioref">2016</a>)</span>?</li>
 <li>Comprueba si informan de tamaños del efecto e intervalos y si corrigen las <a href="92-glosario.html#gl-multiples" class="glos" data-def="Problema de hacer muchos contrastes: aumenta la probabilidad de algún falso positivo.">comparaciones múltiples</a>.</li>
 <li>Reescribe dos conclusiones con un lenguaje correcto.</li>
 </ol>
@@ -857,6 +877,17 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC02IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9lc3R1ZGlvLmNzdiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-greenland2016" class="csl-entry" role="listitem">
+Greenland, S., Senn, S. J., Rothman, K. J., Carlin, J. B., Poole, C., Goodman, S. N., y Altman, D. G. (2016). <span>Statistical tests, <em>P</em> values, confidence intervals, and power: A guide to misinterpretations</span>. <em>European Journal of Epidemiology</em>, <em>31</em>(4), 337-350. <a href="https://doi.org/10.1007/s10654-016-0149-3">https://doi.org/10.1007/s10654-016-0149-3</a>
+</div>
+<div id="ref-halsey2015" class="csl-entry" role="listitem">
+Halsey, L. G., Curran-Everett, D., Vowler, S. L., y Drummond, G. B. (2015). <span>The fickle <em>P</em> value generates irreproducible results</span>. <em>Nature Methods</em>, <em>12</em>(3), 179-185. <a href="https://doi.org/10.1038/nmeth.3288">https://doi.org/10.1038/nmeth.3288</a>
+</div>
+<div id="ref-wasserstein2016" class="csl-entry" role="listitem">
+Wasserstein, R. L., y Lazar, N. A. (2016). <span>The ASA statement on <em>p</em>-values: Context, process, and purpose</span>. <em>The American Statistician</em>, <em>70</em>(2), 129-133. <a href="https://doi.org/10.1080/00031305.2016.1154108">https://doi.org/10.1080/00031305.2016.1154108</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
