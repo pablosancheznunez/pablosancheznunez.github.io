@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -440,6 +460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#falacias-errores-que-parecen-razonamientos" id="toc-falacias-errores-que-parecen-razonamientos" class="nav-link" data-scroll-target="#falacias-errores-que-parecen-razonamientos">2. Falacias: errores que parecen razonamientos</a></li>
   <li><a href="#por-qué-discutimos-la-teoría-argumentativa" id="toc-por-qué-discutimos-la-teoría-argumentativa" class="nav-link" data-scroll-target="#por-qué-discutimos-la-teoría-argumentativa">3. Por qué discutimos: la teoría argumentativa</a></li>
   <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#segundo-caso-práctico-resuelto" id="toc-segundo-caso-práctico-resuelto" class="nav-link" data-scroll-target="#segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</a></li>
   <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-c2" id="toc-reto-c2" class="nav-link" data-scroll-target="#reto-c2">Reto evaluable</a></li>
@@ -521,8 +542,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Hahn, U.; Oaksford, M. (2007). <a href="https://doi.org/10.1037/0033-295X.114.3.704">The rationality of informal argumentation: A Bayesian approach to reasoning fallacies</a>. <em>Psychological Review</em>, 114(3), 704-732.</li>
-<li>Toulmin, S. E. (2003). <em>The uses of argument</em> (ed.&nbsp;actualizada). Cambridge University Press (original de 1958).</li>
+<li><span class="citation" data-cites="hahn2007">Hahn y Oaksford (<a href="#ref-hahn2007" role="doc-biblioref">2007</a>)</span></li>
+<li><span class="citation" data-cites="toulmin2003">Toulmin (<a href="#ref-toulmin2003" role="doc-biblioref">2003</a>)</span> — Original de 1958.</li>
 </ul>
 </section>
 </section>
@@ -693,11 +714,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>Hahn y Oaksford (2007) añaden un matiz importante: muchas «falacias» son <strong>razonables según el contenido</strong>. Apelar a la autoridad de un experto en el tema es un buen argumento probable; la pendiente resbaladiza es razonable si cada paso es probable. La pregunta no es «¿qué falacia es?», sino «¿cuánto apoyo da realmente este argumento?».</p>
+<p><span class="citation" data-cites="hahn2007">Hahn y Oaksford (<a href="#ref-hahn2007" role="doc-biblioref">2007</a>)</span> añaden un matiz importante: muchas «falacias» son <strong>razonables según el contenido</strong>. Apelar a la autoridad de un experto en el tema es un buen argumento probable; la pendiente resbaladiza es razonable si cada paso es probable. La pregunta no es «¿qué falacia es?», sino «¿cuánto apoyo da realmente este argumento?».</p>
 </section>
 <section id="por-qué-discutimos-la-teoría-argumentativa" class="level2">
 <h2 class="anchored" data-anchor-id="por-qué-discutimos-la-teoría-argumentativa">3. Por qué discutimos: la teoría argumentativa</h2>
-<p>Mercier y Sperber (2011) proponen que la función del razonamiento humano no es tanto llegar solos a la verdad como <strong>producir y evaluar argumentos para convencer a otros</strong>. Eso explica el sesgo de confirmación: somos buenos buscando argumentos para nuestra postura y malos evaluándola. Pero también explica algo esperanzador: en <strong>grupos que discuten</strong>, con personas que no comparten nuestra postura, el razonamiento mejora mucho. La revisión por pares, el seminario de grupo o el tribunal de tesis son aplicaciones de esta idea.</p>
+<p><span class="citation" data-cites="mercier2011">Mercier y Sperber (<a href="#ref-mercier2011" role="doc-biblioref">2011</a>)</span> proponen que la función del razonamiento humano no es tanto llegar solos a la verdad como <strong>producir y evaluar argumentos para convencer a otros</strong>. Eso explica el sesgo de confirmación: somos buenos buscando argumentos para nuestra postura y malos evaluándola. Pero también explica algo esperanzador: en <strong>grupos que discuten</strong>, con personas que no comparten nuestra postura, el razonamiento mejora mucho. La revisión por pares, el seminario de grupo o el tribunal de tesis son aplicaciones de esta idea.</p>
 </section>
 <section id="caso-práctico-resuelto" class="level2">
 <h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
@@ -750,6 +771,125 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
+<section id="segundo-caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Detectar falacias en un debate
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En un debate sobre si la universidad debe exigir el acceso abierto a todas sus publicaciones aparecen estas intervenciones. Para cada una, el nombre de la falacia y una versión que sí argumenta:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Intervención</th>
+<th>Falacia</th>
+<th>Versión razonable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>«Si obligamos al acceso abierto, mañana nos obligarán a publicar los datos en bruto y luego los cuadernos de laboratorio.»</td>
+<td><strong>Pendiente resbaladiza</strong></td>
+<td>«Antes de exigir el acceso abierto, definamos qué cubre y qué no.»</td>
+</tr>
+<tr class="even">
+<td>«Lo defiende un profesor que nunca ha publicado en una revista de prestigio.»</td>
+<td><strong><em>Ad hominem</em></strong></td>
+<td>Discutir el argumento, no la trayectoria de quien lo da.</td>
+</tr>
+<tr class="odd">
+<td>«O publicamos todo en abierto o somos cómplices de las editoriales.»</td>
+<td><strong>Falso dilema</strong></td>
+<td>«Hay opciones intermedias: depósito en repositorio, acuerdos transformativos.»</td>
+</tr>
+<tr class="even">
+<td>«Todo el mundo lo está haciendo.»</td>
+<td><strong><em>Ad populum</em></strong></td>
+<td>«Otras universidades lo han hecho y estos fueron sus resultados.»</td>
+</tr>
+</tbody>
+</table>
+<p>Nombrar la falacia en un debate rara vez convence. Es más eficaz reformular el argumento de forma razonable y responder a esa versión.</p>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-c2-falacias" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-c2-falacias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 451.46 64.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 50.4)">
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-50.4 437.06,-50.4 437.06,14.4 -14.4,14.4"></polygon>
+<!-- f -->
+<g id="node1" class="node">
+<title>f</title>
+<path fill="#fdf0e8" stroke="#1a4d8f" d="M63.88,-36C63.88,-36 12.04,-36 12.04,-36 6.04,-36 0.04,-30 0.04,-24 0.04,-24 0.04,-12 0.04,-12 0.04,-6 6.04,0 12.04,0 12.04,0 63.88,0 63.88,0 69.88,0 75.88,-6 75.88,-12 75.88,-12 75.88,-24 75.88,-24 75.88,-30 69.88,-36 63.88,-36"></path>
+<text text-anchor="middle" x="37.96" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Intervención</text>
+<text text-anchor="middle" x="37.96" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">falaz</text>
+</g>
+<!-- n -->
+<g id="node2" class="node">
+<title>n</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M163.46,-36C163.46,-36 124.07,-36 124.07,-36 118.07,-36 112.07,-30 112.07,-24 112.07,-24 112.07,-12 112.07,-12 112.07,-6 118.07,0 124.07,0 124.07,0 163.46,0 163.46,0 169.46,0 175.46,-6 175.46,-12 175.46,-12 175.46,-24 175.46,-24 175.46,-30 169.46,-36 163.46,-36"></path>
+<text text-anchor="middle" x="143.76" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Identificar</text>
+<text text-anchor="middle" x="143.76" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">el error</text>
+</g>
+<!-- f&#45;&gt;n -->
+<g id="edge1" class="edge">
+<title>f-&gt;n</title>
+<path fill="none" stroke="#45433f" d="M76.14,-18C84.5,-18 93.41,-18 101.9,-18"></path>
+<polygon fill="#45433f" stroke="#45433f" points="101.99,-21.5 111.99,-18 101.99,-14.5 101.99,-21.5"></polygon>
+</g>
+<!-- r -->
+<g id="node3" class="node">
+<title>r</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M293.06,-36C293.06,-36 223.79,-36 223.79,-36 217.79,-36 211.79,-30 211.79,-24 211.79,-24 211.79,-12 211.79,-12 211.79,-6 217.79,0 223.79,0 223.79,0 293.06,0 293.06,0 299.06,0 305.06,-6 305.06,-12 305.06,-12 305.06,-24 305.06,-24 305.06,-30 299.06,-36 293.06,-36"></path>
+<text text-anchor="middle" x="258.43" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Reformular</text>
+<text text-anchor="middle" x="258.43" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">la mejor versión</text>
+</g>
+<!-- n&#45;&gt;r -->
+<g id="edge2" class="edge">
+<title>n-&gt;r</title>
+<path fill="none" stroke="#45433f" d="M175.55,-18C183.6,-18 192.53,-18 201.44,-18"></path>
+<polygon fill="#45433f" stroke="#45433f" points="201.46,-21.5 211.46,-18 201.46,-14.5 201.46,-21.5"></polygon>
+</g>
+<!-- s -->
+<g id="node4" class="node">
+<title>s</title>
+<path fill="#eaf6ef" stroke="#1a4d8f" d="M410.87,-36C410.87,-36 353.03,-36 353.03,-36 347.03,-36 341.03,-30 341.03,-24 341.03,-24 341.03,-12 341.03,-12 341.03,-6 347.03,0 353.03,0 353.03,0 410.87,0 410.87,0 416.87,0 422.87,-6 422.87,-12 422.87,-12 422.87,-24 422.87,-24 422.87,-30 416.87,-36 410.87,-36"></path>
+<text text-anchor="middle" x="381.95" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Responder</text>
+<text text-anchor="middle" x="381.95" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">a esa versión</text>
+</g>
+<!-- r&#45;&gt;s -->
+<g id="edge3" class="edge">
+<title>r-&gt;s</title>
+<path fill="none" stroke="#45433f" d="M305.37,-18C313.69,-18 322.39,-18 330.82,-18"></path>
+<polygon fill="#45433f" stroke="#45433f" points="330.92,-21.5 340.92,-18 330.92,-14.5 330.92,-21.5"></polygon>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-c2-falacias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: De la falacia a una versión que se puede discutir.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="ejercicios-graduados" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
 <p><strong>Básico.</strong> ¿Qué falacia hay en «Este método lo usa todo el mundo en mi campo, así que es correcto»?</p>
@@ -798,7 +938,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>En el modelo de Toulmin, la pieza que explica por qué los datos apoyan la afirmación es la <input class="webex-solveme nospaces ignorecase" size="11" aria-label="Escribe tu respuesta" data-answer="[&quot;garantía&quot;,&quot;garantia&quot;]"></li>
 <li>Refutar una versión deformada de la postura contraria es la falacia del <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">ad hominem</option><option value="answer">hombre de paja</option><option value="x">falso dilema</option></select></li>
 <li>Apelar a la opinión de un experto en el propio tema es siempre una falacia. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
-<li>Según Mercier y Sperber (2011), el razonamiento funciona mejor <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">en solitario</option><option value="answer">en grupos que discuten con puntos de vista distintos</option><option value="x">cuando todos piensan igual</option></select></li>
+<li>Según <span class="citation" data-cites="mercier2011">Mercier y Sperber (<a href="#ref-mercier2011" role="doc-biblioref">2011</a>)</span>, el razonamiento funciona mejor <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">en solitario</option><option value="answer">en grupos que discuten con puntos de vista distintos</option><option value="x">cuando todos piensan igual</option></select></li>
 <li>«Después de esto, luego a causa de esto» describe la falacia <input class="webex-solveme nospaces ignorecase" size="10" aria-label="Escribe tu respuesta" data-answer="[&quot;post hoc&quot;]"></li>
 <li>El cualificador indica la fuerza con que se afirma algo. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>El sesgo de confirmación encaja con la <a href="92-glosario.html#gl-argumentativa" class="glos" data-def="Propuesta de que razonamos sobre todo para producir y evaluar argumentos ante otros (Mercier y Sperber).">teoría argumentativa del razonamiento</a>. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
@@ -821,6 +961,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-hahn2007" class="csl-entry" role="listitem">
+Hahn, U., y Oaksford, M. (2007). <span>The rationality of informal argumentation: A Bayesian approach to reasoning fallacies</span>. <em>Psychological Review</em>, <em>114</em>(3), 704-732. <a href="https://doi.org/10.1037/0033-295X.114.3.704">https://doi.org/10.1037/0033-295X.114.3.704</a>
+</div>
+<div id="ref-mercier2011" class="csl-entry" role="listitem">
+Mercier, H., y Sperber, D. (2011). <span>Why do humans reason? Arguments for an argumentative theory</span>. <em>Behavioral and Brain Sciences</em>, <em>34</em>(2), 57-74. <a href="https://doi.org/10.1017/S0140525X10000968">https://doi.org/10.1017/S0140525X10000968</a>
+</div>
+<div id="ref-toulmin2003" class="csl-entry" role="listitem">
+Toulmin, S. E. (2003). <em><span>The uses of argument</span></em> (ed. actualizada). Cambridge University Press.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

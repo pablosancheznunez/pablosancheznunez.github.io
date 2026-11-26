@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -402,6 +422,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#el-enfoque-afirmación-evidencia" id="toc-el-enfoque-afirmación-evidencia" class="nav-link" data-scroll-target="#el-enfoque-afirmación-evidencia">2. El enfoque afirmación-evidencia</a></li>
   <li><a href="#estructurar-la-charla" id="toc-estructurar-la-charla" class="nav-link" data-scroll-target="#estructurar-la-charla">3. Estructurar la charla</a></li>
   <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#segundo-caso-práctico-resuelto" id="toc-segundo-caso-práctico-resuelto" class="nav-link" data-scroll-target="#segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</a></li>
   <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-c4" id="toc-reto-c4" class="nav-link" data-scroll-target="#reto-c4">Reto evaluable</a></li>
@@ -483,7 +504,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="diapositivas-para-cerebros-humanos" class="level2">
 <h2 class="anchored" data-anchor-id="diapositivas-para-cerebros-humanos">1. Diapositivas para cerebros humanos</h2>
-<p>Kosslyn et al.&nbsp;(2012) analizaron cientos de presentaciones y encontraron que la mayoría incumplía principios básicos de la psicología de la percepción, la memoria y la comprensión. Agrupan esos principios en tres objetivos:</p>
+<p><span class="citation" data-cites="kosslyn2012">Kosslyn et&nbsp;al. (<a href="#ref-kosslyn2012" role="doc-biblioref">2012</a>)</span> analizaron cientos de presentaciones y encontraron que la mayoría incumplía principios básicos de la psicología de la percepción, la memoria y la comprensión. Agrupan esos principios en tres objetivos:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -596,6 +617,161 @@ Figura&nbsp;1: De título-tema y viñetas a afirmación y evidencia: la misma in
 </div>
 </div>
 </section>
+<section id="segundo-caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Del guion a un tablero de diapositivas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un investigador tiene 15 minutos para presentar un artículo y 32 diapositivas. Reorganiza la charla con un tablero (<em>storyboard</em>) en el que cada diapositiva lleva una <strong>afirmación</strong> como título:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bloque</th>
+<th>Minutos</th>
+<th>Afirmaciones (títulos)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Problema</td>
+<td>2</td>
+<td>«Las métricas de impacto premian el volumen de citas, no su uso»</td>
+</tr>
+<tr class="even">
+<td>Pregunta</td>
+<td>1</td>
+<td>«¿Qué parte de las citas apoya realmente el resultado citado?»</td>
+</tr>
+<tr class="odd">
+<td>Método</td>
+<td>3</td>
+<td>«Clasificamos 2000 citas según su función en el texto»</td>
+</tr>
+<tr class="even">
+<td>Resultados</td>
+<td>6</td>
+<td>«Solo una de cada cinco citas usa el resultado» · «La proporción no depende de la revista» · «Las autocitas son las más superficiales»</td>
+</tr>
+<tr class="odd">
+<td>Implicaciones</td>
+<td>2</td>
+<td>«Contar citas no basta para evaluar»</td>
+</tr>
+<tr class="even">
+<td>Cierre</td>
+<td>1</td>
+<td>Repite la afirmación principal y deja una pregunta</td>
+</tr>
+</tbody>
+</table>
+<p>Pasa de 32 a 11 diapositivas. Las que desaparecen (detalles del método, tablas completas) van a un anexo para el <a href="92-glosario.html#gl-preguntas" class="glos" data-def="Parte de una charla en la que el público pregunta; se prepara como la charla.">turno de preguntas</a>.</p>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-c4-tablero" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-c4-tablero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 594.19 64.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 50.4)">
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-50.4 579.79,-50.4 579.79,14.4 -14.4,14.4"></polygon>
+<!-- p -->
+<g id="node1" class="node">
+<title>p</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M51.12,-36C51.12,-36 11.96,-36 11.96,-36 5.96,-36 -0.04,-30 -0.04,-24 -0.04,-24 -0.04,-12 -0.04,-12 -0.04,-6 5.96,0 11.96,0 11.96,0 51.12,0 51.12,0 57.12,0 63.12,-6 63.12,-12 63.12,-12 63.12,-24 63.12,-24 63.12,-30 57.12,-36 51.12,-36"></path>
+<text text-anchor="middle" x="31.54" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Problema</text>
+<text text-anchor="middle" x="31.54" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">2 min</text>
+</g>
+<!-- q -->
+<g id="node2" class="node">
+<title>q</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M147.55,-36C147.55,-36 111.25,-36 111.25,-36 105.25,-36 99.25,-30 99.25,-24 99.25,-24 99.25,-12 99.25,-12 99.25,-6 105.25,0 111.25,0 111.25,0 147.55,0 147.55,0 153.55,0 159.55,-6 159.55,-12 159.55,-12 159.55,-24 159.55,-24 159.55,-30 153.55,-36 147.55,-36"></path>
+<text text-anchor="middle" x="129.4" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Pregunta</text>
+<text text-anchor="middle" x="129.4" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">1 min</text>
+</g>
+<!-- p&#45;&gt;q -->
+<g id="edge1" class="edge">
+<title>p-&gt;q</title>
+<path fill="none" stroke="#45433f" d="M63.13,-18C71.31,-18 80.27,-18 88.86,-18"></path>
+<polygon fill="#45433f" stroke="#45433f" points="89.08,-21.5 99.08,-18 89.08,-14.5 89.08,-21.5"></polygon>
+</g>
+<!-- m -->
+<g id="node3" class="node">
+<title>m</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M237.72,-36C237.72,-36 207.72,-36 207.72,-36 201.72,-36 195.72,-30 195.72,-24 195.72,-24 195.72,-12 195.72,-12 195.72,-6 201.72,0 207.72,0 207.72,0 237.72,0 237.72,0 243.72,0 249.72,-6 249.72,-12 249.72,-12 249.72,-24 249.72,-24 249.72,-30 243.72,-36 237.72,-36"></path>
+<text text-anchor="middle" x="222.72" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Método</text>
+<text text-anchor="middle" x="222.72" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">3 min</text>
+</g>
+<!-- q&#45;&gt;m -->
+<g id="edge2" class="edge">
+<title>q-&gt;m</title>
+<path fill="none" stroke="#45433f" d="M159.55,-18C167.78,-18 176.85,-18 185.45,-18"></path>
+<polygon fill="#45433f" stroke="#45433f" points="185.63,-21.5 195.63,-18 185.63,-14.5 185.63,-21.5"></polygon>
+</g>
+<!-- r -->
+<g id="node4" class="node">
+<title>r</title>
+<path fill="#eaf6ef" stroke="#1a4d8f" d="M344.77,-36C344.77,-36 297.71,-36 297.71,-36 291.71,-36 285.71,-30 285.71,-24 285.71,-24 285.71,-12 285.71,-12 285.71,-6 291.71,0 297.71,0 297.71,0 344.77,0 344.77,0 350.77,0 356.77,-6 356.77,-12 356.77,-12 356.77,-24 356.77,-24 356.77,-30 350.77,-36 344.77,-36"></path>
+<text text-anchor="middle" x="321.24" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Resultados</text>
+<text text-anchor="middle" x="321.24" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">6 min</text>
+</g>
+<!-- m&#45;&gt;r -->
+<g id="edge3" class="edge">
+<title>m-&gt;r</title>
+<path fill="none" stroke="#45433f" d="M249.84,-18C257.71,-18 266.57,-18 275.29,-18"></path>
+<polygon fill="#45433f" stroke="#45433f" points="275.4,-21.5 285.4,-18 275.4,-14.5 275.4,-21.5"></polygon>
+</g>
+<!-- i -->
+<g id="node5" class="node">
+<title>i</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M463.21,-36C463.21,-36 404.93,-36 404.93,-36 398.93,-36 392.93,-30 392.93,-24 392.93,-24 392.93,-12 392.93,-12 392.93,-6 398.93,0 404.93,0 404.93,0 463.21,0 463.21,0 469.21,0 475.21,-6 475.21,-12 475.21,-12 475.21,-24 475.21,-24 475.21,-30 469.21,-36 463.21,-36"></path>
+<text text-anchor="middle" x="434.07" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Implicaciones</text>
+<text text-anchor="middle" x="434.07" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">2 min</text>
+</g>
+<!-- r&#45;&gt;i -->
+<g id="edge4" class="edge">
+<title>r-&gt;i</title>
+<path fill="none" stroke="#45433f" d="M357,-18C365.13,-18 373.94,-18 382.59,-18"></path>
+<polygon fill="#45433f" stroke="#45433f" points="382.62,-21.5 392.62,-18 382.62,-14.5 382.62,-21.5"></polygon>
+</g>
+<!-- c -->
+<g id="node6" class="node">
+<title>c</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M553.39,-36C553.39,-36 523.39,-36 523.39,-36 517.39,-36 511.39,-30 511.39,-24 511.39,-24 511.39,-12 511.39,-12 511.39,-6 517.39,0 523.39,0 523.39,0 553.39,0 553.39,0 559.39,0 565.39,-6 565.39,-12 565.39,-12 565.39,-24 565.39,-24 565.39,-30 559.39,-36 553.39,-36"></path>
+<text text-anchor="middle" x="538.39" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Cierre</text>
+<text text-anchor="middle" x="538.39" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">1 min</text>
+</g>
+<!-- i&#45;&gt;c -->
+<g id="edge5" class="edge">
+<title>i-&gt;c</title>
+<path fill="none" stroke="#45433f" d="M475.22,-18C483.72,-18 492.65,-18 501.01,-18"></path>
+<polygon fill="#45433f" stroke="#45433f" points="501.21,-21.5 511.21,-18 501.21,-14.5 501.21,-21.5"></polygon>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-c4-tablero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Estructura de una charla de 15 minutos con afirmaciones como títulos.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="ejercicios-graduados" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
 <p><strong>Básico.</strong> Convierte el título «Metodología» en un título afirmación para una charla.</p>
@@ -606,7 +782,7 @@ Figura&nbsp;1: De título-tema y viñetas a afirmación y evidencia: la misma in
 <p><strong>Avanzado.</strong> Rehaz tres diapositivas de una presentación tuya con el enfoque afirmación-evidencia y compáralas antes y después.</p>
 <div class="webex-solution">
 <button>Ver solución</button>
-<p>Documenta qué principio de Kosslyn et al.&nbsp;(2012) aplicas en cada cambio y comprueba la <a href="92-glosario.html#gl-legibilidad" class="glos" data-def="Facilidad de lectura de un texto; en español se estima, por ejemplo, con el índice de Fernández Huerta.">legibilidad</a> desde la última fila (tamaño mínimo de letra).</p>
+<p>Documenta qué principio de <span class="citation" data-cites="kosslyn2012">Kosslyn et&nbsp;al. (<a href="#ref-kosslyn2012" role="doc-biblioref">2012</a>)</span> aplicas en cada cambio y comprueba la <a href="92-glosario.html#gl-legibilidad" class="glos" data-def="Facilidad de lectura de un texto; en español se estima, por ejemplo, con el índice de Fernández Huerta.">legibilidad</a> desde la última fila (tamaño mínimo de letra).</p>
 </div>
 </section>
 <section id="actividades" class="level2">
@@ -630,7 +806,7 @@ Figura&nbsp;1: De título-tema y viñetas a afirmación y evidencia: la misma in
 <ol type="1">
 <li>Toma una presentación tuya reciente (o una de un congreso de tu campo).</li>
 <li>Rehaz <strong>cinco diapositivas</strong> con el enfoque afirmación-evidencia.</li>
-<li>Para cada una, explica qué principio de Kosslyn et al.&nbsp;(2012) aplicas.</li>
+<li>Para cada una, explica qué principio de <span class="citation" data-cites="kosslyn2012">Kosslyn et&nbsp;al. (<a href="#ref-kosslyn2012" role="doc-biblioref">2012</a>)</span> aplicas.</li>
 <li>Graba los dos minutos correspondientes con las nuevas diapositivas.</li>
 </ol>
 <p><strong>Entrega:</strong> las diapositivas antes y después, y el vídeo, con la <a href="plantillas/entrega_reto.qmd">plantilla de entrega</a>. Este reto <strong>no tiene solución en el libro</strong>.</p>
@@ -647,7 +823,7 @@ Figura&nbsp;1: De título-tema y viñetas a afirmación y evidencia: la misma in
 <li>La limitación de la memoria de trabajo se relaciona con la carga <input class="webex-solveme nospaces ignorecase" size="11" aria-label="Escribe tu respuesta" data-answer="[&quot;cognitiva&quot;]"></li>
 <li>Para una charla de 12 minutos, una regla razonable es <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">30 diapositivas</option><option value="answer">unas 10-12 diapositivas</option><option value="x">una sola diapositiva</option></select></li>
 <li>La última diapositiva debería mostrar <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">«¿Preguntas?»</option><option value="x">«Gracias»</option><option value="answer">el mensaje principal</option></select></li>
-<li>Kosslyn et al.&nbsp;(2012) encontraron que la mayoría de las presentaciones analizadas respetaban los principios psicológicos básicos. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
+<li><span class="citation" data-cites="kosslyn2012">Kosslyn et&nbsp;al. (<a href="#ref-kosslyn2012" role="doc-biblioref">2012</a>)</span> encontraron que la mayoría de las presentaciones analizadas respetaban los principios psicológicos básicos. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>Hacer que lo importante destaque por tamaño, color o posición aplica el principio de diferencias <input class="webex-solveme nospaces ignorecase" size="14" aria-label="Escribe tu respuesta" data-answer="[&quot;destacadas&quot;,&quot;perceptibles&quot;]"></li>
 <li>¿Qué conviene hacer antes de abrir el programa de diapositivas?</li>
 </ol>
@@ -668,6 +844,11 @@ Figura&nbsp;1: De título-tema y viñetas a afirmación y evidencia: la misma in
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-kosslyn2012" class="csl-entry" role="listitem">
+Kosslyn, S. M., Kievit, R. A., Russell, A. G., y Shephard, J. M. (2012). <span>PowerPoint® presentation flaws and failures: A psychological analysis</span>. <em>Frontiers in Psychology</em>, <em>3</em>, 230. <a href="https://doi.org/10.3389/fpsyg.2012.00230">https://doi.org/10.3389/fpsyg.2012.00230</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -441,6 +461,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#lab-c3-abt" id="toc-lab-c3-abt" class="nav-link" data-scroll-target="#lab-c3-abt">Laboratorio: tu mensaje en ABT</a></li>
   <li><a href="#encuadre-el-mismo-dato-distinto-significado" id="toc-encuadre-el-mismo-dato-distinto-significado" class="nav-link" data-scroll-target="#encuadre-el-mismo-dato-distinto-significado">4. Encuadre: el mismo dato, distinto significado</a></li>
   <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#segundo-caso-práctico-resuelto" id="toc-segundo-caso-práctico-resuelto" class="nav-link" data-scroll-target="#segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</a></li>
   <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-c3" id="toc-reto-c3" class="nav-link" data-scroll-target="#reto-c3">Reto evaluable</a></li>
@@ -522,13 +543,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Petty, R. E.; Cacioppo, J. T. (1986). <a href="https://doi.org/10.1016/S0065-2601(08)60214-2">The elaboration likelihood model of persuasion</a>. <em>Advances in Experimental Social Psychology</em>, 19, 123-205.</li>
+<li><span class="citation" data-cites="petty1986">Petty y Cacioppo (<a href="#ref-petty1986" role="doc-biblioref">1986</a>)</span> — 60214-2). <em>Advances in Experimental Social Psychology</em>, 19, 123-205.</li>
 </ul>
 </section>
 </section>
 <section id="dos-rutas-hacia-el-cambio-de-actitud" class="level2">
 <h2 class="anchored" data-anchor-id="dos-rutas-hacia-el-cambio-de-actitud">1. Dos rutas hacia el cambio de actitud</h2>
-<p>El <strong>modelo de probabilidad de elaboración</strong> (Petty y Cacioppo, 1986) distingue dos rutas:</p>
+<p>El <strong>modelo de probabilidad de elaboración</strong> <span class="citation" data-cites="petty1986">(<a href="#ref-petty1986" role="doc-biblioref">Petty y Cacioppo, 1986</a>)</span> distingue dos rutas:</p>
 <ul>
 <li><a href="92-glosario.html#gl-rutas" class="glos" data-def="Central: se evalúan los argumentos. Periférica: se responde a señales superficiales."><strong>Ruta central</strong></a>: la persona está motivada y es capaz de pensar en el mensaje; evalúa la calidad de los <a href="92-glosario.html#gl-argumento" class="glos" data-def="Conjunto de razones que apoyan una afirmación.">argumentos</a>. Los cambios por esta ruta son <strong>más duraderos</strong> y resistentes.</li>
 <li><strong>Ruta periférica</strong>: la persona no puede o no quiere elaborar; responde a señales superficiales (prestigio de la fuente, número de argumentos, atractivo, consenso aparente). Los cambios son más frágiles.</li>
@@ -537,7 +558,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="por-qué-funcionan-los-relatos" class="level2">
 <h2 class="anchored" data-anchor-id="por-qué-funcionan-los-relatos">2. Por qué funcionan los relatos</h2>
-<p>Dahlstrom (2014) resume la investigación sobre narrativa en comunicación científica: frente a los textos expositivos, las narraciones se <strong>comprenden</strong> más fácilmente, se <strong>recuerdan</strong> mejor y resultan más <strong>atractivas</strong> para el público no especialista. Una narrativa tiene personajes, una secuencia causal y un desenlace; transforma datos aislados en una historia con sentido.</p>
+<p><span class="citation" data-cites="dahlstrom2014">Dahlstrom (<a href="#ref-dahlstrom2014" role="doc-biblioref">2014</a>)</span> resume la investigación sobre narrativa en comunicación científica: frente a los textos expositivos, las narraciones se <strong>comprenden</strong> más fácilmente, se <strong>recuerdan</strong> mejor y resultan más <strong>atractivas</strong> para el público no especialista. Una narrativa tiene personajes, una secuencia causal y un desenlace; transforma datos aislados en una historia con sentido.</p>
 <p>Plantea también tres preguntas éticas que conviene hacerse antes de usarla:</p>
 <ol type="1">
 <li><strong>¿Para qué?</strong> ¿Para ayudar a comprender o para persuadir de una postura?</li>
@@ -629,6 +650,120 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
+<section id="segundo-caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>El mismo dato, tres encuadres
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un grupo ha encontrado que el 30 % de los artículos de su campo no comparte los datos pese a declarar que están disponibles. Prepara el mismo hallazgo para tres públicos:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Público</th>
+<th>Encuadre</th>
+<th>Frase</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Comité de la revista</td>
+<td><strong>Calidad</strong></td>
+<td>«Casi uno de cada tres artículos incumple su propia declaración de disponibilidad: es un problema de verificación editorial.»</td>
+</tr>
+<tr class="even">
+<td>Investigadores del área</td>
+<td><strong>Oportunidad</strong></td>
+<td>«Siete de cada diez ya comparten; cumplir es más fácil de lo que parece, y aumenta la reutilización.»</td>
+</tr>
+<tr class="odd">
+<td>Agencia financiadora</td>
+<td><strong>Rendición de cuentas</strong></td>
+<td>«Una parte de los datos financiados con fondos públicos no es accesible pese a estar comprometida.»</td>
+</tr>
+</tbody>
+</table>
+<p>Los tres encuadres son honestos y parten del mismo dato. Lo que cambia es qué consecuencia se destaca según lo que el público puede hacer. Un encuadre deja de ser legítimo cuando oculta el dato o lo distorsiona.</p>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-c3-encuadres" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-c3-encuadres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 316.93 172.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 158.4)">
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-158.4 302.53,-158.4 302.53,14.4 -14.4,14.4"></polygon>
+<!-- d -->
+<g id="node1" class="node">
+<title>d</title>
+<path fill="#fff7e0" stroke="#1a4d8f" d="M122.43,-90C122.43,-90 12.19,-90 12.19,-90 6.19,-90 0.19,-84 0.19,-78 0.19,-78 0.19,-66 0.19,-66 0.19,-60 6.19,-54 12.19,-54 12.19,-54 122.43,-54 122.43,-54 128.43,-54 134.43,-60 134.43,-66 134.43,-66 134.43,-78 134.43,-78 134.43,-84 128.43,-90 122.43,-90"></path>
+<text text-anchor="middle" x="67.31" y="-75.3" font-family="Helvetica,sans-Serif" font-size="11.00">Dato: 30 % no comparte</text>
+<text text-anchor="middle" x="67.31" y="-62.1" font-family="Helvetica,sans-Serif" font-size="11.00">pese a declararlo</text>
+</g>
+<!-- r -->
+<g id="node2" class="node">
+<title>r</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M244.37,-144C244.37,-144 214.37,-144 214.37,-144 208.37,-144 202.37,-138 202.37,-132 202.37,-132 202.37,-120 202.37,-120 202.37,-114 208.37,-108 214.37,-108 214.37,-108 244.37,-108 244.37,-108 250.37,-108 256.37,-114 256.37,-120 256.37,-120 256.37,-132 256.37,-132 256.37,-138 250.37,-144 244.37,-144"></path>
+<text text-anchor="middle" x="229.37" y="-129.3" font-family="Helvetica,sans-Serif" font-size="11.00">Revista</text>
+<text text-anchor="middle" x="229.37" y="-116.1" font-family="Helvetica,sans-Serif" font-size="11.00">calidad</text>
+</g>
+<!-- d&#45;&gt;r -->
+<g id="edge1" class="edge">
+<title>d-&gt;r</title>
+<path fill="none" stroke="#45433f" d="M122.05,-90.13C145.31,-97.98 171.9,-106.95 192.68,-113.96"></path>
+<polygon fill="#45433f" stroke="#45433f" points="191.77,-117.34 202.36,-117.22 194.01,-110.71 191.77,-117.34"></polygon>
+</g>
+<!-- i -->
+<g id="node3" class="node">
+<title>i</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M260.92,-90C260.92,-90 197.83,-90 197.83,-90 191.83,-90 185.83,-84 185.83,-78 185.83,-78 185.83,-66 185.83,-66 185.83,-60 191.83,-54 197.83,-54 197.83,-54 260.92,-54 260.92,-54 266.92,-54 272.92,-60 272.92,-66 272.92,-66 272.92,-78 272.92,-78 272.92,-84 266.92,-90 260.92,-90"></path>
+<text text-anchor="middle" x="229.37" y="-75.3" font-family="Helvetica,sans-Serif" font-size="11.00">Investigadores</text>
+<text text-anchor="middle" x="229.37" y="-62.1" font-family="Helvetica,sans-Serif" font-size="11.00">oportunidad</text>
+</g>
+<!-- d&#45;&gt;i -->
+<g id="edge2" class="edge">
+<title>d-&gt;i</title>
+<path fill="none" stroke="#45433f" d="M134.8,-72C148.36,-72 162.45,-72 175.45,-72"></path>
+<polygon fill="#45433f" stroke="#45433f" points="175.62,-75.5 185.62,-72 175.62,-68.5 175.62,-75.5"></polygon>
+</g>
+<!-- a -->
+<g id="node4" class="node">
+<title>a</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M275.88,-36C275.88,-36 182.87,-36 182.87,-36 176.87,-36 170.87,-30 170.87,-24 170.87,-24 170.87,-12 170.87,-12 170.87,-6 176.87,0 182.87,0 182.87,0 275.88,0 275.88,0 281.88,0 287.88,-6 287.88,-12 287.88,-12 287.88,-24 287.88,-24 287.88,-30 281.88,-36 275.88,-36"></path>
+<text text-anchor="middle" x="229.37" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Agencia</text>
+<text text-anchor="middle" x="229.37" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">rendición de cuentas</text>
+</g>
+<!-- d&#45;&gt;a -->
+<g id="edge3" class="edge">
+<title>d-&gt;a</title>
+<path fill="none" stroke="#45433f" d="M122.05,-53.87C135.85,-49.21 150.83,-44.16 165.06,-39.36"></path>
+<polygon fill="#45433f" stroke="#45433f" points="166.42,-42.6 174.77,-36.08 164.18,-35.96 166.42,-42.6"></polygon>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-c3-encuadres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Un dato, tres encuadres según el público y lo que puede hacer.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="ejercicios-graduados" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
 <p><strong>Básico.</strong> Convierte en ABT: «Analizamos 300 conjuntos de datos abiertos y encontramos errores de calidad».</p>
@@ -646,7 +781,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
 <div class="ia ia-clasificar" id="ia-c3-rutas"><script type="application/json" class="ia-datos">{"categorias":["Ruta central","Ruta periférica"],"enunciado":"","explicacion":"","items":[{"categoria":"Ruta central","explicacion":"","texto":"El panel evalúa la solidez del diseño experimental de la\npropuesta"},{"categoria":"Ruta periférica","explicacion":"","texto":"Un lector se convence porque el artículo está en una revista\nprestigiosa"},{"categoria":"Ruta periférica","explicacion":"","texto":"Un oyente se fija en que la ponente habla con mucha seguridad"},{"categoria":"Ruta central","explicacion":"","texto":"Una revisora comprueba si las conclusiones se siguen de los\nresultados"},{"categoria":"Ruta periférica","explicacion":"Número de argumentos, no su calidad.","texto":"Un público se deja llevar por la cantidad de diapositivas con\ndatos"}],"tipo":"clasificar","titulo":"¿Ruta central o periférica?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 <div class="ia ia-clasificar" id="ia-c3-abt"><script type="application/json" class="ia-datos">{"categorias":["Y, pero, por tanto","Y, y, y","Pero, pero, pero"],"enunciado":"","explicacion":"","items":[{"categoria":"Y, pero, por tanto","explicacion":"","texto":"«Las abejas polinizan un tercio de los cultivos, pero sus poblaciones\ncaen; por tanto, estudiamos qué pesticidas las afectan más»"},{"categoria":"Y, y, y","explicacion":"","texto":"«Nuestro grupo estudia las abejas, y usa sensores, y además tiene\ncolaboraciones internacionales»"},{"categoria":"Pero, pero, pero","explicacion":"","texto":"«Las abejas disminuyen, pero los datos son escasos, pero además los\nmodelos fallan, pero no hay financiación»"}],"tipo":"clasificar","titulo":"¿Qué estructura tiene?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
-<div class="ia ia-clasificar" id="ia-c3-etica"><script type="application/json" class="ia-datos">{"categorias":["Responsable","Problemático"],"enunciado":"","explicacion":"","items":[{"categoria":"Responsable","explicacion":"","texto":"Contar la historia de una paciente típica del ensayo, con su permiso,\ny dar después los datos de todos"},{"categoria":"Problemático","explicacion":"Caso no representativo.","texto":"Elegir el único caso espectacular para sugerir que el tratamiento\nsiempre funciona"},{"categoria":"Responsable","explicacion":"","texto":"Explicar un método de laboratorio como un relato de detectives para\nestudiantes de secundaria"},{"categoria":"Problemático","explicacion":"","texto":"Inventar un testimonio para una nota de prensa"}],"tipo":"clasificar","titulo":"¿Uso responsable de la narrativa? (Dahlstrom, 2014)"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-c3-etica"><script type="application/json" class="ia-datos">{"categorias":["Responsable","Problemático"],"enunciado":"","explicacion":"","items":[{"categoria":"Responsable","explicacion":"","texto":"Contar la historia de una paciente típica del ensayo, con su permiso,\ny dar después los datos de todos"},{"categoria":"Problemático","explicacion":"Caso no representativo.","texto":"Elegir el único caso espectacular para sugerir que el tratamiento\nsiempre funciona"},{"categoria":"Responsable","explicacion":"","texto":"Explicar un método de laboratorio como un relato de detectives para\nestudiantes de secundaria"},{"categoria":"Problemático","explicacion":"","texto":"Inventar un testimonio para una nota de prensa"}],"tipo":"clasificar","titulo":"¿Uso responsable de la narrativa? [@dahlstrom2014]"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-c3" class="level2">
 <h2 class="anchored" data-anchor-id="reto-c3">Reto evaluable</h2>
@@ -677,7 +812,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>Según el modelo de probabilidad de elaboración, los cambios por la ruta central son más duraderos. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>Fiarse de un argumento por el prestigio de quien lo dice es un ejemplo de ruta <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">central</option><option value="answer">periférica</option></select></li>
-<li>Según Dahlstrom (2014), las narraciones se recuerdan mejor que los textos expositivos. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
+<li>Según <span class="citation" data-cites="dahlstrom2014">Dahlstrom (<a href="#ref-dahlstrom2014" role="doc-biblioref">2014</a>)</span>, las narraciones se recuerdan mejor que los textos expositivos. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>En la estructura ABT, la letra B corresponde a <input class="webex-solveme nospaces ignorecase" size="6" aria-label="Escribe tu respuesta" data-answer="[&quot;pero&quot;,&quot;but&quot;]"></li>
 <li>Una lista de hechos sin tensión tiene la estructura <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">Y, pero, por tanto</option><option value="answer">Y, y, y</option><option value="x">Pero, pero, pero</option></select></li>
 <li>Presentar «90 % de supervivencia» en lugar de «10 % de mortalidad» es un ejemplo de <input class="webex-solveme nospaces ignorecase" size="10" aria-label="Escribe tu respuesta" data-answer="[&quot;encuadre&quot;,&quot;framing&quot;]"></li>
@@ -701,6 +836,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-dahlstrom2014" class="csl-entry" role="listitem">
+Dahlstrom, M. F. (2014). <span>Using narratives and storytelling to communicate science with nonexpert audiences</span>. <em>PNAS</em>, <em>111</em>(supl. 4), 13614-13620. <a href="https://doi.org/10.1073/pnas.1320645111">https://doi.org/10.1073/pnas.1320645111</a>
+</div>
+<div id="ref-petty1986" class="csl-entry" role="listitem">
+Petty, R. E., y Cacioppo, J. T. (1986). <em><span>The elaboration likelihood model of persuasion</span></em>. <a href="https://doi.org/10.1016/S0065-2601(08">https://doi.org/10.1016/S0065-2601(08</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

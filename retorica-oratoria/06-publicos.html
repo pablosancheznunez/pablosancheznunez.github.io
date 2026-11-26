@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -402,6 +422,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#debatir" id="toc-debatir" class="nav-link" data-scroll-target="#debatir">2. Debatir</a></li>
   <li><a href="#comunicar-con-públicos-no-especialistas" id="toc-comunicar-con-públicos-no-especialistas" class="nav-link" data-scroll-target="#comunicar-con-públicos-no-especialistas">3. Comunicar con públicos no especialistas</a></li>
   <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#segundo-caso-práctico-resuelto" id="toc-segundo-caso-práctico-resuelto" class="nav-link" data-scroll-target="#segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</a></li>
   <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-c6" id="toc-reto-c6" class="nav-link" data-scroll-target="#reto-c6">Reto evaluable</a></li>
@@ -483,7 +504,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Nisbet, M. C.; Scheufele, D. A. (2009). <a href="https://doi.org/10.3732/ajb.0900041">What’s next for science communication? Promising directions and lingering distractions</a>. <em>American Journal of Botany</em>, 96(10), 1767-1778.</li>
+<li><span class="citation" data-cites="nisbet2009">Nisbet y Scheufele (<a href="#ref-nisbet2009" role="doc-biblioref">2009</a>)</span></li>
 </ul>
 </section>
 </section>
@@ -511,8 +532,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="comunicar-con-públicos-no-especialistas" class="level2">
 <h2 class="anchored" data-anchor-id="comunicar-con-públicos-no-especialistas">3. Comunicar con públicos no especialistas</h2>
-<p>Fischhoff (2013) defiende que la comunicación científica también debe basarse en la ciencia: <strong>estudiar qué necesita saber el público</strong> para tomar sus decisiones, en lugar de suponerlo. Propone cuatro pasos: identificar la información relevante para las decisiones de la gente, averiguar qué saben ya (y qué creen erróneamente), diseñar mensajes que cubran esa distancia y <strong>comprobar</strong> que funcionan.</p>
-<p>Nisbet y Scheufele (2009) critican el <a href="92-glosario.html#gl-deficit" class="glos" data-def="Idea de que el público discrepa de la ciencia solo por falta de información."><strong>modelo de déficit</strong></a>, la idea de que el público desconfía o discrepa por falta de información y que basta con darle más datos. La evidencia muestra que los valores, la identidad y la confianza pesan tanto como el conocimiento. Proponen modelos de <strong>diálogo y participación</strong>, en los que la comunicación es bidireccional.</p>
+<p><span class="citation" data-cites="fischhoff2013">Fischhoff (<a href="#ref-fischhoff2013" role="doc-biblioref">2013</a>)</span> defiende que la comunicación científica también debe basarse en la ciencia: <strong>estudiar qué necesita saber el público</strong> para tomar sus decisiones, en lugar de suponerlo. Propone cuatro pasos: identificar la información relevante para las decisiones de la gente, averiguar qué saben ya (y qué creen erróneamente), diseñar mensajes que cubran esa distancia y <strong>comprobar</strong> que funcionan.</p>
+<p><span class="citation" data-cites="nisbet2009">Nisbet y Scheufele (<a href="#ref-nisbet2009" role="doc-biblioref">2009</a>)</span> critican el <a href="92-glosario.html#gl-deficit" class="glos" data-def="Idea de que el público discrepa de la ciencia solo por falta de información."><strong>modelo de déficit</strong></a>, la idea de que el público desconfía o discrepa por falta de información y que basta con darle más datos. La evidencia muestra que los valores, la identidad y la confianza pesan tanto como el conocimiento. Proponen modelos de <strong>diálogo y participación</strong>, en los que la comunicación es bidireccional.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -569,6 +590,120 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
+<section id="segundo-caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Explicar un resultado a tres niveles
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un investigador debe explicar que un tratamiento redujo el riesgo de un efecto adverso del 4 % al 3 %. Prepara la misma idea para tres públicos, con la técnica de empezar por la conclusión:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Público</th>
+<th>Mensaje</th>
+<th>Qué añade o quita</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Especialistas</td>
+<td>«Reducción absoluta del riesgo de 1 punto; riesgo relativo de 0,75, con su intervalo de confianza»</td>
+<td>Todo el detalle estadístico</td>
+</tr>
+<tr class="even">
+<td>Profesionales de otra área</td>
+<td>«Una de cada cuatro complicaciones se evita; hay que tratar a unas cien personas para evitar una.»</td>
+<td>Número necesario a tratar en lugar de razón de riesgos</td>
+</tr>
+<tr class="odd">
+<td>Público general</td>
+<td>«De cada cien personas tratadas, una se libra de la complicación; las otras 99 no notan diferencia en esto.»</td>
+<td>Frecuencias naturales; sin porcentajes relativos</td>
+</tr>
+</tbody>
+</table>
+<p>El error frecuente es comunicar solo la <strong>reducción relativa</strong> («un 25 % menos»), que es correcta pero suena mucho mayor que la absoluta. Con públicos no especialistas, las frecuencias naturales (de cada cien personas…) se entienden mejor.</p>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-c6-niveles" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-c6-niveles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 225.81 172.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 158.4)">
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-158.4 211.41,-158.4 211.41,14.4 -14.4,14.4"></polygon>
+<!-- d -->
+<g id="node1" class="node">
+<title>d</title>
+<path fill="#fff7e0" stroke="#1a4d8f" d="M57.29,-90C57.29,-90 11.9,-90 11.9,-90 5.9,-90 -0.1,-84 -0.1,-78 -0.1,-78 -0.1,-66 -0.1,-66 -0.1,-60 5.9,-54 11.9,-54 11.9,-54 57.29,-54 57.29,-54 63.29,-54 69.29,-60 69.29,-66 69.29,-66 69.29,-78 69.29,-78 69.29,-84 63.29,-90 57.29,-90"></path>
+<text text-anchor="middle" x="34.59" y="-75.3" font-family="Helvetica,sans-Serif" font-size="11.00">Resultado:</text>
+<text text-anchor="middle" x="34.59" y="-62.1" font-family="Helvetica,sans-Serif" font-size="11.00">4 % → 3 %</text>
+</g>
+<!-- e -->
+<g id="node2" class="node">
+<title>e</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M179.3,-144C179.3,-144 122.91,-144 122.91,-144 116.91,-144 110.91,-138 110.91,-132 110.91,-132 110.91,-120 110.91,-120 110.91,-114 116.91,-108 122.91,-108 122.91,-108 179.3,-108 179.3,-108 185.3,-108 191.3,-114 191.3,-120 191.3,-120 191.3,-132 191.3,-132 191.3,-138 185.3,-144 179.3,-144"></path>
+<text text-anchor="middle" x="151.1" y="-129.3" font-family="Helvetica,sans-Serif" font-size="11.00">Especialistas</text>
+<text text-anchor="middle" x="151.1" y="-116.1" font-family="Helvetica,sans-Serif" font-size="11.00">RR e IC</text>
+</g>
+<!-- d&#45;&gt;e -->
+<g id="edge1" class="edge">
+<title>d-&gt;e</title>
+<path fill="none" stroke="#45433f" d="M69.33,-87.91C79.74,-92.82 91.41,-98.32 102.57,-103.58"></path>
+<polygon fill="#45433f" stroke="#45433f" points="101.25,-106.83 111.78,-107.93 104.23,-100.5 101.25,-106.83"></polygon>
+</g>
+<!-- p -->
+<g id="node3" class="node">
+<title>p</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M180.25,-90C180.25,-90 121.95,-90 121.95,-90 115.95,-90 109.95,-84 109.95,-78 109.95,-78 109.95,-66 109.95,-66 109.95,-60 115.95,-54 121.95,-54 121.95,-54 180.25,-54 180.25,-54 186.25,-54 192.25,-60 192.25,-66 192.25,-66 192.25,-78 192.25,-78 192.25,-84 186.25,-90 180.25,-90"></path>
+<text text-anchor="middle" x="151.1" y="-75.3" font-family="Helvetica,sans-Serif" font-size="11.00">Profesionales</text>
+<text text-anchor="middle" x="151.1" y="-62.1" font-family="Helvetica,sans-Serif" font-size="11.00">NNT ≈ 100</text>
+</g>
+<!-- d&#45;&gt;p -->
+<g id="edge2" class="edge">
+<title>d-&gt;p</title>
+<path fill="none" stroke="#45433f" d="M69.33,-72C78.83,-72 89.38,-72 99.63,-72"></path>
+<polygon fill="#45433f" stroke="#45433f" points="99.73,-75.5 109.73,-72 99.73,-68.5 99.73,-75.5"></polygon>
+</g>
+<!-- g -->
+<g id="node4" class="node">
+<title>g</title>
+<path fill="#eaf6ef" stroke="#1a4d8f" d="M184.93,-36C184.93,-36 117.28,-36 117.28,-36 111.28,-36 105.28,-30 105.28,-24 105.28,-24 105.28,-12 105.28,-12 105.28,-6 111.28,0 117.28,0 117.28,0 184.93,0 184.93,0 190.93,0 196.93,-6 196.93,-12 196.93,-12 196.93,-24 196.93,-24 196.93,-30 190.93,-36 184.93,-36"></path>
+<text text-anchor="middle" x="151.1" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Público general</text>
+<text text-anchor="middle" x="151.1" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">1 de cada 100</text>
+</g>
+<!-- d&#45;&gt;g -->
+<g id="edge3" class="edge">
+<title>d-&gt;g</title>
+<path fill="none" stroke="#45433f" d="M69.33,-56.09C79.74,-51.18 91.41,-45.68 102.57,-40.42"></path>
+<polygon fill="#45433f" stroke="#45433f" points="104.23,-43.5 111.78,-36.07 101.25,-37.17 104.23,-43.5"></polygon>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-c6-niveles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Un mismo resultado contado a tres públicos.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="ejercicios-graduados" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
 <p><strong>Básico.</strong> Redondea con contexto: «El 23,4 % de los encuestados declaró…».</p>
@@ -601,7 +736,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Identifica un <strong>público no especialista</strong> al que afecte tu investigación y, siguiendo a Fischhoff (2013), entrevista a dos personas de ese público: ¿qué saben, qué creen y qué les importa?</li>
+<li>Identifica un <strong>público no especialista</strong> al que afecte tu investigación y, siguiendo a <span class="citation" data-cites="fischhoff2013">Fischhoff (<a href="#ref-fischhoff2013" role="doc-biblioref">2013</a>)</span>, entrevista a dos personas de ese público: ¿qué saben, qué creen y qué les importa?</li>
 <li>Prepara <strong>tres mensajes clave</strong> y una explicación de la incertidumbre en lenguaje llano.</li>
 <li>Elige un formato (artículo divulgativo de 700 palabras, hilo, pódcast de 5 minutos, nota para responsables políticos) y produce la pieza.</li>
 <li>Simula una entrevista con un compañero que haga de periodista y anota qué preguntas te costaron.</li>
@@ -617,7 +752,7 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Ante una pregunta que no sabes responder, lo más honesto es reconocerlo y ofrecer cómo averiguarlo. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>La idea de que el público discrepa solo por falta de información es el modelo de <input class="webex-solveme nospaces ignorecase" size="10" aria-label="Escribe tu respuesta" data-answer="[&quot;déficit&quot;,&quot;deficit&quot;]"></li>
-<li>Según Fischhoff (2013), la comunicación científica debe <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">basarse en la intuición del investigador</option><option value="answer">estudiar empíricamente qué necesita saber el público y comprobar si los mensajes funcionan</option><option value="x">limitarse a publicar más datos</option></select></li>
+<li>Según <span class="citation" data-cites="fischhoff2013">Fischhoff (<a href="#ref-fischhoff2013" role="doc-biblioref">2013</a>)</span>, la comunicación científica debe <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">basarse en la intuición del investigador</option><option value="answer">estudiar empíricamente qué necesita saber el público y comprobar si los mensajes funcionan</option><option value="x">limitarse a publicar más datos</option></select></li>
 <li>Representar la postura contraria en su mejor versión antes de criticarla refuerza el debate. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>Comunicar la incertidumbre siempre hace que el público confíe menos. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>Ante un periodista conviene llevar preparados unos tres mensajes <input class="webex-solveme nospaces ignorecase" size="7" aria-label="Escribe tu respuesta" data-answer="[&quot;clave&quot;]"></li>
@@ -636,11 +771,19 @@ ul.task-list li input[type="checkbox"] {
 <li>Bien explicada, puede aumentarla.</li>
 <li>Preparados y breves.</li>
 <li>El tono no se discute.</li>
-<li>Nisbet y Scheufele (2009).</li>
+<li><span class="citation" data-cites="nisbet2009">Nisbet y Scheufele (<a href="#ref-nisbet2009" role="doc-biblioref">2009</a>)</span></li>
 </ul>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-fischhoff2013" class="csl-entry" role="listitem">
+Fischhoff, B. (2013). <span>The sciences of science communication</span>. <em>PNAS</em>, <em>110</em>(supl. 3), 14033-14039. <a href="https://doi.org/10.1073/pnas.1213273110">https://doi.org/10.1073/pnas.1213273110</a>
+</div>
+<div id="ref-nisbet2009" class="csl-entry" role="listitem">
+Nisbet, M. C., y Scheufele, D. A. (2009). <span>What’s next for science communication? Promising directions and lingering distractions</span>. <em>American Journal of Botany</em>, <em>96</em>(10), 1767-1778. <a href="https://doi.org/10.3732/ajb.0900041">https://doi.org/10.3732/ajb.0900041</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
