@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -580,7 +600,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="api-académicas-abiertas" class="level2">
 <h2 class="anchored" data-anchor-id="api-académicas-abiertas">2. API académicas abiertas</h2>
 <ul>
-<li><strong>OpenAlex</strong> (Priem et al., 2022): índice abierto (CC0) de trabajos, autores, fuentes, instituciones y temas, con una API gratuita. Sustituto abierto de las bases de datos comerciales para muchos análisis bibliométricos.</li>
+<li><strong>OpenAlex</strong> <span class="citation" data-cites="priem2022">(<a href="#ref-priem2022" role="doc-biblioref">Priem et&nbsp;al., 2022</a>)</span>: índice abierto (CC0) de trabajos, autores, fuentes, instituciones y temas, con una API gratuita. Sustituto abierto de las bases de datos comerciales para muchos análisis bibliométricos.</li>
 <li><strong>Crossref</strong>: metadatos de los DOI registrados por las editoriales, incluidas las referencias y las financiaciones cuando se depositan.</li>
 <li><strong>ORCID</strong>, <strong>DataCite</strong> (DOI de datos y software), <strong>Europe PMC</strong>, <strong>arXiv</strong>, <strong>Zenodo</strong>…</li>
 </ul>
@@ -965,6 +985,11 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC03IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9wdWJsaWNhY2lvbmVzLmNzdiIsImRhdG9zL29wZW5hbGV4X211ZXN0cmEuanNvbiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-priem2022" class="csl-entry" role="listitem">
+Priem, J., Piwowar, H., y Orr, R. (2022). <span>OpenAlex: A fully-open index of scholarly works, authors, venues, institutions, and concepts</span>. <em>arXiv</em>, <em>2205</em>. <a href="https://doi.org/10.48550/arXiv.2205.01833">https://doi.org/10.48550/arXiv.2205.01833</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

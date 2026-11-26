@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -551,7 +571,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZGVm
 </section>
 <section id="datos-tabulares-con-pandas" class="level2">
 <h2 class="anchored" data-anchor-id="datos-tabulares-con-pandas">2. Datos tabulares con pandas</h2>
-<p><strong>pandas</strong> organiza los datos en un <a href="92-glosario.html#gl-dataframe" class="glos" data-def="Tabla de datos con columnas de distinto tipo (pandas en Python, data.frame en R)."><strong>DataFrame</strong></a>: una tabla con columnas de distinto tipo, parecida a un <code>data.frame</code> de R. Sus operaciones están <strong>vectorizadas</strong>: se aplican a columnas enteras sin escribir bucles, lo que es más claro y más rápido. Esa idea viene de la programación con matrices que Harris et al.&nbsp;(2020) describen para NumPy, la base sobre la que se construye pandas.</p>
+<p><strong>pandas</strong> organiza los datos en un <a href="92-glosario.html#gl-dataframe" class="glos" data-def="Tabla de datos con columnas de distinto tipo (pandas en Python, data.frame en R)."><strong>DataFrame</strong></a>: una tabla con columnas de distinto tipo, parecida a un <code>data.frame</code> de R. Sus operaciones están <strong>vectorizadas</strong>: se aplican a columnas enteras sin escribir bucles, lo que es más claro y más rápido. Esa idea viene de la programación con matrices que 1 describen para NumPy, la base sobre la que se construye pandas.</p>
 <div>
 <div id="pyodide-3" class="exercise-cell">
 
@@ -740,9 +760,11 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InAy
 <li>Entre triples comillas.</li>
 <li>Más claro y más rápido.</li>
 <li><em>Not a Number</em>.</li>
-<li>Harris et al.&nbsp;(2020).</li>
+<li><ol class="example" type="1">
+<li></li>
+</ol></li>
 <li><em>List comprehension</em>.</li>
-<li>No repetir código (Wilson et al., 2017).</li>
+<li>No repetir código <span class="citation" data-cites="wilson2017">(<a href="#ref-wilson2017" role="doc-biblioref">Wilson et&nbsp;al., 2017</a>)</span>.</li>
 </ul>
 </div>
 
@@ -764,6 +786,11 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTEwIiwiaW5saW5lIjpmYWxzZSwibWV0aG9k
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9wdWJsaWNhY2lvbmVzLmNzdiIsImRhdG9zL29wZW5hbGV4X211ZXN0cmEuanNvbiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-wilson2017" class="csl-entry" role="listitem">
+Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., y Teal, T. K. (2017). <span>Good enough practices in scientific computing</span>. <em>PLOS Computational Biology</em>, <em>13</em>(6), e1005510. <a href="https://doi.org/10.1371/journal.pcbi.1005510">https://doi.org/10.1371/journal.pcbi.1005510</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

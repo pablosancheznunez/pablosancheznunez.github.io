@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -559,7 +579,7 @@ Figura&nbsp;1: Un proceso ETL: de fuentes heterogéneas a una tabla limpia y doc
 </section>
 <section id="datos-tidy" class="level2">
 <h2 class="anchored" data-anchor-id="datos-tidy">2. Datos tidy</h2>
-<p>Wickham (2014) define los <a href="92-glosario.html#gl-tidy" class="glos" data-def="Datos en los que cada variable es una columna, cada observación una fila y cada unidad una tabla."><strong>datos tidy</strong></a> (ordenados) con tres reglas: cada <strong>variable</strong> es una columna, cada <strong>observación</strong> es una fila y cada tipo de unidad observacional es una tabla. Muchos problemas de los datos reales violan esas reglas: varios autores en una celda, años en columnas, unidades mezcladas. En <code>publicaciones.csv</code>, la columna <code>autores</code> contiene varios valores en una celda; para analizar la autoría habría que <strong>separarla</strong> en una tabla aparte (una fila por artículo y autor).</p>
+<p><span class="citation" data-cites="wickham2014">Wickham (<a href="#ref-wickham2014" role="doc-biblioref">2014</a>)</span> define los <a href="92-glosario.html#gl-tidy" class="glos" data-def="Datos en los que cada variable es una columna, cada observación una fila y cada unidad una tabla."><strong>datos tidy</strong></a> (ordenados) con tres reglas: cada <strong>variable</strong> es una columna, cada <strong>observación</strong> es una fila y cada tipo de unidad observacional es una tabla. Muchos problemas de los datos reales violan esas reglas: varios autores en una celda, años en columnas, unidades mezcladas. En <code>publicaciones.csv</code>, la columna <code>autores</code> contiene varios valores en una celda; para analizar la autoría habría que <strong>separarla</strong> en una tabla aparte (una fila por artículo y autor).</p>
 </section>
 <section id="transformar-los-problemas-típicos" class="level2">
 <h2 class="anchored" data-anchor-id="transformar-los-problemas-típicos">3. Transformar: los problemas típicos</h2>
@@ -959,7 +979,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InAz
 <div class="webex-check webex-box">
 <ol type="1">
 <li>En ETL, la T significa <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">transferir</option><option value="answer">transformar</option><option value="x">tabular</option></select></li>
-<li>Según Wickham (2014), en los datos tidy cada variable es una <input class="webex-solveme nospaces ignorecase" size="9" aria-label="Escribe tu respuesta" data-answer="[&quot;columna&quot;]"></li>
+<li>Según <span class="citation" data-cites="wickham2014">Wickham (<a href="#ref-wickham2014" role="doc-biblioref">2014</a>)</span>, en los datos tidy cada variable es una <input class="webex-solveme nospaces ignorecase" size="9" aria-label="Escribe tu respuesta" data-answer="[&quot;columna&quot;]"></li>
 <li>Una columna con varios autores separados por punto y coma cumple las reglas de los datos tidy. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>Un proceso que da el mismo resultado al ejecutarse varias veces es <input class="webex-solveme nospaces ignorecase" size="13" aria-label="Escribe tu respuesta" data-answer="[&quot;idempotente&quot;]"></li>
 <li>Los DOI distinguen entre mayúsculas y minúsculas. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
@@ -1004,6 +1024,11 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xMSIsImlubGluZSI6ZmFsc2UsIm1l
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9wdWJsaWNhY2lvbmVzLmNzdiIsImRhdG9zL29wZW5hbGV4X211ZXN0cmEuanNvbiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-wickham2014" class="csl-entry" role="listitem">
+Wickham, H. (2014). <span>Tidy data</span>. <em>Journal of Statistical Software</em>, <em>59</em>(10), 1-23. <a href="https://doi.org/10.18637/jss.v059.i10">https://doi.org/10.18637/jss.v059.i10</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

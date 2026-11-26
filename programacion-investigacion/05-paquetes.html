@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -743,7 +763,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InA1
 <ol type="1">
 <li>En un paquete de R, las dependencias se declaran en el archivo <input class="webex-solveme nospaces ignorecase" size="13" aria-label="Escribe tu respuesta" data-answer="[&quot;DESCRIPTION&quot;]"></li>
 <li>roxygen2 genera la documentación de <code>man/</code> y el archivo NAMESPACE. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
-<li>Marwick et al.&nbsp;(2018) proponen organizar un proyecto de análisis como un compendio de <input class="webex-solveme nospaces ignorecase" size="16" aria-label="Escribe tu respuesta" data-answer="[&quot;investigación&quot;,&quot;investigacion&quot;]"></li>
+<li><span class="citation" data-cites="marwick2018">Marwick et&nbsp;al. (<a href="#ref-marwick2018" role="doc-biblioref">2018</a>)</span> proponen organizar un proyecto de análisis como un compendio de <input class="webex-solveme nospaces ignorecase" size="16" aria-label="Escribe tu respuesta" data-answer="[&quot;investigación&quot;,&quot;investigacion&quot;]"></li>
 <li>La revisión completa de un paquete de R antes de publicarlo se hace con <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">devtools::test()</option><option value="answer">devtools::check()</option><option value="x">usethis::use_r()</option></select></li>
 <li>En Python, los metadatos y las dependencias de un paquete moderno se declaran en <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">setup.cfg obligatoriamente</option><option value="answer">pyproject.toml</option><option value="x">requirements.txt siempre</option></select></li>
 <li>Añadir una función compatible con lo anterior sube la versión MAJOR. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
@@ -787,6 +807,11 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTMiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2RO
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9wdWJsaWNhY2lvbmVzLmNzdiIsImRhdG9zL29wZW5hbGV4X211ZXN0cmEuanNvbiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-marwick2018" class="csl-entry" role="listitem">
+Marwick, B., Boettiger, C., y Mullen, L. (2018). <span>Packaging data analytical work reproducibly using R (and friends)</span>. <em>The American Statistician</em>, <em>72</em>(1), 80-88. <a href="https://doi.org/10.1080/00031305.2017.1375986">https://doi.org/10.1080/00031305.2017.1375986</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
