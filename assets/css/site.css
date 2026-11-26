@@ -136,12 +136,3 @@ footer a{ color:var(--muted); }
   a{ color:#000; }
 }
 
-/* Open books */
-#books h3{ font-family:var(--sans); font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:28px 0 8px; }
-.books{ list-style:none; padding:0; margin:0; }
-.books li{ padding:12px 0; border-bottom:1px solid var(--hair); max-width:62ch; }
-.books li:last-child{ border-bottom:0; }
-.book-title{ font-weight:600; }
-.book-lang{ font-family:var(--sans); font-size:12px; color:var(--muted); border:1px solid var(--hair); border-radius:999px; padding:1px 8px; margin-left:6px; white-space:nowrap; }
-.book-desc{ color:var(--ink-dim); font-size:16px; }
-.book-doi{ font-family:var(--mono); font-size:13px; white-space:nowrap; }
