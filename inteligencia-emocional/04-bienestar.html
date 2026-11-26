@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -440,6 +460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#hábitos-protectores" id="toc-hábitos-protectores" class="nav-link" data-scroll-target="#hábitos-protectores">3. Hábitos protectores</a></li>
   <li><a href="#lab-i4-areas" id="toc-lab-i4-areas" class="nav-link" data-scroll-target="#lab-i4-areas">Laboratorio: tu encaje en las seis áreas</a></li>
   <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#segundo-caso-práctico-resuelto" id="toc-segundo-caso-práctico-resuelto" class="nav-link" data-scroll-target="#segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</a></li>
   <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-i4" id="toc-reto-i4" class="nav-link" data-scroll-target="#reto-i4">Reto evaluable</a></li>
@@ -534,20 +555,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Evans, T. M.; Bira, L.; Gastelum, J. B.; Weiss, L. T.; Vanderford, N. L. (2018). <a href="https://doi.org/10.1038/nbt.4089">Evidence for a mental health crisis in graduate education</a>. <em>Nature Biotechnology</em>, 36(3), 282-284.</li>
-<li>Maslach, C.; Leiter, M. P. (2016). <a href="https://doi.org/10.1002/wps.20311">Understanding the burnout experience: Recent research and its implications for psychiatry</a>. <em>World Psychiatry</em>, 15(2), 103-111.</li>
+<li><span class="citation" data-cites="evans2018">Evans et&nbsp;al. (<a href="#ref-evans2018" role="doc-biblioref">2018</a>)</span></li>
+<li><span class="citation" data-cites="maslach2016">Maslach y Leiter (<a href="#ref-maslach2016" role="doc-biblioref">2016</a>)</span></li>
 </ul>
 </section>
 </section>
 <section id="qué-sabemos-del-doctorado" class="level2">
 <h2 class="anchored" data-anchor-id="qué-sabemos-del-doctorado">1. Qué sabemos del doctorado</h2>
-<p>Levecque et al.&nbsp;(2017) encuestaron a miles de doctorandos en Flandes (Bélgica). Alrededor de <strong>un tercio</strong> presentaba suficientes síntomas para estar en riesgo de un trastorno psicológico común, como la depresión, una proporción más alta que en otros grupos con estudios superiores. Lo más importante del estudio es que el riesgo se asociaba con <strong>condiciones de trabajo modificables</strong>: el conflicto entre el trabajo y la vida personal, las <a href="92-glosario.html#gl-demandas" class="glos" data-def="Exigencias del trabajo y margen de decisión sobre él; su desequilibrio se asocia con el malestar.">demandas</a> y el control sobre el propio trabajo, el estilo de liderazgo de la dirección y la cultura de toma de decisiones del equipo.</p>
-<p>Evans et al.&nbsp;(2018) encontraron cifras de ansiedad y depresión moderadas o graves muy elevadas en una encuesta en línea internacional a estudiantes de posgrado. Su muestra era voluntaria, lo que probablemente sobrerrepresenta a personas con malestar; aun así, el estudio contribuyó a abrir el debate.</p>
+<p><span class="citation" data-cites="levecque2017">Levecque et&nbsp;al. (<a href="#ref-levecque2017" role="doc-biblioref">2017</a>)</span> encuestaron a miles de doctorandos en Flandes (Bélgica). Alrededor de <strong>un tercio</strong> presentaba suficientes síntomas para estar en riesgo de un trastorno psicológico común, como la depresión, una proporción más alta que en otros grupos con estudios superiores. Lo más importante del estudio es que el riesgo se asociaba con <strong>condiciones de trabajo modificables</strong>: el conflicto entre el trabajo y la vida personal, las <a href="92-glosario.html#gl-demandas" class="glos" data-def="Exigencias del trabajo y margen de decisión sobre él; su desequilibrio se asocia con el malestar.">demandas</a> y el control sobre el propio trabajo, el estilo de liderazgo de la dirección y la cultura de toma de decisiones del equipo.</p>
+<p><span class="citation" data-cites="evans2018">Evans et&nbsp;al. (<a href="#ref-evans2018" role="doc-biblioref">2018</a>)</span> encontraron cifras de ansiedad y depresión moderadas o graves muy elevadas en una encuesta en línea internacional a estudiantes de posgrado. Su muestra era voluntaria, lo que probablemente sobrerrepresenta a personas con malestar; aun así, el estudio contribuyó a abrir el debate.</p>
 <p>Dos lecturas de estos datos: el malestar en el doctorado es <strong>frecuente</strong> (si te pasa, no estás solo ni sola, y no es un fracaso personal), y buena parte depende de <strong>cómo se organiza el trabajo</strong>, algo que las instituciones y los grupos pueden cambiar.</p>
 </section>
 <section id="el-agotamiento-profesional" class="level2">
 <h2 class="anchored" data-anchor-id="el-agotamiento-profesional">2. El agotamiento profesional</h2>
-<p>Maslach y Leiter (2016) describen el <strong>agotamiento profesional</strong> (<em>burnout</em>) como una respuesta prolongada a estresores crónicos del trabajo con tres dimensiones: <strong>agotamiento</strong> (sentirse sin energía), <strong>cinismo</strong> o distanciamiento del trabajo, e <strong>ineficacia</strong> (sensación de no lograr nada). Proponen que surge de desajustes entre la persona y el trabajo en <strong>seis áreas de la vida laboral</strong>: carga de trabajo, control, recompensa, comunidad, equidad y valores. Por eso las soluciones no son solo individuales: también hay que actuar sobre esas áreas.</p>
+<p><span class="citation" data-cites="maslach2016">Maslach y Leiter (<a href="#ref-maslach2016" role="doc-biblioref">2016</a>)</span> describen el <strong>agotamiento profesional</strong> (<em>burnout</em>) como una respuesta prolongada a estresores crónicos del trabajo con tres dimensiones: <strong>agotamiento</strong> (sentirse sin energía), <strong>cinismo</strong> o distanciamiento del trabajo, e <strong>ineficacia</strong> (sensación de no lograr nada). Proponen que surge de desajustes entre la persona y el trabajo en <strong>seis áreas de la vida laboral</strong>: carga de trabajo, control, recompensa, comunidad, equidad y valores. Por eso las soluciones no son solo individuales: también hay que actuar sobre esas áreas.</p>
 </section>
 <section id="hábitos-protectores" class="level2">
 <h2 class="anchored" data-anchor-id="hábitos-protectores">3. Hábitos protectores</h2>
@@ -669,7 +690,138 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Criterios escritos sobre la carga docente de los contratos predoctorales.</li>
 <li>Información visible sobre el servicio de atención psicológica.</li>
 </ul>
-<p>El enfoque recoge la conclusión de Levecque et al.&nbsp;(2017): las condiciones de trabajo importan.</p>
+<p>El enfoque recoge la conclusión de <span class="citation" data-cites="levecque2017">Levecque et&nbsp;al. (<a href="#ref-levecque2017" role="doc-biblioref">2017</a>)</span>: las condiciones de trabajo importan.</p>
+</div>
+</div>
+</section>
+<section id="segundo-caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Un plan de recuperación tras un pico de trabajo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Una posdoc sale de seis semanas intensas (dos solicitudes y un congreso). Nota cansancio que no se va con el fin de semana y cinismo hacia su trabajo: señales de alerta de agotamiento. En lugar de «descansar cuando pueda», hace un plan concreto de dos semanas:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Área</th>
+<th>Medida</th>
+<th>Cómo sabrá que funciona</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Desconexión</td>
+<td>Sin correo de trabajo de 20:00 a 8:00 y en fin de semana</td>
+<td>Duerme siete horas o más</td>
+</tr>
+<tr class="even">
+<td>Carga</td>
+<td>Pospone una revisión de artículo y lo dice con antelación</td>
+<td>Lista de tareas con menos de diez elementos</td>
+</tr>
+<tr class="odd">
+<td>Recuperación</td>
+<td>Dos actividades a la semana sin relación con el trabajo</td>
+<td>Las cumple</td>
+</tr>
+<tr class="even">
+<td>Apoyo</td>
+<td>Habla con su supervisor sobre el calendario del próximo trimestre</td>
+<td>Hay un calendario acordado</td>
+</tr>
+</tbody>
+</table>
+<p>Si en dos semanas el cansancio y el cinismo siguen igual, el siguiente paso es consultar con el servicio de atención psicológica de la universidad o con su médico. El plan no sustituye a la ayuda profesional: la complementa.</p>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-i4-recuperacion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-i4-recuperacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 279.08 294.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 280.4)">
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-280.4 264.68,-280.4 264.68,14.4 -14.4,14.4"></polygon>
+<!-- s -->
+<g id="node1" class="node">
+<title>s</title>
+<path fill="#fdf0e8" stroke="#1a4d8f" d="M159.93,-266C159.93,-266 75.07,-266 75.07,-266 69.07,-266 63.07,-260 63.07,-254 63.07,-254 63.07,-242 63.07,-242 63.07,-236 69.07,-230 75.07,-230 75.07,-230 159.93,-230 159.93,-230 165.93,-230 171.93,-236 171.93,-242 171.93,-242 171.93,-254 171.93,-254 171.93,-260 165.93,-266 159.93,-266"></path>
+<text text-anchor="middle" x="117.5" y="-251.3" font-family="Helvetica,sans-Serif" font-size="11.00">Señales de alerta</text>
+<text text-anchor="middle" x="117.5" y="-238.1" font-family="Helvetica,sans-Serif" font-size="11.00">cansancio, cinismo</text>
+</g>
+<!-- p -->
+<g id="node2" class="node">
+<title>p</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M214.17,-193C214.17,-193 20.82,-193 20.82,-193 14.82,-193 8.82,-187 8.82,-181 8.82,-181 8.82,-169 8.82,-169 8.82,-163 14.82,-157 20.82,-157 20.82,-157 214.17,-157 214.17,-157 220.17,-157 226.17,-163 226.17,-169 226.17,-169 226.17,-181 226.17,-181 226.17,-187 220.17,-193 214.17,-193"></path>
+<text text-anchor="middle" x="117.5" y="-178.3" font-family="Helvetica,sans-Serif" font-size="11.00">Plan de dos semanas</text>
+<text text-anchor="middle" x="117.5" y="-165.1" font-family="Helvetica,sans-Serif" font-size="11.00">desconexión, carga, recuperación, apoyo</text>
+</g>
+<!-- s&#45;&gt;p -->
+<g id="edge1" class="edge">
+<title>s-&gt;p</title>
+<path fill="none" stroke="#45433f" d="M117.5,-229.81C117.5,-221.79 117.5,-212.05 117.5,-203.07"></path>
+<polygon fill="#45433f" stroke="#45433f" points="121,-203.03 117.5,-193.03 114,-203.03 121,-203.03"></polygon>
+</g>
+<!-- r -->
+<g id="node3" class="node">
+<title>r</title>
+<path fill="#fff7e0" stroke="#1a4d8f" d="M106.11,-116.22C106.11,-116.22 74.65,-105.78 74.65,-105.78 68.96,-103.89 68.96,-100.11 74.65,-98.22 74.65,-98.22 106.11,-87.78 106.11,-87.78 111.8,-85.89 123.19,-85.89 128.89,-87.78 128.89,-87.78 160.34,-98.22 160.34,-98.22 166.03,-100.11 166.03,-103.89 160.34,-105.78 160.34,-105.78 128.89,-116.22 128.89,-116.22 123.19,-118.11 111.8,-118.11 106.11,-116.22"></path>
+<text text-anchor="middle" x="117.5" y="-98.7" font-family="Helvetica,sans-Serif" font-size="11.00">¿Mejora?</text>
+</g>
+<!-- p&#45;&gt;r -->
+<g id="edge2" class="edge">
+<title>p-&gt;r</title>
+<path fill="none" stroke="#45433f" d="M117.5,-156.81C117.5,-148.79 117.5,-139.05 117.5,-130.07"></path>
+<polygon fill="#45433f" stroke="#45433f" points="121,-130.03 117.5,-120.03 114,-130.03 121,-130.03"></polygon>
+</g>
+<!-- ok -->
+<g id="node4" class="node">
+<title>ok</title>
+<path fill="#eaf6ef" stroke="#1a4d8f" d="M88.99,-36C88.99,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 88.99,0 88.99,0 94.99,0 100.99,-6 100.99,-12 100.99,-12 100.99,-24 100.99,-24 100.99,-30 94.99,-36 88.99,-36"></path>
+<text text-anchor="middle" x="50.5" y="-14.7" font-family="Helvetica,sans-Serif" font-size="11.00">Mantener hábitos</text>
+</g>
+<!-- r&#45;&gt;ok -->
+<g id="edge3" class="edge">
+<title>r-&gt;ok</title>
+<path fill="none" stroke="#45433f" d="M106.43,-87.46C96.86,-75.75 82.77,-58.5 71.13,-44.25"></path>
+<polygon fill="#45433f" stroke="#45433f" points="73.65,-41.8 64.61,-36.27 68.22,-46.23 73.65,-41.8"></polygon>
+<text text-anchor="middle" x="93.77" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">sí</text>
+</g>
+<!-- h -->
+<g id="node5" class="node">
+<title>h</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M238.07,-36C238.07,-36 130.92,-36 130.92,-36 124.92,-36 118.92,-30 118.92,-24 118.92,-24 118.92,-12 118.92,-12 118.92,-6 124.92,0 130.92,0 130.92,0 238.07,0 238.07,0 244.07,0 250.07,-6 250.07,-12 250.07,-12 250.07,-24 250.07,-24 250.07,-30 244.07,-36 238.07,-36"></path>
+<text text-anchor="middle" x="184.5" y="-14.7" font-family="Helvetica,sans-Serif" font-size="11.00">Pedir ayuda profesional</text>
+</g>
+<!-- r&#45;&gt;h -->
+<g id="edge4" class="edge">
+<title>r-&gt;h</title>
+<path fill="none" stroke="#45433f" d="M128.56,-87.46C138.13,-75.75 152.22,-58.5 163.86,-44.25"></path>
+<polygon fill="#45433f" stroke="#45433f" points="166.77,-46.23 170.38,-36.27 161.35,-41.8 166.77,-46.23"></polygon>
+<text text-anchor="middle" x="160.06" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">no</text>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-i4-recuperacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Detectar señales, actuar y revisar: un ciclo de dos semanas.
+</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -688,7 +840,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
-<div class="ia ia-clasificar" id="ia-i4-dim"><script type="application/json" class="ia-datos">{"categorias":["Agotamiento","Cinismo","Ineficacia"],"enunciado":"","explicacion":"","items":[{"categoria":"Agotamiento","explicacion":"","texto":"«Llego a casa sin energía para nada»"},{"categoria":"Cinismo","explicacion":"","texto":"«Me da igual lo que pase con el proyecto»"},{"categoria":"Ineficacia","explicacion":"","texto":"«Por mucho que trabaje, nunca avanzo»"},{"categoria":"Cinismo","explicacion":"","texto":"«Ya no me interesa lo que investiga mi grupo»"}],"tipo":"clasificar","titulo":"¿Qué dimensión del agotamiento? (Maslach y Leiter, 2016)"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-i4-dim"><script type="application/json" class="ia-datos">{"categorias":["Agotamiento","Cinismo","Ineficacia"],"enunciado":"","explicacion":"","items":[{"categoria":"Agotamiento","explicacion":"","texto":"«Llego a casa sin energía para nada»"},{"categoria":"Cinismo","explicacion":"","texto":"«Me da igual lo que pase con el proyecto»"},{"categoria":"Ineficacia","explicacion":"","texto":"«Por mucho que trabaje, nunca avanzo»"},{"categoria":"Cinismo","explicacion":"","texto":"«Ya no me interesa lo que investiga mi grupo»"}],"tipo":"clasificar","titulo":"¿Qué dimensión del agotamiento? [@maslach2016]"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 <div class="ia ia-clasificar" id="ia-i4-area"><script type="application/json" class="ia-datos">{"categorias":["Carga","Control","Recompensa","Comunidad","Equidad","Valores"],"enunciado":"","explicacion":"","items":[{"categoria":"Carga","explicacion":"","texto":"Te asignan tres proyectos nuevos sin quitarte ninguno"},{"categoria":"Control","explicacion":"","texto":"Nunca puedes decidir el orden de tus tareas"},{"categoria":"Recompensa","explicacion":"","texto":"Nadie comenta nunca tus avances"},{"categoria":"Comunidad","explicacion":"","texto":"Trabajas sola sin contacto con otros doctorandos"},{"categoria":"Equidad","explicacion":"","texto":"La autoría se decide sin criterios y siempre favorece a los\nmismos"},{"categoria":"Valores","explicacion":"","texto":"Te piden maquillar resultados para que parezcan más claros"}],"tipo":"clasificar","titulo":"¿Qué área de la vida laboral está en juego?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-i4" class="level2">
@@ -717,10 +869,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Responde a todas las preguntas y pulsa <strong>Mostrar respuestas</strong>. No cuenta para la nota.</p>
 <div class="webex-check webex-box">
 <ol type="1">
-<li>Levecque et al.&nbsp;(2017) encontraron que alrededor de <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">uno de cada diez</option><option value="answer">un tercio</option><option value="x">tres de cada cuatro</option></select> doctorandos estaba en riesgo de un trastorno psicológico común</li>
+<li><span class="citation" data-cites="levecque2017">Levecque et&nbsp;al. (<a href="#ref-levecque2017" role="doc-biblioref">2017</a>)</span> encontraron que alrededor de <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">uno de cada diez</option><option value="answer">un tercio</option><option value="x">tres de cada cuatro</option></select> doctorandos estaba en riesgo de un trastorno psicológico común</li>
 <li>Según Levecque et al., el riesgo se asociaba con condiciones de trabajo modificables. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>Las tres dimensiones del agotamiento son agotamiento, cinismo e <input class="webex-solveme nospaces ignorecase" size="12" aria-label="Escribe tu respuesta" data-answer="[&quot;ineficacia&quot;]"></li>
-<li>La muestra de Evans et al.&nbsp;(2018) era voluntaria, lo que puede sobrerrepresentar a personas con malestar. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
+<li>La muestra de <span class="citation" data-cites="evans2018">Evans et&nbsp;al. (<a href="#ref-evans2018" role="doc-biblioref">2018</a>)</span> era voluntaria, lo que puede sobrerrepresentar a personas con malestar. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>Maslach y Leiter proponen <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">tres</option><option value="answer">seis</option><option value="x">diez</option></select> <a href="92-glosario.html#gl-areas" class="glos" data-def="Carga, control, recompensa, comunidad, equidad y valores (Maslach y Leiter).">áreas de la vida laboral</a></li>
 <li>Las soluciones al agotamiento son exclusivamente individuales. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>Desconectar de verdad del trabajo forma parte de la <input class="webex-solveme nospaces ignorecase" size="15" aria-label="Escribe tu respuesta" data-answer="[&quot;recuperación&quot;,&quot;recuperacion&quot;]"></li>
@@ -743,6 +895,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-evans2018" class="csl-entry" role="listitem">
+Evans, T. M., Bira, L., Gastelum, J. B., Weiss, L. T., y Vanderford, N. L. (2018). <span>Evidence for a mental health crisis in graduate education</span>. <em>Nature Biotechnology</em>, <em>36</em>(3), 282-284. <a href="https://doi.org/10.1038/nbt.4089">https://doi.org/10.1038/nbt.4089</a>
+</div>
+<div id="ref-levecque2017" class="csl-entry" role="listitem">
+Levecque, K., Anseel, F., De Beuckelaer, A., Van der Heyden, J., y Gisle, L. (2017). <span>Work organization and mental health problems in PhD students</span>. <em>Research Policy</em>, <em>46</em>(4), 868-879. <a href="https://doi.org/10.1016/j.respol.2017.02.008">https://doi.org/10.1016/j.respol.2017.02.008</a>
+</div>
+<div id="ref-maslach2016" class="csl-entry" role="listitem">
+Maslach, C., y Leiter, M. P. (2016). <span>Understanding the burnout experience: Recent research and its implications for psychiatry</span>. <em>World Psychiatry</em>, <em>15</em>(2), 103-111. <a href="https://doi.org/10.1002/wps.20311">https://doi.org/10.1002/wps.20311</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
