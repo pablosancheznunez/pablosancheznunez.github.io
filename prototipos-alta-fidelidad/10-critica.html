@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -444,6 +464,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./95-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -565,14 +590,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Nielsen Norman Group. <a href="https://www.nngroup.com/articles/design-critiques/">Design critiques: Encourage a positive culture to improve products</a>. Guía práctica para el trabajo en equipo.</li>
-<li>Buxton, W. (2007). <em>Sketching user experiences</em>. Elsevier. El papel de la crítica en el proceso de diseño.</li>
+<li><span class="citation" data-cites="nielsennormangroupsfa">Nielsen Norman Group (<a href="#ref-nielsennormangroupsfa" role="doc-biblioref">s.&nbsp;f.</a>)</span> — Guía práctica para el trabajo en equipo.</li>
+<li><span class="citation" data-cites="buxton2007">Buxton (<a href="#ref-buxton2007" role="doc-biblioref">2007</a>)</span> — El paso del boceto al <a href="92-glosario.html#gl-prototipo" class="glos" data-def="Representación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo.">prototipo</a>.</li>
 </ul>
 </section>
 </section>
 <section id="qué-es-una-crítica-de-diseño" class="level2">
 <h2 class="anchored" data-anchor-id="qué-es-una-crítica-de-diseño">1. Qué es una crítica de diseño</h2>
-<p>Una <a href="92-glosario.html#gl-critica" class="glos" data-def="Sesión para analizar un diseño en curso respecto a sus objetivos."><strong>crítica de diseño</strong></a> (<em>design crit</em>) es una sesión en la que un equipo analiza un diseño en curso para mejorarlo. No es una votación ni una aprobación: su objetivo es <strong>entender si el diseño cumple sus objetivos</strong> y descubrir problemas a tiempo. Dannels y Martin (2008) analizaron las críticas en estudios de diseño, desde principiantes hasta expertos, y las describieron como un género de comunicación propio, con distintos formatos (críticas en la mesa de trabajo, en grupo, ante un tribunal) y con convenciones que hay que aprender.</p>
+<p>Una <a href="92-glosario.html#gl-critica" class="glos" data-def="Sesión para analizar un diseño en curso respecto a sus objetivos."><strong>crítica de diseño</strong></a> (<em>design crit</em>) es una sesión en la que un equipo analiza un diseño en curso para mejorarlo. No es una votación ni una aprobación: su objetivo es <strong>entender si el diseño cumple sus objetivos</strong> y descubrir problemas a tiempo. <span class="citation" data-cites="dannels2008">Dannels y Martin (<a href="#ref-dannels2008" role="doc-biblioref">2008</a>)</span> analizaron las críticas en estudios de diseño, desde principiantes hasta expertos, y las describieron como un género de comunicación propio, con distintos formatos (críticas en la mesa de trabajo, en grupo, ante un tribunal) y con convenciones que hay que aprender.</p>
 </section>
 <section id="preparar-y-presentar" class="level2">
 <h2 class="anchored" data-anchor-id="preparar-y-presentar">2. Preparar y presentar</h2>
@@ -627,7 +652,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="de-la-crítica-a-la-prueba-con-usuarios" class="level2">
 <h2 class="anchored" data-anchor-id="de-la-crítica-a-la-prueba-con-usuarios">5. De la crítica a la prueba con usuarios</h2>
-<p>La crítica entre profesionales detecta problemas de diseño, pero no sustituye a observar a quienes usarán el producto. Con el <a href="92-glosario.html#gl-prototipo" class="glos" data-def="Representación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo.">prototipo</a> de <a href="92-glosario.html#gl-alta" class="glos" data-def="Prototipo que se parece al producto final en casi todas sus dimensiones: aspecto, contenido e interacción.">alta fidelidad</a> ya se puede hacer una <strong>prueba de usabilidad</strong> moderada: unas pocas personas intentan tareas realistas mientras piensan en voz alta y el equipo observa sin ayudar. Con <strong>cinco participantes</strong> suelen aparecer los problemas más frecuentes; es mejor hacer varias rondas pequeñas que una grande.</p>
+<p>La crítica entre profesionales detecta problemas de diseño, pero no sustituye a observar a quienes usarán el producto. Con el prototipo de <a href="92-glosario.html#gl-alta" class="glos" data-def="Prototipo que se parece al producto final en casi todas sus dimensiones: aspecto, contenido e interacción.">alta fidelidad</a> ya se puede hacer una <strong>prueba de usabilidad</strong> moderada: unas pocas personas intentan tareas realistas mientras piensan en voz alta y el equipo observa sin ayudar. Con <strong>cinco participantes</strong> suelen aparecer los problemas más frecuentes; es mejor hacer varias rondas pequeñas que una grande.</p>
 <p>Las tareas deben describir <strong>el objetivo</strong>, no los pasos: «Reserva una sala para cuatro personas esta tarde» y no «Pulsa en Buscar y elige 16:00». Si la tarea nombra los botones, la prueba mide si la gente sabe leer, no si encuentra el camino.</p>
 <section id="lab-t10-plan" class="level3">
 <h3 class="anchored" data-anchor-id="lab-t10-plan">Laboratorio: tu plan de prueba</h3>
@@ -807,6 +832,17 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-buxton2007" class="csl-entry" role="listitem">
+Buxton, W. (2007). <em><span>Sketching user experiences</span></em>. Elsevier.
+</div>
+<div id="ref-dannels2008" class="csl-entry" role="listitem">
+Dannels, D. P., y Martin, K. N. (2008). <span>Critiquing critiques: A genre analysis of feedback across novice to expert design studios</span>. <em>Journal of Business and Technical Communication</em>, <em>22</em>(2), 135-159. <a href="https://doi.org/10.1177/1050651907311923">https://doi.org/10.1177/1050651907311923</a>
+</div>
+<div id="ref-nielsennormangroupsfa" class="csl-entry" role="listitem">
+Nielsen Norman Group. (s.&nbsp;f.). <em><span>Design critiques: Encourage a positive culture to improve products</span></em>. Recuperado <a href="https://www.nngroup.com/articles/design-critiques/">https://www.nngroup.com/articles/design-critiques/</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

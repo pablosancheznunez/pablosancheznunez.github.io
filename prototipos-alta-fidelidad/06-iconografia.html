@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -412,6 +432,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./95-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -529,15 +554,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Material Design 3. <a href="https://m3.material.io/styles/icons/overview">Icons</a>. Un sistema de iconos documentado.</li>
-<li>Apple Human Interface Guidelines. <a href="https://developer.apple.com/design/human-interface-guidelines/sf-symbols">SF Symbols</a>. Iconos alineados con la tipografía.</li>
+<li><span class="citation" data-cites="materialdesign3sfa">Material Design 3 (<a href="#ref-materialdesign3sfa" role="doc-biblioref">s.&nbsp;f.</a>)</span> — Un sistema de iconos documentado.</li>
+<li><span class="citation" data-cites="applehumaninterfacegsf">Apple Human Interface Guidelines (<a href="#ref-applehumaninterfacegsf" role="doc-biblioref">s.&nbsp;f.</a>)</span> — Iconos alineados con la tipografía.</li>
 </ul>
 </section>
 </section>
 <section id="para-qué-sirve-un-icono" class="level2">
 <h2 class="anchored" data-anchor-id="para-qué-sirve-un-icono">1. Para qué sirve un icono</h2>
 <p>Un <strong>icono</strong> representa una acción, un objeto o un estado con una imagen pequeña. Ahorra espacio y, cuando es conocido, se reconoce más rápido que una palabra. Pero los iconos son mucho menos universales de lo que parecen: fuera de unos pocos muy asentados (casa, lupa, papelera, engranaje), la mayoría se entiende mal sin etiqueta.</p>
-<p>McDougall, Curry y de Bruijn (1999) midieron cinco características de 239 símbolos: <a href="92-glosario.html#gl-concrecion" class="glos" data-def="Grado en que un icono representa un objeto reconocible."><strong>concreción</strong></a> (si representa un objeto reconocible), <strong>complejidad</strong> visual, <strong>significatividad</strong>, <strong>familiaridad</strong> y <a href="92-glosario.html#gl-distancia" class="glos" data-def="Cuánto se aleja la imagen de un icono de lo que significa (McDougall et al., 1999)."><strong>distancia semántica</strong></a> (cuánto se aleja la imagen de lo que significa). Los iconos concretos, familiares y con poca distancia semántica se entienden mejor; la familiaridad que da el uso puede compensar con el tiempo un icono abstracto.</p>
+<p>McDougall, Curry y de Bruijn (1999) midieron cinco características de 239 símbolos: <a href="92-glosario.html#gl-concrecion" class="glos" data-def="Grado en que un icono representa un objeto reconocible."><strong>concreción</strong></a> (si representa un objeto reconocible), <strong>complejidad</strong> visual, <strong>significatividad</strong>, <strong>familiaridad</strong> y <a href="92-glosario.html#gl-distancia" class="glos" data-def="Cuánto se aleja la imagen de un icono de lo que significa [@mcdougall1999]."><strong>distancia semántica</strong></a> (cuánto se aleja la imagen de lo que significa). Los iconos concretos, familiares y con poca distancia semántica se entienden mejor; la familiaridad que da el uso puede compensar con el tiempo un icono abstracto.</p>
 <p><strong>Regla práctica</strong>: los iconos acompañan a una <strong>etiqueta de texto</strong>, salvo los universales en contextos muy conocidos. Si dudas, pon la etiqueta.</p>
 </section>
 <section id="coherencia-de-estilo" class="level2">
@@ -715,6 +740,14 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-applehumaninterfacegsf" class="csl-entry" role="listitem">
+Apple Human Interface Guidelines. (s.&nbsp;f.). <em><span>SF Symbols</span></em>. Recuperado <a href="https://developer.apple.com/design/human-interface-guidelines/sf-symbols">https://developer.apple.com/design/human-interface-guidelines/sf-symbols</a>
+</div>
+<div id="ref-materialdesign3sfa" class="csl-entry" role="listitem">
+Material Design 3. (s.&nbsp;f.). <em><span>Icons</span></em>. Recuperado <a href="https://m3.material.io/styles/icons/overview">https://m3.material.io/styles/icons/overview</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

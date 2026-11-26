@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -447,6 +467,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./95-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -565,14 +590,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Lindgaard, G. et al.&nbsp;(2006). <a href="https://doi.org/10.1080/01449290500330448">Attention web designers: You have 50 milliseconds to make a good first impression!</a> <em>Behaviour &amp; Information Technology</em>, 25(2), 115-126.</li>
-<li>Lidwell, W.; Holden, K.; Butler, J. (2011). <em>Principios universales de diseño</em>. Blume. Entradas sobre la <a href="92-glosario.html#gl-proximidad" class="glos" data-def="Principio de la Gestalt: lo cercano se percibe como relacionado.">proximidad</a> y la relación figura-fondo.</li>
+<li><span class="citation" data-cites="lindgaard2006">Lindgaard et&nbsp;al. (<a href="#ref-lindgaard2006" role="doc-biblioref">2006</a>)</span></li>
+<li><span class="citation" data-cites="lidwell2011">Lidwell et&nbsp;al. (<a href="#ref-lidwell2011" role="doc-biblioref">2011</a>)</span> — Entrada sobre el <a href="92-glosario.html#gl-estetica" class="glos" data-def="Tendencia a percibir como más fáciles de usar las interfaces que se perciben como atractivas.">efecto de estética-usabilidad</a> (bibliografía complementaria de la asignatura).</li>
 </ul>
 </section>
 </section>
 <section id="el-espacio-no-es-lo-que-sobra" class="level2">
 <h2 class="anchored" data-anchor-id="el-espacio-no-es-lo-que-sobra">1. El espacio no es lo que sobra</h2>
-<p>El <a href="92-glosario.html#gl-espacio" class="glos" data-def="Parte de la composición que no ocupa ningún elemento."><strong>espacio negativo</strong></a> (o espacio en blanco, aunque no sea blanco) es la parte de la composición que no ocupa ningún elemento. No es espacio desperdiciado: separa, agrupa, da <a href="92-glosario.html#gl-ritmo" class="glos" data-def="Repetición regular de elementos y espacios.">ritmo</a>, dirige la mirada y transmite calma y calidad. Tuch et al.&nbsp;(2012) mostraron que las páginas con <strong>baja complejidad visual</strong> causan mejor <a href="92-glosario.html#gl-primera-impresion" class="glos" data-def="Valoración del atractivo visual que se forma en unos 50 ms (Lindgaard et al., 2006).">primera impresión</a>, y el espacio es la herramienta más directa para reducir esa complejidad sin quitar contenido.</p>
+<p>El <a href="92-glosario.html#gl-espacio" class="glos" data-def="Parte de la composición que no ocupa ningún elemento."><strong>espacio negativo</strong></a> (o espacio en blanco, aunque no sea blanco) es la parte de la composición que no ocupa ningún elemento. No es espacio desperdiciado: separa, agrupa, da <a href="92-glosario.html#gl-ritmo" class="glos" data-def="Repetición regular de elementos y espacios.">ritmo</a>, dirige la mirada y transmite calma y calidad. <span class="citation" data-cites="tuch2012">Tuch et&nbsp;al. (<a href="#ref-tuch2012" role="doc-biblioref">2012</a>)</span> mostraron que las páginas con <strong>baja complejidad visual</strong> causan mejor <a href="92-glosario.html#gl-primera-impresion" class="glos" data-def="Valoración del atractivo visual que se forma en unos 50 ms [@lindgaard2006].">primera impresión</a>, y el espacio es la herramienta más directa para reducir esa complejidad sin quitar contenido.</p>
 </section>
 <section id="macroespacio-y-microespacio" class="level2">
 <h2 class="anchored" data-anchor-id="macroespacio-y-microespacio">2. Macroespacio y microespacio</h2>
@@ -602,7 +627,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="espacio-y-jerarquía" class="level2">
 <h2 class="anchored" data-anchor-id="espacio-y-jerarquía">3. Espacio y jerarquía</h2>
 <ul>
-<li><strong>Proximidad</strong>: lo que está cerca se percibe como un grupo. La etiqueta debe estar más cerca de su campo que del campo anterior; el título de una sección, más cerca de su contenido que de la sección anterior.</li>
+<li><a href="92-glosario.html#gl-proximidad" class="glos" data-def="Principio de la Gestalt: lo cercano se percibe como relacionado."><strong>Proximidad</strong></a>: lo que está cerca se percibe como un grupo. La etiqueta debe estar más cerca de su campo que del campo anterior; el título de una sección, más cerca de su contenido que de la sección anterior.</li>
 <li><strong>Aislamiento</strong>: un elemento rodeado de espacio destaca. La acción principal no necesita ser enorme si tiene espacio alrededor.</li>
 <li><strong>Respiración</strong>: un bloque de texto con márgenes generosos se lee mejor que el mismo texto encajado.</li>
 </ul>
@@ -746,7 +771,7 @@ Figura&nbsp;1: El mismo contenido con espacio insuficiente y uniforme (izquierda
 <ol type="1">
 <li>El espacio negativo es espacio desperdiciado que conviene reducir al mínimo. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>El relleno interior de un botón es un ejemplo de <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">macroespacio</option><option value="answer">microespacio</option></select></li>
-<li>Según Tuch et al., las páginas con <a href="92-glosario.html#gl-complejidad" class="glos" data-def="Cantidad y variedad de elementos visuales; la baja complejidad mejora la primera impresión (Tuch et al., 2012).">complejidad visual</a> baja causan mejor primera impresión. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
+<li>Según Tuch et al., las páginas con <a href="92-glosario.html#gl-complejidad" class="glos" data-def="Cantidad y variedad de elementos visuales; la baja complejidad mejora la primera impresión [@tuch2012].">complejidad visual</a> baja causan mejor primera impresión. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>La etiqueta de un campo debe estar más cerca de <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">su campo</option><option value="x">el campo anterior</option><option value="x">el título de la página</option></select></li>
 <li>¿Qué interfaz necesita probablemente más densidad de información?</li>
 </ol>
@@ -807,6 +832,17 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-lidwell2011" class="csl-entry" role="listitem">
+Lidwell, W., Holden, K., y Butler, J. (2011). <em><span>Principios universales de diseño</span></em>. Blume.
+</div>
+<div id="ref-lindgaard2006" class="csl-entry" role="listitem">
+Lindgaard, G. et&nbsp;al. (2006). <span>Attention web designers: You have 50 milliseconds to make a good first impression!</span> <em>Behaviour &amp; Information Technology</em>, <em>25</em>(2), 115-126. <a href="https://doi.org/10.1080/01449290500330448">https://doi.org/10.1080/01449290500330448</a>
+</div>
+<div id="ref-tuch2012" class="csl-entry" role="listitem">
+Tuch, A. N. et&nbsp;al. (2012). <span>The role of visual complexity and prototypicality regarding first impression of websites</span>. <em>International Journal of Human-Computer Studies</em>, <em>70</em>(11), 794-811. <a href="https://doi.org/10.1016/j.ijhcs.2012.06.003">https://doi.org/10.1016/j.ijhcs.2012.06.003</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -447,6 +467,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./95-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -528,7 +553,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Hacer evolucionar los <a href="92-glosario.html#gl-prototipo" class="glos" data-def="Representación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo.">prototipos</a> de baja a <a href="92-glosario.html#gl-alta" class="glos" data-def="Prototipo que se parece al producto final en casi todas sus dimensiones: aspecto, contenido e interacción.">alta fidelidad</a> sin perder la <a href="92-glosario.html#gl-intencion" class="glos" data-def="Lo que el diseño pretende conseguir: estructura, jerarquía y flujo validados.">intención del diseño</a>.</li>
 <li>Mantener la <a href="92-glosario.html#gl-trazabilidad" class="glos" data-def="Posibilidad de explicar de dónde viene cada decisión de diseño.">trazabilidad</a> de las decisiones.</li>
-<li>Diseñar <a href="92-glosario.html#gl-microinteraccion" class="glos" data-def="Momento de interacción con un solo propósito, con disparador, reglas, retroalimentación y bucles (Saffer, 2013).">microinteracciones</a> para los <a href="92-glosario.html#gl-interactivo" class="glos" data-def="Prototipo con estados, transiciones y microinteracciones que reproduce la sensación de uso.">prototipos interactivos</a>.</li>
+<li>Diseñar <a href="92-glosario.html#gl-microinteraccion" class="glos" data-def="Momento de interacción con un solo propósito, con disparador, reglas, retroalimentación y bucles [@saffer2013].">microinteracciones</a> para los <a href="92-glosario.html#gl-interactivo" class="glos" data-def="Prototipo con estados, transiciones y microinteracciones que reproduce la sensación de uso.">prototipos interactivos</a>.</li>
 </ul>
 </div>
 </div>
@@ -566,8 +591,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Saffer, D. (2013). <em>Microinteractions: Designing with details</em>. O’Reilly. El modelo de cuatro partes de este tema (bibliografía complementaria de la asignatura).</li>
-<li>Buxton, W. (2007). <em>Sketching user experiences</em>. Elsevier. El paso del boceto al prototipo.</li>
+<li><span class="citation" data-cites="saffer2013">Saffer (<a href="#ref-saffer2013" role="doc-biblioref">2013</a>)</span> — El modelo de cuatro partes de este tema (bibliografía complementaria de la asignatura).</li>
+<li><span class="citation" data-cites="buxton2007">Buxton (<a href="#ref-buxton2007" role="doc-biblioref">2007</a>)</span> — El paso del boceto al prototipo.</li>
 </ul>
 </section>
 </section>
@@ -649,7 +674,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="microinteracciones" class="level2">
 <h2 class="anchored" data-anchor-id="microinteracciones">4. Microinteracciones</h2>
-<p>Una <strong>microinteracción</strong> es un momento de interacción con un solo propósito: marcar un favorito, activar un ajuste, recibir la confirmación de una reserva. Saffer (2013) describe cuatro partes:</p>
+<p>Una <strong>microinteracción</strong> es un momento de interacción con un solo propósito: marcar un favorito, activar un ajuste, recibir la confirmación de una reserva. <span class="citation" data-cites="saffer2013">Saffer (<a href="#ref-saffer2013" role="doc-biblioref">2013</a>)</span> describe cuatro partes:</p>
 <ol type="1">
 <li><a href="92-glosario.html#gl-disparador" class="glos" data-def="Lo que inicia una microinteracción: una acción de la persona o una condición del sistema."><strong>Disparador</strong></a>: lo que la inicia (una acción de la persona o una condición del sistema).</li>
 <li><strong>Reglas</strong>: qué ocurre y en qué orden.</li>
@@ -911,7 +936,7 @@ Figura&nbsp;1: El mismo diseño en baja y en alta fidelidad.
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
 <div class="ia ia-clasificar" id="ia-t3a-cambia"><script type="application/json" class="ia-datos">{"categorias":["Se conserva","Cambia"],"enunciado":"","explicacion":"","items":[{"categoria":"Se conserva","explicacion":"","texto":"La arquitectura de información validada"},{"categoria":"Se conserva","explicacion":"","texto":"El orden de los pasos del flujo"},{"categoria":"Cambia","explicacion":"","texto":"La tipografía y el color"},{"categoria":"Cambia","explicacion":"","texto":"Los textos provisionales por textos reales"},{"categoria":"Se conserva","explicacion":"","texto":"Las decisiones tomadas tras las pruebas con usuarios"},{"categoria":"Cambia","explicacion":"","texto":"El detalle de las microinteracciones"}],"tipo":"clasificar","titulo":"¿Se conserva o cambia al subir la fidelidad?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
-<div class="ia ia-ordenar" id="ia-t3a-micro"><script type="application/json" class="ia-datos">{"enunciado":"","explicacion":"","items":["Disparador: qué la inicia","Reglas: qué ocurre","Retroalimentación: cómo se percibe lo que ocurre","Bucles y modos: qué pasa con el tiempo o en situaciones\nespeciales"],"tipo":"ordenar","titulo":"Las cuatro partes de una microinteracción (Saffer, 2013)"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-ordenar" id="ia-t3a-micro"><script type="application/json" class="ia-datos">{"enunciado":"","explicacion":"","items":["Disparador: qué la inicia","Reglas: qué ocurre","Retroalimentación: cómo se percibe lo que ocurre","Bucles y modos: qué pasa con el tiempo o en situaciones\nespeciales"],"tipo":"ordenar","titulo":"Las cuatro partes de una microinteracción [@saffer2013]"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-t3" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t3">Reto evaluable</h2>
@@ -1001,6 +1026,14 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-buxton2007" class="csl-entry" role="listitem">
+Buxton, W. (2007). <em><span>Sketching user experiences</span></em>. Elsevier.
+</div>
+<div id="ref-saffer2013" class="csl-entry" role="listitem">
+Saffer, D. (2013). <em><span>Microinteractions: Designing with details</span></em>. O’Reilly.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

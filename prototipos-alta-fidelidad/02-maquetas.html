@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -409,6 +429,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./95-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -488,7 +513,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Definir qué es una <a href="92-glosario.html#gl-maqueta" class="glos" data-def="Mockup. Representación estática de una pantalla con su aspecto visual definitivo y sin interacción.">maqueta</a> y dónde se sitúa entre los esquemas y los <a href="92-glosario.html#gl-interactivo" class="glos" data-def="Prototipo con estados, transiciones y microinteracciones que reproduce la sensación de uso.">prototipos interactivos</a>.</li>
 <li>Conocer los criterios de calidad de una maqueta estática profesional.</li>
-<li>Entender el peso de la <a href="92-glosario.html#gl-primera-impresion" class="glos" data-def="Valoración del atractivo visual que se forma en unos 50 ms (Lindgaard et al., 2006).">primera impresión</a> visual en la valoración de una interfaz.</li>
+<li>Entender el peso de la <a href="92-glosario.html#gl-primera-impresion" class="glos" data-def="Valoración del atractivo visual que se forma en unos 50 ms [@lindgaard2006].">primera impresión</a> visual en la valoración de una interfaz.</li>
 </ul>
 </div>
 </div>
@@ -526,8 +551,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Lidwell, W.; Holden, K.; Butler, J. (2011). <em>Principios universales de diseño</em>. Blume. Entrada sobre el <a href="92-glosario.html#gl-estetica" class="glos" data-def="Tendencia a percibir como más fáciles de usar las interfaces que se perciben como atractivas.">efecto de estética-usabilidad</a> (bibliografía complementaria de la asignatura).</li>
-<li>Tuch, A. N. et al.&nbsp;(2012). <a href="https://doi.org/10.1016/j.ijhcs.2012.06.003">The role of visual complexity and prototypicality regarding first impression of websites</a>. <em>International Journal of Human-Computer Studies</em>, 70(11), 794-811. Qué explica la primera impresión.</li>
+<li><span class="citation" data-cites="lidwell2011">Lidwell et&nbsp;al. (<a href="#ref-lidwell2011" role="doc-biblioref">2011</a>)</span> — Entrada sobre el <a href="92-glosario.html#gl-estetica" class="glos" data-def="Tendencia a percibir como más fáciles de usar las interfaces que se perciben como atractivas.">efecto de estética-usabilidad</a> (bibliografía complementaria de la asignatura).</li>
+<li><span class="citation" data-cites="tuch2012">Tuch et&nbsp;al. (<a href="#ref-tuch2012" role="doc-biblioref">2012</a>)</span> — Qué explica la primera impresión.</li>
 </ul>
 </section>
 </section>
@@ -560,7 +585,7 @@ ul.task-list li input[type="checkbox"] {
 <td>Interacción</td>
 <td>Enlaces básicos</td>
 <td>No</td>
-<td>Estados, transiciones, <a href="92-glosario.html#gl-microinteraccion" class="glos" data-def="Momento de interacción con un solo propósito, con disparador, reglas, retroalimentación y bucles (Saffer, 2013).">microinteracciones</a></td>
+<td>Estados, transiciones, <a href="92-glosario.html#gl-microinteraccion" class="glos" data-def="Momento de interacción con un solo propósito, con disparador, reglas, retroalimentación y bucles [@saffer2013].">microinteracciones</a></td>
 </tr>
 <tr class="even">
 <td>Pregunta que responde</td>
@@ -573,7 +598,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="por-qué-importa-el-aspecto" class="level2">
 <h2 class="anchored" data-anchor-id="por-qué-importa-el-aspecto">2. Por qué importa el aspecto</h2>
-<p>Lindgaard et al.&nbsp;(2006) mostraron páginas web durante solo <strong>50 milisegundos</strong> y comprobaron que las valoraciones de atractivo visual eran muy parecidas a las que se daban tras mirarlas más tiempo. La primera impresión visual se forma casi al instante. Tuch et al.&nbsp;(2012) encontraron que las páginas con <strong>baja complejidad visual</strong> y <strong>alta prototipicidad</strong> (que se parecen a lo que se espera de ese tipo de sitio) causan mejor primera impresión.</p>
+<p><span class="citation" data-cites="lindgaard2006">Lindgaard et&nbsp;al. (<a href="#ref-lindgaard2006" role="doc-biblioref">2006</a>)</span> mostraron páginas web durante solo <strong>50 milisegundos</strong> y comprobaron que las valoraciones de atractivo visual eran muy parecidas a las que se daban tras mirarlas más tiempo. La primera impresión visual se forma casi al instante. <span class="citation" data-cites="tuch2012">Tuch et&nbsp;al. (<a href="#ref-tuch2012" role="doc-biblioref">2012</a>)</span> encontraron que las páginas con <strong>baja complejidad visual</strong> y <strong>alta prototipicidad</strong> (que se parecen a lo que se espera de ese tipo de sitio) causan mejor primera impresión.</p>
 <p>Además, varios estudios han descrito un <strong>efecto de estética-usabilidad</strong>: las interfaces que se perciben como atractivas tienden a percibirse también como más fáciles de usar. Es una buena noticia para el diseño visual cuidado, y un aviso para las pruebas: una maqueta bonita puede ocultar problemas de uso.</p>
 </section>
 <section id="criterios-de-una-maqueta-profesional" class="level2">
@@ -664,8 +689,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="webex-check webex-box">
 <ol type="1">
 <li>Una maqueta incluye interacción con estados y transiciones. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
-<li>Lindgaard et al.&nbsp;(2006) mostraron que las valoraciones de atractivo visual se forman en unos <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">5 segundos</option><option value="answer">50 milisegundos</option><option value="x">5 minutos</option></select></li>
-<li>Según Tuch et al., causan mejor primera impresión las páginas con <a href="92-glosario.html#gl-complejidad" class="glos" data-def="Cantidad y variedad de elementos visuales; la baja complejidad mejora la primera impresión (Tuch et al., 2012).">complejidad visual</a> <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">baja</option><option value="x">alta</option></select></li>
+<li><span class="citation" data-cites="lindgaard2006">Lindgaard et&nbsp;al. (<a href="#ref-lindgaard2006" role="doc-biblioref">2006</a>)</span> mostraron que las valoraciones de atractivo visual se forman en unos <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">5 segundos</option><option value="answer">50 milisegundos</option><option value="x">5 minutos</option></select></li>
+<li>Según Tuch et al., causan mejor primera impresión las páginas con <a href="92-glosario.html#gl-complejidad" class="glos" data-def="Cantidad y variedad de elementos visuales; la baja complejidad mejora la primera impresión [@tuch2012].">complejidad visual</a> <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">baja</option><option value="x">alta</option></select></li>
 <li>Usar texto de relleno («lorem ipsum») en una maqueta ayuda a detectar problemas de longitud de los textos. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>¿Qué describe el efecto de estética-usabilidad?</li>
 </ol>
@@ -730,6 +755,17 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-lidwell2011" class="csl-entry" role="listitem">
+Lidwell, W., Holden, K., y Butler, J. (2011). <em><span>Principios universales de diseño</span></em>. Blume.
+</div>
+<div id="ref-lindgaard2006" class="csl-entry" role="listitem">
+Lindgaard, G. et&nbsp;al. (2006). <span>Attention web designers: You have 50 milliseconds to make a good first impression!</span> <em>Behaviour &amp; Information Technology</em>, <em>25</em>(2), 115-126. <a href="https://doi.org/10.1080/01449290500330448">https://doi.org/10.1080/01449290500330448</a>
+</div>
+<div id="ref-tuch2012" class="csl-entry" role="listitem">
+Tuch, A. N. et&nbsp;al. (2012). <span>The role of visual complexity and prototypicality regarding first impression of websites</span>. <em>International Journal of Human-Computer Studies</em>, <em>70</em>(11), 794-811. <a href="https://doi.org/10.1016/j.ijhcs.2012.06.003">https://doi.org/10.1016/j.ijhcs.2012.06.003</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

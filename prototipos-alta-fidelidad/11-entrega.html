@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -447,6 +467,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./95-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -568,14 +593,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Figma. <a href="https://help.figma.com/hc/en-us/articles/15023124644247-Guide-to-Dev-Mode">Dev Mode</a>. Inspección y <a href="92-glosario.html#gl-especificacion" class="glos" data-def="Documentación precisa de flujos, estilos, componentes, estados, interacciones, contenido y accesibilidad.">especificaciones</a> para desarrollo.</li>
+<li><span class="citation" data-cites="figmasf">Figma (<a href="#ref-figmasf" role="doc-biblioref">s.&nbsp;f.</a>)</span> — Inspección y <a href="92-glosario.html#gl-especificacion" class="glos" data-def="Documentación precisa de flujos, estilos, componentes, estados, interacciones, contenido y accesibilidad.">especificaciones</a> para desarrollo.</li>
 <li>Material Design 3 y otros sistemas: cómo documentan sus componentes para el desarrollo.</li>
 </ul>
 </section>
 </section>
 <section id="el-traspaso-no-es-un-momento-es-una-relación" class="level2">
 <h2 class="anchored" data-anchor-id="el-traspaso-no-es-un-momento-es-una-relación">1. El traspaso no es un momento, es una relación</h2>
-<p>El <a href="92-glosario.html#gl-traspaso" class="glos" data-def="Handoff. Paso del diseño al equipo que lo construye."><strong>traspaso</strong></a> (<em>handoff</em>) es el paso del diseño al equipo que lo construye. Maudet et al.&nbsp;(2017) estudiaron cómo colaboran diseñadores y desarrolladores y describieron las <a href="92-glosario.html#gl-ruptura-diseno" class="glos" data-def="Design breakdown. Punto en el que el diseño no basta para que el desarrollo lo interprete correctamente (Maudet et al., 2017)."><strong>rupturas de diseño</strong></a> (<em>design breakdowns</em>): los puntos en los que lo que el diseño representa no basta para que el desarrollo lo interprete correctamente. Identificaron tres tipos recurrentes: <strong>omitir detalles críticos</strong> (cómo se comporta algo, qué pasa con los datos reales), <strong>ignorar los casos límite</strong> (textos larguísimos, listas vacías, errores) y <strong>no tener en cuenta las limitaciones técnicas</strong> (algo que no se puede construir como está dibujado).</p>
+<p>El <a href="92-glosario.html#gl-traspaso" class="glos" data-def="Handoff. Paso del diseño al equipo que lo construye."><strong>traspaso</strong></a> (<em>handoff</em>) es el paso del diseño al equipo que lo construye. <span class="citation" data-cites="maudet2017">Maudet et&nbsp;al. (<a href="#ref-maudet2017" role="doc-biblioref">2017</a>)</span> estudiaron cómo colaboran diseñadores y desarrolladores y describieron las <a href="92-glosario.html#gl-ruptura-diseno" class="glos" data-def="Design breakdown. Punto en el que el diseño no basta para que el desarrollo lo interprete correctamente [@maudet2017]."><strong>rupturas de diseño</strong></a> (<em>design breakdowns</em>): los puntos en los que lo que el diseño representa no basta para que el desarrollo lo interprete correctamente. Identificaron tres tipos recurrentes: <strong>omitir detalles críticos</strong> (cómo se comporta algo, qué pasa con los datos reales), <strong>ignorar los casos límite</strong> (textos larguísimos, listas vacías, errores) y <strong>no tener en cuenta las limitaciones técnicas</strong> (algo que no se puede construir como está dibujado).</p>
 <p>También observaron que implicar pronto al equipo de desarrollo reducía esas rupturas, aunque surgían otras nuevas a medida que avanzaba el proyecto. La conclusión práctica es que el traspaso funciona mejor como una <strong>colaboración continua</strong> que como una entrega única al final.</p>
 </section>
 <section id="qué-debe-incluir-la-especificación" class="level2 page-columns page-full">
@@ -610,7 +635,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><strong>Interacciones</strong></td>
-<td><a href="92-glosario.html#gl-microinteraccion" class="glos" data-def="Momento de interacción con un solo propósito, con disparador, reglas, retroalimentación y bucles (Saffer, 2013).">Microinteracciones</a> y animaciones, con su duración y la versión de movimiento reducido</td>
+<td><a href="92-glosario.html#gl-microinteraccion" class="glos" data-def="Momento de interacción con un solo propósito, con disparador, reglas, retroalimentación y bucles [@saffer2013].">Microinteracciones</a> y animaciones, con su duración y la versión de movimiento reducido</td>
 </tr>
 <tr class="odd">
 <td><strong>Contenido</strong></td>
@@ -878,6 +903,14 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-figmasf" class="csl-entry" role="listitem">
+Figma. (s.&nbsp;f.). <em><span>Dev Mode</span></em>. Recuperado <a href="https://help.figma.com/hc/en-us/articles/15023124644247-Guide-to-Dev-Mode">https://help.figma.com/hc/en-us/articles/15023124644247-Guide-to-Dev-Mode</a>
+</div>
+<div id="ref-maudet2017" class="csl-entry" role="listitem">
+Maudet, N., Leiva, G., Beaudouin-Lafon, M., y Mackay, W. (2017). <span>Design breakdowns: Designer-developer gaps in representing and interpreting interactive systems</span>. En <em><span>Proceedings of the 2017 ACM Conference on Computer Supported Cooperative Work and Social Computing (CSCW ’17)</span></em> (pp. 630-641). ACM. <a href="https://doi.org/10.1145/2998181.2998190">https://doi.org/10.1145/2998181.2998190</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

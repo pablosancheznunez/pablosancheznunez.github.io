@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -447,6 +467,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./95-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -566,14 +591,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Churchill, E. F. (2019). <a href="https://doi.org/10.1145/3352681">Scaling UX with design systems</a>. <em>Interactions</em>, 26(5), 22-23. Los sistemas de diseño como infraestructura de la organización.</li>
+<li><span class="citation" data-cites="churchill2019">Churchill (<a href="#ref-churchill2019" role="doc-biblioref">2019</a>)</span> — Los sistemas de diseño como infraestructura de la organización.</li>
 <li>Material Design 3 y <a href="https://developer.apple.com/design/human-interface-guidelines/">Apple Human Interface Guidelines</a>: dos sistemas de plataforma de referencia.</li>
 </ul>
 </section>
 </section>
 <section id="qué-es-un-sistema-de-diseño" class="level2">
 <h2 class="anchored" data-anchor-id="qué-es-un-sistema-de-diseño">1. Qué es un sistema de diseño</h2>
-<p>Un <strong>sistema de diseño</strong> es el conjunto de principios, estilos, componentes reutilizables, patrones y documentación con el que una organización diseña y construye sus productos de forma coherente. No es solo una biblioteca de Figma: incluye el <strong>código</strong> de los componentes y las <strong>reglas</strong> de uso. Churchill (2019) lo describe como la forma de que la experiencia de usuario <strong>escale</strong> cuando muchos equipos trabajan a la vez.</p>
+<p>Un <strong>sistema de diseño</strong> es el conjunto de principios, estilos, componentes reutilizables, patrones y documentación con el que una organización diseña y construye sus productos de forma coherente. No es solo una biblioteca de Figma: incluye el <strong>código</strong> de los componentes y las <strong>reglas</strong> de uso. <span class="citation" data-cites="churchill2019">Churchill (<a href="#ref-churchill2019" role="doc-biblioref">2019</a>)</span> lo describe como la forma de que la experiencia de usuario <strong>escale</strong> cuando muchos equipos trabajan a la vez.</p>
 <p>Sus beneficios: <strong>coherencia</strong> entre productos y pantallas, <strong>eficiencia</strong> (no se diseña dos veces lo mismo), <strong>calidad</strong> (cada componente se prueba una vez, también en accesibilidad) y un <strong>lenguaje común</strong> entre diseño y desarrollo.</p>
 </section>
 <section id="estructura-tokens-componentes-y-patrones" class="level2">
@@ -618,7 +643,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="diseño-atómico" class="level2">
 <h2 class="anchored" data-anchor-id="diseño-atómico">3. Diseño atómico</h2>
-<p>Frost (2016) propone construir las interfaces de abajo arriba en cinco niveles, con una metáfora química:</p>
+<p><span class="citation" data-cites="frost2016">Frost (<a href="#ref-frost2016" role="doc-biblioref">2016</a>)</span> propone construir las interfaces de abajo arriba en cinco niveles, con una metáfora química:</p>
 <ol type="1">
 <li><strong>Átomos</strong>: los elementos mínimos (una etiqueta, un campo, un botón).</li>
 <li><strong>Moléculas</strong>: grupos sencillos con una función (un buscador: etiqueta, campo y botón).</li>
@@ -629,10 +654,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="fig-atomico" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cinco columnas de izquierda a derecha, cada una más grande que la anterior: átomos (un botón, un campo, una etiqueta), moléculas (un buscador), organismos (una cabecera con buscador), plantillas (la estructura de la página de resultados) y páginas (la página de resultados con libros reales).">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-atomico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figuras/tema9_atomico.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Los cinco niveles del diseño atómico de Frost (2016), con un ejemplo del catálogo de una biblioteca en cada uno."><img src="figuras/tema9_atomico.svg" class="img-fluid figure-img" alt="Cinco columnas de izquierda a derecha, cada una más grande que la anterior: átomos (un botón, un campo, una etiqueta), moléculas (un buscador), organismos (una cabecera con buscador), plantillas (la estructura de la página de resultados) y páginas (la página de resultados con libros reales)."></a>
+<a href="figuras/tema9_atomico.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Los cinco niveles del diseño atómico de @frost2016, con un ejemplo del catálogo de una biblioteca en cada uno."><img src="figuras/tema9_atomico.svg" class="img-fluid figure-img" alt="Cinco columnas de izquierda a derecha, cada una más grande que la anterior: átomos (un botón, un campo, una etiqueta), moléculas (un buscador), organismos (una cabecera con buscador), plantillas (la estructura de la página de resultados) y páginas (la página de resultados con libros reales)."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-atomico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Los cinco niveles del <a href="92-glosario.html#gl-atomico" class="glos" data-def="Método de Frost (2016) que construye las interfaces en cinco niveles: átomos, moléculas, organismos, plantillas y páginas.">diseño atómico</a> de Frost (2016), con un ejemplo del catálogo de una biblioteca en cada uno.
+Figura&nbsp;1: Los cinco niveles del <a href="92-glosario.html#gl-atomico" class="glos" data-def="Método de @frost2016 que construye las interfaces en cinco niveles: átomos, moléculas, organismos, plantillas y páginas.">diseño atómico</a> de <span class="citation" data-cites="frost2016">Frost (<a href="#ref-frost2016" role="doc-biblioref">2016</a>)</span>, con un ejemplo del catálogo de una biblioteca en cada uno.
 </figcaption>
 </figure>
 </div>
@@ -762,7 +787,7 @@ Figura&nbsp;2: Las tres capas de los <em>design tokens</em>: primitivos, semánt
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
-<div class="ia ia-ordenar" id="ia-t9a-atomico"><script type="application/json" class="ia-datos">{"enunciado":"","explicacion":"","items":["Átomos (un botón, una etiqueta)","Moléculas (un campo de búsqueda con su botón)","Organismos (una cabecera completa)","Plantillas (la estructura de una página)","Páginas (la plantilla con contenido real)"],"tipo":"ordenar","titulo":"Los niveles del diseño atómico (Frost, 2016), de menor a mayor"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-ordenar" id="ia-t9a-atomico"><script type="application/json" class="ia-datos">{"enunciado":"","explicacion":"","items":["Átomos (un botón, una etiqueta)","Moléculas (un campo de búsqueda con su botón)","Organismos (una cabecera completa)","Plantillas (la estructura de una página)","Páginas (la plantilla con contenido real)"],"tipo":"ordenar","titulo":"Los niveles del diseño atómico [@frost2016], de menor a mayor"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 <div class="ia ia-clasificar" id="ia-t9a-capa"><script type="application/json" class="ia-datos">{"categorias":["Primitivo","Semántico","De componente"],"enunciado":"","explicacion":"","items":[{"categoria":"Primitivo","explicacion":"","texto":"<code>azul-900: #000e78<\/code>"},{"categoria":"Semántico","explicacion":"","texto":"<code>color-error: rojo-700<\/code>"},{"categoria":"De componente","explicacion":"","texto":"<code>boton-primario-fondo: color-accion<\/code>"},{"categoria":"Primitivo","explicacion":"","texto":"<code>espacio-8: 32px<\/code>"},{"categoria":"Semántico","explicacion":"","texto":"<code>color-texto-secundario: gris-700<\/code>"},{"categoria":"De componente","explicacion":"","texto":"<code>tarjeta-sombra: sombra-2<\/code>"}],"tipo":"clasificar","titulo":"¿Qué capa de token es?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 <div class="ia ia-clasificar" id="ia-t9a-gobernanza"><script type="application/json" class="ia-datos">{"categorias":["Sí","No"],"enunciado":"","explicacion":"","items":[{"categoria":"Sí","explicacion":"","texto":"Un registro de cambios con versiones semánticas"},{"categoria":"No","explicacion":"","texto":"Cada equipo crea su propio botón «porque es un caso especial»"},{"categoria":"Sí","explicacion":"","texto":"Un canal para proponer componentes nuevos y criterios para\naceptarlos"},{"categoria":"No","explicacion":"","texto":"La documentación solo vive en la cabeza de quien creó el sistema"}],"tipo":"clasificar","titulo":"¿Buena gobernanza del sistema?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
@@ -869,6 +894,14 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-churchill2019" class="csl-entry" role="listitem">
+Churchill, E. F. (2019). <span>Scaling UX with design systems</span>. <em>Interactions</em>, <em>26</em>(5), 22-23. <a href="https://doi.org/10.1145/3352681">https://doi.org/10.1145/3352681</a>
+</div>
+<div id="ref-frost2016" class="csl-entry" role="listitem">
+Frost, B. (2016). <em><span><em>Atomic design</em></span></em>. <a href="https://atomicdesign.bradfrost.com/">https://atomicdesign.bradfrost.com/</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -447,6 +467,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./95-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -570,9 +595,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>W3C (2023). <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">Understanding SC 1.4.3: Contrast (minimum)</a>. La justificación del umbral de 4,5:1.</li>
-<li>Malloy, V. (2015). <em>Intersecting colors: Josef Albers and his contemporaries</em>. Amherst College Press. La interacción del color en la tradición de Albers (bibliografía complementaria de la asignatura).</li>
-<li>WebAIM. <a href="https://webaim.org/articles/contrast/">Contrast and color accessibility</a>. Guía práctica.</li>
+<li><span class="citation" data-cites="w3c2023">W3C (<a href="#ref-w3c2023" role="doc-biblioref">2023</a>)</span> — La justificación del umbral de 4,5:1.</li>
+<li><span class="citation" data-cites="malloy2015">Malloy (<a href="#ref-malloy2015" role="doc-biblioref">2015</a>)</span> — La interacción del color en la tradición de Albers (bibliografía complementaria de la asignatura).</li>
+<li><span class="citation" data-cites="webaimsf">WebAIM (<a href="#ref-webaimsf" role="doc-biblioref">s.&nbsp;f.</a>)</span></li>
 </ul>
 </section>
 </section>
@@ -980,6 +1005,17 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC02IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-malloy2015" class="csl-entry" role="listitem">
+Malloy, V. (2015). <em><span>Intersecting colors: Josef Albers and his contemporaries</span></em>. Amherst College Press.
+</div>
+<div id="ref-w3c2023" class="csl-entry" role="listitem">
+W3C. (2023). <em><span>Understanding SC 1.4.3: Contrast (minimum)</span></em>. <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html</a>
+</div>
+<div id="ref-webaimsf" class="csl-entry" role="listitem">
+WebAIM. (s.&nbsp;f.). <em><span>Contrast and color accessibility</span></em>. Guía práctica. Recuperado <a href="https://webaim.org/articles/contrast/">https://webaim.org/articles/contrast/</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

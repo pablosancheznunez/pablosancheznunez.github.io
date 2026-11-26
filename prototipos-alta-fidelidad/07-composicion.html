@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -447,6 +467,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./95-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -569,14 +594,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Lidwell, W.; Holden, K.; Butler, J. (2011). <em>Principios universales de diseño</em>. Blume. Entradas sobre alineación, <a href="92-glosario.html#gl-proximidad" class="glos" data-def="Principio de la Gestalt: lo cercano se percibe como relacionado.">proximidad</a>, simetría y proporción áurea.</li>
-<li>Nielsen Norman Group. <a href="https://www.nngroup.com/articles/using-grids-in-interface-designs/">Using grids in interface designs</a>. Rejillas en interfaces.</li>
+<li><span class="citation" data-cites="lidwell2011">Lidwell et&nbsp;al. (<a href="#ref-lidwell2011" role="doc-biblioref">2011</a>)</span> — Entrada sobre el <a href="92-glosario.html#gl-estetica" class="glos" data-def="Tendencia a percibir como más fáciles de usar las interfaces que se perciben como atractivas.">efecto de estética-usabilidad</a> (bibliografía complementaria de la asignatura).</li>
+<li><span class="citation" data-cites="nielsennormangroupsf">Nielsen Norman Group (<a href="#ref-nielsennormangroupsf" role="doc-biblioref">s.&nbsp;f.</a>)</span></li>
 </ul>
 </section>
 </section>
 <section id="qué-hace-que-una-composición-funcione" class="level2">
 <h2 class="anchored" data-anchor-id="qué-hace-que-una-composición-funcione">1. Qué hace que una composición funcione</h2>
-<p>Lavie y Tractinsky (2004) estudiaron cómo perciben las personas la estética de los sitios web y encontraron dos dimensiones: la <a href="92-glosario.html#gl-clasica" class="glos" data-def="Dos dimensiones de la estética percibida: orden y claridad, frente a creatividad y originalidad (Lavie y Tractinsky, 2004)."><strong>estética clásica</strong></a> (orden, claridad, limpieza, simetría) y la <strong>estética expresiva</strong> (creatividad, originalidad, sofisticación). La composición trabaja sobre todo la primera: una interfaz ordenada se percibe como clara y fácil. La segunda depende de la identidad visual y conviene dosificarla donde no estorbe a la tarea.</p>
+<p><span class="citation" data-cites="lavie2004">Lavie y Tractinsky (<a href="#ref-lavie2004" role="doc-biblioref">2004</a>)</span> estudiaron cómo perciben las personas la estética de los sitios web y encontraron dos dimensiones: la <a href="92-glosario.html#gl-clasica" class="glos" data-def="Dos dimensiones de la estética percibida: orden y claridad, frente a creatividad y originalidad [@lavie2004]."><strong>estética clásica</strong></a> (orden, claridad, limpieza, simetría) y la <strong>estética expresiva</strong> (creatividad, originalidad, sofisticación). La composición trabaja sobre todo la primera: una interfaz ordenada se percibe como clara y fácil. La segunda depende de la identidad visual y conviene dosificarla donde no estorbe a la tarea.</p>
 </section>
 <section id="rejillas" class="level2">
 <h2 class="anchored" data-anchor-id="rejillas">2. Rejillas</h2>
@@ -758,7 +783,7 @@ Figura&nbsp;2: Cuatro principios de la Gestalt que se usan a diario en composici
 <p>La pantalla de detalle tiene: foto, nombre, capacidad, equipamiento, barra de disponibilidad y botón de reserva. Primera composición: todos los elementos con el mismo peso visual; la mirada no sabe dónde ir.</p>
 <p>Recomposición con principios Gestalt y jerarquía:</p>
 <ul>
-<li><strong>Proximidad:</strong> capacidad y equipamiento agrupados en un bloque «Características».</li>
+<li><a href="92-glosario.html#gl-proximidad" class="glos" data-def="Principio de la Gestalt: lo cercano se percibe como relacionado."><strong>Proximidad:</strong></a> capacidad y equipamiento agrupados en un bloque «Características».</li>
 <li><strong>Contraste y tamaño:</strong> la barra de disponibilidad es el elemento más grande tras la foto, porque es la decisión clave.</li>
 <li><strong>Alineación</strong> a una retícula de 4 columnas en móvil.</li>
 <li><strong>Acción principal</strong> fija en la parte inferior, al alcance del pulgar.</li>
@@ -878,6 +903,17 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0zIiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-lavie2004" class="csl-entry" role="listitem">
+Lavie, T., y Tractinsky, N. (2004). <span>Assessing dimensions of perceived visual aesthetics of web sites</span>. <em>International Journal of Human-Computer Studies</em>, <em>60</em>(3), 269-298. <a href="https://doi.org/10.1016/j.ijhcs.2003.09.002">https://doi.org/10.1016/j.ijhcs.2003.09.002</a>
+</div>
+<div id="ref-lidwell2011" class="csl-entry" role="listitem">
+Lidwell, W., Holden, K., y Butler, J. (2011). <em><span>Principios universales de diseño</span></em>. Blume.
+</div>
+<div id="ref-nielsennormangroupsf" class="csl-entry" role="listitem">
+Nielsen Norman Group. (s.&nbsp;f.). <em><span>Using grids in interface designs</span></em>. Rejillas en interfaces. Recuperado <a href="https://www.nngroup.com/articles/using-grids-in-interface-designs/">https://www.nngroup.com/articles/using-grids-in-interface-designs/</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

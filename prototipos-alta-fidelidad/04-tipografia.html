@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -447,6 +467,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./95-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -569,8 +594,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Lupton, E. (2024). <em>Pensar con tipos</em> (ed.&nbsp;de D. Giménez). Gustavo Gili. Fundamentos de tipografía (bibliografía complementaria de la asignatura).</li>
-<li>Material Design 3. <a href="https://m3.material.io/styles/typography/overview">Typography</a>. Una escala tipográfica de sistema documentada.</li>
+<li><span class="citation" data-cites="lupton2024">Lupton (<a href="#ref-lupton2024" role="doc-biblioref">2024</a>)</span> — Fundamentos de tipografía (bibliografía complementaria de la asignatura).</li>
+<li><span class="citation" data-cites="materialdesign3sf">Material Design 3 (<a href="#ref-materialdesign3sf" role="doc-biblioref">s.&nbsp;f.</a>)</span> — Una escala tipográfica de sistema documentada.</li>
 </ul>
 </section>
 </section>
@@ -604,7 +629,7 @@ Figura&nbsp;1: Escala modular de base 16 px y razón 1,25: cada paso multiplica 
 <h2 class="anchored" data-anchor-id="espaciado-y-longitud-de-línea">3. Espaciado y longitud de línea</h2>
 <ul>
 <li><a href="92-glosario.html#gl-interlineado" class="glos" data-def="Altura de línea: distancia vertical entre líneas de texto."><strong>Interlineado</strong></a>: para el texto de lectura, en torno a 1,5 veces el tamaño de la letra; los titulares necesitan menos. Las WCAG exigen que el contenido siga funcionando si la persona aumenta el interlineado hasta 1,5 y el espacio entre párrafos hasta 2 veces el tamaño.</li>
-<li><strong>Longitud de línea</strong>: Dyson (2004) revisó la investigación sobre la lectura en pantalla y encontró que las líneas largas se leen algo más rápido, pero que las personas prefieren longitudes moderadas. Como regla práctica de diseño se usan de 45 a 75 caracteres por línea para el texto de lectura.</li>
+<li><strong>Longitud de línea</strong>: <span class="citation" data-cites="dyson2004">Dyson (<a href="#ref-dyson2004" role="doc-biblioref">2004</a>)</span> revisó la investigación sobre la lectura en pantalla y encontró que las líneas largas se leen algo más rápido, pero que las personas prefieren longitudes moderadas. Como regla práctica de diseño se usan de 45 a 75 caracteres por línea para el texto de lectura.</li>
 <li><strong>Tamaño</strong>: 16 px es el tamaño de referencia del texto de los navegadores; el texto de lectura no debería ser menor en móvil.</li>
 <li><strong>Unidades relativas</strong> (rem): permiten que la interfaz respete el tamaño de letra que la persona ha elegido en su sistema.</li>
 </ul>
@@ -928,6 +953,17 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC02IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-dyson2004" class="csl-entry" role="listitem">
+Dyson, M. C. (2004). <span>How physical text layout affects reading from screen</span>. <em>Behaviour &amp; Information Technology</em>, <em>23</em>(6), 377-393. <a href="https://doi.org/10.1080/01449290410001715714">https://doi.org/10.1080/01449290410001715714</a>
+</div>
+<div id="ref-lupton2024" class="csl-entry" role="listitem">
+Lupton, E. (2024). <em><span>Pensar con tipos</span></em> (ed. de D. Giménez). Gustavo Gili.
+</div>
+<div id="ref-materialdesign3sf" class="csl-entry" role="listitem">
+Material Design 3. (s.&nbsp;f.). <em><span>Typography</span></em>. Recuperado <a href="https://m3.material.io/styles/typography/overview">https://m3.material.io/styles/typography/overview</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
