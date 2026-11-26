@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -441,6 +461,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#analizar-tu-posición-dafo" id="toc-analizar-tu-posición-dafo" class="nav-link" data-scroll-target="#analizar-tu-posición-dafo">4. Analizar tu posición: DAFO</a></li>
   <li><a href="#lab-e1-cartera" id="toc-lab-e1-cartera" class="nav-link" data-scroll-target="#lab-e1-cartera">Laboratorio: tu cartera de problemas</a></li>
   <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#segundo-caso-práctico-resuelto" id="toc-segundo-caso-práctico-resuelto" class="nav-link" data-scroll-target="#segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</a></li>
   <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-e1" id="toc-reto-e1" class="nav-link" data-scroll-target="#reto-e1">Reto evaluable</a></li>
@@ -532,7 +553,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="elegir-problemas" class="level2">
 <h2 class="anchored" data-anchor-id="elegir-problemas">2. Elegir problemas</h2>
-<p>Alon (2009) propone valorar cada problema en dos ejes: <strong>dificultad</strong> (cuánto tiempo y esfuerzo exige) y <strong>ganancia de conocimiento</strong> (cuánto avanzaría la comprensión si sale bien). Para un doctorando, conviene empezar por problemas <strong>fáciles y de interés moderado o alto</strong>, que permiten aprender y publicar; los problemas difíciles y de gran interés son apuestas de largo plazo para cuando hay experiencia. Insiste además en dos ideas:</p>
+<p><span class="citation" data-cites="alon2009">Alon (<a href="#ref-alon2009" role="doc-biblioref">2009</a>)</span> propone valorar cada problema en dos ejes: <strong>dificultad</strong> (cuánto tiempo y esfuerzo exige) y <strong>ganancia de conocimiento</strong> (cuánto avanzaría la comprensión si sale bien). Para un doctorando, conviene empezar por problemas <strong>fáciles y de interés moderado o alto</strong>, que permiten aprender y publicar; los problemas difíciles y de gran interés son apuestas de largo plazo para cuando hay experiencia. Insiste además en dos ideas:</p>
 <ul>
 <li><strong>Elige con calma.</strong> Dedica tiempo explícito (semanas, no horas) a elegir el problema; es la decisión con más consecuencias.</li>
 <li><strong>Escúchate.</strong> El interés propio es un buen predictor de que perseverarás cuando haya dificultades.</li>
@@ -677,6 +698,179 @@ Figura&nbsp;1: La matriz de Alon: valorar cada problema por su dificultad y por 
 </div>
 </div>
 </section>
+<section id="segundo-caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Un DAFO que termina en decisiones
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un grupo pequeño de documentación (tres personas) prepara su plan a tres años. Su DAFO inicial es una lista de 20 puntos que no lleva a ninguna parte. Lo rehacen cruzando los cuadrantes, que es donde el análisis se convierte en estrategia:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cruce</th>
+<th>Pregunta</th>
+<th>Decisión</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fortaleza × oportunidad</td>
+<td>¿Qué fortaleza nos deja aprovechar una oportunidad?</td>
+<td>Tenemos datos propios de repositorios y hay una convocatoria sobre ciencia abierta: <strong>solicitarla</strong>.</td>
+</tr>
+<tr class="even">
+<td>Debilidad × oportunidad</td>
+<td>¿Qué debilidad nos impide aprovecharla?</td>
+<td>Nadie programa con soltura: <strong>formación en R</strong> el primer semestre.</td>
+</tr>
+<tr class="odd">
+<td>Fortaleza × amenaza</td>
+<td>¿Qué fortaleza nos protege?</td>
+<td>Colaboración estable con un grupo extranjero: <strong>coautorías</strong> si se recorta la financiación nacional.</td>
+</tr>
+<tr class="even">
+<td>Debilidad × amenaza</td>
+<td>¿Qué combinación nos pone en riesgo?</td>
+<td>Todo depende de una persona con contrato temporal: <strong>documentar procesos</strong> y repartir tareas.</td>
+</tr>
+</tbody>
+</table>
+<p>El resultado son cuatro decisiones con responsable y fecha, no veinte observaciones. Si un punto del DAFO no cambia ninguna decisión, sobra.</p>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-e1-dafo-cruce" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-e1-dafo-cruce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 275.88 278.45" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 264.05)">
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-264.05 261.48,-264.05 261.48,14.4 -14.4,14.4"></polygon>
+<!-- F -->
+<g id="node1" class="node">
+<title>F</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M65.93,-184.32C65.93,-184.32 22.23,-184.32 22.23,-184.32 16.23,-184.32 10.23,-178.32 10.23,-172.32 10.23,-172.32 10.23,-160.32 10.23,-160.32 10.23,-154.32 16.23,-148.32 22.23,-148.32 22.23,-148.32 65.93,-148.32 65.93,-148.32 71.93,-148.32 77.93,-154.32 77.93,-160.32 77.93,-160.32 77.93,-172.32 77.93,-172.32 77.93,-178.32 71.93,-184.32 65.93,-184.32"></path>
+<text text-anchor="middle" x="44.08" y="-163.02" font-family="Helvetica,sans-Serif" font-size="11.00">Fortalezas</text>
+</g>
+<!-- a1 -->
+<g id="node5" class="node">
+<title>a1</title>
+<ellipse fill="#eef3fb" stroke="#1a4d8f" cx="185.62" cy="-225.32" rx="51.18" ry="24.15"></ellipse>
+<text text-anchor="middle" x="185.62" y="-228.62" font-family="Helvetica,sans-Serif" font-size="11.00">Aprovechar</text>
+<text text-anchor="middle" x="185.62" y="-215.42" font-family="Helvetica,sans-Serif" font-size="11.00">(FO)</text>
+</g>
+<!-- F&#45;&gt;a1 -->
+<g id="edge1" class="edge">
+<title>F-&gt;a1</title>
+<path fill="none" stroke="#45433f" d="M77.8,-180.16C95.59,-187.68 117.91,-197.12 137.54,-205.42"></path>
+<polygon fill="#45433f" stroke="#45433f" points="136.35,-208.72 146.93,-209.39 139.08,-202.27 136.35,-208.72"></polygon>
+</g>
+<!-- a3 -->
+<g id="node7" class="node">
+<title>a3</title>
+<ellipse fill="#eef3fb" stroke="#1a4d8f" cx="185.62" cy="-91.32" rx="43.12" ry="24.15"></ellipse>
+<text text-anchor="middle" x="185.62" y="-94.62" font-family="Helvetica,sans-Serif" font-size="11.00">Defender</text>
+<text text-anchor="middle" x="185.62" y="-81.42" font-family="Helvetica,sans-Serif" font-size="11.00">(FA)</text>
+</g>
+<!-- F&#45;&gt;a3 -->
+<g id="edge5" class="edge">
+<title>F-&gt;a3</title>
+<path fill="none" stroke="#45433f" d="M77.8,-148.74C97.73,-138.03 123.34,-124.26 144.48,-112.9"></path>
+<polygon fill="#45433f" stroke="#45433f" points="146.4,-115.84 153.55,-108.03 143.08,-109.68 146.4,-115.84"></polygon>
+</g>
+<!-- D -->
+<g id="node2" class="node">
+<title>D</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M69.06,-125.32C69.06,-125.32 19.1,-125.32 19.1,-125.32 13.1,-125.32 7.1,-119.32 7.1,-113.32 7.1,-113.32 7.1,-101.32 7.1,-101.32 7.1,-95.32 13.1,-89.32 19.1,-89.32 19.1,-89.32 69.06,-89.32 69.06,-89.32 75.06,-89.32 81.06,-95.32 81.06,-101.32 81.06,-101.32 81.06,-113.32 81.06,-113.32 81.06,-119.32 75.06,-125.32 69.06,-125.32"></path>
+<text text-anchor="middle" x="44.08" y="-104.02" font-family="Helvetica,sans-Serif" font-size="11.00">Debilidades</text>
+</g>
+<!-- a2 -->
+<g id="node6" class="node">
+<title>a2</title>
+<ellipse fill="#eef3fb" stroke="#1a4d8f" cx="185.62" cy="-158.32" rx="39.31" ry="24.15"></ellipse>
+<text text-anchor="middle" x="185.62" y="-161.62" font-family="Helvetica,sans-Serif" font-size="11.00">Corregir</text>
+<text text-anchor="middle" x="185.62" y="-148.42" font-family="Helvetica,sans-Serif" font-size="11.00">(DO)</text>
+</g>
+<!-- D&#45;&gt;a2 -->
+<g id="edge3" class="edge">
+<title>D-&gt;a2</title>
+<path fill="none" stroke="#45433f" d="M81.02,-120.46C99.53,-127.22 122.24,-135.52 141.67,-142.63"></path>
+<polygon fill="#45433f" stroke="#45433f" points="140.61,-145.97 151.2,-146.11 143.01,-139.39 140.61,-145.97"></polygon>
+</g>
+<!-- a4 -->
+<g id="node8" class="node">
+<title>a4</title>
+<ellipse fill="#eef3fb" stroke="#1a4d8f" cx="185.62" cy="-24.32" rx="61.42" ry="24.15"></ellipse>
+<text text-anchor="middle" x="185.62" y="-27.62" font-family="Helvetica,sans-Serif" font-size="11.00">Reducir riesgo</text>
+<text text-anchor="middle" x="185.62" y="-14.42" font-family="Helvetica,sans-Serif" font-size="11.00">(DA)</text>
+</g>
+<!-- D&#45;&gt;a4 -->
+<g id="edge7" class="edge">
+<title>D-&gt;a4</title>
+<path fill="none" stroke="#45433f" d="M73.82,-89.11C88.75,-79.75 107.33,-68.26 124.16,-58.32 129.28,-55.3 134.66,-52.18 140.03,-49.12"></path>
+<polygon fill="#45433f" stroke="#45433f" points="142.02,-52.01 148.99,-44.03 138.57,-45.92 142.02,-52.01"></polygon>
+</g>
+<!-- O -->
+<g id="node3" class="node">
+<title>O</title>
+<path fill="#eaf6ef" stroke="#1a4d8f" d="M76.24,-240.32C76.24,-240.32 11.92,-240.32 11.92,-240.32 5.92,-240.32 -0.08,-234.32 -0.08,-228.32 -0.08,-228.32 -0.08,-216.32 -0.08,-216.32 -0.08,-210.32 5.92,-204.32 11.92,-204.32 11.92,-204.32 76.24,-204.32 76.24,-204.32 82.24,-204.32 88.24,-210.32 88.24,-216.32 88.24,-216.32 88.24,-228.32 88.24,-228.32 88.24,-234.32 82.24,-240.32 76.24,-240.32"></path>
+<text text-anchor="middle" x="44.08" y="-219.02" font-family="Helvetica,sans-Serif" font-size="11.00">Oportunidades</text>
+</g>
+<!-- O&#45;&gt;a1 -->
+<g id="edge2" class="edge">
+<title>O-&gt;a1</title>
+<path fill="none" stroke="#45433f" d="M88.47,-223.26C99.84,-223.5 112.32,-223.77 124.4,-224.03"></path>
+<polygon fill="#45433f" stroke="#45433f" points="124.35,-227.53 134.43,-224.25 124.5,-220.53 124.35,-227.53"></polygon>
+</g>
+<!-- O&#45;&gt;a2 -->
+<g id="edge4" class="edge">
+<title>O-&gt;a2</title>
+<path fill="none" stroke="#45433f" d="M84.69,-204.16C103.31,-195.62 125.46,-185.46 144.18,-176.87"></path>
+<polygon fill="#45433f" stroke="#45433f" points="145.7,-180.03 153.33,-172.67 142.78,-173.66 145.7,-180.03"></polygon>
+</g>
+<!-- A -->
+<g id="node4" class="node">
+<title>A</title>
+<path fill="#fdf0e8" stroke="#1a4d8f" d="M66.05,-61.32C66.05,-61.32 22.11,-61.32 22.11,-61.32 16.11,-61.32 10.11,-55.32 10.11,-49.32 10.11,-49.32 10.11,-37.32 10.11,-37.32 10.11,-31.32 16.11,-25.32 22.11,-25.32 22.11,-25.32 66.05,-25.32 66.05,-25.32 72.05,-25.32 78.05,-31.32 78.05,-37.32 78.05,-37.32 78.05,-49.32 78.05,-49.32 78.05,-55.32 72.05,-61.32 66.05,-61.32"></path>
+<text text-anchor="middle" x="44.08" y="-40.02" font-family="Helvetica,sans-Serif" font-size="11.00">Amenazas</text>
+</g>
+<!-- A&#45;&gt;a3 -->
+<g id="edge6" class="edge">
+<title>A-&gt;a3</title>
+<path fill="none" stroke="#45433f" d="M78.15,-54.7C96.3,-60.94 119.07,-68.78 138.9,-75.6"></path>
+<polygon fill="#45433f" stroke="#45433f" points="137.77,-78.91 148.36,-78.85 140.04,-72.29 137.77,-78.91"></polygon>
+</g>
+<!-- A&#45;&gt;a4 -->
+<g id="edge8" class="edge">
+<title>A-&gt;a4</title>
+<path fill="none" stroke="#45433f" d="M78.15,-38.82C89.84,-37.23 103.45,-35.38 116.95,-33.54"></path>
+<polygon fill="#45433f" stroke="#45433f" points="117.79,-36.96 127.23,-32.14 116.85,-30.02 117.79,-36.96"></polygon>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-e1-dafo-cruce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Del DAFO a las decisiones: cada cruce de cuadrantes sugiere un tipo de acción.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="ejercicios-graduados" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
 <p><strong>Básico.</strong> ¿Qué hacer con una idea de dificultad 5 y ganancia 2?</p>
@@ -723,7 +917,7 @@ Figura&nbsp;1: La matriz de Alon: valorar cada problema por su dificultad y por 
 <div class="webex-check webex-box">
 <ol type="1">
 <li>Lo esencial de una estrategia es decidir también qué no se hace. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
-<li>Alon (2009) valora los problemas según su dificultad y su <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">coste económico</option><option value="answer">ganancia de conocimiento</option><option value="x">número de citas esperado</option></select></li>
+<li><span class="citation" data-cites="alon2009">Alon (<a href="#ref-alon2009" role="doc-biblioref">2009</a>)</span> valora los problemas según su dificultad y su <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">coste económico</option><option value="answer">ganancia de conocimiento</option><option value="x">número de citas esperado</option></select></li>
 <li>Para empezar un doctorado, Alon recomienda sobre todo problemas <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">difíciles y de gran interés</option><option value="answer">viables y de interés moderado o alto</option><option value="x">fáciles y sin interés</option></select></li>
 <li>Lo que se deja de hacer al aceptar un proyecto es su coste de <input class="webex-solveme nospaces ignorecase" size="13" aria-label="Escribe tu respuesta" data-answer="[&quot;oportunidad&quot;]"></li>
 <li>En el DAFO, las oportunidades y las amenazas son factores externos. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
@@ -748,6 +942,11 @@ Figura&nbsp;1: La matriz de Alon: valorar cada problema por su dificultad y por 
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-alon2009" class="csl-entry" role="listitem">
+Alon, U. (2009). <span>How to choose a good scientific problem</span>. <em>Molecular Cell</em>, <em>35</em>(6), 726-728. <a href="https://doi.org/10.1016/j.molcel.2009.09.013">https://doi.org/10.1016/j.molcel.2009.09.013</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

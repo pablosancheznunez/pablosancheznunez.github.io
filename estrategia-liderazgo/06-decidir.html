@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -437,6 +457,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#lab-e6-matriz" id="toc-lab-e6-matriz" class="nav-link" data-scroll-target="#lab-e6-matriz">Laboratorio: matriz de decisión ponderada</a></li>
   <li><a href="#negociar" id="toc-negociar" class="nav-link" data-scroll-target="#negociar">3. Negociar</a></li>
   <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#segundo-caso-práctico-resuelto" id="toc-segundo-caso-práctico-resuelto" class="nav-link" data-scroll-target="#segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</a></li>
   <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-e6" id="toc-reto-e6" class="nav-link" data-scroll-target="#reto-e6">Reto evaluable</a></li>
@@ -518,7 +539,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="atajos-que-engañan" class="level2">
 <h2 class="anchored" data-anchor-id="atajos-que-engañan">1. Atajos que engañan</h2>
-<p>Tversky y Kahneman (1974) mostraron que, al juzgar probabilidades, usamos <a href="92-glosario.html#gl-heuristica" class="glos" data-def="Atajo mental que simplifica un juicio y puede producir errores sistemáticos."><strong>heurísticas</strong></a> (atajos mentales) que suelen funcionar, pero producen errores sistemáticos:</p>
+<p><span class="citation" data-cites="tversky1974">Tversky y Kahneman (<a href="#ref-tversky1974" role="doc-biblioref">1974</a>)</span> mostraron que, al juzgar probabilidades, usamos <a href="92-glosario.html#gl-heuristica" class="glos" data-def="Atajo mental que simplifica un juicio y puede producir errores sistemáticos."><strong>heurísticas</strong></a> (atajos mentales) que suelen funcionar, pero producen errores sistemáticos:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -675,6 +696,122 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
+<section id="segundo-caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Un premortem antes de elegir
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un grupo duda entre dos opciones para su próximo estudio: una encuesta propia o reutilizar datos abiertos. Para evitar el exceso de confianza, la coordinadora propone un <strong>premortem</strong>: «Imaginad que es dentro de dos años y el proyecto ha fracasado. Escribid en cinco minutos por qué».</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Opción</th>
+<th>Causas imaginadas del fracaso (más repetidas)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Encuesta propia</td>
+<td>Tasa de respuesta baja; el cuestionario no estaba validado; se agotó el presupuesto</td>
+</tr>
+<tr class="even">
+<td>Datos abiertos</td>
+<td>Las variables no medían lo que necesitábamos; la fuente cambió su formato</td>
+</tr>
+</tbody>
+</table>
+<p>El ejercicio no decide por ellos, pero cambia la conversación: para la encuesta, el riesgo principal (la tasa de respuesta) es difícil de controlar; para los datos abiertos, el riesgo principal se puede comprobar <strong>antes</strong> de empezar, revisando el libro de códigos. Deciden reutilizar los datos, tras una semana de verificación de las variables, y guardar la encuesta como estudio complementario.</p>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-e6-premortem" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-e6-premortem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 828.28 97.60" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 83.2)">
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-83.2 813.88,-83.2 813.88,14.4 -14.4,14.4"></polygon>
+<!-- d -->
+<g id="node1" class="node">
+<title>d</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M97.34,-52.4C97.34,-52.4 12.22,-52.4 12.22,-52.4 6.22,-52.4 0.22,-46.4 0.22,-40.4 0.22,-40.4 0.22,-28.4 0.22,-28.4 0.22,-22.4 6.22,-16.4 12.22,-16.4 12.22,-16.4 97.34,-16.4 97.34,-16.4 103.34,-16.4 109.34,-22.4 109.34,-28.4 109.34,-28.4 109.34,-40.4 109.34,-40.4 109.34,-46.4 103.34,-52.4 97.34,-52.4"></path>
+<text text-anchor="middle" x="54.78" y="-31.1" font-family="Helvetica,sans-Serif" font-size="11.00">Decisión pendiente</text>
+</g>
+<!-- f -->
+<g id="node2" class="node">
+<title>f</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M242.87,-52.4C242.87,-52.4 157.79,-52.4 157.79,-52.4 151.79,-52.4 145.79,-46.4 145.79,-40.4 145.79,-40.4 145.79,-28.4 145.79,-28.4 145.79,-22.4 151.79,-16.4 157.79,-16.4 157.79,-16.4 242.87,-16.4 242.87,-16.4 248.87,-16.4 254.87,-22.4 254.87,-28.4 254.87,-28.4 254.87,-40.4 254.87,-40.4 254.87,-46.4 248.87,-52.4 242.87,-52.4"></path>
+<text text-anchor="middle" x="200.33" y="-37.7" font-family="Helvetica,sans-Serif" font-size="11.00">Imaginar el fracaso</text>
+<text text-anchor="middle" x="200.33" y="-24.5" font-family="Helvetica,sans-Serif" font-size="11.00">(5 minutos)</text>
+</g>
+<!-- d&#45;&gt;f -->
+<g id="edge1" class="edge">
+<title>d-&gt;f</title>
+<path fill="none" stroke="#45433f" d="M109.64,-34.4C118.1,-34.4 126.92,-34.4 135.58,-34.4"></path>
+<polygon fill="#45433f" stroke="#45433f" points="135.64,-37.9 145.64,-34.4 135.64,-30.9 135.64,-37.9"></polygon>
+</g>
+<!-- c -->
+<g id="node3" class="node">
+<title>c</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M359.81,-52.4C359.81,-52.4 303.2,-52.4 303.2,-52.4 297.2,-52.4 291.2,-46.4 291.2,-40.4 291.2,-40.4 291.2,-28.4 291.2,-28.4 291.2,-22.4 297.2,-16.4 303.2,-16.4 303.2,-16.4 359.81,-16.4 359.81,-16.4 365.81,-16.4 371.81,-22.4 371.81,-28.4 371.81,-28.4 371.81,-40.4 371.81,-40.4 371.81,-46.4 365.81,-52.4 359.81,-52.4"></path>
+<text text-anchor="middle" x="331.51" y="-31.1" font-family="Helvetica,sans-Serif" font-size="11.00">Listar causas</text>
+</g>
+<!-- f&#45;&gt;c -->
+<g id="edge2" class="edge">
+<title>f-&gt;c</title>
+<path fill="none" stroke="#45433f" d="M254.99,-34.4C263.57,-34.4 272.4,-34.4 280.88,-34.4"></path>
+<polygon fill="#45433f" stroke="#45433f" points="281,-37.9 291,-34.4 281,-30.9 281,-37.9"></polygon>
+</g>
+<!-- v -->
+<g id="node4" class="node">
+<title>v</title>
+<path fill="#fff7e0" stroke="#1a4d8f" d="M527.26,-65.66C527.26,-65.66 419.56,-37.44 419.56,-37.44 413.75,-35.92 413.75,-32.88 419.56,-31.36 419.56,-31.36 527.26,-3.14 527.26,-3.14 533.07,-1.62 544.68,-1.62 550.48,-3.14 550.48,-3.14 658.19,-31.36 658.19,-31.36 663.99,-32.88 663.99,-35.92 658.19,-37.44 658.19,-37.44 550.48,-65.66 550.48,-65.66 544.68,-67.18 533.07,-67.18 527.26,-65.66"></path>
+<text text-anchor="middle" x="538.87" y="-37.7" font-family="Helvetica,sans-Serif" font-size="11.00">¿Se pueden comprobar</text>
+<text text-anchor="middle" x="538.87" y="-24.5" font-family="Helvetica,sans-Serif" font-size="11.00">antes de empezar?</text>
+</g>
+<!-- c&#45;&gt;v -->
+<g id="edge3" class="edge">
+<title>c-&gt;v</title>
+<path fill="none" stroke="#45433f" d="M372.1,-34.4C379.98,-34.4 388.66,-34.4 397.8,-34.4"></path>
+<polygon fill="#45433f" stroke="#45433f" points="397.88,-37.9 407.88,-34.4 397.88,-30.9 397.88,-37.9"></polygon>
+</g>
+<!-- x -->
+<g id="node5" class="node">
+<title>x</title>
+<path fill="#eaf6ef" stroke="#1a4d8f" d="M787.3,-52.4C787.3,-52.4 718.01,-52.4 718.01,-52.4 712.01,-52.4 706.01,-46.4 706.01,-40.4 706.01,-40.4 706.01,-28.4 706.01,-28.4 706.01,-22.4 712.01,-16.4 718.01,-16.4 718.01,-16.4 787.3,-16.4 787.3,-16.4 793.3,-16.4 799.3,-22.4 799.3,-28.4 799.3,-28.4 799.3,-40.4 799.3,-40.4 799.3,-46.4 793.3,-52.4 787.3,-52.4"></path>
+<text text-anchor="middle" x="752.66" y="-37.7" font-family="Helvetica,sans-Serif" font-size="11.00">Decidir con</text>
+<text text-anchor="middle" x="752.66" y="-24.5" font-family="Helvetica,sans-Serif" font-size="11.00">esa información</text>
+</g>
+<!-- v&#45;&gt;x -->
+<g id="edge4" class="edge">
+<title>v-&gt;x</title>
+<path fill="none" stroke="#45433f" d="M670.08,-34.4C678.96,-34.4 687.61,-34.4 695.74,-34.4"></path>
+<polygon fill="#45433f" stroke="#45433f" points="695.75,-37.9 705.75,-34.4 695.75,-30.9 695.75,-37.9"></polygon>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-e6-premortem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: El premortem: imaginar el fracaso para detectar riesgos a tiempo.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="ejercicios-graduados" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
 <p><strong>Básico.</strong> ¿Qué es tu MAAN en el caso?</p>
@@ -720,7 +857,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Responde a todas las preguntas y pulsa <strong>Mostrar respuestas</strong>. No cuenta para la nota.</p>
 <div class="webex-check webex-box">
 <ol type="1">
-<li>Según Tversky y Kahneman (1974), las heurísticas nunca son útiles. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
+<li>Según <span class="citation" data-cites="tversky1974">Tversky y Kahneman (<a href="#ref-tversky1974" role="doc-biblioref">1974</a>)</span>, las heurísticas nunca son útiles. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>Juzgar la frecuencia por la facilidad con que se recuerdan casos es la heurística de <input class="webex-solveme nospaces ignorecase" size="16" aria-label="Escribe tu respuesta" data-answer="[&quot;disponibilidad&quot;]"></li>
 <li>Subestimar el tiempo de tus propios proyectos es la falacia de la <input class="webex-solveme nospaces ignorecase" size="16" aria-label="Escribe tu respuesta" data-answer="[&quot;planificación&quot;,&quot;planificacion&quot;]"></li>
 <li>En un premortem se imagina que el proyecto <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">ha tenido éxito</option><option value="answer">ha fracasado</option><option value="x">no ha empezado</option></select></li>
@@ -746,6 +883,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-tversky1974" class="csl-entry" role="listitem">
+Tversky, A., y Kahneman, D. (1974). <span>Judgment under uncertainty: Heuristics and biases</span>. <em>Science</em>, <em>185</em>(4157), 1124-1131. <a href="https://doi.org/10.1126/science.185.4157.1124">https://doi.org/10.1126/science.185.4157.1124</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

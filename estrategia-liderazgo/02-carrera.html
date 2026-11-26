@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -437,6 +457,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#el-tiempo-lo-importante-frente-a-lo-urgente" id="toc-el-tiempo-lo-importante-frente-a-lo-urgente" class="nav-link" data-scroll-target="#el-tiempo-lo-importante-frente-a-lo-urgente">3. El tiempo: lo importante frente a lo urgente</a></li>
   <li><a href="#lab-e2-tiempo" id="toc-lab-e2-tiempo" class="nav-link" data-scroll-target="#lab-e2-tiempo">Laboratorio: ¿a qué dedicas tu semana?</a></li>
   <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#segundo-caso-práctico-resuelto" id="toc-segundo-caso-práctico-resuelto" class="nav-link" data-scroll-target="#segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</a></li>
   <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-e2" id="toc-reto-e2" class="nav-link" data-scroll-target="#reto-e2">Reto evaluable</a></li>
@@ -518,7 +539,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="muchos-caminos-una-minoría-académica" class="level2">
 <h2 class="anchored" data-anchor-id="muchos-caminos-una-minoría-académica">1. Muchos caminos, una minoría académica</h2>
-<p>Sauermann y Roach (2012) encuestaron a miles de doctorandos de ciencias en universidades de Estados Unidos. La carrera académica era la preferida por muchos al empezar, pero ese interés <strong>disminuía a lo largo del doctorado</strong>, mientras crecía el interés por la industria y otros caminos. Además, los doctorandos percibían que sus directores animaban <strong>más</strong> la carrera académica que las demás. Es una conclusión importante: las plazas académicas estables son muchas menos que los doctores que se forman, y la mayoría trabajará fuera de la universidad.</p>
+<p><span class="citation" data-cites="sauermann2012">Sauermann y Roach (<a href="#ref-sauermann2012" role="doc-biblioref">2012</a>)</span> encuestaron a miles de doctorandos de ciencias en universidades de Estados Unidos. La carrera académica era la preferida por muchos al empezar, pero ese interés <strong>disminuía a lo largo del doctorado</strong>, mientras crecía el interés por la industria y otros caminos. Además, los doctorandos percibían que sus directores animaban <strong>más</strong> la carrera académica que las demás. Es una conclusión importante: las plazas académicas estables son muchas menos que los doctores que se forman, y la mayoría trabajará fuera de la universidad.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -701,6 +722,133 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
+<section id="segundo-caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Una semana tipo con la matriz de Eisenhower
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un doctorando de tercer año anota durante una semana en qué se le va el tiempo y clasifica cada bloque según la matriz importante/urgente:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cuadrante</th>
+<th>Horas</th>
+<th>Ejemplos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Importante y urgente</td>
+<td>6</td>
+<td>Revisión de un artículo con fecha límite</td>
+</tr>
+<tr class="even">
+<td><strong>Importante, no urgente</strong></td>
+<td><strong>4</strong></td>
+<td>Escribir la tesis, aprender un método nuevo</td>
+</tr>
+<tr class="odd">
+<td>Urgente, no importante</td>
+<td>14</td>
+<td>Correos, peticiones de última hora, reuniones sin orden del día</td>
+</tr>
+<tr class="even">
+<td>Ni urgente ni importante</td>
+<td>8</td>
+<td>Redes sociales, reorganizar carpetas</td>
+</tr>
+</tbody>
+</table>
+<p>El diagnóstico es claro: la tesis, que es lo que define su carrera, recibe 4 de 32 horas. Las decisiones que toma:</p>
+<ol type="1">
+<li><strong>Dos bloques fijos de tres horas</strong> a la semana para escribir, a primera hora y sin correo.</li>
+<li><strong>Correo dos veces al día</strong>, con respuestas breves.</li>
+<li>Pide <strong>orden del día</strong> antes de aceptar una reunión.</li>
+</ol>
+<p>Tres semanas después, el bloque «importante, no urgente» ha pasado de 4 a 10 horas. Lo urgente no desaparece, pero deja de decidir por él.</p>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-e2-eisenhower" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-e2-eisenhower-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 525.90 118.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 104.4)">
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-104.4 511.5,-104.4 511.5,14.4 -14.4,14.4"></polygon>
+<!-- U -->
+<g id="node1" class="node">
+<title>U</title>
+<path fill="#fdf0e8" stroke="#1a4d8f" d="M118.71,-90C118.71,-90 14.69,-90 14.69,-90 8.69,-90 2.69,-84 2.69,-78 2.69,-78 2.69,-66 2.69,-66 2.69,-60 8.69,-54 14.69,-54 14.69,-54 118.71,-54 118.71,-54 124.71,-54 130.71,-60 130.71,-66 130.71,-66 130.71,-78 130.71,-78 130.71,-84 124.71,-90 118.71,-90"></path>
+<text text-anchor="middle" x="66.7" y="-75.3" font-family="Helvetica,sans-Serif" font-size="11.00">Urgente, no importante</text>
+<text text-anchor="middle" x="66.7" y="-62.1" font-family="Helvetica,sans-Serif" font-size="11.00">14 h</text>
+</g>
+<!-- I -->
+<g id="node3" class="node">
+<title>I</title>
+<path fill="#eaf6ef" stroke="#1a4d8f" d="M369.88,-63C369.88,-63 266.29,-63 266.29,-63 260.29,-63 254.29,-57 254.29,-51 254.29,-51 254.29,-39 254.29,-39 254.29,-33 260.29,-27 266.29,-27 266.29,-27 369.88,-27 369.88,-27 375.88,-27 381.88,-33 381.88,-39 381.88,-39 381.88,-51 381.88,-51 381.88,-57 375.88,-63 369.88,-63"></path>
+<text text-anchor="middle" x="318.09" y="-48.3" font-family="Helvetica,sans-Serif" font-size="11.00">Importante, no urgente</text>
+<text text-anchor="middle" x="318.09" y="-35.1" font-family="Helvetica,sans-Serif" font-size="11.00">4 h → 10 h</text>
+</g>
+<!-- U&#45;&gt;I -->
+<g id="edge1" class="edge">
+<title>U-&gt;I</title>
+<path fill="none" stroke="#45433f" d="M130.95,-65.15C165.36,-61.43 208.1,-56.8 243.94,-52.92"></path>
+<polygon fill="#45433f" stroke="#45433f" points="244.77,-56.35 254.33,-51.79 244.01,-49.39 244.77,-56.35"></polygon>
+<text text-anchor="middle" x="193.92" y="-65" font-family="Helvetica,sans-Serif" font-size="10.00">correo 2 veces/día</text>
+</g>
+<!-- N -->
+<g id="node2" class="node">
+<title>N</title>
+<path fill="#fdf0e8" stroke="#1a4d8f" d="M121.59,-36C121.59,-36 11.8,-36 11.8,-36 5.8,-36 -0.2,-30 -0.2,-24 -0.2,-24 -0.2,-12 -0.2,-12 -0.2,-6 5.8,0 11.8,0 11.8,0 121.59,0 121.59,0 127.59,0 133.59,-6 133.59,-12 133.59,-12 133.59,-24 133.59,-24 133.59,-30 127.59,-36 121.59,-36"></path>
+<text text-anchor="middle" x="66.7" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Ni urgente ni importante</text>
+<text text-anchor="middle" x="66.7" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">8 h</text>
+</g>
+<!-- N&#45;&gt;I -->
+<g id="edge2" class="edge">
+<title>N-&gt;I</title>
+<path fill="none" stroke="#45433f" d="M133.55,-25.13C167.57,-28.81 209.17,-33.32 244.16,-37.1"></path>
+<polygon fill="#45433f" stroke="#45433f" points="243.99,-40.61 254.31,-38.2 244.74,-33.65 243.99,-40.61"></polygon>
+<text text-anchor="middle" x="193.92" y="-39" font-family="Helvetica,sans-Serif" font-size="10.00">límites</text>
+</g>
+<!-- B -->
+<g id="node4" class="node">
+<title>B</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M485.29,-63C485.29,-63 430.55,-63 430.55,-63 424.55,-63 418.55,-57 418.55,-51 418.55,-51 418.55,-39 418.55,-39 418.55,-33 424.55,-27 430.55,-27 430.55,-27 485.29,-27 485.29,-27 491.29,-27 497.29,-33 497.29,-39 497.29,-39 497.29,-51 497.29,-51 497.29,-57 491.29,-63 485.29,-63"></path>
+<text text-anchor="middle" x="457.92" y="-48.3" font-family="Helvetica,sans-Serif" font-size="11.00">Bloques fijos</text>
+<text text-anchor="middle" x="457.92" y="-35.1" font-family="Helvetica,sans-Serif" font-size="11.00">de escritura</text>
+</g>
+<!-- I&#45;&gt;B -->
+<g id="edge3" class="edge">
+<title>I-&gt;B</title>
+<path fill="none" stroke="#45433f" d="M381.95,-45C390.84,-45 399.86,-45 408.41,-45"></path>
+<polygon fill="#45433f" stroke="#45433f" points="408.58,-48.5 418.58,-45 408.58,-41.5 408.58,-48.5"></polygon>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-e2-eisenhower-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Reasignar tiempo: lo que sale de lo urgente sin importancia se protege para lo importante.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="ejercicios-graduados" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
 <p><strong>Básico.</strong> ¿Es SMART el objetivo «mejorar mi CV»? Reescríbelo.</p>
@@ -717,7 +865,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
 <div class="ia ia-clasificar" id="ia-e2-eisen"><script type="application/json" class="ia-datos">{"categorias":["Importante y urgente","Importante, no urgente","Urgente, no importante","Ni lo uno ni lo otro"],"enunciado":"","explicacion":"","items":[{"categoria":"Importante y urgente","explicacion":"","texto":"Enviar la solicitud de una convocatoria que cierra hoy"},{"categoria":"Importante, no urgente","explicacion":"","texto":"Escribir el artículo principal de la tesis"},{"categoria":"Urgente, no importante","explicacion":"","texto":"Responder a un correo masivo que pide confirmación inmediata"},{"categoria":"Ni lo uno ni lo otro","explicacion":"","texto":"Revisar las redes sociales entre tareas"},{"categoria":"Importante, no urgente","explicacion":"","texto":"Aprender el método que necesitarás el año que viene"}],"tipo":"clasificar","titulo":"Clasifica en la matriz de Eisenhower"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
-<div class="ia ia-escenario" id="ia-e2-oferta"><script type="application/json" class="ia-datos">{"enunciado":"<p>Estás en el tercer año de doctorado. Una empresa te ofrece un puesto\nde analista de datos al terminar, y tu director da por hecho que harás\nun posdoctorado.<\/p>","inicio":"e2e-inicio","nodos":{"e2e-callar":{"final":true,"opciones":[],"texto":"<p>Evitas el conflicto, pero pierdes un consejo valioso y quizá\ncontactos útiles. La transparencia suele reforzar la relación.<\/p>","titulo":"Silencio","valor":"regular"},"e2e-explorar":{"final":false,"opciones":[{"destino":"e2e-callar","texto":"No le dices nada para no molestarle"},{"destino":"e2e-hablar","texto":"Le explicas tus dudas y le pides opinión, dejando claro que la decisión\nes tuya"}],"texto":"<p>Has hablado con varias personas. ¿Cómo tratas el tema con tu\ndirector?<\/p>","titulo":"Explorar","valor":""},"e2e-hablar":{"final":true,"opciones":[],"texto":"<p>Una buena supervisión apoya los objetivos de la persona supervisada,\nno solo los del grupo. Decides con información y sin romper la\nrelación.<\/p>","titulo":"Conversación adulta","valor":"bien"},"e2e-inicio":{"final":false,"opciones":[{"destino":"e2e-rechazo","texto":"Rechazarla: lo normal es seguir en la academia"},{"destino":"e2e-explorar","texto":"Explorar ambas opciones: hablar con gente de los dos mundos y revisar\ntus prioridades"}],"texto":"<p>¿Qué haces primero?<\/p>","titulo":"La oferta","valor":""},"e2e-rechazo":{"final":true,"opciones":[],"texto":"<p>Decides sin información, por inercia. Sauermann y Roach (2012)\nmuestran que muchos doctorandos cambian de preferencias y que el entorno\nempuja hacia la academia; conviene decidir con datos propios.<\/p>","titulo":"Decisión por defecto","valor":"mal"}},"tipo":"escenario","titulo":"Una oferta inesperada"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-escenario" id="ia-e2-oferta"><script type="application/json" class="ia-datos">{"enunciado":"<p>Estás en el tercer año de doctorado. Una empresa te ofrece un puesto\nde analista de datos al terminar, y tu director da por hecho que harás\nun posdoctorado.<\/p>","inicio":"e2e-inicio","nodos":{"e2e-callar":{"final":true,"opciones":[],"texto":"<p>Evitas el conflicto, pero pierdes un consejo valioso y quizá\ncontactos útiles. La transparencia suele reforzar la relación.<\/p>","titulo":"Silencio","valor":"regular"},"e2e-explorar":{"final":false,"opciones":[{"destino":"e2e-callar","texto":"No le dices nada para no molestarle"},{"destino":"e2e-hablar","texto":"Le explicas tus dudas y le pides opinión, dejando claro que la decisión\nes tuya"}],"texto":"<p>Has hablado con varias personas. ¿Cómo tratas el tema con tu\ndirector?<\/p>","titulo":"Explorar","valor":""},"e2e-hablar":{"final":true,"opciones":[],"texto":"<p>Una buena supervisión apoya los objetivos de la persona supervisada,\nno solo los del grupo. Decides con información y sin romper la\nrelación.<\/p>","titulo":"Conversación adulta","valor":"bien"},"e2e-inicio":{"final":false,"opciones":[{"destino":"e2e-rechazo","texto":"Rechazarla: lo normal es seguir en la academia"},{"destino":"e2e-explorar","texto":"Explorar ambas opciones: hablar con gente de los dos mundos y revisar\ntus prioridades"}],"texto":"<p>¿Qué haces primero?<\/p>","titulo":"La oferta","valor":""},"e2e-rechazo":{"final":true,"opciones":[],"texto":"<p>Decides sin información, por inercia. <span class=\"citation\"\ndata-cites=\"sauermann2012\">@sauermann2012<\/span> muestran que muchos\ndoctorandos cambian de preferencias y que el entorno empuja hacia la\nacademia; conviene decidir con datos propios.<\/p>","titulo":"Decisión por defecto","valor":"mal"}},"tipo":"escenario","titulo":"Una oferta inesperada"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-e2" class="level2">
 <h2 class="anchored" data-anchor-id="reto-e2">Reto evaluable</h2>
@@ -745,7 +893,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Responde a todas las preguntas y pulsa <strong>Mostrar respuestas</strong>. No cuenta para la nota.</p>
 <div class="webex-check webex-box">
 <ol type="1">
-<li>Según Sauermann y Roach (2012), el interés por la carrera académica tiende a <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">aumentar durante el doctorado</option><option value="answer">disminuir durante el doctorado</option><option value="x">mantenerse igual</option></select></li>
+<li>Según <span class="citation" data-cites="sauermann2012">Sauermann y Roach (<a href="#ref-sauermann2012" role="doc-biblioref">2012</a>)</span>, el interés por la carrera académica tiende a <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">aumentar durante el doctorado</option><option value="answer">disminuir durante el doctorado</option><option value="x">mantenerse igual</option></select></li>
 <li>La mayoría de las personas doctoradas trabajará en la universidad. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>La comunicación, la gestión o la docencia son competencias <input class="webex-solveme nospaces ignorecase" size="15" aria-label="Escribe tu respuesta" data-answer="[&quot;transferibles&quot;]"></li>
 <li>Un plan individual de desarrollo se revisa de forma periódica. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
@@ -771,6 +919,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-sauermann2012" class="csl-entry" role="listitem">
+Sauermann, H., y Roach, M. (2012). <span>Science PhD career preferences: Levels, changes, and advisor encouragement</span>. <em>PLoS ONE</em>, <em>7</em>(5), e36307. <a href="https://doi.org/10.1371/journal.pone.0036307">https://doi.org/10.1371/journal.pone.0036307</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -441,6 +461,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#repartir-el-crédito-credit" id="toc-repartir-el-crédito-credit" class="nav-link" data-scroll-target="#repartir-el-crédito-credit">4. Repartir el crédito: CRediT</a></li>
   <li><a href="#lab-e4-credit" id="toc-lab-e4-credit" class="nav-link" data-scroll-target="#lab-e4-credit">Laboratorio: declaración de contribuciones CRediT</a></li>
   <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#segundo-caso-práctico-resuelto" id="toc-segundo-caso-práctico-resuelto" class="nav-link" data-scroll-target="#segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</a></li>
   <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-e4" id="toc-reto-e4" class="nav-link" data-scroll-target="#reto-e4">Reto evaluable</a></li>
@@ -522,9 +543,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Wuchty, S.; Jones, B. F.; Uzzi, B. (2007). <a href="https://doi.org/10.1126/science.1136099">The increasing dominance of teams in production of knowledge</a>. <em>Science</em>, 316(5827), 1036-1039.</li>
-<li>Lee, A. (2008). <a href="https://doi.org/10.1080/03075070802049202">How are doctoral students supervised? Concepts of doctoral research supervision</a>. <em>Studies in Higher Education</em>, 33(3), 267-281.</li>
-<li>Allen, L.; Scott, J.; Brand, A.; Hlava, M.; Altman, M. (2014). <a href="https://doi.org/10.1038/508312a">Publishing: Credit where credit is due</a>. <em>Nature</em>, 508(7496), 312-313.</li>
+<li><span class="citation" data-cites="wuchty2007">Wuchty et&nbsp;al. (<a href="#ref-wuchty2007" role="doc-biblioref">2007</a>)</span></li>
+<li><span class="citation" data-cites="lee2008">Lee (<a href="#ref-lee2008" role="doc-biblioref">2008</a>)</span></li>
+<li><span class="citation" data-cites="allen2014">Allen et&nbsp;al. (<a href="#ref-allen2014" role="doc-biblioref">2014</a>)</span></li>
 </ul>
 </section>
 </section>
@@ -534,7 +555,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="qué-hace-que-un-equipo-aprenda" class="level2">
 <h2 class="anchored" data-anchor-id="qué-hace-que-un-equipo-aprenda">2. Qué hace que un equipo aprenda</h2>
-<p>Edmondson (1999) estudió 51 equipos de una empresa industrial. Los que más <strong>aprendían</strong> (pedían ayuda, comentaban errores, buscaban retroalimentación, experimentaban) eran los que tenían más <a href="92-glosario.html#gl-seguridad" class="glos" data-def="Creencia compartida de que en el equipo se pueden asumir riesgos interpersonales sin temor."><strong>seguridad psicológica</strong></a>: la creencia compartida de que en el equipo se pueden asumir riesgos interpersonales sin temor a ser humillado o castigado. Y ese aprendizaje se asociaba a un mejor rendimiento.</p>
+<p><span class="citation" data-cites="edmondson1999">Edmondson (<a href="#ref-edmondson1999" role="doc-biblioref">1999</a>)</span> estudió 51 equipos de una empresa industrial. Los que más <strong>aprendían</strong> (pedían ayuda, comentaban errores, buscaban retroalimentación, experimentaban) eran los que tenían más <a href="92-glosario.html#gl-seguridad" class="glos" data-def="Creencia compartida de que en el equipo se pueden asumir riesgos interpersonales sin temor."><strong>seguridad psicológica</strong></a>: la creencia compartida de que en el equipo se pueden asumir riesgos interpersonales sin temor a ser humillado o castigado. Y ese aprendizaje se asociaba a un mejor rendimiento.</p>
 <p>En un grupo de investigación, la seguridad psicológica se nota en que alguien se atreve a decir «creo que el análisis tiene un error», «no entiendo esto» o «el experimento no ha salido». Sin ella, los errores se esconden, con consecuencias para la calidad científica.</p>
 <p>Cómo fomentarla quien dirige:</p>
 <ul>
@@ -546,7 +567,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="la-supervisión-doctoral" class="level2">
 <h2 class="anchored" data-anchor-id="la-supervisión-doctoral">3. La supervisión doctoral</h2>
-<p>Lee (2008) entrevistó a directores de tesis e identificó cinco concepciones de la supervisión, que conviven en distinta proporción:</p>
+<p><span class="citation" data-cites="lee2008">Lee (<a href="#ref-lee2008" role="doc-biblioref">2008</a>)</span> entrevistó a directores de tesis e identificó cinco concepciones de la supervisión, que conviven en distinta proporción:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -587,7 +608,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="repartir-el-crédito-credit" class="level2">
 <h2 class="anchored" data-anchor-id="repartir-el-crédito-credit">4. Repartir el crédito: CRediT</h2>
-<p>La <strong>taxonomía CRediT</strong> (Allen et al., 2014; hoy norma ANSI/NISO) describe 14 roles de contribución. Muchas revistas piden una declaración de contribuciones con ella. No sustituye a los criterios de autoría (por ejemplo, los del ICMJE), pero hace visible quién hizo qué y ayuda a evitar la <a href="92-glosario.html#gl-honoraria" class="glos" data-def="Firmar un trabajo sin haber contribuido de forma sustancial."><strong>autoría honoraria</strong></a> (firmar sin haber contribuido) y la autoría fantasma (contribuir sin firmar).</p>
+<p>La <strong>taxonomía CRediT</strong> [<span class="citation" data-cites="allen2014">Allen et&nbsp;al. (<a href="#ref-allen2014" role="doc-biblioref">2014</a>)</span>; hoy norma ANSI/NISO) describe 14 roles de contribución. Muchas revistas piden una declaración de contribuciones con ella. No sustituye a los criterios de autoría (por ejemplo, los del ICMJE), pero hace visible quién hizo qué y ayuda a evitar la <a href="92-glosario.html#gl-honoraria" class="glos" data-def="Firmar un trabajo sin haber contribuido de forma sustancial."><strong>autoría honoraria</strong></a> (firmar sin haber contribuido) y la autoría fantasma (contribuir sin firmar).</p>
 </section>
 <section id="lab-e4-credit" class="level2">
 <h2 class="anchored" data-anchor-id="lab-e4-credit">Laboratorio: declaración de contribuciones CRediT</h2>
@@ -664,6 +685,109 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
+<section id="segundo-caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Una reunión de equipo que aprende
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un grupo de cinco personas termina un proyecto con un retraso de tres meses. En lugar de buscar culpables, la coordinadora organiza una <strong>revisión posterior</strong> (<em>after-action review</em>) de 45 minutos con cuatro preguntas:</p>
+<ol type="1">
+<li><strong>¿Qué esperábamos que pasara?</strong> Recoger los datos en dos meses.</li>
+<li><strong>¿Qué pasó?</strong> Se tardaron cinco: el comité de ética pidió cambios y nadie lo había previsto.</li>
+<li><strong>¿Por qué hubo diferencia?</strong> El calendario no tenía margen para la revisión ética, y la persona que lo sabía no se atrevió a decirlo en la planificación.</li>
+<li><strong>¿Qué haremos distinto?</strong> Añadir la revisión ética al cronograma con un mes de margen y abrir cada planificación con una ronda en la que todos señalen un riesgo.</li>
+</ol>
+<p>La cuarta pregunta es la que importa. La segunda medida ataca algo más profundo que el calendario: la <strong>seguridad psicológica</strong>, que alguien con información crítica se sienta capaz de darla.</p>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-e4-aar" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-e4-aar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 218.78 352.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 338.4)">
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-338.4 204.38,-338.4 204.38,14.4 -14.4,14.4"></polygon>
+<!-- e -->
+<g id="node1" class="node">
+<title>e</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M177.95,-324C177.95,-324 71.06,-324 71.06,-324 65.06,-324 59.06,-318 59.06,-312 59.06,-312 59.06,-300 59.06,-300 59.06,-294 65.06,-288 71.06,-288 71.06,-288 177.95,-288 177.95,-288 183.95,-288 189.95,-294 189.95,-300 189.95,-300 189.95,-312 189.95,-312 189.95,-318 183.95,-324 177.95,-324"></path>
+<text text-anchor="middle" x="124.5" y="-302.7" font-family="Helvetica,sans-Serif" font-size="11.00">1. ¿Qué esperábamos?</text>
+</g>
+<!-- p -->
+<g id="node2" class="node">
+<title>p</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M120.65,-252C120.65,-252 56.35,-252 56.35,-252 50.35,-252 44.35,-246 44.35,-240 44.35,-240 44.35,-228 44.35,-228 44.35,-222 50.35,-216 56.35,-216 56.35,-216 120.65,-216 120.65,-216 126.65,-216 132.65,-222 132.65,-228 132.65,-228 132.65,-240 132.65,-240 132.65,-246 126.65,-252 120.65,-252"></path>
+<text text-anchor="middle" x="88.5" y="-230.7" font-family="Helvetica,sans-Serif" font-size="11.00">2. ¿Qué pasó?</text>
+</g>
+<!-- e&#45;&gt;p -->
+<g id="edge1" class="edge">
+<title>e-&gt;p</title>
+<path fill="none" stroke="#45433f" d="M115.61,-287.7C111.51,-279.73 106.56,-270.1 102.01,-261.26"></path>
+<polygon fill="#45433f" stroke="#45433f" points="104.99,-259.4 97.3,-252.1 98.76,-262.6 104.99,-259.4"></polygon>
+</g>
+<!-- q -->
+<g id="node3" class="node">
+<title>q</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M132.36,-180C132.36,-180 14.65,-180 14.65,-180 8.65,-180 2.65,-174 2.65,-168 2.65,-168 2.65,-156 2.65,-156 2.65,-150 8.65,-144 14.65,-144 14.65,-144 132.36,-144 132.36,-144 138.36,-144 144.36,-150 144.36,-156 144.36,-156 144.36,-168 144.36,-168 144.36,-174 138.36,-180 132.36,-180"></path>
+<text text-anchor="middle" x="73.5" y="-158.7" font-family="Helvetica,sans-Serif" font-size="11.00">3. ¿Por qué la diferencia?</text>
+</g>
+<!-- p&#45;&gt;q -->
+<g id="edge2" class="edge">
+<title>p-&gt;q</title>
+<path fill="none" stroke="#45433f" d="M84.8,-215.7C83.14,-207.98 81.16,-198.71 79.31,-190.11"></path>
+<polygon fill="#45433f" stroke="#45433f" points="82.69,-189.15 77.17,-180.1 75.84,-190.62 82.69,-189.15"></polygon>
+</g>
+<!-- h -->
+<g id="node4" class="node">
+<title>h</title>
+<path fill="#eaf6ef" stroke="#1a4d8f" d="M133.01,-108C133.01,-108 12,-108 12,-108 6,-108 0,-102 0,-96 0,-96 0,-84 0,-84 0,-78 6,-72 12,-72 12,-72 133.01,-72 133.01,-72 139.01,-72 145.01,-78 145.01,-84 145.01,-84 145.01,-96 145.01,-96 145.01,-102 139.01,-108 133.01,-108"></path>
+<text text-anchor="middle" x="72.5" y="-86.7" font-family="Helvetica,sans-Serif" font-size="11.00">4. ¿Qué haremos distinto?</text>
+</g>
+<!-- q&#45;&gt;h -->
+<g id="edge3" class="edge">
+<title>q-&gt;h</title>
+<path fill="none" stroke="#45433f" d="M73.26,-143.7C73.15,-135.98 73.01,-126.71 72.89,-118.11"></path>
+<polygon fill="#45433f" stroke="#45433f" points="76.39,-118.05 72.75,-108.1 69.39,-118.15 76.39,-118.05"></polygon>
+</g>
+<!-- s -->
+<g id="node5" class="node">
+<title>s</title>
+<ellipse fill="#eef3fb" stroke="#1a4d8f" cx="122.5" cy="-18" rx="66.03" ry="18"></ellipse>
+<text text-anchor="middle" x="122.5" y="-14.7" font-family="Helvetica,sans-Serif" font-size="11.00">Siguiente proyecto</text>
+</g>
+<!-- h&#45;&gt;s -->
+<g id="edge4" class="edge">
+<title>h-&gt;s</title>
+<path fill="none" stroke="#45433f" d="M84.86,-71.7C90.74,-63.47 97.87,-53.48 104.35,-44.42"></path>
+<polygon fill="#45433f" stroke="#45433f" points="107.32,-46.28 110.29,-36.1 101.63,-42.21 107.32,-46.28"></polygon>
+</g>
+<!-- s&#45;&gt;e -->
+<g id="edge5" class="edge">
+<title>s-&gt;e</title>
+<path fill="none" stroke="#45433f" stroke-dasharray="5,2" d="M136.07,-36.03C143.06,-45.91 150.87,-58.95 154.5,-72 174.76,-144.75 150.02,-234.15 134.78,-278.06"></path>
+<polygon fill="#45433f" stroke="#45433f" points="131.4,-277.12 131.32,-287.71 137.99,-279.48 131.4,-277.12"></polygon>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-e4-aar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: La revisión posterior: cuatro preguntas que convierten un fallo en aprendizaje.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="ejercicios-graduados" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
 <p><strong>Básico.</strong> ¿Cuándo conviene acordar los criterios de autoría?</p>
@@ -679,8 +803,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
-<div class="ia ia-clasificar" id="ia-e4-lee"><script type="application/json" class="ia-datos">{"categorias":["Funcional","Enculturación","Pensamiento crítico","Emancipación","Desarrollo de la relación"],"enunciado":"","explicacion":"","items":[{"categoria":"Funcional","explicacion":"","texto":"Revisar cada mes el cronograma y los requisitos del programa"},{"categoria":"Enculturación","explicacion":"","texto":"Llevar a la doctoranda a congresos y presentarle a colegas del\ncampo"},{"categoria":"Pensamiento crítico","explicacion":"","texto":"Pedir que defienda cada decisión metodológica ante objeciones"},{"categoria":"Emancipación","explicacion":"","texto":"Animarle a decidir por sí misma la orientación del último\ncapítulo"},{"categoria":"Desarrollo de la relación","explicacion":"","texto":"Dedicar tiempo a conocer cómo está y qué le preocupa"}],"tipo":"clasificar","titulo":"¿Qué concepción de la supervisión (Lee, 2008)?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
-<div class="ia ia-escenario" id="ia-e4-error"><script type="application/json" class="ia-datos">{"enunciado":"<p>Un doctorando de tu equipo descubre, una semana antes de enviar el\nartículo, que una parte de los datos estaba mal codificada. Te lo\ncuenta, nervioso.<\/p>","inicio":"e4e-inicio","nodos":{"e4e-corregir":{"final":true,"opciones":[],"texto":"<p>Corriges, documentas y conviertes el incidente en una mejora del\nprocedimiento (por ejemplo, una doble verificación de la codificación).\nEl equipo aprende.<\/p>","titulo":"Rigor y aprendizaje","valor":"bien"},"e4e-culpa":{"final":true,"opciones":[],"texto":"<p>El mensaje que recibe el equipo es que traer malas noticias tiene un\ncoste. La próxima vez, quizá nadie diga nada. Es lo contrario de la\nseguridad psicológica (Edmondson, 1999).<\/p>","titulo":"Culpa","valor":"mal"},"e4e-gracias":{"final":false,"opciones":[{"destino":"e4e-ocultar","texto":"Enviar a tiempo sin mencionar el cambio; los resultados principales se\nmantienen"},{"destino":"e4e-corregir","texto":"Corregir, retrasar el envío una semana y documentar el error y su\ncorrección en el repositorio"}],"texto":"<p>Revisáis el alcance: cambian dos resultados secundarios. ¿Qué\nhaces?<\/p>","titulo":"Reconocimiento","valor":""},"e4e-inicio":{"final":false,"opciones":[{"destino":"e4e-culpa","texto":"«¿Cómo has podido? Ahora vamos a perder el plazo»"},{"destino":"e4e-gracias","texto":"«Gracias por decírmelo a tiempo. Veamos qué afecta y qué hacemos»"}],"texto":"<p>¿Cuál es tu primera reacción?<\/p>","titulo":"La noticia","valor":""},"e4e-ocultar":{"final":true,"opciones":[],"texto":"<p>Publicar resultados que sabes que son incorrectos es una mala\npráctica, aunque sean secundarios.<\/p>","titulo":"Atajo","valor":"mal"}},"tipo":"escenario","titulo":"Un error en los datos"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-e4-lee"><script type="application/json" class="ia-datos">{"categorias":["Funcional","Enculturación","Pensamiento crítico","Emancipación","Desarrollo de la relación"],"enunciado":"","explicacion":"","items":[{"categoria":"Funcional","explicacion":"","texto":"Revisar cada mes el cronograma y los requisitos del programa"},{"categoria":"Enculturación","explicacion":"","texto":"Llevar a la doctoranda a congresos y presentarle a colegas del\ncampo"},{"categoria":"Pensamiento crítico","explicacion":"","texto":"Pedir que defienda cada decisión metodológica ante objeciones"},{"categoria":"Emancipación","explicacion":"","texto":"Animarle a decidir por sí misma la orientación del último\ncapítulo"},{"categoria":"Desarrollo de la relación","explicacion":"","texto":"Dedicar tiempo a conocer cómo está y qué le preocupa"}],"tipo":"clasificar","titulo":"¿Qué concepción de la supervisión [@lee2008]?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-escenario" id="ia-e4-error"><script type="application/json" class="ia-datos">{"enunciado":"<p>Un doctorando de tu equipo descubre, una semana antes de enviar el\nartículo, que una parte de los datos estaba mal codificada. Te lo\ncuenta, nervioso.<\/p>","inicio":"e4e-inicio","nodos":{"e4e-corregir":{"final":true,"opciones":[],"texto":"<p>Corriges, documentas y conviertes el incidente en una mejora del\nprocedimiento (por ejemplo, una doble verificación de la codificación).\nEl equipo aprende.<\/p>","titulo":"Rigor y aprendizaje","valor":"bien"},"e4e-culpa":{"final":true,"opciones":[],"texto":"<p>El mensaje que recibe el equipo es que traer malas noticias tiene un\ncoste. La próxima vez, quizá nadie diga nada. Es lo contrario de la\nseguridad psicológica <span class=\"citation\"\ndata-cites=\"edmondson1999\">[@edmondson1999]<\/span>.<\/p>","titulo":"Culpa","valor":"mal"},"e4e-gracias":{"final":false,"opciones":[{"destino":"e4e-ocultar","texto":"Enviar a tiempo sin mencionar el cambio; los resultados principales se\nmantienen"},{"destino":"e4e-corregir","texto":"Corregir, retrasar el envío una semana y documentar el error y su\ncorrección en el repositorio"}],"texto":"<p>Revisáis el alcance: cambian dos resultados secundarios. ¿Qué\nhaces?<\/p>","titulo":"Reconocimiento","valor":""},"e4e-inicio":{"final":false,"opciones":[{"destino":"e4e-culpa","texto":"«¿Cómo has podido? Ahora vamos a perder el plazo»"},{"destino":"e4e-gracias","texto":"«Gracias por decírmelo a tiempo. Veamos qué afecta y qué hacemos»"}],"texto":"<p>¿Cuál es tu primera reacción?<\/p>","titulo":"La noticia","valor":""},"e4e-ocultar":{"final":true,"opciones":[],"texto":"<p>Publicar resultados que sabes que son incorrectos es una mala\npráctica, aunque sean secundarios.<\/p>","titulo":"Atajo","valor":"mal"}},"tipo":"escenario","titulo":"Un error en los datos"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-e4" class="level2">
 <h2 class="anchored" data-anchor-id="reto-e4">Reto evaluable</h2>
@@ -708,9 +832,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Responde a todas las preguntas y pulsa <strong>Mostrar respuestas</strong>. No cuenta para la nota.</p>
 <div class="webex-check webex-box">
 <ol type="1">
-<li>Wuchty et al.&nbsp;(2007) encontraron que la proporción de trabajos en equipo crece en casi todas las disciplinas. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
+<li><span class="citation" data-cites="wuchty2007">Wuchty et&nbsp;al. (<a href="#ref-wuchty2007" role="doc-biblioref">2007</a>)</span> encontraron que la proporción de trabajos en equipo crece en casi todas las disciplinas. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>La creencia compartida de que se pueden asumir riesgos interpersonales sin miedo es la seguridad <input class="webex-solveme nospaces ignorecase" size="14" aria-label="Escribe tu respuesta" data-answer="[&quot;psicológica&quot;,&quot;psicologica&quot;]"></li>
-<li>Según Edmondson (1999), la seguridad psicológica favorece <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">la competencia interna</option><option value="answer">el aprendizaje del equipo</option><option value="x">la jerarquía</option></select></li>
+<li>Según <span class="citation" data-cites="edmondson1999">Edmondson (<a href="#ref-edmondson1999" role="doc-biblioref">1999</a>)</span>, la seguridad psicológica favorece <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">la competencia interna</option><option value="answer">el aprendizaje del equipo</option><option value="x">la jerarquía</option></select></li>
 <li>La taxonomía CRediT tiene <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">6</option><option value="x">10</option><option value="answer">14</option></select> roles</li>
 <li>Obtener la financiación basta, por sí solo, para ser autor según el ICMJE. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>Firmar un trabajo sin haber contribuido es autoría <input class="webex-solveme nospaces ignorecase" size="11" aria-label="Escribe tu respuesta" data-answer="[&quot;honoraria&quot;,&quot;regalada&quot;]"></li>
@@ -728,12 +852,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>ANSI/NISO Z39.104.</li>
 <li>Mejor en los agradecimientos.</li>
 <li><em>Gift authorship</em>.</li>
-<li>Lee (2008).</li>
+<li><span class="citation" data-cites="lee2008">Lee (<a href="#ref-lee2008" role="doc-biblioref">2008</a>)</span></li>
 <li>Un acuerdo de supervisión.</li>
 </ul>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-allen2014" class="csl-entry" role="listitem">
+Allen, L., Scott, J., Brand, A., Hlava, M., y Altman, M. (2014). <span>Publishing: Credit where credit is due</span>. <em>Nature</em>, <em>508</em>(7496), 312-313. <a href="https://doi.org/10.1038/508312a">https://doi.org/10.1038/508312a</a>
+</div>
+<div id="ref-edmondson1999" class="csl-entry" role="listitem">
+Edmondson, A. (1999). <span>Psychological safety and learning behavior in work teams</span>. <em>Administrative Science Quarterly</em>, <em>44</em>(2), 350-383. <a href="https://doi.org/10.2307/2666999">https://doi.org/10.2307/2666999</a>
+</div>
+<div id="ref-lee2008" class="csl-entry" role="listitem">
+Lee, A. (2008). <span>How are doctoral students supervised? Concepts of doctoral research supervision</span>. <em>Studies in Higher Education</em>, <em>33</em>(3), 267-281. <a href="https://doi.org/10.1080/03075070802049202">https://doi.org/10.1080/03075070802049202</a>
+</div>
+<div id="ref-wuchty2007" class="csl-entry" role="listitem">
+Wuchty, S., Jones, B. F., y Uzzi, B. (2007). <span>The increasing dominance of teams in production of knowledge</span>. <em>Science</em>, <em>316</em>(5827), 1036-1039. <a href="https://doi.org/10.1126/science.1136099">https://doi.org/10.1126/science.1136099</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

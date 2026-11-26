@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -440,6 +460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#lab-e5-riesgos" id="toc-lab-e5-riesgos" class="nav-link" data-scroll-target="#lab-e5-riesgos">Laboratorio: matriz de riesgos</a></li>
   <li><a href="#conseguir-financiación" id="toc-conseguir-financiación" class="nav-link" data-scroll-target="#conseguir-financiación">3. Conseguir financiación</a></li>
   <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#segundo-caso-práctico-resuelto" id="toc-segundo-caso-práctico-resuelto" class="nav-link" data-scroll-target="#segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</a></li>
   <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
   <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
   <li><a href="#reto-e5" id="toc-reto-e5" class="nav-link" data-scroll-target="#reto-e5">Reto evaluable</a></li>
@@ -594,7 +615,7 @@ Figura&nbsp;1: Un diagrama de Gantt sencillo: paquetes de trabajo, dependencias,
 </section>
 <section id="conseguir-financiación" class="level2">
 <h2 class="anchored" data-anchor-id="conseguir-financiación">3. Conseguir financiación</h2>
-<p>Bourne y Chalupa (2006) resumen en diez reglas lo que separa las solicitudes financiadas de las demás. Entre ellas:</p>
+<p><span class="citation" data-cites="bourne2006">Bourne y Chalupa (<a href="#ref-bourne2006" role="doc-biblioref">2006</a>)</span> resumen en diez reglas lo que separa las solicitudes financiadas de las demás. Entre ellas:</p>
 <ul>
 <li><strong>Lee las bases</strong> y la convocatoria con detalle; ajusta la propuesta a lo que el financiador quiere financiar.</li>
 <li><strong>Habla con la agencia</strong> o con quien gestiona el programa cuando sea posible.</li>
@@ -623,6 +644,135 @@ Figura&nbsp;1: Un diagrama de Gantt sencillo: paquetes de trabajo, dependencias,
 <li><strong>Margen:</strong> 10-15 % del tiempo de la ruta crítica (unos tres meses) al final.</li>
 <li><strong>Hitos de control</strong> en los meses 6, 12 y 18, con decisiones previstas si hay retrasos (reducir el alcance, priorizar resultados).</li>
 </ol>
+</div>
+</div>
+</section>
+<section id="segundo-caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="segundo-caso-práctico-resuelto">Segundo caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Una matriz de riesgos para una solicitud
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un equipo prepara la solicitud de un proyecto de tres años. La convocatoria pide un plan de contingencia. Valoran cada riesgo por <strong>probabilidad</strong> y <strong>impacto</strong> (de 1 a 3) y priorizan por el producto:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Riesgo</th>
+<th>P</th>
+<th>I</th>
+<th>P × I</th>
+<th>Medida</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No se contrata a tiempo al personal</td>
+<td>3</td>
+<td>3</td>
+<td><strong>9</strong></td>
+<td>Empezar con tareas que puede hacer el equipo actual</td>
+</tr>
+<tr class="even">
+<td>Una fuente de datos cambia sus condiciones de uso</td>
+<td>2</td>
+<td>3</td>
+<td><strong>6</strong></td>
+<td>Identificar una fuente alternativa y guardar copias</td>
+</tr>
+<tr class="odd">
+<td>Baja de una investigadora clave</td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>Documentar procesos; repartir conocimientos</td>
+</tr>
+<tr class="even">
+<td>Retraso en la revisión ética</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>Margen de un mes en el cronograma</td>
+</tr>
+</tbody>
+</table>
+<p>Los dos primeros riesgos reciben una medida concreta en la memoria y una persona responsable. Los evaluadores no esperan un proyecto sin riesgos, sino uno que los conozca y sepa qué hará.</p>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-e5-riesgos" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-e5-riesgos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 445.36 118.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 104.4)">
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-104.4 430.96,-104.4 430.96,14.4 -14.4,14.4"></polygon>
+<!-- L -->
+<g id="node1" class="node">
+<title>L</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M81.06,-63C81.06,-63 11.98,-63 11.98,-63 5.98,-63 -0.02,-57 -0.02,-51 -0.02,-51 -0.02,-39 -0.02,-39 -0.02,-33 5.98,-27 11.98,-27 11.98,-27 81.06,-27 81.06,-27 87.06,-27 93.06,-33 93.06,-39 93.06,-39 93.06,-51 93.06,-51 93.06,-57 87.06,-63 81.06,-63"></path>
+<text text-anchor="middle" x="46.52" y="-41.7" font-family="Helvetica,sans-Serif" font-size="11.00">Lista de riesgos</text>
+</g>
+<!-- V -->
+<g id="node2" class="node">
+<title>V</title>
+<path fill="#eef3fb" stroke="#1a4d8f" d="M244.89,-63C244.89,-63 141.09,-63 141.09,-63 135.09,-63 129.09,-57 129.09,-51 129.09,-51 129.09,-39 129.09,-39 129.09,-33 135.09,-27 141.09,-27 141.09,-27 244.89,-27 244.89,-27 250.89,-27 256.89,-33 256.89,-39 256.89,-39 256.89,-51 256.89,-51 256.89,-57 250.89,-63 244.89,-63"></path>
+<text text-anchor="middle" x="192.99" y="-41.7" font-family="Helvetica,sans-Serif" font-size="11.00">Probabilidad × impacto</text>
+</g>
+<!-- L&#45;&gt;V -->
+<g id="edge1" class="edge">
+<title>L-&gt;V</title>
+<path fill="none" stroke="#45433f" d="M93.23,-45C101.37,-45 110.03,-45 118.72,-45"></path>
+<polygon fill="#45433f" stroke="#45433f" points="118.89,-48.5 128.89,-45 118.89,-41.5 118.89,-48.5"></polygon>
+</g>
+<!-- Al -->
+<g id="node3" class="node">
+<title>Al</title>
+<path fill="#fdf0e8" stroke="#1a4d8f" d="M404.37,-90C404.37,-90 305.13,-90 305.13,-90 299.13,-90 293.13,-84 293.13,-78 293.13,-78 293.13,-66 293.13,-66 293.13,-60 299.13,-54 305.13,-54 305.13,-54 404.37,-54 404.37,-54 410.37,-54 416.37,-60 416.37,-66 416.37,-66 416.37,-78 416.37,-78 416.37,-84 410.37,-90 404.37,-90"></path>
+<text text-anchor="middle" x="354.75" y="-75.3" font-family="Helvetica,sans-Serif" font-size="11.00">Alto (≥ 6)</text>
+<text text-anchor="middle" x="354.75" y="-62.1" font-family="Helvetica,sans-Serif" font-size="11.00">medida y responsable</text>
+</g>
+<!-- V&#45;&gt;Al -->
+<g id="edge2" class="edge">
+<title>V-&gt;Al</title>
+<path fill="none" stroke="#45433f" d="M257.13,-55.67C265.59,-57.1 274.32,-58.58 282.9,-60.03"></path>
+<polygon fill="#45433f" stroke="#45433f" points="282.45,-63.5 292.89,-61.71 283.62,-56.6 282.45,-63.5"></polygon>
+</g>
+<!-- B -->
+<g id="node4" class="node">
+<title>B</title>
+<path fill="#eaf6ef" stroke="#1a4d8f" d="M374.75,-36C374.75,-36 334.75,-36 334.75,-36 328.75,-36 322.75,-30 322.75,-24 322.75,-24 322.75,-12 322.75,-12 322.75,-6 328.75,0 334.75,0 334.75,0 374.75,0 374.75,0 380.75,0 386.75,-6 386.75,-12 386.75,-12 386.75,-24 386.75,-24 386.75,-30 380.75,-36 374.75,-36"></path>
+<text text-anchor="middle" x="354.75" y="-21.3" font-family="Helvetica,sans-Serif" font-size="11.00">Bajo (&lt; 6)</text>
+<text text-anchor="middle" x="354.75" y="-8.1" font-family="Helvetica,sans-Serif" font-size="11.00">vigilar</text>
+</g>
+<!-- V&#45;&gt;B -->
+<g id="edge3" class="edge">
+<title>V-&gt;B</title>
+<path fill="none" stroke="#45433f" d="M257.13,-34.33C275.77,-31.18 295.67,-27.82 312.55,-24.96"></path>
+<polygon fill="#45433f" stroke="#45433f" points="313.34,-28.38 322.62,-23.26 312.18,-21.48 313.34,-28.38"></polygon>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-e5-riesgos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Priorizar riesgos por probabilidad e impacto.
+</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -676,7 +826,7 @@ Figura&nbsp;1: Un diagrama de Gantt sencillo: paquetes de trabajo, dependencias,
 <li>Un entregable es un producto concreto del proyecto. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>Un momento de control del proyecto es un <input class="webex-solveme nospaces ignorecase" size="6" aria-label="Escribe tu respuesta" data-answer="[&quot;hito&quot;]"></li>
 <li>En una matriz de riesgos se valora la probabilidad y el <input class="webex-solveme nospaces ignorecase" size="9" aria-label="Escribe tu respuesta" data-answer="[&quot;impacto&quot;]"></li>
-<li>Bourne y Chalupa (2006) recomiendan escribir para un evaluador <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">experto que lo lee todo con calma</option><option value="answer">con poco tiempo que lee muchas solicitudes</option><option value="x">que no conoce el tema y no lo va a leer</option></select></li>
+<li><span class="citation" data-cites="bourne2006">Bourne y Chalupa (<a href="#ref-bourne2006" role="doc-biblioref">2006</a>)</span> recomiendan escribir para un evaluador <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">experto que lo lee todo con calma</option><option value="answer">con poco tiempo que lee muchas solicitudes</option><option value="x">que no conoce el tema y no lo va a leer</option></select></li>
 <li>Si una solicitud es rechazada, lo mejor es no volver a presentarla. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>El gráfico que muestra las tareas en el tiempo es el diagrama de <input class="webex-solveme nospaces ignorecase" size="7" aria-label="Escribe tu respuesta" data-answer="[&quot;Gantt&quot;]"></li>
 <li>¿Qué hacer con un riesgo de probabilidad e impacto altos?</li>
@@ -698,6 +848,11 @@ Figura&nbsp;1: Un diagrama de Gantt sencillo: paquetes de trabajo, dependencias,
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-bourne2006" class="csl-entry" role="listitem">
+Bourne, P. E., y Chalupa, L. M. (2006). <span>Ten simple rules for getting grants</span>. <em>PLoS Computational Biology</em>, <em>2</em>(2), e12. <a href="https://doi.org/10.1371/journal.pcbi.0020012">https://doi.org/10.1371/journal.pcbi.0020012</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
