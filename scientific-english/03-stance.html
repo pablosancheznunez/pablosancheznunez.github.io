@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Chapter 3. Hedging and stance – Scientific English for Researchers</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./04-errors.html" rel="next">
+<link href="./02-clarity.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="laboratorio.js"></script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="fuentes/fuentes.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-structure.html">Chapters</a></li><li class="breadcrumb-item"><a href="./03-stance.html"><span class="chapter-title">Chapter 3. Hedging and stance</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Scientific English for Researchers</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/scientific-english.pdf">
+            Book (PDF)
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/scientific-english.epub">
+            Book (EPUB, for e-readers)
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-structure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Chapter 1. The architecture of a research article</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-clarity.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Chapter 2. Clear sentences</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-stance.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Chapter 3. Hedging and stance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-errors.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Chapter 4. Common errors and false friends</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Chapter 5. Peer review and correspondence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-presenting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Chapter 6. Presenting and networking</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./90-phrasebank.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Phrasebank</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./94-laboratorio.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Interactive lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./91-guia-docente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Teacher’s guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./92-glosario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glossary</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#required-reading" id="toc-required-reading" class="nav-link active" data-scroll-target="#required-reading">Required reading</a></li>
+  <li><a href="#why-researchers-hedge" id="toc-why-researchers-hedge" class="nav-link" data-scroll-target="#why-researchers-hedge">1. Why researchers hedge</a></li>
+  <li><a href="#overclaiming-and-spin" id="toc-overclaiming-and-spin" class="nav-link" data-scroll-target="#overclaiming-and-spin">2. Overclaiming and spin</a></li>
+  <li><a href="#reporting-other-peoples-work" id="toc-reporting-other-peoples-work" class="nav-link" data-scroll-target="#reporting-other-peoples-work">3. Reporting other people’s work</a></li>
+  <li><a href="#lab-e3-hedges" id="toc-lab-e3-hedges" class="nav-link" data-scroll-target="#lab-e3-hedges">Lab: hedges and boosters</a></li>
+  <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example">Worked example</a></li>
+  <li><a href="#graded-exercises" id="toc-graded-exercises" class="nav-link" data-scroll-target="#graded-exercises">Graded exercises</a></li>
+  <li><a href="#activities" id="toc-activities" class="nav-link" data-scroll-target="#activities">Activities</a></li>
+  <li><a href="#reto-e3" id="toc-reto-e3" class="nav-link" data-scroll-target="#reto-e3">Assignment</a></li>
+  <li><a href="#self-assessment" id="toc-self-assessment" class="nav-link" data-scroll-target="#self-assessment">Self-assessment</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-structure.html">Chapters</a></li><li class="breadcrumb-item"><a href="./03-stance.html"><span class="chapter-title">Chapter 3. Hedging and stance</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-cap3" class="quarto-section-identifier"><span class="chapter-title">Chapter 3. Hedging and stance</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Recognise <a href="92-glosario.html#gl-hedge" class="glos" data-def="Word or phrase that softens a claim (may, suggest, possibly).">hedges</a>, <a href="92-glosario.html#gl-booster" class="glos" data-def="Word or phrase that strengthens a claim (clearly, demonstrate).">boosters</a> and other <a href="92-glosario.html#gl-stance" class="glos" data-def="The writer's attitude towards claims and sources.">stance</a> markers in scientific texts.</li>
+<li>Calibrate the strength of claims to the strength of the evidence.</li>
+<li>Avoid both <a href="92-glosario.html#gl-overclaim" class="glos" data-def="Stating more than the evidence supports, for example causal claims from correlations.">overclaiming</a> and excessive hedging.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Chapter glossary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="./92-glosario.html#gl-hedge">Hedge</a> · <a href="./92-glosario.html#gl-booster">Booster</a> · <a href="./92-glosario.html#gl-stance">Stance</a> · <a href="./92-glosario.html#gl-overclaim">Overclaiming</a> · <a href="./92-glosario.html#gl-reporting">Reporting verb</a></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Downloads
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="plantillas/entrega_reto.qmd" class="btn btn-outline-primary btn-sm" download="entrega_reto.qmd">Assignment template (.qmd)</a></p>
+</div>
+</div>
+<section id="required-reading" class="level2">
+<h2 class="anchored" data-anchor-id="required-reading">Required reading</h2>
+<div class="lectura">
+<p>Hyland, K. (1996). <a href="https://doi.org/10.1093/applin/17.4.433">Writing without conviction? Hedging in science research articles</a>. <em>Applied Linguistics</em>, 17(4), 433-454.</p>
+</div>
+</section>
+<section id="why-researchers-hedge" class="level2">
+<h2 class="anchored" data-anchor-id="why-researchers-hedge">1. Why researchers hedge</h2>
+<p><span class="citation" data-cites="hyland1996">Hyland (<a href="#ref-hyland1996" role="doc-biblioref">1996</a>)</span> analysed hedging in research articles in cell and molecular biology and showed that it is not a sign of weakness but a central feature of scientific argument. <strong>Hedges</strong> (<em>may, might, suggest, possibly, appear to, likely</em>) do two jobs: they state claims <strong>accurately</strong>, matching them to the evidence, and they show <strong>respect for the reader</strong> and the community, leaving room for disagreement. <strong>Boosters</strong> (<em>clearly, demonstrate, undoubtedly, it is well known that</em>) do the opposite: they express certainty.</p>
+<p>Good scientific writing calibrates: strong evidence, strong verbs; weak or indirect evidence, cautious verbs.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Strength</th>
+<th>Verbs and expressions</th>
+<th>Use when</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Strong</strong></td>
+<td><em>show, demonstrate, establish, confirm</em></td>
+<td>Robust, replicated evidence, ideally causal</td>
+</tr>
+<tr class="even">
+<td><strong>Moderate</strong></td>
+<td><em>indicate, suggest, support</em></td>
+<td>Good evidence with limits (observational, single study)</td>
+</tr>
+<tr class="odd">
+<td><strong>Tentative</strong></td>
+<td><em>may, might, could, possibly, it is possible that</em></td>
+<td>Speculation, interpretation, future directions</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="overclaiming-and-spin" class="level2">
+<h2 class="anchored" data-anchor-id="overclaiming-and-spin">2. Overclaiming and spin</h2>
+<p>Overclaiming (saying more than the data allow) is common in abstracts and press releases: causal language for correlational data (“X <strong>causes</strong> Y” instead of “X is <strong>associated with</strong> Y”), generalising from a sample to a population, or calling a non-significant result “a trend towards significance”. Reviewers and readers notice, and it damages credibility.</p>
+<p>But <strong>excessive hedging</strong> is also a problem, especially for non-native writers who learn that caution is safe: “<em>It might possibly be suggested that the results could perhaps indicate…</em>” says nothing. One hedge per claim is usually enough.</p>
+</section>
+<section id="reporting-other-peoples-work" class="level2">
+<h2 class="anchored" data-anchor-id="reporting-other-peoples-work">3. Reporting other people’s work</h2>
+<p><a href="92-glosario.html#gl-reporting" class="glos" data-def="Verb used to report sources (show, suggest, claim), which conveys stance.">Reporting verbs</a> carry your stance towards a source:</p>
+<ul>
+<li><strong>Neutral:</strong> <em>Smith (2020) reports / describes / finds that…</em></li>
+<li><strong>Positive:</strong> <em>Smith (2020) shows / demonstrates / establishes that…</em> (you accept the claim)</li>
+<li><strong>Critical or distant:</strong> <em>Smith (2020) claims / asserts / argues that…</em> (you leave room for doubt)</li>
+</ul>
+</section>
+<section id="lab-e3-hedges" class="level2">
+<h2 class="anchored" data-anchor-id="lab-e3-hedges">Lab: hedges and boosters</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Lab · runs in your browser; your text does not leave it</p>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="65" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 64;"><span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>viewof texto_h <span class="op">=</span> <span class="fu">area</span>(<span class="st">"Your text"</span><span class="op">,</span> {<span class="dt">rows</span><span class="op">:</span> <span class="dv">6</span><span class="op">,</span> <span class="dt">submit</span><span class="op">:</span> <span class="st">"Analyse"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"Our results clearly demonstrate that mentoring causes higher completion rates. This finding is undoubtedly important for doctoral programmes. However, the effect may differ across disciplines, and it is possible that more motivated students sought mentors."</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="70" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 69;"><span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> hedges <span class="op">=</span> [<span class="st">"may"</span><span class="op">,</span> <span class="st">"might"</span><span class="op">,</span> <span class="st">"could"</span><span class="op">,</span> <span class="st">"possibly"</span><span class="op">,</span> <span class="st">"perhaps"</span><span class="op">,</span> <span class="st">"likely"</span><span class="op">,</span> <span class="st">"unlikely"</span><span class="op">,</span> <span class="st">"suggest"</span><span class="op">,</span> <span class="st">"suggests"</span><span class="op">,</span> <span class="st">"indicate"</span><span class="op">,</span> <span class="st">"indicates"</span><span class="op">,</span> <span class="st">"appear"</span><span class="op">,</span> <span class="st">"appears"</span><span class="op">,</span> <span class="st">"seem"</span><span class="op">,</span> <span class="st">"seems"</span><span class="op">,</span> <span class="st">"probably"</span><span class="op">,</span> <span class="st">"it is possible"</span><span class="op">,</span> <span class="st">"tend to"</span><span class="op">,</span> <span class="st">"to some extent"</span><span class="op">,</span> <span class="st">"approximately"</span><span class="op">,</span> <span class="st">"relatively"</span>]<span class="op">;</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> boosters <span class="op">=</span> [<span class="st">"clearly"</span><span class="op">,</span> <span class="st">"demonstrate"</span><span class="op">,</span> <span class="st">"demonstrates"</span><span class="op">,</span> <span class="st">"undoubtedly"</span><span class="op">,</span> <span class="st">"certainly"</span><span class="op">,</span> <span class="st">"prove"</span><span class="op">,</span> <span class="st">"proves"</span><span class="op">,</span> <span class="st">"obviously"</span><span class="op">,</span> <span class="st">"definitely"</span><span class="op">,</span> <span class="st">"always"</span><span class="op">,</span> <span class="st">"never"</span><span class="op">,</span> <span class="st">"it is well known"</span><span class="op">,</span> <span class="st">"establish"</span><span class="op">,</span> <span class="st">"establishes"</span><span class="op">,</span> <span class="st">"show that"</span><span class="op">,</span> <span class="st">"shows that"</span><span class="op">,</span> <span class="st">"causes"</span><span class="op">,</span> <span class="st">"cause"</span>]<span class="op">;</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> esc <span class="op">=</span> s <span class="kw">=&gt;</span> s<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/&amp;/g</span><span class="op">,</span> <span class="st">"&amp;amp;"</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/&lt;/g</span><span class="op">,</span> <span class="st">"&amp;lt;"</span>)<span class="op">;</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> m <span class="op">=</span> <span class="fu">esc</span>(texto_h <span class="op">||</span> <span class="st">""</span>)<span class="op">;</span> <span class="kw">let</span> nh <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> nb <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> marca <span class="op">=</span> (lista<span class="op">,</span> estilo<span class="op">,</span> cuenta) <span class="kw">=&gt;</span> { <span class="cf">for</span> (<span class="kw">const</span> w <span class="kw">of</span> lista<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> b<span class="op">.</span><span class="at">length</span> <span class="op">-</span> a<span class="op">.</span><span class="at">length</span>)) { <span class="kw">const</span> re <span class="op">=</span> <span class="kw">new</span> <span class="bu">RegExp</span>(<span class="vs">`</span><span class="sc">\\</span><span class="vs">b(</span><span class="sc">${</span>w<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/ /g</span><span class="op">,</span> <span class="st">"</span><span class="sc">\\</span><span class="st">s+"</span>)<span class="sc">}</span><span class="vs">)</span><span class="sc">\\</span><span class="vs">b`</span><span class="op">,</span> <span class="st">"gi"</span>)<span class="op">;</span> m <span class="op">=</span> m<span class="op">.</span><span class="fu">replace</span>(re<span class="op">,</span> x <span class="kw">=&gt;</span> { <span class="fu">cuenta</span>()<span class="op">;</span> <span class="cf">return</span> <span class="vs">`&lt;span style="</span><span class="sc">${</span>estilo<span class="sc">}</span><span class="vs">"&gt;</span><span class="sc">${</span>x<span class="sc">}</span><span class="vs">&lt;/span&gt;`</span><span class="op">;</span> })<span class="op">;</span> } }<span class="op">;</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>  <span class="fu">marca</span>(hedges<span class="op">,</span> <span class="st">"background:#d6e6f8;color:#0b0b0b;padding:0 2px;border-radius:3px"</span><span class="op">,</span> () <span class="kw">=&gt;</span> nh<span class="op">++</span>)<span class="op">;</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">marca</span>(boosters<span class="op">,</span> <span class="st">"background:#f6dccf;color:#0b0b0b;padding:0 2px;border-radius:3px;font-weight:600"</span><span class="op">,</span> () <span class="kw">=&gt;</span> nb<span class="op">++</span>)<span class="op">;</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;p style="line-height:1.9"&gt;</span><span class="sc">${</span>m<span class="sc">}</span><span class="vs">&lt;/p&gt;&lt;p class="small"&gt;&lt;span style="background:#d6e6f8;color:#0b0b0b;padding:0 2px"&gt;blue&lt;/span&gt; = hedge (</span><span class="sc">${</span>nh<span class="sc">}</span><span class="vs">) · &lt;span style="background:#f6dccf;color:#0b0b0b;padding:0 2px;font-weight:600"&gt;orange&lt;/span&gt; = booster (</span><span class="sc">${</span>nb<span class="sc">}</span><span class="vs">)&lt;/p&gt;</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="vs">   &lt;p class="</span><span class="sc">${</span>nb <span class="op">&gt;</span> nh <span class="op">?</span> <span class="st">"lab-medio"</span> <span class="op">:</span> <span class="st">"lab-bien"</span><span class="sc">}</span><span class="vs">" style="font-weight:600"&gt;</span><span class="sc">${</span>nb <span class="op">&gt;</span> nh <span class="op">?</span> <span class="st">"More boosters than hedges: check that the evidence (design, sample, replication) supports such strong claims, especially any causal verbs."</span> <span class="op">:</span> <span class="st">"The text is cautious. Check that it is not over-hedged: one hedge per claim is usually enough."</span><span class="sc">}</span><span class="vs">&lt;/p&gt;`</span><span class="op">;</span></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d<span class="op">;</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="worked-example" class="level2">
+<h2 class="anchored" data-anchor-id="worked-example">Worked example</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Calibrating a discussion paragraph
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Original:</strong> “Our results prove that mentoring causes better completion rates and clearly demonstrate that all universities must implement mentoring programmes.”</p>
+<p>Evidence: one observational cohort study in one country.</p>
+<p><strong>Calibrated:</strong> “Our results suggest that mentoring is associated with higher completion rates. Because the study was observational, we cannot rule out that more motivated students sought mentors. If confirmed in experimental studies, these findings would support investing in mentoring programmes.”</p>
+<p>Changes: <em>prove</em> → <em>suggest</em>; <em>causes</em> → <em>is associated with</em>; the alternative explanation is stated; the recommendation becomes conditional.</p>
+</div>
+</div>
+</section>
+<section id="graded-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="graded-exercises">Graded exercises</h2>
+<p><strong>Basic.</strong> Replace the booster in: “This method undoubtedly outperforms all previous approaches.”</p>
+<div class="webex-solution">
+<button>Show solution</button>
+<p>For example: “In our tests, this method outperformed the three approaches we compared it with.” It states the evidence instead of asserting certainty.</p>
+</div>
+<p><strong>Advanced.</strong> Take the conclusions of a paper in your field and rewrite them so that each claim matches the strength of its evidence.</p>
+<div class="webex-solution">
+<button>Show solution</button>
+<p>Identify the design of each piece of evidence (experimental, observational, replicated) and choose verbs accordingly; add limitations where the evidence is indirect.</p>
+</div>
+</section>
+<section id="activities" class="level2">
+<h2 class="anchored" data-anchor-id="activities">Activities</h2>
+<div class="ia ia-clasificar" id="ia-e3-type"><script type="application/json" class="ia-datos">{"categorias":["Hedge","Booster"],"enunciado":"","explicacion":"","items":[{"categoria":"Hedge","explicacion":"","texto":"suggest"},{"categoria":"Booster","explicacion":"","texto":"demonstrate"},{"categoria":"Hedge","explicacion":"","texto":"it is possible that"},{"categoria":"Booster","explicacion":"","texto":"undoubtedly"},{"categoria":"Hedge","explicacion":"","texto":"appear to"},{"categoria":"Booster","explicacion":"","texto":"it is well known that"}],"tipo":"clasificar","titulo":"Hedge or booster?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-e3-claim"><script type="application/json" class="ia-datos">{"categorias":["Calibrated","Overclaims"],"enunciado":"","explicacion":"","items":[{"categoria":"Overclaims","explicacion":"","texto":"One cross-sectional survey: “Social media use causes anxiety in\ndoctoral students.”"},{"categoria":"Calibrated","explicacion":"","texto":"One cross-sectional survey: “Social media use was associated with\nanxiety.”"},{"categoria":"Calibrated","explicacion":"","texto":"Three preregistered replications: “These results establish that the\neffect is robust.”"},{"categoria":"Overclaims","explicacion":"","texto":"A pilot with 12 participants: “The intervention is effective for all\nstudents.”"}],"tipo":"clasificar","titulo":"Is the claim calibrated to the evidence?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+</section>
+<section id="reto-e3" class="level2">
+<h2 class="anchored" data-anchor-id="reto-e3">Assignment</h2>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Challenge for chapter 3 · Calibrate your claims
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Analyse the discussion section of one of your papers or drafts with the lab.</li>
+<li>For each main claim, describe the evidence that supports it (design, sample, replication) and decide whether the verb is too strong, too weak or right.</li>
+<li>Rewrite the paragraph with calibrated claims and explain your changes.</li>
+</ol>
+<p><strong>Submission:</strong> use the <a href="plantillas/entrega_reto.qmd">assignment template</a>. This challenge <strong>has no solution in the book</strong>.</p>
+</div>
+</div>
+</section>
+<section id="self-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="self-assessment">Self-assessment</h2>
+<p>Answer all the questions and press <strong>Show answers</strong>. It does not count towards your grade.</p>
+<div class="webex-check webex-box">
+<ol type="1">
+<li><span class="citation" data-cites="hyland1996">Hyland (<a href="#ref-hyland1996" role="doc-biblioref">1996</a>)</span> argues that hedging is a sign of weak writing. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">TRUE</option><option value="answer">FALSE</option></select></li>
+<li>Words that express certainty, such as “clearly”, are called <input class="webex-solveme nospaces ignorecase" size="10" aria-label="Type your answer" data-answer="[&quot;boosters&quot;,&quot;booster&quot;]"></li>
+<li>For a correlational study, the best verb is <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">causes</option><option value="answer">is associated with</option><option value="x">proves</option></select></li>
+<li>“Smith (2020) claims that…” expresses a <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">positive</option><option value="answer">distant or critical</option><option value="x">neutral</option></select> stance</li>
+<li>Excessive hedging can make a text say nothing. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="answer">TRUE</option><option value="x">FALSE</option></select></li>
+<li>“Demonstrate” is appropriate for robust, replicated evidence. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="answer">TRUE</option><option value="x">FALSE</option></select></li>
+<li>Calling a non-significant result “a trend towards significance” is an example of <input class="webex-solveme nospaces ignorecase" size="14" aria-label="Type your answer" data-answer="[&quot;spin&quot;,&quot;overclaiming&quot;]"></li>
+<li>What is the main function of hedges according to Hyland?</li>
+</ol>
+<p></p><div class="webex-radiogroup" role="radiogroup" aria-label="Answer options" id="radio_libro_1"><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>To hide weak results</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="answer"> <span>To state claims accurately and show respect for readers and the community</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>To make texts longer</span></label></div><p></p>
+</div>
+<div class="webex-solution">
+<button>Show explanations</button>
+<ul>
+<li>It is central to scientific argument.</li>
+<li>They express certainty.</li>
+<li>Causal language needs causal designs.</li>
+<li>You leave room for doubt.</li>
+<li>One hedge per claim is usually enough.</li>
+<li>Strong evidence, strong verbs.</li>
+<li>Presenting results more favourably than they are.</li>
+<li>Accuracy and politeness.</li>
+</ul>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-hyland1996" class="csl-entry" role="listitem">
+Hyland, K. (1996). <span class="nocase">Writing without conviction? Hedging in science research articles</span>. <em>Applied Linguistics</em>, <em>17</em>(4), 433–454. <a href="https://doi.org/10.1093/applin/17.4.433">https://doi.org/10.1093/applin/17.4.433</a>
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Mejoras de accesibilidad del libro:
+   - nombre accesible para los editores de código de quarto-live (CodeMirror),
+   - foco de teclado en sus áreas desplazables,
+   - texto alternativo para el icono de ORCID de la portada. */
+(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+  function arreglar(raiz) {
+    raiz.querySelectorAll('.cm-content:not([aria-label])').forEach(function (el) {
+      el.setAttribute('aria-label', tr('Editor de código R', 'Code editor'));
+    });
+    raiz.querySelectorAll('.cm-scroller').forEach(function (el) {
+      if (el.getAttribute('tabindex') !== '0') el.setAttribute('tabindex', '0');
+      if (!el.hasAttribute('aria-label')) el.setAttribute('aria-label', tr('Código R', 'Code'));
+    });
+    // controles de Observable (deslizadores y casillas) sin nombre accesible
+    raiz.querySelectorAll('form input:not([aria-label]), form select:not([aria-label])').forEach(function (el) {
+      var form = el.closest('form');
+      var lab = form && form.querySelector('label');
+      if (lab && !(el.id && form.querySelector('label[for="' + el.id + '"]'))) {
+        el.setAttribute('aria-label', lab.textContent.trim() + (el.type === 'number' ? tr(' (valor)', ' (value)') : ''));
+      }
+    });
+    // menú de descarga de la barra lateral (solo icono)
+    raiz.querySelectorAll('.quarto-navigation-tool.dropdown-toggle').forEach(function (a) {
+      if (a.getAttribute('aria-label')) return;
+      a.setAttribute('aria-label', tr('Descargar el libro en PDF o EPUB', 'Download the book as PDF or EPUB'));
+      a.setAttribute('title', tr('Descargar el libro en PDF o EPUB', 'Download the book as PDF or EPUB'));
+    });
+    raiz.querySelectorAll('.quarto-title-author-orcid').forEach(function (a) {
+      a.setAttribute('aria-label', tr('Perfil ORCID de Pablo Sánchez-Núñez', 'ORCID profile of Pablo Sánchez-Núñez'));
+      var img = a.querySelector('img');
+      if (img && !img.hasAttribute('alt')) img.setAttribute('alt', 'ORCID');
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () { arreglar(document); });
+  new MutationObserver(function () { arreglar(document); })
+    .observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
+<script src="./consent.js" defer=""></script>
+<style>
+.progreso-capitulo { border: 1px solid var(--bs-border-color, #dee2e6); border-left: 4px solid var(--bs-primary, #000e78);
+  border-radius: .35rem; padding: .6rem .9rem; margin: 0 0 1.4rem; font-size: .92rem; background: rgba(127, 127, 127, .08); color: inherit; }
+.progreso-capitulo progress { width: 100%; height: .6rem; margin: .35rem 0 .2rem; accent-color: var(--bs-primary, #000e78); }
+.progreso-capitulo .progreso-nota { font-size: .82rem; opacity: .85; }
+.progreso-capitulo button, #progreso-resumen button { font-size: .82rem; padding: .05rem .5rem; margin-left: .4rem;
+  border: 1px solid var(--bs-border-color, #ced4da); border-radius: .3rem; background: transparent; color: inherit; }
+#progreso-resumen table { width: 100%; }
+#progreso-resumen { margin-bottom: 1.2rem; }
+#progreso-resumen progress { width: 8rem; height: .55rem; accent-color: var(--bs-primary, #000e78); vertical-align: middle; }
+.sin-conexion-estado { font-size: .85rem; }
+</style>
+<script>
+/* Progreso del estudiante: cuenta los ejercicios de código resueltos y las
+   preguntas de autoevaluación acertadas en cada capítulo. Se guarda solo en
+   el almacenamiento local de este navegador; no se envía a ningún servidor. */
+(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+  var CLAVE = 'progreso-' + (location.pathname.split('/').filter(Boolean)[0] || 'libro') + '-v1';
+  function leer() { try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch (e) { return {}; } }
+  function guardar(d) { try { localStorage.setItem(CLAVE, JSON.stringify(d)); } catch (e) {} }
+  var pagina = location.pathname.split('/').pop() || 'index.html';
+
+  function nombresEjercicios() {
+    var m = {};
+    document.querySelectorAll('script[type^="webr-"][type$="-contents"]').forEach(function (s) {
+      try {
+        var bin = atob(s.textContent.trim());
+        var d = JSON.parse(new TextDecoder().decode(Uint8Array.from(bin, function (c) { return c.charCodeAt(0); })));
+        if (d.attr && d.attr.exercise && !d.attr.setup && !d.attr.check) m[s.type.replace('-contents', '')] = d.attr.exercise;
+      } catch (e) {}
+    });
+    return m;
+  }
+  function preguntas() {
+    return Array.prototype.slice.call(document.querySelectorAll('.webex-check .webex-solveme, .webex-check .webex-select, .webex-check .webex-radiogroup'));
+  }
+
+  function registro(datos) {
+    var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
+    r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
+    r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
+    return r;
+  }
+
+  function pintar(caja, totalEj, totalPr, totalIa) {
+    var r = registro(leer());
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
+    var partes = [];
+    if (totalEj) partes.push(r.ej.length + tr(' de ', ' of ') + totalEj + tr(' ejercicios de código', ' code exercises'));
+    if (totalIa) partes.push(r.ia.length + tr(' de ', ' of ') + totalIa + tr(' actividades', ' activities'));
+    if (totalPr) partes.push(r.pr.length + tr(' de ', ' of ') + totalPr + tr(' preguntas acertadas', ' correct answers'));
+    caja.innerHTML = tr('<strong>Tu progreso en este capítulo:</strong> ', '<strong>Your progress in this chapter:</strong> ') + partes.join(' · ') +
+      '<progress max="' + total + '" value="' + hechos + tr('" aria-label="Progreso del capítulo: ', '" aria-label="Chapter progress: ') + hechos + tr(' de ', ' of ') + total + '"></progress>' +
+      tr('<span class="progreso-nota">Se guarda solo en este navegador.</span>', '<span class="progreso-nota">Saved only in this browser.</span>') +
+      tr('<button type="button">Borrar el progreso del capítulo</button>', '<button type="button">Clear chapter progress</button>');
+    caja.querySelector('button').addEventListener('click', function () {
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
+    });
+  }
+
+  function capitulo() {
+    var mapa = nombresEjercicios();
+    var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
+      .filter(function (v, i, a) { return a.indexOf(v) === i; });
+    var lista = preguntas();
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
+
+    var d = leer(); var r = registro(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
+
+    var caja = document.createElement('div');
+    caja.className = 'progreso-capitulo';
+    caja.setAttribute('role', 'status');
+    var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
+    if (!cabecera) return;
+    cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
+    pintar(caja, nombres.length, lista.length, nIa);
+
+    function anotar(tipo, valor) {
+      var d = leer(); var r = registro(d);
+      if (r[tipo].indexOf(valor) === -1) {
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
+      }
+    }
+
+    // Ejercicios de webR: un aviso verde de quarto-live dentro de la celda del ejercicio
+    new MutationObserver(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+      document.querySelectorAll('.exercise-grade.alert-success:not([data-progreso])').forEach(function (a) {
+        a.setAttribute('data-progreso', '1');
+        var el = a;
+        while (el && !(el.id && mapa[el.id])) el = el.parentElement;
+        if (el) anotar('ej', mapa[el.id]);
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
+
+    // Preguntas: se anotan al pulsar «Mostrar respuestas»
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('.webex-check-button');
+      if (!b) return;
+      setTimeout(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+        lista.forEach(function (q, i) {
+          if (q.classList.contains('webex-correct') || q.querySelector('.webex-correct')) anotar('pr', i);
+        });
+      }, 0);
+    });
+  }
+
+  function resumen() {
+    var destino = document.getElementById('progreso-resumen');
+    if (!destino) return;
+    var d = leer();
+    var filas = [];
+    document.querySelectorAll('#quarto-sidebar a.sidebar-link').forEach(function (a) {
+      var f = (a.getAttribute('href') || '').split('/').pop().split('#')[0];
+      if (!f || f === 'index.html' || /^9\d-/.test(f) || filas.some(function (x) { return x.f === f; })) return;
+      filas.push({ f: f, t: a.textContent.replace(/\s+/g, ' ').trim(), r: d[f] });
+    });
+    var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">' + tr('Capítulo', 'Chapter') + '</th><th scope="col">' + tr('Progreso', 'Progress') + '</th></tr></thead><tbody>';
+    filas.forEach(function (x) {
+      var celda = tr('Sin empezar', 'Not started');
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + tr(' ejercicios', ' exercises'));
+        if (tIa) trozos.push(ia.length + '/' + tIa + tr(' actividades', ' activities'));
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + tr(' preguntas', ' questions'));
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + tr(' de ', ' of ') + t + '"></progress> ' + trozos.join(' · ');
+      }
+      html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
+    });
+    html += '</tbody></' + 'table><button type="button">' + tr('Borrar todo mi progreso', 'Clear all my progress') + '</button>';
+    destino.innerHTML = html;
+    destino.querySelector('button').addEventListener('click', function () {
+      try { localStorage.removeItem(CLAVE); } catch (e) {}
+      resumen();
+    });
+  }
+
+  function iniciar() { capitulo(); resumen(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar); else iniciar();
+})();
+
+/* Uso sin conexión: un service worker guarda el libro, webR y sus paquetes
+   la primera vez que se visitan. */
+(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+  if (!('serviceWorker' in navigator)) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').then(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+      var estado = document.getElementById('sin-conexion-estado');
+      if (estado) estado.textContent = tr('Este navegador ya guarda el libro para usarlo sin conexión.', 'This browser now stores the book for offline use.');
+    }).catch(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }});
+  });
+})();
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImFyZWEgPSB3aW5kb3cuTGFiLmFyZWFcbnZpZXdvZiB0ZXh0b19oID0gYXJlYShcIllvdXIgdGV4dFwiLCB7cm93czogNiwgc3VibWl0OiBcIkFuYWx5c2VcIiwgdmFsdWU6IFwiT3VyIHJlc3VsdHMgY2xlYXJseSBkZW1vbnN0cmF0ZSB0aGF0IG1lbnRvcmluZyBjYXVzZXMgaGlnaGVyIGNvbXBsZXRpb24gcmF0ZXMuIFRoaXMgZmluZGluZyBpcyB1bmRvdWJ0ZWRseSBpbXBvcnRhbnQgZm9yIGRvY3RvcmFsIHByb2dyYW1tZXMuIEhvd2V2ZXIsIHRoZSBlZmZlY3QgbWF5IGRpZmZlciBhY3Jvc3MgZGlzY2lwbGluZXMsIGFuZCBpdCBpcyBwb3NzaWJsZSB0aGF0IG1vcmUgbW90aXZhdGVkIHN0dWRlbnRzIHNvdWdodCBtZW50b3JzLlwifSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgY29uc3QgaGVkZ2VzID0gW1wibWF5XCIsIFwibWlnaHRcIiwgXCJjb3VsZFwiLCBcInBvc3NpYmx5XCIsIFwicGVyaGFwc1wiLCBcImxpa2VseVwiLCBcInVubGlrZWx5XCIsIFwic3VnZ2VzdFwiLCBcInN1Z2dlc3RzXCIsIFwiaW5kaWNhdGVcIiwgXCJpbmRpY2F0ZXNcIiwgXCJhcHBlYXJcIiwgXCJhcHBlYXJzXCIsIFwic2VlbVwiLCBcInNlZW1zXCIsIFwicHJvYmFibHlcIiwgXCJpdCBpcyBwb3NzaWJsZVwiLCBcInRlbmQgdG9cIiwgXCJ0byBzb21lIGV4dGVudFwiLCBcImFwcHJveGltYXRlbHlcIiwgXCJyZWxhdGl2ZWx5XCJdO1xuICBjb25zdCBib29zdGVycyA9IFtcImNsZWFybHlcIiwgXCJkZW1vbnN0cmF0ZVwiLCBcImRlbW9uc3RyYXRlc1wiLCBcInVuZG91YnRlZGx5XCIsIFwiY2VydGFpbmx5XCIsIFwicHJvdmVcIiwgXCJwcm92ZXNcIiwgXCJvYnZpb3VzbHlcIiwgXCJkZWZpbml0ZWx5XCIsIFwiYWx3YXlzXCIsIFwibmV2ZXJcIiwgXCJpdCBpcyB3ZWxsIGtub3duXCIsIFwiZXN0YWJsaXNoXCIsIFwiZXN0YWJsaXNoZXNcIiwgXCJzaG93IHRoYXRcIiwgXCJzaG93cyB0aGF0XCIsIFwiY2F1c2VzXCIsIFwiY2F1c2VcIl07XG4gIGNvbnN0IGVzYyA9IHMgPT4gcy5yZXBsYWNlKC8mL2csIFwiJmFtcDtcIikucmVwbGFjZSgvPC9nLCBcIiZsdDtcIik7XG4gIGxldCBtID0gZXNjKHRleHRvX2ggfHwgXCJcIik7IGxldCBuaCA9IDAsIG5iID0gMDtcbiAgY29uc3QgbWFyY2EgPSAobGlzdGEsIGVzdGlsbywgY3VlbnRhKSA9PiB7IGZvciAoY29uc3QgdyBvZiBsaXN0YS5zb3J0KChhLCBiKSA9PiBiLmxlbmd0aCAtIGEubGVuZ3RoKSkgeyBjb25zdCByZSA9IG5ldyBSZWdFeHAoYFxcXFxiKCR7dy5yZXBsYWNlKC8gL2csIFwiXFxcXHMrXCIpfSlcXFxcYmAsIFwiZ2lcIik7IG0gPSBtLnJlcGxhY2UocmUsIHggPT4geyBjdWVudGEoKTsgcmV0dXJuIGA8c3BhbiBzdHlsZT1cIiR7ZXN0aWxvfVwiPiR7eH08L3NwYW4+YDsgfSk7IH0gfTtcbiAgbWFyY2EoaGVkZ2VzLCBcImJhY2tncm91bmQ6I2Q2ZTZmODtjb2xvcjojMGIwYjBiO3BhZGRpbmc6MCAycHg7Ym9yZGVyLXJhZGl1czozcHhcIiwgKCkgPT4gbmgrKyk7XG4gIG1hcmNhKGJvb3N0ZXJzLCBcImJhY2tncm91bmQ6I2Y2ZGNjZjtjb2xvcjojMGIwYjBiO3BhZGRpbmc6MCAycHg7Ym9yZGVyLXJhZGl1czozcHg7Zm9udC13ZWlnaHQ6NjAwXCIsICgpID0+IG5iKyspO1xuICBjb25zdCBkID0gaHRtbGA8ZGl2IHJvbGU9XCJzdGF0dXNcIj48L2Rpdj5gO1xuICBkLmlubmVySFRNTCA9IGA8cCBzdHlsZT1cImxpbmUtaGVpZ2h0OjEuOVwiPiR7bX08L3A+PHAgY2xhc3M9XCJzbWFsbFwiPjxzcGFuIHN0eWxlPVwiYmFja2dyb3VuZDojZDZlNmY4O2NvbG9yOiMwYjBiMGI7cGFkZGluZzowIDJweFwiPmJsdWU8L3NwYW4+ID0gaGVkZ2UgKCR7bmh9KSDCtyA8c3BhbiBzdHlsZT1cImJhY2tncm91bmQ6I2Y2ZGNjZjtjb2xvcjojMGIwYjBiO3BhZGRpbmc6MCAycHg7Zm9udC13ZWlnaHQ6NjAwXCI+b3JhbmdlPC9zcGFuPiA9IGJvb3N0ZXIgKCR7bmJ9KTwvcD5cbiAgIDxwIGNsYXNzPVwiJHtuYiA+IG5oID8gXCJsYWItbWVkaW9cIiA6IFwibGFiLWJpZW5cIn1cIiBzdHlsZT1cImZvbnQtd2VpZ2h0OjYwMFwiPiR7bmIgPiBuaCA/IFwiTW9yZSBib29zdGVycyB0aGFuIGhlZGdlczogY2hlY2sgdGhhdCB0aGUgZXZpZGVuY2UgKGRlc2lnbiwgc2FtcGxlLCByZXBsaWNhdGlvbikgc3VwcG9ydHMgc3VjaCBzdHJvbmcgY2xhaW1zLCBlc3BlY2lhbGx5IGFueSBjYXVzYWwgdmVyYnMuXCIgOiBcIlRoZSB0ZXh0IGlzIGNhdXRpb3VzLiBDaGVjayB0aGF0IGl0IGlzIG5vdCBvdmVyLWhlZGdlZDogb25lIGhlZGdlIHBlciBjbGFpbSBpcyB1c3VhbGx5IGVub3VnaC5cIn08L3A+YDtcbiAgcmV0dXJuIGQ7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3RleHRvX2gnKSJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pablosancheznunez\.com\/scientific-english\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./02-clarity.html" class="pagination-link" aria-label="Chapter 2. Clear sentences">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Chapter 2. Clear sentences</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./04-errors.html" class="pagination-link" aria-label="Chapter 4. Common errors and false friends">
+        <span class="nav-page-text"><span class="chapter-title">Chapter 4. Common errors and false friends</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 <a href="https://pablosancheznunez.com">Pablo Sánchez-Núñez</a> · <a href="https://orcid.org/0000-0001-7845-9506">ORCID 0000-0001-7845-9506</a> · Text licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Universidad Carlos III de Madrid · Made with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
+
+
+
+
+<script src="site_libs/quarto-contrib/webex-1.2.0/webex.js"></script>
+</body></html>

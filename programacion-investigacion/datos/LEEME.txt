@@ -1,0 +1,4 @@
+Datos de los ejercicios.
+
+- publicaciones.csv: 62 registros bibliográficos simulados (ficticios; los DOI usan el prefijo de pruebas 10.5555 y no existen), con problemas de calidad intencionados (formatos de DOI, años y acceso abierto inconsistentes, valores perdidos y dos duplicados) para practicar ETL.
+- openalex_muestra.json: 30 trabajos reales descargados de la API de OpenAlex el 25-11-2026 (CC0), con estructura simplificada, para practicar sin conexión.

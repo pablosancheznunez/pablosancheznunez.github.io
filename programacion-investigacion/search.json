@@ -1,0 +1,1130 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programación para la investigación",
+    "section": "",
+    "text": "Presentación\nProgramar ya no es solo cosa de informáticos. Descargar miles de registros de una API, limpiar una base de datos, automatizar un análisis para que se pueda repetir, compartir un método como paquete o conectar tus herramientas con un asistente de inteligencia artificial son tareas cada vez más habituales en cualquier disciplina. Hacerlas con código, y no a mano, es lo que permite que la investigación sea reproducible, escalable y compartible.\nEste libro es una introducción práctica para doctorandos y personal investigador. Usa Python y R en paralelo, porque cada comunidad trabaja con uno u otro (y muchas con los dos), y todos los ejercicios se ejecutan en tu navegador, sin instalar nada, con Pyodide y webR.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#mapa-del-libro",
+    "href": "index.html#mapa-del-libro",
+    "title": "Programación para la investigación",
+    "section": "Mapa del libro",
+    "text": "Mapa del libro\n\n\n\nCapítulo\nPregunta\n\n\n\n\nPython y R en este libro\n¿Cómo funcionan los ejercicios en el navegador?\n\n\n1. Un flujo de trabajo reproducible\n¿Cómo organizar un proyecto, versionarlo con Git y fijar sus dependencias?\n\n\n2. Python para investigar\n¿Qué necesito de Python y de pandas para trabajar con datos?\n\n\n3. ETL\n¿Cómo extraer, limpiar y cargar datos de forma reproducible?\n\n\n4. Consumir API académicas\n¿Cómo descargar datos de OpenAlex o Crossref de forma responsable?\n\n\n5. Crear paquetes\n¿Cómo convertir mi código en un paquete de R o de Python citable?\n\n\n6. Servidores MCP\n¿Cómo conectar mis herramientas de investigación con asistentes de IA, con seguridad?\n\n\n\nCada capítulo tiene objetivos, glosario, lectura obligatoria con DOI, ejercicios autocorregidos de Python y R, laboratorios, actividades, un reto evaluable y una autoevaluación. Los datos de práctica son un archivo de 62 registros bibliográficos simulados con errores intencionados y una muestra real de 30 trabajos de OpenAlex. Tu progreso se guarda solo en tu navegador.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html",
+    "href": "00-r-en-el-libro.html",
+    "title": "Python y R en este libro",
+    "section": "",
+    "text": "Cómo funcionan las celdas\nLos capítulos tienen ejercicios de Python y de R que se ejecutan en tu navegador, sin instalar nada: Python funciona con Pyodide y R con webR, dos versiones de los lenguajes compiladas a WebAssembly. La primera vez que abres una página, el navegador descarga el motor correspondiente (unos segundos; luego queda en la caché).\nCada bloque tiene un botón Run Code. Puedes cambiar el código y volver a ejecutarlo; Start Over recupera la versión original. Los ejercicios tienen Show Hint (pista) y, en el libro, una solución desplegable; al pulsar Run Code recibes una corrección automática.\nPython:\nR:",
+    "crumbs": [
+      "Python y R en este libro"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html#cómo-funcionan-las-celdas",
+    "href": "00-r-en-el-libro.html#cómo-funcionan-las-celdas",
+    "title": "Python y R en este libro",
+    "section": "",
+    "text": "Tarea\nPython\nR\n\n\n\n\nAsignar\nx = 5\nx &lt;- 5\n\n\nColección\n[1, 2, 3] (lista)\nc(1, 2, 3) (vector)\n\n\nDiccionario o lista con nombres\n{\"a\": 1}\nlist(a = 1)\n\n\nFunción\ndef f(x): return x * 2\nf &lt;- function(x) x * 2\n\n\nÍndice del primer elemento\nx[0]\nx[1]\n\n\nTabla de datos\npandas.DataFrame\ndata.frame\n\n\nLeer un CSV\npd.read_csv(\"f.csv\")\nread.csv(\"f.csv\")\n\n\n\n\nEjercicio 1 · Python\nCalcula el número medio de citas de la lista.\n\n\n\n\n\n\n\nlen() devuelve el número de elementos de una lista.\n\n\ncitas = [12, 0, 45, 7, 3]\nsum(citas) / len(citas)\n13,4 citas de media.\n\n\n\n\nEjercicio 2 · R\nHaz lo mismo en R.\n\n\n\n\n\n\n\nLa media en R se calcula con mean().\n\n\ncitas &lt;- c(12, 0, 45, 7, 3)\nmean(citas)",
+    "crumbs": [
+      "Python y R en este libro"
+    ]
+  },
+  {
+    "objectID": "00-r-en-el-libro.html#trabajar-en-tu-ordenador",
+    "href": "00-r-en-el-libro.html#trabajar-en-tu-ordenador",
+    "title": "Python y R en este libro",
+    "section": "Trabajar en tu ordenador",
+    "text": "Trabajar en tu ordenador\nPara proyectos reales necesitarás los lenguajes instalados:\n\nPython: instala uv, que gestiona versiones de Python, entornos y dependencias con una sola herramienta (uv init, uv add pandas, uv run script.py).\nR: instala R desde CRAN y un editor (RStudio, Positron o VS Code).\nGit para el control de versiones (capítulo 1) y Quarto para documentos reproducibles.",
+    "crumbs": [
+      "Python y R en este libro"
+    ]
+  },
+  {
+    "objectID": "01-flujo.html",
+    "href": "01-flujo.html",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
+    "objectID": "01-flujo.html#lectura-obligatoria",
+    "href": "01-flujo.html#lectura-obligatoria",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "",
+    "text": "Wilson, G.; Bryan, J.; Cranston, K.; Kitzes, J.; Nederbragt, L.; Teal, T. K. (2017). Good enough practices in scientific computing. PLOS Computational Biology, 13(6), e1005510.\n\n\nLectura complementaria\n\nBlischak et al. (2016)",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
+    "objectID": "01-flujo.html#prácticas-suficientemente-buenas",
+    "href": "01-flujo.html#prácticas-suficientemente-buenas",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "1. Prácticas «suficientemente buenas»",
+    "text": "1. Prácticas «suficientemente buenas»\nWilson et al. (2017) proponen un conjunto mínimo de prácticas que cualquier investigador puede adoptar, aunque no sea programador profesional. Las agrupan en seis áreas:\n\n\n\nÁrea\nPrácticas clave\n\n\n\n\nGestión de datos\nGuardar los datos brutos sin tocar; crear los datos analizados con código; usar formatos abiertos; dar identificadores únicos; depositar los datos con un DOI\n\n\nSoftware\nComentarios y documentación breves; descomponer en funciones; no repetir código; usar bibliotecas existentes; nombres descriptivos\n\n\nColaboración\nUn archivo README; una lista de tareas; una licencia; una forma acordada de comunicarse\n\n\nOrganización del proyecto\nUna carpeta por proyecto con subcarpetas estándar; nombres de archivo que indiquen contenido\n\n\nSeguimiento de cambios\nCopias de seguridad automáticas; control de versiones; cambios pequeños y frecuentes\n\n\nManuscritos\nTexto en formatos que permitan seguir cambios; referencias gestionadas\n\n\n\nUna estructura de proyecto sencilla y suficiente:\nmi-proyecto/\n├── README.md          qué es, cómo reproducirlo, licencia, cita\n├── datos/\n│   ├── brutos/        tal como llegaron (nunca se editan a mano)\n│   └── procesados/    generados por el código\n├── codigo/            scripts y funciones\n├── resultados/        figuras y tablas generadas\n├── documentos/        manuscrito (por ejemplo, en Quarto)\n├── pyproject.toml     o renv.lock: dependencias\n└── .gitignore         lo que no entra en Git",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
+    "objectID": "01-flujo.html#git-y-github",
+    "href": "01-flujo.html#git-y-github",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "2. Git y GitHub",
+    "text": "2. Git y GitHub\nEl control de versiones registra cada cambio de los archivos del proyecto, quién lo hizo y por qué, y permite volver atrás. Git es el sistema más usado; GitHub (o GitLab, Codeberg) alojan los repositorios en línea para colaborar y publicar.\nLos conceptos básicos:\n\nUn repositorio es la carpeta del proyecto con su historial.\nUn commit es una instantánea de los cambios con un mensaje que explica el porqué.\nUna rama es una línea de trabajo paralela; se integra con un merge o, en GitHub, con una pull request.\n.gitignore indica qué no se versiona: datos personales, archivos enormes, contraseñas y claves de API, resultados que se regeneran.\n\n1git init\n2git add codigo/limpieza.py\n3git commit -m \"Normaliza los DOI antes de deduplicar\"\n4git log --oneline\n5git switch -c analisis-bayes\n6git push origin main\n\n1\n\nCrea el repositorio en la carpeta actual (una sola vez por proyecto).\n\n2\n\nPrepara el cambio: elige qué archivos entran en la próxima instantánea.\n\n3\n\nGuarda la instantánea con un mensaje que explica por qué, no qué (el qué ya lo dice el diff).\n\n4\n\nMuestra el historial, un commit por línea.\n\n5\n\nCrea una rama y se cambia a ella: aquí puedes experimentar sin tocar main.\n\n6\n\nSube la rama principal a GitHub; la primera vez necesitas git remote add origin URL.\n\n\nAsí se ve en el tiempo un flujo con una rama para un análisis nuevo que, una vez revisado, se integra en la principal:\n\n\n\n\n\n%%{init: {\"theme\": \"base\", \"themeVariables\": {\"git0\": \"#8fd19e\", \"git1\": \"#9ec5ff\", \"gitBranchLabel0\": \"#ffffff\", \"gitBranchLabel1\": \"#ffffff\", \"commitLabelColor\": \"#0b0b0b\", \"commitLabelBackground\": \"#ffffff\", \"tagLabelColor\": \"#0b0b0b\", \"tagLabelBackground\": \"#eceae5\"}}}%%\ngitGraph\n  commit id: \"Datos brutos\"\n  commit id: \"Limpieza de DOI\"\n  branch analisis-bayes\n  checkout analisis-bayes\n  commit id: \"Modelo bayesiano\"\n  commit id: \"Figura posterior\"\n  checkout main\n  commit id: \"Corrige errata\"\n  merge analisis-bayes id: \"Integra el análisis\"\n  commit id: \"v1.0 (DOI en Zenodo)\" tag: \"v1.0\"\n\n\n Historial con una rama de análisis que se integra en main tras la revisión. \n\n\n\nY una conexión con el resto del libro: si enlazas el repositorio con Zenodo, cada versión publicada (release) en GitHub recibe automáticamente un DOI citable. Así se publicaron los libros de esta colección.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
+    "objectID": "01-flujo.html#entornos-y-dependencias",
+    "href": "01-flujo.html#entornos-y-dependencias",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "3. Entornos y dependencias",
+    "text": "3. Entornos y dependencias\nEl código que funciona hoy puede fallar mañana porque cambió una biblioteca. Un entorno aísla las dependencias de cada proyecto, y un archivo de bloqueo registra las versiones exactas:\n\n\n\n\n\n\n\n\n\nPython\nR\n\n\n\n\nCrear el entorno\nuv init\nrenv::init()\n\n\nAñadir una dependencia\nuv add pandas\ninstall.packages(\"dplyr\")\n\n\nRegistrar versiones\nuv.lock (automático)\nrenv::snapshot() → renv.lock\n\n\nReproducir en otro ordenador\nuv sync\nrenv::restore()",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
+    "objectID": "01-flujo.html#lab-p1-gitignore",
+    "href": "01-flujo.html#lab-p1-gitignore",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "Laboratorio: ¿qué va en Git?",
+    "text": "Laboratorio: ¿qué va en Git?\n\n\nLaboratorio · se ejecuta en tu navegador\n\nMarca qué tiene tu proyecto y el laboratorio genera un .gitignore con explicaciones.\n\ncasilla = window.Lab.casilla\nviewof g_py = casilla(\"Código de Python\", {value: true})\nviewof g_r = casilla(\"Código de R\", {value: true})\nviewof g_env = casilla(\"Claves de API o contraseñas en un archivo .env\", {value: true})\nviewof g_pers = casilla(\"Datos con información personal\", {value: false})\nviewof g_big = casilla(\"Archivos de datos muy grandes (más de 50 MB)\", {value: false})\nviewof g_quarto = casilla(\"Documentos de Quarto\", {value: true})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const b = [];\n  b.push([\"# Sistema y editores\", \".DS_Store\\nThumbs.db\\n.vscode/\\n.idea/\"]);\n  if (g_py) b.push([\"# Python: entornos y cachés (se regeneran)\", \".venv/\\n__pycache__/\\n*.pyc\\n.ipynb_checkpoints/\"]);\n  if (g_r) b.push([\"# R: historial y cachés de renv (renv.lock sí se versiona)\", \".Rhistory\\n.RData\\n.Rproj.user/\\nrenv/library/\"]);\n  if (g_env) b.push([\"# Secretos: NUNCA en Git\", \".env\\n*.key\\nsecrets.*\"]);\n  if (g_pers) b.push([\"# Datos personales: fuera del repositorio (y del ordenador si no están protegidos)\", \"datos/brutos/personales/\"]);\n  if (g_big) b.push([\"# Datos grandes: deposítalos en Zenodo u otro repositorio y descárgalos con código\", \"datos/brutos/*.parquet\\ndatos/brutos/*.zip\"]);\n  if (g_quarto) b.push([\"# Quarto: salidas generadas\", \"_site/\\n_book/\\n/.quarto/\\n*_files/\"]);\n  const txt = b.map(([c, l]) =&gt; c + \"\\n\" + l).join(\"\\n\\n\");\n  const d = html`&lt;div role=\"status\"&gt;&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;`;\n  d.querySelector(\"code\").textContent = txt;\n  if (g_env) d.append(html`&lt;p class=\"lab-medio\" style=\"font-weight:600\"&gt;Si una clave llega a subirse a GitHub, borrarla del archivo no basta: revócala y genera una nueva.&lt;/p&gt;`);\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
+    "objectID": "01-flujo.html#ejercicios",
+    "href": "01-flujo.html#ejercicios",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nEjercicio 1.1 · Python\nLos nombres de archivo con fechas en formato ISO 8601 (AAAA-MM-DD) se ordenan solos. Construye el nombre 2026-03-07_encuesta.csv a partir de las variables.\n\n\n\n\n\n\n\n{dia:02d} escribe el número con dos cifras, rellenando con un cero.\n\n\nanio, mes, dia = 2026, 3, 7\nf\"{anio}-{mes:02d}-{dia:02d}_encuesta.csv\"\n\n\n\n\nEjercicio 1.2 · R\nHaz lo mismo en R con sprintf().\n\n\n\n\n\n\n\nEl tercer %02d corresponde al día.\n\n\nanio &lt;- 2026; mes &lt;- 3; dia &lt;- 7\nsprintf(\"%d-%02d-%02d_encuesta.csv\", anio, mes, dia)",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
+    "objectID": "01-flujo.html#caso-práctico-resuelto",
+    "href": "01-flujo.html#caso-práctico-resuelto",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaRescatar un proyecto desordenado\n\n\n\nUna carpeta real de tesis: datos_final.xlsx, datos_final_v2_BUENO.xlsx, analisis.R, analisis_copia.R, grafico1.png… Plan de rescate en una tarde:\n\nEstructura: crear datos/brutos, datos/procesados, codigo, resultados; mover los originales a brutos y no tocarlos más.\nIdentificar el script vigente comparando fechas y contenido; borrar las copias tras guardarlas en Git.\nGit: git init, un primer commit con todo y, a partir de ahí, cambios pequeños con mensajes claros.\nUn script maestro que ejecute en orden: limpieza → análisis → figuras.\nEntorno: renv::init() o uv init para fijar versiones.\nREADME con cómo reproducir los resultados.\n\nPrueba final: clonar el repositorio en otra carpeta y ejecutar el script maestro sin tocar nada.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
+    "objectID": "01-flujo.html#ejercicios-graduados",
+    "href": "01-flujo.html#ejercicios-graduados",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué mensaje de commit es mejor: «cambios» o «Excluye cuestionarios incompletos antes del análisis»?\n\nVer solución\nEl segundo: explica qué cambia y por qué, y permite encontrar el cambio más tarde en el historial.\n\nAvanzado. Aplica el plan de rescate a un proyecto tuyo y documenta en el README los pasos para reproducirlo.\n\nVer solución\nEl README debe indicar requisitos, cómo instalar el entorno, el orden de ejecución, qué produce cada script y la licencia de los datos y del código.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
+    "objectID": "01-flujo.html#actividades",
+    "href": "01-flujo.html#actividades",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
+    "objectID": "01-flujo.html#reto-p1",
+    "href": "01-flujo.html#reto-p1",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 1 · Un proyecto reproducible\n\n\n\n\nCrea un repositorio en GitHub con la estructura del capítulo, un README, una licencia y un .gitignore.\nAñade un script que lea publicaciones.csv y produzca una tabla resumen, con el entorno registrado (uv.lock o renv.lock).\nHaz al menos cinco commits con mensajes claros y una pull request desde una rama.\nComprueba la reproducibilidad: clona el repositorio en otra carpeta y ejecútalo desde cero.\n\nEntrega: el enlace al repositorio con la plantilla de entrega.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
+    "objectID": "01-flujo.html#autoevaluación",
+    "href": "01-flujo.html#autoevaluación",
+    "title": "Capítulo 1. Un flujo de trabajo reproducible",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nSegún Wilson et al. (2017), los datos brutos deben editarse a mano para corregirlos. VERDADEROFALSO\nUna instantánea de los cambios con un mensaje en Git es un \nLas claves de API deben guardarse en el código, para no perderlasen variables de entorno o en un .env excluido de Giten el README\nEl archivo que registra las versiones exactas de las dependencias es el archivo de \nEn R, renv::restore() reproduce el entorno de otro ordenador. VERDADEROFALSO\nEnlazar GitHub con Zenodo permite obtener más estrellasun DOI para cada versiónuna licencia\nLos nombres de archivo con fechas en formato ISO 8601 se ordenan cronológicamente al ordenarlos alfabéticamente. VERDADEROFALSO\n¿Qué hacer si una clave de API se ha subido por error a GitHub?\n\n Borrarla del archivo y hacer commit Revocarla y generar una nueva, además de quitarla del repositorio Nada, si el repositorio es privado\n\n\nVer explicaciones\n\nSe generan los procesados con código.\nCon un mensaje que explica el porqué.\nNunca en el repositorio.\nLock file.\nuv sync en Python.\nIntegración GitHub-Zenodo.\nAAAA-MM-DD.\nEl historial conserva la clave.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlischak, J. D., Davenport, E. R., y Wilson, G. (2016). A quick introduction to version control with Git and GitHub. PLOS Computational Biology, 12(1), e1004668. https://doi.org/10.1371/journal.pcbi.1004668\n\n\nWilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., y Teal, T. K. (2017). Good enough practices in scientific computing. PLOS Computational Biology, 13(6), e1005510. https://doi.org/10.1371/journal.pcbi.1005510",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Capítulo 1. Un flujo de trabajo reproducible</span>"
+    ]
+  },
+  {
+    "objectID": "02-python.html",
+    "href": "02-python.html",
+    "title": "Capítulo 2. Python para investigar",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Python para investigar</span>"
+    ]
+  },
+  {
+    "objectID": "02-python.html#lectura-obligatoria",
+    "href": "02-python.html#lectura-obligatoria",
+    "title": "Capítulo 2. Python para investigar",
+    "section": "",
+    "text": "Harris, C. R.; Millman, K. J.; van der Walt, S. J.; Gommers, R.; Virtanen, P. et al. (2020). Array programming with NumPy. Nature, 585(7825), 357-362.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Python para investigar</span>"
+    ]
+  },
+  {
+    "objectID": "02-python.html#lo-esencial-del-lenguaje",
+    "href": "02-python.html#lo-esencial-del-lenguaje",
+    "title": "Capítulo 2. Python para investigar",
+    "section": "1. Lo esencial del lenguaje",
+    "text": "1. Lo esencial del lenguaje\nPython es un lenguaje de propósito general con un ecosistema enorme para la ciencia: NumPy y pandas para datos, matplotlib para gráficos, scikit-learn para aprendizaje automático, requests para la web. Lo básico:\n\n\n\n\n\n\nLas funciones encapsulan una tarea. Una buena función tiene un nombre que dice qué hace, una documentación breve (docstring) y no depende de variables externas:",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Python para investigar</span>"
+    ]
+  },
+  {
+    "objectID": "02-python.html#datos-tabulares-con-pandas",
+    "href": "02-python.html#datos-tabulares-con-pandas",
+    "title": "Capítulo 2. Python para investigar",
+    "section": "2. Datos tabulares con pandas",
+    "text": "2. Datos tabulares con pandas\npandas organiza los datos en un DataFrame: una tabla con columnas de distinto tipo, parecida a un data.frame de R. Sus operaciones están vectorizadas: se aplican a columnas enteras sin escribir bucles, lo que es más claro y más rápido. Esa idea viene de la programación con matrices que 1 describen para NumPy, la base sobre la que se construye pandas.\n\n\n\n\n\n\n\n\n\n\n\n\nLos datos tienen problemas a propósito (años como \" 2021\" o \"s.f.\", DOI en varios formatos, duplicados): los limpiaremos en el capítulo 3.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Python para investigar</span>"
+    ]
+  },
+  {
+    "objectID": "02-python.html#ejercicios",
+    "href": "02-python.html#ejercicios",
+    "title": "Capítulo 2. Python para investigar",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nEjercicio 2.1 · Comprensión de listas\nCuenta cuántos artículos de la lista tienen al menos 10 citas.\n\n\n\n\n\n\n\n«Al menos 10» es mayor o igual: &gt;=.\n\n\ncitas = [12, 0, 45, 7, 3, 10, 28, 1]\nlen([c for c in citas if c &gt;= 10])\nCuatro artículos: 12, 45, 10 y 28.\n\n\n\n\nEjercicio 2.2 · Una función\nCompleta la función para que devuelva el índice h de una lista de citas: el mayor número h tal que h artículos tienen al menos h citas.\n\n\n\n\n\n\n\nEl artículo en la posición p (ordenados de más a menos citados) cuenta si tiene al menos p citas.\n\n\ndef indice_h(citas):\n    \"\"\"Calcula el índice h de una lista de citas.\"\"\"\n    ordenadas = sorted(citas, reverse=True)\n    h = 0\n    for posicion, c in enumerate(ordenadas, start=1):\n        if c &gt;= posicion:\n            h = posicion\n    return h\n\nindice_h([12, 0, 45, 7, 3, 10, 28, 1])\nh = 5: hay cinco artículos con al menos cinco citas (45, 28, 12, 10, 7).\n\n\n\n\nEjercicio 2.3 · pandas\n¿Cuál es la mediana de citas de las publicaciones? Convierte primero la columna a número.\n\n\n\n\n\n\n\n\nEl método de pandas para la mediana se llama igual que en inglés.\n\n\ncitas = pd.to_numeric(pub[\"citas\"], errors=\"coerce\")\ncitas.median()\nLos valores no numéricos («NA», «n/d», vacíos) se convierten en NaN y no cuentan.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Python para investigar</span>"
+    ]
+  },
+  {
+    "objectID": "02-python.html#caso-práctico-resuelto",
+    "href": "02-python.html#caso-práctico-resuelto",
+    "title": "Capítulo 2. Python para investigar",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDe un bucle a pandas\n\n\n\nTarea: calcular la media de citas por año.\nVersión con bucle y diccionarios:\nsuma, n = {}, {}\nfor fila in registros:\n    a = fila[\"anio\"]; suma[a] = suma.get(a, 0) + fila[\"citas\"]; n[a] = n.get(a, 0) + 1\nmedias = {a: suma[a] / n[a] for a in suma}\nVersión con pandas, vectorizada:\nmedias = pub.groupby(\"anio\")[\"citas\"].mean()\nLa segunda es más corta, más legible y menos propensa a errores. El bucle sigue siendo útil para entender qué hace groupby o para estructuras que no son tablas (JSON anidado).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Python para investigar</span>"
+    ]
+  },
+  {
+    "objectID": "02-python.html#ejercicios-graduados",
+    "href": "02-python.html#ejercicios-graduados",
+    "title": "Capítulo 2. Python para investigar",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué devuelve [c * 2 for c in [1, 2, 3] if c &gt; 1]?\n\nVer solución\n[4, 6]: filtra los elementos mayores que 1 y los multiplica por 2.\n\nAvanzado. Escribe una función que reciba un DataFrame de publicaciones y devuelva, por año, el número de artículos, la mediana de citas y el porcentaje en acceso abierto.\n\nVer solución\nPuede usarse groupby('anio').agg(n=('id', 'count'), mediana=('citas', 'median'), oa=('oa', 'mean')) y multiplicar oa por 100. Conviene documentarla y probarla con un DataFrame pequeño.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Python para investigar</span>"
+    ]
+  },
+  {
+    "objectID": "02-python.html#actividades",
+    "href": "02-python.html#actividades",
+    "title": "Capítulo 2. Python para investigar",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Python para investigar</span>"
+    ]
+  },
+  {
+    "objectID": "02-python.html#reto-p2",
+    "href": "02-python.html#reto-p2",
+    "title": "Capítulo 2. Python para investigar",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 2 · Tu primer módulo de Python\n\n\n\n\nEscribe un módulo bibliometria.py con tres funciones documentadas: normaliza_doi, indice_h y resumen_por_anio (que reciba un DataFrame).\nAñade pruebas sencillas con assert (o con pytest) para casos normales y extremos (lista vacía, DOI con espacios).\nÚsalo en un cuaderno o documento de Quarto con publicaciones.csv.\n\nEntrega: el enlace al repositorio con la plantilla de entrega.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Python para investigar</span>"
+    ]
+  },
+  {
+    "objectID": "02-python.html#autoevaluación",
+    "href": "02-python.html#autoevaluación",
+    "title": "Capítulo 2. Python para investigar",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nEn Python, el primer elemento de una lista tiene el índice 01-1\nUna estructura de pares clave-valor es un \nEl texto que documenta una función dentro de ella se llama \nEn pandas, aplicar una operación a una columna entera sin bucles se llama iteraciónvectorizaciónrecursión\npd.to_numeric(..., errors=\"coerce\") convierte los valores no numéricos en NaN. VERDADEROFALSO\nNumPy es una biblioteca para trabajar con matrices y vectores numéricos. VERDADEROFALSO\n[c for c in citas if c &gt; 5] es una comprensión de \n¿Por qué conviene encapsular la limpieza en funciones?\n\n Porque el código es más largo Porque se reutiliza, se prueba y se corrige en un solo lugar Porque Python lo exige\n\n\nVer explicaciones\n\nEn R, el primero es el 1.\ndict.\nEntre triples comillas.\nMás claro y más rápido.\nNot a Number.\n\n\n\nList comprehension.\nNo repetir código (Wilson et al., 2017).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., y Teal, T. K. (2017). Good enough practices in scientific computing. PLOS Computational Biology, 13(6), e1005510. https://doi.org/10.1371/journal.pcbi.1005510",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capítulo 2. Python para investigar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html",
+    "href": "03-etl.html",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html#lectura-obligatoria",
+    "href": "03-etl.html#lectura-obligatoria",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "",
+    "text": "Wickham, H. (2014). Tidy data. Journal of Statistical Software, 59(10), 1-23.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html#qué-es-un-proceso-etl",
+    "href": "03-etl.html#qué-es-un-proceso-etl",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "1. Qué es un proceso ETL",
+    "text": "1. Qué es un proceso ETL\nETL son las siglas de extract, transform, load: extraer los datos de sus fuentes (archivos, API, bases de datos, páginas web), transformarlos (limpiar, unir, recodificar, calcular) y cargarlos en el destino donde se analizarán (una base de datos, un archivo limpio). En investigación, el ETL es a menudo la parte más larga y la que más errores esconde.\n\n\n\n\n\n\nFigura 1: Un proceso ETL: de fuentes heterogéneas a una tabla limpia y documentada, todo con código.\n\n\n\nPrincipios para un ETL reproducible:\n\nLos datos brutos no se tocan; todo cambio es código.\nCada paso es una función pequeña y probada.\nEl proceso es idempotente: ejecutarlo dos veces da el mismo resultado.\nSe registra qué se ha cambiado (cuántas filas se descartan y por qué).\nSe valida al final: tipos, rangos, claves únicas.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html#datos-tidy",
+    "href": "03-etl.html#datos-tidy",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "2. Datos tidy",
+    "text": "2. Datos tidy\nWickham (2014) define los datos tidy (ordenados) con tres reglas: cada variable es una columna, cada observación es una fila y cada tipo de unidad observacional es una tabla. Muchos problemas de los datos reales violan esas reglas: varios autores en una celda, años en columnas, unidades mezcladas. En publicaciones.csv, la columna autores contiene varios valores en una celda; para analizar la autoría habría que separarla en una tabla aparte (una fila por artículo y autor).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html#transformar-los-problemas-típicos",
+    "href": "03-etl.html#transformar-los-problemas-típicos",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "3. Transformar: los problemas típicos",
+    "text": "3. Transformar: los problemas típicos\n\n\n\nProblema\nEjemplo en los datos\nSolución\n\n\n\n\nFormatos inconsistentes\nhttps://doi.org/10…, DOI: 10…\nNormalización con expresiones regulares\n\n\nCategorías mal escritas\nSí, si, TRUE\nDiccionario de recodificación\n\n\nNúmeros como texto\n\" 2021\", \"2021.0\", \"s.f.\"\nConversión con control de errores\n\n\nValores perdidos\nNA, n/d, vacío\nUnificar a un único valor ausente\n\n\nDuplicados\nRegistros repetidos\nDeduplicación por clave normalizada\n\n\n\nUna expresión regular describe un patrón de texto. Para los DOI, un patrón útil es 10\\.\\d{4,9}/\\S+: «10.», de cuatro a nueve dígitos, una barra y caracteres sin espacios.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html#un-etl-completo-línea-a-línea",
+    "href": "03-etl.html#un-etl-completo-línea-a-línea",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "4. Un ETL completo, línea a línea",
+    "text": "4. Un ETL completo, línea a línea\nAsí queda un ETL pequeño de publicaciones con las tres fases separadas. Cada número explica una decisión.\nfrom pathlib import Path\nimport pandas as pd\n\n1ENTRADA = Path(\"datos/brutos/publicaciones.csv\")\nSALIDA = Path(\"datos/procesados/publicaciones_limpias.csv\")\n\ndef extraer(ruta):\n2    return pd.read_csv(ruta, dtype=str, encoding=\"utf-8\")\n\ndef transformar(df):\n3    df = df.rename(columns=str.lower)\n    df[\"doi\"] = (df[\"doi\"].fillna(\"\")\n4                   .str.extract(r\"(10\\.\\d{4,9}/\\S+)\", expand=False)\n                   .str.lower().str.rstrip(\".,;\"))\n5    df[\"anio\"] = pd.to_numeric(df[\"anio\"], errors=\"coerce\").astype(\"Int64\")\n    oa = {\"sí\": True, \"si\": True, \"true\": True, \"no\": False, \"false\": False}\n6    df[\"acceso_abierto\"] = df[\"acceso_abierto\"].str.strip().str.lower().map(oa)\n    sin_doi = df[df[\"doi\"].isna()]\n7    con_doi = df.dropna(subset=[\"doi\"]).drop_duplicates(subset=\"doi\")\n    return pd.concat([con_doi, sin_doi], ignore_index=True)\n\ndef validar(df):\n8    assert df[\"doi\"].dropna().is_unique, \"Hay DOI repetidos\"\n    assert df[\"anio\"].dropna().between(1900, 2030).all(), \"Años fuera de rango\"\n\ndef cargar(df, ruta):\n    ruta.parent.mkdir(parents=True, exist_ok=True)\n9    df.to_csv(ruta, index=False, encoding=\"utf-8\")\n\nif __name__ == \"__main__\":\n    datos = transformar(extraer(ENTRADA))\n    validar(datos)\n    cargar(datos, SALIDA)\n    print(f\"{len(datos)} registros escritos en {SALIDA}\")\n\n1\n\nLas rutas, en constantes al principio: cambiarlas no obliga a buscar por todo el código. Los datos brutos nunca se sobrescriben.\n\n2\n\nLeerlo todo como texto evita que pandas «adivine» tipos y pierda ceros iniciales o convierta códigos en números.\n\n3\n\nNormalizar los nombres de columna hace el código robusto a cambios de mayúsculas en la fuente.\n\n4\n\nExtrae solo el DOI aunque venga con prefijos (https://doi.org/, doi:); el resto de la celda se descarta.\n\n5\n\nerrors=\"coerce\" convierte en ausente lo que no es un año, en lugar de detener el proceso; Int64 admite ausentes.\n\n6\n\nUn diccionario explícito para recodificar: los valores que no estén en él quedan como ausentes y se ven.\n\n7\n\nSe deduplica por DOI, pero los registros sin DOI se conservan: no son duplicados entre sí.\n\n8\n\nLas validaciones detienen el proceso si algo no cuadra, antes de que un error llegue al análisis.\n\n9\n\nSe escribe en una carpeta distinta, en UTF-8 y sin el índice de pandas.\n\n\nSeparar extraer, transformar, validar y cargar en funciones permite probar cada fase por su cuenta y reutilizarlas con otra fuente.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html#lab-p3-regex",
+    "href": "03-etl.html#lab-p3-regex",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "Laboratorio: prueba expresiones regulares",
+    "text": "Laboratorio: prueba expresiones regulares\n\n\nLaboratorio · se ejecuta en tu navegador\n\n\ntexto = window.Lab.texto\narea = window.Lab.area\nviewof patron = texto(\"Patrón (sintaxis de JavaScript, muy parecida a la de Python)\", {value: \"10\\\\.\\\\d{4,9}/\\\\S+\"})\nviewof muestras = area(\"Textos de prueba (uno por línea)\", {rows: 6, value: \"https://doi.org/10.1371/journal.pcbi.1005510\\nDOI: 10.18637/JSS.V059.I10\\ndoi:10.1038/s41586-020-2649-2.\\nsin doi\\n10.123/corto\\nVer 10.1080/00031305.2017.1375986 (2018)\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  let re;\n  try { re = new RegExp(patron, \"i\"); } catch (e) { d.innerHTML = `&lt;p class=\"lab-mal\" style=\"font-weight:600\"&gt;Patrón no válido: ${String(e.message).replace(/&lt;/g, \"&lt;\")}&lt;/p&gt;`; return d; }\n  const esc = s =&gt; s.replace(/&/g, \"&amp;\").replace(/&lt;/g, \"&lt;\");\n  const filas = muestras.split(\"\\n\").filter(l =&gt; l.trim()).map(l =&gt; { const m = l.match(re); return `&lt;tr&gt;&lt;td&gt;&lt;code&gt;${esc(l)}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;${m ? `&lt;code&gt;${esc(m[0])}&lt;/code&gt;` : '&lt;span class=\"lab-mal\"&gt;sin coincidencia&lt;/span&gt;'}&lt;/td&gt;&lt;td&gt;${m ? `&lt;code&gt;${esc(m[0].toLowerCase().replace(/[.,;)]+$/, \"\"))}&lt;/code&gt;` : \"—\"}&lt;/td&gt;&lt;/tr&gt;`; }).join(\"\");\n  d.innerHTML = `&lt;table class=\"table table-sm\"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=\"col\"&gt;Texto&lt;/th&gt;&lt;th scope=\"col\"&gt;Coincidencia&lt;/th&gt;&lt;th scope=\"col\"&gt;Normalizado (minúsculas, sin puntuación final)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;${filas}&lt;/tbody&gt;&lt;/table&gt;\n   &lt;p class=\"small\"&gt;Fíjate en el tercer ejemplo: el punto final se cuela en la coincidencia. Por eso conviene quitar la puntuación final al normalizar.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html#ejercicios",
+    "href": "03-etl.html#ejercicios",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nEjercicio 3.1 · Normalizar los DOI (Python)\nExtrae y normaliza los DOI de la columna doi. ¿Cuántos DOI únicos hay después de normalizar?\n\n\n\n\n\n\n\n\nLos DOI no distinguen mayúsculas y minúsculas: pásalos todos a minúsculas con .str.lower().\n\n\ndoi = (pub[\"doi\"].fillna(\"\")\n         .str.extract(r\"(10\\.\\d{4,9}/\\S+)\", expand=False)\n         .str.lower()\n         .str.rstrip(\".,;\"))\ndoi.nunique()\nSin pasar a minúsculas, algunos DOI escritos en mayúsculas contarían como distintos.\n\n\n\n\nEjercicio 3.2 · Recodificar el acceso abierto (Python)\nConvierte la columna acceso_abierto en verdadero, falso o ausente con un diccionario, y calcula la proporción de acceso abierto entre los registros con valor conocido.\n\n\n\n\n\n\n\n\n«false» significa falso: False.\n\n\nrecodifica = {\"sí\": True, \"si\": True, \"true\": True, \"no\": False, \"false\": False}\noa = pub[\"acceso_abierto\"].str.strip().str.lower().map(recodifica)\nround(oa.dropna().astype(bool).mean(), 3)\n\n\n\n\nEjercicio 3.3 · Cargar en SQLite (Python)\nCarga la tabla limpia en una base de datos SQLite en memoria y consulta con SQL cuántas publicaciones hay de 2023.\n\n\n\n\n\n\n\n\nEscribe el año como número: 2023.\n\n\ncon = sqlite3.connect(\":memory:\")\npub.to_sql(\"publicaciones\", con, index=False)\ncon.execute(\"SELECT COUNT(*) FROM publicaciones WHERE anio = 2023\").fetchone()[0]\nLos años escritos como \"2023.0\" también se han convertido gracias a pd.to_numeric; los \"s.f.\" quedan como ausentes.\n\n\n\n\nEjercicio 3.4 · Aplanar JSON (R)\nLee la muestra de OpenAlex con jsonlite y calcula cuántos trabajos son de acceso abierto.\n\n\n\n\n\n\n\n\nDentro de open_access, el campo lógico se llama is_oa.\n\n\ntrabajos &lt;- oa$results\nsum(trabajos$open_access$is_oa)\nfromJSON() convierte los objetos anidados en data frames dentro de data frames: trabajos$open_access es una tabla con las columnas is_oa y oa_status.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html#caso-práctico-resuelto",
+    "href": "03-etl.html#caso-práctico-resuelto",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaUn registro de cambios del ETL\n\n\n\nAl limpiar publicaciones.csv, el registro de cambios documenta cada paso:\n\n\n\n\n\n\n\n\n\nPaso\nFilas antes\nFilas después\nMotivo\n\n\n\n\nLectura\n—\n62\n\n\n\nNormalizar DOI\n62\n62\nFormatos distintos unificados\n\n\nEliminar duplicados (título + autores)\n62\n60\n2 registros repetidos\n\n\nAño no numérico («s.f.»)\n60\n60\nMarcado como ausente, no eliminado\n\n\nValidación\n60\n60\nAños entre 2019 y 2024, citas ≥ 0\n\n\n\nEste registro va en la sección de métodos: cualquier lector sabe qué se hizo con los datos.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html#ejercicios-graduados",
+    "href": "03-etl.html#ejercicios-graduados",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Por qué conviene marcar los años «s.f.» como ausentes en lugar de borrar esas filas?\n\nVer solución\nPorque el resto de la información del registro sigue siendo útil para otros análisis; borrar filas reduce la muestra y puede introducir sesgos. Los análisis por año excluirán los ausentes de forma explícita.\n\nAvanzado. Añade a tu ETL una función de validación que falle con un mensaje claro si algún año está fuera de rango o hay DOI duplicados.\n\nVer solución\nEn Python, con assert o lanzando ValueError con un mensaje; en R, con stopifnot() o stop(). La validación debe ejecutarse siempre al final del proceso.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html#actividades",
+    "href": "03-etl.html#actividades",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html#reto-p3",
+    "href": "03-etl.html#reto-p3",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 3 · Un ETL completo\n\n\n\n\nEscribe un ETL (en Python o en R) que lea publicaciones.csv, normalice DOI, años y acceso abierto, elimine duplicados y separe los autores en una tabla aparte.\nCarga las dos tablas en una base de datos SQLite y escribe tres consultas SQL útiles.\nAñade un registro de cambios (cuántas filas entran, se descartan y salen) y pruebas de validación.\nComprueba que el proceso es idempotente.\n\nEntrega: el enlace al repositorio con la plantilla de entrega.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "03-etl.html#autoevaluación",
+    "href": "03-etl.html#autoevaluación",
+    "title": "Capítulo 3. ETL: extraer, transformar y cargar",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nEn ETL, la T significa transferirtransformartabular\nSegún Wickham (2014), en los datos tidy cada variable es una \nUna columna con varios autores separados por punto y coma cumple las reglas de los datos tidy. VERDADEROFALSO\nUn proceso que da el mismo resultado al ejecutarse varias veces es \nLos DOI distinguen entre mayúsculas y minúsculas. VERDADEROFALSO\nPara describir patrones de texto se usan las expresiones \nSQLite guarda la base de datos en un servidor remotoen un único archivo (o en memoria)en la nube de GitHub\n¿Por qué no se deben editar a mano los datos brutos?\n\n Porque ocupan mucho Porque los cambios no quedarían registrados ni serían reproducibles Porque está prohibido por ley\n\n\nVer explicaciones\n\nExtract, transform, load.\nCada observación, una fila.\nHabría que separarla.\nEjecutarlo dos veces no duplica nada.\nPor eso se pasan a minúsculas.\nRegular expressions.\nIdeal para proyectos pequeños y medianos.\nTodo cambio es código.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWickham, H. (2014). Tidy data. Journal of Statistical Software, 59(10), 1-23. https://doi.org/10.18637/jss.v059.i10",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Capítulo 3. ETL: extraer, transformar y cargar</span>"
+    ]
+  },
+  {
+    "objectID": "04-api.html",
+    "href": "04-api.html",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
+    "objectID": "04-api.html#lectura-obligatoria",
+    "href": "04-api.html#lectura-obligatoria",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "",
+    "text": "Priem, J.; Piwowar, H.; Orr, R. (2022). OpenAlex: A fully-open index of scholarly works, authors, venues, institutions, and concepts. arXiv, 2205.01833.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
+    "objectID": "04-api.html#cómo-funciona-una-api-web",
+    "href": "04-api.html#cómo-funciona-una-api-web",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "1. Cómo funciona una API web",
+    "text": "1. Cómo funciona una API web\nUna API (application programming interface) web permite que un programa pida datos a un servidor. La mayoría de las API académicas siguen el estilo REST: cada recurso tiene una URL y se pide con el método HTTP GET; la respuesta suele venir en JSON.\nGET https://api.openalex.org/works?filter=publication_year:2024,is_oa:true&search=research%20software&per_page=25\n     └──────── base ─────────┘└ ruta ┘└───────────────────── parámetros ───────────────────────────────┘\n\n\n\nCódigo de estado\nSignifica\nQué hacer\n\n\n\n\n200\nCorrecto\nProcesar la respuesta\n\n\n400\nPetición mal formada\nRevisar los parámetros\n\n\n401 / 403\nSin autorización\nRevisar la clave de API o los permisos\n\n\n404\nNo existe\nComprobar el identificador\n\n\n429\nDemasiadas peticiones\nEsperar y reintentar más despacio\n\n\n500-503\nError del servidor\nReintentar más tarde con espera creciente",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
+    "objectID": "04-api.html#api-académicas-abiertas",
+    "href": "04-api.html#api-académicas-abiertas",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "2. API académicas abiertas",
+    "text": "2. API académicas abiertas\n\nOpenAlex (Priem et al., 2022): índice abierto (CC0) de trabajos, autores, fuentes, instituciones y temas, con una API gratuita. Sustituto abierto de las bases de datos comerciales para muchos análisis bibliométricos.\nCrossref: metadatos de los DOI registrados por las editoriales, incluidas las referencias y las financiaciones cuando se depositan.\nORCID, DataCite (DOI de datos y software), Europe PMC, arXiv, Zenodo…\n\nLas condiciones de uso (límites, necesidad de clave o de identificarse con un correo) cambian con el tiempo: lee siempre la documentación vigente de cada API antes de lanzar descargas masivas.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
+    "objectID": "04-api.html#descargar-de-forma-responsable",
+    "href": "04-api.html#descargar-de-forma-responsable",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "3. Descargar de forma responsable",
+    "text": "3. Descargar de forma responsable\n\nPaginación: las API devuelven los resultados por páginas. OpenAlex permite paginar por número de página o, para conjuntos grandes, con un cursor (cursor=* y después el valor de meta.next_cursor).\nLímites de uso: respeta el número de peticiones por segundo y por día; añade pausas (time.sleep, Sys.sleep) y reintentos con espera creciente ante un 429.\nCaché: guarda las respuestas en disco y no repitas peticiones que ya tienes. Además, documenta la fecha de descarga: los datos cambian.\nClaves de API: en variables de entorno, nunca en el código (capítulo 1).\nIdentifícate: muchas API piden un correo en un parámetro o en la cabecera User-Agent para contactarte si hay problemas.\n\nEn Python, con requests:\nimport os, time, requests\n\ndef openalex(params, max_paginas=5):\n    \"\"\"Descarga trabajos de OpenAlex paginando con cursor.\"\"\"\n1    url, cursor, todos = \"https://api.openalex.org/works\", \"*\", []\n2    for _ in range(max_paginas):\n        r = requests.get(url, params={**params, \"cursor\": cursor, \"per_page\": 200},\n3                         headers={\"User-Agent\": f\"mi-proyecto (mailto:{os.environ['MI_CORREO']})\"},\n4                         timeout=30)\n5        if r.status_code == 429:\n            time.sleep(10); continue\n6        r.raise_for_status()\n        datos = r.json()\n        todos += datos[\"results\"]\n7        cursor = datos[\"meta\"].get(\"next_cursor\")\n        if not cursor:\n            break\n8        time.sleep(0.2)\n    return todos\n\n1\n\nEl cursor \"*\" pide la primera página; OpenAlex devuelve en cada respuesta el cursor de la siguiente.\n\n2\n\nUn límite de páginas evita descargas infinitas mientras pruebas la consulta.\n\n3\n\nTe identificas con tu correo, leído de una variable de entorno y no escrito en el código.\n\n4\n\nSin timeout, una conexión colgada bloquearía el script indefinidamente.\n\n5\n\nEl código 429 significa «demasiadas peticiones»: esperas y vuelves a intentarlo.\n\n6\n\nCualquier otro error (404, 500…) detiene el script en lugar de seguir con datos incompletos.\n\n7\n\nCuando no hay cursor siguiente, ya tienes todos los resultados.\n\n8\n\nUna pausa breve entre páginas respeta los límites de uso de la API.\n\n\nEn R, con httr2:\nlibrary(httr2)\n1resp &lt;- request(\"https://api.openalex.org/works\") |&gt;\n2  req_url_query(filter = \"publication_year:2024,is_oa:true\", search = \"research software\") |&gt;\n3  req_user_agent(paste0(\"mi-proyecto (mailto:\", Sys.getenv(\"MI_CORREO\"), \")\")) |&gt;\n4  req_retry(max_tries = 3) |&gt;\n5  req_perform()\n6datos &lt;- resp_body_json(resp)\n\n1\n\nrequest() solo prepara la petición; todavía no se conecta a nada.\n\n2\n\nLos filtros van separados por comas y se combinan con «y»; search busca en título, resumen y texto.\n\n3\n\nEl correo, de nuevo desde una variable de entorno (usethis::edit_r_environ()).\n\n4\n\nReintenta automáticamente ante errores temporales como el 429 o el 503, esperando cada vez más.\n\n5\n\nAquí se envía la petición; si la respuesta es un error, R se detiene con un mensaje claro.\n\n6\n\nConvierte el JSON en una lista de R; después tendrás que aplanarla (véase el laboratorio «De JSON a tabla»).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
+    "objectID": "04-api.html#lab-p4-openalex",
+    "href": "04-api.html#lab-p4-openalex",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "Laboratorio: consulta OpenAlex en directo",
+    "text": "Laboratorio: consulta OpenAlex en directo\n\n\nLaboratorio · consulta en directo la API pública de OpenAlex desde tu navegador\n\nConstruye la consulta y observa la URL, el número de resultados y los primeros trabajos. Necesita conexión a internet.\n\ntexto = window.Lab.texto\nrango = window.Lab.rango\ncasilla = window.Lab.casilla\nviewof q_busca = texto(\"Búsqueda (título, resumen y texto)\", {value: \"research software\", submit: \"Consultar\"})\nviewof q_desde = rango(\"Desde el año\", [2000, 2026], {value: 2020})\nviewof q_oa = casilla(\"Solo acceso abierto\", {value: true})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const filtros = [`from_publication_date:${q_desde}-01-01`, \"type:article\"].concat(q_oa ? [\"is_oa:true\"] : []).join(\",\");\n  const url = `https://api.openalex.org/works?search=${encodeURIComponent(q_busca)}&filter=${filtros}&sort=cited_by_count:desc&per_page=5&select=title,publication_year,cited_by_count,doi`;\n  const d = html`&lt;div role=\"status\"&gt;&lt;p&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;code style=\"word-break:break-all\"&gt;${url}&lt;/code&gt;&lt;/p&gt;&lt;p&gt;Consultando…&lt;/p&gt;&lt;/div&gt;`;\n  const esc = s =&gt; String(s ?? \"\").replace(/&/g, \"&amp;\").replace(/&lt;/g, \"&lt;\");\n  try {\n    const r = await fetch(url);\n    const j = await r.json();\n    d.lastElementChild.remove();\n    d.insertAdjacentHTML(\"beforeend\", `&lt;p&gt;Código de estado &lt;strong&gt;${r.status}&lt;/strong&gt; · &lt;strong&gt;${(j.meta?.count ?? 0).toLocaleString(\"es-ES\")}&lt;/strong&gt; trabajos encontrados. Los cinco más citados:&lt;/p&gt;\n      &lt;ol&gt;${(j.results || []).map(w =&gt; `&lt;li&gt;${esc(w.title)} (${w.publication_year}) · ${w.cited_by_count} citas${w.doi ? ` · &lt;a href=\"${esc(w.doi)}\"&gt;${esc(w.doi.replace(\"https://doi.org/\", \"\"))}&lt;/a&gt;` : \"\"}&lt;/li&gt;`).join(\"\")}&lt;/ol&gt;\n      &lt;p class=\"small\"&gt;Prueba a añadir &lt;code&gt;&amp;group_by=publication_year&lt;/code&gt; a la URL en otra pestaña: OpenAlex devuelve recuentos agregados sin descargar los trabajos.&lt;/p&gt;`);\n  } catch (e) {\n    d.lastElementChild.outerHTML = '&lt;p class=\"lab-medio\" style=\"font-weight:600\"&gt;No se pudo conectar con OpenAlex (¿sin conexión?). Practica con la muestra guardada en los ejercicios.&lt;/p&gt;';\n  }\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
+    "objectID": "04-api.html#ejercicios",
+    "href": "04-api.html#ejercicios",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nEjercicio 4.1 · Construir la URL (Python)\nUsa urllib.parse.urlencode para codificar los parámetros. ¿Cómo queda codificado el espacio de la búsqueda?\n\n\n\n\n\n\n\nLlama a la función que has importado: urlencode(params).\n\n\nfrom urllib.parse import urlencode\nparams = {\"search\": \"open science\", \"filter\": \"publication_year:2024\", \"per_page\": 25}\nurl = \"https://api.openalex.org/works?\" + urlencode(params)\nurl\nEl espacio se codifica como + y los dos puntos como %3A. Nunca construyas las URL concatenando texto a mano.\n\n\n\n\nEjercicio 4.2 · Procesar la respuesta (Python)\nLa muestra guardada tiene la misma estructura que una respuesta de OpenAlex. ¿Cuántos trabajos tienen al menos 100 citas?\n\n\n\n\n\n\n\n\nEn las respuestas de OpenAlex, la lista de trabajos está en la clave results; los metadatos de la consulta, en meta.\n\n\ntrabajos = respuesta[\"results\"]\nsum(1 for w in trabajos if w[\"cited_by_count\"] &gt;= 100)\n\n\n\n\nEjercicio 4.3 · Autores por país (R)\nCada trabajo tiene una lista de autorías con sus países. Cuenta cuántos trabajos tienen al menos un autor de España (código ES).\n\n\n\n\n\n\n\n\nEl código ISO de España es ES.\n\n\ntiene_pais &lt;- function(trabajo, codigo) {\n  paises &lt;- unlist(lapply(trabajo$authorships, function(a) a$countries))\n  codigo %in% paises\n}\nsum(sapply(oa$results, tiene_pais, codigo = \"ES\"))\nCon simplifyVector = FALSE, el JSON se lee como listas anidadas, que es lo más seguro cuando la estructura es irregular.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
+    "objectID": "04-api.html#caso-práctico-resuelto",
+    "href": "04-api.html#caso-práctico-resuelto",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDescargar todos los resultados con paginación por cursor\n\n\n\nNecesitas todos los artículos de 2024 sobre «research software» en OpenAlex (unos pocos miles). Procedimiento:\n\nPrimera petición con cursor=* y per_page=200.\nGuardar results y leer meta.next_cursor.\nRepetir con el nuevo cursor hasta que sea nulo.\nPausa breve entre peticiones y reintento si aparece un 429.\nGuardar cada página en disco (pagina_001.json…) para no repetir la descarga si algo falla.\nAnotar la fecha y la consulta exacta.\n\nComprobación: el número de registros descargados debe coincidir con meta.count de la primera respuesta (salvo cambios durante la descarga).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
+    "objectID": "04-api.html#ejercicios-graduados",
+    "href": "04-api.html#ejercicios-graduados",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Por qué se guarda cada página en disco y no solo el resultado final?\n\nVer solución\nPara poder reanudar la descarga si falla a mitad, no repetir peticiones y conservar los datos brutos tal como llegaron.\n\nAvanzado. Escribe la función de descarga con cursor en R con httr2, guardando cada página y registrando el número total de resultados.\n\nVer solución\nUsa un bucle while con req_url_query(cursor = cursor), resp_body_json(), jsonlite::write_json() para cada página y Sys.sleep() entre peticiones; termina cuando next_cursor sea NULL.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
+    "objectID": "04-api.html#actividades",
+    "href": "04-api.html#actividades",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
+    "objectID": "04-api.html#reto-p4",
+    "href": "04-api.html#reto-p4",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 4 · Un mini estudio bibliométrico con datos abiertos\n\n\n\n\nElige un tema de tu campo y descarga de OpenAlex (con paginación por cursor) todos los artículos de los últimos cinco años, o un máximo de 2000.\nGuarda la respuesta bruta con la fecha y aplica un ETL (capítulo 3).\nResponde a tres preguntas: evolución anual, proporción en acceso abierto y países más frecuentes.\nCompleta los metadatos de una muestra con Crossref y compara las dos fuentes.\n\nEntrega: el enlace al repositorio con la plantilla de entrega.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
+    "objectID": "04-api.html#autoevaluación",
+    "href": "04-api.html#autoevaluación",
+    "title": "Capítulo 4. Consumir API académicas",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nEl código de estado que indica demasiadas peticiones es el 200404429\nEl formato de respuesta más habitual de las API académicas es \nLos datos de OpenAlex se publican con licencia CC0. VERDADEROFALSO\nPara recorrer conjuntos grandes de resultados en OpenAlex se usa la paginación por \nLas condiciones de uso de una API no cambian nunca. VERDADEROFALSO\nCrossref contiene sobre todo textos completos de los artículosmetadatos de los DOI depositados por las editorialesperfiles de investigadores\nConviene construir las URL concatenando texto a mano. VERDADEROFALSO\n¿Por qué conviene guardar las respuestas de la API en disco?\n\n Para ocupar espacio Para no repetir peticiones, poder reproducir el análisis y documentar qué datos se usaron y cuándo Porque la API lo exige siempre\n\n\nVer explicaciones\n\nToo Many Requests.\nJavaScript Object Notation.\nDominio público.\nmeta.next_cursor.\nLee la documentación vigente.\nReferencias y financiación, si se depositan.\nUsa urlencode o req_url_query.\nCaché y trazabilidad.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPriem, J., Piwowar, H., y Orr, R. (2022). OpenAlex: A fully-open index of scholarly works, authors, venues, institutions, and concepts. arXiv, 2205. https://doi.org/10.48550/arXiv.2205.01833",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Capítulo 4. Consumir API académicas</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html",
+    "href": "05-paquetes.html",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html#lectura-obligatoria",
+    "href": "05-paquetes.html#lectura-obligatoria",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "",
+    "text": "Marwick, B.; Boettiger, C.; Mullen, L. (2018). Packaging data analytical work reproducibly using R (and friends). The American Statistician, 72(1), 80-88.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html#por-qué-un-paquete",
+    "href": "05-paquetes.html#por-qué-un-paquete",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "1. ¿Por qué un paquete?",
+    "text": "1. ¿Por qué un paquete?\nUn paquete es la forma estándar de distribuir código reutilizable con su documentación, sus pruebas y sus dependencias declaradas. Merece la pena cuando:\n\nUsas las mismas funciones en varios proyectos (copiar y pegar acaba en versiones distintas).\nQuieres que otras personas usen tu método.\nQuieres que el software sea citable y reconocido como resultado de investigación.\n\nMarwick, Boettiger y Mullen (2018) van más allá y proponen organizar todo un proyecto de análisis como un compendio de investigación: una estructura de paquete que reúne datos, código, documentación y manuscrito, de modo que las herramientas del ecosistema (comprobaciones, pruebas, integración continua) sirvan también para garantizar la reproducibilidad.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html#un-paquete-de-r",
+    "href": "05-paquetes.html#un-paquete-de-r",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "2. Un paquete de R",
+    "text": "2. Un paquete de R\nbibliometrica/\n├── DESCRIPTION        nombre, versión, autores (con ORCID), licencia, dependencias\n├── NAMESPACE          qué se exporta (lo genera roxygen2)\n├── R/                 las funciones\n├── man/               la ayuda (la genera roxygen2)\n├── tests/testthat/    las pruebas\n├── vignettes/         tutoriales largos\n├── inst/CITATION      cómo citar el paquete\n└── README.md\nEl flujo habitual con usethis y devtools:\nusethis::create_package(\"~/bibliometrica\")\nusethis::use_mit_license()\nusethis::use_r(\"indice_h\")          # crea R/indice_h.R\nusethis::use_testthat()\nusethis::use_test(\"indice_h\")       # crea tests/testthat/test-indice_h.R\nusethis::use_package(\"jsonlite\")    # declara una dependencia\nusethis::use_git(); usethis::use_github()\ndevtools::document()                # roxygen2 → man/ y NAMESPACE\ndevtools::test()                    # ejecuta las pruebas\ndevtools::check()                   # R CMD check: la revisión completa\nUna función documentada con roxygen2 y su prueba con testthat:\n#' Índice h de una serie de citas\n#'\n#' @param citas Vector numérico de citas, una por publicación.\n#' @return Un entero: el mayor h tal que h publicaciones tienen al menos h citas.\n#' @examples\n#' indice_h(c(10, 8, 5, 4, 3))\n#' @export\nindice_h &lt;- function(citas) {\n  stopifnot(is.numeric(citas), all(citas &gt;= 0, na.rm = TRUE))\n  citas &lt;- sort(citas[!is.na(citas)], decreasing = TRUE)\n  sum(citas &gt;= seq_along(citas))\n}\n\n# tests/testthat/test-indice_h.R\ntest_that(\"indice_h funciona en casos conocidos\", {\n  expect_equal(indice_h(c(10, 8, 5, 4, 3)), 4)\n  expect_equal(indice_h(numeric(0)), 0)\n  expect_error(indice_h(c(-1, 2)))\n})\nR CMD check revisa la documentación, los ejemplos, las pruebas, las dependencias y docenas de detalles; CRAN exige que pase sin errores ni avisos. Para publicar, las opciones son CRAN (revisión estricta, máxima difusión), R-universe (publicación inmediata desde GitHub) y la revisión por pares de rOpenSci para paquetes científicos. La web de documentación se genera con pkgdown.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html#un-paquete-de-python",
+    "href": "05-paquetes.html#un-paquete-de-python",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "3. Un paquete de Python",
+    "text": "3. Un paquete de Python\nbibliometrica/\n├── pyproject.toml     metadatos, dependencias y sistema de construcción\n├── src/bibliometrica/\n│   ├── __init__.py\n│   └── indices.py\n├── tests/test_indices.py\n└── README.md\nuv init --package bibliometrica     # crea la estructura con pyproject.toml\nuv add requests                     # dependencia\nuv add --dev pytest                 # dependencia de desarrollo\nuv run pytest                       # pruebas\nuv build                            # construye el paquete\nuv publish                          # publica en PyPI (con un token)",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html#versiones-citas-y-doi",
+    "href": "05-paquetes.html#versiones-citas-y-doi",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "4. Versiones, citas y DOI",
+    "text": "4. Versiones, citas y DOI\n\nVersionado semántico (MAJOR.MINOR.PATCH): sube el PATCH al corregir errores, el MINOR al añadir funciones compatibles y el MAJOR al romper la compatibilidad.\nAñade un CITATION.cff (lo leen GitHub y Zenodo) y, en R, inst/CITATION.\nConecta el repositorio con Zenodo para obtener un DOI por versión, y cita el software en tus artículos con su versión y su DOI.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html#ejercicios",
+    "href": "05-paquetes.html#ejercicios",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nEjercicio 5.1 · Validar las entradas (R)\nCompleta la función para que rechace las citas negativas con stopifnot(), y comprueba que devuelve el índice h correcto.\n\n\n\n\n\n\n\nLas citas deben ser mayores o iguales que cero: &gt;=.\n\n\nindice_h &lt;- function(citas) {\n  stopifnot(is.numeric(citas), all(citas &gt;= 0, na.rm = TRUE))\n  citas &lt;- sort(citas[!is.na(citas)], decreasing = TRUE)\n  sum(citas &gt;= seq_along(citas))\n}\nindice_h(c(12, 0, 45, 7, 3, 10, 28, 1))\n\n\n\n\nEjercicio 5.2 · Pruebas con assert (Python)\nEscribe la función normaliza_doi para que pasen las tres pruebas. La última línea devuelve True si todo va bien.\n\n\n\n\n\n\n\nPara pasar a minúsculas se usa .lower().\n\n\ndef normaliza_doi(doi):\n    \"\"\"Minúsculas, sin espacios, sin prefijo de URL ni 'doi:'.\"\"\"\n    doi = doi.strip().lower()\n    for prefijo in (\"https://doi.org/\", \"doi:\"):\n        if doi.startswith(prefijo):\n            doi = doi[len(prefijo):]\n    return doi.strip()\n\nassert normaliza_doi(\"10.1/ABC\") == \"10.1/abc\"\nassert normaliza_doi(\" https://doi.org/10.1/x \") == \"10.1/x\"\nassert normaliza_doi(\"DOI: 10.1/Y\") == \"10.1/y\"\nTrue\nEn un paquete, estas pruebas irían en tests/test_doi.py y se ejecutarían con uv run pytest.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html#caso-práctico-resuelto",
+    "href": "05-paquetes.html#caso-práctico-resuelto",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDe tres scripts a un paquete en una mañana\n\n\n\nTres proyectos copian las mismas funciones (normaliza_doi, indice_h, lee_openalex). Pasos:\n\nusethis::create_package(\"bibliometrica\").\nMover cada función a R/ con documentación roxygen2 y @export.\nDeclarar dependencias: usethis::use_package(\"jsonlite\").\nUna prueba por función con casos normales y extremos.\ndevtools::check() hasta 0 errores, 0 avisos y 0 notas.\nSustituir el código copiado en los proyectos por library(bibliometrica).\nGitHub + Zenodo para la versión 0.1.0 con DOI.\n\nResultado: un único lugar donde corregir errores, documentación accesible con ?indice_h y un software citable.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html#ejercicios-graduados",
+    "href": "05-paquetes.html#ejercicios-graduados",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿En qué archivo se declara que el paquete depende de jsonlite?\n\nVer solución\nEn DESCRIPTION, en el campo Imports (lo añade usethis::use_package()).\n\nAvanzado. Añade una viñeta (usethis::use_vignette()) a tu paquete con un ejemplo completo de uso sobre datos reales.\n\nVer solución\nLa viñeta debe ejecutarse durante check(), usar datos pequeños incluidos en el paquete o descargables con caché, y mostrar el flujo completo de principio a fin.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html#actividades",
+    "href": "05-paquetes.html#actividades",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html#reto-p5",
+    "href": "05-paquetes.html#reto-p5",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 5 · Tu paquete\n\n\n\n\nConvierte las funciones de los capítulos 2-4 en un paquete de R o de Python con al menos tres funciones exportadas, documentadas y con pruebas.\nConsigue que devtools::check() (R) o uv build y pytest (Python) terminen sin errores.\nAñade README, licencia, CITATION.cff e integración continua con GitHub Actions.\nPublica la versión 0.1.0 en GitHub y obtén un DOI en Zenodo.\n\nEntrega: el enlace al repositorio y el DOI con la plantilla de entrega.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "05-paquetes.html#autoevaluación",
+    "href": "05-paquetes.html#autoevaluación",
+    "title": "Capítulo 5. Crear paquetes de R y de Python",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nEn un paquete de R, las dependencias se declaran en el archivo \nroxygen2 genera la documentación de man/ y el archivo NAMESPACE. VERDADEROFALSO\nMarwick et al. (2018) proponen organizar un proyecto de análisis como un compendio de \nLa revisión completa de un paquete de R antes de publicarlo se hace con devtools::test()devtools::check()usethis::use_r()\nEn Python, los metadatos y las dependencias de un paquete moderno se declaran en setup.cfg obligatoriamentepyproject.tomlrequirements.txt siempre\nAñadir una función compatible con lo anterior sube la versión MAJOR. VERDADEROFALSO\nEnlazar GitHub con Zenodo permite obtener un DOI para cada versión del software. VERDADEROFALSO\n¿Cuándo merece la pena crear un paquete?\n\n Siempre, aunque sea un script de diez líneas Cuando el código se reutiliza en varios proyectos, lo usarán otras personas o quieres que sea citable Nunca: es mejor copiar y pegar\n\n\nVer explicaciones\n\nImports, Suggests.\nCon devtools::document().\nResearch compendium.\nR CMD check.\nPEP 621.\nSube el MINOR.\nIntegración GitHub-Zenodo.\nReutilización, difusión, crédito.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarwick, B., Boettiger, C., y Mullen, L. (2018). Packaging data analytical work reproducibly using R (and friends). The American Statistician, 72(1), 80-88. https://doi.org/10.1080/00031305.2017.1375986",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 5. Crear paquetes de R y de Python</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html",
+    "href": "06-mcp.html",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "",
+    "text": "Lectura obligatoria",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#lectura-obligatoria",
+    "href": "06-mcp.html#lectura-obligatoria",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "",
+    "text": "Hou, X.; Zhao, Y.; Wang, S.; Wang, H. (2025). Model Context Protocol (MCP): Landscape, security threats, and future research directions. arXiv, 2503.23278.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#qué-es-mcp",
+    "href": "06-mcp.html#qué-es-mcp",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "1. Qué es MCP",
+    "text": "1. Qué es MCP\nLos asistentes de inteligencia artificial basados en modelos de lenguaje son más útiles cuando pueden consultar datos y usar herramientas: buscar en una base bibliográfica, leer un archivo del proyecto, ejecutar un análisis. El Model Context Protocol (MCP), propuesto por Anthropic en noviembre de 2024 como estándar abierto, define una forma común de hacerlo: en lugar de una integración distinta para cada aplicación, una herramienta se expone una vez como servidor MCP y la puede usar cualquier aplicación compatible.\n\n\n\n\n\n\n\n\nPieza\nQué es\nEjemplo\n\n\n\n\nAnfitrión (host)\nLa aplicación con la que habla la persona\nUn asistente de escritorio, un editor de código\n\n\nCliente\nEl componente del anfitrión que mantiene la conexión con un servidor\nUno por servidor\n\n\nServidor\nEl programa que ofrece capacidades\nTu servidor de bibliometría\n\n\n\nUn servidor puede ofrecer tres tipos de capacidades:\n\nHerramientas (tools): funciones que el modelo puede decidir llamar, con argumentos descritos con un esquema JSON. Pueden tener efectos (escribir, enviar).\nRecursos (resources): datos que la aplicación puede leer, identificados por una URI (un archivo, una tabla).\nPlantillas (prompts): instrucciones predefinidas que la persona elige usar.\n\nLos mensajes siguen el formato JSON-RPC 2.0 y viajan por un transporte: stdio (el anfitrión lanza el servidor como un proceso local y se comunican por la entrada y la salida estándar) o HTTP (Streamable HTTP, para servidores remotos).\n\n\n\n\n\n\nFigura 1: Arquitectura de MCP: el anfitrión mantiene un cliente por servidor; cada servidor expone herramientas, recursos y plantillas sobre sus propias fuentes de datos.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#el-ciclo-de-una-conversación",
+    "href": "06-mcp.html#el-ciclo-de-una-conversación",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "2. El ciclo de una conversación",
+    "text": "2. El ciclo de una conversación\n\nInicialización: el cliente envía initialize con la versión del protocolo y sus capacidades; el servidor responde con las suyas.\nDescubrimiento: el cliente pide tools/list (y resources/list, prompts/list); el servidor devuelve cada herramienta con su nombre, su descripción y su inputSchema.\nUso: cuando el modelo decide usar una herramienta, el cliente envía tools/call con el nombre y los argumentos; el servidor la ejecuta y devuelve el resultado como contenido (texto, imágenes, datos estructurados).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#lab-p6-mcp",
+    "href": "06-mcp.html#lab-p6-mcp",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "Laboratorio: un servidor MCP simulado",
+    "text": "Laboratorio: un servidor MCP simulado\n\n\nLaboratorio · simula los mensajes JSON-RPC de MCP; la herramienta consulta Crossref en directo\n\nElige el mensaje que envía el cliente y observa la respuesta del servidor bibliometria. La herramienta metadatos_doi consulta de verdad la API de Crossref.\n\nseleccion = window.Lab.seleccion\ntexto = window.Lab.texto\nviewof metodo = seleccion(\"Mensaje del cliente\", [\"initialize\", \"tools/list\", \"tools/call\", \"resources/list\"], {value: \"tools/list\"})\nviewof arg_doi = texto(\"Argumento doi (para tools/call)\", {value: \"10.1371/journal.pcbi.1005510\", submit: \"Enviar\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const herramienta = {name: \"metadatos_doi\", description: \"Devuelve título, revista y año de un DOI consultando Crossref.\",\n    inputSchema: {type: \"object\", properties: {doi: {type: \"string\", description: \"DOI sin prefijo de URL\"}}, required: [\"doi\"]}};\n  const params = {\n    \"initialize\": {protocolVersion: \"2025-06-18\", capabilities: {}, clientInfo: {name: \"cliente-del-libro\", version: \"1.0\"}},\n    \"tools/list\": {}, \"resources/list\": {},\n    \"tools/call\": {name: \"metadatos_doi\", arguments: {doi: arg_doi}}}[metodo];\n  const peticion = {jsonrpc: \"2.0\", id: 1, method: metodo, params};\n  let result;\n  if (metodo === \"initialize\") result = {protocolVersion: \"2025-06-18\", capabilities: {tools: {}, resources: {}}, serverInfo: {name: \"bibliometria\", version: \"0.1.0\"}};\n  else if (metodo === \"tools/list\") result = {tools: [herramienta]};\n  else if (metodo === \"resources/list\") result = {resources: [{uri: \"datos://publicaciones\", name: \"publicaciones\", mimeType: \"text/csv\"}]};\n  else {\n    const doi = (arg_doi || \"\").trim().toLowerCase().replace(/^https?:\\/\\/(dx\\.)?doi\\.org\\//, \"\");\n    if (!/^10\\.\\d{4,9}\\/\\S+$/.test(doi)) result = {content: [{type: \"text\", text: \"El argumento no parece un DOI válido.\"}], isError: true};\n    else {\n      try {\n        const r = await fetch(`https://api.crossref.org/works/${encodeURIComponent(doi)}`);\n        if (!r.ok) result = {content: [{type: \"text\", text: `Crossref respondió ${r.status}: DOI no encontrado.`}], isError: true};\n        else { const m = (await r.json()).message;\n          result = {content: [{type: \"text\", text: JSON.stringify({titulo: (m.title || [\"\"])[0], revista: (m[\"container-title\"] || [\"\"])[0], anio: m.issued?.[\"date-parts\"]?.[0]?.[0]})}], isError: false}; }\n      } catch (e) { result = {content: [{type: \"text\", text: \"Sin conexión con Crossref.\"}], isError: true}; }\n    }\n  }\n  const respuesta = {jsonrpc: \"2.0\", id: 1, result};\n  const d = html`&lt;div role=\"status\" class=\"row g-2\"&gt;&lt;div class=\"col-md-6\"&gt;&lt;p class=\"small mb-1\"&gt;&lt;strong&gt;Cliente → servidor&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=\"col-md-6\"&gt;&lt;p class=\"small mb-1\"&gt;&lt;strong&gt;Servidor → cliente&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;`;\n  const [a, b] = d.querySelectorAll(\"code\");\n  a.textContent = JSON.stringify(peticion, null, 2); b.textContent = JSON.stringify(respuesta, null, 2);\n  return d;\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#un-servidor-en-python",
+    "href": "06-mcp.html#un-servidor-en-python",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "3. Un servidor en Python",
+    "text": "3. Un servidor en Python\nCon el SDK oficial de Python (rama estable 1.x), la clase FastMCP convierte funciones con anotaciones de tipo y docstring en herramientas, recursos y plantillas:\n# servidor.py  ·  ejecutar con: uv run --with \"mcp[cli]&lt;2\" --with httpx mcp dev servidor.py\nimport httpx\nfrom mcp.server.fastmcp import FastMCP\n\nmcp = FastMCP(\"bibliometria\")\n\n@mcp.tool()\nasync def metadatos_doi(doi: str) -&gt; dict:\n    \"\"\"Devuelve título, revista y año de un DOI consultando Crossref.\"\"\"\n    async with httpx.AsyncClient(timeout=20) as cliente:\n        r = await cliente.get(f\"https://api.crossref.org/works/{doi}\")\n        r.raise_for_status()\n        m = r.json()[\"message\"]\n    return {\"titulo\": m[\"title\"][0],\n            \"revista\": (m.get(\"container-title\") or [\"\"])[0],\n            \"anio\": m[\"issued\"][\"date-parts\"][0][0]}\n\n@mcp.resource(\"datos://publicaciones\")\ndef publicaciones() -&gt; str:\n    \"\"\"El CSV de publicaciones del proyecto.\"\"\"\n    with open(\"datos/publicaciones.csv\", encoding=\"utf-8\") as f:\n        return f.read()\n\n@mcp.prompt()\ndef revisar_metadatos(doi: str) -&gt; str:\n    \"\"\"Plantilla para revisar los metadatos de un DOI.\"\"\"\n    return f\"Comprueba los metadatos del DOI {doi} con la herramienta metadatos_doi y señala incoherencias.\"\n\nif __name__ == \"__main__\":\n    mcp.run()            # stdio por defecto; mcp.run(transport=\"streamable-http\") para HTTP\nmcp dev abre el MCP Inspector, una interfaz para probar el servidor sin ningún asistente. Para usarlo desde una aplicación compatible se registra en su configuración, normalmente un JSON con el comando que lanza el servidor:\n{\n  \"mcpServers\": {\n    \"bibliometria\": {\n      \"command\": \"uv\",\n      \"args\": [\"run\", \"--with\", \"mcp[cli]&lt;2\", \"--with\", \"httpx\", \"mcp\", \"run\", \"/ruta/a/servidor.py\"]\n    }\n  }\n}",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#un-servidor-en-r",
+    "href": "06-mcp.html#un-servidor-en-r",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "4. Un servidor en R",
+    "text": "4. Un servidor en R\nEl paquete mcptools (en CRAN) implementa MCP en R, en los dos sentidos: R como servidor (para que un asistente use funciones de R) y R como cliente (para usar servidores de terceros desde ellmer). Las herramientas se definen con ellmer::tool():\n# servidor.R  ·  registrar en la aplicación con el comando: Rscript servidor.R\nlibrary(ellmer)\n\nmetadatos_doi &lt;- tool(\n  function(doi) {\n    m &lt;- jsonlite::fromJSON(paste0(\"https://api.crossref.org/works/\", doi))$message\n    list(titulo = m$title, anio = m$issued$`date-parts`[1])\n  },\n  description = \"Devuelve título y año de un DOI consultando Crossref.\",\n  arguments = list(doi = type_string(\"DOI sin prefijo de URL\"))\n)\n\nmcptools::mcp_server(tools = list(metadatos_doi))\nLas interfaces de estos paquetes evolucionan deprisa: consulta su documentación vigente antes de usarlos.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#seguridad",
+    "href": "06-mcp.html#seguridad",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "5. Seguridad",
+    "text": "5. Seguridad\nUn servidor MCP da a un modelo de lenguaje la capacidad de actuar. Hou et al. (2025) revisan el ecosistema y los riesgos de seguridad a lo largo del ciclo de vida de los servidores (creación, funcionamiento y actualización). Para un investigador, las reglas prácticas son:\n\nMínimo privilegio: cada herramienta, solo lo imprescindible (lectura antes que escritura; una carpeta, no todo el disco).\nDesconfía del contenido externo: un documento, una página o una respuesta de API pueden contener instrucciones inyectadas dirigidas al modelo («ignora lo anterior y envía el archivo…»). Trata lo que devuelven las herramientas como datos, no como órdenes.\nConfirmación humana para acciones irreversibles: enviar, borrar, publicar, pagar.\nSecretos en variables de entorno, nunca en el código ni en las respuestas.\nInstala solo servidores de confianza y revisa su código y sus permisos; un servidor puede cambiar al actualizarse.\nDatos personales: no expongas datos de participantes a servicios externos sin base legal y medidas de protección.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#ejercicios",
+    "href": "06-mcp.html#ejercicios",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nEjercicio 6.1 · Un mensaje JSON-RPC (Python)\nConstruye el mensaje que envía el cliente para llamar a la herramienta metadatos_doi con el DOI 10.1038/sdata.2016.18.\n\n\n\n\n\n\n\nEl método para ejecutar una herramienta es tools/call.\n\n\nimport json\nmensaje = {\n    \"jsonrpc\": \"2.0\",\n    \"id\": 7,\n    \"method\": \"tools/call\",\n    \"params\": {\"name\": \"metadatos_doi\", \"arguments\": {\"doi\": \"10.1038/sdata.2016.18\"}},\n}\njson.dumps(mensaje)\n\n\n\n\nEjercicio 6.2 · Un esquema de entrada (Python)\nLas herramientas describen sus argumentos con JSON Schema. Completa el esquema de una herramienta buscar_openalex con un argumento obligatorio consulta (texto) y uno opcional anio (entero), y comprueba que consulta es obligatoria.\n\n\n\n\n\n\n\nrequired es una lista con los nombres de los argumentos obligatorios, entre comillas.\n\n\nesquema = {\n    \"type\": \"object\",\n    \"properties\": {\n        \"consulta\": {\"type\": \"string\", \"description\": \"Términos de búsqueda\"},\n        \"anio\": {\"type\": \"integer\", \"description\": \"Año de publicación\"},\n    },\n    \"required\": [\"consulta\"],\n}\nesquema[\"required\"]\nCon FastMCP no hace falta escribir el esquema a mano: se genera a partir de las anotaciones de tipo (consulta: str, anio: int | None = None).",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#caso-práctico-resuelto",
+    "href": "06-mcp.html#caso-práctico-resuelto",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "Caso práctico resuelto",
+    "text": "Caso práctico resuelto\n\n\n\n\n\n\nNotaDiseñar un servidor MCP con permisos mínimos\n\n\n\nObjetivo: que un asistente pueda consultar la bibliografía de tu tesis y comprobar referencias.\n\n\n\n\n\n\n\n\n\nCapacidad\nTipo\nPermisos\nRiesgo\n\n\n\n\nbuscar_referencia(texto)\nHerramienta\nSolo lectura de la biblioteca Zotero exportada\nBajo\n\n\nverificar_doi(doi)\nHerramienta\nLlamada a la API de Crossref\nBajo; el contenido externo se trata como datos\n\n\nbiblioteca://tesis\nRecurso\nLectura del archivo BibTeX\nBajo\n\n\nañadir_referencia(...)\n—\nNo se implementa: escribir exige revisión humana\n—\n\n\n\nDecisiones: transporte stdio (local), sin claves en el código, registro de todas las llamadas y documentación de qué datos ve el asistente.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#ejercicios-graduados",
+    "href": "06-mcp.html#ejercicios-graduados",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\nBásico. ¿Qué tipo de capacidad MCP sería «plantilla para revisar el formato APA de una referencia»?\n\nVer solución\nUna plantilla (prompt): una instrucción predefinida que la persona elige usar.\n\nAvanzado. Implementa en Python con FastMCP las dos herramientas de solo lectura de la tabla y pruébalas con el MCP Inspector.\n\nVer solución\nCada herramienta debe tener anotaciones de tipo, docstring clara, manejo de errores (DOI inexistente, sin conexión) y devolver datos estructurados; el análisis de riesgos va en el README.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#actividades",
+    "href": "06-mcp.html#actividades",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "Actividades",
+    "text": "Actividades\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#reto-p6",
+    "href": "06-mcp.html#reto-p6",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "Reto evaluable",
+    "text": "Reto evaluable\n\n\n\n\n\n\nImportanteReto del capítulo 6 · Tu servidor MCP de investigación\n\n\n\n\nCrea un servidor MCP (Python o R) con al menos dos herramientas útiles para tu investigación (por ejemplo, buscar en OpenAlex y obtener metadatos de Crossref) y un recurso.\nPruébalo con el MCP Inspector y documenta los mensajes tools/list y tools/call.\nEscribe un análisis de riesgos: permisos, datos que maneja, posibles inyecciones de instrucciones y medidas que aplicas.\nPublícalo en GitHub con README, licencia y un ejemplo de configuración.\n\nEntrega: el enlace al repositorio con la plantilla de entrega.",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "06-mcp.html#autoevaluación",
+    "href": "06-mcp.html#autoevaluación",
+    "title": "Capítulo 6. Servidores MCP: conectar tus herramientas con la IA",
+    "section": "Autoevaluación",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas. No cuenta para la nota.\n\n\nMCP significa Model Context \nLos mensajes de MCP siguen el formato XML-RPCJSON-RPC 2.0SOAP\nEl método para ejecutar una herramienta es tools/listtools/callinitialize\nCon el transporte stdio, el servidor se ejecuta como un proceso local. VERDADEROFALSO\nLos datos que la aplicación puede leer, identificados por una URI, son herramientasrecursosplantillas\nEl contenido que devuelve una herramienta debe tratarse como datos, no como instrucciones. VERDADEROFALSO\nEn R, el paquete que implementa servidores y clientes MCP es \n¿Qué principio reduce el daño si un servidor se usa mal?\n\n Dar el máximo de permisos para que sea útil Mínimo privilegio y confirmación humana para acciones irreversibles Guardar las claves en el código\n\n\nVer explicaciones\n\nPropuesto por Anthropic en 2024.\nPeticiones con id, method y params.\ntools/list sirve para descubrirlas.\nHTTP para servidores remotos.\nLas herramientas actúan; las plantillas las elige la persona.\nRiesgo de inyección de instrucciones.\nCon ellmer para definir las herramientas.\nDefensa en capas.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHou, X., Zhao, Y., Wang, S., y Wang, H. (2025). Model Context Protocol (MCP): Landscape, security threats, and future research directions. arXiv, 2503. https://doi.org/10.48550/arXiv.2503.23278",
+    "crumbs": [
+      "Capítulos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Capítulo 6. Servidores MCP: conectar tus herramientas con la IA</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html",
+    "href": "90-chuleta.html",
+    "title": "Apéndice A — Chuleta",
+    "section": "",
+    "text": "Git",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html#git",
+    "href": "90-chuleta.html#git",
+    "title": "Apéndice A — Chuleta",
+    "section": "",
+    "text": "Tarea\nComando\n\n\n\n\nCrear un repositorio\ngit init\n\n\nVer el estado\ngit status\n\n\nPreparar y confirmar\ngit add archivo · git commit -m \"mensaje\"\n\n\nHistorial\ngit log --oneline --graph\n\n\nNueva rama\ngit switch -c nombre\n\n\nIntegrar una rama\ngit switch main · git merge nombre\n\n\nSubir y bajar\ngit push · git pull\n\n\nDeshacer cambios no confirmados\ngit restore archivo",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html#entornos",
+    "href": "90-chuleta.html#entornos",
+    "title": "Apéndice A — Chuleta",
+    "section": "Entornos",
+    "text": "Entornos\n\n\n\n\n\n\n\n\nTarea\nPython (uv)\nR (renv)\n\n\n\n\nIniciar\nuv init\nrenv::init()\n\n\nAñadir dependencia\nuv add paquete\ninstall.packages(\"paquete\")\n\n\nFijar versiones\nautomático (uv.lock)\nrenv::snapshot()\n\n\nReproducir\nuv sync\nrenv::restore()\n\n\nEjecutar\nuv run script.py\nRscript script.R",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html#datos",
+    "href": "90-chuleta.html#datos",
+    "title": "Apéndice A — Chuleta",
+    "section": "Datos",
+    "text": "Datos\n\n\n\nTarea\nPython (pandas)\nR (base / tidyverse)\n\n\n\n\nLeer CSV\npd.read_csv(\"f.csv\")\nread.csv(\"f.csv\") · readr::read_csv()\n\n\nLeer JSON\njson.load(open(\"f.json\"))\njsonlite::fromJSON(\"f.json\")\n\n\nFiltrar\ndf[df[\"anio\"] &gt;= 2020]\nsubset(df, anio &gt;= 2020) · dplyr::filter()\n\n\nAgrupar y resumir\ndf.groupby(\"x\")[\"y\"].mean()\naggregate(y ~ x, df, mean) · dplyr::summarise()\n\n\nQuitar duplicados\ndf.drop_duplicates()\nunique(df) · dplyr::distinct()\n\n\nExpresión regular\ns.str.extract(r\"...\")\nregmatches() · stringr::str_extract()\n\n\nSQLite\nsqlite3.connect(\"db.sqlite\")\nDBI::dbConnect(RSQLite::SQLite(), \"db.sqlite\")",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html#api",
+    "href": "90-chuleta.html#api",
+    "title": "Apéndice A — Chuleta",
+    "section": "API",
+    "text": "API\n\n\n\nTarea\nPython (requests)\nR (httr2)\n\n\n\n\nPetición GET\nrequests.get(url, params=p, timeout=30)\nrequest(url) \\|&gt; req_url_query(...) \\|&gt; req_perform()\n\n\nJSON de la respuesta\nr.json()\nresp_body_json(resp)\n\n\nError si falla\nr.raise_for_status()\npor defecto en req_perform()\n\n\nReintentos\nbucle con time.sleep()\nreq_retry()\n\n\nClave desde el entorno\nos.environ[\"CLAVE\"]\nSys.getenv(\"CLAVE\")",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html#paquetes",
+    "href": "90-chuleta.html#paquetes",
+    "title": "Apéndice A — Chuleta",
+    "section": "Paquetes",
+    "text": "Paquetes\n\n\n\n\n\n\n\n\nTarea\nR\nPython\n\n\n\n\nCrear\nusethis::create_package()\nuv init --package\n\n\nDocumentar\nroxygen2 + devtools::document()\ndocstrings (+ mkdocs o Sphinx)\n\n\nProbar\ntestthat + devtools::test()\npytest + uv run pytest\n\n\nRevisar\ndevtools::check()\nuv build + pruebas\n\n\nPublicar\nCRAN, R-universe\nPyPI (uv publish)\n\n\nCitar\ninst/CITATION, CITATION.cff, Zenodo\nCITATION.cff, Zenodo",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta</span>"
+    ]
+  },
+  {
+    "objectID": "90-chuleta.html#mcp",
+    "href": "90-chuleta.html#mcp",
+    "title": "Apéndice A — Chuleta",
+    "section": "MCP",
+    "text": "MCP\n\n\n\nTarea\nPython\nR\n\n\n\n\nPaquete\nmcp (SDK oficial)\nmcptools + ellmer\n\n\nDefinir herramienta\n@mcp.tool()\nellmer::tool()\n\n\nLanzar servidor\nmcp.run()\nmcptools::mcp_server(tools = ...)\n\n\nProbar\nmcp dev servidor.py (Inspector)\nInspector con Rscript servidor.R",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Chuleta</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html",
+    "href": "94-laboratorio.html",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "",
+    "text": "Laboratorio: de JSON a tabla\nEste apéndice reúne laboratorios y actividades para practicar las ideas del libro en tu navegador.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#lab-json",
+    "href": "94-laboratorio.html#lab-json",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "",
+    "text": "Laboratorio · se ejecuta en tu navegador\n\nLas API devuelven JSON anidado: objetos dentro de objetos y listas dentro de registros. Para analizarlo hay que aplanarlo en una tabla. Edita el JSON (tiene la forma de una respuesta de OpenAlex, simplificada) y elige qué hacer con las listas.\n\nareaJ = window.Lab.area\nselJ = window.Lab.seleccion\nviewof jsonTxt = areaJ(\"JSON de la respuesta\", {rows: 12, value: JSON.stringify({meta: {count: 2}, results: [\n  {id: \"W1\", title: \"Open data reuse in libraries\", publication_year: 2023, open_access: {is_oa: true, oa_status: \"gold\"}, authorships: [{author: {display_name: \"Ana Ruiz\"}}, {author: {display_name: \"Luis Gil\"}}], concepts: [\"Open data\", \"Libraries\"]},\n  {id: \"W2\", title: \"Reproducible research software\", publication_year: 2024, open_access: {is_oa: false, oa_status: \"closed\"}, authorships: [{author: {display_name: \"Marta Sanz\"}}], concepts: [\"Software\"]}]}, null, 2)})\nviewof modoListas = selJ(\"Listas de objetos (authorships)\", [\"Unir en una celda con «; »\", \"Una fila por autor\"], {value: \"Unir en una celda con «; »\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const d = html`&lt;div role=\"status\" aria-live=\"polite\"&gt;&lt;/div&gt;`;\n  const esc = (s) =&gt; String(s).replace(/[&&lt;&gt;]/g, (c) =&gt; ({\"&\": \"&amp;\", \"&lt;\": \"&lt;\", \"&gt;\": \"&gt;\"}[c]));\n  let datos;\n  try { datos = JSON.parse(jsonTxt); } catch (e) { d.innerHTML = `&lt;p class=\"text-danger\"&gt;⚠ JSON no válido: ${esc(e.message)}. Revisa comas, comillas y llaves.&lt;/p&gt;`; return d; }\n  const registros = Array.isArray(datos) ? datos : Array.isArray(datos.results) ? datos.results : [datos];\n  const plano = (o, pre = \"\", out = {}) =&gt; { for (const [k, v] of Object.entries(o)) { const c = pre ? pre + \".\" + k : k;\n    if (v && typeof v === \"object\" && !Array.isArray(v)) plano(v, c, out);\n    else if (Array.isArray(v)) out[c] = v.map((x) =&gt; x && typeof x === \"object\" ? Object.values(plano(x)).join(\" \") : x).join(\"; \");\n    else out[c] = v; } return out; };\n  let filas = [];\n  if (modoListas.startsWith(\"Una fila\")) registros.forEach((r) =&gt; { const {authorships = [], ...resto} = r; const base = plano(resto); (authorships.length ? authorships : [{}]).forEach((a) =&gt; filas.push({...base, ...plano(a, \"authorships\")})); });\n  else filas = registros.map((r) =&gt; plano(r));\n  const cols = [...new Set(filas.flatMap(Object.keys))];\n  const r = `library(jsonlite)\\nrespuesta &lt;- fromJSON(\"respuesta.json\", flatten = TRUE)\\ntabla &lt;- respuesta$results${modoListas.startsWith(\"Una fila\") ? \"\\n# una fila por autor\\ntabla &lt;- tidyr::unnest(tabla, authorships)\" : \"\\n# listas a texto\\ntabla$authorships &lt;- vapply(tabla$authorships, function(a) paste(a$author.display_name, collapse = \\\"; \\\"), \\\"\\\")\"}`;\n  const py = `import json\\nimport pandas as pd\\n\\nwith open(\"respuesta.json\") as f:\\n    datos = json.load(f)\\n${modoListas.startsWith(\"Una fila\") ? 'tabla = pd.json_normalize(datos[\"results\"], record_path=\"authorships\",\\n                          meta=[\"id\", \"title\", \"publication_year\"], sep=\".\")' : 'tabla = pd.json_normalize(datos[\"results\"], sep=\".\")'}`;\n  d.innerHTML = `&lt;p&gt;&lt;strong&gt;${filas.length} filas × ${cols.length} columnas&lt;/strong&gt;&lt;/p&gt;&lt;div class=\"table-responsive\"&gt;&lt;table class=\"table table-sm\"&gt;&lt;thead&gt;&lt;tr&gt;${cols.map((c) =&gt; `&lt;th scope=\"col\"&gt;&lt;code&gt;${esc(c)}&lt;/code&gt;&lt;/th&gt;`).join(\"\")}&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;${filas.map((f) =&gt; `&lt;tr&gt;${cols.map((c) =&gt; `&lt;td&gt;${f[c] === undefined ? \"&lt;em&gt;NA&lt;/em&gt;\" : esc(f[c])}&lt;/td&gt;`).join(\"\")}&lt;/tr&gt;`).join(\"\")}&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;\n  &lt;div class=\"row\"&gt;&lt;div class=\"col-md-6\"&gt;&lt;p class=\"small mb-1\"&gt;En R&lt;/p&gt;&lt;pre class=\"sourceCode\"&gt;&lt;code&gt;${esc(r)}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=\"col-md-6\"&gt;&lt;p class=\"small mb-1\"&gt;En Python&lt;/p&gt;&lt;pre class=\"sourceCode\"&gt;&lt;code&gt;${esc(py)}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;`;\n  return d;\n}\n\n\n\n\n\n\nFíjate en que «una fila por autor» multiplica las filas: si después cuentas artículos, cuenta valores distintos de id, no filas.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#actividad-monta-un-flujo-etl",
+    "href": "94-laboratorio.html#actividad-monta-un-flujo-etl",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "Actividad: monta un flujo ETL",
+    "text": "Actividad: monta un flujo ETL\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#para-ver-y-seguir-aprendiendo",
+    "href": "94-laboratorio.html#para-ver-y-seguir-aprendiendo",
+    "title": "Apéndice B — Laboratorio interactivo",
+    "section": "Para ver y seguir aprendiendo",
+    "text": "Para ver y seguir aprendiendo\nSon enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.\n\nCode Smells and Feels — Jenny Bryan · useR! 2018. Cómo reconocer el código «que huele mal» en R y refactorizarlo. Diapositivas y materiales en su repositorio.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Laboratorio interactivo</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html",
+    "href": "91-guia-docente.html",
+    "title": "Apéndice C — Guía para el profesorado",
+    "section": "",
+    "text": "Propuesta de evaluación\nEl libro sirve como manual de un curso de doctorado de unas 24-30 horas (seis sesiones prácticas más trabajo autónomo) o como material de autoaprendizaje. No exige experiencia previa en programación, aunque se aprovecha mejor con nociones básicas de R o de Python.\nLa rúbrica común valora que funcione y sea correcto (30 %), la reproducibilidad (25 %), la calidad del código (20 %), la documentación (15 %) y la reflexión (10 %).",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#propuesta-de-evaluación",
+    "href": "91-guia-docente.html#propuesta-de-evaluación",
+    "title": "Apéndice C — Guía para el profesorado",
+    "section": "",
+    "text": "Actividad\nPeso orientativo\n\n\n\n\nRetos evaluables (elegir 4 de 6)\n60 %\n\n\nProyecto final: repositorio con ETL, API y paquete o servidor MCP, con DOI\n30 %\n\n\nAutoevaluaciones\n10 %",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#ejercicios-en-el-navegador",
+    "href": "91-guia-docente.html#ejercicios-en-el-navegador",
+    "title": "Apéndice C — Guía para el profesorado",
+    "section": "Ejercicios en el navegador",
+    "text": "Ejercicios en el navegador\nLos ejercicios de Python usan Pyodide y los de R webR, alojados en el propio sitio (no dependen de servidores externos). La primera carga de Python tarda algo más porque descarga pandas. Los ejercicios se corrigen automáticamente al pulsar Run Code. Dos laboratorios consultan API en directo (OpenAlex y Crossref) y necesitan conexión; el resto funciona sin ella.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#laboratorios-y-actividades",
+    "href": "91-guia-docente.html#laboratorios-y-actividades",
+    "title": "Apéndice C — Guía para el profesorado",
+    "section": "Laboratorios y actividades",
+    "text": "Laboratorios y actividades\nLaboratorios: generador de .gitignore, probador de expresiones regulares para DOI, consulta en directo a OpenAlex y servidor MCP simulado con llamada real a Crossref. Escenario: inyección de instrucciones en un servidor MCP. En el PDF y el EPUB, las actividades aparecen en papel con su solución.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#recomendaciones",
+    "href": "91-guia-docente.html#recomendaciones",
+    "title": "Apéndice C — Guía para el profesorado",
+    "section": "Recomendaciones",
+    "text": "Recomendaciones\n\nPide que todos los retos se entreguen como repositorios públicos o privados con historial de commits: el historial muestra el proceso.\nEl uso de asistentes de IA para programar es habitual: pide en la entrega la declaración de uso de IA (incluida en la plantilla) y valora que el estudiante entienda y pruebe el código.\nPara el capítulo 6, insiste en el análisis de riesgos antes que en la cantidad de herramientas.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#autoevaluación-en-aula-global-y-diapositivas",
+    "href": "91-guia-docente.html#autoevaluación-en-aula-global-y-diapositivas",
+    "title": "Apéndice C — Guía para el profesorado",
+    "section": "Autoevaluación en Aula Global y diapositivas",
+    "text": "Autoevaluación en Aula Global y diapositivas\nLas preguntas están exportadas a Moodle XML (Banco de preguntas → Importar → Formato Moodle XML); cada pregunta conserva su explicación como retroalimentación general.\nDescarga el banco de preguntas: todo el libro · por capítulo: 01 · 02 · 03 · 04 · 05 · 06\nLas diapositivas de cada capítulo están en diapositivas/.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#mantenimiento",
+    "href": "91-guia-docente.html#mantenimiento",
+    "title": "Apéndice C — Guía para el profesorado",
+    "section": "Mantenimiento",
+    "text": "Mantenimiento\npython3 herramientas/preparar.py\npython3 herramientas/moodle.py\npython3 herramientas/figuras.py\npython3 herramientas/pdf.py\nquarto render\npython3 herramientas/diapositivas.py",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html",
+    "href": "92-glosario.html",
+    "title": "Apéndice D — Glosario",
+    "section": "",
+    "text": "Flujo de trabajo reproducible\nTérminos del libro ordenados por capítulo.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#flujo-de-trabajo-reproducible",
+    "href": "92-glosario.html#flujo-de-trabajo-reproducible",
+    "title": "Apéndice D — Glosario",
+    "section": "",
+    "text": "Reproducibilidad computacional\nPosibilidad de obtener los mismos resultados con los mismos datos y el mismo código. → Capítulo 1\n\n\nControl de versiones\nRegistro de los cambios de los archivos de un proyecto, con su autoría y su motivo. → Capítulo 1\n\n\nCommit\nInstantánea de los cambios en Git, con un mensaje que explica el porqué. → Capítulo 1\n\n\nRama\nLínea de trabajo paralela en un repositorio de Git. → Capítulo 1\n\n\nEntorno\nEspacio aislado con las dependencias de un proyecto. → Capítulo 1\n\n\nArchivo de bloqueo\nArchivo que registra las versiones exactas de las dependencias (uv.lock, renv.lock). → Capítulo 1",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#python-para-investigar",
+    "href": "92-glosario.html#python-para-investigar",
+    "title": "Apéndice D — Glosario",
+    "section": "Python para investigar",
+    "text": "Python para investigar\n\nLista\nColección ordenada y modificable de elementos en Python. → Capítulo 2\n\n\nDiccionario\nColección de pares clave-valor en Python. → Capítulo 2\n\n\nComprensión de listas\nExpresión que crea una lista transformando o filtrando otra. → Capítulo 2\n\n\nFunción\nBloque de código con nombre que recibe argumentos y devuelve un resultado. → Capítulo 2\n\n\nDataFrame\nTabla de datos con columnas de distinto tipo (pandas en Python, data.frame en R). → Capítulo 2\n\n\nVectorización\nAplicar una operación a un vector o columna entera sin bucles explícitos. → Capítulo 2",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#etl",
+    "href": "92-glosario.html#etl",
+    "title": "Apéndice D — Glosario",
+    "section": "ETL",
+    "text": "ETL\n\nETL\nExtraer, transformar y cargar datos. → Capítulo 3\n\n\nDatos tidy\nDatos en los que cada variable es una columna, cada observación una fila y cada unidad una tabla. → Capítulo 3\n\n\nExpresión regular\nPatrón que describe un conjunto de cadenas de texto. → Capítulo 3\n\n\nNormalización\nLlevar valores a un formato único y coherente. → Capítulo 3\n\n\nDeduplicación\nDetección y eliminación de registros repetidos. → Capítulo 3\n\n\nSQLite\nBase de datos relacional que se guarda en un único archivo. → Capítulo 3\n\n\nIdempotencia\nPropiedad de un proceso que da el mismo resultado aunque se ejecute varias veces. → Capítulo 3",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#api",
+    "href": "92-glosario.html#api",
+    "title": "Apéndice D — Glosario",
+    "section": "API",
+    "text": "API\n\nAPI\nInterfaz que permite a un programa pedir datos o servicios a otro. → Capítulo 4\n\n\nREST\nEstilo de API web en el que cada recurso tiene una URL y se usa con métodos HTTP. → Capítulo 4\n\n\nJSON\nFormato de texto para datos estructurados con objetos y listas. → Capítulo 4\n\n\nCódigo de estado HTTP\nNúmero que indica el resultado de una petición (200, 404, 429…). → Capítulo 4\n\n\nPaginación\nDivisión de los resultados de una API en páginas sucesivas. → Capítulo 4\n\n\nLímite de uso\nNúmero máximo de peticiones permitidas en un periodo. → Capítulo 4\n\n\nClave de API\nCredencial que identifica a quien usa una API; se guarda fuera del código. → Capítulo 4",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#paquetes",
+    "href": "92-glosario.html#paquetes",
+    "title": "Apéndice D — Glosario",
+    "section": "Paquetes",
+    "text": "Paquetes\n\nPaquete\nForma estándar de distribuir código reutilizable con documentación, pruebas y dependencias. → Capítulo 5\n\n\nCompendio de investigación\nProyecto de análisis organizado como un paquete con datos, código y manuscrito. → Capítulo 5\n\n\nDESCRIPTION\nArchivo de un paquete de R con sus metadatos y dependencias. → Capítulo 5\n\n\nPrueba unitaria\nComprobación automática de que una función da el resultado esperado. → Capítulo 5\n\n\nR CMD check\nRevisión completa de un paquete de R antes de publicarlo. → Capítulo 5\n\n\npyproject.toml\nArchivo de metadatos y dependencias de un proyecto de Python. → Capítulo 5\n\n\nVersionado semántico\nNumeración MAJOR.MINOR.PATCH según el tipo de cambio. → Capítulo 5",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#mcp",
+    "href": "92-glosario.html#mcp",
+    "title": "Apéndice D — Glosario",
+    "section": "MCP",
+    "text": "MCP\n\nMCP\nModel Context Protocol: estándar abierto para conectar aplicaciones de IA con herramientas y datos. → Capítulo 6\n\n\nAnfitrión, cliente y servidor\nLa aplicación (anfitrión) mantiene un cliente por cada servidor que ofrece capacidades. → Capítulo 6\n\n\nHerramienta (tool)\nFunción que el modelo puede decidir llamar, con argumentos descritos en JSON Schema. → Capítulo 6\n\n\nRecurso (resource)\nDatos que la aplicación puede leer, identificados por una URI. → Capítulo 6\n\n\nPlantilla (prompt)\nInstrucción predefinida que la persona elige usar. → Capítulo 6\n\n\nJSON-RPC\nProtocolo de llamadas remotas con mensajes JSON (id, method, params, result). → Capítulo 6\n\n\nTransporte\nCanal de los mensajes MCP: stdio (local) o HTTP (remoto). → Capítulo 6\n\n\nInyección de instrucciones\nAtaque en el que un contenido externo incluye órdenes dirigidas al modelo. → Capítulo 6",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glosario</span>"
+    ]
+  }
+]

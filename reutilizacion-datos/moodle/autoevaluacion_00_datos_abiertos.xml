@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Reutilización de datos (libro)/Tema 0. Datos abiertos</text>
+    </category>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 0. Datos abiertos · P1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un conjunto de datos con licencia CC BY-NC 4.0 es abierto según la Open Definition. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[NC prohíbe el uso comercial, así que no cumple la Open Definition.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>Tema 0. Datos abiertos · P2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Los datos FAIR son siempre datos abiertos. ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[FAIR se refiere a cómo se describen y gestionan los datos; pueden ser FAIR con acceso restringido.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 0. Datos abiertos · P3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un CSV con licencia abierta, sin URI ni enlaces, tiene ____ estrellas.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[Licencia abierta (★), estructurado (★★) y formato no propietario (★★★); la cuarta exige URI.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>3</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 0. Datos abiertos · P4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Internet es la red de redes; la World Wide Web es ____</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[La Web (URI, HTTP, HTML) es uno de los servicios de Internet, junto al correo o la transferencia de ficheros.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[otro nombre de Internet]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[un servicio de documentos enlazados que funciona sobre Internet]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[un protocolo de correo]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Tema 0. Datos abiertos · P5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál de estos formatos es abierto <strong>y</strong> legible por máquina?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[JSON tiene especificación pública y se procesa automáticamente; el PDF escaneado y la imagen no son legibles por máquina, y XLS es propietario.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text><![CDATA[PDF escaneado]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[XLS (Excel antiguo)]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[JSON]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Imagen JPG de una tabla]]></text>
+      <feedback format="html">
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+  <question type="shortanswer">
+    <name>
+      <text>Tema 0. Datos abiertos · P6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Completa el código para contar las licencias abiertas de un catálogo: <code>sum(catalogo$licencia</code> ____ <code>licencias_abiertas)</code></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<code>%in%</code> comprueba si cada licencia está en la lista de licencias abiertas.]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>1</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>%in%</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

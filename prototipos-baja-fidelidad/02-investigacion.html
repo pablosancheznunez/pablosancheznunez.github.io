@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tema 2. La investigación como base del concepto creativo – Esquemas de página y prototipos de baja fidelidad</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./03-problema.html" rel="next">
+<link href="./01-fundamentos.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script src="laboratorio.js"></script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="fuentes/fuentes.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-fundamentos.html">Temas</a></li><li class="breadcrumb-item"><a href="./02-investigacion.html"><span class="chapter-title">Tema 2. La investigación como base del concepto creativo</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Esquemas de página y prototipos de baja fidelidad</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/prototipos-baja-fidelidad.pdf">
+            Libro en PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/prototipos-baja-fidelidad.epub">
+            Libro en EPUB (lectores de libros electrónicos)
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-r-en-el-libro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Usar R en este libro</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Temas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-fundamentos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 1. Fundamentos del prototipado de baja fidelidad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-investigacion.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Tema 2. La investigación como base del concepto creativo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-problema.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 3. Definir el problema de diseño</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-metricas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 4. Hitos, objetivos y métricas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-flujos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 5. Flujos de usuario: modelado y representación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-storyboards.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 6. <em>Storyboards</em> en el diseño de interacción</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-wireframes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 7. Esquemas de página en papel y en pantalla</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-estados.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 8. Estados y transiciones en los esquemas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-prototipos-papel.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 9. Prototipos en papel: técnicas y validación temprana</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-sesgos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 10. Sesgos cognitivos y patrones engañosos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-atencion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 11. Economía de la atención y bienestar digital</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-inclusivo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tema 12. Diseño equitativo, inclusivo y accesible</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./93-galeria.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Galería interactiva de esquemas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./94-patrones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Patrones de navegación e interfaz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./95-casos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dos casos completos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./96-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./91-guia-docente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Guía para el profesorado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./92-glosario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glosario</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#lectura-obligatoria" id="toc-lectura-obligatoria" class="nav-link active" data-scroll-target="#lectura-obligatoria">Lectura obligatoria</a>
+  <ul class="collapse">
+  <li><a href="#lecturas-complementarias" id="toc-lecturas-complementarias" class="nav-link" data-scroll-target="#lecturas-complementarias">Lecturas complementarias</a></li>
+  </ul></li>
+  <li><a href="#por-qué-investigar-antes-de-dibujar" id="toc-por-qué-investigar-antes-de-dibujar" class="nav-link" data-scroll-target="#por-qué-investigar-antes-de-dibujar">1. Por qué investigar antes de dibujar</a></li>
+  <li><a href="#métodos-cualitativos" id="toc-métodos-cualitativos" class="nav-link" data-scroll-target="#métodos-cualitativos">2. Métodos cualitativos</a></li>
+  <li><a href="#métodos-cuantitativos" id="toc-métodos-cuantitativos" class="nav-link" data-scroll-target="#métodos-cuantitativos">3. Métodos cuantitativos</a></li>
+  <li><a href="#análisis-de-la-competencia" id="toc-análisis-de-la-competencia" class="nav-link" data-scroll-target="#análisis-de-la-competencia">4. Análisis de la competencia</a></li>
+  <li><a href="#revisión-heurística" id="toc-revisión-heurística" class="nav-link" data-scroll-target="#revisión-heurística">5. Revisión heurística</a>
+  <ul class="collapse">
+  <li><a href="#lab-heuristica" id="toc-lab-heuristica" class="nav-link" data-scroll-target="#lab-heuristica">Laboratorio: tu revisión heurística</a></li>
+  </ul></li>
+  <li><a href="#del-hallazgo-al-concepto-creativo" id="toc-del-hallazgo-al-concepto-creativo" class="nav-link" data-scroll-target="#del-hallazgo-al-concepto-creativo">6. Del hallazgo al concepto creativo</a></li>
+  <li><a href="#práctica-en-r-priorizar-los-hallazgos-de-una-revisión-heurística" id="toc-práctica-en-r-priorizar-los-hallazgos-de-una-revisión-heurística" class="nav-link" data-scroll-target="#práctica-en-r-priorizar-los-hallazgos-de-una-revisión-heurística">Práctica en R: priorizar los hallazgos de una revisión heurística</a>
+  <ul class="collapse">
+  <li><a href="#ejercicio-2.1" id="toc-ejercicio-2.1" class="nav-link" data-scroll-target="#ejercicio-2.1">Ejercicio 2.1</a></li>
+  <li><a href="#ejercicio-2.2" id="toc-ejercicio-2.2" class="nav-link" data-scroll-target="#ejercicio-2.2">Ejercicio 2.2</a></li>
+  </ul></li>
+  <li><a href="#lab-t2-tarjetas" id="toc-lab-t2-tarjetas" class="nav-link" data-scroll-target="#lab-t2-tarjetas">Laboratorio: ordenación de tarjetas (<em>card sorting</em>)</a></li>
+  <li><a href="#caso-práctico-resuelto" id="toc-caso-práctico-resuelto" class="nav-link" data-scroll-target="#caso-práctico-resuelto">Caso práctico resuelto</a></li>
+  <li><a href="#ejercicios-graduados" id="toc-ejercicios-graduados" class="nav-link" data-scroll-target="#ejercicios-graduados">Ejercicios graduados</a></li>
+  <li><a href="#actividades" id="toc-actividades" class="nav-link" data-scroll-target="#actividades">Actividades</a></li>
+  <li><a href="#reto-t2" id="toc-reto-t2" class="nav-link" data-scroll-target="#reto-t2">Reto evaluable</a></li>
+  <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
+  <li><a href="#recursos-complementarios" id="toc-recursos-complementarios" class="nav-link" data-scroll-target="#recursos-complementarios">Recursos complementarios</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-fundamentos.html">Temas</a></li><li class="breadcrumb-item"><a href="./02-investigacion.html"><span class="chapter-title">Tema 2. La investigación como base del concepto creativo</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-tema2" class="quarto-section-identifier"><span class="chapter-title">Tema 2. La investigación como base del concepto creativo</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Objetivos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Elegir métodos de investigación cualitativos y cuantitativos según la pregunta.</li>
+<li>Planificar entrevistas, encuestas, observación, análisis de la competencia y revisión heurística.</li>
+<li>Convertir los <a href="92-glosario.html#gl-hallazgo" class="glos" data-def="Observación de la investigación con su evidencia. Se distingue de la conclusión (insight), que la interpreta.">hallazgos</a> en conceptos creativos viables y comprobables.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Glosario del tema
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="./92-glosario.html#gl-investigacion">Investigación con usuarios</a> · <a href="./92-glosario.html#gl-actitudinal">Método actitudinal</a> · <a href="./92-glosario.html#gl-comportamental">Método comportamental</a> · <a href="./92-glosario.html#gl-heuristica">Evaluación heurística</a> · <a href="./92-glosario.html#gl-severidad">Severidad</a> · <a href="./92-glosario.html#gl-afinidad">Diagrama de afinidad</a> · <a href="./92-glosario.html#gl-hallazgo">Hallazgo</a> · <a href="./92-glosario.html#gl-hmw">«¿Cómo podríamos…?»</a></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Descargas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="plantillas/02_investigacion.R" class="btn btn-outline-primary btn-sm" download="02_investigacion.R">Script R del capítulo</a> <a href="plantillas/entrega_reto.qmd" class="btn btn-outline-primary btn-sm" download="entrega_reto.qmd">Plantilla de entrega del reto (.qmd)</a> <a href="plantillas/informe.scss" class="btn btn-outline-primary btn-sm" download="informe.scss">Tema de estilo (.scss)</a></p>
+</div>
+</div>
+<section id="lectura-obligatoria" class="level2">
+<h2 class="anchored" data-anchor-id="lectura-obligatoria">Lectura obligatoria</h2>
+<div class="lectura">
+<p>Nielsen, J.; Molich, R. (1990). <a href="https://doi.org/10.1145/97243.97281">Heuristic evaluation of user interfaces</a>. En <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’90)</em> (pp.&nbsp;249-256). ACM.</p>
+</div>
+<section id="lecturas-complementarias" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
+<ul>
+<li><span class="citation" data-cites="nielsen1994">Nielsen (<a href="#ref-nielsen1994" role="doc-biblioref">1994</a>)</span> — El origen de las diez heurísticas que se usan hoy.</li>
+<li><span class="citation" data-cites="rohrer2022">Rohrer (<a href="#ref-rohrer2022" role="doc-biblioref">2022</a>)</span> — El mapa de métodos que usa este tema.</li>
+<li><span class="citation" data-cites="sharp2023">Sharp et&nbsp;al. (<a href="#ref-sharp2023" role="doc-biblioref">2023</a>)</span> — Capítulos sobre recogida y análisis de datos.</li>
+</ul>
+</section>
+</section>
+<section id="por-qué-investigar-antes-de-dibujar" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-investigar-antes-de-dibujar">1. Por qué investigar antes de dibujar</h2>
+<p>Un <a href="92-glosario.html#gl-wireframe" class="glos" data-def="Wireframe. Representación de la estructura de una pantalla: qué elementos contiene, dónde están y qué importancia tienen, sin estilo visual.">esquema de página</a> resuelve un problema; si el problema está mal entendido, el mejor esquema no sirve. La <a href="92-glosario.html#gl-investigacion" class="glos" data-def="Conjunto de métodos para entender quién usará un producto, qué intenta conseguir, en qué contexto y qué se lo impide.">investigación con usuarios</a> reduce la incertidumbre sobre <strong>quién</strong> usará el producto, <strong>qué</strong> intenta conseguir, <strong>en qué contexto</strong> y <strong>qué le impide</strong> conseguirlo hoy. No se trata de preguntar a la gente qué quiere, sino de entender lo que hace y por qué.</p>
+<p><span class="citation" data-cites="rohrer2022">Rohrer (<a href="#ref-rohrer2022" role="doc-biblioref">2022</a>)</span> ordena los métodos en dos ejes que ayudan a elegir:</p>
+<ul>
+<li><strong>Actitudinal o comportamental</strong>: lo que las personas <em>dicen</em> (opiniones, intenciones) frente a lo que <em>hacen</em> (conducta observada). Ambas cosas difieren a menudo.</li>
+<li><strong>Cualitativo o cuantitativo</strong>: entender el <em>porqué</em> y el <em>cómo</em> con pocas personas, frente a medir el <em>cuánto</em> con muchas.</li>
+</ul>
+<div id="fig-metodos" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plano con un eje horizontal que va de cualitativo a cuantitativo y un eje vertical que va de comportamental (abajo) a actitudinal (arriba). Arriba a la izquierda, entrevistas y grupos de discusión; arriba a la derecha, encuestas; abajo a la izquierda, observación contextual y pruebas de usabilidad; abajo a la derecha, analítica web y pruebas A/B. La revisión heurística y el análisis de la competencia aparecen aparte, como métodos de inspección sin usuarios.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-metodos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/tema2_metodos.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Mapa simplificado de métodos de investigación según @rohrer2022. La pregunta de investigación decide el cuadrante."><img src="figuras/tema2_metodos.svg" class="img-fluid figure-img" alt="Plano con un eje horizontal que va de cualitativo a cuantitativo y un eje vertical que va de comportamental (abajo) a actitudinal (arriba). Arriba a la izquierda, entrevistas y grupos de discusión; arriba a la derecha, encuestas; abajo a la izquierda, observación contextual y pruebas de usabilidad; abajo a la derecha, analítica web y pruebas A/B. La revisión heurística y el análisis de la competencia aparecen aparte, como métodos de inspección sin usuarios."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-metodos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Mapa simplificado de métodos de investigación según <span class="citation" data-cites="rohrer2022">Rohrer (<a href="#ref-rohrer2022" role="doc-biblioref">2022</a>)</span>. La pregunta de investigación decide el cuadrante.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="métodos-cualitativos" class="level2">
+<h2 class="anchored" data-anchor-id="métodos-cualitativos">2. Métodos cualitativos</h2>
+<p><strong>Entrevistas.</strong> Conversaciones individuales semiestructuradas, de 30 a 60 minutos, con un guion de temas y no de preguntas cerradas. Funcionan mejor si se pide a la persona que cuente <strong>la última vez</strong> que hizo algo concreto («cuéntame la última vez que buscaste un libro para un trabajo») que si se le pide que generalice. Se evitan las preguntas que sugieren la respuesta («¿verdad que sería útil…?»).</p>
+<p><strong>Observación contextual.</strong> Se observa a la persona en su entorno real mientras hace la tarea, y se le pregunta sobre la marcha. Revela lo que no se cuenta en una entrevista: atajos, notas en papel, trucos para sortear el sistema.</p>
+<p><strong>Grupos de discusión.</strong> Útiles para conocer actitudes y vocabulario, pero poco fiables para predecir conducta: la dinámica del grupo influye en lo que se dice.</p>
+<p>Con cinco a ocho entrevistas por perfil suelen aparecer los patrones principales. El análisis más habitual es el <a href="92-glosario.html#gl-afinidad" class="glos" data-def="Técnica de análisis que agrupa observaciones escritas en notas según su similitud hasta que emergen temas."><strong>diagrama de afinidad</strong></a>: cada observación se escribe en una nota, y las notas se agrupan por similitud hasta que emergen temas.</p>
+</section>
+<section id="métodos-cuantitativos" class="level2">
+<h2 class="anchored" data-anchor-id="métodos-cuantitativos">3. Métodos cuantitativos</h2>
+<p><strong>Encuestas.</strong> Miden actitudes y características en muchas personas. Exigen preguntas neutras, opciones de respuesta exhaustivas y excluyentes, y una muestra que represente a quien interesa. Una encuesta no explica el porqué: suele combinarse con entrevistas.</p>
+<p><strong>Analítica.</strong> Los datos de uso de un producto existente (páginas vistas, búsquedas sin resultados, abandono en un formulario) muestran dónde están los problemas, aunque no por qué ocurren.</p>
+</section>
+<section id="análisis-de-la-competencia" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-de-la-competencia">4. Análisis de la competencia</h2>
+<p>Consiste en revisar de forma sistemática productos que resuelven el mismo problema, directos (otra aplicación de reservas) o indirectos (cómo se reserva hoy por teléfono o en persona). Se compara con una tabla: tareas que permite, cómo las resuelve, puntos fuertes y débiles. El objetivo no es copiar, sino conocer las <a href="92-glosario.html#gl-convencion" class="glos" data-def="Solución de interfaz que la mayoría de los sitios resuelve igual y que las personas ya esperan.">convenciones</a> que los usuarios ya esperan (Tema 7) y encontrar huecos.</p>
+</section>
+<section id="revisión-heurística" class="level2">
+<h2 class="anchored" data-anchor-id="revisión-heurística">5. Revisión heurística</h2>
+<p><span class="citation" data-cites="nielsen1990">Nielsen y Molich (<a href="#ref-nielsen1990" role="doc-biblioref">1990</a>)</span> propusieron que varios evaluadores revisen una interfaz con una lista breve de principios, las <strong>heurísticas</strong>, y anoten los problemas. Es un método de <strong>inspección</strong>: no participan usuarios, así que es rápido y barato, pero no sustituye a las pruebas con personas. Sus hallazgos más importantes:</p>
+<ul>
+<li>Un evaluador solo encuentra una parte de los problemas; con <strong>tres a cinco</strong> evaluadores independientes se detecta la mayoría.</li>
+<li>Cada evaluador revisa por separado y después se juntan los resultados.</li>
+</ul>
+<p>Cada problema se valora con una escala de <a href="92-glosario.html#gl-severidad" class="glos" data-def="Gravedad de un problema de usabilidad, de 0 (no es un problema) a 4 (catástrofe) en la escala de Nielsen."><strong>severidad</strong></a> de 0 a 4: 0, no es un problema; 1, cosmético; 2, menor; 3, importante; 4, catástrofe que hay que resolver antes de lanzar. Las diez heurísticas de <span class="citation" data-cites="nielsen1994">Nielsen (<a href="#ref-nielsen1994" role="doc-biblioref">1994</a>)</span> son:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>N.º</th>
+<th>Heurística</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Visibilidad del <a href="92-glosario.html#gl-estado" class="glos" data-def="Cada situación distinta en la que puede estar un componente o una pantalla.">estado</a> del sistema</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Correspondencia entre el sistema y el mundo real</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Control y libertad del usuario</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Consistencia y estándares</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Prevención de errores</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Reconocer mejor que recordar</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Flexibilidad y eficiencia de uso</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Diseño estético y minimalista</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Ayudar a reconocer, diagnosticar y recuperarse de errores</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Ayuda y documentación</td>
+</tr>
+</tbody>
+</table>
+<section id="lab-heuristica" class="level3">
+<h3 class="anchored" data-anchor-id="lab-heuristica">Laboratorio: tu revisión heurística</h3>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · se ejecuta en tu navegador</p>
+</div>
+<p>Revisa una interfaz (la de tu proyecto o la de la competencia) heurística por heurística. Anota la severidad de lo que encuentres y una nota breve. El informe se ordena por severidad y puedes descargarlo en Markdown para pegarlo en tu entrega.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="101" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 100;"><span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> H <span class="op">=</span> [<span class="st">"Visibilidad del estado del sistema"</span><span class="op">,</span> <span class="st">"Correspondencia entre el sistema y el mundo real"</span><span class="op">,</span> <span class="st">"Control y libertad del usuario"</span><span class="op">,</span> <span class="st">"Consistencia y estándares"</span><span class="op">,</span> <span class="st">"Prevención de errores"</span><span class="op">,</span> <span class="st">"Reconocer mejor que recordar"</span><span class="op">,</span> <span class="st">"Flexibilidad y eficiencia de uso"</span><span class="op">,</span> <span class="st">"Diseño estético y minimalista"</span><span class="op">,</span> <span class="st">"Ayudar a reconocer, diagnosticar y recuperarse de errores"</span><span class="op">,</span> <span class="st">"Ayuda y documentación"</span>]<span class="op">;</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> SEV <span class="op">=</span> [<span class="st">"0 · no es un problema"</span><span class="op">,</span> <span class="st">"1 · cosmético"</span><span class="op">,</span> <span class="st">"2 · menor"</span><span class="op">,</span> <span class="st">"3 · importante"</span><span class="op">,</span> <span class="st">"4 · catástrofe"</span>]<span class="op">;</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> raiz <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div class="heur-lab"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> nombre <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div class="mb-2"&gt;&lt;label class="form-label" for="heur-int"&gt;Interfaz evaluada&lt;/label&gt;&lt;input id="heur-int" class="form-control form-control-sm" value="ReservaSala, versión 1"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> tabla <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;table class="table table-sm align-middle"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Heurística&lt;/th&gt;&lt;th scope="col"&gt;Severidad&lt;/th&gt;&lt;th scope="col"&gt;Hallazgo&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;/tbody&gt;&lt;/table&gt;`</span><span class="op">;</span></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> filas <span class="op">=</span> H<span class="op">.</span><span class="fu">map</span>((h<span class="op">,</span> i) <span class="kw">=&gt;</span> { <span class="kw">const</span> tr <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;tr&gt;&lt;td class="small"&gt;</span><span class="sc">${</span>i <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="vs">. </span><span class="sc">${</span>h<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;&lt;select class="form-select form-select-sm" aria-label="Severidad: </span><span class="sc">${</span>h<span class="sc">}</span><span class="vs">"&gt;</span><span class="sc">${</span>SEV<span class="op">.</span><span class="fu">map</span>((s<span class="op">,</span> k) <span class="kw">=&gt;</span> <span class="vs">`&lt;option value="</span><span class="sc">${</span>k<span class="sc">}</span><span class="vs">"&gt;</span><span class="sc">${</span>s<span class="sc">}</span><span class="vs">&lt;/option&gt;`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="sc">}</span><span class="vs">&lt;/select&gt;&lt;/td&gt;&lt;td&gt;&lt;input class="form-control form-control-sm" aria-label="Hallazgo: </span><span class="sc">${</span>h<span class="sc">}</span><span class="vs">" placeholder="Qué pasa y dónde"&gt;&lt;/td&gt;&lt;/tr&gt;`</span><span class="op">;</span> tabla<span class="op">.</span><span class="at">tBodies</span>[<span class="dv">0</span>]<span class="op">.</span><span class="fu">append</span>(tr)<span class="op">;</span> <span class="cf">return</span> tr<span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">"select, input"</span>)<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> salida <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status" aria-live="polite"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> esc <span class="op">=</span> (s) <span class="kw">=&gt;</span> s<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">[&amp;&lt;&gt;|]</span><span class="ss">/g</span><span class="op">,</span> (c) <span class="kw">=&gt;</span> ({<span class="st">"&amp;"</span><span class="op">:</span> <span class="st">"&amp;amp;"</span><span class="op">,</span> <span class="st">"&lt;"</span><span class="op">:</span> <span class="st">"&amp;lt;"</span><span class="op">,</span> <span class="st">"&gt;"</span><span class="op">:</span> <span class="st">"&amp;gt;"</span><span class="op">,</span> <span class="st">"|"</span><span class="op">:</span> <span class="st">"/"</span>}[c]))<span class="op">;</span></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">informe</span>() {</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> items <span class="op">=</span> filas<span class="op">.</span><span class="fu">map</span>(([s<span class="op">,</span> n]<span class="op">,</span> i) <span class="kw">=&gt;</span> ({<span class="dt">h</span><span class="op">:</span> H[i]<span class="op">,</span> <span class="dt">i</span><span class="op">:</span> i <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">s</span><span class="op">:</span> <span class="op">+</span>s<span class="op">.</span><span class="at">value</span><span class="op">,</span> <span class="dt">n</span><span class="op">:</span> n<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">trim</span>()}))<span class="op">.</span><span class="fu">filter</span>((x) <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">s</span> <span class="op">&gt;</span> <span class="dv">0</span>)<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> b<span class="op">.</span><span class="at">s</span> <span class="op">-</span> a<span class="op">.</span><span class="at">s</span>)<span class="op">;</span></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> graves <span class="op">=</span> items<span class="op">.</span><span class="fu">filter</span>((x) <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">s</span> <span class="op">&gt;=</span> <span class="dv">3</span>)<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> md <span class="op">=</span> <span class="vs">`# Revisión heurística: </span><span class="sc">${</span>nombre<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"input"</span>)<span class="op">.</span><span class="at">value</span><span class="sc">}\n\n</span><span class="vs">| Severidad | Heurística | Hallazgo |</span><span class="sc">\n</span><span class="vs">|---|---|---|</span><span class="sc">\n</span><span class="vs">`</span> <span class="op">+</span> items<span class="op">.</span><span class="fu">map</span>((x) <span class="kw">=&gt;</span> <span class="vs">`| </span><span class="sc">${</span>x<span class="op">.</span><span class="at">s</span><span class="sc">}</span><span class="vs"> | </span><span class="sc">${</span>x<span class="op">.</span><span class="at">i</span><span class="sc">}</span><span class="vs">. </span><span class="sc">${</span>x<span class="op">.</span><span class="at">h</span><span class="sc">}</span><span class="vs"> | </span><span class="sc">${</span>x<span class="op">.</span><span class="at">n</span><span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">\|</span><span class="ss">/g</span><span class="op">,</span> <span class="st">"/"</span>) <span class="op">||</span> <span class="st">"(sin nota)"</span><span class="sc">}</span><span class="vs"> |`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>) <span class="op">+</span> <span class="vs">`</span><span class="sc">\n\n</span><span class="vs">Problemas importantes o catastróficos: </span><span class="sc">${</span>graves<span class="sc">}</span><span class="vs">.</span><span class="sc">\n</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> url <span class="op">=</span> URL<span class="op">.</span><span class="fu">createObjectURL</span>(<span class="kw">new</span> <span class="bu">Blob</span>([md]<span class="op">,</span> {<span class="dt">type</span><span class="op">:</span> <span class="st">"text/markdown"</span>}))<span class="op">;</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>    salida<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> items<span class="op">.</span><span class="at">length</span> <span class="op">?</span> <span class="vs">`&lt;p&gt;&lt;strong&gt;</span><span class="sc">${</span>items<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> problemas&lt;/strong&gt; · </span><span class="sc">${</span>graves<span class="sc">}</span><span class="vs"> de severidad 3 o 4</span><span class="sc">${</span>graves <span class="op">?</span> <span class="st">" — resuélvelos antes de seguir."</span> <span class="op">:</span> <span class="st">"."</span><span class="sc">}</span><span class="vs">&lt;/p&gt;&lt;ol&gt;</span><span class="sc">${</span>items<span class="op">.</span><span class="fu">map</span>((x) <span class="kw">=&gt;</span> <span class="vs">`&lt;li&gt;&lt;strong&gt;Severidad </span><span class="sc">${</span>x<span class="op">.</span><span class="at">s</span><span class="sc">}</span><span class="vs">&lt;/strong&gt; · </span><span class="sc">${</span>x<span class="op">.</span><span class="at">h</span><span class="sc">}${</span>x<span class="op">.</span><span class="at">n</span> <span class="op">?</span> <span class="st">": "</span> <span class="op">+</span> <span class="fu">esc</span>(x<span class="op">.</span><span class="at">n</span>) <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">&lt;/li&gt;`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="sc">}</span><span class="vs">&lt;/ol&gt;&lt;a class="btn btn-outline-primary btn-sm" download="revision-heuristica.md" href="</span><span class="sc">${</span>url<span class="sc">}</span><span class="vs">"&gt;Descargar el informe (.md)&lt;/a&gt;`</span> <span class="op">:</span> <span class="st">"&lt;p&gt;Todavía no has anotado problemas. Asigna una severidad mayor que 0 a una heurística.&lt;/p&gt;"</span><span class="op">;</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>  raiz<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> informe)<span class="op">;</span></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>  raiz<span class="op">.</span><span class="fu">append</span>(nombre<span class="op">,</span> tabla<span class="op">,</span> salida)<span class="op">;</span> <span class="fu">informe</span>()<span class="op">;</span></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> raiz<span class="op">;</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-1" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<p>Para que la revisión sea fiable, haz que <strong>3 a 5 personas</strong> la hagan por separado y después juntad los hallazgos: una sola persona encuentra alrededor de un tercio de los problemas.</p>
+</div>
+</section>
+</section>
+<section id="del-hallazgo-al-concepto-creativo" class="level2">
+<h2 class="anchored" data-anchor-id="del-hallazgo-al-concepto-creativo">6. Del hallazgo al concepto creativo</h2>
+<p>Los datos no diseñan solos. El paso de la investigación al concepto tiene tres momentos:</p>
+<ol type="1">
+<li><strong>Hallazgos</strong>: lo que se ha observado, con su evidencia («4 de 6 personas buscaban el horario en la página de contacto»).</li>
+<li><strong>Conclusiones</strong> (<em>insights</em>): la interpretación que explica el hallazgo («para quien no conoce la biblioteca, el horario es información de contacto»).</li>
+<li><strong>Oportunidades</strong>, formuladas como preguntas <strong>«¿Cómo podríamos…?»</strong> («¿cómo podríamos hacer que el horario esté donde la gente lo busca?»). Son lo bastante abiertas para admitir varias soluciones y lo bastante concretas para orientar los <a href="92-glosario.html#gl-boceto" class="glos" data-def="Dibujo rápido, barato y ambiguo que sirve para explorar y generar alternativas, no para especificar.">bocetos</a>.</li>
+</ol>
+<p>Un <strong>concepto creativo</strong> viable responde a una oportunidad con una idea que se puede explicar en una frase y probar con un <a href="92-glosario.html#gl-prototipo" class="glos" data-def="Representación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo.">prototipo</a> de baja <a href="92-glosario.html#gl-fidelidad" class="glos" data-def="Grado en que un prototipo se parece al producto final. Tiene varias dimensiones independientes: apariencia, datos, funcionalidad, interactividad y estructura espacial.">fidelidad</a>.</p>
+</section>
+<section id="práctica-en-r-priorizar-los-hallazgos-de-una-revisión-heurística" class="level2">
+<h2 class="anchored" data-anchor-id="práctica-en-r-priorizar-los-hallazgos-de-una-revisión-heurística">Práctica en R: priorizar los hallazgos de una revisión heurística</h2>
+<p>Tres evaluadores han revisado una aplicación de biblioteca. La tabla <code>hallazgos_heuristicos</code> (datos simulados) recoge cada problema, la heurística afectada y la severidad que le da cada evaluador.</p>
+<div>
+<div id="webr-1" class="exercise-cell">
+
+</div>
+<script type="webr-1-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic291cmNlKFwiZGF0b3MvZnVuY2lvbmVzX3V4LlJcIilcbmhhbGxhemdvc19oZXVyaXN0aWNvcyJ9
+</script>
+</div>
+<p>La función <code>priorizar_hallazgos()</code> agrupa por problema, calcula la severidad media y cuántos evaluadores lo detectaron, y ordena:</p>
+<div>
+<div id="webr-2" class="exercise-cell">
+
+</div>
+<script type="webr-2-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoicHJpb3JpemFyX2hhbGxhemdvcyhoYWxsYXpnb3NfaGV1cmlzdGljb3MpIn0=
+</script>
+</div>
+<section id="ejercicio-2.1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-2.1">Ejercicio 2.1</h3>
+<p>¿Cuántos problemas tienen prioridad <strong>alta</strong>? Completa el código.</p>
+<script type="exercise-setup-t2_alta-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDJfYWx0YSIsInNldHVwIjp0cnVlfSwiY29kZSI6InNvdXJjZShcImRhdG9zL2Z1bmNpb25lc191eC5SXCIpIn0=
+</script>
+<div>
+<div id="webr-4" class="exercise-cell">
+
+</div>
+<script type="webr-4-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDJfYWx0YSJ9LCJjb2RlIjoicCA8LSBwcmlvcml6YXJfaGFsbGF6Z29zKGhhbGxhemdvc19oZXVyaXN0aWNvcylcbnN1bShwJHByaW9yaWRhZCA9PSBcIl9fX19fX1wiKSJ9
+</script>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="t2_alta">
+<p>Las categorías son «alta», «media» y «baja», en minúsculas.</p>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t2_alta">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">priorizar_hallazgos</span>(hallazgos_heuristicos)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(p<span class="sc">$</span>prioridad <span class="sc">==</span> <span class="st">"alta"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Dos: el botón «Atrás» que borra el formulario y los mensajes de error genéricos. Son los primeros que hay que resolver en el siguiente esquema.</p>
+</div>
+<script type="exercise-check-t2_alta-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQyX2FsdGEifSwiY29kZSI6ImlmIChpZGVudGljYWwoYXMuaW50ZWdlcigucmVzdWx0KSwgMkwpKSB7XG4gIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBcIkNvcnJlY3RvOiBkb3MgcHJvYmxlbWFzIGRlIHByaW9yaWRhZCBhbHRhLlwiKVxufSBlbHNlIHtcbiAgbGlzdChjb3JyZWN0ID0gRkFMU0UsIG1lc3NhZ2UgPSBcIkNvbXBhcmEgbGEgY29sdW1uYSBwcmlvcmlkYWQgY29uIFxcXCJhbHRhXFxcIi5cIilcbn0ifQ==
+</script>
+</section>
+<section id="ejercicio-2.2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejercicio-2.2">Ejercicio 2.2</h3>
+<p>Un problema detectado por un solo evaluador puede ser una opinión personal; uno detectado por todos, casi seguro un problema real. ¿Qué problema detectaron <strong>menos</strong> evaluadores y a la vez tiene la <strong>menor</strong> severidad media? Escribe el código que lo muestra.</p>
+<script type="exercise-setup-t2_menor-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDJfbWVub3IiLCJzZXR1cCI6dHJ1ZX0sImNvZGUiOiJzb3VyY2UoXCJkYXRvcy9mdW5jaW9uZXNfdXguUlwiKVxucCA8LSBwcmlvcml6YXJfaGFsbGF6Z29zKGhhbGxhemdvc19oZXVyaXN0aWNvcykifQ==
+</script>
+<div>
+<div id="webr-7" class="exercise-cell">
+
+</div>
+<script type="webr-7-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidDJfbWVub3IifSwiY29kZSI6InAkcHJvYmxlbWFbbnJvdyhfX19fX18pXSJ9
+</script>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="t2_menor">
+<p>La tabla está ordenada de mayor a menor severidad: el último es el de la fila número <code>nrow(p)</code>.</p>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="t2_menor">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>p<span class="sc">$</span>problema[<span class="fu">nrow</span>(p)]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La tipografía de 12 px en los avisos legales: dos evaluadores, severidad media 1,5. No se ignora (el Tema 12 explica por qué el tamaño de letra importa), pero va al final de la lista.</p>
+</div>
+<script type="exercise-check-t2_menor-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQyX21lbm9yIn0sImNvZGUiOiJpZiAoaWRlbnRpY2FsKGFzLmNoYXJhY3RlcigucmVzdWx0KSwgXCJUaXBvZ3JhZsOtYSBkZSAxMiBweCBlbiBsb3MgYXZpc29zIGxlZ2FsZXNcIikpIHtcbiAgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IFwiQ29ycmVjdG86IGVzIGVsIMO6bHRpbW8gZGUgbGEgbGlzdGEgcHJpb3JpemFkYS5cIilcbn0gZWxzZSB7XG4gIGxpc3QoY29ycmVjdCA9IEZBTFNFLCBtZXNzYWdlID0gXCJVc2EgbnJvdyhwKSBwYXJhIGxsZWdhciBhIGxhIMO6bHRpbWEgZmlsYS5cIilcbn0ifQ==
+</script>
+</section>
+</section>
+<section id="lab-t2-tarjetas" class="level2">
+<h2 class="anchored" data-anchor-id="lab-t2-tarjetas">Laboratorio: ordenación de tarjetas (<em>card sorting</em>)</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Laboratorio · datos simulados</p>
+</div>
+<p>La <strong>ordenación de tarjetas</strong> revela cómo agrupan las personas los contenidos, y sirve para diseñar la arquitectura de información. Agrupa estas diez funciones de la aplicación de una biblioteca en los grupos que te parezcan naturales (puedes renombrar los grupos). Después compara tu propuesta con la de <strong>20 participantes simulados</strong>: la matriz muestra qué porcentaje de ellos puso cada par de tarjetas en el mismo grupo.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="241" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 240;"><span id="cb4-241"><a href="#cb4-241" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">texto</span></span>
+<span id="cb4-242"><a href="#cb4-242" aria-hidden="true" tabindex="-1"></a>seleccion <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
+<span id="cb4-243"><a href="#cb4-243" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
+<span id="cb4-244"><a href="#cb4-244" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
+<span id="cb4-245"><a href="#cb4-245" aria-hidden="true" tabindex="-1"></a>boton <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">boton</span></span>
+<span id="cb4-246"><a href="#cb4-246" aria-hidden="true" tabindex="-1"></a>color <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">color</span></span>
+<span id="cb4-247"><a href="#cb4-247" aria-hidden="true" tabindex="-1"></a>tarjetas <span class="op">=</span> [<span class="st">"Buscar en el catálogo"</span><span class="op">,</span> <span class="st">"Reservar un libro"</span><span class="op">,</span> <span class="st">"Renovar un préstamo"</span><span class="op">,</span> <span class="st">"Ver mis préstamos"</span><span class="op">,</span> <span class="st">"Pagar una multa"</span><span class="op">,</span></span>
+<span id="cb4-248"><a href="#cb4-248" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Cambiar la contraseña"</span><span class="op">,</span> <span class="st">"Elegir el idioma"</span><span class="op">,</span> <span class="st">"Horarios y sedes"</span><span class="op">,</span> <span class="st">"Contactar con la biblioteca"</span><span class="op">,</span> <span class="st">"Mis listas de lectura"</span>]</span>
+<span id="cb4-249"><a href="#cb4-249" aria-hidden="true" tabindex="-1"></a>viewof grupos <span class="op">=</span> <span class="fu">texto</span>(<span class="st">"Nombres de tus grupos (separados por comas)"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"Buscar, Mis préstamos, Mi cuenta, Información"</span><span class="op">,</span> <span class="dt">submit</span><span class="op">:</span> <span class="st">"Usar estos grupos"</span>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-8" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="253" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 252;"><span id="cb5-253"><a href="#cb5-253" aria-hidden="true" tabindex="-1"></a>viewof asignacion <span class="op">=</span> {</span>
+<span id="cb5-254"><a href="#cb5-254" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> nombres <span class="op">=</span> grupos<span class="op">.</span><span class="fu">split</span>(<span class="st">","</span>)<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="fu">trim</span>())<span class="op">.</span><span class="fu">filter</span>(<span class="bu">Boolean</span>)<span class="op">;</span></span>
+<span id="cb5-255"><a href="#cb5-255" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> caja <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div class="lab-tarjetas"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb5-256"><a href="#cb5-256" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> sels <span class="op">=</span> tarjetas<span class="op">.</span><span class="fu">map</span>((t<span class="op">,</span> i) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-257"><a href="#cb5-257" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> s <span class="op">=</span> <span class="fu">seleccion</span>(t<span class="op">,</span> [[<span class="st">""</span><span class="op">,</span> <span class="st">"Elige un grupo…"</span>]<span class="op">,</span> <span class="op">...</span>nombres<span class="op">.</span><span class="fu">map</span>(n <span class="kw">=&gt;</span> [n<span class="op">,</span> n])])<span class="op">;</span></span>
+<span id="cb5-258"><a href="#cb5-258" aria-hidden="true" tabindex="-1"></a>    s<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> e <span class="kw">=&gt;</span> { e<span class="op">.</span><span class="fu">stopPropagation</span>()<span class="op">;</span> caja<span class="op">.</span><span class="at">value</span> <span class="op">=</span> sels<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">value</span>)<span class="op">;</span> caja<span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">Event</span>(<span class="st">"input"</span><span class="op">,</span> {<span class="dt">bubbles</span><span class="op">:</span> <span class="kw">true</span>}))<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb5-259"><a href="#cb5-259" aria-hidden="true" tabindex="-1"></a>    caja<span class="op">.</span><span class="fu">appendChild</span>(s)<span class="op">;</span> <span class="cf">return</span> s<span class="op">;</span></span>
+<span id="cb5-260"><a href="#cb5-260" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb5-261"><a href="#cb5-261" aria-hidden="true" tabindex="-1"></a>  caja<span class="op">.</span><span class="at">value</span> <span class="op">=</span> sels<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
+<span id="cb5-262"><a href="#cb5-262" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> caja<span class="op">;</span></span>
+<span id="cb5-263"><a href="#cb5-263" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="269" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 268;"><span id="cb6-269"><a href="#cb6-269" aria-hidden="true" tabindex="-1"></a>simulados <span class="op">=</span> {</span>
+<span id="cb6-270"><a href="#cb6-270" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 20 participantes simulados: tres agrupaciones de base con algo de variación</span></span>
+<span id="cb6-271"><a href="#cb6-271" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> base <span class="op">=</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb6-272"><a href="#cb6-272" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> s <span class="op">=</span> <span class="dv">11</span><span class="op">;</span> <span class="kw">const</span> rnd <span class="op">=</span> () <span class="kw">=&gt;</span> (s <span class="op">=</span> (s <span class="op">*</span> <span class="dv">9301</span> <span class="op">+</span> <span class="dv">49297</span>) <span class="op">%</span> <span class="dv">233280</span>) <span class="op">/</span> <span class="dv">233280</span><span class="op">;</span></span>
+<span id="cb6-273"><a href="#cb6-273" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>({<span class="dt">length</span><span class="op">:</span> <span class="dv">20</span>}<span class="op">,</span> () <span class="kw">=&gt;</span> base<span class="op">.</span><span class="fu">map</span>((g<span class="op">,</span> i) <span class="kw">=&gt;</span> {</span>
+<span id="cb6-274"><a href="#cb6-274" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> r <span class="op">=</span> <span class="fu">rnd</span>()<span class="op">;</span></span>
+<span id="cb6-275"><a href="#cb6-275" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (i <span class="op">===</span> <span class="dv">9</span> <span class="op">&amp;&amp;</span> r <span class="op">&lt;</span> <span class="fl">0.45</span>) <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span>       <span class="co">// «Mis listas» a veces con los préstamos</span></span>
+<span id="cb6-276"><a href="#cb6-276" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (i <span class="op">===</span> <span class="dv">4</span> <span class="op">&amp;&amp;</span> r <span class="op">&lt;</span> <span class="fl">0.35</span>) <span class="cf">return</span> <span class="dv">2</span><span class="op">;</span>       <span class="co">// «Pagar una multa» a veces en la cuenta</span></span>
+<span id="cb6-277"><a href="#cb6-277" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (i <span class="op">===</span> <span class="dv">1</span> <span class="op">&amp;&amp;</span> r <span class="op">&lt;</span> <span class="fl">0.3</span>) <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span>        <span class="co">// «Reservar» a veces con los préstamos</span></span>
+<span id="cb6-278"><a href="#cb6-278" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> r <span class="op">&lt;</span> <span class="fl">0.06</span> <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="fu">rnd</span>() <span class="op">*</span> <span class="dv">4</span>) <span class="op">:</span> g<span class="op">;</span></span>
+<span id="cb6-279"><a href="#cb6-279" aria-hidden="true" tabindex="-1"></a>  }))<span class="op">;</span></span>
+<span id="cb6-280"><a href="#cb6-280" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-281"><a href="#cb6-281" aria-hidden="true" tabindex="-1"></a>juntos <span class="op">=</span> tarjetas<span class="op">.</span><span class="fu">map</span>((_<span class="op">,</span> i) <span class="kw">=&gt;</span> tarjetas<span class="op">.</span><span class="fu">map</span>((_<span class="op">,</span> j) <span class="kw">=&gt;</span> simulados<span class="op">.</span><span class="fu">filter</span>(p <span class="kw">=&gt;</span> p[i] <span class="op">===</span> p[j])<span class="op">.</span><span class="at">length</span> <span class="op">/</span> simulados<span class="op">.</span><span class="at">length</span>))</span>
+<span id="cb6-282"><a href="#cb6-282" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb6-283"><a href="#cb6-283" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> tuyo <span class="op">=</span> asignacion<span class="op">;</span></span>
+<span id="cb6-284"><a href="#cb6-284" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> completo <span class="op">=</span> tuyo<span class="op">.</span><span class="fu">every</span>(<span class="bu">Boolean</span>)<span class="op">;</span></span>
+<span id="cb6-285"><a href="#cb6-285" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> acuerdo <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> pares <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-286"><a href="#cb6-286" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">10</span><span class="op">;</span> i<span class="op">++</span>) <span class="cf">for</span> (<span class="kw">let</span> j <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span><span class="op">;</span> j <span class="op">&lt;</span> <span class="dv">10</span><span class="op">;</span> j<span class="op">++</span>) {</span>
+<span id="cb6-287"><a href="#cb6-287" aria-hidden="true" tabindex="-1"></a>    pares<span class="op">++;</span> <span class="kw">const</span> t <span class="op">=</span> tuyo[i] <span class="op">&amp;&amp;</span> tuyo[i] <span class="op">===</span> tuyo[j]<span class="op">;</span> <span class="kw">const</span> m <span class="op">=</span> juntos[i][j] <span class="op">&gt;=</span> <span class="fl">0.5</span><span class="op">;</span></span>
+<span id="cb6-288"><a href="#cb6-288" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (t <span class="op">===</span> m) acuerdo<span class="op">++;</span></span>
+<span id="cb6-289"><a href="#cb6-289" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-290"><a href="#cb6-290" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> celda <span class="op">=</span> <span class="dv">30</span><span class="op">,</span> izq <span class="op">=</span> <span class="dv">190</span><span class="op">,</span> arriba <span class="op">=</span> <span class="dv">190</span><span class="op">,</span> w <span class="op">=</span> izq <span class="op">+</span> celda <span class="op">*</span> <span class="dv">10</span> <span class="op">+</span> <span class="dv">70</span><span class="op">,</span> h <span class="op">=</span> arriba <span class="op">+</span> celda <span class="op">*</span> <span class="dv">10</span> <span class="op">+</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb6-291"><a href="#cb6-291" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> svg <span class="op">=</span> [<span class="vs">`&lt;svg viewBox="0 0 </span><span class="sc">${</span>w<span class="sc">}</span><span class="vs"> </span><span class="sc">${</span>h<span class="sc">}</span><span class="vs">" width="100%" style="max-width:</span><span class="sc">${</span>w<span class="sc">}</span><span class="vs">px" role="img" aria-label="Matriz de similitud de las diez tarjetas según los participantes simulados"&gt;`</span>]<span class="op">;</span></span>
+<span id="cb6-292"><a href="#cb6-292" aria-hidden="true" tabindex="-1"></a>  tarjetas<span class="op">.</span><span class="fu">forEach</span>((t<span class="op">,</span> i) <span class="kw">=&gt;</span> {</span>
+<span id="cb6-293"><a href="#cb6-293" aria-hidden="true" tabindex="-1"></a>    svg<span class="op">.</span><span class="fu">push</span>(<span class="vs">`&lt;text x="</span><span class="sc">${</span>izq <span class="op">-</span> <span class="dv">6</span><span class="sc">}</span><span class="vs">" y="</span><span class="sc">${</span>arriba <span class="op">+</span> i <span class="op">*</span> celda <span class="op">+</span> <span class="dv">19</span><span class="sc">}</span><span class="vs">" text-anchor="end" font-size="11" fill="currentColor"&gt;</span><span class="sc">${</span>t<span class="sc">}</span><span class="vs">&lt;/text&gt;`</span>)<span class="op">;</span></span>
+<span id="cb6-294"><a href="#cb6-294" aria-hidden="true" tabindex="-1"></a>    svg<span class="op">.</span><span class="fu">push</span>(<span class="vs">`&lt;text transform="translate(</span><span class="sc">${</span>izq <span class="op">+</span> i <span class="op">*</span> celda <span class="op">+</span> <span class="dv">19</span><span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>arriba <span class="op">-</span> <span class="dv">6</span><span class="sc">}</span><span class="vs">) rotate(-60)" font-size="11" fill="currentColor"&gt;</span><span class="sc">${</span>t<span class="sc">}</span><span class="vs">&lt;/text&gt;`</span>)<span class="op">;</span></span>
+<span id="cb6-295"><a href="#cb6-295" aria-hidden="true" tabindex="-1"></a>    tarjetas<span class="op">.</span><span class="fu">forEach</span>((_<span class="op">,</span> j) <span class="kw">=&gt;</span> {</span>
+<span id="cb6-296"><a href="#cb6-296" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> v <span class="op">=</span> juntos[i][j]<span class="op">,</span> mismo <span class="op">=</span> tuyo[i] <span class="op">&amp;&amp;</span> tuyo[i] <span class="op">===</span> tuyo[j]<span class="op">;</span></span>
+<span id="cb6-297"><a href="#cb6-297" aria-hidden="true" tabindex="-1"></a>      svg<span class="op">.</span><span class="fu">push</span>(<span class="vs">`&lt;rect x="</span><span class="sc">${</span>izq <span class="op">+</span> j <span class="op">*</span> celda<span class="sc">}</span><span class="vs">" y="</span><span class="sc">${</span>arriba <span class="op">+</span> i <span class="op">*</span> celda<span class="sc">}</span><span class="vs">" width="</span><span class="sc">${</span>celda <span class="op">-</span> <span class="dv">2</span><span class="sc">}</span><span class="vs">" height="</span><span class="sc">${</span>celda <span class="op">-</span> <span class="dv">2</span><span class="sc">}</span><span class="vs">" rx="3" fill="#2a78d6" fill-opacity="</span><span class="sc">${</span><span class="fl">0.08</span> <span class="op">+</span> <span class="fl">0.85</span> <span class="op">*</span> v<span class="sc">}</span><span class="vs">" stroke="</span><span class="sc">${</span>mismo <span class="op">&amp;&amp;</span> i <span class="op">!==</span> j <span class="op">?</span> <span class="st">"#eb6834"</span> <span class="op">:</span> <span class="st">"none"</span><span class="sc">}</span><span class="vs">" stroke-width="2.5"/&gt;`</span>)<span class="op">;</span></span>
+<span id="cb6-298"><a href="#cb6-298" aria-hidden="true" tabindex="-1"></a>      svg<span class="op">.</span><span class="fu">push</span>(<span class="vs">`&lt;text x="</span><span class="sc">${</span>izq <span class="op">+</span> j <span class="op">*</span> celda <span class="op">+</span> <span class="dv">14</span><span class="sc">}</span><span class="vs">" y="</span><span class="sc">${</span>arriba <span class="op">+</span> i <span class="op">*</span> celda <span class="op">+</span> <span class="dv">19</span><span class="sc">}</span><span class="vs">" text-anchor="middle" font-size="9" fill="</span><span class="sc">${</span>v <span class="op">&gt;</span> <span class="fl">0.55</span> <span class="op">?</span> <span class="st">"#fff"</span> <span class="op">:</span> <span class="st">"currentColor"</span><span class="sc">}</span><span class="vs">"&gt;</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(v <span class="op">*</span> <span class="dv">100</span>)<span class="sc">}</span><span class="vs">&lt;/text&gt;`</span>)<span class="op">;</span></span>
+<span id="cb6-299"><a href="#cb6-299" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb6-300"><a href="#cb6-300" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb6-301"><a href="#cb6-301" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">push</span>(<span class="st">"&lt;/svg&gt;"</span>)<span class="op">;</span></span>
+<span id="cb6-302"><a href="#cb6-302" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb6-303"><a href="#cb6-303" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;p&gt;</span><span class="sc">${</span>completo <span class="op">?</span> <span class="vs">`&lt;strong&gt;Coincides con la mayoría en el </span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="dv">100</span> <span class="op">*</span> acuerdo <span class="op">/</span> pares)<span class="sc">}</span><span class="vs"> % de los pares&lt;/strong&gt; (dos tarjetas juntas o separadas).`</span> <span class="op">:</span> <span class="st">"Asigna un grupo a todas las tarjetas para comparar tu propuesta."</span><span class="sc">}</span><span class="vs">&lt;/p&gt;</span></span>
+<span id="cb6-304"><a href="#cb6-304" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;p class="small"&gt;Cada celda es el % de participantes que juntaron esas dos tarjetas; los bordes naranjas marcan los pares que tú has juntado.&lt;/p&gt;</span><span class="sc">${</span>svg<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb6-305"><a href="#cb6-305" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d<span class="op">;</span></span>
+<span id="cb6-306"><a href="#cb6-306" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-4-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-4-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-4-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<p><strong>Fíjate</strong> en las tarjetas que dividen a los participantes («Mis listas de lectura», «Pagar una multa»): son las que piden una etiqueta más clara o estar en dos sitios.</p>
+</div>
+</section>
+<section id="caso-práctico-resuelto" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-resuelto">Caso práctico resuelto</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>De las entrevistas al concepto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Se entrevista a ocho estudiantes sobre cómo buscan sitio para estudiar. Proceso de síntesis:</p>
+<ol type="1">
+<li><strong>Transcribir citas</strong> relevantes en notas (una idea por nota): «Voy a la biblioteca y doy vueltas buscando una sala libre», «En época de exámenes no hay nada a partir de las 10».</li>
+<li><strong>Mapa de afinidad:</strong> agrupar las notas por temas emergentes: <em>incertidumbre sobre la disponibilidad</em>, <em>picos de demanda</em>, <em>trabajo en grupo</em>.</li>
+<li><strong>Insights:</strong> «Los estudiantes pierden tiempo porque no saben qué salas están libres antes de llegar».</li>
+<li><strong>Concepto creativo:</strong> «Saber antes de salir de casa dónde vas a estudiar».</li>
+</ol>
+<p>El concepto orienta todo el diseño posterior: la información de disponibilidad debe ser lo primero que se ve.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios-graduados" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<p><strong>Básico.</strong> Convierte esta observación en un <em>insight</em>: «Muchos estudiantes reservan salas y no aparecen».</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Un <em>insight</em> explica el porqué: «Los estudiantes reservan por precaución en varias franjas porque temen quedarse sin sala, y no cancelan porque hacerlo es incómodo». Sugiere soluciones (cancelación fácil, recordatorios, liberación automática).</p>
+</div>
+<p><strong>Avanzado.</strong> Diseña un guion de entrevista de seis preguntas abiertas para entender cómo estudian en grupo.</p>
+<div class="webex-solution">
+<button>Ver solución</button>
+<p>Preguntas abiertas y sobre comportamientos concretos pasados («Cuéntame la última vez que…»), sin sugerir soluciones ni respuestas («¿Te gustaría una app que…?» es una pregunta sesgada).</p>
+</div>
+</section>
+<section id="actividades" class="level2">
+<h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
+<div class="ia ia-zonas" id="ia-t2-heuristica"><script type="application/json" class="ia-datos">{"alt":"Esquema de la pantalla «Renovar préstamos» de una biblioteca: cabecera con menú, lista de tres préstamos con casillas, un recuadro de novedades, dos campos de texto, dos botones azules iguales y un mensaje de error rojo; abajo a la derecha, un enlace de ayuda.","enunciado":"<p>Pulsa sobre las <strong>cinco<\/strong> zonas que incumplen alguna\nheurística de Nielsen y comprueba.<\/p>","explicacion":"","imagen":"figuras/t2_formulario.svg","tipo":"zonas","titulo":"Revisión heurística de un formulario","zonas":[{"correcta":false,"descripcion":"Cabecera con el menú principal","explicacion":"Es consistente y deja ver dónde estás.","h":11,"w":98.8,"x":0.6,"y":0.8},{"correcta":false,"descripcion":"Lista de préstamos con casillas","explicacion":"Muestra el estado y la fecha de cada préstamo.","h":24,"w":55,"x":5,"y":25},{"correcta":false,"descripcion":"Recuadro de novedades","explicacion":"Puede distraer, pero no impide la tarea.","h":24,"w":29,"x":66,"y":25},{"correcta":true,"descripcion":"Campo con el texto «Introduce el código»","explicacion":"Sin etiqueta visible: el texto desaparece al escribir y no dice qué\ncódigo es (heurísticas 6 y 10).","h":7,"w":34,"x":5,"y":54},{"correcta":true,"descripcion":"Campo con el texto «AAAAMMDD»","explicacion":"Exige un formato rígido sin ejemplo ni calendario (5, prevención de\nerrores).","h":7,"w":34,"x":45,"y":54},{"correcta":true,"descripcion":"Botón «Ejecutar transacción OPAC»","explicacion":"Jerga del sistema en lugar del lenguaje de la persona: «Renovar»\n(2).","h":9,"w":30,"x":5,"y":66},{"correcta":true,"descripcion":"Botón «Borrar todo»","explicacion":"Acción destructiva con el mismo peso que la principal y sin\nconfirmación (3 y 5).","h":9,"w":20,"x":38,"y":66},{"correcta":true,"descripcion":"Mensaje «Error 0x8F2»","explicacion":"No explica qué ha pasado ni cómo solucionarlo (9).","h":7,"w":50,"x":5,"y":80},{"correcta":false,"descripcion":"Enlace de ayuda","explicacion":"Existe ayuda accesible (10).","h":7,"w":10,"x":84,"y":90}]}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t2-metodos"><script type="application/json" class="ia-datos">{"categorias":["Cualitativo","Cuantitativo"],"enunciado":"","explicacion":"","items":[{"categoria":"Cualitativo","explicacion":"","texto":"Entrevistas en profundidad con ocho estudiantes"},{"categoria":"Cuantitativo","explicacion":"","texto":"Encuesta a 400 personas usuarias"},{"categoria":"Cualitativo","explicacion":"","texto":"Observación contextual en la sala de lectura"},{"categoria":"Cuantitativo","explicacion":"","texto":"Análisis de los registros de búsqueda del catálogo"},{"categoria":"Cuantitativo","explicacion":"","texto":"Prueba A/B de dos versiones de un botón"},{"categoria":"Cualitativo","explicacion":"","texto":"Estudio de diario durante dos semanas"}],"tipo":"clasificar","titulo":"¿Cualitativo o cuantitativo?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t2-heuristicas"><script type="application/json" class="ia-datos">{"categorias":["1 Visibilidad del estado","2 Mundo real","3 Control y libertad","5 Prevención de errores","6 Reconocer mejor que recordar","9 Recuperarse de errores"],"enunciado":"","explicacion":"","items":[{"categoria":"1 Visibilidad del estado","explicacion":"","texto":"Al subir un archivo grande no aparece ninguna barra de progreso"},{"categoria":"2 Mundo real","explicacion":"","texto":"Un icono de disquete significa «Exportar a PDF»"},{"categoria":"3 Control y libertad","explicacion":"","texto":"No hay forma de deshacer el envío de un formulario"},{"categoria":"5 Prevención de errores","explicacion":"","texto":"El formulario acepta una fecha de devolución anterior a la de\npréstamo"},{"categoria":"6 Reconocer mejor que recordar","explicacion":"","texto":"Hay que recordar el código de la sede escrito en la pantalla\nanterior"},{"categoria":"9 Recuperarse de errores","explicacion":"","texto":"El mensaje dice «Fallo de validación» sin indicar qué campo está\nmal"}],"tipo":"clasificar","titulo":"¿Qué heurística se incumple?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+</section>
+<section id="reto-t2" class="level2">
+<h2 class="anchored" data-anchor-id="reto-t2">Reto evaluable</h2>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Reto del Tema 2 · Plan de investigación y revisión heurística
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Elige un servicio digital de una biblioteca, un archivo o un museo:</p>
+<ol type="1">
+<li>Redacta <strong>tres preguntas de investigación</strong> y, para cada una, el método más adecuado según el mapa de Rohrer, justificando el cuadrante.</li>
+<li>Escribe el <strong>guion de una entrevista</strong> de 30 minutos (máximo diez temas) que evite preguntas sugestivas.</li>
+<li>Haz una <strong>revisión heurística</strong> del servicio con las diez heurísticas de Nielsen: al menos seis problemas, con captura, heurística y severidad de 0 a 4.</li>
+<li>Formula <strong>dos preguntas «¿Cómo podríamos…?»</strong> a partir de los problemas más graves.</li>
+</ol>
+<p><strong>Entrega:</strong> un informe hecho con la <a href="plantillas/entrega_reto.qmd">plantilla de entrega</a>. Se evalúa con la rúbrica que incluye la plantilla. Este reto <strong>no tiene solución en el libro</strong>: cada estudiante trabaja con un servicio distinto y la corrección la hace el profesorado.</p>
+</div>
+</div>
+</section>
+<section id="autoevaluación" class="level2">
+<h2 class="anchored" data-anchor-id="autoevaluación">Autoevaluación</h2>
+<p>Responde a todas las preguntas y pulsa <strong>Mostrar respuestas</strong>: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.</p>
+<div class="webex-check webex-box">
+<ol type="1">
+<li>Una encuesta es el mejor método para entender <strong>por qué</strong> las personas abandonan un formulario. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
+<li>Observar a alguien mientras busca un libro en el catálogo es un método <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">actitudinal</option><option value="answer">comportamental</option></select></li>
+<li>En una revisión heurística participan usuarios reales. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
+<li>Según Nielsen y Molich, ¿cuántos evaluadores independientes conviene emplear para detectar la mayoría de los problemas? <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">uno</option><option value="answer">de tres a cinco</option><option value="x">más de veinte</option></select></li>
+<li>En la escala de severidad de Nielsen, un problema que hay que resolver antes del lanzamiento recibe un <input class="webex-solveme nospaces" size="5" aria-label="Escribe tu respuesta" data-answer="[&quot;4&quot;]"></li>
+<li>¿Cuál de estas preguntas de entrevista es más adecuada?</li>
+</ol>
+<p></p><div class="webex-radiogroup" role="radiogroup" aria-label="Opciones de respuesta" id="radio_libro_1"><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>¿Verdad que sería útil reservar salas desde el móvil?</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>¿Usarías una aplicación de reservas?</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="answer"> <span>Cuéntame la última vez que necesitaste una sala de estudio: ¿qué hiciste?</span></label></div><p></p>
+<ol start="7" type="1">
+<li>«Para quien no conoce la biblioteca, el horario es información de contacto» es un <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">hallazgo</option><option value="answer">insight (conclusión)</option><option value="x">concepto creativo</option></select></li>
+</ol>
+</div>
+<div class="webex-solution">
+<button>Ver explicaciones</button>
+<ul>
+<li>La encuesta mide cuánto, pero no explica por qué: para eso hacen falta métodos cualitativos o la observación.</li>
+<li>Observar la conducta es comportamental; preguntar opiniones es actitudinal.</li>
+<li>Es un método de inspección: lo hacen evaluadores con experiencia, sin usuarios.</li>
+<li>Un solo evaluador detecta solo una parte; tres a cinco cubren la mayoría.</li>
+<li>4 es «catástrofe de usabilidad»: imprescindible resolverla.</li>
+<li>Pedir un episodio concreto y reciente da información fiable y evita sugerir la respuesta.</li>
+<li>Es la interpretación que explica lo observado; el hallazgo es el dato con su evidencia.</li>
+</ul>
+</div>
+</section>
+<section id="recursos-complementarios" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-complementarios">Recursos complementarios</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Recurso</th>
+<th>Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">Nielsen Norman Group – 10 usability heuristics</a></td>
+<td>Las heurísticas con ejemplos actuales</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.nngroup.com/articles/which-ux-research-methods/">Nielsen Norman Group – Which UX research methods</a></td>
+<td>El mapa de métodos</td>
+</tr>
+<tr class="odd">
+<td><a href="https://ixdf.org/literature/topics/user-research">Interaction Design Foundation – User research</a></td>
+<td>Introducción a los métodos</td>
+</tr>
+<tr class="even">
+<td>Hanington, B.; Martin, B. (2022). <em>The pocket universal methods of design</em>. Quarto</td>
+<td>Fichas breves de métodos (bibliografía complementaria)</td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="webr-data">
+eyJvcHRpb25zIjp7ImJhc2VVcmwiOiJ3ZWJyLyJ9LCJwYWNrYWdlcyI6eyJwa2dzIjpbImV2YWx1YXRlIiwia25pdHIiLCJodG1sdG9vbHMiXSwicmVwb3MiOlsid2Vici1yZXBvIl19LCJyZW5kZXJfZGYiOiJkZWZhdWx0In0=
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC03IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICAvLyBXYWl0IGZvciBvdXRwdXQgdG8gYmUgd3JpdHRlbiB0byB0aGUgRE9NLCB0aGVuIHRyaWdnZXIgd2lkZ2V0IHJlbmRlcmluZ1xuICBhd2FpdCBfd2Vicl92YWx1ZV83O1xuICBpZiAod2luZG93LkhUTUxXaWRnZXRzKSB7XG4gICAgd2luZG93LkhUTUxXaWRnZXRzLnN0YXRpY1JlbmRlcigpO1xuICB9XG4gIGlmICh3aW5kb3cuUGFnZWRUYWJsZURvYykge1xuICAgIHdpbmRvdy5QYWdlZFRhYmxlRG9jLmluaXRBbGwoKTtcbiAgfVxufVxuIn0seyJjZWxsTmFtZSI6IndlYnItNyIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzcgPSB7XG4gIGNvbnN0IHsgV2ViUkV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici03LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgLy8gRGVmYXVsdCBleGVyY2lzZSBjb25maWd1cmF0aW9uXG4gIGNvbnN0IG9wdGlvbnMgPSBPYmplY3QuYXNzaWduKFxuICAgIHtcbiAgICAgIGlkOiBcIndlYnItNy1jb250ZW50c1wiLFxuICAgICAgZW52aXI6IGBleGVyY2lzZS1lbnYtJHtibG9jay5hdHRyLmV4ZXJjaXNlfWAsXG4gICAgICBlcnJvcjogZmFsc2UsXG4gICAgICBjYXB0aW9uOiAnRXhlcmNpc2UnLFxuICAgIH0sXG4gICAgYmxvY2suYXR0clxuICApO1xuXG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxudmlld29mIF93ZWJyX3ZhbHVlXzcgPSB3ZWJST2pzLnByb2Nlc3MoX3dlYnJfZWRpdG9yXzcsIHt9KTtcbl93ZWJyX2ZlZWRiYWNrXzcgPSB7XG4gIGNvbnN0IHsgV2ViUkdyYWRlciB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3QgZW1wdHlGZWVkYmFjayA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuXG4gIGNvbnN0IGdyYWRlciA9IG5ldyBXZWJSR3JhZGVyKF93ZWJyX3ZhbHVlXzcuZXZhbHVhdG9yKTtcbiAgY29uc3QgZmVlZGJhY2sgPSBhd2FpdCBncmFkZXIuZ3JhZGVFeGVyY2lzZSgpO1xuICBpZiAoIWZlZWRiYWNrKSByZXR1cm4gZW1wdHlGZWVkYmFjaztcbiAgcmV0dXJuIGZlZWRiYWNrO1xufVxuIn0seyJjZWxsTmFtZSI6IndlYnItd2lkZ2V0LTQiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJ7XG4gIC8vIFdhaXQgZm9yIG91dHB1dCB0byBiZSB3cml0dGVuIHRvIHRoZSBET00sIHRoZW4gdHJpZ2dlciB3aWRnZXQgcmVuZGVyaW5nXG4gIGF3YWl0IF93ZWJyX3ZhbHVlXzQ7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici00IiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfd2Vicl9lZGl0b3JfNCA9IHtcbiAgY29uc3QgeyBXZWJSRXhlcmNpc2VFZGl0b3IsIGI2NERlY29kZSB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ3ZWJyLTQtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICAvLyBEZWZhdWx0IGV4ZXJjaXNlIGNvbmZpZ3VyYXRpb25cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oXG4gICAge1xuICAgICAgaWQ6IFwid2Vici00LWNvbnRlbnRzXCIsXG4gICAgICBlbnZpcjogYGV4ZXJjaXNlLWVudi0ke2Jsb2NrLmF0dHIuZXhlcmNpc2V9YCxcbiAgICAgIGVycm9yOiBmYWxzZSxcbiAgICAgIGNhcHRpb246ICdFeGVyY2lzZScsXG4gICAgfSxcbiAgICBibG9jay5hdHRyXG4gICk7XG5cbiAgY29uc3QgZWRpdG9yID0gbmV3IFdlYlJFeGVyY2lzZUVkaXRvcih3ZWJST2pzLndlYlJQcm9taXNlLCBibG9jay5jb2RlLCBvcHRpb25zKTtcbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG52aWV3b2YgX3dlYnJfdmFsdWVfNCA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfNCwge30pO1xuX3dlYnJfZmVlZGJhY2tfNCA9IHtcbiAgY29uc3QgeyBXZWJSR3JhZGVyIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBlbXB0eUZlZWRiYWNrID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7XG5cbiAgY29uc3QgZ3JhZGVyID0gbmV3IFdlYlJHcmFkZXIoX3dlYnJfdmFsdWVfNC5ldmFsdWF0b3IpO1xuICBjb25zdCBmZWVkYmFjayA9IGF3YWl0IGdyYWRlci5ncmFkZUV4ZXJjaXNlKCk7XG4gIGlmICghZmVlZGJhY2spIHJldHVybiBlbXB0eUZlZWRiYWNrO1xuICByZXR1cm4gZmVlZGJhY2s7XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici13aWRnZXQtMiIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6IntcbiAgLy8gV2FpdCBmb3Igb3V0cHV0IHRvIGJlIHdyaXR0ZW4gdG8gdGhlIERPTSwgdGhlbiB0cmlnZ2VyIHdpZGdldCByZW5kZXJpbmdcbiAgYXdhaXQgX3dlYnJfdmFsdWVfMjtcbiAgaWYgKHdpbmRvdy5IVE1MV2lkZ2V0cykge1xuICAgIHdpbmRvdy5IVE1MV2lkZ2V0cy5zdGF0aWNSZW5kZXIoKTtcbiAgfVxuICBpZiAod2luZG93LlBhZ2VkVGFibGVEb2MpIHtcbiAgICB3aW5kb3cuUGFnZWRUYWJsZURvYy5pbml0QWxsKCk7XG4gIH1cbn1cbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLTIiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF93ZWJyX2VkaXRvcl8yID0ge1xuICBjb25zdCB7IFdlYlJFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuICBjb25zdCBzY3JpcHRDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItMi1jb250ZW50c1xcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGJsb2NrID0gSlNPTi5wYXJzZShiNjREZWNvZGUoc2NyaXB0Q29udGVudCkpO1xuXG4gIGNvbnN0IG9wdGlvbnMgPSBPYmplY3QuYXNzaWduKHsgaWQ6IGB3ZWJyLTItY29udGVudHNgIH0sIGJsb2NrLmF0dHIpO1xuICBjb25zdCBlZGl0b3IgPSBuZXcgV2ViUkV4ZXJjaXNlRWRpdG9yKHdlYlJPanMud2ViUlByb21pc2UsIGJsb2NrLmNvZGUsIG9wdGlvbnMpO1xuXG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxuX3dlYnJfdmFsdWVfMiA9IHdlYlJPanMucHJvY2Vzcyhfd2Vicl9lZGl0b3JfMiwge30pO1xuIn0seyJjZWxsTmFtZSI6IndlYnItd2lkZ2V0LTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJ7XG4gIC8vIFdhaXQgZm9yIG91dHB1dCB0byBiZSB3cml0dGVuIHRvIHRoZSBET00sIHRoZW4gdHJpZ2dlciB3aWRnZXQgcmVuZGVyaW5nXG4gIGF3YWl0IF93ZWJyX3ZhbHVlXzE7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0xIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfd2Vicl9lZGl0b3JfMSA9IHtcbiAgY29uc3QgeyBXZWJSRXhlcmNpc2VFZGl0b3IsIGI2NERlY29kZSB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ3ZWJyLTEtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICBjb25zdCBvcHRpb25zID0gT2JqZWN0LmFzc2lnbih7IGlkOiBgd2Vici0xLWNvbnRlbnRzYCB9LCBibG9jay5hdHRyKTtcbiAgY29uc3QgZWRpdG9yID0gbmV3IFdlYlJFeGVyY2lzZUVkaXRvcih3ZWJST2pzLndlYlJQcm9taXNlLCBibG9jay5jb2RlLCBvcHRpb25zKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl93ZWJyX3ZhbHVlXzEgPSB3ZWJST2pzLnByb2Nlc3MoX3dlYnJfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJ3ZWJST2pzID0ge1xuICBjb25zdCB7IFdlYlIsIENoYW5uZWxUeXBlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lLldlYlI7XG4gIGNvbnN0IHtcbiAgICBXZWJSRXZhbHVhdG9yLFxuICAgIFdlYlJFbnZpcm9ubWVudE1hbmFnZXIsXG4gICAgc2V0dXBSLFxuICAgIGI2NERlY29kZSxcbiAgICBjb2xsYXBzZVBhdGhcbiAgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc3RhdHVzQ29udGFpbmVyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJleGVyY2lzZS1sb2FkaW5nLXN0YXR1c1wiKTtcbiAgY29uc3QgaW5kaWNhdG9yQ29udGFpbmVyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJleGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaW5kaWNhdG9yQ29udGFpbmVyLmNsYXNzTGlzdC5yZW1vdmUoXCJkLW5vbmVcIik7XG5cbiAgbGV0IHN0YXR1c1RleHQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwiZGl2XCIpXG4gIHN0YXR1c1RleHQuY2xhc3NMaXN0ID0gXCJleGVyY2lzZS1sb2FkaW5nLWRldGFpbHNcIjtcbiAgc3RhdHVzVGV4dCA9IHN0YXR1c0NvbnRhaW5lci5hcHBlbmRDaGlsZChzdGF0dXNUZXh0KTtcbiAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBJbml0aWFsaXNlYDtcblxuICAvLyBIb2lzdCBpbmRpY2F0b3Igb3V0IGZyb20gZmluYWwgc2xpZGUgd2hlbiBydW5uaW5nIHVuZGVyIHJldmVhbFxuICBjb25zdCByZXZlYWxTdGF0dXMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCAuZXhlcmNpc2UtbG9hZGluZy1pbmRpY2F0b3JcIik7XG4gIGlmIChyZXZlYWxTdGF0dXMpIHtcbiAgICByZXZlYWxTdGF0dXMucmVtb3ZlKCk7XG4gICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXZlYWwgPiAuc2xpZGVzXCIpLmFwcGVuZENoaWxkKHJldmVhbFN0YXR1cyk7XG4gIH1cblxuICAvLyBNYWtlIGFueSByZXZlYWwgc2xpZGVzIHdpdGggbGl2ZSBjZWxscyBzY3JvbGxhYmxlXG4gIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoXCIucmV2ZWFsIC5leGVyY2lzZS1jZWxsXCIpLmZvckVhY2goKGVsKSA9PiB7XG4gICAgZWwuY2xvc2VzdCgnc2VjdGlvbi5zbGlkZScpLmNsYXNzTGlzdC5hZGQoXCJzY3JvbGxhYmxlXCIpO1xuICB9KVxuXG4gIC8vIHdlYlIgc3VwcGxlbWVudGFsIGRhdGEgYW5kIG9wdGlvbnNcbiAgY29uc3QgZGF0YUNvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici1kYXRhXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZGF0YSA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKGRhdGFDb250ZW50KSk7XG5cbiAgLy8gW0xpYnJvXSBQZXJtaXRpciBydXRhcyByZWxhdGl2YXMgcGFyYSBlbCBtb3RvciB5IGVsIHJlcG9zaXRvcmlvIGRlIHBhcXVldGVzXG4gIC8vIChhdXRvYWxvamFkb3MganVudG8gYWwgbGlicm8pLCByZXNvbHZpw6luZG9sYXMgcmVzcGVjdG8gYSBsYSBww6FnaW5hLlxuICBjb25zdCBhYnNvbHV0aXplID0gKHUpID0+IG5ldyBVUkwodSwgZG9jdW1lbnQuYmFzZVVSSSkuaHJlZjtcbiAgaWYgKGRhdGEub3B0aW9ucy5iYXNlVXJsKSBkYXRhLm9wdGlvbnMuYmFzZVVybCA9IGFic29sdXRpemUoZGF0YS5vcHRpb25zLmJhc2VVcmwpO1xuICBkYXRhLnBhY2thZ2VzLnJlcG9zID0gZGF0YS5wYWNrYWdlcy5yZXBvcy5tYXAoYWJzb2x1dGl6ZSk7XG5cbiAgLy8gR3JhYiBsaXN0IG9mIHJlc291cmNlcyB0byBiZSBkb3dubG9hZGVkXG4gIGNvbnN0IGZpbGVzQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ2ZnMtZmlsZVxcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGZpbGVzID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZmlsZXNDb250ZW50KSk7XG5cbiAgLy8gSW5pdGlhbGlzZSB3ZWJSIGFuZCBzZXR1cCBmb3IgUiBjb2RlIGV2YWx1YXRpb25cbiAgbGV0IHdlYlJQcm9taXNlID0gKGFzeW5jICh3ZWJSKSA9PiB7XG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyB3ZWJSYDtcbiAgICBhd2FpdCB3ZWJSLmluaXQoKTtcblxuICAgIC8vIEluc3RhbGwgcHJvdmlkZWQgbGlzdCBvZiBwYWNrYWdlc1xuICAgIC8vIEVuc3VyZSB3ZWJSIGRlZmF1bHQgcmVwbyBpcyBpbmNsdWRlZFxuICAgIGlmIChkYXRhLnBhY2thZ2VzLnJlcG9zLmxlbmd0aCA9PT0gMCkgZGF0YS5wYWNrYWdlcy5yZXBvcy5wdXNoKFwiaHR0cHM6Ly9yZXBvLnItd2FzbS5vcmdcIilcbiAgICBhd2FpdCBkYXRhLnBhY2thZ2VzLnBrZ3MubWFwKChwa2cpID0+ICgpID0+IHtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcGFja2FnZTogJHtwa2d9YDtcbiAgICAgIHJldHVybiB3ZWJSLmV2YWxSVm9pZChgXG4gICAgICAgIHdlYnI6Omluc3RhbGwocGtnLCByZXBvcyA9IHJlcG9zKVxuICAgICAgICBsaWJyYXJ5KHBrZywgY2hhcmFjdGVyLm9ubHkgPSBUUlVFKVxuICAgICAgYCwgeyBlbnY6IHtcbiAgICAgICAgcGtnOiBwa2csXG4gICAgICAgIHJlcG9zOiBkYXRhLnBhY2thZ2VzLnJlcG9zLFxuICAgICAgfX0pO1xuICAgIH0pLnJlZHVjZSgoY3VyLCBuZXh0KSA9PiBjdXIudGhlbihuZXh0KSwgUHJvbWlzZS5yZXNvbHZlKCkpO1xuXG4gICAgLy8gRG93bmxvYWQgYW5kIGluc3RhbGwgcmVzb3VyY2VzXG4gICAgYXdhaXQgZmlsZXMubWFwKChmaWxlKSA9PiBhc3luYyAoKSA9PiB7XG4gICAgICBjb25zdCBuYW1lID0gZmlsZS5zdWJzdHJpbmcoZmlsZS5sYXN0SW5kZXhPZignLycpICsgMSk7XG4gICAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYERvd25sb2FkaW5nIHJlc291cmNlOiAke25hbWV9YDtcbiAgICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goZmlsZSk7XG4gICAgICBpZiAoIXJlc3BvbnNlLm9rKSB7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgQ2FuJ3QgZG93bmxvYWQgXFxgJHtmaWxlfVxcYC4gRXJyb3IgJHtyZXNwb25zZS5zdGF0dXN9OiBcIiR7cmVzcG9uc2Uuc3RhdHVzVGV4dH1cIi5gKTtcbiAgICAgIH1cbiAgICAgIGNvbnN0IGRhdGEgPSBhd2FpdCByZXNwb25zZS5hcnJheUJ1ZmZlcigpO1xuXG4gICAgICAvLyBTdG9yZSBVUkxzIGluIHRoZSBjd2Qgd2l0aG91dCBhbnkgc3ViZGlyZWN0b3J5IHN0cnVjdHVyZVxuICAgICAgaWYgKGZpbGUuaW5jbHVkZXMoXCI6Ly9cIikpIHtcbiAgICAgICAgZmlsZSA9IG5hbWU7XG4gICAgICB9XG5cbiAgICAgIC8vIENvbGxhcHNlIGhpZ2hlciBkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBmaWxlID0gY29sbGFwc2VQYXRoKGZpbGUpO1xuXG4gICAgICAvLyBDcmVhdGUgZGlyZWN0b3J5IHRyZWUsIGlnbm9yaW5nIFwiZGlyZWN0b3J5IGV4aXN0c1wiIFZGUyBlcnJvcnNcbiAgICAgIGNvbnN0IHBhcnRzID0gZmlsZS5zcGxpdCgnLycpLnNsaWNlKDAsIC0xKTtcbiAgICAgIGxldCBwYXRoID0gJyc7XG4gICAgICB3aGlsZSAocGFydHMubGVuZ3RoID4gMCkge1xuICAgICAgICBwYXRoICs9IHBhcnRzLnNoaWZ0KCkgKyAnLyc7XG4gICAgICAgIGNvbnN0IGFuYWx5c2lzID0gYXdhaXQgd2ViUi5GUy5hbmFseXplUGF0aChwYXRoKTtcbiAgICAgICAgaWYgKCFhbmFseXNpcy5leGlzdHMpIHtcbiAgICAgICAgICB0cnkge1xuICAgICAgICAgICAgYXdhaXQgd2ViUi5GUy5ta2RpcihwYXRoKTtcbiAgICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoYEZpbGVzeXN0ZW0gRXJyb3I6IFwiJHtlLm1lc3NhZ2V9XCIuYCk7XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICB9XG5cbiAgICAgIC8vIFdyaXRlIHRoaXMgZmlsZSB0byB0aGUgVkZTXG4gICAgICByZXR1cm4gYXdhaXQgd2ViUi5GUy53cml0ZUZpbGUoZmlsZSwgbmV3IFVpbnQ4QXJyYXkoZGF0YSkpO1xuICAgIH0pLnJlZHVjZSgoY3VyLCBuZXh0KSA9PiBjdXIudGhlbihuZXh0KSwgUHJvbWlzZS5yZXNvbHZlKCkpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBJbnN0YWxsaW5nIHdlYlIgc2hpbXNgO1xuICAgIGF3YWl0IHdlYlIuZXZhbFJWb2lkKGB3ZWJyOjpzaGltX2luc3RhbGwoKWApO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBXZWJSIGVudmlyb25tZW50IHNldHVwYDtcbiAgICBhd2FpdCBzZXR1cFIod2ViUiwgZGF0YSk7XG5cbiAgICBzdGF0dXNUZXh0LnJlbW92ZSgpO1xuICAgIGlmIChzdGF0dXNDb250YWluZXIuY2hpbGRyZW4ubGVuZ3RoID09IDApIHtcbiAgICAgIHN0YXR1c0NvbnRhaW5lci5wYXJlbnROb2RlLnJlbW92ZSgpO1xuICAgIH1cbiAgICByZXR1cm4gd2ViUjtcbiAgfSkobmV3IFdlYlIoZGF0YS5vcHRpb25zKSk7XG5cbiAgLy8gS2VlcCB0cmFjayBvZiBpbml0aWFsIE9KUyBibG9jayByZW5kZXJcbiAgY29uc3QgcmVuZGVyZWRPanMgPSB7fTtcblxuICBjb25zdCBwcm9jZXNzID0gYXN5bmMgKGNvbnRleHQsIGlucHV0cykgPT4ge1xuICAgIGNvbnN0IHdlYlIgPSBhd2FpdCB3ZWJSUHJvbWlzZTtcbiAgICBjb25zdCBldmFsdWF0b3IgPSBuZXcgV2ViUkV2YWx1YXRvcih3ZWJSLCBjb250ZXh0KVxuICAgIGF3YWl0IGV2YWx1YXRvci5wcm9jZXNzKGlucHV0cyk7XG4gICAgcmV0dXJuIGV2YWx1YXRvci5jb250YWluZXI7XG4gIH1cblxuICByZXR1cm4ge1xuICAgIHByb2Nlc3MsXG4gICAgd2ViUlByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gIH07XG59XG4ifV19
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
+</script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-nielsen1994" class="csl-entry" role="listitem">
+Nielsen, J. (1994). <span>Enhancing the explanatory power of usability heuristics</span>. En <em><span>CHI ’94</span></em> (pp. 152-158). ACM. <a href="https://doi.org/10.1145/191666.191729">https://doi.org/10.1145/191666.191729</a>
+</div>
+<div id="ref-nielsen1990" class="csl-entry" role="listitem">
+Nielsen, J., y Molich, R. (1990). <span>Heuristic evaluation of user interfaces</span>. En <em><span>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’90)</span></em> (pp. 249-256). ACM. <a href="https://doi.org/10.1145/97243.97281">https://doi.org/10.1145/97243.97281</a>
+</div>
+<div id="ref-rohrer2022" class="csl-entry" role="listitem">
+Rohrer, C. (2022). <em><span>When to use which user-experience research methods</span></em>. Nielsen Norman Group. <a href="https://www.nngroup.com/articles/which-ux-research-methods/">https://www.nngroup.com/articles/which-ux-research-methods/</a>
+</div>
+<div id="ref-sharp2023" class="csl-entry" role="listitem">
+Sharp, H., Rogers, Y., y Preece, J. (2023). <em><span>Interaction design: Beyond human-computer interaction</span></em>. Wiley.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Mejoras de accesibilidad del libro:
+   - nombre accesible para los editores de código de quarto-live (CodeMirror),
+   - foco de teclado en sus áreas desplazables,
+   - texto alternativo para el icono de ORCID de la portada. */
+(function () {
+  function arreglar(raiz) {
+    raiz.querySelectorAll('.cm-content:not([aria-label])').forEach(function (el) {
+      el.setAttribute('aria-label', 'Editor de código R');
+    });
+    raiz.querySelectorAll('.cm-scroller').forEach(function (el) {
+      if (el.getAttribute('tabindex') !== '0') el.setAttribute('tabindex', '0');
+      if (!el.hasAttribute('aria-label')) el.setAttribute('aria-label', 'Código R');
+    });
+    // controles de Observable (deslizadores y casillas) sin nombre accesible
+    raiz.querySelectorAll('form input:not([aria-label]), form select:not([aria-label])').forEach(function (el) {
+      var form = el.closest('form');
+      var lab = form && form.querySelector('label');
+      if (lab && !(el.id && form.querySelector('label[for="' + el.id + '"]'))) {
+        el.setAttribute('aria-label', lab.textContent.trim() + (el.type === 'number' ? ' (valor)' : ''));
+      }
+    });
+    // menú de descarga de la barra lateral (solo icono)
+    raiz.querySelectorAll('.quarto-navigation-tool.dropdown-toggle').forEach(function (a) {
+      if (a.getAttribute('aria-label')) return;
+      a.setAttribute('aria-label', 'Descargar el libro en PDF o EPUB');
+      a.setAttribute('title', 'Descargar el libro en PDF o EPUB');
+    });
+    raiz.querySelectorAll('.quarto-title-author-orcid').forEach(function (a) {
+      a.setAttribute('aria-label', 'Perfil ORCID de Pablo Sánchez-Núñez');
+      var img = a.querySelector('img');
+      if (img && !img.hasAttribute('alt')) img.setAttribute('alt', 'ORCID');
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () { arreglar(document); });
+  new MutationObserver(function () { arreglar(document); })
+    .observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
+<script src="./consent.js" defer=""></script>
+<style>
+.progreso-capitulo { border: 1px solid var(--bs-border-color, #dee2e6); border-left: 4px solid var(--bs-primary, #000e78);
+  border-radius: .35rem; padding: .6rem .9rem; margin: 0 0 1.4rem; font-size: .92rem; background: rgba(127, 127, 127, .08); color: inherit; }
+.progreso-capitulo progress { width: 100%; height: .6rem; margin: .35rem 0 .2rem; accent-color: var(--bs-primary, #000e78); }
+.progreso-capitulo .progreso-nota { font-size: .82rem; opacity: .85; }
+.progreso-capitulo button, #progreso-resumen button { font-size: .82rem; padding: .05rem .5rem; margin-left: .4rem;
+  border: 1px solid var(--bs-border-color, #ced4da); border-radius: .3rem; background: transparent; color: inherit; }
+#progreso-resumen table { width: 100%; }
+#progreso-resumen { margin-bottom: 1.2rem; }
+#progreso-resumen progress { width: 8rem; height: .55rem; accent-color: var(--bs-primary, #000e78); vertical-align: middle; }
+.sin-conexion-estado { font-size: .85rem; }
+</style>
+<script>
+/* Progreso del estudiante: cuenta los ejercicios de código resueltos y las
+   preguntas de autoevaluación acertadas en cada capítulo. Se guarda solo en
+   el almacenamiento local de este navegador; no se envía a ningún servidor. */
+(function () {
+  var CLAVE = 'progreso-' + (location.pathname.split('/').filter(Boolean)[0] || 'libro') + '-v1';
+  function leer() { try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch (e) { return {}; } }
+  function guardar(d) { try { localStorage.setItem(CLAVE, JSON.stringify(d)); } catch (e) {} }
+  var pagina = location.pathname.split('/').pop() || 'index.html';
+
+  function nombresEjercicios() {
+    var m = {};
+    document.querySelectorAll('script[type^="webr-"][type$="-contents"]').forEach(function (s) {
+      try {
+        var bin = atob(s.textContent.trim());
+        var d = JSON.parse(new TextDecoder().decode(Uint8Array.from(bin, function (c) { return c.charCodeAt(0); })));
+        if (d.attr && d.attr.exercise && !d.attr.setup && !d.attr.check) m[s.type.replace('-contents', '')] = d.attr.exercise;
+      } catch (e) {}
+    });
+    return m;
+  }
+  function preguntas() {
+    return Array.prototype.slice.call(document.querySelectorAll('.webex-check .webex-solveme, .webex-check .webex-select, .webex-check .webex-radiogroup'));
+  }
+
+  function registro(datos) {
+    var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
+    r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
+    r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
+    return r;
+  }
+
+  function pintar(caja, totalEj, totalPr, totalIa) {
+    var r = registro(leer());
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
+    var partes = [];
+    if (totalEj) partes.push(r.ej.length + ' de ' + totalEj + ' ejercicios de código');
+    if (totalIa) partes.push(r.ia.length + ' de ' + totalIa + ' actividades');
+    if (totalPr) partes.push(r.pr.length + ' de ' + totalPr + ' preguntas acertadas');
+    caja.innerHTML = '<strong>Tu progreso en este capítulo:</strong> ' + partes.join(' · ') +
+      '<progress max="' + total + '" value="' + hechos + '" aria-label="Progreso del capítulo: ' + hechos + ' de ' + total + '"></progress>' +
+      '<span class="progreso-nota">Se guarda solo en este navegador.</span>' +
+      '<button type="button">Borrar el progreso del capítulo</button>';
+    caja.querySelector('button').addEventListener('click', function () {
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
+    });
+  }
+
+  function capitulo() {
+    var mapa = nombresEjercicios();
+    var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
+      .filter(function (v, i, a) { return a.indexOf(v) === i; });
+    var lista = preguntas();
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
+
+    var d = leer(); var r = registro(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
+
+    var caja = document.createElement('div');
+    caja.className = 'progreso-capitulo';
+    caja.setAttribute('role', 'status');
+    var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
+    if (!cabecera) return;
+    cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
+    pintar(caja, nombres.length, lista.length, nIa);
+
+    function anotar(tipo, valor) {
+      var d = leer(); var r = registro(d);
+      if (r[tipo].indexOf(valor) === -1) {
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
+      }
+    }
+
+    // Ejercicios de webR: un aviso verde de quarto-live dentro de la celda del ejercicio
+    new MutationObserver(function () {
+      document.querySelectorAll('.exercise-grade.alert-success:not([data-progreso])').forEach(function (a) {
+        a.setAttribute('data-progreso', '1');
+        var el = a;
+        while (el && !(el.id && mapa[el.id])) el = el.parentElement;
+        if (el) anotar('ej', mapa[el.id]);
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
+
+    // Preguntas: se anotan al pulsar «Mostrar respuestas»
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('.webex-check-button');
+      if (!b) return;
+      setTimeout(function () {
+        lista.forEach(function (q, i) {
+          if (q.classList.contains('webex-correct') || q.querySelector('.webex-correct')) anotar('pr', i);
+        });
+      }, 0);
+    });
+  }
+
+  function resumen() {
+    var destino = document.getElementById('progreso-resumen');
+    if (!destino) return;
+    var d = leer();
+    var filas = [];
+    document.querySelectorAll('#quarto-sidebar a.sidebar-link').forEach(function (a) {
+      var f = (a.getAttribute('href') || '').split('/').pop().split('#')[0];
+      if (!f || f === 'index.html' || /^9\d-/.test(f) || filas.some(function (x) { return x.f === f; })) return;
+      filas.push({ f: f, t: a.textContent.replace(/\s+/g, ' ').trim(), r: d[f] });
+    });
+    var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">Capítulo</th><th scope="col">Progreso</th></tr></thead><tbody>';
+    filas.forEach(function (x) {
+      var celda = 'Sin empezar';
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + ' ejercicios');
+        if (tIa) trozos.push(ia.length + '/' + tIa + ' actividades');
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + ' preguntas');
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + ' de ' + t + '"></progress> ' + trozos.join(' · ');
+      }
+      html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
+    });
+    html += '</tbody></' + 'table><button type="button">Borrar todo mi progreso</button>';
+    destino.innerHTML = html;
+    destino.querySelector('button').addEventListener('click', function () {
+      try { localStorage.removeItem(CLAVE); } catch (e) {}
+      resumen();
+    });
+  }
+
+  function iniciar() { capitulo(); resumen(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar); else iniciar();
+})();
+
+/* Uso sin conexión: un service worker guarda el libro, webR y sus paquetes
+   la primera vez que se visitan. */
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').then(function () {
+      var estado = document.getElementById('sin-conexion-estado');
+      if (estado) estado.textContent = 'Este navegador ya guarda el libro para usarlo sin conexión.';
+    }).catch(function () {});
+  });
+})();
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgY29uc3QgSCA9IFtcIlZpc2liaWxpZGFkIGRlbCBlc3RhZG8gZGVsIHNpc3RlbWFcIiwgXCJDb3JyZXNwb25kZW5jaWEgZW50cmUgZWwgc2lzdGVtYSB5IGVsIG11bmRvIHJlYWxcIiwgXCJDb250cm9sIHkgbGliZXJ0YWQgZGVsIHVzdWFyaW9cIiwgXCJDb25zaXN0ZW5jaWEgeSBlc3TDoW5kYXJlc1wiLCBcIlByZXZlbmNpw7NuIGRlIGVycm9yZXNcIiwgXCJSZWNvbm9jZXIgbWVqb3IgcXVlIHJlY29yZGFyXCIsIFwiRmxleGliaWxpZGFkIHkgZWZpY2llbmNpYSBkZSB1c29cIiwgXCJEaXNlw7FvIGVzdMOpdGljbyB5IG1pbmltYWxpc3RhXCIsIFwiQXl1ZGFyIGEgcmVjb25vY2VyLCBkaWFnbm9zdGljYXIgeSByZWN1cGVyYXJzZSBkZSBlcnJvcmVzXCIsIFwiQXl1ZGEgeSBkb2N1bWVudGFjacOzblwiXTtcbiAgY29uc3QgU0VWID0gW1wiMCDCtyBubyBlcyB1biBwcm9ibGVtYVwiLCBcIjEgwrcgY29zbcOpdGljb1wiLCBcIjIgwrcgbWVub3JcIiwgXCIzIMK3IGltcG9ydGFudGVcIiwgXCI0IMK3IGNhdMOhc3Ryb2ZlXCJdO1xuICBjb25zdCByYWl6ID0gaHRtbGA8ZGl2IGNsYXNzPVwiaGV1ci1sYWJcIj48L2Rpdj5gO1xuICBjb25zdCBub21icmUgPSBodG1sYDxkaXYgY2xhc3M9XCJtYi0yXCI+PGxhYmVsIGNsYXNzPVwiZm9ybS1sYWJlbFwiIGZvcj1cImhldXItaW50XCI+SW50ZXJmYXogZXZhbHVhZGE8L2xhYmVsPjxpbnB1dCBpZD1cImhldXItaW50XCIgY2xhc3M9XCJmb3JtLWNvbnRyb2wgZm9ybS1jb250cm9sLXNtXCIgdmFsdWU9XCJSZXNlcnZhU2FsYSwgdmVyc2nDs24gMVwiPjwvZGl2PmA7XG4gIGNvbnN0IHRhYmxhID0gaHRtbGA8dGFibGUgY2xhc3M9XCJ0YWJsZSB0YWJsZS1zbSBhbGlnbi1taWRkbGVcIj48dGhlYWQ+PHRyPjx0aCBzY29wZT1cImNvbFwiPkhldXLDrXN0aWNhPC90aD48dGggc2NvcGU9XCJjb2xcIj5TZXZlcmlkYWQ8L3RoPjx0aCBzY29wZT1cImNvbFwiPkhhbGxhemdvPC90aD48L3RyPjwvdGhlYWQ+PHRib2R5PjwvdGJvZHk+PC90YWJsZT5gO1xuICBjb25zdCBmaWxhcyA9IEgubWFwKChoLCBpKSA9PiB7IGNvbnN0IHRyID0gaHRtbGA8dHI+PHRkIGNsYXNzPVwic21hbGxcIj4ke2kgKyAxfS4gJHtofTwvdGQ+PHRkPjxzZWxlY3QgY2xhc3M9XCJmb3JtLXNlbGVjdCBmb3JtLXNlbGVjdC1zbVwiIGFyaWEtbGFiZWw9XCJTZXZlcmlkYWQ6ICR7aH1cIj4ke1NFVi5tYXAoKHMsIGspID0+IGA8b3B0aW9uIHZhbHVlPVwiJHtrfVwiPiR7c308L29wdGlvbj5gKS5qb2luKFwiXCIpfTwvc2VsZWN0PjwvdGQ+PHRkPjxpbnB1dCBjbGFzcz1cImZvcm0tY29udHJvbCBmb3JtLWNvbnRyb2wtc21cIiBhcmlhLWxhYmVsPVwiSGFsbGF6Z286ICR7aH1cIiBwbGFjZWhvbGRlcj1cIlF1w6kgcGFzYSB5IGTDs25kZVwiPjwvdGQ+PC90cj5gOyB0YWJsYS50Qm9kaWVzWzBdLmFwcGVuZCh0cik7IHJldHVybiB0ci5xdWVyeVNlbGVjdG9yQWxsKFwic2VsZWN0LCBpbnB1dFwiKTsgfSk7XG4gIGNvbnN0IHNhbGlkYSA9IGh0bWxgPGRpdiByb2xlPVwic3RhdHVzXCIgYXJpYS1saXZlPVwicG9saXRlXCI+PC9kaXY+YDtcbiAgY29uc3QgZXNjID0gKHMpID0+IHMucmVwbGFjZSgvWyY8PnxdL2csIChjKSA9PiAoe1wiJlwiOiBcIiZhbXA7XCIsIFwiPFwiOiBcIiZsdDtcIiwgXCI+XCI6IFwiJmd0O1wiLCBcInxcIjogXCIvXCJ9W2NdKSk7XG4gIGZ1bmN0aW9uIGluZm9ybWUoKSB7XG4gICAgY29uc3QgaXRlbXMgPSBmaWxhcy5tYXAoKFtzLCBuXSwgaSkgPT4gKHtoOiBIW2ldLCBpOiBpICsgMSwgczogK3MudmFsdWUsIG46IG4udmFsdWUudHJpbSgpfSkpLmZpbHRlcigoeCkgPT4geC5zID4gMCkuc29ydCgoYSwgYikgPT4gYi5zIC0gYS5zKTtcbiAgICBjb25zdCBncmF2ZXMgPSBpdGVtcy5maWx0ZXIoKHgpID0+IHgucyA+PSAzKS5sZW5ndGg7XG4gICAgY29uc3QgbWQgPSBgIyBSZXZpc2nDs24gaGV1csOtc3RpY2E6ICR7bm9tYnJlLnF1ZXJ5U2VsZWN0b3IoXCJpbnB1dFwiKS52YWx1ZX1cXG5cXG58IFNldmVyaWRhZCB8IEhldXLDrXN0aWNhIHwgSGFsbGF6Z28gfFxcbnwtLS18LS0tfC0tLXxcXG5gICsgaXRlbXMubWFwKCh4KSA9PiBgfCAke3guc30gfCAke3guaX0uICR7eC5ofSB8ICR7eC5uLnJlcGxhY2UoL1xcfC9nLCBcIi9cIikgfHwgXCIoc2luIG5vdGEpXCJ9IHxgKS5qb2luKFwiXFxuXCIpICsgYFxcblxcblByb2JsZW1hcyBpbXBvcnRhbnRlcyBvIGNhdGFzdHLDs2ZpY29zOiAke2dyYXZlc30uXFxuYDtcbiAgICBjb25zdCB1cmwgPSBVUkwuY3JlYXRlT2JqZWN0VVJMKG5ldyBCbG9iKFttZF0sIHt0eXBlOiBcInRleHQvbWFya2Rvd25cIn0pKTtcbiAgICBzYWxpZGEuaW5uZXJIVE1MID0gaXRlbXMubGVuZ3RoID8gYDxwPjxzdHJvbmc+JHtpdGVtcy5sZW5ndGh9IHByb2JsZW1hczwvc3Ryb25nPiDCtyAke2dyYXZlc30gZGUgc2V2ZXJpZGFkIDMgbyA0JHtncmF2ZXMgPyBcIiDigJQgcmVzdcOpbHZlbG9zIGFudGVzIGRlIHNlZ3Vpci5cIiA6IFwiLlwifTwvcD48b2w+JHtpdGVtcy5tYXAoKHgpID0+IGA8bGk+PHN0cm9uZz5TZXZlcmlkYWQgJHt4LnN9PC9zdHJvbmc+IMK3ICR7eC5ofSR7eC5uID8gXCI6IFwiICsgZXNjKHgubikgOiBcIlwifTwvbGk+YCkuam9pbihcIlwiKX08L29sPjxhIGNsYXNzPVwiYnRuIGJ0bi1vdXRsaW5lLXByaW1hcnkgYnRuLXNtXCIgZG93bmxvYWQ9XCJyZXZpc2lvbi1oZXVyaXN0aWNhLm1kXCIgaHJlZj1cIiR7dXJsfVwiPkRlc2NhcmdhciBlbCBpbmZvcm1lICgubWQpPC9hPmAgOiBcIjxwPlRvZGF2w61hIG5vIGhhcyBhbm90YWRvIHByb2JsZW1hcy4gQXNpZ25hIHVuYSBzZXZlcmlkYWQgbWF5b3IgcXVlIDAgYSB1bmEgaGV1csOtc3RpY2EuPC9wPlwiO1xuICB9XG4gIHJhaXouYWRkRXZlbnRMaXN0ZW5lcihcImlucHV0XCIsIGluZm9ybWUpO1xuICByYWl6LmFwcGVuZChub21icmUsIHRhYmxhLCBzYWxpZGEpOyBpbmZvcm1lKCk7XG4gIHJldHVybiByYWl6O1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidGV4dG8gPSB3aW5kb3cuTGFiLnRleHRvXG5zZWxlY2Npb24gPSB3aW5kb3cuTGFiLnNlbGVjY2lvblxuYXJlYSA9IHdpbmRvdy5MYWIuYXJlYVxucmFuZ28gPSB3aW5kb3cuTGFiLnJhbmdvXG5ib3RvbiA9IHdpbmRvdy5MYWIuYm90b25cbmNvbG9yID0gd2luZG93LkxhYi5jb2xvclxudGFyamV0YXMgPSBbXCJCdXNjYXIgZW4gZWwgY2F0w6Fsb2dvXCIsIFwiUmVzZXJ2YXIgdW4gbGlicm9cIiwgXCJSZW5vdmFyIHVuIHByw6lzdGFtb1wiLCBcIlZlciBtaXMgcHLDqXN0YW1vc1wiLCBcIlBhZ2FyIHVuYSBtdWx0YVwiLFxuICBcIkNhbWJpYXIgbGEgY29udHJhc2XDsWFcIiwgXCJFbGVnaXIgZWwgaWRpb21hXCIsIFwiSG9yYXJpb3MgeSBzZWRlc1wiLCBcIkNvbnRhY3RhciBjb24gbGEgYmlibGlvdGVjYVwiLCBcIk1pcyBsaXN0YXMgZGUgbGVjdHVyYVwiXVxudmlld29mIGdydXBvcyA9IHRleHRvKFwiTm9tYnJlcyBkZSB0dXMgZ3J1cG9zIChzZXBhcmFkb3MgcG9yIGNvbWFzKVwiLCB7dmFsdWU6IFwiQnVzY2FyLCBNaXMgcHLDqXN0YW1vcywgTWkgY3VlbnRhLCBJbmZvcm1hY2nDs25cIiwgc3VibWl0OiBcIlVzYXIgZXN0b3MgZ3J1cG9zXCJ9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIGFzaWduYWNpb24gPSB7XG4gIGNvbnN0IG5vbWJyZXMgPSBncnVwb3Muc3BsaXQoXCIsXCIpLm1hcCh4ID0+IHgudHJpbSgpKS5maWx0ZXIoQm9vbGVhbik7XG4gIGNvbnN0IGNhamEgPSBodG1sYDxkaXYgY2xhc3M9XCJsYWItdGFyamV0YXNcIj48L2Rpdj5gO1xuICBjb25zdCBzZWxzID0gdGFyamV0YXMubWFwKCh0LCBpKSA9PiB7XG4gICAgY29uc3QgcyA9IHNlbGVjY2lvbih0LCBbW1wiXCIsIFwiRWxpZ2UgdW4gZ3J1cG/igKZcIl0sIC4uLm5vbWJyZXMubWFwKG4gPT4gW24sIG5dKV0pO1xuICAgIHMuYWRkRXZlbnRMaXN0ZW5lcihcImlucHV0XCIsIGUgPT4geyBlLnN0b3BQcm9wYWdhdGlvbigpOyBjYWphLnZhbHVlID0gc2Vscy5tYXAoeCA9PiB4LnZhbHVlKTsgY2FqYS5kaXNwYXRjaEV2ZW50KG5ldyBFdmVudChcImlucHV0XCIsIHtidWJibGVzOiB0cnVlfSkpOyB9KTtcbiAgICBjYWphLmFwcGVuZENoaWxkKHMpOyByZXR1cm4gcztcbiAgfSk7XG4gIGNhamEudmFsdWUgPSBzZWxzLm1hcCh4ID0+IHgudmFsdWUpO1xuICByZXR1cm4gY2FqYTtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InNpbXVsYWRvcyA9IHtcbiAgLy8gMjAgcGFydGljaXBhbnRlcyBzaW11bGFkb3M6IHRyZXMgYWdydXBhY2lvbmVzIGRlIGJhc2UgY29uIGFsZ28gZGUgdmFyaWFjacOzblxuICBjb25zdCBiYXNlID0gWzAsIDAsIDEsIDEsIDEsIDIsIDIsIDMsIDMsIDBdO1xuICBsZXQgcyA9IDExOyBjb25zdCBybmQgPSAoKSA9PiAocyA9IChzICogOTMwMSArIDQ5Mjk3KSAlIDIzMzI4MCkgLyAyMzMyODA7XG4gIHJldHVybiBBcnJheS5mcm9tKHtsZW5ndGg6IDIwfSwgKCkgPT4gYmFzZS5tYXAoKGcsIGkpID0+IHtcbiAgICBjb25zdCByID0gcm5kKCk7XG4gICAgaWYgKGkgPT09IDkgJiYgciA8IDAuNDUpIHJldHVybiAxOyAgICAgICAvLyDCq01pcyBsaXN0YXPCuyBhIHZlY2VzIGNvbiBsb3MgcHLDqXN0YW1vc1xuICAgIGlmIChpID09PSA0ICYmIHIgPCAwLjM1KSByZXR1cm4gMjsgICAgICAgLy8gwqtQYWdhciB1bmEgbXVsdGHCuyBhIHZlY2VzIGVuIGxhIGN1ZW50YVxuICAgIGlmIChpID09PSAxICYmIHIgPCAwLjMpIHJldHVybiAxOyAgICAgICAgLy8gwqtSZXNlcnZhcsK7IGEgdmVjZXMgY29uIGxvcyBwcsOpc3RhbW9zXG4gICAgcmV0dXJuIHIgPCAwLjA2ID8gTWF0aC5mbG9vcihybmQoKSAqIDQpIDogZztcbiAgfSkpO1xufVxuanVudG9zID0gdGFyamV0YXMubWFwKChfLCBpKSA9PiB0YXJqZXRhcy5tYXAoKF8sIGopID0+IHNpbXVsYWRvcy5maWx0ZXIocCA9PiBwW2ldID09PSBwW2pdKS5sZW5ndGggLyBzaW11bGFkb3MubGVuZ3RoKSlcbntcbiAgY29uc3QgdHV5byA9IGFzaWduYWNpb247XG4gIGNvbnN0IGNvbXBsZXRvID0gdHV5by5ldmVyeShCb29sZWFuKTtcbiAgbGV0IGFjdWVyZG8gPSAwLCBwYXJlcyA9IDA7XG4gIGZvciAobGV0IGkgPSAwOyBpIDwgMTA7IGkrKykgZm9yIChsZXQgaiA9IGkgKyAxOyBqIDwgMTA7IGorKykge1xuICAgIHBhcmVzKys7IGNvbnN0IHQgPSB0dXlvW2ldICYmIHR1eW9baV0gPT09IHR1eW9bal07IGNvbnN0IG0gPSBqdW50b3NbaV1bal0gPj0gMC41O1xuICAgIGlmICh0ID09PSBtKSBhY3VlcmRvKys7XG4gIH1cbiAgY29uc3QgY2VsZGEgPSAzMCwgaXpxID0gMTkwLCBhcnJpYmEgPSAxOTAsIHcgPSBpenEgKyBjZWxkYSAqIDEwICsgNzAsIGggPSBhcnJpYmEgKyBjZWxkYSAqIDEwICsgMTA7XG4gIGNvbnN0IHN2ZyA9IFtgPHN2ZyB2aWV3Qm94PVwiMCAwICR7d30gJHtofVwiIHdpZHRoPVwiMTAwJVwiIHN0eWxlPVwibWF4LXdpZHRoOiR7d31weFwiIHJvbGU9XCJpbWdcIiBhcmlhLWxhYmVsPVwiTWF0cml6IGRlIHNpbWlsaXR1ZCBkZSBsYXMgZGlleiB0YXJqZXRhcyBzZWfDum4gbG9zIHBhcnRpY2lwYW50ZXMgc2ltdWxhZG9zXCI+YF07XG4gIHRhcmpldGFzLmZvckVhY2goKHQsIGkpID0+IHtcbiAgICBzdmcucHVzaChgPHRleHQgeD1cIiR7aXpxIC0gNn1cIiB5PVwiJHthcnJpYmEgKyBpICogY2VsZGEgKyAxOX1cIiB0ZXh0LWFuY2hvcj1cImVuZFwiIGZvbnQtc2l6ZT1cIjExXCIgZmlsbD1cImN1cnJlbnRDb2xvclwiPiR7dH08L3RleHQ+YCk7XG4gICAgc3ZnLnB1c2goYDx0ZXh0IHRyYW5zZm9ybT1cInRyYW5zbGF0ZSgke2l6cSArIGkgKiBjZWxkYSArIDE5fSwke2FycmliYSAtIDZ9KSByb3RhdGUoLTYwKVwiIGZvbnQtc2l6ZT1cIjExXCIgZmlsbD1cImN1cnJlbnRDb2xvclwiPiR7dH08L3RleHQ+YCk7XG4gICAgdGFyamV0YXMuZm9yRWFjaCgoXywgaikgPT4ge1xuICAgICAgY29uc3QgdiA9IGp1bnRvc1tpXVtqXSwgbWlzbW8gPSB0dXlvW2ldICYmIHR1eW9baV0gPT09IHR1eW9bal07XG4gICAgICBzdmcucHVzaChgPHJlY3QgeD1cIiR7aXpxICsgaiAqIGNlbGRhfVwiIHk9XCIke2FycmliYSArIGkgKiBjZWxkYX1cIiB3aWR0aD1cIiR7Y2VsZGEgLSAyfVwiIGhlaWdodD1cIiR7Y2VsZGEgLSAyfVwiIHJ4PVwiM1wiIGZpbGw9XCIjMmE3OGQ2XCIgZmlsbC1vcGFjaXR5PVwiJHswLjA4ICsgMC44NSAqIHZ9XCIgc3Ryb2tlPVwiJHttaXNtbyAmJiBpICE9PSBqID8gXCIjZWI2ODM0XCIgOiBcIm5vbmVcIn1cIiBzdHJva2Utd2lkdGg9XCIyLjVcIi8+YCk7XG4gICAgICBzdmcucHVzaChgPHRleHQgeD1cIiR7aXpxICsgaiAqIGNlbGRhICsgMTR9XCIgeT1cIiR7YXJyaWJhICsgaSAqIGNlbGRhICsgMTl9XCIgdGV4dC1hbmNob3I9XCJtaWRkbGVcIiBmb250LXNpemU9XCI5XCIgZmlsbD1cIiR7diA+IDAuNTUgPyBcIiNmZmZcIiA6IFwiY3VycmVudENvbG9yXCJ9XCI+JHtNYXRoLnJvdW5kKHYgKiAxMDApfTwvdGV4dD5gKTtcbiAgICB9KTtcbiAgfSk7XG4gIHN2Zy5wdXNoKFwiPC9zdmc+XCIpO1xuICBjb25zdCBkID0gaHRtbGA8ZGl2IHJvbGU9XCJzdGF0dXNcIj48L2Rpdj5gO1xuICBkLmlubmVySFRNTCA9IGA8cD4ke2NvbXBsZXRvID8gYDxzdHJvbmc+Q29pbmNpZGVzIGNvbiBsYSBtYXlvcsOtYSBlbiBlbCAke01hdGgucm91bmQoMTAwICogYWN1ZXJkbyAvIHBhcmVzKX0gJSBkZSBsb3MgcGFyZXM8L3N0cm9uZz4gKGRvcyB0YXJqZXRhcyBqdW50YXMgbyBzZXBhcmFkYXMpLmAgOiBcIkFzaWduYSB1biBncnVwbyBhIHRvZGFzIGxhcyB0YXJqZXRhcyBwYXJhIGNvbXBhcmFyIHR1IHByb3B1ZXN0YS5cIn08L3A+XG4gIDxwIGNsYXNzPVwic21hbGxcIj5DYWRhIGNlbGRhIGVzIGVsICUgZGUgcGFydGljaXBhbnRlcyBxdWUganVudGFyb24gZXNhcyBkb3MgdGFyamV0YXM7IGxvcyBib3JkZXMgbmFyYW5qYXMgbWFyY2FuIGxvcyBwYXJlcyBxdWUgdMO6IGhhcyBqdW50YWRvLjwvcD4ke3N2Zy5qb2luKFwiXCIpfWA7XG4gIHJldHVybiBkO1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdncnVwb3MnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnYXNpZ25hY2lvbicpIn1dfQ==
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pablosancheznunez\.com\/prototipos-baja-fidelidad\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./01-fundamentos.html" class="pagination-link" aria-label="Tema 1. Fundamentos del prototipado de baja fidelidad">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Tema 1. Fundamentos del prototipado de baja fidelidad</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./03-problema.html" class="pagination-link" aria-label="Tema 3. Definir el problema de diseño">
+        <span class="nav-page-text"><span class="chapter-title">Tema 3. Definir el problema de diseño</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 <a href="https://pablosancheznunez.com">Pablo Sánchez-Núñez</a> · <a href="https://orcid.org/0000-0001-7845-9506">ORCID 0000-0001-7845-9506</a> · Texto bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Universidad Carlos III de Madrid · Hecho con <a href="https://quarto.org">Quarto</a> y <a href="https://docs.r-wasm.org/webr/latest/">webR</a></p>
+</div>
+  </div>
+</footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+<script src="site_libs/quarto-contrib/webex-1.2.0/webex.js"></script>
+</body></html>

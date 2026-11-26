@@ -1,0 +1,1067 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Scientific English for Researchers",
+    "section": "",
+    "text": "Preface\nEnglish is the main language of international research. For most researchers in the world it is a second (or third) language, and writing, reviewing and presenting in it takes extra time and effort. Amano et al. (2023) surveyed researchers in environmental sciences from many countries and found that non-native speakers spend substantially more time reading, writing and preparing presentations in English, and are more likely to have papers rejected or sent back for revision because of the language. This is a structural inequality of the research system, not a personal failing. This book cannot remove it, but it can make the work faster and the results clearer.\nIt is written for doctoral students and researchers in any field, with particular attention to the difficulties of Spanish speakers. It does not teach general English: it focuses on the genres researchers need (articles, abstracts, reviews, cover letters, emails, talks) and on the evidence about what makes scientific texts clear.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#map-of-the-book",
+    "href": "index.html#map-of-the-book",
+    "title": "Scientific English for Researchers",
+    "section": "Map of the book",
+    "text": "Map of the book\n\n\n\nChapter\nQuestion\n\n\n\n\n1. The architecture of a research article\nHow are articles and abstracts structured, and why?\n\n\n2. Clear sentences\nHow do I write sentences readers understand on the first reading?\n\n\n3. Hedging and stance\nHow strongly should I claim my results?\n\n\n4. Common errors and false friends\nWhich mistakes do Spanish speakers make, and how do I avoid them?\n\n\n5. Peer review and correspondence\nHow do I write cover letters, reviews and responses to reviewers?\n\n\n6. Presenting and networking\nHow do I give talks, handle questions and talk to colleagues in English?\n\n\n\nEach chapter has objectives, a glossary, a required reading with a DOI, labs that run in your browser, activities with instant feedback, an assignment and a self-assessment. The Phrasebank collects useful expressions for every section of a paper. Your progress is saved only in your browser.\n\n\n\n\n\n\nTipA note on AI tools\n\n\n\nLanguage tools and AI assistants can help you edit, but they can also introduce errors, change your meaning or invent references. Use them as an editor, not as an author: check every change, keep your own voice, and follow the journal’s policy on disclosing their use.\n\n\n\n\n\n\nAmano, T., Ramírez-Castañeda, V., Berdejo-Espinola, V., Borokini, I., Chowdhury, S., Golivets, M., et al. (2023). The manifold costs of being a non-native English speaker in science. PLOS Biology, 21(7), e3002184. https://doi.org/10.1371/journal.pbio.3002184",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "01-structure.html",
+    "href": "01-structure.html",
+    "title": "Chapter 1. The architecture of a research article",
+    "section": "",
+    "text": "Required reading",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1. The architecture of a research article</span>"
+    ]
+  },
+  {
+    "objectID": "01-structure.html#required-reading",
+    "href": "01-structure.html#required-reading",
+    "title": "Chapter 1. The architecture of a research article",
+    "section": "",
+    "text": "Mensh, B.; Kording, K. (2017). Ten simple rules for structuring papers. PLOS Computational Biology, 13(9), e1005619.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1. The architecture of a research article</span>"
+    ]
+  },
+  {
+    "objectID": "01-structure.html#one-paper-one-message",
+    "href": "01-structure.html#one-paper-one-message",
+    "title": "Chapter 1. The architecture of a research article",
+    "section": "1. One paper, one message",
+    "text": "1. One paper, one message\nMensh & Kording (2017) start with the most important rule: focus your paper on a single central contribution, which you can state in the title. Everything else serves that message. If you cannot write it in one sentence, the paper is not ready to be written.\nThey also recommend writing for the naive human reader: someone intelligent but outside your sub-field, who reads quickly and remembers little. Short sentences, defined terms and a logical flow help experts too.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1. The architecture of a research article</span>"
+    ]
+  },
+  {
+    "objectID": "01-structure.html#imrad",
+    "href": "01-structure.html#imrad",
+    "title": "Chapter 1. The architecture of a research article",
+    "section": "2. IMRaD",
+    "text": "2. IMRaD\n\n\n\n\n\n\n\n\nSection\nQuestion it answers\nTypical verb tense\n\n\n\n\nIntroduction\nWhy does this matter, what is unknown, what did you do?\nPresent (known facts), past (previous studies), present (aim)\n\n\nMethods\nHow exactly did you do it?\nPast, often passive or “we”\n\n\nResults\nWhat did you find?\nPast\n\n\nDiscussion\nWhat does it mean, how does it fit, what are the limits?\nPresent for interpretation, past for your findings\n\n\n\nMensh and Kording suggest a context-content-conclusion scheme at every level: the paper, each section and each paragraph start by giving context, present the content and end with a conclusion. The first sentence of a paragraph should announce its message; the last should close it.\n\n\n\n\n\n\nFigure 1: The hourglass shape of a research article: broad context, a narrow question and methods, and a widening discussion.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1. The architecture of a research article</span>"
+    ]
+  },
+  {
+    "objectID": "01-structure.html#the-introduction-swaless-cars-model",
+    "href": "01-structure.html#the-introduction-swaless-cars-model",
+    "title": "Chapter 1. The architecture of a research article",
+    "section": "3. The introduction: Swales’s CARS model",
+    "text": "3. The introduction: Swales’s CARS model\nJohn Swales’s analysis of introductions, the CARS model (Create a Research Space), describes three rhetorical moves:\n\nEstablish a territory: show that the topic is important and summarise what is known.\nEstablish a niche: show a gap, a problem, a contradiction or an unanswered question.\nOccupy the niche: state your aim, what you did and (often) what you found.\n\nExample:\n\nDoctoral attrition rates exceed 30% in many countries (territory). However, most studies rely on cross-sectional surveys, and little is known about how supervision changes over time (niche). Here, we followed 1,200 doctoral students for five years to examine… (occupy).",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1. The architecture of a research article</span>"
+    ]
+  },
+  {
+    "objectID": "01-structure.html#the-abstract",
+    "href": "01-structure.html#the-abstract",
+    "title": "Chapter 1. The architecture of a research article",
+    "section": "4. The abstract",
+    "text": "4. The abstract\nMany journals ask for a structured abstract (Background, Methods, Results, Conclusions). Even when they do not, a good abstract follows the same moves in 150-250 words: context and gap, aim, methods, main results with numbers, and the main conclusion. Avoid references, undefined abbreviations and vague promises such as “results are discussed”.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1. The architecture of a research article</span>"
+    ]
+  },
+  {
+    "objectID": "01-structure.html#worked-example",
+    "href": "01-structure.html#worked-example",
+    "title": "Chapter 1. The architecture of a research article",
+    "section": "Worked example",
+    "text": "Worked example\n\n\n\n\n\n\nNoteFrom a vague abstract to a structured one\n\n\n\nBefore: “This paper studies doctoral supervision. Data were collected and analysed. Several interesting results were found, which are discussed in relation to the literature.”\nAfter: &gt; Background: About one in three doctoral students leave before completing. Aim: We examined whether supervision quality predicts completion better than funding. Methods: We followed 1,200 doctoral students at 14 Spanish universities for five years. Results: Students reporting high-quality supervision were half as likely to drop out (hazard ratio 0.51, 95% CI 0.40–0.65); funding had a smaller effect. Conclusions: Doctoral programmes should invest in supervisor training as well as funding.\nThe second version states the gap, the method, numbers and a conclusion a reader can act on.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1. The architecture of a research article</span>"
+    ]
+  },
+  {
+    "objectID": "01-structure.html#graded-exercises",
+    "href": "01-structure.html#graded-exercises",
+    "title": "Chapter 1. The architecture of a research article",
+    "section": "Graded exercises",
+    "text": "Graded exercises\nBasic. Which CARS move is missing from this introduction: “Open data is important. Here, we survey 500 researchers about their data-sharing practices.”?\n\nShow solution\nMove 2, establishing a niche: there is no gap or problem that justifies the survey (for example, “However, little is known about…”).\n\nAdvanced. Rewrite the abstract of one of your papers as a structured abstract of no more than 250 words, with numbers in the results.\n\nShow solution\nCheck that each part answers its question (why, what, how, what was found, so what) and that the results include effect sizes or key figures, not only directions.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1. The architecture of a research article</span>"
+    ]
+  },
+  {
+    "objectID": "01-structure.html#activities",
+    "href": "01-structure.html#activities",
+    "title": "Chapter 1. The architecture of a research article",
+    "section": "Activities",
+    "text": "Activities\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1. The architecture of a research article</span>"
+    ]
+  },
+  {
+    "objectID": "01-structure.html#reto-e1",
+    "href": "01-structure.html#reto-e1",
+    "title": "Chapter 1. The architecture of a research article",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nImportantChallenge for chapter 1 · Map and rewrite\n\n\n\n\nChoose a recent article in your field and label every sentence of its introduction with a CARS move.\nWrite the central contribution of your current research in one sentence and turn it into a title.\nWrite a 200-word structured abstract for your research, with numbers in the results.\n\nSubmission: use the assignment template. This challenge has no solution in the book.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1. The architecture of a research article</span>"
+    ]
+  },
+  {
+    "objectID": "01-structure.html#self-assessment",
+    "href": "01-structure.html#self-assessment",
+    "title": "Chapter 1. The architecture of a research article",
+    "section": "Self-assessment",
+    "text": "Self-assessment\nAnswer all the questions and press Show answers. It does not count towards your grade.\n\n\nAccording to Mensh & Kording (2017), a paper should focus on as many contributions as possiblea single central contributionthe methods\nIn the CARS model, showing a gap in the literature is “establishing a ”\nThe Methods section is usually written in the past tense. TRUEFALSE\nA good abstract should include the main results with numbers. TRUEFALSE\nThe scheme recommended for papers, sections and paragraphs is context-content-\n“Results are discussed” is an informative final sentence for an abstract. TRUEFALSE\nCARS stands for Create a Research \nWho is the “naive human reader”?\n\n A reviewer in your sub-field An intelligent reader outside your sub-field who reads quickly A student with no scientific training\n\n\nShow explanations\n\nOne message, stated in the title.\nMove 2.\nYou report what you did.\nConcrete findings.\nAt every level.\nIt says nothing.\nJohn Swales.\nWriting for them helps everyone.\n\n\n\n\n\n\nMensh, B., & Kording, K. (2017). Ten simple rules for structuring papers. PLOS Computational Biology, 13(9), e1005619. https://doi.org/10.1371/journal.pcbi.1005619",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1. The architecture of a research article</span>"
+    ]
+  },
+  {
+    "objectID": "02-clarity.html",
+    "href": "02-clarity.html",
+    "title": "Chapter 2. Clear sentences",
+    "section": "",
+    "text": "Required reading",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2. Clear sentences</span>"
+    ]
+  },
+  {
+    "objectID": "02-clarity.html#required-reading",
+    "href": "02-clarity.html#required-reading",
+    "title": "Chapter 2. Clear sentences",
+    "section": "",
+    "text": "Plavén-Sigray, P.; Matheson, G. J.; Schiffler, B. C.; Thompson, W. H. (2017). The readability of scientific texts is decreasing over time. eLife, 6, e27725.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2. Clear sentences</span>"
+    ]
+  },
+  {
+    "objectID": "02-clarity.html#scientific-texts-are-getting-harder-to-read",
+    "href": "02-clarity.html#scientific-texts-are-getting-harder-to-read",
+    "title": "Chapter 2. Clear sentences",
+    "section": "1. Scientific texts are getting harder to read",
+    "text": "1. Scientific texts are getting harder to read\nPlavén-Sigray et al. (2017) analysed more than 700,000 abstracts from biomedical and life-science journals published between 1881 and 2015. Readability, measured with standard formulas, decreased steadily, partly because of more general scientific jargon (“robust”, “underlying”, “novel”) and longer sentences. Hard-to-read texts reduce the reach and the reproducibility of research: a method that cannot be understood cannot be repeated.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2. Clear sentences</span>"
+    ]
+  },
+  {
+    "objectID": "02-clarity.html#readers-expectations",
+    "href": "02-clarity.html#readers-expectations",
+    "title": "Chapter 2. Clear sentences",
+    "section": "2. Readers’ expectations",
+    "text": "2. Readers’ expectations\nGopen and Swan’s classic advice on scientific writing can be summarised in a few principles:\n\nSubject and verb close together and early. Readers wait for the verb; a long subject delays understanding.\nTopic position (the beginning of a sentence) holds old information that links to what came before.\nStress position (the end of the sentence) holds the new, important information.\nOne main idea per sentence. Long sentences are not wrong; long sentences that hide the action are.\n\n\nHard: The determination of the extent to which open data mandates were associated with increases in data reuse across disciplines was the aim of this study.\nClear: We examined whether open data mandates increased data reuse across disciplines.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2. Clear sentences</span>"
+    ]
+  },
+  {
+    "objectID": "02-clarity.html#three-habits-that-cloud-sentences",
+    "href": "02-clarity.html#three-habits-that-cloud-sentences",
+    "title": "Chapter 2. Clear sentences",
+    "section": "3. Three habits that cloud sentences",
+    "text": "3. Three habits that cloud sentences\n\n\n\n\n\n\n\n\nHabit\nExample\nBetter\n\n\n\n\nNominalisation (verbs turned into nouns: -tion, -ment, -ance)\nWe performed an analysis of the data.\nWe analysed the data.\n\n\nUnnecessary passive\nIt was found by the authors that…\nWe found that…\n\n\nWordy phrases\ndue to the fact that; in order to; a large number of\nbecause; to; many\n\n\n\nThe passive is not forbidden: it is useful when the agent is unknown or irrelevant (Samples were stored at −80 °C). Many journals now encourage we for the authors’ actions.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2. Clear sentences</span>"
+    ]
+  },
+  {
+    "objectID": "02-clarity.html#lab-e2-readability",
+    "href": "02-clarity.html#lab-e2-readability",
+    "title": "Chapter 2. Clear sentences",
+    "section": "Lab: readability checker",
+    "text": "Lab: readability checker\n\n\nLab · runs in your browser; your text does not leave it\n\nPaste a paragraph. The lab estimates the Flesch Reading Ease score (higher = easier; most scientific abstracts score below 30), the average sentence length, and highlights nominalisations, passive constructions and wordy phrases.\n\narea = window.Lab.area\nviewof parrafo = area(\"Your text\", {rows: 7, submit: \"Analyse\", value: \"In order to perform an evaluation of the effectiveness of the intervention, an analysis of the data was conducted by the research team. It was found that there was a significant reduction in attrition due to the fact that supervision meetings were held more frequently. The implementation of the programme is recommended.\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const t = parrafo || \"\";\n  const frases = t.replace(/\\s+/g, \" \").split(/(?&lt;=[.!?])\\s+/).filter(f =&gt; f.trim());\n  const palabras = t.toLowerCase().match(/[a-z']+/g) || [];\n  const sil = w =&gt; { w = w.replace(/e$/, \"\"); const m = w.match(/[aeiouy]+/g); return Math.max(1, m ? m.length : 1); };\n  const nP = palabras.length || 1, nF = Math.max(1, frases.length), nS = palabras.reduce((s, w) =&gt; s + sil(w), 0);\n  const fre = 206.835 - 1.015 * (nP / nF) - 84.6 * (nS / nP);\n  const esc = s =&gt; s.replace(/&/g, \"&amp;\").replace(/&lt;/g, \"&lt;\");\n  const prolijas = {\"in order to\": \"to\", \"due to the fact that\": \"because\", \"a large number of\": \"many\", \"in spite of the fact that\": \"although\", \"at this point in time\": \"now\", \"it is important to note that\": \"(delete)\", \"with regard to\": \"about\", \"a majority of\": \"most\", \"conduct an analysis of\": \"analyse\", \"perform an evaluation of\": \"evaluate\"};\n  let marcado = esc(t);\n  marcado = marcado.replace(/\\b(\\w+(?:tion|ment|ance|ence|sis))\\b/gi, '&lt;mark title=\"nominalisation\"&gt;$1&lt;/mark&gt;');\n  marcado = marcado.replace(/\\b(was|were|is|are|been|be|being)\\s+(\\w+ed|found|held|made|done|shown|seen|given|taken)\\b/gi, '&lt;u title=\"passive\"&gt;$1 $2&lt;/u&gt;');\n  const vistas = Object.keys(prolijas).filter(k =&gt; t.toLowerCase().includes(k));\n  const nivel = fre &gt;= 60 ? \"plain English\" : fre &gt;= 30 ? \"fairly difficult\" : \"very difficult (typical of scientific prose)\";\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;ul&gt;&lt;li&gt;Flesch Reading Ease: &lt;strong&gt;${fre.toFixed(0)}&lt;/strong&gt; · ${nivel}&lt;/li&gt;&lt;li&gt;${nF} sentences · &lt;strong&gt;${(nP / nF).toFixed(1)}&lt;/strong&gt; words per sentence&lt;/li&gt;&lt;/ul&gt;\n   &lt;p style=\"line-height:1.9\"&gt;${marcado}&lt;/p&gt;\n   &lt;p class=\"small\"&gt;&lt;mark&gt;highlighted&lt;/mark&gt; = possible nominalisation · &lt;u&gt;underlined&lt;/u&gt; = possible passive&lt;/p&gt;\n   ${vistas.length ? `&lt;p class=\"lab-medio\" style=\"font-weight:600\"&gt;Wordy phrases: ${vistas.map(k =&gt; `«${k}» → «${prolijas[k]}»`).join(\"; \")}&lt;/p&gt;` : '&lt;p class=\"lab-bien\" style=\"font-weight:600\"&gt;No common wordy phrases found.&lt;/p&gt;'}\n   &lt;p class=\"small\"&gt;These are heuristics: not every -tion word or passive is a problem. Use them to look again, not as rules.&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2. Clear sentences</span>"
+    ]
+  },
+  {
+    "objectID": "02-clarity.html#worked-example",
+    "href": "02-clarity.html#worked-example",
+    "title": "Chapter 2. Clear sentences",
+    "section": "Worked example",
+    "text": "Worked example\n\n\n\n\n\n\nNoteEditing a paragraph step by step\n\n\n\nOriginal (52 words): “The implementation of an evaluation of the effectiveness of the mentoring programme was carried out by the research team, and it was found that there was a significant reduction in the level of anxiety of the participants due to the fact that they had access to regular meetings.”\n\nFind the real action: evaluate. Make it a verb with a subject: We evaluated…\nReplace wordy phrases: due to the fact that → because.\nTurn nominalisations into verbs: a reduction in the level of anxiety → anxiety fell.\nPut new information at the end: …because they met their mentors regularly.\n\nEdited (20 words): “We evaluated the mentoring programme and found that participants’ anxiety fell significantly, probably because they met their mentors regularly.”",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2. Clear sentences</span>"
+    ]
+  },
+  {
+    "objectID": "02-clarity.html#graded-exercises",
+    "href": "02-clarity.html#graded-exercises",
+    "title": "Chapter 2. Clear sentences",
+    "section": "Graded exercises",
+    "text": "Graded exercises\nBasic. Rewrite: “An increase in the number of citations was observed.”\n\nShow solution\n“Citations increased.” or, with an agent, “We observed that citations increased.”\n\nAdvanced. Edit a paragraph of your own writing with the four steps of the case and compare the readability scores before and after in the lab.\n\nShow solution\nReport the word count and the score before and after, and explain each change. Check that no technical precision was lost.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2. Clear sentences</span>"
+    ]
+  },
+  {
+    "objectID": "02-clarity.html#activities",
+    "href": "02-clarity.html#activities",
+    "title": "Chapter 2. Clear sentences",
+    "section": "Activities",
+    "text": "Activities\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2. Clear sentences</span>"
+    ]
+  },
+  {
+    "objectID": "02-clarity.html#reto-e2",
+    "href": "02-clarity.html#reto-e2",
+    "title": "Chapter 2. Clear sentences",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nImportantChallenge for chapter 2 · Make it readable\n\n\n\n\nTake the abstract of your latest paper or draft and analyse it with the lab.\nRewrite it, reducing nominalisations, unnecessary passives and wordy phrases, without changing the meaning or losing precision.\nReport the readability before and after and explain three changes.\n\nSubmission: use the assignment template. This challenge has no solution in the book.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2. Clear sentences</span>"
+    ]
+  },
+  {
+    "objectID": "02-clarity.html#self-assessment",
+    "href": "02-clarity.html#self-assessment",
+    "title": "Chapter 2. Clear sentences",
+    "section": "Self-assessment",
+    "text": "Self-assessment\nAnswer all the questions and press Show answers. It does not count towards your grade.\n\n\nPlavén-Sigray et al. (2017) found that the readability of scientific abstracts has increaseddecreasednot changed over time\nNew, important information should go in the  position at the end of the sentence\n“We performed an analysis of the data” contains a nominalisation. TRUEFALSE\nThe passive voice should never be used in scientific writing. TRUEFALSE\n“Due to the fact that” can usually be replaced by \nA higher Flesch Reading Ease score means harder texteasier textlonger text\nSubject and verb should be close together and early in the sentence. TRUEFALSE\nWhy does readability matter for research?\n\n It only matters for popular science Hard-to-read texts reach fewer readers and are harder to reproduce Journals reject all difficult texts\n\n\nShow explanations\n\nLonger sentences and more general jargon.\nThe topic position holds old information.\n“We analysed the data.”\nUseful when the agent is unknown or irrelevant.\nAnd “in order to” by “to”.\nAbove 60 is plain English.\nReaders wait for the verb.\nClarity serves reproducibility.\n\n\n\n\n\n\nPlavén-Sigray, P., Matheson, G. J., Schiffler, B. C., & Thompson, W. H. (2017). The readability of scientific texts is decreasing over time. eLife, 6, e27725. https://doi.org/10.7554/eLife.27725",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2. Clear sentences</span>"
+    ]
+  },
+  {
+    "objectID": "03-stance.html",
+    "href": "03-stance.html",
+    "title": "Chapter 3. Hedging and stance",
+    "section": "",
+    "text": "Required reading",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
+    ]
+  },
+  {
+    "objectID": "03-stance.html#required-reading",
+    "href": "03-stance.html#required-reading",
+    "title": "Chapter 3. Hedging and stance",
+    "section": "",
+    "text": "Hyland, K. (1996). Writing without conviction? Hedging in science research articles. Applied Linguistics, 17(4), 433-454.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
+    ]
+  },
+  {
+    "objectID": "03-stance.html#why-researchers-hedge",
+    "href": "03-stance.html#why-researchers-hedge",
+    "title": "Chapter 3. Hedging and stance",
+    "section": "1. Why researchers hedge",
+    "text": "1. Why researchers hedge\nHyland (1996) analysed hedging in research articles in cell and molecular biology and showed that it is not a sign of weakness but a central feature of scientific argument. Hedges (may, might, suggest, possibly, appear to, likely) do two jobs: they state claims accurately, matching them to the evidence, and they show respect for the reader and the community, leaving room for disagreement. Boosters (clearly, demonstrate, undoubtedly, it is well known that) do the opposite: they express certainty.\nGood scientific writing calibrates: strong evidence, strong verbs; weak or indirect evidence, cautious verbs.\n\n\n\n\n\n\n\n\nStrength\nVerbs and expressions\nUse when\n\n\n\n\nStrong\nshow, demonstrate, establish, confirm\nRobust, replicated evidence, ideally causal\n\n\nModerate\nindicate, suggest, support\nGood evidence with limits (observational, single study)\n\n\nTentative\nmay, might, could, possibly, it is possible that\nSpeculation, interpretation, future directions",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
+    ]
+  },
+  {
+    "objectID": "03-stance.html#overclaiming-and-spin",
+    "href": "03-stance.html#overclaiming-and-spin",
+    "title": "Chapter 3. Hedging and stance",
+    "section": "2. Overclaiming and spin",
+    "text": "2. Overclaiming and spin\nOverclaiming (saying more than the data allow) is common in abstracts and press releases: causal language for correlational data (“X causes Y” instead of “X is associated with Y”), generalising from a sample to a population, or calling a non-significant result “a trend towards significance”. Reviewers and readers notice, and it damages credibility.\nBut excessive hedging is also a problem, especially for non-native writers who learn that caution is safe: “It might possibly be suggested that the results could perhaps indicate…” says nothing. One hedge per claim is usually enough.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
+    ]
+  },
+  {
+    "objectID": "03-stance.html#reporting-other-peoples-work",
+    "href": "03-stance.html#reporting-other-peoples-work",
+    "title": "Chapter 3. Hedging and stance",
+    "section": "3. Reporting other people’s work",
+    "text": "3. Reporting other people’s work\nReporting verbs carry your stance towards a source:\n\nNeutral: Smith (2020) reports / describes / finds that…\nPositive: Smith (2020) shows / demonstrates / establishes that… (you accept the claim)\nCritical or distant: Smith (2020) claims / asserts / argues that… (you leave room for doubt)",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
+    ]
+  },
+  {
+    "objectID": "03-stance.html#lab-e3-hedges",
+    "href": "03-stance.html#lab-e3-hedges",
+    "title": "Chapter 3. Hedging and stance",
+    "section": "Lab: hedges and boosters",
+    "text": "Lab: hedges and boosters\n\n\nLab · runs in your browser; your text does not leave it\n\n\narea = window.Lab.area\nviewof texto_h = area(\"Your text\", {rows: 6, submit: \"Analyse\", value: \"Our results clearly demonstrate that mentoring causes higher completion rates. This finding is undoubtedly important for doctoral programmes. However, the effect may differ across disciplines, and it is possible that more motivated students sought mentors.\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const hedges = [\"may\", \"might\", \"could\", \"possibly\", \"perhaps\", \"likely\", \"unlikely\", \"suggest\", \"suggests\", \"indicate\", \"indicates\", \"appear\", \"appears\", \"seem\", \"seems\", \"probably\", \"it is possible\", \"tend to\", \"to some extent\", \"approximately\", \"relatively\"];\n  const boosters = [\"clearly\", \"demonstrate\", \"demonstrates\", \"undoubtedly\", \"certainly\", \"prove\", \"proves\", \"obviously\", \"definitely\", \"always\", \"never\", \"it is well known\", \"establish\", \"establishes\", \"show that\", \"shows that\", \"causes\", \"cause\"];\n  const esc = s =&gt; s.replace(/&/g, \"&amp;\").replace(/&lt;/g, \"&lt;\");\n  let m = esc(texto_h || \"\"); let nh = 0, nb = 0;\n  const marca = (lista, estilo, cuenta) =&gt; { for (const w of lista.sort((a, b) =&gt; b.length - a.length)) { const re = new RegExp(`\\\\b(${w.replace(/ /g, \"\\\\s+\")})\\\\b`, \"gi\"); m = m.replace(re, x =&gt; { cuenta(); return `&lt;span style=\"${estilo}\"&gt;${x}&lt;/span&gt;`; }); } };\n  marca(hedges, \"background:#d6e6f8;color:#0b0b0b;padding:0 2px;border-radius:3px\", () =&gt; nh++);\n  marca(boosters, \"background:#f6dccf;color:#0b0b0b;padding:0 2px;border-radius:3px;font-weight:600\", () =&gt; nb++);\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p style=\"line-height:1.9\"&gt;${m}&lt;/p&gt;&lt;p class=\"small\"&gt;&lt;span style=\"background:#d6e6f8;color:#0b0b0b;padding:0 2px\"&gt;blue&lt;/span&gt; = hedge (${nh}) · &lt;span style=\"background:#f6dccf;color:#0b0b0b;padding:0 2px;font-weight:600\"&gt;orange&lt;/span&gt; = booster (${nb})&lt;/p&gt;\n   &lt;p class=\"${nb &gt; nh ? \"lab-medio\" : \"lab-bien\"}\" style=\"font-weight:600\"&gt;${nb &gt; nh ? \"More boosters than hedges: check that the evidence (design, sample, replication) supports such strong claims, especially any causal verbs.\" : \"The text is cautious. Check that it is not over-hedged: one hedge per claim is usually enough.\"}&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
+    ]
+  },
+  {
+    "objectID": "03-stance.html#worked-example",
+    "href": "03-stance.html#worked-example",
+    "title": "Chapter 3. Hedging and stance",
+    "section": "Worked example",
+    "text": "Worked example\n\n\n\n\n\n\nNoteCalibrating a discussion paragraph\n\n\n\nOriginal: “Our results prove that mentoring causes better completion rates and clearly demonstrate that all universities must implement mentoring programmes.”\nEvidence: one observational cohort study in one country.\nCalibrated: “Our results suggest that mentoring is associated with higher completion rates. Because the study was observational, we cannot rule out that more motivated students sought mentors. If confirmed in experimental studies, these findings would support investing in mentoring programmes.”\nChanges: prove → suggest; causes → is associated with; the alternative explanation is stated; the recommendation becomes conditional.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
+    ]
+  },
+  {
+    "objectID": "03-stance.html#graded-exercises",
+    "href": "03-stance.html#graded-exercises",
+    "title": "Chapter 3. Hedging and stance",
+    "section": "Graded exercises",
+    "text": "Graded exercises\nBasic. Replace the booster in: “This method undoubtedly outperforms all previous approaches.”\n\nShow solution\nFor example: “In our tests, this method outperformed the three approaches we compared it with.” It states the evidence instead of asserting certainty.\n\nAdvanced. Take the conclusions of a paper in your field and rewrite them so that each claim matches the strength of its evidence.\n\nShow solution\nIdentify the design of each piece of evidence (experimental, observational, replicated) and choose verbs accordingly; add limitations where the evidence is indirect.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
+    ]
+  },
+  {
+    "objectID": "03-stance.html#activities",
+    "href": "03-stance.html#activities",
+    "title": "Chapter 3. Hedging and stance",
+    "section": "Activities",
+    "text": "Activities\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
+    ]
+  },
+  {
+    "objectID": "03-stance.html#reto-e3",
+    "href": "03-stance.html#reto-e3",
+    "title": "Chapter 3. Hedging and stance",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nImportantChallenge for chapter 3 · Calibrate your claims\n\n\n\n\nAnalyse the discussion section of one of your papers or drafts with the lab.\nFor each main claim, describe the evidence that supports it (design, sample, replication) and decide whether the verb is too strong, too weak or right.\nRewrite the paragraph with calibrated claims and explain your changes.\n\nSubmission: use the assignment template. This challenge has no solution in the book.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
+    ]
+  },
+  {
+    "objectID": "03-stance.html#self-assessment",
+    "href": "03-stance.html#self-assessment",
+    "title": "Chapter 3. Hedging and stance",
+    "section": "Self-assessment",
+    "text": "Self-assessment\nAnswer all the questions and press Show answers. It does not count towards your grade.\n\n\nHyland (1996) argues that hedging is a sign of weak writing. TRUEFALSE\nWords that express certainty, such as “clearly”, are called \nFor a correlational study, the best verb is causesis associated withproves\n“Smith (2020) claims that…” expresses a positivedistant or criticalneutral stance\nExcessive hedging can make a text say nothing. TRUEFALSE\n“Demonstrate” is appropriate for robust, replicated evidence. TRUEFALSE\nCalling a non-significant result “a trend towards significance” is an example of \nWhat is the main function of hedges according to Hyland?\n\n To hide weak results To state claims accurately and show respect for readers and the community To make texts longer\n\n\nShow explanations\n\nIt is central to scientific argument.\nThey express certainty.\nCausal language needs causal designs.\nYou leave room for doubt.\nOne hedge per claim is usually enough.\nStrong evidence, strong verbs.\nPresenting results more favourably than they are.\nAccuracy and politeness.\n\n\n\n\n\n\nHyland, K. (1996). Writing without conviction? Hedging in science research articles. Applied Linguistics, 17(4), 433–454. https://doi.org/10.1093/applin/17.4.433",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3. Hedging and stance</span>"
+    ]
+  },
+  {
+    "objectID": "04-errors.html",
+    "href": "04-errors.html",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "",
+    "text": "Required reading",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
+    "objectID": "04-errors.html#required-reading",
+    "href": "04-errors.html#required-reading",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "",
+    "text": "Coxhead, A. (2000). A new academic word list. TESOL Quarterly, 34(2), 213-238.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
+    "objectID": "04-errors.html#false-friends",
+    "href": "04-errors.html#false-friends",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "1. False friends",
+    "text": "1. False friends\nFalse friends look like Spanish words but mean something different. Some appear constantly in research writing:\n\n\n\n\n\n\n\n\nEnglish word\nActually means\nFor the Spanish meaning, use\n\n\n\n\nactual\nreal\ncurrent (actual)\n\n\nactually\nin fact\ncurrently (actualmente)\n\n\neventually\nin the end, finally\npossibly, occasionally (eventualmente)\n\n\nsensible\nreasonable\nsensitive (sensible)\n\n\nassist\nhelp\nattend (asistir a)\n\n\npretend\nact as if\nintend, aim (pretender)\n\n\ncontrast (verb)\ncompare to show differences\ntest, check (contrastar hipótesis)\n\n\nrealise\nbecome aware\ncarry out, conduct (realizar)\n\n\nargument\nline of reasoning\nplot (argumento de una película)\n\n\nformation\nhow something forms\ntraining (formación)\n\n\nthesis\ndoctoral dissertation (or an argued claim)\nalso dissertation; for a master’s, often thesis or dissertation",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
+    "objectID": "04-errors.html#uncountable-nouns",
+    "href": "04-errors.html#uncountable-nouns",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "2. Uncountable nouns",
+    "text": "2. Uncountable nouns\nThese nouns have no plural and do not take a/an: research, evidence, information, equipment, software, feedback, advice, knowledge, progress, work (in the sense of effort). Data is plural in traditional usage (these data are) but often singular today (this data is); be consistent and follow the journal.\n\n✗ several researches → ✓ several studies / much research\n✗ an evidence → ✓ a piece of evidence / some evidence\n✗ softwares → ✓ software packages / tools",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
+    "objectID": "04-errors.html#other-frequent-errors",
+    "href": "04-errors.html#other-frequent-errors",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "3. Other frequent errors",
+    "text": "3. Other frequent errors\n\n\n\nError\nExample\nCorrect\n\n\n\n\nArticles with general plurals\nThe students often drop out. (meaning students in general)\nStudents often drop out.\n\n\nMissing subject\nIs important to note…\nIt is important to note…\n\n\n“Make” calques\nmake a research, make a question\ndo/conduct research, ask a question\n\n\nAdjective order and plurals\ndifferents methods\ndifferent methods\n\n\nPrepositions\ndepend of, consist in, interested on\ndepend on, consist of, interested in\n\n\nComma before that\nWe found, that…\nWe found that…\n\n\nNumbers\n1.200 participants, 3,5 %\n1,200 participants, 3.5%",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
+    "objectID": "04-errors.html#academic-vocabulary",
+    "href": "04-errors.html#academic-vocabulary",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "4. Academic vocabulary",
+    "text": "4. Academic vocabulary\n1 compiled the Academic Word List (AWL): 570 word families that are frequent across academic disciplines but not in general English (analyse, approach, assess, concept, data, establish, factor, interpret, method, significant…). Together they made up around 10% of the words in her corpus of academic texts. Learning them, with their typical collocations (conduct a study, draw a conclusion, raise a question, address a gap), pays off more than learning rare technical terms.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
+    "objectID": "04-errors.html#lab-e4-spanglish",
+    "href": "04-errors.html#lab-e4-spanglish",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "Lab: Spanglish detector",
+    "text": "Lab: Spanglish detector\n\n\nLab · runs in your browser; your text does not leave it\n\n\narea = window.Lab.area\nviewof borrador = area(\"Your text\", {rows: 6, submit: \"Check\", value: \"Actually, several researches have been realised to contrast this hypothesis. The informations were analysed with differents softwares. Is important to note that the results depend of the sample, which consisted in 1.200 students.\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const reglas = [\n    [/\\bresearches\\b/gi, \"«research» is uncountable: use «studies» or «research»\"], [/\\binformations\\b/gi, \"«information» is uncountable\"], [/\\bevidences\\b/gi, \"«evidence» is uncountable\"],\n    [/\\bsoftwares\\b/gi, \"«software» is uncountable: «software tools»\"], [/\\bequipments\\b/gi, \"«equipment» is uncountable\"], [/\\badvices\\b/gi, \"«advice» is uncountable\"], [/\\bfeedbacks\\b/gi, \"«feedback» is uncountable\"],\n    [/\\bactually\\b/gi, \"False friend? «actually» = in fact; «actualmente» = currently\"], [/\\bactual\\b/gi, \"False friend? «actual» = real; «actual» (es) = current\"], [/\\beventually\\b/gi, \"False friend? «eventually» = in the end\"],\n    [/\\brealis(?:e|ed|ing)\\b|\\brealiz(?:e|ed|ing)\\b/gi, \"False friend? «realise» = become aware; use «conduct/carry out»\"], [/\\bcontrast(?:ed)?\\b(?=\\s+(?:this|the|our|a)\\s+hypothes)/gi, \"Use «test the hypothesis»\"],\n    [/\\bmak(?:e|ing|e a|ed)\\s+(?:a\\s+)?research\\b/gi, \"Use «do/conduct research»\"], [/\\bdifferents\\b/gi, \"Adjectives have no plural: «different»\"], [/(?:^|[.!?]\\s+)Is\\s/g, \"Missing subject: «It is…»\"],\n    [/\\bdepend(?:s|ed|ing)? of\\b/gi, \"«depend on»\"], [/\\bconsist(?:s|ed|ing)? in\\b/gi, \"«consist of»\"], [/\\binterested on\\b/gi, \"«interested in»\"],\n    [/\\b\\d{1,3}\\.\\d{3}\\b/g, \"Thousands separator in English is a comma: 1,200\"], [/\\b\\d+,\\d+\\s?%/g, \"Decimal point in English: 3.5%\"], [/\\bassist(?:ed)? to\\b/gi, \"«attend»\"]];\n  const esc = s =&gt; s.replace(/&/g, \"&amp;\").replace(/&lt;/g, \"&lt;\");\n  const avisos = []; let m = esc(borrador || \"\");\n  for (const [re, msg] of reglas) { const enc = (borrador || \"\").match(re); if (enc) { avisos.push([enc[0].trim(), msg]); m = m.replace(re, x =&gt; `&lt;mark title=\"${msg}\"&gt;${x}&lt;/mark&gt;`); } }\n  const d = html`&lt;div role=\"status\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;p style=\"line-height:1.9\"&gt;${m}&lt;/p&gt;${avisos.length ? `&lt;ul&gt;${avisos.map(([w, msg]) =&gt; `&lt;li&gt;&lt;strong&gt;${esc(w)}&lt;/strong&gt;: ${msg}&lt;/li&gt;`).join(\"\")}&lt;/ul&gt;` : '&lt;p class=\"lab-bien\" style=\"font-weight:600\"&gt;No common errors detected. (The lab checks only a list of frequent errors.)&lt;/p&gt;'}`;\n  return d;\n}",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
+    "objectID": "04-errors.html#worked-example",
+    "href": "04-errors.html#worked-example",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "Worked example",
+    "text": "Worked example\n\n\n\n\n\n\nNoteCorrecting a paragraph by a Spanish speaker\n\n\n\nOriginal: “Actually, the researches about this topic are scarce. In this work we have realised an study with 1.250 students, which consisted in a survey. The informations obtained depend of the faculty.”\nCorrected: “Research on this topic is currently scarce. In this study, we conducted a survey of 1,250 students. The information obtained depends on the faculty.”\nErrors fixed: actually (false friend) → currently; researches (uncountable) → research; realised (false friend) → conducted; an study → a study; 1.250 → 1,250; consisted in → (restructured); informations → information; depend of → depends on.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
+    "objectID": "04-errors.html#graded-exercises",
+    "href": "04-errors.html#graded-exercises",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "Graded exercises",
+    "text": "Graded exercises\nBasic. Correct: “The equipments were sensible to the temperature.”\n\nShow solution\n“The equipment was sensitive to temperature.” (equipment is uncountable; sensible → sensitive).\n\nAdvanced. Build your personal list of ten frequent errors from your own texts, with the correction and an example sentence for each.\n\nShow solution\nClassify them (false friends, uncountables, prepositions, articles, punctuation) and review the list before submitting any text in English.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
+    "objectID": "04-errors.html#activities",
+    "href": "04-errors.html#activities",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "Activities",
+    "text": "Activities\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
+    "objectID": "04-errors.html#reto-e4",
+    "href": "04-errors.html#reto-e4",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nImportantChallenge for chapter 4 · Your personal error list\n\n\n\n\nAnalyse two pages of your own English writing with the lab and by hand.\nBuild a personal list of your ten most frequent errors, with the correct form and an example.\nChoose 20 AWL words you do not yet use actively and write one sentence about your research with each, using typical collocations.\n\nSubmission: use the assignment template. This challenge has no solution in the book.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
+    "objectID": "04-errors.html#self-assessment",
+    "href": "04-errors.html#self-assessment",
+    "title": "Chapter 4. Common errors and false friends",
+    "section": "Self-assessment",
+    "text": "Self-assessment\nAnswer all the questions and press Show answers. It does not count towards your grade.\n\n\n“Actually” in English means currentlyin facteventually\n“Research” is an uncountable noun. TRUEFALSE\nThe correct preposition is “depend ”\nIn English, 1,200 means one thousand two hundred. TRUEFALSE\nThe Spanish “realizar un estudio” is best translated as realise a studyconduct a studymake a study\nThe Academic Word List was compiled by \n“Differents methods” is grammatically correct. TRUEFALSE\nWhy learn the Academic Word List?\n\n It contains rare technical terms Its words are frequent across academic disciplines and cover a significant share of academic texts Journals require it\n\n\nShow explanations\n\n“Currently” is “actualmente”.\n“Several studies” or “much research”.\nAnd “consist of”.\nDecimal point, thousands comma.\nOr “carry out”.\n\n\n\nEnglish adjectives have no plural.\n570 word families, about 10% of her corpus.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4. Common errors and false friends</span>"
+    ]
+  },
+  {
+    "objectID": "05-review.html",
+    "href": "05-review.html",
+    "title": "Chapter 5. Peer review and correspondence",
+    "section": "",
+    "text": "Required reading",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
+    ]
+  },
+  {
+    "objectID": "05-review.html#required-reading",
+    "href": "05-review.html#required-reading",
+    "title": "Chapter 5. Peer review and correspondence",
+    "section": "",
+    "text": "Noble, W. S. (2017). Ten simple rules for writing a response to reviewers. PLOS Computational Biology, 13(10), e1005730.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
+    ]
+  },
+  {
+    "objectID": "05-review.html#cover-letters",
+    "href": "05-review.html#cover-letters",
+    "title": "Chapter 5. Peer review and correspondence",
+    "section": "1. Cover letters",
+    "text": "1. Cover letters\nA cover letter to an editor is short (one page) and answers three questions: what you are submitting, why it matters to this journal’s readers, and formal statements (originality, no simultaneous submission, conflicts of interest, data availability). Do not repeat the abstract.\n\nDear Dr Smith,\nPlease find attached our manuscript “Supervision quality predicts doctoral completion: a five-year cohort study”, which we submit for consideration as a Research Article in Higher Education.\nMost studies of doctoral attrition are cross-sectional. Following 1,200 students for five years, we show that changes in supervision quality predict completion better than funding. These findings will interest readers working on doctoral education policy.\nThe manuscript has not been published or submitted elsewhere. All authors approved it and declare no conflicts of interest. Data and code are available at [DOI].\nYours sincerely,",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
+    ]
+  },
+  {
+    "objectID": "05-review.html#writing-a-review",
+    "href": "05-review.html#writing-a-review",
+    "title": "Chapter 5. Peer review and correspondence",
+    "section": "2. Writing a review",
+    "text": "2. Writing a review\nA useful review has a clear structure: a summary of the paper’s claims (to show you understood them), the main concerns (validity, methods, interpretation), minor points, and, if the journal asks, a recommendation. Be specific (“the model does not control for cohort; please add it or explain why not”) and kind: criticise the work, not the authors. Avoid asking for a different paper.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
+    ]
+  },
+  {
+    "objectID": "05-review.html#responding-to-reviewers",
+    "href": "05-review.html#responding-to-reviewers",
+    "title": "Chapter 5. Peer review and correspondence",
+    "section": "3. Responding to reviewers",
+    "text": "3. Responding to reviewers\nNoble (2017) offers rules that turn a stressful task into a manageable one. The most important:\n\nProvide an overview, then respond to every point, quoting each comment in full.\nBe polite and respectful to all reviewers, even when they are wrong.\nAccept the blame when the reviewer misunderstood: it usually means the text was unclear, so clarify it.\nMake the response self-contained: the editor should not need to search the manuscript; quote the changed text.\nRespond to the reviewer’s intent, not only the literal request.\nBe clear about what changed, with page and line numbers.\nWhen you disagree, give evidence and reasons, and consider doing the requested analysis anyway (perhaps in the supplement).\n\n\n\n\n\n\n\n\nInstead of\nWrite\n\n\n\n\nThe reviewer is wrong.\nWe respectfully disagree, because…\n\n\nThis was already explained.\nWe have clarified this point in the Methods (p. 6, lines 120-128).\n\n\nWe do not have time to do this.\nThis analysis is beyond the scope of this study, but we now mention it as a limitation (p. 15).",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
+    ]
+  },
+  {
+    "objectID": "05-review.html#academic-emails",
+    "href": "05-review.html#academic-emails",
+    "title": "Chapter 5. Peer review and correspondence",
+    "section": "4. Academic emails",
+    "text": "4. Academic emails\nShort, with a clear subject line and the request in the first two sentences. Formal openings (Dear Professor García,), a polite request (Would you be able to…? I would be grateful if…) and a closing (Best regards, / Kind regards,). Avoid Spanish calques such as I write you to… (→ I am writing to…) and Waiting for your answer (→ I look forward to hearing from you).",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
+    ]
+  },
+  {
+    "objectID": "05-review.html#worked-example",
+    "href": "05-review.html#worked-example",
+    "title": "Chapter 5. Peer review and correspondence",
+    "section": "Worked example",
+    "text": "Worked example\n\n\n\n\n\n\nNoteAnswering three reviewer comments\n\n\n\nComment 1: “The sample is not representative.” → We agree that the sample is not representative of all doctoral students. We now describe its composition in detail (p. 6) and have restricted our conclusions to public universities (p. 18).\nComment 2: “Please add a reference to Smith (2019).” → We thank the reviewer. We have added this reference and discuss how our results compare (p. 15, lines 320-326).\nComment 3: “The authors should use a multilevel model.” → We agree that the data are nested. We have re-run the analysis with a multilevel model (students within universities). The results are very similar (Table S3), and we report them in the supplement.\nEach response: thanks or acknowledgement, what was done, where.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
+    ]
+  },
+  {
+    "objectID": "05-review.html#graded-exercises",
+    "href": "05-review.html#graded-exercises",
+    "title": "Chapter 5. Peer review and correspondence",
+    "section": "Graded exercises",
+    "text": "Graded exercises\nBasic. Rewrite politely: “We do not agree with this comment because it is wrong.”\n\nShow solution\n“We respectfully disagree with this point, because (give your evidence). We have nevertheless clarified the text to avoid this interpretation (p. 9).”\n\nAdvanced. Write a complete response letter to the reviews of one of your papers (or to an invented set of five comments).\n\nShow solution\nFollow Noble (2017): overview, every comment quoted, polite responses, changes with page and line numbers, and reasoned disagreement where appropriate.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
+    ]
+  },
+  {
+    "objectID": "05-review.html#activities",
+    "href": "05-review.html#activities",
+    "title": "Chapter 5. Peer review and correspondence",
+    "section": "Activities",
+    "text": "Activities\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
+    ]
+  },
+  {
+    "objectID": "05-review.html#reto-e5",
+    "href": "05-review.html#reto-e5",
+    "title": "Chapter 5. Peer review and correspondence",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nImportantChallenge for chapter 5 · The full cycle\n\n\n\n\nWrite a cover letter for one of your manuscripts (or a fictitious one).\nWrite a one-page peer review of a published preprint in your field.\nUsing a real or invented set of three reviewer comments, write a complete response letter following Noble (2017).\n\nSubmission: use the assignment template. This challenge has no solution in the book.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
+    ]
+  },
+  {
+    "objectID": "05-review.html#self-assessment",
+    "href": "05-review.html#self-assessment",
+    "title": "Chapter 5. Peer review and correspondence",
+    "section": "Self-assessment",
+    "text": "Self-assessment\nAnswer all the questions and press Show answers. It does not count towards your grade.\n\n\nA cover letter should repeat the abstract. TRUEFALSE\nAccording to Noble (2017), you should respond to only the main commentsevery commentonly the comments you agree with\nWhen a reviewer misunderstands, it often means the text was \n“I write you to ask…” is correct English. TRUEFALSE\nA good review criticises the work, not the \nA self-contained response quotes the changed text with page and line numbers. TRUEFALSE\n“I look forward to hearing from you” replaces the calque Waiting for your answerBest regardsDear Sir\nWhat should you do when you disagree with a reviewer?\n\n Ignore the comment Explain respectfully with evidence and reasons Complain to the editor\n\n\nShow explanations\n\nWhat, why this journal, formal statements.\nQuote each comment in full.\nAccept the blame and clarify.\n“I am writing to ask…”\nSpecific and kind.\nThe editor should not have to search.\nA common calque from Spanish.\n“We respectfully disagree, because…”\n\n\n\n\n\n\nNoble, W. S. (2017). Ten simple rules for writing a response to reviewers. PLOS Computational Biology, 13(10), e1005730. https://doi.org/10.1371/journal.pcbi.1005730",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 5. Peer review and correspondence</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html",
+    "href": "06-presenting.html",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "",
+    "text": "Required reading",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html#required-reading",
+    "href": "06-presenting.html#required-reading",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "",
+    "text": "Amano, T.; Ramírez-Castañeda, V.; Berdejo-Espinola, V.; Borokini, I.; Chowdhury, S.; Golivets, M. et al. (2023). The manifold costs of being a non-native English speaker in science. PLOS Biology, 21(7), e3002184.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html#speaking-at-conferences-as-a-non-native-speaker",
+    "href": "06-presenting.html#speaking-at-conferences-as-a-non-native-speaker",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "1. Speaking at conferences as a non-native speaker",
+    "text": "1. Speaking at conferences as a non-native speaker\nAmano et al. (2023) found that non-native English speakers reported spending more time preparing oral presentations and that many avoided attending or presenting at international conferences because of language. Knowing this is useful in two ways: preparation pays off, and the difficulty is shared by most of your audience. International audiences value clarity far more than a native accent.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html#signposting",
+    "href": "06-presenting.html#signposting",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "2. Signposting",
+    "text": "2. Signposting\nSignposting language tells the audience where they are in the talk. It is even more important in a second language, for you and for listeners.\n\n\n\n\n\n\n\nFunction\nPhrases\n\n\n\n\nOpening\nToday I’m going to talk about… / The question I want to address is…\n\n\nOutline\nFirst, I’ll… Then… Finally…\n\n\nMoving on\nLet’s move on to… / That brings me to…\n\n\nPointing to a visual\nAs you can see in this graph… / The key thing here is…\n\n\nEmphasising\nWhat’s really important is… / I’d like to stress that…\n\n\nConcluding\nTo sum up… / The main take-home message is…\n\n\nInviting questions\nI’d be happy to take any questions.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html#pronunciation-that-matters",
+    "href": "06-presenting.html#pronunciation-that-matters",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "3. Pronunciation that matters",
+    "text": "3. Pronunciation that matters\nIntelligibility depends more on word stress and sentence stress than on individual sounds. Common problems for Spanish speakers:\n\nWord stress in academic words: anaLYsis, ANalyse, deVELop, DAta or DAHta, preSENT (verb) vs PREsent (noun), PHOtograph, phoTOgraphy.\nInitial s + consonant: study, Spain, specific (not estudy).\nFinal consonants and -ed endings: analysed (/d/), tested (/ɪd/), worked (/t/).\n\nMark the stress in your script, record yourself and listen.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html#questions-and-discussion",
+    "href": "06-presenting.html#questions-and-discussion",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "4. Questions and discussion",
+    "text": "4. Questions and discussion\n\nAsk for clarification: Sorry, could you repeat the question? / Do you mean…?\nBuy time: That’s a good question. Let me think…\nAdmit limits: I’m not sure, but my guess would be… / That’s beyond the scope of this study, but…\nRedirect politely: That’s an interesting point; perhaps we could discuss it after the session.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html#networking",
+    "href": "06-presenting.html#networking",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "5. Networking",
+    "text": "5. Networking\nPrepare a 30-second elevator pitch: who you are, what you study and why it matters, in plain words. Ask questions about the other person’s work, follow up by email within a week, and remember that coffee breaks are where many collaborations start.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html#worked-example",
+    "href": "06-presenting.html#worked-example",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "Worked example",
+    "text": "Worked example\n\n\n\n\n\n\nNoteScript and signposting for a five-minute talk\n\n\n\nOpening: “Imagine starting a PhD with 1,200 other students. Five years later, one in three has left. Today I’d like to show you why.”\nOutline: “First, I’ll explain how we followed these students. Then I’ll show what predicted who stayed. Finally, I’ll suggest what programmes can do.”\nTransitions: “So that’s how we collected the data. Let’s move on to what we found.” / “This brings me to the main result.”\nConclusion: “To sum up: supervision matters more than money. The main take-home message is that programmes should train supervisors.”\nQuestions: “Thank you. I’d be happy to take any questions.”",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html#graded-exercises",
+    "href": "06-presenting.html#graded-exercises",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "Graded exercises",
+    "text": "Graded exercises\nBasic. Choose the right phrase to move from methods to results.\n\nShow solution\nFor example: “Let’s move on to the results.” or “So what did we find?”\n\nAdvanced. Write the full signposted script of a five-minute talk on your research, mark the stressed syllables of ten key words and record yourself.\n\nShow solution\nCheck that every section has an explicit transition, that the main message is stated at the start and at the end, and compare the recording with the script for stress and pace.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html#activities",
+    "href": "06-presenting.html#activities",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "Activities",
+    "text": "Activities\nEsta actividad necesita JavaScript.\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html#reto-e6",
+    "href": "06-presenting.html#reto-e6",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nImportantChallenge for chapter 6 · A five-minute talk in English\n\n\n\n\nPrepare a five-minute talk on your research with explicit signposting at every transition.\nMark the word stress of ten key terms and record yourself; listen and correct.\nPrepare answers to the three questions you are most likely to be asked, and a 30-second elevator pitch.\n\nSubmission: use the assignment template. This challenge has no solution in the book.",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "06-presenting.html#self-assessment",
+    "href": "06-presenting.html#self-assessment",
+    "title": "Chapter 6. Presenting and networking",
+    "section": "Self-assessment",
+    "text": "Self-assessment\nAnswer all the questions and press Show answers. It does not count towards your grade.\n\n\nAmano et al. (2023) found that non-native speakers spend more time preparing presentations. TRUEFALSE\nPhrases that tell the audience where they are in the talk are called \nFor intelligibility, the most important feature is a native accentword and sentence stressspeaking fast\n“Analysis” is stressed on the firstsecondthird syllable\nSaying “I’m not sure, but my guess would be…” is an acceptable way to answer. TRUEFALSE\nA 30-second summary of who you are and what you study is an elevator \n“Estudy” is the correct pronunciation of “study”. TRUEFALSE\nWhat do international audiences value most?\n\n A perfect native accent Clarity Long, complex sentences\n\n\nShow explanations\n\nAnd to avoid some conferences.\nFor you and the audience.\nStress carries meaning.\na-NAL-y-sis.\nHonesty builds credibility.\nPrepare it in advance.\nInitial s + consonant.\nMost of the audience are non-native too.\n\n\n\n\n\n\nAmano, T., Ramírez-Castañeda, V., Berdejo-Espinola, V., Borokini, I., Chowdhury, S., Golivets, M., et al. (2023). The manifold costs of being a non-native English speaker in science. PLOS Biology, 21(7), e3002184. https://doi.org/10.1371/journal.pbio.3002184",
+    "crumbs": [
+      "Chapters",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 6. Presenting and networking</span>"
+    ]
+  },
+  {
+    "objectID": "90-phrasebank.html",
+    "href": "90-phrasebank.html",
+    "title": "Appendix A — Phrasebank",
+    "section": "",
+    "text": "Introduction\nUseful expressions for each part of a research article. Adapt them; do not paste them mechanically.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Phrasebank</span>"
+    ]
+  },
+  {
+    "objectID": "90-phrasebank.html#introduction",
+    "href": "90-phrasebank.html#introduction",
+    "title": "Appendix A — Phrasebank",
+    "section": "",
+    "text": "X is a central issue in… / There is growing interest in…\nPrevious studies have shown that… (Smith, 2020; Lee, 2022).\nHowever, little is known about… / Few studies have examined… / It remains unclear whether…\nThis study aims to… / Here, we examine… / In this paper, we report…",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Phrasebank</span>"
+    ]
+  },
+  {
+    "objectID": "90-phrasebank.html#methods",
+    "href": "90-phrasebank.html#methods",
+    "title": "Appendix A — Phrasebank",
+    "section": "Methods",
+    "text": "Methods\n\nData were obtained from… / We collected data from… between… and…\nParticipants were recruited through… / The sample consisted of…\nWe used X to estimate… / Analyses were conducted in R (version…).\nThe study was preregistered at… / Data and code are available at…",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Phrasebank</span>"
+    ]
+  },
+  {
+    "objectID": "90-phrasebank.html#results",
+    "href": "90-phrasebank.html#results",
+    "title": "Appendix A — Phrasebank",
+    "section": "Results",
+    "text": "Results\n\nTable 2 shows… / As shown in Figure 3,…\nX was associated with Y (β = 0.32, 95% CI [0.18, 0.46]).\nWe found no evidence that… / The difference was small and imprecise.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Phrasebank</span>"
+    ]
+  },
+  {
+    "objectID": "90-phrasebank.html#discussion",
+    "href": "90-phrasebank.html#discussion",
+    "title": "Appendix A — Phrasebank",
+    "section": "Discussion",
+    "text": "Discussion\n\nThese findings suggest that… / This is consistent with… / In contrast to…\nOne possible explanation is that…\nOur design does not allow us to conclude that…\nFuture research could…",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Phrasebank</span>"
+    ]
+  },
+  {
+    "objectID": "90-phrasebank.html#conclusion",
+    "href": "90-phrasebank.html#conclusion",
+    "title": "Appendix A — Phrasebank",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nIn summary, … / Taken together, these results indicate…",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Phrasebank</span>"
+    ]
+  },
+  {
+    "objectID": "90-phrasebank.html#correspondence",
+    "href": "90-phrasebank.html#correspondence",
+    "title": "Appendix A — Phrasebank",
+    "section": "Correspondence",
+    "text": "Correspondence\n\nI am writing to… / I would be grateful if you could… / Please find attached…\nI look forward to hearing from you. / Kind regards,",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Phrasebank</span>"
+    ]
+  },
+  {
+    "objectID": "90-phrasebank.html#peer-review",
+    "href": "90-phrasebank.html#peer-review",
+    "title": "Appendix A — Phrasebank",
+    "section": "Peer review",
+    "text": "Peer review\n\nThe manuscript addresses an important question… / My main concern is…\nI would encourage the authors to… / It is unclear from the text whether…",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Phrasebank</span>"
+    ]
+  },
+  {
+    "objectID": "90-phrasebank.html#responses-to-reviewers",
+    "href": "90-phrasebank.html#responses-to-reviewers",
+    "title": "Appendix A — Phrasebank",
+    "section": "Responses to reviewers",
+    "text": "Responses to reviewers\n\nWe thank the reviewer for this helpful comment.\nWe have revised the text accordingly (p. 7, lines 140-152).\nWe respectfully disagree, because…",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Phrasebank</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html",
+    "href": "94-laboratorio.html",
+    "title": "Appendix B — Interactive lab",
+    "section": "",
+    "text": "Lab: abstract moves\nThis appendix brings together a lab and an activity to practise in your browser.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Interactive lab</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#lab-moves",
+    "href": "94-laboratorio.html#lab-moves",
+    "title": "Appendix B — Interactive lab",
+    "section": "",
+    "text": "Lab · runs in your browser\n\nA good abstract moves through five rhetorical moves (Hyland, 2000): introduction, purpose, method, product (results) and conclusion. Paste your abstract. The lab tags each sentence with its most likely move using signal phrases, flags long sentences and lists the moves it could not find. It is a heuristic guide, not a judgement.\n\nareaE = window.Lab.area\nviewof abstractTxt = areaE(\"Your abstract\", {rows: 9, value: \"Open research data are increasingly required by funders. However, little is known about how researchers in the humanities reuse shared data. This study aims to identify the main barriers to data reuse among humanities scholars. We surveyed 412 researchers in Spain and analysed their responses using latent class analysis. We found that 63% had never reused data and that the lack of documentation was the most frequent barrier. These findings suggest that data policies should invest in documentation and training rather than in mandates alone.\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  const frases = abstractTxt.replace(/\\s+/g, \" \").trim().split(/(?&lt;=[.!?])\\s+(?=[A-Z])/).filter((s) =&gt; s.length &gt; 2);\n  const reglas = [\n    [\"Conclusion\", \"#6a3d9a\", /\\b(suggest|conclude|implications?|imply|recommend|should|these (findings|results)|overall|in conclusion)\\b/i],\n    [\"Product\", \"#1c6b3a\", /\\b(we found|results? (show|indicate|reveal)|found that|showed|revealed|was associated|were associated|significantly|\\d+(\\.\\d+)?\\s?%|p\\s?[&lt;=])/i],\n    [\"Method\", \"#b35900\", /\\b(we (surveyed|analysed|analyzed|used|conducted|collected|interviewed|measured|compared|applied|performed)|using|data (from|were)|sample of|participants|questionnaire|regression|analysis)\\b/i],\n    [\"Purpose\", \"#2a78d6\", /\\b(this (study|paper|article)|we (aim|investigate|examine|explore|propose|present)|aims? to|the (aim|purpose|goal) of|here,? we)\\b/i],\n    [\"Introduction\", \"#52514e\", /\\b(however|little is known|remains? (unclear|unknown)|increasingly|has been|have been|is (a|an|the)|are (a|an)|growing)\\b/i]];\n  const etiqueta = (s) =&gt; { for (const [m, c, re] of reglas) if (re.test(s)) return [m, c]; return [\"Unclear\", \"#8a8a8a\"]; };\n  const esc = (s) =&gt; s.replace(/[&&lt;&gt;]/g, (c) =&gt; ({\"&\": \"&amp;\", \"&lt;\": \"&lt;\", \"&gt;\": \"&gt;\"}[c]));\n  const tags = frases.map((s) =&gt; [s, ...etiqueta(s), s.split(/\\s+/).length]);\n  const total = abstractTxt.trim() ? abstractTxt.trim().split(/\\s+/).length : 0;\n  const orden = [\"Introduction\", \"Purpose\", \"Method\", \"Product\", \"Conclusion\"];\n  const faltan = orden.filter((m) =&gt; !tags.some((t) =&gt; t[1] === m));\n  const d = html`&lt;div role=\"status\" aria-live=\"polite\"&gt;&lt;/div&gt;`;\n  d.innerHTML = `&lt;ol class=\"list-unstyled\"&gt;${tags.map(([s, m, c, n]) =&gt; `&lt;li class=\"mb-1\"&gt;&lt;span class=\"badge\" style=\"background:${c};color:#fff;min-width:7.5em\"&gt;${m}&lt;/span&gt; ${esc(s)} ${n &gt; 30 ? `&lt;span class=\"small text-danger\"&gt;⚠ ${n} words: consider splitting&lt;/span&gt;` : \"\"}&lt;/li&gt;`).join(\"\")}&lt;/ol&gt;\n  &lt;p&gt;&lt;strong&gt;${total} words&lt;/strong&gt; ${total &gt; 250 ? \"· ⚠ over 250: most journals will ask you to cut it\" : total &lt; 100 ? \"· quite short: check that every move is there\" : \"· a typical length (100–250)\"}.&lt;/p&gt;\n  &lt;p&gt;${faltan.length ? `Moves not detected: &lt;strong&gt;${faltan.join(\", \")}&lt;/strong&gt;. Check whether they are missing or just phrased without the usual signals.` : \"All five moves detected. Check that they appear in a logical order.\"}&lt;/p&gt;`;\n  return d;\n}",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Interactive lab</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#activity-order-the-moves",
+    "href": "94-laboratorio.html#activity-order-the-moves",
+    "title": "Appendix B — Interactive lab",
+    "section": "Activity: order the moves",
+    "text": "Activity: order the moves\nEsta actividad necesita JavaScript.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Interactive lab</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#lab-response",
+    "href": "94-laboratorio.html#lab-response",
+    "title": "Appendix B — Interactive lab",
+    "section": "Lab: response to reviewers",
+    "text": "Lab: response to reviewers\n\n\nLab · runs in your browser\n\nA good response letter quotes each comment, thanks the reviewer briefly, says what you changed and where, and disagrees politely with evidence when needed. Fill in one comment and copy the formatted reply.\n\n{\n  const raiz = html`&lt;div class=\"resp-lab\"&gt;&lt;/div&gt;`;\n  const campo = (id, et, val, area) =&gt; { const d = html`&lt;div class=\"mb-2\"&gt;&lt;label class=\"form-label\" for=\"${id}\"&gt;${et}&lt;/label&gt;${area ? `&lt;textarea id=\"${id}\" class=\"form-control form-control-sm\" rows=\"3\"&gt;${val}&lt;/textarea&gt;` : `&lt;input id=\"${id}\" class=\"form-control form-control-sm\" value=\"${val}\"&gt;`}&lt;/div&gt;`; raiz.append(d); return d.querySelector(\"input, textarea\"); };\n  const com = campo(\"rr-com\", \"Reviewer comment\", \"The sample size seems small and the authors do not justify it.\", true);\n  const acc = html`&lt;div class=\"mb-2\"&gt;&lt;label class=\"form-label\" for=\"rr-acc\"&gt;Your decision&lt;/label&gt;&lt;select id=\"rr-acc\" class=\"form-select form-select-sm\"&gt;&lt;option&gt;We agree and have changed the manuscript&lt;/option&gt;&lt;option&gt;We partly agree&lt;/option&gt;&lt;option&gt;We respectfully disagree&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;`; raiz.append(acc);\n  const cam = campo(\"rr-cam\", \"What you did (or your evidence)\", \"We added a power analysis showing that 120 participants give 80% power to detect d = 0.5, and we discuss this limitation.\", true);\n  const loc = campo(\"rr-loc\", \"Where (section, page, lines)\", \"Methods, p. 7, lines 142-150\");\n  const salida = html`&lt;div role=\"status\" aria-live=\"polite\"&gt;&lt;/div&gt;`;\n  const esc = (s) =&gt; s.replace(/[&&lt;&gt;]/g, (c) =&gt; ({\"&\": \"&amp;\", \"&lt;\": \"&lt;\", \"&gt;\": \"&gt;\"}[c]));\n  function act() {\n    const dec = acc.querySelector(\"select\").value;\n    const inicio = dec.startsWith(\"We agree\") ? \"Thank you for this helpful comment. We agree,\" : dec.startsWith(\"We partly\") ? \"Thank you for raising this point. We agree in part:\" : \"We thank the reviewer for this comment. We have considered it carefully, but we respectfully disagree, because\";\n    const cuerpo = cam.value.trim().replace(/^we /i, \"we \");\n    const texto = `**Comment 1.** \"${com.value.trim()}\"\\n\\n**Response.** ${inicio} ${cuerpo.charAt(0).toLowerCase() + cuerpo.slice(1)}${loc.value.trim() ? ` (${loc.value.trim()})` : \"\"}`;\n    const avisos = [];\n    if (/\\b(wrong|misunderstood|clearly|obviously|failed to|did not read)\\b/i.test(cam.value)) avisos.push(\"Your reply contains words that may sound defensive (wrong, clearly, obviously…). Rephrase neutrally.\");\n    if (!loc.value.trim() && !dec.includes(\"disagree\")) avisos.push(\"Say where the change is (section, page, lines): editors check it.\");\n    if (cam.value.trim().split(/\\s+/).length &lt; 8) avisos.push(\"The reply is very short: explain what you changed or why you disagree.\");\n    if (dec.includes(\"disagree\") && !/\\b(because|evidence|data|study|studies|shown|show)\\b/i.test(cam.value)) avisos.push(\"When you disagree, support it with evidence (data, references).\");\n    salida.innerHTML = `&lt;div class=\"p-3 border rounded\"&gt;&lt;p class=\"mb-1\"&gt;&lt;strong&gt;Comment 1.&lt;/strong&gt; “${esc(com.value.trim())}”&lt;/p&gt;&lt;p class=\"mb-0\"&gt;&lt;strong&gt;Response.&lt;/strong&gt; ${esc(texto.split(\"**Response.** \")[1])}&lt;/p&gt;&lt;/div&gt;${avisos.length ? `&lt;ul class=\"mt-2\"&gt;${avisos.map((a) =&gt; `&lt;li&gt;⚠ ${a}&lt;/li&gt;`).join(\"\")}&lt;/ul&gt;` : '&lt;p class=\"small mt-2\"&gt;✓ Clear, polite and located.&lt;/p&gt;'}&lt;button type=\"button\" class=\"btn btn-outline-primary btn-sm\"&gt;Copy as Markdown&lt;/button&gt; &lt;span class=\"small\"&gt;&lt;/span&gt;`;\n    salida.querySelector(\"button\").onclick = () =&gt; navigator.clipboard?.writeText(texto).then(() =&gt; salida.querySelector(\"span\").textContent = \"Copied.\", () =&gt; salida.querySelector(\"span\").textContent = \"Copy failed: select the text manually.\");\n  }\n  raiz.addEventListener(\"input\", act); raiz.append(salida); act();\n  return raiz;\n}",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Interactive lab</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#lab-cover",
+    "href": "94-laboratorio.html#lab-cover",
+    "title": "Appendix B — Interactive lab",
+    "section": "Lab: cover letter",
+    "text": "Lab: cover letter\n\n\nLab · runs in your browser\n\nEditors read the cover letter in a minute. It should say what you found, why it matters for this journal and confirm the required declarations. Fill in the fields and download the draft.\n\n{\n  const raiz = html`&lt;div class=\"cover-lab\"&gt;&lt;/div&gt;`;\n  const campo = (id, et, val) =&gt; { const d = html`&lt;div class=\"mb-2\"&gt;&lt;label class=\"form-label\" for=\"${id}\"&gt;${et}&lt;/label&gt;&lt;input id=\"${id}\" class=\"form-control form-control-sm\" value=\"${val}\"&gt;&lt;/div&gt;`; raiz.append(d); return d.querySelector(\"input\"); };\n  const ed = campo(\"cl-ed\", \"Editor's name (if known)\", \"Dr Smith\");\n  const rev = campo(\"cl-rev\", \"Journal\", \"Quantitative Science Studies\");\n  const tit = campo(\"cl-tit\", \"Manuscript title\", \"Policy citations capture a different kind of research impact\");\n  const tipo = campo(\"cl-tipo\", \"Article type\", \"Research article\");\n  const hall = campo(\"cl-hall\", \"Main finding (one sentence)\", \"policy citations are only weakly correlated with academic citations across 15,000 articles\");\n  const enc = campo(\"cl-enc\", \"Why it fits this journal\", \"it addresses research evaluation indicators, a central topic of the journal\");\n  const decl = html`&lt;fieldset class=\"mb-2\"&gt;&lt;legend class=\"form-label\"&gt;Declarations&lt;/legend&gt;${[\"The manuscript is not under consideration elsewhere\", \"All authors approved the submission\", \"There are no competing interests\", \"Data and code are openly available\"].map((x, i) =&gt; `&lt;div class=\"form-check\"&gt;&lt;input class=\"form-check-input\" type=\"checkbox\" id=\"cl-d${i}\" checked&gt;&lt;label class=\"form-check-label\" for=\"cl-d${i}\"&gt;${x}&lt;/label&gt;&lt;/div&gt;`).join(\"\")}&lt;/fieldset&gt;`;\n  raiz.append(decl);\n  const salida = html`&lt;div role=\"status\" aria-live=\"polite\"&gt;&lt;/div&gt;`;\n  const esc = (s) =&gt; s.replace(/[&&lt;&gt;]/g, (c) =&gt; ({\"&\": \"&amp;\", \"&lt;\": \"&lt;\", \"&gt;\": \"&gt;\"}[c]));\n  function act() {\n    const ds = [...decl.querySelectorAll(\"input\")].filter((x) =&gt; x.checked).map((x) =&gt; x.nextElementSibling.textContent);\n    const carta = `Dear ${ed.value.trim() || \"Editor\"},\\n\\nPlease consider our manuscript \"${tit.value.trim()}\" for publication as a ${tipo.value.trim().toLowerCase()} in ${rev.value.trim()}.\\n\\nWe show that ${hall.value.trim()}. We believe the manuscript is a good fit for ${rev.value.trim()} because ${enc.value.trim()}.\\n\\n${ds.map((x) =&gt; x + \".\").join(\" \")}\\n\\nThank you for your consideration.\\n\\nYours sincerely,\\n[Name, affiliation, ORCID]`;\n    const n = carta.split(/\\s+/).length;\n    const url = URL.createObjectURL(new Blob([carta], {type: \"text/plain\"}));\n    const avisos = [];\n    if (!/\\d/.test(hall.value)) avisos.push(\"Add a number to the main finding: concrete results catch the editor's attention.\");\n    if (ds.length &lt; 2) avisos.push(\"Most journals require you to confirm originality and author approval.\");\n    salida.innerHTML = `&lt;pre class=\"p-3 border rounded\" style=\"white-space:pre-wrap\"&gt;${esc(carta)}&lt;/pre&gt;&lt;p class=\"small\"&gt;${n} words${n &gt; 250 ? \" · consider shortening: one screen is enough\" : \"\"}.&lt;/p&gt;${avisos.length ? `&lt;ul&gt;${avisos.map((a) =&gt; `&lt;li&gt;⚠ ${a}&lt;/li&gt;`).join(\"\")}&lt;/ul&gt;` : \"\"}&lt;a class=\"btn btn-outline-primary btn-sm\" download=\"cover-letter.txt\" href=\"${url}\"&gt;Download (.txt)&lt;/a&gt;`;\n  }\n  raiz.addEventListener(\"input\", act); raiz.append(salida); act();\n  return raiz;\n}",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Interactive lab</span>"
+    ]
+  },
+  {
+    "objectID": "94-laboratorio.html#watch-and-keep-learning",
+    "href": "94-laboratorio.html#watch-and-keep-learning",
+    "title": "Appendix B — Interactive lab",
+    "section": "Watch and keep learning",
+    "text": "Watch and keep learning\nThese are links, not embeds: the video opens on the provider’s site.\n\nWriting in the Sciences — Kristin Sainani · Stanford University (Coursera). A video course on clear scientific writing: cutting clutter, sentence and paragraph structure, the writing process and the parts of a manuscript. Free to audit.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Interactive lab</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html",
+    "href": "91-guia-docente.html",
+    "title": "Appendix C — Teacher’s guide",
+    "section": "",
+    "text": "Suggested assessment\nThe book can be used as the textbook of a doctoral workshop of about 18-24 hours (six sessions) on scientific English, or for self-study. It assumes an intermediate level of English (around B2) and focuses on research genres rather than general English.\nThe common rubric values structure and argument (25%), clarity and concision (25%), accuracy of language (20%), appropriate academic style (20%) and reflection (10%).",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Teacher's guide</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#suggested-assessment",
+    "href": "91-guia-docente.html#suggested-assessment",
+    "title": "Appendix C — Teacher’s guide",
+    "section": "",
+    "text": "Activity\nSuggested weight\n\n\n\n\nAssignments (choose 4 of 6)\n60%\n\n\nFinal task: abstract, cover letter and five-minute talk on the student’s own research\n30%\n\n\nSelf-assessments and participation\n10%",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Teacher's guide</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#labs-and-activities",
+    "href": "91-guia-docente.html#labs-and-activities",
+    "title": "Appendix C — Teacher’s guide",
+    "section": "Labs and activities",
+    "text": "Labs and activities\nLabs: readability checker, hedge and booster highlighter, and Spanglish detector. Scenario: a difficult reviewer. In the PDF and EPUB, the activities appear on paper with their solutions.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Teacher's guide</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#recommendations",
+    "href": "91-guia-docente.html#recommendations",
+    "title": "Appendix C — Teacher’s guide",
+    "section": "Recommendations",
+    "text": "Recommendations\n\nWork with the students’ own texts as early as possible.\nNormalise the difficulty: most researchers are non-native speakers (Amano et al., 2023), and clarity matters more than accent.\nDiscuss the responsible use of language tools and AI assistants, and the journals’ disclosure policies.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Teacher's guide</span>"
+    ]
+  },
+  {
+    "objectID": "91-guia-docente.html#moodle-and-slides",
+    "href": "91-guia-docente.html#moodle-and-slides",
+    "title": "Appendix C — Teacher’s guide",
+    "section": "Moodle and slides",
+    "text": "Moodle and slides\nThe questions are exported to Moodle XML (Question bank → Import → Moodle XML format); each question keeps its explanation as general feedback.\nDownload the question bank: whole book · by chapter: 01 · 02 · 03 · 04 · 05 · 06\nSlides for each chapter are in diapositivas/.\n\n\n\n\nAmano, T., Ramírez-Castañeda, V., Berdejo-Espinola, V., Borokini, I., Chowdhury, S., Golivets, M., et al. (2023). The manifold costs of being a non-native English speaker in science. PLOS Biology, 21(7), e3002184. https://doi.org/10.1371/journal.pbio.3002184",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Teacher's guide</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html",
+    "href": "92-glosario.html",
+    "title": "Appendix D — Glossary",
+    "section": "",
+    "text": "The architecture of a research article\nTerms in the book, by chapter.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#the-architecture-of-a-research-article",
+    "href": "92-glosario.html#the-architecture-of-a-research-article",
+    "title": "Appendix D — Glossary",
+    "section": "",
+    "text": "IMRaD\nIntroduction, Methods, Results and Discussion: the standard structure of research articles. → Chapter 1\n\n\nRhetorical move\nA unit of text with a specific communicative purpose, such as showing a gap. → Chapter 1\n\n\nCARS model\nSwales’s Create a Research Space model of introductions: territory, niche, occupation. → Chapter 1\n\n\nResearch gap\nWhat is not yet known or resolved, which the study addresses. → Chapter 1\n\n\nStructured abstract\nAn abstract with labelled parts: background, methods, results and conclusions. → Chapter 1\n\n\nContext-content-conclusion\nScheme for papers, sections and paragraphs recommended by Mensh & Kording (2017). → Chapter 1",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#clear-sentences",
+    "href": "92-glosario.html#clear-sentences",
+    "title": "Appendix D — Glossary",
+    "section": "Clear sentences",
+    "text": "Clear sentences\n\nReadability\nHow easy a text is to read, often estimated with formulas such as Flesch Reading Ease. → Chapter 2\n\n\nTopic position\nThe beginning of a sentence, which should hold old, linking information. → Chapter 2\n\n\nStress position\nThe end of a sentence, which should hold new, important information. → Chapter 2\n\n\nNominalisation\nA verb or adjective turned into a noun (analyse → analysis), often making sentences heavier. → Chapter 2\n\n\nPassive voice\nConstruction in which the subject receives the action (samples were stored). → Chapter 2\n\n\nPlain language\nClear, direct writing that the intended reader can understand on first reading. → Chapter 2",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#hedging-and-stance",
+    "href": "92-glosario.html#hedging-and-stance",
+    "title": "Appendix D — Glossary",
+    "section": "Hedging and stance",
+    "text": "Hedging and stance\n\nHedge\nWord or phrase that softens a claim (may, suggest, possibly). → Chapter 3\n\n\nBooster\nWord or phrase that strengthens a claim (clearly, demonstrate). → Chapter 3\n\n\nStance\nThe writer’s attitude towards claims and sources. → Chapter 3\n\n\nOverclaiming\nStating more than the evidence supports, for example causal claims from correlations. → Chapter 3\n\n\nReporting verb\nVerb used to report sources (show, suggest, claim), which conveys stance. → Chapter 3",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#common-errors",
+    "href": "92-glosario.html#common-errors",
+    "title": "Appendix D — Glossary",
+    "section": "Common errors",
+    "text": "Common errors\n\nFalse friend\nWord that looks similar in two languages but has a different meaning. → Chapter 4\n\n\nUncountable noun\nNoun with no plural form (research, evidence, information). → Chapter 4\n\n\nAcademic Word List\nCoxhead’s list of 570 word families frequent across academic disciplines. → Chapter 4\n\n\nCollocation\nWords that habitually go together (conduct a study, draw a conclusion). → Chapter 4\n\n\nCalque\nLiteral translation of an expression from another language (make a research). → Chapter 4",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#peer-review-and-correspondence",
+    "href": "92-glosario.html#peer-review-and-correspondence",
+    "title": "Appendix D — Glossary",
+    "section": "Peer review and correspondence",
+    "text": "Peer review and correspondence\n\nCover letter\nShort letter to the editor that accompanies a submission. → Chapter 5\n\n\nResponse to reviewers\nDocument that answers each reviewer comment and explains the changes. → Chapter 5\n\n\nMajor and minor revision\nEditorial decisions asking for substantial or small changes before acceptance. → Chapter 5\n\n\nPoliteness strategies\nLinguistic choices that soften requests and criticism. → Chapter 5\n\n\nRebuttal\nReasoned disagreement with a reviewer’s comment, supported by evidence. → Chapter 5",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "92-glosario.html#presenting-and-networking",
+    "href": "92-glosario.html#presenting-and-networking",
+    "title": "Appendix D — Glossary",
+    "section": "Presenting and networking",
+    "text": "Presenting and networking\n\nSignposting\nPhrases that tell the audience where they are in a talk. → Chapter 6\n\n\nWord stress\nThe syllable pronounced with more force in a word (aNALysis). → Chapter 6\n\n\nElevator pitch\nA 30-second summary of who you are and what you research. → Chapter 6\n\n\nClarification request\nA phrase used to check you have understood a question. → Chapter 6\n\n\nLinguistic inequality\nThe extra costs that the dominance of English imposes on non-native speakers in science. → Chapter 6\n\n\n\n\nMensh, B., & Kording, K. (2017). Ten simple rules for structuring papers. PLOS Computational Biology, 13(9), e1005619. https://doi.org/10.1371/journal.pcbi.1005619",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  }
+]

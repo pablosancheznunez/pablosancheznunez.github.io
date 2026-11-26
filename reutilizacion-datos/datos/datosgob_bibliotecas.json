@@ -1,0 +1,1319 @@
+{
+ "result": {
+  "items": [
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas de Vigo",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/L01360577",
+    "modified": "lun, 09 nov 2026 10:50:13 GMT+0000",
+    "distribution": [
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/XLS"
+     },
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV"
+     },
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/KML"
+     },
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/JSON"
+     },
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/SHP"
+     },
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/GEOJSON"
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Directorio de bibliotecas españolas enriquecido",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/EA0019768",
+    "modified": "vie, 22 may 2026 00:00:00 GMT+0000",
+    "distribution": [
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/XLS"
+     },
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/ODS"
+     },
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/HTML"
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Actividades gratuitas en Bibliotecas Municipales en los próximos 60 días",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/L01280796",
+    "modified": "vie, 13 nov 2026 19:47:20 GMT+0000",
+    "distribution": [
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/XML"
+     },
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/RSS"
+     },
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/PDF"
+     },
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/JSON"
+     },
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/RDF_XML"
+     },
+     {
+      "format": "http://publications.europa.eu/resource/authority/file-type/CSV"
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas por número de fondos existentes. Por tipo de biblioteca.",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A02002834",
+    "modified": "mar, 05 may 2026 22:00:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Altas de fondos en bibliotecas. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según disposición de equipamiento informático. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según disposición de equipos de reproducción. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según disposición de servicios de internet. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según formas de acceso. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según longitud de los estantes ocupados por la colección de fondos en depósito. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "vie, 10 jun 2016 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según longitud de los estantes ocupados por la colección de fondos en libre acceso. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "vie, 10 jun 2016 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según niveles de automatización. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según promedio de horas semanales de apertura al público. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según puestos de consulta. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según puntos de servicio de los que disponen. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según servicios de consulta en sala. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según superficie útil de uso bibliotecario. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según superficie útil total. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según tipología. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según titularidad. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según usuarios inscritos. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según visitantes. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas según volúmenes de fondos (libros y folletos, publicaciones periódicas encuadernadas, libros electrónicos y manuscritos). Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Equipos de reproducción en bibliotecas. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Equipos informáticos en bibliotecas. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Fondos existentes en bibliotecas. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Gastos corrientes y de inversión de bibliotecas. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Perfil de financiación (porcentaje medio) de bibliotecas. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Personal al servicio de bibliotecas. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Personal equivalente a tiempo completo al servicio de bibliotecas. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Préstamos domiciliados a usuarios de bibliotecas según tipos de préstamos. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Préstamos interbibliotecarios de bibliotecas. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Puntos de servicio de bibliotecas según tipología. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Puntos de servicio de bibliotecas según titularidad. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Registros y consultas del catálogo automatizado de bibliotecas. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Títulos de publicaciones periódicas en bibliotecas. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Volúmenes de libros y folletos anteriores a 1901 en bibliotecas. Islas de Canarias. 2006-2018",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A05003423",
+    "modified": "mar, 07 jul 2020 09:20:00 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/pc-axis"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Catálogo colectivo de la Red de Bibliotecas Públicas de Castilla-La Mancha",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A08002880",
+    "modified": "mié, 19 feb 2025 09:00:01 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/html"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Directorio de bibliotecas de Castilla-La Mancha",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A08002880",
+    "modified": "vie, 14 nov 2025 12:30:01 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Estadísticas de bibliotecas de Castilla-La Mancha",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A08002880",
+    "modified": "mié, 19 feb 2025 09:03:19 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "application/vnd.ms-excel"
+      }
+     },
+     {
+      "format": {
+       "value": "application/vnd.ms-excel"
+      }
+     },
+     {
+      "format": {
+       "value": "application/vnd.ms-excel"
+      }
+     },
+     {
+      "format": {
+       "value": "application/vnd.ms-excel"
+      }
+     },
+     {
+      "format": {
+       "value": "application/vnd.ms-excel"
+      }
+     },
+     {
+      "format": {
+       "value": "application/vnd.ms-excel"
+      }
+     },
+     {
+      "format": {
+       "value": "application/vnd.ms-excel"
+      }
+     },
+     {
+      "format": {
+       "value": "application/vnd.ms-excel"
+      }
+     },
+     {
+      "format": {
+       "value": "application/vnd.ms-excel"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas públicas. Actividades. Municipios",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908",
+    "modified": "jue, 05 nov 2026 17:02:27 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas públicas. Fondos por tipo. Municipios",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908",
+    "modified": "jue, 05 nov 2026 16:30:42 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas públicas. Ordenadores de uso público con acceso a internet. Municipios",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908",
+    "modified": "jue, 05 nov 2026 16:55:42 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas públicas. Personal en equivalencia a jornada completa. Municipios",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908",
+    "modified": "jue, 05 nov 2026 17:02:28 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas públicas. Población atendida. Municipios",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908",
+    "modified": "jue, 05 nov 2026 16:55:40 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas públicas. Préstamos físicos por tipo. Municipios",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908",
+    "modified": "mié, 11 nov 2026 16:27:14 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas públicas. Superficie. Municipios",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908",
+    "modified": "jue, 05 nov 2026 16:55:41 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas públicas. Usuarios inscritos por tipo. Municipios",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908",
+    "modified": "jue, 12 nov 2026 16:26:57 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "application/json"
+      }
+     },
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Bibliotecas públicas. Visitas. Municipios",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908",
+    "modified": "jue, 05 nov 2026 17:02:26 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   },
+   {
+    "title": [
+     {
+      "_value": "Total bibliotecas públicas. Municipios",
+      "_lang": "es"
+     }
+    ],
+    "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908",
+    "modified": "jue, 05 nov 2026 16:48:13 GMT+0000",
+    "distribution": [
+     {
+      "format": {
+       "value": "text/csv"
+      }
+     },
+     {
+      "format": {
+       "value": "application/json"
+      }
+     }
+    ]
+   }
+  ],
+  "consultado": "2026-11-24",
+  "fuente": "https://datos.gob.es/apidata/catalog/dataset/title/bibliotecas.json?_pageSize=50",
+  "nota": "Copia simplificada: solo título en español, publicador, fecha de modificación y formato de cada distribución."
+ }
+}

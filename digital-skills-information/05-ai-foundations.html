@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Units 6 and 7. Generative artificial intelligence: foundations and applications – Digital Skills for Information Use</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./06-ai-ethics.html" rel="next">
+<link href="./04-references.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="laboratorio.js"></script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="fuentes/fuentes.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-sources.html">Units</a></li><li class="breadcrumb-item"><a href="./05-ai-foundations.html"><span class="chapter-title">Units 6 and 7. Generative artificial intelligence: foundations and applications</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Digital Skills for Information Use</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/digital-skills-information.pdf">
+            Book (PDF)
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/digital-skills-information.epub">
+            Book (EPUB, for e-readers)
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-r-in-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using R in this book</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Units</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-sources.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unit 1. Introduction. Information sources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-retrieval.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unit 2. Information retrieval</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-ethics-plagiarism.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unit 3. Ethical use of information and plagiarism</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Units 4 and 5. References</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-ai-foundations.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Units 6 and 7. Generative artificial intelligence: foundations and applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-ai-ethics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Units 8 and 9. Generative artificial intelligence: ethics, authorship and regulation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./90-citations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Quick guide to APA 7 citations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./93-checklists.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Checklists</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./94-verification.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Verification lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./91-teaching-guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Guide for teaching staff</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./92-glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glossary</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#required-reading" id="toc-required-reading" class="nav-link active" data-scroll-target="#required-reading">Required reading</a>
+  <ul class="collapse">
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
+  </ul></li>
+  <li><a href="#what-generative-ai-is" id="toc-what-generative-ai-is" class="nav-link" data-scroll-target="#what-generative-ai-is">1. What generative AI is</a></li>
+  <li><a href="#innovative-applications-and-technical-challenges" id="toc-innovative-applications-and-technical-challenges" class="nav-link" data-scroll-target="#innovative-applications-and-technical-challenges">2. Innovative applications and technical challenges</a></li>
+  <li><a href="#hallucinations" id="toc-hallucinations" class="nav-link" data-scroll-target="#hallucinations">3. Hallucinations</a></li>
+  <li><a href="#responsible-uses-for-study" id="toc-responsible-uses-for-study" class="nav-link" data-scroll-target="#responsible-uses-for-study">4. Responsible uses for study</a></li>
+  <li><a href="#how-to-verify-what-an-ai-produces" id="toc-how-to-verify-what-an-ai-produces" class="nav-link" data-scroll-target="#how-to-verify-what-an-ai-produces">5. How to verify what an AI produces</a></li>
+  <li><a href="#r-practice-checking-references-against-a-database" id="toc-r-practice-checking-references-against-a-database" class="nav-link" data-scroll-target="#r-practice-checking-references-against-a-database">R practice: checking references against a database</a>
+  <ul class="collapse">
+  <li><a href="#exercise-6.1" id="toc-exercise-6.1" class="nav-link" data-scroll-target="#exercise-6.1">Exercise 6.1</a></li>
+  </ul></li>
+  <li><a href="#lab-u5-modelo" id="toc-lab-u5-modelo" class="nav-link" data-scroll-target="#lab-u5-modelo">Lab: a miniature language model</a></li>
+  <li><a href="#lab-u5-verificar" id="toc-lab-u5-verificar" class="nav-link" data-scroll-target="#lab-u5-verificar">Lab: verifying references</a></li>
+  <li><a href="#lab-u5-prompt" id="toc-lab-u5-prompt" class="nav-link" data-scroll-target="#lab-u5-prompt">Lab: review your prompt</a></li>
+  <li><a href="#worked-examples" id="toc-worked-examples" class="nav-link" data-scroll-target="#worked-examples">Worked examples</a></li>
+  <li><a href="#graded-exercises" id="toc-graded-exercises" class="nav-link" data-scroll-target="#graded-exercises">Graded exercises</a></li>
+  <li><a href="#activities" id="toc-activities" class="nav-link" data-scroll-target="#activities">Activities</a></li>
+  <li><a href="#reto-u5" id="toc-reto-u5" class="nav-link" data-scroll-target="#reto-u5">Assessed challenge</a></li>
+  <li><a href="#self-assessment" id="toc-self-assessment" class="nav-link" data-scroll-target="#self-assessment">Self-assessment</a></li>
+  <li><a href="#further-resources" id="toc-further-resources" class="nav-link" data-scroll-target="#further-resources">Further resources</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-sources.html">Units</a></li><li class="breadcrumb-item"><a href="./05-ai-foundations.html"><span class="chapter-title">Units 6 and 7. Generative artificial intelligence: foundations and applications</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-u5" class="quarto-section-identifier"><span class="chapter-title">Units 6 and 7. Generative artificial intelligence: foundations and applications</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Explain what generative AI is and how <a href="92-glossary.html#gl-llm" class="glos" data-def="A system trained on large collections of texts to predict the most likely fragment that follows a given text.">language models</a> produce text.</li>
+<li>Know its innovative applications, its technical challenges and open lines of research.</li>
+<li>Recognise its responsible uses for study and its limits, especially <a href="92-glossary.html#gl-alucinacion" class="glos" data-def="An AI answer that looks correct but is false or invented, such as a non-existent reference.">hallucinations</a>.</li>
+<li>Verify the information and <a href="92-glossary.html#gl-referencia" class="glos" data-def="The full description of a source in the final list of a piece of work.">references</a> that an AI produces.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Unit glossary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="./92-glossary.html#gl-iag">Generative artificial intelligence</a> · <a href="./92-glossary.html#gl-llm">Language model</a> · <a href="./92-glossary.html#gl-prompt">Prompt</a> · <a href="./92-glossary.html#gl-alucinacion">Hallucination</a> · <a href="./92-glossary.html#gl-entrenamiento">Training data</a> · <a href="./92-glossary.html#gl-rag">Retrieval-augmented generation</a></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Downloads
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="plantillas/05_ai_foundations.R" class="btn btn-outline-primary btn-sm" download="05_ai_foundations.R">Chapter R script</a> <a href="plantillas/entrega_reto.qmd" class="btn btn-outline-primary btn-sm" download="entrega_reto.qmd">Challenge submission template (.qmd)</a> <a href="plantillas/informe.scss" class="btn btn-outline-primary btn-sm" download="informe.scss">Style theme (.scss)</a></p>
+</div>
+</div>
+<section id="required-reading" class="level2">
+<h2 class="anchored" data-anchor-id="required-reading">Required reading</h2>
+<div class="lectura">
+<p>Walters, W. H.; Wilder, E. I. (2023). <a href="https://doi.org/10.1038/s41598-023-41032-5">Fabrication and errors in the bibliographic citations generated by ChatGPT</a>. <em>Scientific Reports</em>, 13, 14045.</p>
+</div>
+<section id="further-reading" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="further-reading">Further reading</h3>
+<ul>
+<li><span class="citation" data-cites="kasneci2023">Kasneci et al. (<a href="#ref-kasneci2023" role="doc-biblioref">2023</a>)</span></li>
+<li><span class="citation" data-cites="bender2021">Bender et al. (<a href="#ref-bender2021" role="doc-biblioref">2021</a>)</span></li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The generative AI block covers units 6 to 9 of the syllabus. This chapter covers foundations, applications and technical challenges (units 6 and 7); the next one covers ethics, authorship and regulation (units 8 and 9).</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="what-generative-ai-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-generative-ai-is">1. What generative AI is</h2>
+<p><a href="92-glossary.html#gl-iag" class="glos" data-def="AI that produces new content (text, images, audio, code) from patterns learned from large amounts of data."><strong>Generative artificial intelligence</strong></a> produces new content (text, images, audio, code) from patterns learned from large amounts of data. Conversational assistants are based on <strong>language models</strong>: systems trained on huge collections of texts to predict the most likely word (in fact, word fragment) that follows a given text. By repeating that prediction again and again, the model writes fluent answers.</p>
+<p>Three important consequences follow:</p>
+<ul>
+<li>The model produces what is <strong>plausible</strong>, not necessarily what is <strong>true</strong>. <span class="citation" data-cites="bender2021">Bender et al. (<a href="#ref-bender2021" role="doc-biblioref">2021</a>)</span> critically called them “stochastic parrots”: they combine linguistic forms without their own access to meaning or facts.</li>
+<li>What it knows depends on its <a href="92-glossary.html#gl-entrenamiento" class="glos" data-def="The collection of data with which a model is trained; it determines what the model knows and the biases it reproduces."><strong>training data</strong></a>: it may not know recent facts and may reproduce the biases in those data.</li>
+<li>How you ask matters: a clear <a href="92-glossary.html#gl-prompt" class="glos" data-def="The text with which you ask a generative AI system for something."><strong>prompt</strong></a>, with context, goal and format, gives better results.</li>
+</ul>
+<div id="fig-siguiente" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The text 'The library offers …' goes into a box labelled 'Language model', which returns probability bars for the next word: books 46%, access 31%, services 15%, coffee 5% and dragons 3%. Note: invented probabilities to illustrate the idea.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-siguiente-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/u5_siguiente.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: How a language model generates text: it estimates the probability of each possible continuation and chooses one; then it repeats. Nothing in the process checks that the result is true."><img src="figuras/u5_siguiente.svg" class="img-fluid figure-img" alt="The text 'The library offers …' goes into a box labelled 'Language model', which returns probability bars for the next word: books 46%, access 31%, services 15%, coffee 5% and dragons 3%. Note: invented probabilities to illustrate the idea."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-siguiente-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: How a language model generates text: it estimates the probability of each possible continuation and chooses one; then it repeats. Nothing in the process checks that the result is true.
+</figcaption>
+</figure>
+</div>
+<p>Some systems combine the model with a search engine or a document collection and answer from what they retrieve (<a href="92-glossary.html#gl-rag" class="glos" data-def="RAG. A technique that combines a language model with a search engine or document collection to answer from what is retrieved."><strong>retrieval-augmented generation</strong></a>). This improves currency and makes it possible to link sources, but it does not eliminate errors: you must check that the source says what the system claims.</p>
+</section>
+<section id="innovative-applications-and-technical-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="innovative-applications-and-technical-challenges">2. Innovative applications and technical challenges</h2>
+<p>Generative AI is already used to draft and translate texts, summarise documents, write and review code, create images, audio and video, support customer service with conversational assistants and help search for and organise information. In information and documentation, applications include automatic description of collections, transcription of historical documents and search engines that answer in natural language citing their sources.</p>
+<p>Its <strong>technical challenges</strong> define the open lines of research:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Challenge</th>
+<th>What it involves</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Truthfulness</strong></td>
+<td>Reducing hallucinations and grounding answers in verifiable sources</td>
+</tr>
+<tr class="even">
+<td><strong>Currency</strong></td>
+<td>Incorporating information after training without retraining the whole model</td>
+</tr>
+<tr class="odd">
+<td><strong>Explainability</strong></td>
+<td>Understanding why the model produces a particular answer</td>
+</tr>
+<tr class="even">
+<td><strong>Bias</strong></td>
+<td>Detecting and mitigating biases inherited from the data</td>
+</tr>
+<tr class="odd">
+<td><strong>Efficiency</strong></td>
+<td>Reducing the energy consumption and cost of training and using the models</td>
+</tr>
+<tr class="even">
+<td><strong>Evaluation</strong></td>
+<td>Reliably measuring what they can do and where they fail</td>
+</tr>
+<tr class="odd">
+<td><strong>Detection</strong></td>
+<td>Distinguishing generated content from human content, which cannot be done reliably today</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="hallucinations" class="level2">
+<h2 class="anchored" data-anchor-id="hallucinations">3. Hallucinations</h2>
+<p>A <strong>hallucination</strong> is an answer that looks correct but is false or invented. In academic work, the most dangerous one is the <strong>fabricated reference</strong>: an article with plausible authors, title, journal and DOI that does not exist. <span class="citation" data-cites="walters2023">Walters &amp; Wilder (<a href="#ref-walters2023" role="doc-biblioref">2023</a>)</span> asked ChatGPT for short literature reviews and checked every reference: a large share of GPT-3.5’s <a href="92-glossary.html#gl-cita-texto" class="glos" data-def="A short marker in the text that points to the source used, such as [@bates1989] or [3].">citations</a> were fabricated, and with GPT-4 a smaller but noticeable proportion remained; in addition, many real references contained errors.</p>
+<div id="fig-alucinacion" class="quarto-float quarto-figure quarto-figure-center anchored" alt="On the left, three pieces: an author surname from the field, the name of a real journal and a title on the topic. They combine into a complete, plausible reference. An arrow leads to a magnifying glass checking a database, which returns: not found.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-alucinacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/u5_alucinacion.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: How a fabricated reference arises. The model combines plausible pieces (a real author, a real journal, a title on the topic) into a reference that does not exist; only checking in a database reveals it."><img src="figuras/u5_alucinacion.svg" class="img-fluid figure-img" alt="On the left, three pieces: an author surname from the field, the name of a real journal and a title on the topic. They combine into a complete, plausible reference. An arrow leads to a magnifying glass checking a database, which returns: not found."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-alucinacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: How a fabricated reference arises. The model combines plausible pieces (a real author, a real journal, a title on the topic) into a reference that does not exist; only checking in a database reveals it.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="responsible-uses-for-study" class="level2">
+<h2 class="anchored" data-anchor-id="responsible-uses-for-study">4. Responsible uses for study</h2>
+<p><span class="citation" data-cites="kasneci2023">Kasneci et al. (<a href="#ref-kasneci2023" role="doc-biblioref">2023</a>)</span> review opportunities (tailored explanations, writing support, personalised practice) and risks (dependence, errors, bias, <a href="92-glossary.html#gl-plagio" class="glos" data-def="Presenting someone else's work, ideas or words as your own without acknowledging them.">plagiarism</a>). A practical criterion is to distinguish uses by what you delegate:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Use</th>
+<th>Risk</th>
+<th>Good practice</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Asking it to explain a concept</td>
+<td>Medium</td>
+<td>Compare with a textbook or a reliable source</td>
+</tr>
+<tr class="even">
+<td>Generating ideas or an initial outline</td>
+<td>Low-medium</td>
+<td>Use it as a starting point, not as a result</td>
+</tr>
+<tr class="odd">
+<td>Checking the spelling and clarity of your text</td>
+<td>Low</td>
+<td>Review each change; the text is still yours</td>
+</tr>
+<tr class="even">
+<td>Searching for literature</td>
+<td><strong>High</strong></td>
+<td>Verify <strong>every</strong> reference in a database</td>
+</tr>
+<tr class="odd">
+<td>Summarising a document</td>
+<td>Medium</td>
+<td>Read the original; the summary may omit or invent</td>
+</tr>
+<tr class="even">
+<td>Writing the assignment for you</td>
+<td><strong>Unacceptable</strong></td>
+<td>It is presenting someone else’s work as your own (Unit 3)</td>
+</tr>
+</tbody>
+</table>
+<p>Before using AI in a course, check what the teaching staff allow and declare its use when required (you will see this in the next chapter).</p>
+</section>
+<section id="how-to-verify-what-an-ai-produces" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-verify-what-an-ai-produces">5. How to verify what an AI produces</h2>
+<ol type="1">
+<li><strong>References</strong>: look up each one by its DOI (at <code>doi.org</code> or <a href="https://www.crossref.org/">Crossref</a>) or by its title in Google Scholar, <a href="https://openalex.org/">OpenAlex</a> or the database for your field. Check authors, year and journal.</li>
+<li><strong>Data and facts</strong>: apply <a href="92-glossary.html#gl-lateral" class="glos" data-def="A verification strategy that consists of leaving the page and consulting other sources about it and about what it claims, instead of analysing it only from the inside.">lateral reading</a> and SIFT (Unit 1).</li>
+<li><strong>Attributed quotations</strong>: find the sentence in the original source.</li>
+<li><strong>Content</strong>: check that the real source says what the AI claims it says.</li>
+</ol>
+</section>
+<section id="r-practice-checking-references-against-a-database" class="level2">
+<h2 class="anchored" data-anchor-id="r-practice-checking-references-against-a-database">R practice: checking references against a database</h2>
+<p>The <code>%in%</code> operator checks which elements of one vector are in another. Imagine an AI has given you five DOIs and you have a list of the DOIs that exist in a database:</p>
+<div>
+<div id="webr-1" class="exercise-cell">
+
+</div>
+<script type="webr-1-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiYWlfZG9pcyA8LSBjKFwiMTAuMTEwOC9lYjAyNDMyMFwiLCBcIjEwLjEwMTYvai5pcG0uMjAxOS4xMDIwNDFcIiwgXCIxMC4xMDM4L3M0MTU5OC0wMjMtNDEwMzItNVwiLFxuICAgICAgICAgICAgIFwiMTAuMTE3Ny8wMTY1NTUxNTA4MDk1NzgxXCIsIFwiMTAuMTA5My9qaXMvYWJjMTIzXCIpXG5kYXRhYmFzZSA8LSBjKFwiMTAuMTEwOC9lYjAyNDMyMFwiLCBcIjEwLjEwMzgvczQxNTk4LTAyMy00MTAzMi01XCIsIFwiMTAuMTE3Ny8wMTY1NTUxNTA4MDk1NzgxXCIsXG4gICAgICAgICAgICAgIFwiMTAuMTAxNi9qLnByYWdtYS4yMDEzLjA3LjAxMlwiLCBcIjEwLjExNDUvMTEyMTk0OS4xMTIxOTc5XCIpXG5haV9kb2lzICVpbiUgZGF0YWJhc2UifQ==
+</script>
+</div>
+<section id="exercise-6.1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="exercise-6.1">Exercise 6.1</h3>
+<p>Calculate the <strong>proportion of fabricated references</strong> (those not in the database). Remember that <code>!</code> reverses a logical value and that <code>mean()</code> of a logical vector gives the proportion of <code>TRUE</code>.</p>
+<script type="exercise-setup-u5_inventadas-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidTVfaW52ZW50YWRhcyIsInNldHVwIjp0cnVlfSwiY29kZSI6ImFpX2RvaXMgPC0gYyhcIjEwLjExMDgvZWIwMjQzMjBcIiwgXCIxMC4xMDE2L2ouaXBtLjIwMTkuMTAyMDQxXCIsIFwiMTAuMTAzOC9zNDE1OTgtMDIzLTQxMDMyLTVcIixcbiAgICAgICAgICAgICBcIjEwLjExNzcvMDE2NTU1MTUwODA5NTc4MVwiLCBcIjEwLjEwOTMvamlzL2FiYzEyM1wiKVxuZGF0YWJhc2UgPC0gYyhcIjEwLjExMDgvZWIwMjQzMjBcIiwgXCIxMC4xMDM4L3M0MTU5OC0wMjMtNDEwMzItNVwiLCBcIjEwLjExNzcvMDE2NTU1MTUwODA5NTc4MVwiLFxuICAgICAgICAgICAgICBcIjEwLjEwMTYvai5wcmFnbWEuMjAxMy4wNy4wMTJcIiwgXCIxMC4xMTQ1LzExMjE5NDkuMTEyMTk3OVwiKSJ9
+</script>
+<div>
+<div id="webr-3" class="exercise-cell">
+
+</div>
+<script type="webr-3-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidTVfaW52ZW50YWRhcyJ9LCJjb2RlIjoibWVhbighKGFpX2RvaXMgJWluJSBfX19fX18pKSJ9
+</script>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="u5_inventadas">
+<p>Compare with the vector <code>database</code>.</p>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="u5_inventadas">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="sc">!</span>(ai_dois <span class="sc">%in%</span> database))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>0.4: two of the five references do not appear. In practice, a DOI missing from a list does not prove it does not exist: you have to look it up at <code>doi.org</code>. But a DOI with a strange format or one that does not resolve is a clear sign of a fabricated reference.</p>
+</div>
+<script type="exercise-check-u5_inventadas-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InU1X2ludmVudGFkYXMifSwiY29kZSI6ImlmIChpc1RSVUUoYWxsLmVxdWFsKGFzLm51bWVyaWMoLnJlc3VsdCksIDAuNCkpKSB7XG4gIGxpc3QoY29ycmVjdCA9IFRSVUUsIG1lc3NhZ2UgPSBcIkNvcnJlY3Q6IDQwJSBhcmUgbm90IGluIHRoZSBkYXRhYmFzZS5cIilcbn0gZWxzZSB7XG4gIGxpc3QoY29ycmVjdCA9IEZBTFNFLCBtZXNzYWdlID0gXCJVc2UgZGF0YWJhc2UgaW5zaWRlICVpbiUuXCIpXG59In0=
+</script>
+</section>
+</section>
+<section id="lab-u5-modelo" class="level2">
+<h2 class="anchored" data-anchor-id="lab-u5-modelo">Lab: a miniature language model</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Lab · runs in your browser</p>
+</div>
+<p>This toy model has “read” only a dozen sentences about libraries and information. For each word it counts which words follow it and how often (a <strong>bigram model</strong>). Choose a starting word and the <strong>temperature</strong>: with low temperature it almost always picks the most likely word; with high temperature it takes more risks. Generate several sentences: you will see fluent and <strong>plausible</strong> texts, some of them false. Large models are vastly more complex, but they share this idea: predicting what comes next, not checking the truth.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="163" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 162;"><span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">texto</span></span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>seleccion <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">seleccion</span></span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>rango <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">rango</span></span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>boton <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">boton</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="172" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 171;"><span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a>corpus <span class="op">=</span> <span class="vs">`the library offers books and journals to students .</span></span>
+<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a><span class="vs">the library offers access to scientific databases .</span></span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="vs">students search for articles in databases .</span></span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a><span class="vs">students cite the articles with their reference .</span></span>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a><span class="vs">the reference includes the author and the year of the article .</span></span>
+<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a><span class="vs">the author of the article publishes in a scientific journal .</span></span>
+<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a><span class="vs">a scientific journal reviews the articles by peers .</span></span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="vs">the reviewed articles offer reliable information .</span></span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a><span class="vs">reliable information cites its sources .</span></span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="vs">disinformation imitates reliable information .</span></span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a><span class="vs">students verify the information in several sources .</span></span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a><span class="vs">the library catalogue offers books and articles .`</span></span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a>modelo <span class="op">=</span> {</span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> m <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>()<span class="op">;</span></span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">const</span> f <span class="kw">of</span> corpus<span class="op">.</span><span class="fu">split</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)) {</span>
+<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> p <span class="op">=</span> f<span class="op">.</span><span class="fu">trim</span>()<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\s+</span><span class="ss">/</span>)<span class="op">;</span></span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">+</span> <span class="dv">1</span> <span class="op">&lt;</span> p<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="op">!</span>m<span class="op">.</span><span class="fu">has</span>(p[i])) m<span class="op">.</span><span class="fu">set</span>(p[i]<span class="op">,</span> <span class="kw">new</span> <span class="bu">Map</span>())<span class="op">;</span></span>
+<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> s <span class="op">=</span> m<span class="op">.</span><span class="fu">get</span>(p[i])<span class="op">;</span> s<span class="op">.</span><span class="fu">set</span>(p[i <span class="op">+</span> <span class="dv">1</span>]<span class="op">,</span> (s<span class="op">.</span><span class="fu">get</span>(p[i <span class="op">+</span> <span class="dv">1</span>]) <span class="op">||</span> <span class="dv">0</span>) <span class="op">+</span> <span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> m<span class="op">;</span></span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>viewof inicio <span class="op">=</span> <span class="fu">seleccion</span>(<span class="st">"Starting word"</span><span class="op">,</span> [<span class="op">...</span>modelo<span class="op">.</span><span class="fu">keys</span>()]<span class="op">.</span><span class="fu">filter</span>(w <span class="kw">=&gt;</span> w <span class="op">!==</span> <span class="st">"."</span>)<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a<span class="op">.</span><span class="fu">localeCompare</span>(b<span class="op">,</span> <span class="st">"en"</span>))<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"the"</span>})</span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a>viewof temperatura <span class="op">=</span> <span class="fu">rango</span>(<span class="st">"Temperature"</span><span class="op">,</span> [<span class="fl">0.1</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">1</span>})</span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a>viewof generar <span class="op">=</span> <span class="fu">boton</span>(<span class="st">"Generate another sentence"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="202" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 201;"><span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a>probs <span class="op">=</span> (w<span class="op">,</span> t) <span class="kw">=&gt;</span> {</span>
+<span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> s <span class="op">=</span> modelo<span class="op">.</span><span class="fu">get</span>(w)<span class="op">;</span> <span class="cf">if</span> (<span class="op">!</span>s) <span class="cf">return</span> []<span class="op">;</span></span>
+<span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pares <span class="op">=</span> [<span class="op">...</span>s<span class="op">.</span><span class="fu">entries</span>()]<span class="op">,</span> pesos <span class="op">=</span> pares<span class="op">.</span><span class="fu">map</span>(([<span class="op">,</span> c]) <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span>(c<span class="op">,</span> <span class="dv">1</span> <span class="op">/</span> t))<span class="op">,</span> z <span class="op">=</span> pesos<span class="op">.</span><span class="fu">reduce</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a <span class="op">+</span> b<span class="op">,</span> <span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> pares<span class="op">.</span><span class="fu">map</span>(([p]<span class="op">,</span> i) <span class="kw">=&gt;</span> [p<span class="op">,</span> pesos[i] <span class="op">/</span> z])<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> b[<span class="dv">1</span>] <span class="op">-</span> a[<span class="dv">1</span>])<span class="op">;</span></span>
+<span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a>frase <span class="op">=</span> {</span>
+<span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a>  generar<span class="op">;</span></span>
+<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> out <span class="op">=</span> [inicio]<span class="op">;</span> <span class="kw">let</span> w <span class="op">=</span> inicio<span class="op">;</span></span>
+<span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> k <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> k <span class="op">&lt;</span> <span class="dv">18</span> <span class="op">&amp;&amp;</span> w <span class="op">!==</span> <span class="st">"."</span><span class="op">;</span> k<span class="op">++</span>) {</span>
+<span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> ps <span class="op">=</span> <span class="fu">probs</span>(w<span class="op">,</span> temperatura)<span class="op">;</span> <span class="cf">if</span> (<span class="op">!</span>ps<span class="op">.</span><span class="at">length</span>) <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> r <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>()<span class="op">,</span> acc <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> elegido <span class="op">=</span> ps[ps<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span>][<span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">const</span> [p<span class="op">,</span> q] <span class="kw">of</span> ps) { acc <span class="op">+=</span> q<span class="op">;</span> <span class="cf">if</span> (r <span class="op">&lt;=</span> acc) { elegido <span class="op">=</span> p<span class="op">;</span> <span class="cf">break</span><span class="op">;</span> } }</span>
+<span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a>    out<span class="op">.</span><span class="fu">push</span>(elegido)<span class="op">;</span> w <span class="op">=</span> elegido<span class="op">;</span></span>
+<span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> out<span class="op">.</span><span class="fu">join</span>(<span class="st">" "</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="st">" ."</span><span class="op">,</span> <span class="st">"."</span>)<span class="op">;</span></span>
+<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;div role="status"&gt;&lt;p&gt;&lt;strong&gt;Generated sentence:&lt;/strong&gt; "</span><span class="sc">${</span>frase<span class="sc">}</span><span class="vs">"&lt;/p&gt;</span></span>
+<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;p&gt;&lt;strong&gt;What can follow "</span><span class="sc">${</span>inicio<span class="sc">}</span><span class="vs">"&lt;/strong&gt; at temperature </span><span class="sc">${</span>temperatura<span class="sc">}</span><span class="vs">:&lt;/p&gt;</span></span>
+<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;table class="table table-sm"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Next word&lt;/th&gt;&lt;th scope="col"&gt;Probability&lt;/th&gt;&lt;th scope="col"&gt;&lt;span class="visually-hidden"&gt;Bar&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;</span></span>
+<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a><span class="sc">${</span><span class="fu">probs</span>(inicio<span class="op">,</span> temperatura)<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">6</span>)<span class="op">.</span><span class="fu">map</span>(([p<span class="op">,</span> q]) <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;tr&gt;&lt;td&gt;</span><span class="sc">${</span>p<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>(<span class="dv">100</span> <span class="op">*</span> q)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">0</span>)<span class="sc">}</span><span class="vs">%&lt;/td&gt;&lt;td style="width:50%"&gt;&lt;div style="height:.8rem;border-radius:2px;background:#2a78d6;width:</span><span class="sc">${</span><span class="dv">100</span> <span class="op">*</span> q<span class="sc">}</span><span class="vs">%"&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`</span>)<span class="sc">}</span></span>
+<span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<p><strong>Try:</strong> generate sentences from “the” at temperature 2. Do any of them claim something the corpus does not say? That is, on a small scale, a hallucination.</p>
+</div>
+</section>
+<section id="lab-u5-verificar" class="level2">
+<h2 class="anchored" data-anchor-id="lab-u5-verificar">Lab: verifying references</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Lab · live data from doi.org and Crossref</p>
+</div>
+<p>Paste the DOIs an AI has given you (one per line; the full link also works). The lab checks at <strong>doi.org</strong> whether each DOI exists and, if it is registered with Crossref, retrieves the title and year so you can check that they match what the AI told you.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="238" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 237;"><span id="cb5-238"><a href="#cb5-238" aria-hidden="true" tabindex="-1"></a>viewof lista <span class="op">=</span> <span class="fu">area</span>(<span class="st">"DOIs (one per line)"</span><span class="op">,</span> {<span class="dt">rows</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">submit</span><span class="op">:</span> <span class="st">"Verify"</span><span class="op">,</span></span>
+<span id="cb5-239"><a href="#cb5-239" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="st">"10.1038/s41598-023-41032-5</span><span class="sc">\n</span><span class="st">10.1016/j.ipm.2019.102041</span><span class="sc">\n</span><span class="st">10.1093/jis/abc123</span><span class="sc">\n</span><span class="st">https://doi.org/10.1145/3442188.3445922"</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="244" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 243;"><span id="cb6-244"><a href="#cb6-244" aria-hidden="true" tabindex="-1"></a>verificacion <span class="op">=</span> {</span>
+<span id="cb6-245"><a href="#cb6-245" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> dois <span class="op">=</span> lista<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\n+</span><span class="ss">/</span>)<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="fu">trim</span>()<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss">https</span><span class="sc">?</span><span class="ss">:</span><span class="sc">\/\/(</span><span class="ss">dx</span><span class="sc">\.)?</span><span class="ss">doi</span><span class="sc">\.</span><span class="ss">org</span><span class="sc">\/</span><span class="ss">/i</span><span class="op">,</span> <span class="st">""</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss">doi:</span><span class="sc">\s*</span><span class="ss">/i</span><span class="op">,</span> <span class="st">""</span>))<span class="op">.</span><span class="fu">filter</span>(<span class="bu">Boolean</span>)<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">20</span>)<span class="op">;</span></span>
+<span id="cb6-246"><a href="#cb6-246" aria-hidden="true" tabindex="-1"></a>  <span class="kw">yield</span> {<span class="dt">cargando</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">;</span></span>
+<span id="cb6-247"><a href="#cb6-247" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> uno <span class="op">=</span> <span class="kw">async</span> d <span class="kw">=&gt;</span> {</span>
+<span id="cb6-248"><a href="#cb6-248" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">!</span><span class="ss">/</span><span class="sc">^</span><span class="ss">10</span><span class="sc">\.\d{4,9}\/\S+$</span><span class="ss">/</span><span class="op">.</span><span class="fu">test</span>(d)) <span class="cf">return</span> {d<span class="op">,</span> <span class="dt">estado</span><span class="op">:</span> <span class="st">"formato"</span><span class="op">,</span> <span class="dt">texto</span><span class="op">:</span> <span class="st">"Not in DOI format."</span>}<span class="op">;</span></span>
+<span id="cb6-249"><a href="#cb6-249" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span> {</span>
+<span id="cb6-250"><a href="#cb6-250" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> h <span class="op">=</span> <span class="cf">await</span> (<span class="cf">await</span> <span class="fu">fetch</span>(<span class="st">"https://doi.org/api/handles/"</span> <span class="op">+</span> <span class="pp">encodeURI</span>(d)))<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
+<span id="cb6-251"><a href="#cb6-251" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (h<span class="op">.</span><span class="at">responseCode</span> <span class="op">!==</span> <span class="dv">1</span>) <span class="cf">return</span> {d<span class="op">,</span> <span class="dt">estado</span><span class="op">:</span> <span class="st">"no"</span><span class="op">,</span> <span class="dt">texto</span><span class="op">:</span> <span class="st">"Does not exist at doi.org."</span>}<span class="op">;</span></span>
+<span id="cb6-252"><a href="#cb6-252" aria-hidden="true" tabindex="-1"></a>      <span class="cf">try</span> {</span>
+<span id="cb6-253"><a href="#cb6-253" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> r <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(<span class="st">"https://api.crossref.org/works/"</span> <span class="op">+</span> <span class="pp">encodeURIComponent</span>(d))<span class="op">;</span></span>
+<span id="cb6-254"><a href="#cb6-254" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (r<span class="op">.</span><span class="at">ok</span>) { <span class="kw">const</span> m <span class="op">=</span> (<span class="cf">await</span> r<span class="op">.</span><span class="fu">json</span>())<span class="op">.</span><span class="at">message</span><span class="op">;</span></span>
+<span id="cb6-255"><a href="#cb6-255" aria-hidden="true" tabindex="-1"></a>          <span class="kw">const</span> anio <span class="op">=</span> (m<span class="op">.</span><span class="at">issued</span><span class="op">?.</span>[<span class="st">"date-parts"</span>]<span class="op">?.</span>[<span class="dv">0</span>]<span class="op">?.</span>[<span class="dv">0</span>]) <span class="op">??</span> <span class="st">"n.d."</span><span class="op">;</span></span>
+<span id="cb6-256"><a href="#cb6-256" aria-hidden="true" tabindex="-1"></a>          <span class="cf">return</span> {d<span class="op">,</span> <span class="dt">estado</span><span class="op">:</span> <span class="st">"si"</span><span class="op">,</span> <span class="dt">texto</span><span class="op">:</span> <span class="vs">`</span><span class="sc">${</span>(m<span class="op">.</span><span class="at">title</span> <span class="op">||</span> [<span class="st">""</span>])[<span class="dv">0</span>]<span class="sc">}</span><span class="vs"> (</span><span class="sc">${</span>anio<span class="sc">}</span><span class="vs">). </span><span class="sc">${</span>(m[<span class="st">"container-title"</span>] <span class="op">||</span> [<span class="st">""</span>])[<span class="dv">0</span>]<span class="sc">}</span><span class="vs">`</span>}<span class="op">;</span> }</span>
+<span id="cb6-257"><a href="#cb6-257" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">catch</span> (e) {}</span>
+<span id="cb6-258"><a href="#cb6-258" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> {d<span class="op">,</span> <span class="dt">estado</span><span class="op">:</span> <span class="st">"si"</span><span class="op">,</span> <span class="dt">texto</span><span class="op">:</span> <span class="st">"Exists (registered outside Crossref, for example with DataCite)."</span>}<span class="op">;</span></span>
+<span id="cb6-259"><a href="#cb6-259" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">catch</span> (e) { <span class="cf">return</span> {d<span class="op">,</span> <span class="dt">estado</span><span class="op">:</span> <span class="st">"error"</span><span class="op">,</span> <span class="dt">texto</span><span class="op">:</span> <span class="st">"Could not be checked (offline?)."</span>}<span class="op">;</span> }</span>
+<span id="cb6-260"><a href="#cb6-260" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb6-261"><a href="#cb6-261" aria-hidden="true" tabindex="-1"></a>  <span class="kw">yield</span> {<span class="dt">filas</span><span class="op">:</span> <span class="cf">await</span> <span class="bu">Promise</span><span class="op">.</span><span class="fu">all</span>(dois<span class="op">.</span><span class="fu">map</span>(uno))}<span class="op">;</span></span>
+<span id="cb6-262"><a href="#cb6-262" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb7" data-startfrom="267" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 266;"><span id="cb7-267"><a href="#cb7-267" aria-hidden="true" tabindex="-1"></a>verificacion<span class="op">.</span><span class="at">cargando</span> <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;p role="status"&gt;Verifying…&lt;/p&gt;`</span> <span class="op">:</span> <span class="fu">html</span><span class="vs">`&lt;table class="table table-sm" role="status"&gt;</span></span>
+<span id="cb7-268"><a href="#cb7-268" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;caption&gt;</span><span class="sc">${</span>verificacion<span class="op">.</span><span class="at">filas</span><span class="op">.</span><span class="fu">filter</span>(f <span class="kw">=&gt;</span> f<span class="op">.</span><span class="at">estado</span> <span class="op">===</span> <span class="st">"si"</span>)<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> of </span><span class="sc">${</span>verificacion<span class="op">.</span><span class="at">filas</span><span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> DOIs exist&lt;/caption&gt;</span></span>
+<span id="cb7-269"><a href="#cb7-269" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;DOI&lt;/th&gt;&lt;th scope="col"&gt;Exists?&lt;/th&gt;&lt;th scope="col"&gt;What the record says&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;</span></span>
+<span id="cb7-270"><a href="#cb7-270" aria-hidden="true" tabindex="-1"></a><span class="sc">${</span>verificacion<span class="op">.</span><span class="at">filas</span><span class="op">.</span><span class="fu">map</span>(f <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;tr&gt;&lt;td&gt;&lt;code&gt;</span><span class="sc">${</span>f<span class="op">.</span><span class="at">d</span><span class="sc">}</span><span class="vs">&lt;/code&gt;&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>f<span class="op">.</span><span class="at">estado</span> <span class="op">===</span> <span class="st">"si"</span> <span class="op">?</span> <span class="st">"✓ Yes"</span> <span class="op">:</span> f<span class="op">.</span><span class="at">estado</span> <span class="op">===</span> <span class="st">"no"</span> <span class="op">?</span> <span class="st">"✗ No"</span> <span class="op">:</span> <span class="st">"?"</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>f<span class="op">.</span><span class="at">texto</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;/tr&gt;`</span>)<span class="sc">}</span></span>
+<span id="cb7-271"><a href="#cb7-271" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/tbody&gt;&lt;/table&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<p>A DOI that exists is not enough: check that <strong>the title, authors and year</strong> match the reference the AI gave you. <span class="citation" data-cites="walters2023">Walters &amp; Wilder (<a href="#ref-walters2023" role="doc-biblioref">2023</a>)</span> found, as well as fabricated references, many real references with errors in their details.</p>
+</div>
+</section>
+<section id="lab-u5-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="lab-u5-prompt">Lab: review your prompt</h2>
+<div class="laboratorio">
+<div class="laboratorio-etiqueta">
+<p>Lab · runs in your browser · sends nothing to any AI</p>
+</div>
+<p>A good prompt usually gives <strong>context</strong>, a specific <strong>task</strong>, the <strong>format</strong> of the answer, <strong>limits</strong> and a request for <strong>verification</strong>. Write yours: the lab looks for those pieces by keywords and suggests what to add. It is a rough guide, not a mark.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb8" data-startfrom="289" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 288;"><span id="cb8-289"><a href="#cb8-289" aria-hidden="true" tabindex="-1"></a>areaP <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
+<span id="cb8-290"><a href="#cb8-290" aria-hidden="true" tabindex="-1"></a>viewof prompt <span class="op">=</span> <span class="fu">areaP</span>(<span class="st">"Your prompt"</span><span class="op">,</span> {<span class="dt">rows</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"Give me a summary of climate change."</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-7-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-7-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb9" data-startfrom="294" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 293;"><span id="cb9-294"><a href="#cb9-294" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb9-295"><a href="#cb9-295" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> t <span class="op">=</span> prompt<span class="op">.</span><span class="fu">toLowerCase</span>()<span class="op">;</span></span>
+<span id="cb9-296"><a href="#cb9-296" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> piezas <span class="op">=</span> [</span>
+<span id="cb9-297"><a href="#cb9-297" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Context"</span><span class="op">,</span> <span class="ss">/</span><span class="sc">\b(</span><span class="ss">i am</span><span class="sc">|</span><span class="ss">i'm</span><span class="sc">|</span><span class="ss">i study</span><span class="sc">|</span><span class="ss">for </span><span class="sc">(</span><span class="ss">a</span><span class="sc">|</span><span class="ss">an</span><span class="sc">|</span><span class="ss">my</span><span class="sc">)|</span><span class="ss">course</span><span class="sc">|</span><span class="ss">degree</span><span class="sc">|</span><span class="ss">module</span><span class="sc">|</span><span class="ss">assignment</span><span class="sc">|</span><span class="ss">level</span><span class="sc">|</span><span class="ss">aimed at</span><span class="sc">|</span><span class="ss">audience</span><span class="sc">)\b</span><span class="ss">/</span><span class="op">,</span> <span class="st">"Say who you are and what you need it for: </span><span class="sc">\"</span><span class="st">I am a first-year journalism student preparing a 5-minute presentation</span><span class="sc">\"</span><span class="st">."</span>]<span class="op">,</span></span>
+<span id="cb9-298"><a href="#cb9-298" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Specific task"</span><span class="op">,</span> <span class="ss">/</span><span class="sc">\b(</span><span class="ss">summari</span><span class="sc">[sz]</span><span class="ss">e</span><span class="sc">|</span><span class="ss">summary</span><span class="sc">|</span><span class="ss">explain</span><span class="sc">|</span><span class="ss">compare</span><span class="sc">|</span><span class="ss">list</span><span class="sc">|</span><span class="ss">identify</span><span class="sc">|</span><span class="ss">classify</span><span class="sc">|</span><span class="ss">propose</span><span class="sc">|</span><span class="ss">review</span><span class="sc">|</span><span class="ss">correct</span><span class="sc">|</span><span class="ss">translate</span><span class="sc">|</span><span class="ss">analy</span><span class="sc">[sz]</span><span class="ss">e</span><span class="sc">|</span><span class="ss">draft</span><span class="sc">|</span><span class="ss">write</span><span class="sc">)\b</span><span class="ss">/</span><span class="op">,</span> <span class="st">"Use a precise action verb: summarise, compare, classify…"</span>]<span class="op">,</span></span>
+<span id="cb9-299"><a href="#cb9-299" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Format"</span><span class="op">,</span> <span class="ss">/</span><span class="sc">\b(</span><span class="ss">table</span><span class="sc">|</span><span class="ss">list</span><span class="sc">|</span><span class="ss">bullet</span><span class="sc">|</span><span class="ss">bullets</span><span class="sc">|</span><span class="ss">paragraph</span><span class="sc">|</span><span class="ss">paragraphs</span><span class="sc">|</span><span class="ss">words</span><span class="sc">|</span><span class="ss">lines</span><span class="sc">|</span><span class="ss">outline</span><span class="sc">|</span><span class="ss">sections</span><span class="sc">|</span><span class="ss">points</span><span class="sc">)\b|\d+\s*(</span><span class="ss">words</span><span class="sc">|</span><span class="ss">lines</span><span class="sc">|</span><span class="ss">points</span><span class="sc">|</span><span class="ss">ideas</span><span class="sc">)</span><span class="ss">/</span><span class="op">,</span> <span class="st">"State the format and length: </span><span class="sc">\"</span><span class="st">in a three-column table</span><span class="sc">\"</span><span class="st">, </span><span class="sc">\"</span><span class="st">in 150 words</span><span class="sc">\"</span><span class="st">."</span>]<span class="op">,</span></span>
+<span id="cb9-300"><a href="#cb9-300" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Limits or sources"</span><span class="op">,</span> <span class="ss">/</span><span class="sc">\b(</span><span class="ss">only</span><span class="sc">|</span><span class="ss">without</span><span class="sc">|</span><span class="ss">do not invent</span><span class="sc">|</span><span class="ss">don't invent</span><span class="sc">|</span><span class="ss">based on</span><span class="sc">|</span><span class="ss">from the text</span><span class="sc">|</span><span class="ss">according to</span><span class="sc">|</span><span class="ss">attached</span><span class="sc">|</span><span class="ss">since 20</span><span class="sc">\d\d)\b</span><span class="ss">/</span><span class="op">,</span> <span class="st">"Set limits: </span><span class="sc">\"</span><span class="st">based only on the text I paste</span><span class="sc">\"</span><span class="st">, </span><span class="sc">\"</span><span class="st">without inventing data</span><span class="sc">\"</span><span class="st">."</span>]<span class="op">,</span></span>
+<span id="cb9-301"><a href="#cb9-301" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Verification"</span><span class="op">,</span> <span class="ss">/</span><span class="sc">\b(</span><span class="ss">cite</span><span class="sc">|</span><span class="ss">sources</span><span class="sc">|</span><span class="ss">references</span><span class="sc">|</span><span class="ss">doi</span><span class="sc">|</span><span class="ss">tell me </span><span class="sc">(</span><span class="ss">if</span><span class="sc">|</span><span class="ss">when</span><span class="sc">)|</span><span class="ss">not sure</span><span class="sc">|</span><span class="ss">uncertain</span><span class="sc">|</span><span class="ss">uncertainty</span><span class="sc">|</span><span class="ss">check</span><span class="sc">|</span><span class="ss">verify</span><span class="sc">)\b</span><span class="ss">/</span><span class="op">,</span> <span class="st">"Ask it to say where each fact comes from and what it does not know: </span><span class="sc">\"</span><span class="st">give your sources and tell me if you are not sure</span><span class="sc">\"</span><span class="st">."</span>]]<span class="op">;</span></span>
+<span id="cb9-302"><a href="#cb9-302" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> res <span class="op">=</span> piezas<span class="op">.</span><span class="fu">map</span>(([n<span class="op">,</span> re<span class="op">,</span> consejo]) <span class="kw">=&gt;</span> [n<span class="op">,</span> re<span class="op">.</span><span class="fu">test</span>(t)<span class="op">,</span> consejo])<span class="op">;</span></span>
+<span id="cb9-303"><a href="#cb9-303" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> ok <span class="op">=</span> res<span class="op">.</span><span class="fu">filter</span>((r) <span class="kw">=&gt;</span> r[<span class="dv">1</span>])<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb9-304"><a href="#cb9-304" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div role="status" aria-live="polite"&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb9-305"><a href="#cb9-305" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;p&gt;&lt;strong&gt;</span><span class="sc">${</span>ok<span class="sc">}</span><span class="vs"> of 5 pieces&lt;/strong&gt; detected.&lt;/p&gt;&lt;ul class="list-unstyled"&gt;</span><span class="sc">${</span>res<span class="op">.</span><span class="fu">map</span>(([n<span class="op">,</span> o<span class="op">,</span> c]) <span class="kw">=&gt;</span> <span class="vs">`&lt;li class="mb-1"&gt;</span><span class="sc">${</span>o <span class="op">?</span> <span class="st">"✓"</span> <span class="op">:</span> <span class="st">"○"</span><span class="sc">}</span><span class="vs"> &lt;strong&gt;</span><span class="sc">${</span>n<span class="sc">}</span><span class="vs">&lt;/strong&gt;</span><span class="sc">${</span>o <span class="op">?</span> <span class="st">""</span> <span class="op">:</span> <span class="vs">` — </span><span class="sc">${</span>c<span class="sc">}</span><span class="vs">`</span><span class="sc">}</span><span class="vs">&lt;/li&gt;`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="sc">}</span><span class="vs">&lt;/ul&gt;</span><span class="sc">${</span>ok <span class="op">&gt;=</span> <span class="dv">4</span> <span class="op">?</span> <span class="st">"&lt;p&gt;A good prompt. Remember: even with a good prompt, verify what the AI answers (section 5).&lt;/p&gt;"</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb9-306"><a href="#cb9-306" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d<span class="op">;</span></span>
+<span id="cb9-307"><a href="#cb9-307" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-8" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<p>Try to improve the example prompt until it has all five pieces and compare it with the one in example 2.</p>
+</div>
+</section>
+<section id="worked-examples" class="level2">
+<h2 class="anchored" data-anchor-id="worked-examples">Worked examples</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Example 1 · Auditing a bibliography generated by an AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You ask an assistant for five references on “reproducibility in psychology”. Procedure for each reference:</p>
+<ol type="1">
+<li><strong>Does it have a DOI?</strong> Open it at <code>https://doi.org/</code> followed by the DOI. If it does not resolve, be suspicious.</li>
+<li><strong>If it resolves, compare</strong> title, authors, journal and year with what the AI gave: sometimes the DOI exists but belongs to another article.</li>
+<li><strong>If it has no DOI</strong>, search for the exact title in quotation marks in Google Scholar, Crossref or OpenAlex.</li>
+<li><strong>Classify</strong> each reference: correct, with errors (year, authors, pages) or <strong>fabricated</strong>.</li>
+<li><strong>Do not use</strong> any reference you have not located and read at least in its abstract.</li>
+</ol>
+<p><strong>Common result:</strong> some references are real, others mix the authors of one work with the title of another, and one does not exist. This is what is known as a <strong>hallucination</strong>: the model generates plausible text, it does not query a database (unless it uses a search tool, and even then it is worth checking).</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Example 2 · Improving a prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Vague prompt:</strong> “Tell me about open science”.</p>
+<p><strong>Improved prompt:</strong> &gt; Act as a tutor for an undergraduate student of Information Science. Explain in 300 words what open science is, with three examples of practices (open access, open data, preregistration). Use clear language. Do not include references: I will search for them myself in databases. At the end, suggest three questions to check whether I have understood.</p>
+<p>Elements that improve the result: <strong>role</strong>, <strong>audience</strong>, <strong>specific task</strong>, <strong>length</strong>, <strong>format</strong> and <strong>limits</strong> (here, avoiding references that could be fabricated).</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Example 3 · A figure that sounds right
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An AI states: “70% of psychology studies cannot be replicated, according to the 2015 project”. Verification: the Open Science Collaboration (2015) project replicated 100 studies and obtained significant results in the same direction in 36% of the replications, compared with 97% of the originals. The AI’s figure is a simplification that mixes criteria: you need to go to the source and cite the exact figure with its definition.</p>
+</div>
+</div>
+</section>
+<section id="graded-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="graded-exercises">Graded exercises</h2>
+<p><strong>Basic.</strong> Why can a language model fabricate a reference that looks correct?</p>
+<div class="webex-solution">
+<button>See solution</button>
+<p>Because it generates the most likely sequence of words from patterns in its training: it produces something shaped like a reference (plausible authors, a real journal, a year) without checking that it exists.</p>
+</div>
+<p><strong>Intermediate.</strong> Rewrite this prompt so that it is useful and safe: “Write the literature review for my bachelor’s thesis”.</p>
+<div class="webex-solution">
+<button>See solution</button>
+<p>Example: “My bachelor’s thesis is about [topic]. Propose a five-section structure for the literature review, with the key concepts of each section and the search terms I should use in Dialnet and Scopus. Do not write the text and do not invent references”. This way the AI helps you plan and does not replace your work.</p>
+</div>
+<p><strong>Advanced.</strong> Ask two different AI assistants for ten references on a topic you are interested in, audit them all with the procedure in example 1 and compare the error rates.</p>
+<div class="webex-solution">
+<button>See guidance</button>
+<p>Present a table with each reference, its status (correct, with errors, fabricated) and the evidence (DOI, search). State the date and the model used: results change between versions.</p>
+</div>
+</section>
+<section id="activities" class="level2">
+<h2 class="anchored" data-anchor-id="activities">Activities</h2>
+<div class="ia ia-clasificar" id="ia-u5-riesgo"><script type="application/json" class="ia-datos">{"categorias":["Low","Medium","High","Unacceptable"],"enunciado":"","explicacion":"","items":[{"categoria":"Low","explicacion":"","texto":"Asking it to check the spelling of a text you wrote"},{"categoria":"Medium","explicacion":"Check the explanation against a reliable source.","texto":"Asking it to explain a concept you do not understand"},{"categoria":"High","explicacion":"Many may be fabricated.","texto":"Asking for a list of references for your assignment and copying it\nwithout checking"},{"categoria":"Medium","explicacion":"The summary may omit or invent.","texto":"Asking it to summarise an article you are not going to read"},{"categoria":"Unacceptable","explicacion":"","texto":"Submitting work written by the AI as your own"},{"categoria":"Low","explicacion":"","texto":"Generating ideas to choose the topic of your assignment"},{"categoria":"High","explicacion":"It puts other people’s privacy at risk.","texto":"Uploading your group members’ personal data so that it assigns\ntasks"}],"tipo":"clasificar","titulo":"How risky is this use?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-u5-reto"><script type="application/json" class="ia-datos">{"categorias":["Truthfulness","Currency","Explainability","Bias","Efficiency","Detection"],"enunciado":"","explicacion":"","items":[{"categoria":"Currency","explicacion":"","texto":"The assistant does not know who won an election last month"},{"categoria":"Explainability","explicacion":"","texto":"Nobody can explain why the model chose that answer"},{"categoria":"Bias","explicacion":"","texto":"The model associates “nurse” with women and “surgeon” with men"},{"categoria":"Efficiency","explicacion":"","texto":"Training a large model uses as much electricity as hundreds of homes\nin a year"},{"categoria":"Detection","explicacion":"","texto":"A lecturer cannot know for sure whether a text was written by an\nAI"},{"categoria":"Truthfulness","explicacion":"","texto":"The model cites an article that does not exist"}],"tipo":"clasificar","titulo":"Which technical challenge is it?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Common mistakes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Using AI as a literature search engine</strong> without verifying each reference.</li>
+<li><strong>Asking the AI itself whether the reference exists</strong>: it may confirm it with complete confidence even if it is false.</li>
+<li><strong>Taking fluency for accuracy</strong>: a well-written text is not a true text.</li>
+<li><strong>Delegating what the course wants you to learn.</strong> AI can help you learn, not learn for you.</li>
+<li><strong>Not declaring its use</strong> when the teaching staff require it (next chapter).</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="reto-u5" class="level2">
+<h2 class="anchored" data-anchor-id="reto-u5">Assessed challenge</h2>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Units 6 and 7 challenge · Auditing an AI’s references
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Ask a generative AI assistant for a list of <strong>ten academic references</strong> on a topic you are interested in. Save the full prompt and answer.</li>
+<li>Verify <strong>each reference</strong>: does it exist? Are the authors, year, title, journal and DOI correct? Does the content match the topic?</li>
+<li>Classify each one as <strong>correct</strong>, <strong>real with errors</strong> or <strong>fabricated</strong>, and calculate the proportions.</li>
+<li>Repeat the search in a database (Unit 2) and compare the quality of the results and the time taken.</li>
+</ol>
+<p><strong>Submission:</strong> a report made with the <a href="plantillas/entrega_reto.qmd">submission template</a>. It is assessed with the rubric included in the template. This challenge <strong>has no solution in the book</strong>: each student works on a different topic and the teaching staff mark it.</p>
+</div>
+</div>
+</section>
+<section id="self-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="self-assessment">Self-assessment</h2>
+<p>Answer all the questions and press <strong>Show answers</strong>: correct answers turn green, wrong ones red, and you will see your score. You can change your answers and check again. It does not count towards your mark.</p>
+<div class="webex-check webex-box">
+<ol type="1">
+<li>A language model generates text by predicting the most likely fragment that follows a given text. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="answer">TRUE</option><option value="x">FALSE</option></select></li>
+<li>An AI answer that looks correct but is false or invented is called a <input class="webex-solveme nospaces ignorecase" size="15" aria-label="Type your answer" data-answer="[&quot;hallucination&quot;]"></li>
+<li>If an AI gives a reference with a DOI, authors and journal, the reference exists. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">TRUE</option><option value="answer">FALSE</option></select></li>
+<li>Which of these uses is riskiest? <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">Checking the spelling of your text</option><option value="x">Asking for initial ideas</option><option value="answer">Searching for literature without verifying it</option></select></li>
+<li>If 3 of 12 references generated by an AI are fabricated, the proportion fabricated is <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">0.12</option><option value="answer">0.25</option><option value="x">0.33</option><option value="x">3</option></select></li>
+<li>Retrieval-augmented generation completely eliminates errors. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">TRUE</option><option value="answer">FALSE</option></select></li>
+<li>Why can a language model fabricate a plausible reference?</li>
+</ol>
+<p></p><div class="webex-radiogroup" role="radiogroup" aria-label="Answer options" id="radio_libro_1"><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>Because it copies references from a database with errors</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="answer"> <span>Because it generates plausible text by combining patterns, without checking that the reference exists</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>Because its goal is to deceive the user</span></label></div><p></p>
+<ol start="8" type="1">
+<li>What a language model knows depends on its <input class="webex-solveme nospaces ignorecase" size="10" aria-label="Type your answer" data-answer="[&quot;training&quot;]"> data</li>
+<li>Detectors exist today that distinguish AI-generated text from human text with complete reliability. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">TRUE</option><option value="answer">FALSE</option></select></li>
+<li>To check whether a reference given by an AI exists, the most reliable approach is to <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">ask the same AI whether it exists</option><option value="answer">look it up by its DOI or title in Crossref, OpenAlex or a database</option><option value="x">check that the format looks correct</option></select></li>
+</ol>
+</div>
+<div class="webex-solution">
+<button>See explanations</button>
+<ul>
+<li>It repeats that prediction to write the answer.</li>
+<li>A plausible but false answer.</li>
+<li>It may be fabricated: it must be verified.</li>
+<li>Walters and Wilder found many fabricated references.</li>
+<li>3 / 12 = 0.25.</li>
+<li>It improves currency, but sources must be checked.</li>
+<li>It produces what is plausible, not what is true; there is no intent.</li>
+<li>It may not know recent facts and may inherit their biases.</li>
+<li>Detection is one of the open technical challenges.</li>
+<li>The AI may confidently confirm a false reference.</li>
+</ul>
+</div>
+</section>
+<section id="further-resources" class="level2">
+<h2 class="anchored" data-anchor-id="further-resources">Further resources</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Resource</th>
+<th>What it is for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://www.crossref.org/">Crossref</a></td>
+<td>Checking DOIs and metadata</td>
+</tr>
+<tr class="even">
+<td><a href="https://openalex.org/">OpenAlex</a></td>
+<td>Checking whether an article exists</td>
+</tr>
+<tr class="odd">
+<td><a href="https://unesdoc.unesco.org/ark:/48223/pf0000386693">UNESCO – Guidance for generative AI in education and research (Miao &amp; Holmes, 2023)</a></td>
+<td>International guidance</td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="webr-data">
+eyJvcHRpb25zIjp7ImJhc2VVcmwiOiJ3ZWJyLyJ9LCJwYWNrYWdlcyI6eyJwa2dzIjpbImV2YWx1YXRlIiwia25pdHIiLCJodG1sdG9vbHMiXSwicmVwb3MiOlsid2Vici1yZXBvIl19LCJyZW5kZXJfZGYiOiJkZWZhdWx0In0=
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0zIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICAvLyBXYWl0IGZvciBvdXRwdXQgdG8gYmUgd3JpdHRlbiB0byB0aGUgRE9NLCB0aGVuIHRyaWdnZXIgd2lkZ2V0IHJlbmRlcmluZ1xuICBhd2FpdCBfd2Vicl92YWx1ZV8zO1xuICBpZiAod2luZG93LkhUTUxXaWRnZXRzKSB7XG4gICAgd2luZG93LkhUTUxXaWRnZXRzLnN0YXRpY1JlbmRlcigpO1xuICB9XG4gIGlmICh3aW5kb3cuUGFnZWRUYWJsZURvYykge1xuICAgIHdpbmRvdy5QYWdlZFRhYmxlRG9jLmluaXRBbGwoKTtcbiAgfVxufVxuIn0seyJjZWxsTmFtZSI6IndlYnItMyIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzMgPSB7XG4gIGNvbnN0IHsgV2ViUkV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici0zLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgLy8gRGVmYXVsdCBleGVyY2lzZSBjb25maWd1cmF0aW9uXG4gIGNvbnN0IG9wdGlvbnMgPSBPYmplY3QuYXNzaWduKFxuICAgIHtcbiAgICAgIGlkOiBcIndlYnItMy1jb250ZW50c1wiLFxuICAgICAgZW52aXI6IGBleGVyY2lzZS1lbnYtJHtibG9jay5hdHRyLmV4ZXJjaXNlfWAsXG4gICAgICBlcnJvcjogZmFsc2UsXG4gICAgICBjYXB0aW9uOiAnRXhlcmNpc2UnLFxuICAgIH0sXG4gICAgYmxvY2suYXR0clxuICApO1xuXG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxudmlld29mIF93ZWJyX3ZhbHVlXzMgPSB3ZWJST2pzLnByb2Nlc3MoX3dlYnJfZWRpdG9yXzMsIHt9KTtcbl93ZWJyX2ZlZWRiYWNrXzMgPSB7XG4gIGNvbnN0IHsgV2ViUkdyYWRlciB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3QgZW1wdHlGZWVkYmFjayA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuXG4gIGNvbnN0IGdyYWRlciA9IG5ldyBXZWJSR3JhZGVyKF93ZWJyX3ZhbHVlXzMuZXZhbHVhdG9yKTtcbiAgY29uc3QgZmVlZGJhY2sgPSBhd2FpdCBncmFkZXIuZ3JhZGVFeGVyY2lzZSgpO1xuICBpZiAoIWZlZWRiYWNrKSByZXR1cm4gZW1wdHlGZWVkYmFjaztcbiAgcmV0dXJuIGZlZWRiYWNrO1xufVxuIn0seyJjZWxsTmFtZSI6IndlYnItd2lkZ2V0LTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJ7XG4gIC8vIFdhaXQgZm9yIG91dHB1dCB0byBiZSB3cml0dGVuIHRvIHRoZSBET00sIHRoZW4gdHJpZ2dlciB3aWRnZXQgcmVuZGVyaW5nXG4gIGF3YWl0IF93ZWJyX3ZhbHVlXzE7XG4gIGlmICh3aW5kb3cuSFRNTFdpZGdldHMpIHtcbiAgICB3aW5kb3cuSFRNTFdpZGdldHMuc3RhdGljUmVuZGVyKCk7XG4gIH1cbiAgaWYgKHdpbmRvdy5QYWdlZFRhYmxlRG9jKSB7XG4gICAgd2luZG93LlBhZ2VkVGFibGVEb2MuaW5pdEFsbCgpO1xuICB9XG59XG4ifSx7ImNlbGxOYW1lIjoid2Vici0xIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldCIsInNvdXJjZSI6InZpZXdvZiBfd2Vicl9lZGl0b3JfMSA9IHtcbiAgY29uc3QgeyBXZWJSRXhlcmNpc2VFZGl0b3IsIGI2NERlY29kZSB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3Qgc2NyaXB0Q29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ3ZWJyLTEtY29udGVudHNcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBibG9jayA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKHNjcmlwdENvbnRlbnQpKTtcblxuICBjb25zdCBvcHRpb25zID0gT2JqZWN0LmFzc2lnbih7IGlkOiBgd2Vici0xLWNvbnRlbnRzYCB9LCBibG9jay5hdHRyKTtcbiAgY29uc3QgZWRpdG9yID0gbmV3IFdlYlJFeGVyY2lzZUVkaXRvcih3ZWJST2pzLndlYlJQcm9taXNlLCBibG9jay5jb2RlLCBvcHRpb25zKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl93ZWJyX3ZhbHVlXzEgPSB3ZWJST2pzLnByb2Nlc3MoX3dlYnJfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJ3ZWJyLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJ3ZWJST2pzID0ge1xuICBjb25zdCB7IFdlYlIsIENoYW5uZWxUeXBlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lLldlYlI7XG4gIGNvbnN0IHtcbiAgICBXZWJSRXZhbHVhdG9yLFxuICAgIFdlYlJFbnZpcm9ubWVudE1hbmFnZXIsXG4gICAgc2V0dXBSLFxuICAgIGI2NERlY29kZSxcbiAgICBjb2xsYXBzZVBhdGhcbiAgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG5cbiAgY29uc3Qgc3RhdHVzQ29udGFpbmVyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJleGVyY2lzZS1sb2FkaW5nLXN0YXR1c1wiKTtcbiAgY29uc3QgaW5kaWNhdG9yQ29udGFpbmVyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJleGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaW5kaWNhdG9yQ29udGFpbmVyLmNsYXNzTGlzdC5yZW1vdmUoXCJkLW5vbmVcIik7XG5cbiAgbGV0IHN0YXR1c1RleHQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwiZGl2XCIpXG4gIHN0YXR1c1RleHQuY2xhc3NMaXN0ID0gXCJleGVyY2lzZS1sb2FkaW5nLWRldGFpbHNcIjtcbiAgc3RhdHVzVGV4dCA9IHN0YXR1c0NvbnRhaW5lci5hcHBlbmRDaGlsZChzdGF0dXNUZXh0KTtcbiAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBJbml0aWFsaXNlYDtcblxuICAvLyBIb2lzdCBpbmRpY2F0b3Igb3V0IGZyb20gZmluYWwgc2xpZGUgd2hlbiBydW5uaW5nIHVuZGVyIHJldmVhbFxuICBjb25zdCByZXZlYWxTdGF0dXMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCAuZXhlcmNpc2UtbG9hZGluZy1pbmRpY2F0b3JcIik7XG4gIGlmIChyZXZlYWxTdGF0dXMpIHtcbiAgICByZXZlYWxTdGF0dXMucmVtb3ZlKCk7XG4gICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXZlYWwgPiAuc2xpZGVzXCIpLmFwcGVuZENoaWxkKHJldmVhbFN0YXR1cyk7XG4gIH1cblxuICAvLyBNYWtlIGFueSByZXZlYWwgc2xpZGVzIHdpdGggbGl2ZSBjZWxscyBzY3JvbGxhYmxlXG4gIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoXCIucmV2ZWFsIC5leGVyY2lzZS1jZWxsXCIpLmZvckVhY2goKGVsKSA9PiB7XG4gICAgZWwuY2xvc2VzdCgnc2VjdGlvbi5zbGlkZScpLmNsYXNzTGlzdC5hZGQoXCJzY3JvbGxhYmxlXCIpO1xuICB9KVxuXG4gIC8vIHdlYlIgc3VwcGxlbWVudGFsIGRhdGEgYW5kIG9wdGlvbnNcbiAgY29uc3QgZGF0YUNvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici1kYXRhXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZGF0YSA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKGRhdGFDb250ZW50KSk7XG5cbiAgLy8gW0xpYnJvXSBQZXJtaXRpciBydXRhcyByZWxhdGl2YXMgcGFyYSBlbCBtb3RvciB5IGVsIHJlcG9zaXRvcmlvIGRlIHBhcXVldGVzXG4gIC8vIChhdXRvYWxvamFkb3MganVudG8gYWwgbGlicm8pLCByZXNvbHZpw6luZG9sYXMgcmVzcGVjdG8gYSBsYSBww6FnaW5hLlxuICBjb25zdCBhYnNvbHV0aXplID0gKHUpID0+IG5ldyBVUkwodSwgZG9jdW1lbnQuYmFzZVVSSSkuaHJlZjtcbiAgaWYgKGRhdGEub3B0aW9ucy5iYXNlVXJsKSBkYXRhLm9wdGlvbnMuYmFzZVVybCA9IGFic29sdXRpemUoZGF0YS5vcHRpb25zLmJhc2VVcmwpO1xuICBkYXRhLnBhY2thZ2VzLnJlcG9zID0gZGF0YS5wYWNrYWdlcy5yZXBvcy5tYXAoYWJzb2x1dGl6ZSk7XG5cbiAgLy8gR3JhYiBsaXN0IG9mIHJlc291cmNlcyB0byBiZSBkb3dubG9hZGVkXG4gIGNvbnN0IGZpbGVzQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJ2ZnMtZmlsZVxcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGZpbGVzID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZmlsZXNDb250ZW50KSk7XG5cbiAgLy8gSW5pdGlhbGlzZSB3ZWJSIGFuZCBzZXR1cCBmb3IgUiBjb2RlIGV2YWx1YXRpb25cbiAgbGV0IHdlYlJQcm9taXNlID0gKGFzeW5jICh3ZWJSKSA9PiB7XG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyB3ZWJSYDtcbiAgICBhd2FpdCB3ZWJSLmluaXQoKTtcblxuICAgIC8vIEluc3RhbGwgcHJvdmlkZWQgbGlzdCBvZiBwYWNrYWdlc1xuICAgIC8vIEVuc3VyZSB3ZWJSIGRlZmF1bHQgcmVwbyBpcyBpbmNsdWRlZFxuICAgIGlmIChkYXRhLnBhY2thZ2VzLnJlcG9zLmxlbmd0aCA9PT0gMCkgZGF0YS5wYWNrYWdlcy5yZXBvcy5wdXNoKFwiaHR0cHM6Ly9yZXBvLnItd2FzbS5vcmdcIilcbiAgICBhd2FpdCBkYXRhLnBhY2thZ2VzLnBrZ3MubWFwKChwa2cpID0+ICgpID0+IHtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcGFja2FnZTogJHtwa2d9YDtcbiAgICAgIHJldHVybiB3ZWJSLmV2YWxSVm9pZChgXG4gICAgICAgIHdlYnI6Omluc3RhbGwocGtnLCByZXBvcyA9IHJlcG9zKVxuICAgICAgICBsaWJyYXJ5KHBrZywgY2hhcmFjdGVyLm9ubHkgPSBUUlVFKVxuICAgICAgYCwgeyBlbnY6IHtcbiAgICAgICAgcGtnOiBwa2csXG4gICAgICAgIHJlcG9zOiBkYXRhLnBhY2thZ2VzLnJlcG9zLFxuICAgICAgfX0pO1xuICAgIH0pLnJlZHVjZSgoY3VyLCBuZXh0KSA9PiBjdXIudGhlbihuZXh0KSwgUHJvbWlzZS5yZXNvbHZlKCkpO1xuXG4gICAgLy8gRG93bmxvYWQgYW5kIGluc3RhbGwgcmVzb3VyY2VzXG4gICAgYXdhaXQgZmlsZXMubWFwKChmaWxlKSA9PiBhc3luYyAoKSA9PiB7XG4gICAgICBjb25zdCBuYW1lID0gZmlsZS5zdWJzdHJpbmcoZmlsZS5sYXN0SW5kZXhPZignLycpICsgMSk7XG4gICAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYERvd25sb2FkaW5nIHJlc291cmNlOiAke25hbWV9YDtcbiAgICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goZmlsZSk7XG4gICAgICBpZiAoIXJlc3BvbnNlLm9rKSB7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgQ2FuJ3QgZG93bmxvYWQgXFxgJHtmaWxlfVxcYC4gRXJyb3IgJHtyZXNwb25zZS5zdGF0dXN9OiBcIiR7cmVzcG9uc2Uuc3RhdHVzVGV4dH1cIi5gKTtcbiAgICAgIH1cbiAgICAgIGNvbnN0IGRhdGEgPSBhd2FpdCByZXNwb25zZS5hcnJheUJ1ZmZlcigpO1xuXG4gICAgICAvLyBTdG9yZSBVUkxzIGluIHRoZSBjd2Qgd2l0aG91dCBhbnkgc3ViZGlyZWN0b3J5IHN0cnVjdHVyZVxuICAgICAgaWYgKGZpbGUuaW5jbHVkZXMoXCI6Ly9cIikpIHtcbiAgICAgICAgZmlsZSA9IG5hbWU7XG4gICAgICB9XG5cbiAgICAgIC8vIENvbGxhcHNlIGhpZ2hlciBkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBmaWxlID0gY29sbGFwc2VQYXRoKGZpbGUpO1xuXG4gICAgICAvLyBDcmVhdGUgZGlyZWN0b3J5IHRyZWUsIGlnbm9yaW5nIFwiZGlyZWN0b3J5IGV4aXN0c1wiIFZGUyBlcnJvcnNcbiAgICAgIGNvbnN0IHBhcnRzID0gZmlsZS5zcGxpdCgnLycpLnNsaWNlKDAsIC0xKTtcbiAgICAgIGxldCBwYXRoID0gJyc7XG4gICAgICB3aGlsZSAocGFydHMubGVuZ3RoID4gMCkge1xuICAgICAgICBwYXRoICs9IHBhcnRzLnNoaWZ0KCkgKyAnLyc7XG4gICAgICAgIGNvbnN0IGFuYWx5c2lzID0gYXdhaXQgd2ViUi5GUy5hbmFseXplUGF0aChwYXRoKTtcbiAgICAgICAgaWYgKCFhbmFseXNpcy5leGlzdHMpIHtcbiAgICAgICAgICB0cnkge1xuICAgICAgICAgICAgYXdhaXQgd2ViUi5GUy5ta2RpcihwYXRoKTtcbiAgICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoYEZpbGVzeXN0ZW0gRXJyb3I6IFwiJHtlLm1lc3NhZ2V9XCIuYCk7XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICB9XG5cbiAgICAgIC8vIFdyaXRlIHRoaXMgZmlsZSB0byB0aGUgVkZTXG4gICAgICByZXR1cm4gYXdhaXQgd2ViUi5GUy53cml0ZUZpbGUoZmlsZSwgbmV3IFVpbnQ4QXJyYXkoZGF0YSkpO1xuICAgIH0pLnJlZHVjZSgoY3VyLCBuZXh0KSA9PiBjdXIudGhlbihuZXh0KSwgUHJvbWlzZS5yZXNvbHZlKCkpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBJbnN0YWxsaW5nIHdlYlIgc2hpbXNgO1xuICAgIGF3YWl0IHdlYlIuZXZhbFJWb2lkKGB3ZWJyOjpzaGltX2luc3RhbGwoKWApO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBXZWJSIGVudmlyb25tZW50IHNldHVwYDtcbiAgICBhd2FpdCBzZXR1cFIod2ViUiwgZGF0YSk7XG5cbiAgICBzdGF0dXNUZXh0LnJlbW92ZSgpO1xuICAgIGlmIChzdGF0dXNDb250YWluZXIuY2hpbGRyZW4ubGVuZ3RoID09IDApIHtcbiAgICAgIHN0YXR1c0NvbnRhaW5lci5wYXJlbnROb2RlLnJlbW92ZSgpO1xuICAgIH1cbiAgICByZXR1cm4gd2ViUjtcbiAgfSkobmV3IFdlYlIoZGF0YS5vcHRpb25zKSk7XG5cbiAgLy8gS2VlcCB0cmFjayBvZiBpbml0aWFsIE9KUyBibG9jayByZW5kZXJcbiAgY29uc3QgcmVuZGVyZWRPanMgPSB7fTtcblxuICBjb25zdCBwcm9jZXNzID0gYXN5bmMgKGNvbnRleHQsIGlucHV0cykgPT4ge1xuICAgIGNvbnN0IHdlYlIgPSBhd2FpdCB3ZWJSUHJvbWlzZTtcbiAgICBjb25zdCBldmFsdWF0b3IgPSBuZXcgV2ViUkV2YWx1YXRvcih3ZWJSLCBjb250ZXh0KVxuICAgIGF3YWl0IGV2YWx1YXRvci5wcm9jZXNzKGlucHV0cyk7XG4gICAgcmV0dXJuIGV2YWx1YXRvci5jb250YWluZXI7XG4gIH1cblxuICByZXR1cm4ge1xuICAgIHByb2Nlc3MsXG4gICAgd2ViUlByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gIH07XG59XG4ifV19
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+WyJkYXRvcy9SRUFETUUudHh0Il0=
+</script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-bender2021" class="csl-entry" role="listitem">
+Bender, E. M., Gebru, T., McMillan-Major, A., &amp; Shmitchell, S. (2021). <span class="nocase">On the dangers of stochastic parrots: Can language models be too big?</span> In <em><span class="nocase">Proceedings of FAccT ’21</span></em> (pp. 610–623). ACM. <a href="https://doi.org/10.1145/3442188.3445922">https://doi.org/10.1145/3442188.3445922</a>
+</div>
+<div id="ref-kasneci2023" class="csl-entry" role="listitem">
+Kasneci, E. et al. (2023). <span class="nocase">ChatGPT for good? On opportunities and challenges of large language models for education</span>. <em>Learning and Individual Differences</em>, <em>103</em>, 102274. <a href="https://doi.org/10.1016/j.lindif.2023.102274">https://doi.org/10.1016/j.lindif.2023.102274</a>
+</div>
+<div id="ref-walters2023" class="csl-entry" role="listitem">
+Walters, W. H., &amp; Wilder, E. I. (2023). <span class="nocase">Fabrication and errors in the bibliographic citations generated by ChatGPT</span>. <em>Scientific Reports</em>, <em>13</em>, 14045. <a href="https://doi.org/10.1038/s41598-023-41032-5">https://doi.org/10.1038/s41598-023-41032-5</a>
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Mejoras de accesibilidad del libro:
+   - nombre accesible para los editores de código de quarto-live (CodeMirror),
+   - foco de teclado en sus áreas desplazables,
+   - texto alternativo para el icono de ORCID de la portada. */
+(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+  function arreglar(raiz) {
+    raiz.querySelectorAll('.cm-content:not([aria-label])').forEach(function (el) {
+      el.setAttribute('aria-label', tr('Editor de código R', 'Code editor'));
+    });
+    raiz.querySelectorAll('.cm-scroller').forEach(function (el) {
+      if (el.getAttribute('tabindex') !== '0') el.setAttribute('tabindex', '0');
+      if (!el.hasAttribute('aria-label')) el.setAttribute('aria-label', tr('Código R', 'Code'));
+    });
+    // controles de Observable (deslizadores y casillas) sin nombre accesible
+    raiz.querySelectorAll('form input:not([aria-label]), form select:not([aria-label])').forEach(function (el) {
+      var form = el.closest('form');
+      var lab = form && form.querySelector('label');
+      if (lab && !(el.id && form.querySelector('label[for="' + el.id + '"]'))) {
+        el.setAttribute('aria-label', lab.textContent.trim() + (el.type === 'number' ? tr(' (valor)', ' (value)') : ''));
+      }
+    });
+    // menú de descarga de la barra lateral (solo icono)
+    raiz.querySelectorAll('.quarto-navigation-tool.dropdown-toggle').forEach(function (a) {
+      if (a.getAttribute('aria-label')) return;
+      a.setAttribute('aria-label', tr('Descargar el libro en PDF o EPUB', 'Download the book as PDF or EPUB'));
+      a.setAttribute('title', tr('Descargar el libro en PDF o EPUB', 'Download the book as PDF or EPUB'));
+    });
+    raiz.querySelectorAll('.quarto-title-author-orcid').forEach(function (a) {
+      a.setAttribute('aria-label', tr('Perfil ORCID de Pablo Sánchez-Núñez', 'ORCID profile of Pablo Sánchez-Núñez'));
+      var img = a.querySelector('img');
+      if (img && !img.hasAttribute('alt')) img.setAttribute('alt', 'ORCID');
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () { arreglar(document); });
+  new MutationObserver(function () { arreglar(document); })
+    .observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
+<script src="./consent.js" defer=""></script>
+<style>
+.progreso-capitulo { border: 1px solid var(--bs-border-color, #dee2e6); border-left: 4px solid var(--bs-primary, #000e78);
+  border-radius: .35rem; padding: .6rem .9rem; margin: 0 0 1.4rem; font-size: .92rem; background: rgba(127, 127, 127, .08); color: inherit; }
+.progreso-capitulo progress { width: 100%; height: .6rem; margin: .35rem 0 .2rem; accent-color: var(--bs-primary, #000e78); }
+.progreso-capitulo .progreso-nota { font-size: .82rem; opacity: .85; }
+.progreso-capitulo button, #progreso-resumen button { font-size: .82rem; padding: .05rem .5rem; margin-left: .4rem;
+  border: 1px solid var(--bs-border-color, #ced4da); border-radius: .3rem; background: transparent; color: inherit; }
+#progreso-resumen table { width: 100%; }
+#progreso-resumen { margin-bottom: 1.2rem; }
+#progreso-resumen progress { width: 8rem; height: .55rem; accent-color: var(--bs-primary, #000e78); vertical-align: middle; }
+.sin-conexion-estado { font-size: .85rem; }
+</style>
+<script>
+/* Progreso del estudiante: cuenta los ejercicios de código resueltos y las
+   preguntas de autoevaluación acertadas en cada capítulo. Se guarda solo en
+   el almacenamiento local de este navegador; no se envía a ningún servidor. */
+(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+  var CLAVE = 'progreso-' + (location.pathname.split('/').filter(Boolean)[0] || 'libro') + '-v1';
+  function leer() { try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch (e) { return {}; } }
+  function guardar(d) { try { localStorage.setItem(CLAVE, JSON.stringify(d)); } catch (e) {} }
+  var pagina = location.pathname.split('/').pop() || 'index.html';
+
+  function nombresEjercicios() {
+    var m = {};
+    document.querySelectorAll('script[type^="webr-"][type$="-contents"]').forEach(function (s) {
+      try {
+        var bin = atob(s.textContent.trim());
+        var d = JSON.parse(new TextDecoder().decode(Uint8Array.from(bin, function (c) { return c.charCodeAt(0); })));
+        if (d.attr && d.attr.exercise && !d.attr.setup && !d.attr.check) m[s.type.replace('-contents', '')] = d.attr.exercise;
+      } catch (e) {}
+    });
+    return m;
+  }
+  function preguntas() {
+    return Array.prototype.slice.call(document.querySelectorAll('.webex-check .webex-solveme, .webex-check .webex-select, .webex-check .webex-radiogroup'));
+  }
+
+  function registro(datos) {
+    var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
+    r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
+    r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
+    return r;
+  }
+
+  function pintar(caja, totalEj, totalPr, totalIa) {
+    var r = registro(leer());
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
+    var partes = [];
+    if (totalEj) partes.push(r.ej.length + tr(' de ', ' of ') + totalEj + tr(' ejercicios de código', ' code exercises'));
+    if (totalIa) partes.push(r.ia.length + tr(' de ', ' of ') + totalIa + tr(' actividades', ' activities'));
+    if (totalPr) partes.push(r.pr.length + tr(' de ', ' of ') + totalPr + tr(' preguntas acertadas', ' correct answers'));
+    caja.innerHTML = tr('<strong>Tu progreso en este capítulo:</strong> ', '<strong>Your progress in this chapter:</strong> ') + partes.join(' · ') +
+      '<progress max="' + total + '" value="' + hechos + tr('" aria-label="Progreso del capítulo: ', '" aria-label="Chapter progress: ') + hechos + tr(' de ', ' of ') + total + '"></progress>' +
+      tr('<span class="progreso-nota">Se guarda solo en este navegador.</span>', '<span class="progreso-nota">Saved only in this browser.</span>') +
+      tr('<button type="button">Borrar el progreso del capítulo</button>', '<button type="button">Clear chapter progress</button>');
+    caja.querySelector('button').addEventListener('click', function () {
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
+    });
+  }
+
+  function capitulo() {
+    var mapa = nombresEjercicios();
+    var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
+      .filter(function (v, i, a) { return a.indexOf(v) === i; });
+    var lista = preguntas();
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
+
+    var d = leer(); var r = registro(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
+
+    var caja = document.createElement('div');
+    caja.className = 'progreso-capitulo';
+    caja.setAttribute('role', 'status');
+    var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
+    if (!cabecera) return;
+    cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
+    pintar(caja, nombres.length, lista.length, nIa);
+
+    function anotar(tipo, valor) {
+      var d = leer(); var r = registro(d);
+      if (r[tipo].indexOf(valor) === -1) {
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
+      }
+    }
+
+    // Ejercicios de webR: un aviso verde de quarto-live dentro de la celda del ejercicio
+    new MutationObserver(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+      document.querySelectorAll('.exercise-grade.alert-success:not([data-progreso])').forEach(function (a) {
+        a.setAttribute('data-progreso', '1');
+        var el = a;
+        while (el && !(el.id && mapa[el.id])) el = el.parentElement;
+        if (el) anotar('ej', mapa[el.id]);
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
+
+    // Preguntas: se anotan al pulsar «Mostrar respuestas»
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('.webex-check-button');
+      if (!b) return;
+      setTimeout(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+        lista.forEach(function (q, i) {
+          if (q.classList.contains('webex-correct') || q.querySelector('.webex-correct')) anotar('pr', i);
+        });
+      }, 0);
+    });
+  }
+
+  function resumen() {
+    var destino = document.getElementById('progreso-resumen');
+    if (!destino) return;
+    var d = leer();
+    var filas = [];
+    document.querySelectorAll('#quarto-sidebar a.sidebar-link').forEach(function (a) {
+      var f = (a.getAttribute('href') || '').split('/').pop().split('#')[0];
+      if (!f || f === 'index.html' || /^9\d-/.test(f) || filas.some(function (x) { return x.f === f; })) return;
+      filas.push({ f: f, t: a.textContent.replace(/\s+/g, ' ').trim(), r: d[f] });
+    });
+    var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">' + tr('Capítulo', 'Chapter') + '</th><th scope="col">' + tr('Progreso', 'Progress') + '</th></tr></thead><tbody>';
+    filas.forEach(function (x) {
+      var celda = tr('Sin empezar', 'Not started');
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + tr(' ejercicios', ' exercises'));
+        if (tIa) trozos.push(ia.length + '/' + tIa + tr(' actividades', ' activities'));
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + tr(' preguntas', ' questions'));
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + tr(' de ', ' of ') + t + '"></progress> ' + trozos.join(' · ');
+      }
+      html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
+    });
+    html += '</tbody></' + 'table><button type="button">' + tr('Borrar todo mi progreso', 'Clear all my progress') + '</button>';
+    destino.innerHTML = html;
+    destino.querySelector('button').addEventListener('click', function () {
+      try { localStorage.removeItem(CLAVE); } catch (e) {}
+      resumen();
+    });
+  }
+
+  function iniciar() { capitulo(); resumen(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar); else iniciar();
+})();
+
+/* Uso sin conexión: un service worker guarda el libro, webR y sus paquetes
+   la primera vez que se visitan. */
+(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+  if (!('serviceWorker' in navigator)) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').then(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+      var estado = document.getElementById('sin-conexion-estado');
+      if (estado) estado.textContent = tr('Este navegador ya guarda el libro para usarlo sin conexión.', 'This browser now stores the book for offline use.');
+    }).catch(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }});
+  });
+})();
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRleHRvID0gd2luZG93LkxhYi50ZXh0b1xuYXJlYSA9IHdpbmRvdy5MYWIuYXJlYVxuc2VsZWNjaW9uID0gd2luZG93LkxhYi5zZWxlY2Npb25cbnJhbmdvID0gd2luZG93LkxhYi5yYW5nb1xuYm90b24gPSB3aW5kb3cuTGFiLmJvdG9uXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJjb3JwdXMgPSBgdGhlIGxpYnJhcnkgb2ZmZXJzIGJvb2tzIGFuZCBqb3VybmFscyB0byBzdHVkZW50cyAuXG50aGUgbGlicmFyeSBvZmZlcnMgYWNjZXNzIHRvIHNjaWVudGlmaWMgZGF0YWJhc2VzIC5cbnN0dWRlbnRzIHNlYXJjaCBmb3IgYXJ0aWNsZXMgaW4gZGF0YWJhc2VzIC5cbnN0dWRlbnRzIGNpdGUgdGhlIGFydGljbGVzIHdpdGggdGhlaXIgcmVmZXJlbmNlIC5cbnRoZSByZWZlcmVuY2UgaW5jbHVkZXMgdGhlIGF1dGhvciBhbmQgdGhlIHllYXIgb2YgdGhlIGFydGljbGUgLlxudGhlIGF1dGhvciBvZiB0aGUgYXJ0aWNsZSBwdWJsaXNoZXMgaW4gYSBzY2llbnRpZmljIGpvdXJuYWwgLlxuYSBzY2llbnRpZmljIGpvdXJuYWwgcmV2aWV3cyB0aGUgYXJ0aWNsZXMgYnkgcGVlcnMgLlxudGhlIHJldmlld2VkIGFydGljbGVzIG9mZmVyIHJlbGlhYmxlIGluZm9ybWF0aW9uIC5cbnJlbGlhYmxlIGluZm9ybWF0aW9uIGNpdGVzIGl0cyBzb3VyY2VzIC5cbmRpc2luZm9ybWF0aW9uIGltaXRhdGVzIHJlbGlhYmxlIGluZm9ybWF0aW9uIC5cbnN0dWRlbnRzIHZlcmlmeSB0aGUgaW5mb3JtYXRpb24gaW4gc2V2ZXJhbCBzb3VyY2VzIC5cbnRoZSBsaWJyYXJ5IGNhdGFsb2d1ZSBvZmZlcnMgYm9va3MgYW5kIGFydGljbGVzIC5gXG5tb2RlbG8gPSB7XG4gIGNvbnN0IG0gPSBuZXcgTWFwKCk7XG4gIGZvciAoY29uc3QgZiBvZiBjb3JwdXMuc3BsaXQoXCJcXG5cIikpIHtcbiAgICBjb25zdCBwID0gZi50cmltKCkuc3BsaXQoL1xccysvKTtcbiAgICBmb3IgKGxldCBpID0gMDsgaSArIDEgPCBwLmxlbmd0aDsgaSsrKSB7XG4gICAgICBpZiAoIW0uaGFzKHBbaV0pKSBtLnNldChwW2ldLCBuZXcgTWFwKCkpO1xuICAgICAgY29uc3QgcyA9IG0uZ2V0KHBbaV0pOyBzLnNldChwW2kgKyAxXSwgKHMuZ2V0KHBbaSArIDFdKSB8fCAwKSArIDEpO1xuICAgIH1cbiAgfVxuICByZXR1cm4gbTtcbn1cbnZpZXdvZiBpbmljaW8gPSBzZWxlY2Npb24oXCJTdGFydGluZyB3b3JkXCIsIFsuLi5tb2RlbG8ua2V5cygpXS5maWx0ZXIodyA9PiB3ICE9PSBcIi5cIikuc29ydCgoYSwgYikgPT4gYS5sb2NhbGVDb21wYXJlKGIsIFwiZW5cIikpLCB7dmFsdWU6IFwidGhlXCJ9KVxudmlld29mIHRlbXBlcmF0dXJhID0gcmFuZ28oXCJUZW1wZXJhdHVyZVwiLCBbMC4xLCAyXSwge3N0ZXA6IDAuMSwgdmFsdWU6IDF9KVxudmlld29mIGdlbmVyYXIgPSBib3RvbihcIkdlbmVyYXRlIGFub3RoZXIgc2VudGVuY2VcIilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InByb2JzID0gKHcsIHQpID0+IHtcbiAgY29uc3QgcyA9IG1vZGVsby5nZXQodyk7IGlmICghcykgcmV0dXJuIFtdO1xuICBjb25zdCBwYXJlcyA9IFsuLi5zLmVudHJpZXMoKV0sIHBlc29zID0gcGFyZXMubWFwKChbLCBjXSkgPT4gTWF0aC5wb3coYywgMSAvIHQpKSwgeiA9IHBlc29zLnJlZHVjZSgoYSwgYikgPT4gYSArIGIsIDApO1xuICByZXR1cm4gcGFyZXMubWFwKChbcF0sIGkpID0+IFtwLCBwZXNvc1tpXSAvIHpdKS5zb3J0KChhLCBiKSA9PiBiWzFdIC0gYVsxXSk7XG59XG5mcmFzZSA9IHtcbiAgZ2VuZXJhcjtcbiAgY29uc3Qgb3V0ID0gW2luaWNpb107IGxldCB3ID0gaW5pY2lvO1xuICBmb3IgKGxldCBrID0gMDsgayA8IDE4ICYmIHcgIT09IFwiLlwiOyBrKyspIHtcbiAgICBjb25zdCBwcyA9IHByb2JzKHcsIHRlbXBlcmF0dXJhKTsgaWYgKCFwcy5sZW5ndGgpIGJyZWFrO1xuICAgIGxldCByID0gTWF0aC5yYW5kb20oKSwgYWNjID0gMCwgZWxlZ2lkbyA9IHBzW3BzLmxlbmd0aCAtIDFdWzBdO1xuICAgIGZvciAoY29uc3QgW3AsIHFdIG9mIHBzKSB7IGFjYyArPSBxOyBpZiAociA8PSBhY2MpIHsgZWxlZ2lkbyA9IHA7IGJyZWFrOyB9IH1cbiAgICBvdXQucHVzaChlbGVnaWRvKTsgdyA9IGVsZWdpZG87XG4gIH1cbiAgcmV0dXJuIG91dC5qb2luKFwiIFwiKS5yZXBsYWNlKFwiIC5cIiwgXCIuXCIpO1xufVxuaHRtbGA8ZGl2IHJvbGU9XCJzdGF0dXNcIj48cD48c3Ryb25nPkdlbmVyYXRlZCBzZW50ZW5jZTo8L3N0cm9uZz4gXCIke2ZyYXNlfVwiPC9wPlxuPHA+PHN0cm9uZz5XaGF0IGNhbiBmb2xsb3cgXCIke2luaWNpb31cIjwvc3Ryb25nPiBhdCB0ZW1wZXJhdHVyZSAke3RlbXBlcmF0dXJhfTo8L3A+XG48dGFibGUgY2xhc3M9XCJ0YWJsZSB0YWJsZS1zbVwiPjx0aGVhZD48dHI+PHRoIHNjb3BlPVwiY29sXCI+TmV4dCB3b3JkPC90aD48dGggc2NvcGU9XCJjb2xcIj5Qcm9iYWJpbGl0eTwvdGg+PHRoIHNjb3BlPVwiY29sXCI+PHNwYW4gY2xhc3M9XCJ2aXN1YWxseS1oaWRkZW5cIj5CYXI8L3NwYW4+PC90aD48L3RyPjwvdGhlYWQ+PHRib2R5PlxuJHtwcm9icyhpbmljaW8sIHRlbXBlcmF0dXJhKS5zbGljZSgwLCA2KS5tYXAoKFtwLCBxXSkgPT4gaHRtbGA8dHI+PHRkPiR7cH08L3RkPjx0ZD4keygxMDAgKiBxKS50b0ZpeGVkKDApfSU8L3RkPjx0ZCBzdHlsZT1cIndpZHRoOjUwJVwiPjxkaXYgc3R5bGU9XCJoZWlnaHQ6LjhyZW07Ym9yZGVyLXJhZGl1czoycHg7YmFja2dyb3VuZDojMmE3OGQ2O3dpZHRoOiR7MTAwICogcX0lXCI+PC9kaXY+PC90ZD48L3RyPmApfVxuPC90Ym9keT48L3RhYmxlPjwvZGl2PmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBsaXN0YSA9IGFyZWEoXCJET0lzIChvbmUgcGVyIGxpbmUpXCIsIHtyb3dzOiA1LCBzdWJtaXQ6IFwiVmVyaWZ5XCIsXG4gIHZhbHVlOiBcIjEwLjEwMzgvczQxNTk4LTAyMy00MTAzMi01XFxuMTAuMTAxNi9qLmlwbS4yMDE5LjEwMjA0MVxcbjEwLjEwOTMvamlzL2FiYzEyM1xcbmh0dHBzOi8vZG9pLm9yZy8xMC4xMTQ1LzM0NDIxODguMzQ0NTkyMlwifSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZlcmlmaWNhY2lvbiA9IHtcbiAgY29uc3QgZG9pcyA9IGxpc3RhLnNwbGl0KC9cXG4rLykubWFwKHggPT4geC50cmltKCkucmVwbGFjZSgvXmh0dHBzPzpcXC9cXC8oZHhcXC4pP2RvaVxcLm9yZ1xcLy9pLCBcIlwiKS5yZXBsYWNlKC9eZG9pOlxccyovaSwgXCJcIikpLmZpbHRlcihCb29sZWFuKS5zbGljZSgwLCAyMCk7XG4gIHlpZWxkIHtjYXJnYW5kbzogdHJ1ZX07XG4gIGNvbnN0IHVubyA9IGFzeW5jIGQgPT4ge1xuICAgIGlmICghL14xMFxcLlxcZHs0LDl9XFwvXFxTKyQvLnRlc3QoZCkpIHJldHVybiB7ZCwgZXN0YWRvOiBcImZvcm1hdG9cIiwgdGV4dG86IFwiTm90IGluIERPSSBmb3JtYXQuXCJ9O1xuICAgIHRyeSB7XG4gICAgICBjb25zdCBoID0gYXdhaXQgKGF3YWl0IGZldGNoKFwiaHR0cHM6Ly9kb2kub3JnL2FwaS9oYW5kbGVzL1wiICsgZW5jb2RlVVJJKGQpKSkuanNvbigpO1xuICAgICAgaWYgKGgucmVzcG9uc2VDb2RlICE9PSAxKSByZXR1cm4ge2QsIGVzdGFkbzogXCJub1wiLCB0ZXh0bzogXCJEb2VzIG5vdCBleGlzdCBhdCBkb2kub3JnLlwifTtcbiAgICAgIHRyeSB7XG4gICAgICAgIGNvbnN0IHIgPSBhd2FpdCBmZXRjaChcImh0dHBzOi8vYXBpLmNyb3NzcmVmLm9yZy93b3Jrcy9cIiArIGVuY29kZVVSSUNvbXBvbmVudChkKSk7XG4gICAgICAgIGlmIChyLm9rKSB7IGNvbnN0IG0gPSAoYXdhaXQgci5qc29uKCkpLm1lc3NhZ2U7XG4gICAgICAgICAgY29uc3QgYW5pbyA9IChtLmlzc3VlZD8uW1wiZGF0ZS1wYXJ0c1wiXT8uWzBdPy5bMF0pID8/IFwibi5kLlwiO1xuICAgICAgICAgIHJldHVybiB7ZCwgZXN0YWRvOiBcInNpXCIsIHRleHRvOiBgJHsobS50aXRsZSB8fCBbXCJcIl0pWzBdfSAoJHthbmlvfSkuICR7KG1bXCJjb250YWluZXItdGl0bGVcIl0gfHwgW1wiXCJdKVswXX1gfTsgfVxuICAgICAgfSBjYXRjaCAoZSkge31cbiAgICAgIHJldHVybiB7ZCwgZXN0YWRvOiBcInNpXCIsIHRleHRvOiBcIkV4aXN0cyAocmVnaXN0ZXJlZCBvdXRzaWRlIENyb3NzcmVmLCBmb3IgZXhhbXBsZSB3aXRoIERhdGFDaXRlKS5cIn07XG4gICAgfSBjYXRjaCAoZSkgeyByZXR1cm4ge2QsIGVzdGFkbzogXCJlcnJvclwiLCB0ZXh0bzogXCJDb3VsZCBub3QgYmUgY2hlY2tlZCAob2ZmbGluZT8pLlwifTsgfVxuICB9O1xuICB5aWVsZCB7ZmlsYXM6IGF3YWl0IFByb21pc2UuYWxsKGRvaXMubWFwKHVubykpfTtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZlcmlmaWNhY2lvbi5jYXJnYW5kbyA/IGh0bWxgPHAgcm9sZT1cInN0YXR1c1wiPlZlcmlmeWluZ+KApjwvcD5gIDogaHRtbGA8dGFibGUgY2xhc3M9XCJ0YWJsZSB0YWJsZS1zbVwiIHJvbGU9XCJzdGF0dXNcIj5cbjxjYXB0aW9uPiR7dmVyaWZpY2FjaW9uLmZpbGFzLmZpbHRlcihmID0+IGYuZXN0YWRvID09PSBcInNpXCIpLmxlbmd0aH0gb2YgJHt2ZXJpZmljYWNpb24uZmlsYXMubGVuZ3RofSBET0lzIGV4aXN0PC9jYXB0aW9uPlxuPHRoZWFkPjx0cj48dGggc2NvcGU9XCJjb2xcIj5ET0k8L3RoPjx0aCBzY29wZT1cImNvbFwiPkV4aXN0cz88L3RoPjx0aCBzY29wZT1cImNvbFwiPldoYXQgdGhlIHJlY29yZCBzYXlzPC90aD48L3RyPjwvdGhlYWQ+PHRib2R5PlxuJHt2ZXJpZmljYWNpb24uZmlsYXMubWFwKGYgPT4gaHRtbGA8dHI+PHRkPjxjb2RlPiR7Zi5kfTwvY29kZT48L3RkPjx0ZD4ke2YuZXN0YWRvID09PSBcInNpXCIgPyBcIuKckyBZZXNcIiA6IGYuZXN0YWRvID09PSBcIm5vXCIgPyBcIuKclyBOb1wiIDogXCI/XCJ9PC90ZD48dGQ+JHtmLnRleHRvfTwvdGQ+PC90cj5gKX1cbjwvdGJvZHk+PC90YWJsZT5gXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJhcmVhUCA9IHdpbmRvdy5MYWIuYXJlYVxudmlld29mIHByb21wdCA9IGFyZWFQKFwiWW91ciBwcm9tcHRcIiwge3Jvd3M6IDUsIHZhbHVlOiBcIkdpdmUgbWUgYSBzdW1tYXJ5IG9mIGNsaW1hdGUgY2hhbmdlLlwifSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgY29uc3QgdCA9IHByb21wdC50b0xvd2VyQ2FzZSgpO1xuICBjb25zdCBwaWV6YXMgPSBbXG4gICAgW1wiQ29udGV4dFwiLCAvXFxiKGkgYW18aSdtfGkgc3R1ZHl8Zm9yIChhfGFufG15KXxjb3Vyc2V8ZGVncmVlfG1vZHVsZXxhc3NpZ25tZW50fGxldmVsfGFpbWVkIGF0fGF1ZGllbmNlKVxcYi8sIFwiU2F5IHdobyB5b3UgYXJlIGFuZCB3aGF0IHlvdSBuZWVkIGl0IGZvcjogXFxcIkkgYW0gYSBmaXJzdC15ZWFyIGpvdXJuYWxpc20gc3R1ZGVudCBwcmVwYXJpbmcgYSA1LW1pbnV0ZSBwcmVzZW50YXRpb25cXFwiLlwiXSxcbiAgICBbXCJTcGVjaWZpYyB0YXNrXCIsIC9cXGIoc3VtbWFyaVtzel1lfHN1bW1hcnl8ZXhwbGFpbnxjb21wYXJlfGxpc3R8aWRlbnRpZnl8Y2xhc3NpZnl8cHJvcG9zZXxyZXZpZXd8Y29ycmVjdHx0cmFuc2xhdGV8YW5hbHlbc3pdZXxkcmFmdHx3cml0ZSlcXGIvLCBcIlVzZSBhIHByZWNpc2UgYWN0aW9uIHZlcmI6IHN1bW1hcmlzZSwgY29tcGFyZSwgY2xhc3NpZnnigKZcIl0sXG4gICAgW1wiRm9ybWF0XCIsIC9cXGIodGFibGV8bGlzdHxidWxsZXR8YnVsbGV0c3xwYXJhZ3JhcGh8cGFyYWdyYXBoc3x3b3Jkc3xsaW5lc3xvdXRsaW5lfHNlY3Rpb25zfHBvaW50cylcXGJ8XFxkK1xccyood29yZHN8bGluZXN8cG9pbnRzfGlkZWFzKS8sIFwiU3RhdGUgdGhlIGZvcm1hdCBhbmQgbGVuZ3RoOiBcXFwiaW4gYSB0aHJlZS1jb2x1bW4gdGFibGVcXFwiLCBcXFwiaW4gMTUwIHdvcmRzXFxcIi5cIl0sXG4gICAgW1wiTGltaXRzIG9yIHNvdXJjZXNcIiwgL1xcYihvbmx5fHdpdGhvdXR8ZG8gbm90IGludmVudHxkb24ndCBpbnZlbnR8YmFzZWQgb258ZnJvbSB0aGUgdGV4dHxhY2NvcmRpbmcgdG98YXR0YWNoZWR8c2luY2UgMjBcXGRcXGQpXFxiLywgXCJTZXQgbGltaXRzOiBcXFwiYmFzZWQgb25seSBvbiB0aGUgdGV4dCBJIHBhc3RlXFxcIiwgXFxcIndpdGhvdXQgaW52ZW50aW5nIGRhdGFcXFwiLlwiXSxcbiAgICBbXCJWZXJpZmljYXRpb25cIiwgL1xcYihjaXRlfHNvdXJjZXN8cmVmZXJlbmNlc3xkb2l8dGVsbCBtZSAoaWZ8d2hlbil8bm90IHN1cmV8dW5jZXJ0YWlufHVuY2VydGFpbnR5fGNoZWNrfHZlcmlmeSlcXGIvLCBcIkFzayBpdCB0byBzYXkgd2hlcmUgZWFjaCBmYWN0IGNvbWVzIGZyb20gYW5kIHdoYXQgaXQgZG9lcyBub3Qga25vdzogXFxcImdpdmUgeW91ciBzb3VyY2VzIGFuZCB0ZWxsIG1lIGlmIHlvdSBhcmUgbm90IHN1cmVcXFwiLlwiXV07XG4gIGNvbnN0IHJlcyA9IHBpZXphcy5tYXAoKFtuLCByZSwgY29uc2Vqb10pID0+IFtuLCByZS50ZXN0KHQpLCBjb25zZWpvXSk7XG4gIGNvbnN0IG9rID0gcmVzLmZpbHRlcigocikgPT4gclsxXSkubGVuZ3RoO1xuICBjb25zdCBkID0gaHRtbGA8ZGl2IHJvbGU9XCJzdGF0dXNcIiBhcmlhLWxpdmU9XCJwb2xpdGVcIj48L2Rpdj5gO1xuICBkLmlubmVySFRNTCA9IGA8cD48c3Ryb25nPiR7b2t9IG9mIDUgcGllY2VzPC9zdHJvbmc+IGRldGVjdGVkLjwvcD48dWwgY2xhc3M9XCJsaXN0LXVuc3R5bGVkXCI+JHtyZXMubWFwKChbbiwgbywgY10pID0+IGA8bGkgY2xhc3M9XCJtYi0xXCI+JHtvID8gXCLinJNcIiA6IFwi4peLXCJ9IDxzdHJvbmc+JHtufTwvc3Ryb25nPiR7byA/IFwiXCIgOiBgIOKAlCAke2N9YH08L2xpPmApLmpvaW4oXCJcIil9PC91bD4ke29rID49IDQgPyBcIjxwPkEgZ29vZCBwcm9tcHQuIFJlbWVtYmVyOiBldmVuIHdpdGggYSBnb29kIHByb21wdCwgdmVyaWZ5IHdoYXQgdGhlIEFJIGFuc3dlcnMgKHNlY3Rpb24gNSkuPC9wPlwiIDogXCJcIn1gO1xuICByZXR1cm4gZDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnaW5pY2lvJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3RlbXBlcmF0dXJhJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2dlbmVyYXInKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnbGlzdGEnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncHJvbXB0JykifV19
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pablosancheznunez\.com\/digital-skills-information\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./04-references.html" class="pagination-link" aria-label="Units 4 and 5. References">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Units 4 and 5. References</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./06-ai-ethics.html" class="pagination-link" aria-label="Units 8 and 9. Generative artificial intelligence: ethics, authorship and regulation">
+        <span class="nav-page-text"><span class="chapter-title">Units 8 and 9. Generative artificial intelligence: ethics, authorship and regulation</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 <a href="https://pablosancheznunez.com">Pablo Sánchez-Núñez</a> · <a href="https://orcid.org/0000-0001-7845-9506">ORCID 0000-0001-7845-9506</a> · Text licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Universidad Carlos III de Madrid · Made with <a href="https://quarto.org">Quarto</a> y <a href="https://docs.r-wasm.org/webr/latest/">webR</a></p>
+</div>
+  </div>
+</footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+<script src="site_libs/quarto-contrib/webex-1.2.0/webex.js"></script>
+</body></html>
