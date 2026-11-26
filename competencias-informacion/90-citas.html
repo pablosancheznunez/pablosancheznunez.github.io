@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -442,25 +462,25 @@ ul.task-list li input[type="checkbox"] {
 <thead>
 <tr class="header">
 <th>Caso</th>
-<th><a href="92-glosario.html#gl-cita-texto" class="glos" data-def="Marca breve en el texto que remite a la fuente usada, como (Bates, 1989) o [3].">Cita</a> parentética</th>
+<th><a href="92-glosario.html#gl-cita-texto" class="glos" data-def="Marca breve en el texto que remite a la fuente usada, como [@bates1989] o [3].">Cita</a> parentética</th>
 <th>Cita narrativa</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Un autor</td>
-<td>(Bates, 1989)</td>
-<td>Bates (1989)</td>
+<td><span class="citation" data-cites="bates1989">(<a href="#ref-bates1989" role="doc-biblioref">Bates, 1989</a>)</span></td>
+<td><span class="citation" data-cites="bates1989">Bates (<a href="#ref-bates1989" role="doc-biblioref">1989</a>)</span></td>
 </tr>
 <tr class="even">
 <td>Dos autores</td>
-<td>(Metzger y Flanagin, 2013)</td>
-<td>Metzger y Flanagin (2013)</td>
+<td><span class="citation" data-cites="metzger2013">(<a href="#ref-metzger2013" role="doc-biblioref">Metzger y Flanagin, 2013</a>)</span></td>
+<td><span class="citation" data-cites="metzger2013">Metzger y Flanagin (<a href="#ref-metzger2013" role="doc-biblioref">2013</a>)</span></td>
 </tr>
 <tr class="odd">
 <td>Tres o más</td>
-<td>(Sugimoto et al., 2017)</td>
-<td>Sugimoto et al.&nbsp;(2017)</td>
+<td><span class="citation" data-cites="sugimoto2017">(<a href="#ref-sugimoto2017" role="doc-biblioref">Sugimoto et&nbsp;al., 2017</a>)</span></td>
+<td><span class="citation" data-cites="sugimoto2017">Sugimoto et&nbsp;al. (<a href="#ref-sugimoto2017" role="doc-biblioref">2017</a>)</span></td>
 </tr>
 <tr class="even">
 <td>Organización</td>
@@ -474,7 +494,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Varias obras</td>
-<td>(Bates, 1989; Marchionini, 2006)</td>
+<td>[<span class="citation" data-cites="bates1989">Bates (<a href="#ref-bates1989" role="doc-biblioref">1989</a>)</span>; Marchionini, 2006)</td>
 <td>—</td>
 </tr>
 </tbody>
@@ -529,6 +549,17 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-bates1989" class="csl-entry" role="listitem">
+Bates, M. J. (1989). <span>The design of browsing and berrypicking techniques for the online search interface</span>. <em>Online Review</em>, <em>13</em>(5), 407-424. <a href="https://doi.org/10.1108/eb024320">https://doi.org/10.1108/eb024320</a>
+</div>
+<div id="ref-metzger2013" class="csl-entry" role="listitem">
+Metzger, M. J., y Flanagin, A. J. (2013). <span>Credibility and trust of information in online environments: The use of cognitive heuristics</span>. <em>Journal of Pragmatics</em>, <em>59</em>, 210-220. <a href="https://doi.org/10.1016/j.pragma.2013.07.012">https://doi.org/10.1016/j.pragma.2013.07.012</a>
+</div>
+<div id="ref-sugimoto2017" class="csl-entry" role="listitem">
+Sugimoto, C. R., Work, S., Larivière, V., y Haustein, S. (2017). <span>Scholarly use of social media and altmetrics: A review of the literature</span>. <em>Journal of the Association for Information Science and Technology</em>, <em>68</em>(9), 2037-2062. <a href="https://doi.org/10.1002/asi.23833">https://doi.org/10.1002/asi.23833</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

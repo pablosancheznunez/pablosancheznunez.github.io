@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -547,8 +567,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Kasneci, E. et al.&nbsp;(2023). <a href="https://doi.org/10.1016/j.lindif.2023.102274">ChatGPT for good? On opportunities and challenges of large language models for education</a>. <em>Learning and Individual Differences</em>, 103, 102274.</li>
-<li>Bender, E. M.; Gebru, T.; McMillan-Major, A.; Shmitchell, S. (2021). <a href="https://doi.org/10.1145/3442188.3445922">On the dangers of stochastic parrots: Can language models be too big?</a> En <em>Proceedings of FAccT ’21</em> (pp.&nbsp;610-623). ACM.</li>
+<li><span class="citation" data-cites="kasneci2023">Kasneci et&nbsp;al. (<a href="#ref-kasneci2023" role="doc-biblioref">2023</a>)</span></li>
+<li><span class="citation" data-cites="bender2021">Bender et&nbsp;al. (<a href="#ref-bender2021" role="doc-biblioref">2021</a>)</span></li>
 </ul>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
@@ -567,7 +587,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>La <a href="92-glosario.html#gl-iag" class="glos" data-def="IA que produce contenido nuevo (texto, imágenes, audio, código) a partir de patrones aprendidos de grandes cantidades de datos."><strong>inteligencia artificial generativa</strong></a> produce contenido nuevo (texto, imágenes, audio, código) a partir de patrones aprendidos de grandes cantidades de datos. Los asistentes conversacionales se basan en <strong>modelos de lenguaje</strong>: sistemas entrenados con enormes colecciones de textos para predecir la palabra (en realidad, el fragmento de palabra) más probable que sigue a un texto dado. Repitiendo esa predicción una y otra vez, el modelo escribe respuestas fluidas.</p>
 <p>De ahí se siguen tres consecuencias importantes:</p>
 <ul>
-<li>El modelo produce lo <strong>plausible</strong>, no necesariamente lo <strong>verdadero</strong>. Bender et al.&nbsp;(2021) los llamaron, de forma crítica, «loros estocásticos»: combinan formas lingüísticas sin acceso propio al significado ni a los hechos.</li>
+<li>El modelo produce lo <strong>plausible</strong>, no necesariamente lo <strong>verdadero</strong>. <span class="citation" data-cites="bender2021">Bender et&nbsp;al. (<a href="#ref-bender2021" role="doc-biblioref">2021</a>)</span> los llamaron, de forma crítica, «loros estocásticos»: combinan formas lingüísticas sin acceso propio al significado ni a los hechos.</li>
 <li>Lo que sabe depende de sus <a href="92-glosario.html#gl-entrenamiento" class="glos" data-def="Colección de datos con la que se entrena un modelo; determina lo que sabe y los sesgos que reproduce."><strong>datos de entrenamiento</strong></a>: puede no conocer hechos recientes y reproducir los sesgos de esos datos.</li>
 <li>La forma de pedir importa: una <a href="92-glosario.html#gl-prompt" class="glos" data-def="Prompt. Texto con el que se pide algo a un sistema de IA generativa."><strong>instrucción</strong></a> (<em>prompt</em>) clara, con contexto, objetivo y formato, da mejores resultados.</li>
 </ul>
@@ -628,7 +648,7 @@ Figura&nbsp;1: Cómo genera texto un modelo de lenguaje: estima la probabilidad 
 </section>
 <section id="alucinaciones" class="level2">
 <h2 class="anchored" data-anchor-id="alucinaciones">3. Alucinaciones</h2>
-<p>Una <strong>alucinación</strong> es una respuesta que parece correcta pero es falsa o inventada. En el trabajo académico, la más peligrosa es la <strong>referencia inventada</strong>: un artículo con autores, título, revista y DOI verosímiles que no existe. Walters y Wilder (2023) pidieron a ChatGPT revisiones bibliográficas breves y comprobaron cada referencia: una gran parte de las <a href="92-glosario.html#gl-cita-texto" class="glos" data-def="Marca breve en el texto que remite a la fuente usada, como (Bates, 1989) o [3].">citas</a> de GPT-3.5 eran inventadas, y con GPT-4 seguía habiendo una proporción menor pero apreciable; además, muchas referencias reales tenían errores.</p>
+<p>Una <strong>alucinación</strong> es una respuesta que parece correcta pero es falsa o inventada. En el trabajo académico, la más peligrosa es la <strong>referencia inventada</strong>: un artículo con autores, título, revista y DOI verosímiles que no existe. <span class="citation" data-cites="walters2023">Walters y Wilder (<a href="#ref-walters2023" role="doc-biblioref">2023</a>)</span> pidieron a ChatGPT revisiones bibliográficas breves y comprobaron cada referencia: una gran parte de las <a href="92-glosario.html#gl-cita-texto" class="glos" data-def="Marca breve en el texto que remite a la fuente usada, como [@bates1989] o [3].">citas</a> de GPT-3.5 eran inventadas, y con GPT-4 seguía habiendo una proporción menor pero apreciable; además, muchas referencias reales tenían errores.</p>
 <div id="fig-alucinacion" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A la izquierda, tres piezas: un apellido de autor del área, el nombre de una revista real y un título sobre el tema. Se combinan en una referencia completa y verosímil. Una flecha lleva a una lupa de verificación en una base de datos, que devuelve: no encontrada.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-alucinacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -642,7 +662,7 @@ Figura&nbsp;2: Cómo surge una referencia inventada. El modelo combina piezas pl
 </section>
 <section id="usos-responsables-en-el-estudio" class="level2">
 <h2 class="anchored" data-anchor-id="usos-responsables-en-el-estudio">4. Usos responsables en el estudio</h2>
-<p>Kasneci et al.&nbsp;(2023) revisan oportunidades (explicaciones adaptadas, apoyo a la escritura, práctica personalizada) y riesgos (dependencia, errores, sesgos, <a href="92-glosario.html#gl-plagio" class="glos" data-def="Presentar como propio el trabajo, las ideas o las palabras de otra persona sin reconocerlo.">plagio</a>). Un criterio práctico es distinguir los usos según lo que delegas:</p>
+<p><span class="citation" data-cites="kasneci2023">Kasneci et&nbsp;al. (<a href="#ref-kasneci2023" role="doc-biblioref">2023</a>)</span> revisan oportunidades (explicaciones adaptadas, apoyo a la escritura, práctica personalizada) y riesgos (dependencia, errores, sesgos, <a href="92-glosario.html#gl-plagio" class="glos" data-def="Presentar como propio el trabajo, las ideas o las palabras de otra persona sin reconocerlo.">plagio</a>). Un criterio práctico es distinguir los usos según lo que delegas:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -950,7 +970,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InU1
 </div>
 </div>
 </div>
-<p>Un DOI que existe no basta: comprueba que <strong>el título, los autores y el año</strong> coinciden con la referencia que te dio la IA. Walters y Wilder (2023) encontraron, además de referencias inventadas, muchas referencias reales con errores en sus datos.</p>
+<p>Un DOI que existe no basta: comprueba que <strong>el título, los autores y el año</strong> coinciden con la referencia que te dio la IA. <span class="citation" data-cites="walters2023">Walters y Wilder (<a href="#ref-walters2023" role="doc-biblioref">2023</a>)</span> encontraron, además de referencias inventadas, muchas referencias reales con errores en sus datos.</p>
 </div>
 </section>
 <section id="lab-u5-prompt" class="level2">
@@ -1197,6 +1217,17 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0zIiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiXQ==
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-bender2021" class="csl-entry" role="listitem">
+Bender, E. M., Gebru, T., McMillan-Major, A., y Shmitchell, S. (2021). <span>On the dangers of stochastic parrots: Can language models be too big?</span> En <em><span>Proceedings of FAccT ’21</span></em> (pp. 610-623). ACM. <a href="https://doi.org/10.1145/3442188.3445922">https://doi.org/10.1145/3442188.3445922</a>
+</div>
+<div id="ref-kasneci2023" class="csl-entry" role="listitem">
+Kasneci, E. et&nbsp;al. (2023). <span>ChatGPT for good? On opportunities and challenges of large language models for education</span>. <em>Learning and Individual Differences</em>, <em>103</em>, 102274. <a href="https://doi.org/10.1016/j.lindif.2023.102274">https://doi.org/10.1016/j.lindif.2023.102274</a>
+</div>
+<div id="ref-walters2023" class="csl-entry" role="listitem">
+Walters, W. H., y Wilder, E. I. (2023). <span>Fabrication and errors in the bibliographic citations generated by ChatGPT</span>. <em>Scientific Reports</em>, <em>13</em>, 14045. <a href="https://doi.org/10.1038/s41598-023-41032-5">https://doi.org/10.1038/s41598-023-41032-5</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

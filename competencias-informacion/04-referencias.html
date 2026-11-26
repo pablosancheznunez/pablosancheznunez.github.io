@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -544,8 +564,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Foltýnek, T. et al.&nbsp;(2020). <a href="https://doi.org/10.1186/s41239-020-00192-4">Testing of support tools for plagiarism detection</a>. <em>International Journal of Educational Technology in Higher Education</em>, 17, 46. Qué detectan y qué no las <a href="92-glosario.html#gl-originalidad" class="glos" data-def="Programa que compara un texto con grandes colecciones de documentos y señala las coincidencias. Su informe es un indicio, no un veredicto de plagio.">herramientas de originalidad</a>.</li>
-<li>American Psychological Association. <a href="https://apastyle.apa.org/">APA Style</a>. Guía oficial del estilo APA 7.</li>
+<li><span class="citation" data-cites="foltynek2020">Foltýnek et&nbsp;al. (<a href="#ref-foltynek2020" role="doc-biblioref">2020</a>)</span> — Qué detectan y qué no las <a href="92-glosario.html#gl-originalidad" class="glos" data-def="Programa que compara un texto con grandes colecciones de documentos y señala las coincidencias. Su informe es un indicio, no un veredicto de plagio.">herramientas de originalidad</a>.</li>
+<li><span class="citation" data-cites="americanpsychologicasf">American Psychological Association (<a href="#ref-americanpsychologicasf" role="doc-biblioref">s.&nbsp;f.</a>)</span> — Guía oficial del estilo APA 7.</li>
 </ul>
 </section>
 </section>
@@ -553,7 +573,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="por-qué-citar">1. Por qué citar</h2>
 <p>Citar sirve para <strong>reconocer</strong> el trabajo ajeno, <strong>demostrar</strong> en qué se apoya lo que dices, <strong>permitir</strong> a quien lee encontrar las fuentes y <strong>distinguir</strong> tus ideas de las de otros. En un trabajo académico hay dos elementos relacionados:</p>
 <ul>
-<li>La <strong>cita en el texto</strong>: una marca breve donde usas la fuente, como (Bates, 1989) o [3].</li>
+<li>La <strong>cita en el texto</strong>: una marca breve donde usas la fuente, como <span class="citation" data-cites="bates1989">(<a href="#ref-bates1989" role="doc-biblioref">Bates, 1989</a>)</span> o [3].</li>
 <li>La <strong>referencia bibliográfica</strong>: la descripción completa de la fuente en la lista final.</li>
 </ul>
 </section>
@@ -564,7 +584,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th>Sistema</th>
-<th><a href="92-glosario.html#gl-cita-texto" class="glos" data-def="Marca breve en el texto que remite a la fuente usada, como (Bates, 1989) o [3].">Cita</a> en el texto</th>
+<th><a href="92-glosario.html#gl-cita-texto" class="glos" data-def="Marca breve en el texto que remite a la fuente usada, como [@bates1989] o [3].">Cita</a> en el texto</th>
 <th>Orden de la lista</th>
 <th>Estilos</th>
 </tr>
@@ -572,7 +592,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><strong>Autor-fecha</strong></td>
-<td>(Metzger y Flanagin, 2013)</td>
+<td><span class="citation" data-cites="metzger2013">(<a href="#ref-metzger2013" role="doc-biblioref">Metzger y Flanagin, 2013</a>)</span></td>
 <td>Alfabético por apellido</td>
 <td>APA 7, Harvard, Chicago autor-fecha</td>
 </tr>
@@ -585,10 +605,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>En este grado se usa con frecuencia <strong>APA 7.ª edición</strong>. Lo importante es elegir un estilo, aplicarlo <strong>de forma coherente</strong> y seguir el que indique cada profesor o revista.</p>
-<div id="fig-apa" class="quarto-float quarto-figure quarto-figure-center anchored" alt="La referencia de Bates (1989) en estilo APA, con cada parte subrayada en un color y rotulada debajo: autora, año, título del artículo, revista, volumen, número, páginas y DOI.">
+<div id="fig-apa" class="quarto-float quarto-figure quarto-figure-center anchored" alt="La referencia de @bates1989 en estilo APA, con cada parte subrayada en un color y rotulada debajo: autora, año, título del artículo, revista, volumen, número, páginas y DOI.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figuras/u4_apa.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Anatomía de una referencia de artículo en estilo APA 7: autores, año, título del artículo, revista en cursiva, volumen en cursiva, número, páginas y DOI como enlace."><img src="figuras/u4_apa.svg" class="img-fluid figure-img" alt="La referencia de Bates (1989) en estilo APA, con cada parte subrayada en un color y rotulada debajo: autora, año, título del artículo, revista, volumen, número, páginas y DOI."></a>
+<a href="figuras/u4_apa.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Anatomía de una referencia de artículo en estilo APA 7: autores, año, título del artículo, revista en cursiva, volumen en cursiva, número, páginas y DOI como enlace."><img src="figuras/u4_apa.svg" class="img-fluid figure-img" alt="La referencia de @bates1989 en estilo APA, con cada parte subrayada en un color y rotulada debajo: autora, año, título del artículo, revista, volumen, número, páginas y DOI."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Anatomía de una referencia de artículo en estilo APA 7: autores, año, título del artículo, revista en cursiva, volumen en cursiva, número, páginas y DOI como enlace.
@@ -636,7 +656,7 @@ Figura&nbsp;1: Anatomía de una referencia de artículo en estilo APA 7: autores
 </section>
 <section id="gestores-de-referencias" class="level2">
 <h2 class="anchored" data-anchor-id="gestores-de-referencias">4. Gestores de referencias</h2>
-<p>Un <a href="92-glosario.html#gl-gestor" class="glos" data-def="Programa que guarda y organiza referencias, inserta citas en el procesador de textos y genera la bibliografía en un estilo."><strong>gestor de referencias</strong></a> guarda los documentos con sus datos, los organiza, inserta las citas en el procesador de textos y genera la bibliografía en cualquier estilo. Gilmour y Cobus-Kuo (2011) compararon varios gestores y encontraron que <strong>todos cometen errores</strong> al generar las referencias (mayúsculas, datos que faltan, formatos de nombres), así que <strong>siempre hay que revisarlas</strong>. Los más usados son <strong><a href="https://www.zotero.org/">Zotero</a></strong> (libre y gratuito), Mendeley y EndNote.</p>
+<p>Un <a href="92-glosario.html#gl-gestor" class="glos" data-def="Programa que guarda y organiza referencias, inserta citas en el procesador de textos y genera la bibliografía en un estilo."><strong>gestor de referencias</strong></a> guarda los documentos con sus datos, los organiza, inserta las citas en el procesador de textos y genera la bibliografía en cualquier estilo. <span class="citation" data-cites="gilmour2011">Gilmour y Cobus-Kuo (<a href="#ref-gilmour2011" role="doc-biblioref">2011</a>)</span> compararon varios gestores y encontraron que <strong>todos cometen errores</strong> al generar las referencias (mayúsculas, datos que faltan, formatos de nombres), así que <strong>siempre hay que revisarlas</strong>. Los más usados son <strong><a href="https://www.zotero.org/">Zotero</a></strong> (libre y gratuito), Mendeley y EndNote.</p>
 <p>Un flujo de trabajo recomendado:</p>
 <ol type="1">
 <li>Capturar la referencia desde la base de datos o el navegador (con el conector del gestor).</li>
@@ -648,7 +668,7 @@ Figura&nbsp;1: Anatomía de una referencia de artículo en estilo APA 7: autores
 </section>
 <section id="herramientas-de-análisis-de-originalidad" class="level2">
 <h2 class="anchored" data-anchor-id="herramientas-de-análisis-de-originalidad">5. Herramientas de análisis de originalidad</h2>
-<p>Las universidades usan programas que comparan los trabajos con grandes bases de textos y señalan las coincidencias. Foltýnek et al.&nbsp;(2020) evaluaron muchas de estas herramientas y concluyeron que detectan bien la copia literal, pero tienen dificultades con las modificaciones (<a href="92-glosario.html#gl-parafrasis" class="glos" data-def="Expresión de las ideas de un autor con palabras y estructura propias, acompañada de su cita.">paráfrasis</a>, sinónimos, traducciones) y que ninguna es perfecta. El informe de coincidencias es un <strong>indicio</strong>, no un veredicto: una cita bien hecha coincide con su fuente y no es <a href="92-glosario.html#gl-plagio" class="glos" data-def="Presentar como propio el trabajo, las ideas o las palabras de otra persona sin reconocerlo.">plagio</a>, y una paráfrasis sin cita puede no coincidir y sí serlo.</p>
+<p>Las universidades usan programas que comparan los trabajos con grandes bases de textos y señalan las coincidencias. <span class="citation" data-cites="foltynek2020">Foltýnek et&nbsp;al. (<a href="#ref-foltynek2020" role="doc-biblioref">2020</a>)</span> evaluaron muchas de estas herramientas y concluyeron que detectan bien la copia literal, pero tienen dificultades con las modificaciones (<a href="92-glosario.html#gl-parafrasis" class="glos" data-def="Expresión de las ideas de un autor con palabras y estructura propias, acompañada de su cita.">paráfrasis</a>, sinónimos, traducciones) y que ninguna es perfecta. El informe de coincidencias es un <strong>indicio</strong>, no un veredicto: una cita bien hecha coincide con su fuente y no es <a href="92-glosario.html#gl-plagio" class="glos" data-def="Presentar como propio el trabajo, las ideas o las palabras de otra persona sin reconocerlo.">plagio</a>, y una paráfrasis sin cita puede no coincidir y sí serlo.</p>
 </section>
 <section id="práctica-en-r-componer-y-ordenar-referencias" class="level2">
 <h2 class="anchored" data-anchor-id="práctica-en-r-componer-y-ordenar-referencias">Práctica en R: componer y ordenar referencias</h2>
@@ -681,7 +701,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoidTRfb3JkZW4ifSwiY29k
 <div class="webr-ojs-exercise exercise-solution d-none" data-exercise="u4_orden">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ordenadas <span class="ot">&lt;-</span> <span class="fu">sort</span>(refs)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>ordenadas[<span class="dv">1</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Bates (1989): «Bat» va antes que «Baw». Los gestores ordenan así, letra a letra.</p>
+<p><span class="citation" data-cites="bates1989">Bates (<a href="#ref-bates1989" role="doc-biblioref">1989</a>)</span>: «Bat» va antes que «Baw». Los gestores ordenan así, letra a letra.</p>
 </div>
 <script type="exercise-check-u4_orden-contents">
 eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InU0X29yZGVuIn0sImNvZGUiOiJpZiAoc3RhcnRzV2l0aChhcy5jaGFyYWN0ZXIoLnJlc3VsdCksIFwiQmF0ZXNcIikpIHtcbiAgbGlzdChjb3JyZWN0ID0gVFJVRSwgbWVzc2FnZSA9IFwiQ29ycmVjdG86IEJhdGVzIHZhIGFudGVzIHF1ZSBCYXdkZW4uXCIpXG59IGVsc2Uge1xuICBsaXN0KGNvcnJlY3QgPSBGQUxTRSwgbWVzc2FnZSA9IFwiT3JkZW5hIGNvbiBzb3J0KCkuXCIpXG59In0=
@@ -694,7 +714,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InU0
 <div class="laboratorio-etiqueta">
 <p>Laboratorio · datos en vivo de Crossref</p>
 </div>
-<p>Escribe un DOI y el laboratorio pide a <a href="https://www.crossref.org/">Crossref</a> la referencia en <strong>APA 7</strong>, igual que hace un gestor bibliográfico. Después, <strong>revísala</strong>: busca mayúsculas de más, cursivas que faltan o datos incompletos. Es exactamente lo que encontraron Gilmour y Cobus-Kuo (2011).</p>
+<p>Escribe un DOI y el laboratorio pide a <a href="https://www.crossref.org/">Crossref</a> la referencia en <strong>APA 7</strong>, igual que hace un gestor bibliográfico. Después, <strong>revísala</strong>: busca mayúsculas de más, cursivas que faltan o datos incompletos. Es exactamente lo que encontraron <span class="citation" data-cites="gilmour2011">Gilmour y Cobus-Kuo (<a href="#ref-gilmour2011" role="doc-biblioref">2011</a>)</span>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="152" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 151;"><span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">texto</span></span>
 <span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">Lab</span><span class="op">.</span><span class="at">area</span></span>
@@ -890,7 +910,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InU0
 <section id="actividades" class="level2">
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
 <div class="ia ia-ordenar" id="ia-u4-apa"><script type="application/json" class="ia-datos">{"enunciado":"","explicacion":"","items":["Autores","Año entre paréntesis","Título del artículo","Nombre de la revista, en cursiva","Volumen, en cursiva, y número entre paréntesis","Páginas o número de artículo","DOI como enlace"],"tipo":"ordenar","titulo":"Las partes de una referencia de artículo en APA 7"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
-<div class="ia ia-clasificar" id="ia-u4-sistema"><script type="application/json" class="ia-datos">{"categorias":["Autor-fecha","Numérico"],"enunciado":"","explicacion":"","items":[{"categoria":"Autor-fecha","explicacion":"","texto":"(Bates, 1989)"},{"categoria":"Numérico","explicacion":"","texto":"[3]"},{"categoria":"Autor-fecha","explicacion":"","texto":"Lista ordenada alfabéticamente por apellido"},{"categoria":"Numérico","explicacion":"","texto":"Lista ordenada por orden de aparición"},{"categoria":"Autor-fecha","explicacion":"","texto":"Estilo APA 7"},{"categoria":"Numérico","explicacion":"","texto":"Estilo Vancouver"},{"categoria":"Numérico","explicacion":"","texto":"Estilo IEEE"},{"categoria":"Autor-fecha","explicacion":"","texto":"Estilo Harvard"}],"tipo":"clasificar","titulo":"¿Autor-fecha o numérico?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-u4-sistema"><script type="application/json" class="ia-datos">{"categorias":["Autor-fecha","Numérico"],"enunciado":"","explicacion":"","items":[{"categoria":"Autor-fecha","explicacion":"","texto":"<span class=\"citation\" data-cites=\"bates1989\">[@bates1989]<\/span>"},{"categoria":"Numérico","explicacion":"","texto":"[3]"},{"categoria":"Autor-fecha","explicacion":"","texto":"Lista ordenada alfabéticamente por apellido"},{"categoria":"Numérico","explicacion":"","texto":"Lista ordenada por orden de aparición"},{"categoria":"Autor-fecha","explicacion":"","texto":"Estilo APA 7"},{"categoria":"Numérico","explicacion":"","texto":"Estilo Vancouver"},{"categoria":"Numérico","explicacion":"","texto":"Estilo IEEE"},{"categoria":"Autor-fecha","explicacion":"","texto":"Estilo Harvard"}],"tipo":"clasificar","titulo":"¿Autor-fecha o numérico?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 <div class="ia ia-clasificar" id="ia-u4-tipo"><script type="application/json" class="ia-datos">{"categorias":["Artículo de revista","Libro","Capítulo de libro","Página web","Norma legal"],"enunciado":"","explicacion":"","items":[{"categoria":"Libro","explicacion":"","texto":"Cruz Gil, C. (2015). <em>Modelos de búsqueda y recuperación de la\ninformación<\/em>. Trea."},{"categoria":"Artículo de revista","explicacion":"","texto":"Bates, M. J. (1989). The design of browsing… <em>Online Review<\/em>,\n<em>13<\/em>(5), 407-424."},{"categoria":"Norma legal","explicacion":"","texto":"Real Decreto Legislativo 1/1996… <em>Boletín Oficial del Estado<\/em>,\n97."},{"categoria":"Página web","explicacion":"","texto":"Caulfield, M. (2019, 19 de junio). <em>SIFT (The four moves)<\/em>.\nHapgood."},{"categoria":"Capítulo de libro","explicacion":"","texto":"Apellido, I. (2020). Título. En I. Editora (Ed.), <em>Título del\nlibro<\/em> (pp. 10-25). Editorial."}],"tipo":"clasificar","titulo":"¿Qué tipo de documento es?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 <div class="callout callout-style-simple callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1018,6 +1038,23 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0zIiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiXQ==
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-americanpsychologicasf" class="csl-entry" role="listitem">
+American Psychological Association. (s.&nbsp;f.). <em><span>APA Style</span></em>. Recuperado <a href="https://apastyle.apa.org/">https://apastyle.apa.org/</a>
+</div>
+<div id="ref-bates1989" class="csl-entry" role="listitem">
+Bates, M. J. (1989). <span>The design of browsing and berrypicking techniques for the online search interface</span>. <em>Online Review</em>, <em>13</em>(5), 407-424. <a href="https://doi.org/10.1108/eb024320">https://doi.org/10.1108/eb024320</a>
+</div>
+<div id="ref-foltynek2020" class="csl-entry" role="listitem">
+Foltýnek, T. et&nbsp;al. (2020). <span>Testing of support tools for plagiarism detection</span>. <em>International Journal of Educational Technology in Higher Education</em>, <em>17</em>, 46. <a href="https://doi.org/10.1186/s41239-020-00192-4">https://doi.org/10.1186/s41239-020-00192-4</a>
+</div>
+<div id="ref-gilmour2011" class="csl-entry" role="listitem">
+Gilmour, R., y Cobus-Kuo, L. (2011). <span>Reference management software: A comparative analysis of four products</span>. <em>Issues in Science and Technology Librarianship</em>, <em>66</em>. <a href="https://doi.org/10.5062/F4Z60KZF">https://doi.org/10.5062/F4Z60KZF</a>
+</div>
+<div id="ref-metzger2013" class="csl-entry" role="listitem">
+Metzger, M. J., y Flanagin, A. J. (2013). <span>Credibility and trust of information in online environments: The use of cognitive heuristics</span>. <em>Journal of Pragmatics</em>, <em>59</em>, 210-220. <a href="https://doi.org/10.1016/j.pragma.2013.07.012">https://doi.org/10.1016/j.pragma.2013.07.012</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

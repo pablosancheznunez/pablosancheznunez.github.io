@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -545,9 +565,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Marchionini, G. (2006). <a href="https://doi.org/10.1145/1121949.1121979">Exploratory search: From finding to understanding</a>. <em>Communications of the ACM</em>, 49(4), 41-46. La búsqueda como aprendizaje.</li>
-<li>Cruz Gil, C. (2015). <em>Modelos de búsqueda y recuperación de la información</em>. Trea (bibliografía básica de la asignatura).</li>
-<li>Pacios Lozano, A. R. (coord.) (2013). <em>Técnicas de búsqueda y uso de la información</em>. Ramón Areces (bibliografía básica).</li>
+<li><span class="citation" data-cites="marchionini2006">Marchionini (<a href="#ref-marchionini2006" role="doc-biblioref">2006</a>)</span> — La búsqueda como aprendizaje.</li>
+<li><span class="citation" data-cites="cruzgil2015">Cruz Gil (<a href="#ref-cruzgil2015" role="doc-biblioref">2015</a>)</span> — Bibliografía básica de la asignatura.</li>
+<li><span class="citation" data-cites="pacioslozano2013">Pacios Lozano (<a href="#ref-pacioslozano2013" role="doc-biblioref">2013</a>)</span> — Bibliografía básica.</li>
 </ul>
 </section>
 </section>
@@ -560,7 +580,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Buscar sinónimos y términos relacionados</strong> de cada concepto, en español y en inglés (<em>smartphone</em>, <em>mobile phone</em>; <em>academic performance</em>, <em>achievement</em>; <em>university students</em>, <em>undergraduates</em>).</li>
 <li><strong>Decidir los límites</strong>: idioma, fechas, tipo de documento.</li>
 </ol>
-<p>Bates (1989) mostró que la búsqueda real no es una consulta única que devuelve el conjunto perfecto, sino un proceso que llamó <strong><em>berrypicking</em></strong> (<a href="92-glosario.html#gl-bayas" class="glos" data-def="Berrypicking. Modelo de Marcia Bates según el cual la búsqueda es un proceso que cambia a medida que se lee, recogiendo información útil en cada paso.">recolección de bayas</a>): la necesidad cambia a medida que se lee, se recogen piezas útiles en cada paso y se usan técnicas variadas (seguir las referencias de un artículo, buscar a un autor, revisar una revista). Marchionini (2006) llama <strong>búsqueda exploratoria</strong> a la que sirve para aprender sobre un tema, frente a la que solo busca un dato.</p>
+<p><span class="citation" data-cites="bates1989">Bates (<a href="#ref-bates1989" role="doc-biblioref">1989</a>)</span> mostró que la búsqueda real no es una consulta única que devuelve el conjunto perfecto, sino un proceso que llamó <strong><em>berrypicking</em></strong> (<a href="92-glosario.html#gl-bayas" class="glos" data-def="Berrypicking. Modelo de Marcia Bates según el cual la búsqueda es un proceso que cambia a medida que se lee, recogiendo información útil en cada paso.">recolección de bayas</a>): la necesidad cambia a medida que se lee, se recogen piezas útiles en cada paso y se usan técnicas variadas (seguir las referencias de un artículo, buscar a un autor, revisar una revista). <span class="citation" data-cites="marchionini2006">Marchionini (<a href="#ref-marchionini2006" role="doc-biblioref">2006</a>)</span> llama <strong>búsqueda exploratoria</strong> a la que sirve para aprender sobre un tema, frente a la que solo busca un dato.</p>
 </section>
 <section id="operadores-y-técnicas" class="level2">
 <h2 class="anchored" data-anchor-id="operadores-y-técnicas">2. Operadores y técnicas</h2>
@@ -921,7 +941,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InUy
 </tr>
 <tr class="even">
 <td><strong>Scopus / Web of Science</strong></td>
-<td>Cobertura internacional seleccionada, búsqueda por campos, <a href="92-glosario.html#gl-cita-texto" class="glos" data-def="Marca breve en el texto que remite a la fuente usada, como (Bates, 1989) o [3].">citas</a></td>
+<td>Cobertura internacional seleccionada, búsqueda por campos, <a href="92-glosario.html#gl-cita-texto" class="glos" data-def="Marca breve en el texto que remite a la fuente usada, como [@bates1989] o [3].">citas</a></td>
 <td>Acceso por suscripción institucional; menos literatura en español</td>
 </tr>
 <tr class="odd">
@@ -1088,6 +1108,20 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC01IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiXQ==
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-bates1989" class="csl-entry" role="listitem">
+Bates, M. J. (1989). <span>The design of browsing and berrypicking techniques for the online search interface</span>. <em>Online Review</em>, <em>13</em>(5), 407-424. <a href="https://doi.org/10.1108/eb024320">https://doi.org/10.1108/eb024320</a>
+</div>
+<div id="ref-cruzgil2015" class="csl-entry" role="listitem">
+Cruz Gil, C. (2015). <em><span>Modelos de búsqueda y recuperación de la información</span></em>. Trea.
+</div>
+<div id="ref-marchionini2006" class="csl-entry" role="listitem">
+Marchionini, G. (2006). <span>Exploratory search: From finding to understanding</span>. <em>Communications of the ACM</em>, <em>49</em>(4), 41-46. <a href="https://doi.org/10.1145/1121949.1121979">https://doi.org/10.1145/1121949.1121979</a>
+</div>
+<div id="ref-pacioslozano2013" class="csl-entry" role="listitem">
+Pacios Lozano, A. R. (2013). <em><span>Técnicas de búsqueda y uso de la información</span></em>. Ramón Areces.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
