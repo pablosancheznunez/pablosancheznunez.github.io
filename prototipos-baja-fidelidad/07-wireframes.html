@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -457,6 +477,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./96-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -584,15 +609,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Krug, S. (2006). <em>Don’t make me think!</em>. New Riders. Por qué las <a href="92-glosario.html#gl-convencion" class="glos" data-def="Solución de interfaz que la mayoría de los sitios resuelve igual y que las personas ya esperan.">convenciones</a> y la jerarquía visual hacen que una página se entienda de un vistazo.</li>
-<li>Nielsen Norman Group. <a href="https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/">F-shaped pattern for reading web content</a>. Cómo recorren la vista las páginas con mucho texto.</li>
-<li>Nielsen Norman Group. <a href="https://www.nngroup.com/articles/using-grids-in-interface-designs/">Using grids in interface designs</a>. Rejillas de columnas en interfaces.</li>
+<li><span class="citation" data-cites="krug2006">Krug (<a href="#ref-krug2006" role="doc-biblioref">2006</a>)</span> — Por qué las <a href="92-glosario.html#gl-convencion" class="glos" data-def="Solución de interfaz que la mayoría de los sitios resuelve igual y que las personas ya esperan.">convenciones</a> y la jerarquía visual hacen que una página se entienda de un vistazo.</li>
+<li><span class="citation" data-cites="nielsennormangroupsfd">Nielsen Norman Group (<a href="#ref-nielsennormangroupsfd" role="doc-biblioref">s.&nbsp;f.-a</a>)</span> — Cómo recorren la vista las páginas con mucho texto.</li>
+<li><span class="citation" data-cites="nielsennormangroupsfe">Nielsen Norman Group (<a href="#ref-nielsennormangroupsfe" role="doc-biblioref">s.&nbsp;f.-b</a>)</span> — Rejillas de columnas en interfaces.</li>
 </ul>
 </section>
 </section>
 <section id="qué-es-un-esquema-de-página" class="level2">
 <h2 class="anchored" data-anchor-id="qué-es-un-esquema-de-página">1. Qué es un esquema de página</h2>
-<p>Un <strong>esquema de página</strong> (<em>wireframe</em>) representa la estructura de una pantalla: qué elementos contiene, dónde están y qué importancia tienen. Deja fuera el estilo visual (color, tipografía definitiva, imágenes) para que la discusión se centre en el contenido y la organización. En el modelo de Garrett (2011), el esquema corresponde al <strong>plano del esqueleto</strong>: el que concreta la estructura antes de llegar a la superficie visual.</p>
+<p>Un <strong>esquema de página</strong> (<em>wireframe</em>) representa la estructura de una pantalla: qué elementos contiene, dónde están y qué importancia tienen. Deja fuera el estilo visual (color, tipografía definitiva, imágenes) para que la discusión se centre en el contenido y la organización. En el modelo de <span class="citation" data-cites="garrett2011">Garrett (<a href="#ref-garrett2011" role="doc-biblioref">2011</a>)</span>, el esquema corresponde al <strong>plano del esqueleto</strong>: el que concreta la estructura antes de llegar a la superficie visual.</p>
 <p>Un buen esquema responde a tres preguntas: <strong>qué</strong> hay en la pantalla, <strong>qué es lo más importante</strong> y <strong>qué puede hacer</strong> la persona desde ella.</p>
 </section>
 <section id="en-papel-y-en-pantalla" class="level2">
@@ -1137,6 +1162,20 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0zIiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-garrett2011" class="csl-entry" role="listitem">
+Garrett, J. J. (2011). <em><span>The elements of user experience: User-centered design for the web and beyond</span></em> (2.ª ed.). New Riders.
+</div>
+<div id="ref-krug2006" class="csl-entry" role="listitem">
+Krug, S. (2006). <em><span>Don’t make me think!</span></em> New Riders.
+</div>
+<div id="ref-nielsennormangroupsfd" class="csl-entry" role="listitem">
+Nielsen Norman Group. (s.&nbsp;f.-a). <em><span>F-shaped pattern for reading web content</span></em>. Recuperado <a href="https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/">https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/</a>
+</div>
+<div id="ref-nielsennormangroupsfe" class="csl-entry" role="listitem">
+Nielsen Norman Group. (s.&nbsp;f.-b). <em><span>Using grids in interface designs</span></em>. Recuperado <a href="https://www.nngroup.com/articles/using-grids-in-interface-designs/">https://www.nngroup.com/articles/using-grids-in-interface-designs/</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

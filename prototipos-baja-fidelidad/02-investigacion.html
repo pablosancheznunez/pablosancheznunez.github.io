@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -457,6 +477,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./96-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -584,16 +609,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Nielsen, J. (1994). <a href="https://doi.org/10.1145/191666.191729">Enhancing the explanatory power of usability heuristics</a>. En <em>CHI ’94</em> (pp.&nbsp;152-158). ACM. El origen de las diez heurísticas que se usan hoy.</li>
-<li>Rohrer, C. (2022). <a href="https://www.nngroup.com/articles/which-ux-research-methods/">When to use which user-experience research methods</a>. Nielsen Norman Group. El mapa de métodos que usa este tema.</li>
-<li>Sharp, H.; Rogers, Y.; Preece, J. (2023). <em>Interaction design: Beyond human-computer interaction</em>. Wiley. Capítulos sobre recogida y análisis de datos.</li>
+<li><span class="citation" data-cites="nielsen1994">Nielsen (<a href="#ref-nielsen1994" role="doc-biblioref">1994</a>)</span> — El origen de las diez heurísticas que se usan hoy.</li>
+<li><span class="citation" data-cites="rohrer2022">Rohrer (<a href="#ref-rohrer2022" role="doc-biblioref">2022</a>)</span> — El mapa de métodos que usa este tema.</li>
+<li><span class="citation" data-cites="sharp2023">Sharp et&nbsp;al. (<a href="#ref-sharp2023" role="doc-biblioref">2023</a>)</span> — Capítulos sobre recogida y análisis de datos.</li>
 </ul>
 </section>
 </section>
 <section id="por-qué-investigar-antes-de-dibujar" class="level2">
 <h2 class="anchored" data-anchor-id="por-qué-investigar-antes-de-dibujar">1. Por qué investigar antes de dibujar</h2>
 <p>Un <a href="92-glosario.html#gl-wireframe" class="glos" data-def="Wireframe. Representación de la estructura de una pantalla: qué elementos contiene, dónde están y qué importancia tienen, sin estilo visual.">esquema de página</a> resuelve un problema; si el problema está mal entendido, el mejor esquema no sirve. La <a href="92-glosario.html#gl-investigacion" class="glos" data-def="Conjunto de métodos para entender quién usará un producto, qué intenta conseguir, en qué contexto y qué se lo impide.">investigación con usuarios</a> reduce la incertidumbre sobre <strong>quién</strong> usará el producto, <strong>qué</strong> intenta conseguir, <strong>en qué contexto</strong> y <strong>qué le impide</strong> conseguirlo hoy. No se trata de preguntar a la gente qué quiere, sino de entender lo que hace y por qué.</p>
-<p>Rohrer (2022) ordena los métodos en dos ejes que ayudan a elegir:</p>
+<p><span class="citation" data-cites="rohrer2022">Rohrer (<a href="#ref-rohrer2022" role="doc-biblioref">2022</a>)</span> ordena los métodos en dos ejes que ayudan a elegir:</p>
 <ul>
 <li><strong>Actitudinal o comportamental</strong>: lo que las personas <em>dicen</em> (opiniones, intenciones) frente a lo que <em>hacen</em> (conducta observada). Ambas cosas difieren a menudo.</li>
 <li><strong>Cualitativo o cuantitativo</strong>: entender el <em>porqué</em> y el <em>cómo</em> con pocas personas, frente a medir el <em>cuánto</em> con muchas.</li>
@@ -601,10 +626,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="fig-metodos" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plano con un eje horizontal que va de cualitativo a cuantitativo y un eje vertical que va de comportamental (abajo) a actitudinal (arriba). Arriba a la izquierda, entrevistas y grupos de discusión; arriba a la derecha, encuestas; abajo a la izquierda, observación contextual y pruebas de usabilidad; abajo a la derecha, analítica web y pruebas A/B. La revisión heurística y el análisis de la competencia aparecen aparte, como métodos de inspección sin usuarios.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-metodos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figuras/tema2_metodos.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Mapa simplificado de métodos de investigación según Rohrer (2022). La pregunta de investigación decide el cuadrante."><img src="figuras/tema2_metodos.svg" class="img-fluid figure-img" alt="Plano con un eje horizontal que va de cualitativo a cuantitativo y un eje vertical que va de comportamental (abajo) a actitudinal (arriba). Arriba a la izquierda, entrevistas y grupos de discusión; arriba a la derecha, encuestas; abajo a la izquierda, observación contextual y pruebas de usabilidad; abajo a la derecha, analítica web y pruebas A/B. La revisión heurística y el análisis de la competencia aparecen aparte, como métodos de inspección sin usuarios."></a>
+<a href="figuras/tema2_metodos.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Mapa simplificado de métodos de investigación según @rohrer2022. La pregunta de investigación decide el cuadrante."><img src="figuras/tema2_metodos.svg" class="img-fluid figure-img" alt="Plano con un eje horizontal que va de cualitativo a cuantitativo y un eje vertical que va de comportamental (abajo) a actitudinal (arriba). Arriba a la izquierda, entrevistas y grupos de discusión; arriba a la derecha, encuestas; abajo a la izquierda, observación contextual y pruebas de usabilidad; abajo a la derecha, analítica web y pruebas A/B. La revisión heurística y el análisis de la competencia aparecen aparte, como métodos de inspección sin usuarios."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-metodos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Mapa simplificado de métodos de investigación según Rohrer (2022). La pregunta de investigación decide el cuadrante.
+Figura&nbsp;1: Mapa simplificado de métodos de investigación según <span class="citation" data-cites="rohrer2022">Rohrer (<a href="#ref-rohrer2022" role="doc-biblioref">2022</a>)</span>. La pregunta de investigación decide el cuadrante.
 </figcaption>
 </figure>
 </div>
@@ -627,12 +652,12 @@ Figura&nbsp;1: Mapa simplificado de métodos de investigación según Rohrer (20
 </section>
 <section id="revisión-heurística" class="level2">
 <h2 class="anchored" data-anchor-id="revisión-heurística">5. Revisión heurística</h2>
-<p>Nielsen y Molich (1990) propusieron que varios evaluadores revisen una interfaz con una lista breve de principios, las <strong>heurísticas</strong>, y anoten los problemas. Es un método de <strong>inspección</strong>: no participan usuarios, así que es rápido y barato, pero no sustituye a las pruebas con personas. Sus hallazgos más importantes:</p>
+<p><span class="citation" data-cites="nielsen1990">Nielsen y Molich (<a href="#ref-nielsen1990" role="doc-biblioref">1990</a>)</span> propusieron que varios evaluadores revisen una interfaz con una lista breve de principios, las <strong>heurísticas</strong>, y anoten los problemas. Es un método de <strong>inspección</strong>: no participan usuarios, así que es rápido y barato, pero no sustituye a las pruebas con personas. Sus hallazgos más importantes:</p>
 <ul>
 <li>Un evaluador solo encuentra una parte de los problemas; con <strong>tres a cinco</strong> evaluadores independientes se detecta la mayoría.</li>
 <li>Cada evaluador revisa por separado y después se juntan los resultados.</li>
 </ul>
-<p>Cada problema se valora con una escala de <a href="92-glosario.html#gl-severidad" class="glos" data-def="Gravedad de un problema de usabilidad, de 0 (no es un problema) a 4 (catástrofe) en la escala de Nielsen."><strong>severidad</strong></a> de 0 a 4: 0, no es un problema; 1, cosmético; 2, menor; 3, importante; 4, catástrofe que hay que resolver antes de lanzar. Las diez heurísticas de Nielsen (1994) son:</p>
+<p>Cada problema se valora con una escala de <a href="92-glosario.html#gl-severidad" class="glos" data-def="Gravedad de un problema de usabilidad, de 0 (no es un problema) a 4 (catástrofe) en la escala de Nielsen."><strong>severidad</strong></a> de 0 a 4: 0, no es un problema; 1, cosmético; 2, menor; 3, importante; 4, catástrofe que hay que resolver antes de lanzar. Las diez heurísticas de <span class="citation" data-cites="nielsen1994">Nielsen (<a href="#ref-nielsen1994" role="doc-biblioref">1994</a>)</span> son:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1101,6 +1126,20 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC03IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-nielsen1994" class="csl-entry" role="listitem">
+Nielsen, J. (1994). <span>Enhancing the explanatory power of usability heuristics</span>. En <em><span>CHI ’94</span></em> (pp. 152-158). ACM. <a href="https://doi.org/10.1145/191666.191729">https://doi.org/10.1145/191666.191729</a>
+</div>
+<div id="ref-nielsen1990" class="csl-entry" role="listitem">
+Nielsen, J., y Molich, R. (1990). <span>Heuristic evaluation of user interfaces</span>. En <em><span>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’90)</span></em> (pp. 249-256). ACM. <a href="https://doi.org/10.1145/97243.97281">https://doi.org/10.1145/97243.97281</a>
+</div>
+<div id="ref-rohrer2022" class="csl-entry" role="listitem">
+Rohrer, C. (2022). <em><span>When to use which user-experience research methods</span></em>. Nielsen Norman Group. <a href="https://www.nngroup.com/articles/which-ux-research-methods/">https://www.nngroup.com/articles/which-ux-research-methods/</a>
+</div>
+<div id="ref-sharp2023" class="csl-entry" role="listitem">
+Sharp, H., Rogers, Y., y Preece, J. (2023). <em><span>Interaction design: Beyond human-computer interaction</span></em>. Wiley.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

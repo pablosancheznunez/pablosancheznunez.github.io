@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -457,6 +477,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./96-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -580,9 +605,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>W3C (2023). <a href="https://www.w3.org/TR/WCAG22/">Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2</a>. La norma de referencia de la accesibilidad web.</li>
-<li>Microsoft. <a href="https://inclusive.microsoft.design/">Inclusive Design</a>. El kit que popularizó el <a href="92-glosario.html#gl-espectro" class="glos" data-def="Idea de que una limitación puede ser permanente, temporal o situacional.">espectro de personas</a>.</li>
-<li>University of Cambridge. <a href="https://www.inclusivedesigntoolkit.com/">Inclusive Design Toolkit</a>. Métodos y herramientas para estimar la exclusión.</li>
+<li><span class="citation" data-cites="w3c2023">W3C (<a href="#ref-w3c2023" role="doc-biblioref">2023</a>)</span> — La norma de referencia de la accesibilidad web.</li>
+<li><span class="citation" data-cites="microsoftsf">Microsoft (<a href="#ref-microsoftsf" role="doc-biblioref">s.&nbsp;f.</a>)</span> — El kit que popularizó el <a href="92-glosario.html#gl-espectro" class="glos" data-def="Idea de que una limitación puede ser permanente, temporal o situacional.">espectro de personas</a>.</li>
+<li><span class="citation" data-cites="universityofcambridgsf">University of Cambridge (<a href="#ref-universityofcambridgsf" role="doc-biblioref">s.&nbsp;f.</a>)</span> — Métodos y herramientas para estimar la exclusión.</li>
 </ul>
 </section>
 </section>
@@ -597,12 +622,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="perspectiva-de-género" class="level2">
 <h2 class="anchored" data-anchor-id="perspectiva-de-género">2. Perspectiva de género</h2>
-<p>Burnett et al.&nbsp;(2016) desarrollaron <a href="92-glosario.html#gl-gendermag" class="glos" data-def="Método de inspección que detecta sesgos de género con personajes que varían en cinco facetas cognitivas (Burnett et al., 2016)."><strong>GenderMag</strong></a>, un método de inspección (parecido a la revisión heurística del Tema 2) que usa personajes para detectar sesgos de género en el software. Se basa en cinco <strong>facetas</strong> cognitivas en las que la investigación ha encontrado diferencias estadísticas entre grupos de género: la <strong>motivación</strong> para usar la tecnología, el <strong>estilo de procesar la información</strong> (completo o selectivo), la <strong>autoeficacia</strong> con el ordenador, la <strong>actitud ante el riesgo</strong> y el <strong>estilo de aprendizaje</strong> (por proceso o probando). El objetivo no es diseñar «para mujeres» y «para hombres», sino que el software funcione bien para todo el espectro de estas facetas.</p>
+<p><span class="citation" data-cites="burnett2016">Burnett et&nbsp;al. (<a href="#ref-burnett2016" role="doc-biblioref">2016</a>)</span> desarrollaron <a href="92-glosario.html#gl-gendermag" class="glos" data-def="Método de inspección que detecta sesgos de género con personajes que varían en cinco facetas cognitivas [@burnett2016]."><strong>GenderMag</strong></a>, un método de inspección (parecido a la revisión heurística del Tema 2) que usa personajes para detectar sesgos de género en el software. Se basa en cinco <strong>facetas</strong> cognitivas en las que la investigación ha encontrado diferencias estadísticas entre grupos de género: la <strong>motivación</strong> para usar la tecnología, el <strong>estilo de procesar la información</strong> (completo o selectivo), la <strong>autoeficacia</strong> con el ordenador, la <strong>actitud ante el riesgo</strong> y el <strong>estilo de aprendizaje</strong> (por proceso o probando). El objetivo no es diseñar «para mujeres» y «para hombres», sino que el software funcione bien para todo el espectro de estas facetas.</p>
 <p>En las decisiones de baja fidelidad, la perspectiva de género aparece también en los <strong>formularios</strong> (pedir el género solo si hace falta, con opciones inclusivas y no obligatorio), las <strong>imágenes y los ejemplos</strong> (quién aparece y haciendo qué) y el <strong>lenguaje</strong>.</p>
 </section>
 <section id="diversidad-funcional-accesibilidad-desde-la-baja-fidelidad" class="level2">
 <h2 class="anchored" data-anchor-id="diversidad-funcional-accesibilidad-desde-la-baja-fidelidad">3. Diversidad funcional: accesibilidad desde la baja fidelidad</h2>
-<p>Las <strong>WCAG 2.2</strong> (W3C, 2023) organizan los requisitos en cuatro principios: el contenido debe ser <strong>perceptible</strong>, <strong>operable</strong>, <strong>comprensible</strong> y <strong>robusto</strong>. Cada criterio tiene un nivel de conformidad (A, AA, AAA); la normativa europea y española exige el nivel <strong>AA</strong>:</p>
+<p>Las <strong>WCAG 2.2</strong> <span class="citation" data-cites="w3c2023">(<a href="#ref-w3c2023" role="doc-biblioref">W3C, 2023</a>)</span> organizan los requisitos en cuatro principios: el contenido debe ser <strong>perceptible</strong>, <strong>operable</strong>, <strong>comprensible</strong> y <strong>robusto</strong>. Cada criterio tiene un nivel de conformidad (A, AA, AAA); la normativa europea y española exige el nivel <strong>AA</strong>:</p>
 <ul>
 <li>El <strong>Real Decreto 1112/2018</strong> obliga a los sitios web y aplicaciones del sector público.</li>
 <li>La <strong>Directiva (UE) 2019/882</strong> (Acta Europea de Accesibilidad), transpuesta en España por la Ley 11/2023, se aplica desde el 28 de junio de 2025 a productos y servicios como el comercio electrónico, la banca o los libros electrónicos.</li>
@@ -965,6 +990,20 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC02IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-burnett2016" class="csl-entry" role="listitem">
+Burnett, M., Stumpf, S., Macbeth, J., Makri, S., Beckwith, L., Kwan, I., Peters, A., y Jernigan, W. (2016). <span>GenderMag: A method for evaluating software’s gender inclusiveness</span>. <em>Interacting with Computers</em>, <em>28</em>(6), 760-787. <a href="https://doi.org/10.1093/iwc/iwv046">https://doi.org/10.1093/iwc/iwv046</a>
+</div>
+<div id="ref-microsoftsf" class="csl-entry" role="listitem">
+Microsoft. (s.&nbsp;f.). <em><span>Inclusive Design</span></em>. Recuperado <a href="https://inclusive.microsoft.design/">https://inclusive.microsoft.design/</a>
+</div>
+<div id="ref-universityofcambridgsf" class="csl-entry" role="listitem">
+University of Cambridge. (s.&nbsp;f.). <em><span>Inclusive Design Toolkit</span></em>. Recuperado <a href="https://www.inclusivedesigntoolkit.com/">https://www.inclusivedesigntoolkit.com/</a>
+</div>
+<div id="ref-w3c2023" class="csl-entry" role="listitem">
+W3C. (2023). <em><span>Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2</span></em>. <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

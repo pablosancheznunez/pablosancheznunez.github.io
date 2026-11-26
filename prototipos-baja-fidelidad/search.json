@@ -145,7 +145,7 @@
     "href": "01-fundamentos.html#lectura-obligatoria",
     "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
     "section": "",
-    "text": "Rudd, J.; Stern, K.; Isensee, S. (1996). Low vs. high-fidelity prototyping debate. Interactions, 3(1), 76-85.\n\n\nLecturas complementarias\n\nHoude, S.; Hill, C. (1997). What do prototypes prototype? En Handbook of Human-Computer Interaction (pp. 367-381). Elsevier. El modelo de los tres aspectos que puede explorar un prototipo.\nLim, Y.-K.; Stolterman, E.; Tenenberg, J. (2008). The anatomy of prototypes. ACM Transactions on Computer-Human Interaction, 15(2), 1-27. Los prototipos como filtros que dejan ver unas cualidades del diseño y ocultan otras.\nWalker, M.; Takayama, L.; Landay, J. A. (2002). High-fidelity or low-fidelity, paper or computer? Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 46(5), 661-665. Un experimento que compara qué problemas detecta cada tipo de prototipo.",
+    "text": "Rudd, J.; Stern, K.; Isensee, S. (1996). Low vs. high-fidelity prototyping debate. Interactions, 3(1), 76-85.\n\n\nLecturas complementarias\n\nHoude y Hill (1997) — El modelo de los tres aspectos que puede explorar un prototipo.\nLim et al. (2008) — Los prototipos como filtros que dejan ver unas cualidades del diseño y ocultan otras.\nWalker et al. (2002) — Un experimento que compara qué problemas detecta cada tipo de prototipo.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
@@ -167,7 +167,7 @@
     "href": "01-fundamentos.html#qué-significa-fidelidad",
     "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
     "section": "2. Qué significa «fidelidad»",
-    "text": "2. Qué significa «fidelidad»\nLa fidelidad es el grado en que un prototipo se parece al producto final. No es una sola escala: Lim, Stolterman y Tenenberg (2008) describen los prototipos como filtros que muestran unas cualidades del diseño y ocultan otras, y distinguen varias dimensiones que se pueden refinar por separado:\n\nApariencia: tamaño, color, tipografía, imágenes.\nDatos: si el contenido es real o de relleno.\nFuncionalidad: qué partes del sistema funcionan.\nInteractividad: cómo responde a las acciones de la persona.\nEstructura espacial: cómo se organizan los elementos en la pantalla y entre pantallas.\n\nUn esquema de página en escala de grises con textos reales tiene baja fidelidad visual pero alta fidelidad de datos. Esa mezcla es a menudo la mejor elección: con textos de relleno («lorem ipsum») no se puede comprobar si una persona entiende una etiqueta.\n\n\n\n\n\n\nFigura 1: Las cinco dimensiones de fidelidad de Lim et al. (2008) en tres artefactos habituales. La fidelidad no es una sola escala: un esquema puede ser tosco en apariencia y fiel en estructura y datos.",
+    "text": "2. Qué significa «fidelidad»\nLa fidelidad es el grado en que un prototipo se parece al producto final. No es una sola escala: Lim, Stolterman y Tenenberg (2008) describen los prototipos como filtros que muestran unas cualidades del diseño y ocultan otras, y distinguen varias dimensiones que se pueden refinar por separado:\n\nApariencia: tamaño, color, tipografía, imágenes.\nDatos: si el contenido es real o de relleno.\nFuncionalidad: qué partes del sistema funcionan.\nInteractividad: cómo responde a las acciones de la persona.\nEstructura espacial: cómo se organizan los elementos en la pantalla y entre pantallas.\n\nUn esquema de página en escala de grises con textos reales tiene baja fidelidad visual pero alta fidelidad de datos. Esa mezcla es a menudo la mejor elección: con textos de relleno («lorem ipsum») no se puede comprobar si una persona entiende una etiqueta.\n\n\n\n\n\n\nFigura 1: Las cinco dimensiones de fidelidad de Lim et al. (2008) en tres artefactos habituales. La fidelidad no es una sola escala: un esquema puede ser tosco en apariencia y fiel en estructura y datos.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
@@ -178,7 +178,7 @@
     "href": "01-fundamentos.html#para-qué-sirve-la-baja-fidelidad",
     "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
     "section": "3. Para qué sirve la baja fidelidad",
-    "text": "3. Para qué sirve la baja fidelidad\nBuxton (2007) distingue entre bocetar y prototipar. El boceto sirve para explorar y generar alternativas: es rápido, barato, desechable, abundante y ambiguo, y por eso invita a la discusión. El prototipo sirve para comprobar y refinar una idea concreta. Los esquemas y prototipos de baja fidelidad están a medio camino: conservan la rapidez del boceto y ya permiten probar.\nSus ventajas principales son:\n\nCoste y velocidad. Se hacen en minutos y se cambian en segundos. Se pueden explorar varias alternativas en lugar de defender la primera.\nAtención en lo importante. Sin colores ni tipografías, la conversación con el equipo y con los usuarios se centra en la estructura, el contenido y el flujo, y no en si el azul es el adecuado.\nCríticas más sinceras. Un diseño que parece terminado intimida: la gente opina menos sobre algo que parece costoso de cambiar.\nDetección temprana de problemas. Varios estudios han comparado prototipos de baja y alta fidelidad y encontraron que detectan un número similar de problemas de usabilidad (Virzi et al., 1996; Walker et al., 2002).\n\nY sus límites, que Rudd et al. (1996) resumen en su debate:\n\nNo sirven para evaluar el aspecto visual, la legibilidad final ni los tiempos de respuesta.\nRequieren un facilitador que «haga de ordenador», lo que puede introducir sesgos.\nComunican peor el diseño a quien no participó en él, por ejemplo a la dirección o a un cliente.\nNo sirven como especificación para desarrollar: para eso hace falta la alta fidelidad (siguiente asignatura del máster).",
+    "text": "3. Para qué sirve la baja fidelidad\nBuxton (2007) distingue entre bocetar y prototipar. El boceto sirve para explorar y generar alternativas: es rápido, barato, desechable, abundante y ambiguo, y por eso invita a la discusión. El prototipo sirve para comprobar y refinar una idea concreta. Los esquemas y prototipos de baja fidelidad están a medio camino: conservan la rapidez del boceto y ya permiten probar.\nSus ventajas principales son:\n\nCoste y velocidad. Se hacen en minutos y se cambian en segundos. Se pueden explorar varias alternativas en lugar de defender la primera.\nAtención en lo importante. Sin colores ni tipografías, la conversación con el equipo y con los usuarios se centra en la estructura, el contenido y el flujo, y no en si el azul es el adecuado.\nCríticas más sinceras. Un diseño que parece terminado intimida: la gente opina menos sobre algo que parece costoso de cambiar.\nDetección temprana de problemas. Varios estudios han comparado prototipos de baja y alta fidelidad y encontraron que detectan un número similar de problemas de usabilidad [Virzi et al. (1996); Walker et al., 2002).\n\nY sus límites, que Rudd et al. (1996) resumen en su debate:\n\nNo sirven para evaluar el aspecto visual, la legibilidad final ni los tiempos de respuesta.\nRequieren un facilitador que «haga de ordenador», lo que puede introducir sesgos.\nComunican peor el diseño a quien no participó en él, por ejemplo a la dirección o a un cliente.\nNo sirven como especificación para desarrollar: para eso hace falta la alta fidelidad (siguiente asignatura del máster).",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
@@ -255,7 +255,7 @@
     "href": "01-fundamentos.html#autoevaluación",
     "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
     "section": "Autoevaluación",
-    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUn prototipo de baja fidelidad sirve para evaluar si la tipografía elegida es legible. VERDADEROFALSO\nSegún Houde y Hill, un storyboard que muestra cuándo y por qué alguien usa un servicio explora sobre todo su papelapariencia y sensaciónimplementación\nUn esquema en escala de grises con los textos definitivos tiene baja fidelidad visual y alta fidelidad de interactividaddatosfuncionalidadapariencia\nVarios estudios encontraron que los prototipos de baja y alta fidelidad detectan un número similar de problemas de usabilidad. VERDADEROFALSO\n¿Cuál de estas características corresponde a un boceto según Buxton?\n\n Preciso y detallado, para especificar el desarrollo Rápido, barato, desechable y ambiguo, para explorar alternativas Interactivo y con datos reales, para medir tiempos\n\nLas cuatro actividades del diseño centrado en las personas de la ISO 9241-210 se hacen una sola vez, en orden. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nLa legibilidad final depende de decisiones visuales que la baja fidelidad deja fuera a propósito.\nEl papel es qué hace el producto en la vida de la persona: justo lo que cuenta un storyboard.\nLos textos reales dan fidelidad de datos aunque el aspecto sea tosco.\nEs la conclusión de Virzi et al. (1996) y Walker et al. (2002).\nLa ambigüedad del boceto invita a discutir y a generar alternativas.\nEs un ciclo: se repite en cada iteración.",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUn prototipo de baja fidelidad sirve para evaluar si la tipografía elegida es legible. VERDADEROFALSO\nSegún Houde y Hill, un storyboard que muestra cuándo y por qué alguien usa un servicio explora sobre todo su papelapariencia y sensaciónimplementación\nUn esquema en escala de grises con los textos definitivos tiene baja fidelidad visual y alta fidelidad de interactividaddatosfuncionalidadapariencia\nVarios estudios encontraron que los prototipos de baja y alta fidelidad detectan un número similar de problemas de usabilidad. VERDADEROFALSO\n¿Cuál de estas características corresponde a un boceto según Buxton?\n\n Preciso y detallado, para especificar el desarrollo Rápido, barato, desechable y ambiguo, para explorar alternativas Interactivo y con datos reales, para medir tiempos\n\nLas cuatro actividades del diseño centrado en las personas de la ISO 9241-210 se hacen una sola vez, en orden. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nLa legibilidad final depende de decisiones visuales que la baja fidelidad deja fuera a propósito.\nEl papel es qué hace el producto en la vida de la persona: justo lo que cuenta un storyboard.\nLos textos reales dan fidelidad de datos aunque el aspecto sea tosco.\nEs la conclusión de Virzi et al. (1996) y Walker et al. (2002).\nLa ambigüedad del boceto invita a discutir y a generar alternativas.\nEs un ciclo: se repite en cada iteración.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
@@ -266,7 +266,7 @@
     "href": "01-fundamentos.html#recursos-complementarios",
     "title": "Tema 1. Fundamentos del prototipado de baja fidelidad",
     "section": "Recursos complementarios",
-    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – UX prototypes: low fidelity vs. high fidelity\nResumen práctico de cuándo usar cada fidelidad\n\n\nInteraction Design Foundation – Prototyping\nIntroducción y ejemplos\n\n\nKo, A. J. – Design Methods: Prototyping\nCapítulo abierto sobre prototipado\n\n\nISO 9241-210:2019\nNorma de diseño centrado en las personas",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – UX prototypes: low fidelity vs. high fidelity\nResumen práctico de cuándo usar cada fidelidad\n\n\nInteraction Design Foundation – Prototyping\nIntroducción y ejemplos\n\n\nKo, A. J. – Design Methods: Prototyping\nCapítulo abierto sobre prototipado\n\n\nISO 9241-210:2019\nNorma de diseño centrado en las personas\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBuxton, W. (2007). Sketching user experiences. Elsevier.\n\n\nHoude, S., y Hill, C. (1997). What do prototypes prototype? En Handbook of Human-Computer Interaction (pp. 367-381). Elsevier. https://doi.org/10.1016/B978-044481862-1.50082-0\n\n\nLim, Y.-K., Stolterman, E., y Tenenberg, J. (2008). The anatomy of prototypes. ACM Transactions on Computer-Human Interaction, 15(2), 1-27. https://doi.org/10.1145/1375761.1375762\n\n\nRudd, J., Stern, K., y Isensee, S. (1996). Low vs. high-fidelity prototyping debate. Interactions, 3(1), 76-85. https://doi.org/10.1145/223500.223514\n\n\nVirzi, R. A., Sokolov, J. L., y Karis, D. (1996). Usability problem identification using both low- and high-fidelity prototypes. En CHI ’96 (pp. 236-243). ACM. https://doi.org/10.1145/238386.238516\n\n\nWalker, M., Takayama, L., y Landay, J. A. (2002). High-fidelity or low-fidelity, paper or computer? Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 46(5), 661-665. https://doi.org/10.1177/154193120204600513",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Tema 1. Fundamentos del prototipado de baja fidelidad</span>"
@@ -288,7 +288,7 @@
     "href": "02-investigacion.html#lectura-obligatoria",
     "title": "Tema 2. La investigación como base del concepto creativo",
     "section": "",
-    "text": "Nielsen, J.; Molich, R. (1990). Heuristic evaluation of user interfaces. En Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’90) (pp. 249-256). ACM.\n\n\nLecturas complementarias\n\nNielsen, J. (1994). Enhancing the explanatory power of usability heuristics. En CHI ’94 (pp. 152-158). ACM. El origen de las diez heurísticas que se usan hoy.\nRohrer, C. (2022). When to use which user-experience research methods. Nielsen Norman Group. El mapa de métodos que usa este tema.\nSharp, H.; Rogers, Y.; Preece, J. (2023). Interaction design: Beyond human-computer interaction. Wiley. Capítulos sobre recogida y análisis de datos.",
+    "text": "Nielsen, J.; Molich, R. (1990). Heuristic evaluation of user interfaces. En Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’90) (pp. 249-256). ACM.\n\n\nLecturas complementarias\n\nNielsen (1994) — El origen de las diez heurísticas que se usan hoy.\nRohrer (2022) — El mapa de métodos que usa este tema.\nSharp et al. (2023) — Capítulos sobre recogida y análisis de datos.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
@@ -442,7 +442,7 @@
     "href": "02-investigacion.html#recursos-complementarios",
     "title": "Tema 2. La investigación como base del concepto creativo",
     "section": "Recursos complementarios",
-    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – 10 usability heuristics\nLas heurísticas con ejemplos actuales\n\n\nNielsen Norman Group – Which UX research methods\nEl mapa de métodos\n\n\nInteraction Design Foundation – User research\nIntroducción a los métodos\n\n\nHanington, B.; Martin, B. (2022). The pocket universal methods of design. Quarto\nFichas breves de métodos (bibliografía complementaria)",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – 10 usability heuristics\nLas heurísticas con ejemplos actuales\n\n\nNielsen Norman Group – Which UX research methods\nEl mapa de métodos\n\n\nInteraction Design Foundation – User research\nIntroducción a los métodos\n\n\nHanington, B.; Martin, B. (2022). The pocket universal methods of design. Quarto\nFichas breves de métodos (bibliografía complementaria)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNielsen, J. (1994). Enhancing the explanatory power of usability heuristics. En CHI ’94 (pp. 152-158). ACM. https://doi.org/10.1145/191666.191729\n\n\nNielsen, J., y Molich, R. (1990). Heuristic evaluation of user interfaces. En Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’90) (pp. 249-256). ACM. https://doi.org/10.1145/97243.97281\n\n\nRohrer, C. (2022). When to use which user-experience research methods. Nielsen Norman Group. https://www.nngroup.com/articles/which-ux-research-methods/\n\n\nSharp, H., Rogers, Y., y Preece, J. (2023). Interaction design: Beyond human-computer interaction. Wiley.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tema 2. La investigación como base del concepto creativo</span>"
@@ -464,7 +464,7 @@
     "href": "03-problema.html#lectura-obligatoria",
     "title": "Tema 3. Definir el problema de diseño",
     "section": "",
-    "text": "Dorst, K. (2011). The core of ‘design thinking’ and its application. Design Studies, 32(6), 521-532.\n\n\nLecturas complementarias\n\nRittel, H. W. J.; Webber, M. M. (1973). Dilemmas in a general theory of planning. Policy Sciences, 4(2), 155-169. El texto que introdujo los «problemas retorcidos» (wicked problems).\nGoodwin, K. (2009). Designing for the digital age. Wiley. Capítulos sobre la definición de requisitos y objetivos (bibliografía complementaria de la asignatura).",
+    "text": "Dorst, K. (2011). The core of ‘design thinking’ and its application. Design Studies, 32(6), 521-532.\n\n\nLecturas complementarias\n\nRittel y Webber (1973) — El texto que introdujo los «problemas retorcidos» (wicked problems).\nGoodwin (2009) — Capítulos sobre la definición de requisitos y objetivos (bibliografía complementaria de la asignatura).",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
@@ -596,7 +596,7 @@
     "href": "03-problema.html#recursos-complementarios",
     "title": "Tema 3. Definir el problema de diseño",
     "section": "Recursos complementarios",
-    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nInteraction Design Foundation – Problem statements\nCómo redactar el enunciado del problema\n\n\nNielsen Norman Group – Using «How might we» questions\nDel problema a las oportunidades de diseño\n\n\nDesign Council – Framework for innovation\nEl doble diamante: divergir y converger en el problema y en la solución",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nInteraction Design Foundation – Problem statements\nCómo redactar el enunciado del problema\n\n\nNielsen Norman Group – Using «How might we» questions\nDel problema a las oportunidades de diseño\n\n\nDesign Council – Framework for innovation\nEl doble diamante: divergir y converger en el problema y en la solución\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDorst, K. (2011). The core of ’design thinking’ and its application. Design Studies, 32(6), 521-532. https://doi.org/10.1016/j.destud.2011.07.006\n\n\nGoodwin, K. (2009). Designing for the digital age. Wiley.\n\n\nRittel, H. W. J., y Webber, M. M. (1973). Dilemmas in a general theory of planning. Policy Sciences, 4(2), 155-169. https://doi.org/10.1007/BF01405730",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tema 3. Definir el problema de diseño</span>"
@@ -618,7 +618,7 @@
     "href": "04-metricas.html#lectura-obligatoria",
     "title": "Tema 4. Hitos, objetivos y métricas",
     "section": "",
-    "text": "Rodden, K.; Hutchinson, H.; Fu, X. (2010). Measuring the user experience on a large scale: User-centered metrics for web applications. En Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’10) (pp. 2395-2398). ACM.\n\n\nLecturas complementarias\n\nBangor, A.; Kortum, P. T.; Miller, J. T. (2008). An empirical evaluation of the System Usability Scale. International Journal of Human-Computer Interaction, 24(6), 574-594. Cómo interpretar las puntuaciones SUS.\nDoran, G. T. (1981). There’s a S.M.A.R.T. way to write management’s goals and objectives. Management Review, 70(11), 35-36. El origen del acrónimo SMART.\nSauro, J.; Lewis, J. R. (2016). Quantifying the user experience: Practical statistics for user research (2.ª ed.). Morgan Kaufmann. La referencia para calcular métricas con muestras pequeñas.",
+    "text": "Rodden, K.; Hutchinson, H.; Fu, X. (2010). Measuring the user experience on a large scale: User-centered metrics for web applications. En Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’10) (pp. 2395-2398). ACM.\n\n\nLecturas complementarias\n\nBangor et al. (2008) — Cómo interpretar las puntuaciones SUS.\nDoran (1981) — El origen del acrónimo SMART.\nSauro y Lewis (2016) — La referencia para calcular métricas con muestras pequeñas.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
@@ -662,7 +662,7 @@
     "href": "04-metricas.html#medir-con-pocas-personas",
     "title": "Tema 4. Hitos, objetivos y métricas",
     "section": "4. Medir con pocas personas",
-    "text": "4. Medir con pocas personas\nLas pruebas de prototipos se hacen con pocas personas, a menudo cinco. Con muestras así, una cifra sola engaña: «4 de 5 completaron la tarea» es un 80 %, pero el porcentaje real en la población podría estar bastante más abajo. Sauro y Lewis (2016) recomiendan:\n\nTasa de éxito con intervalo de confianza de Wald ajustado: indica entre qué valores está probablemente la tasa real.\nMedia geométrica para los tiempos: con pocas personas y alguna muy lenta, representa mejor el tiempo típico que la media aritmética.\nSUS (System Usability Scale) para la satisfacción: diez afirmaciones con respuesta de 1 a 5 que dan una puntuación de 0 a 100. No es un porcentaje. Bangor et al. (2008) consideran «aceptable» una puntuación desde 70, «marginal» entre 50 y 70, y «no aceptable» por debajo de 50.\n\n\n\n\n\n\n\nFigura 1: Intervalo de confianza al 95 % de una tasa de éxito del 80 % según el número de participantes (Wald ajustado). Con 5 personas, la tasa real podría estar entre el 36 % y el 98 %.",
+    "text": "4. Medir con pocas personas\nLas pruebas de prototipos se hacen con pocas personas, a menudo cinco. Con muestras así, una cifra sola engaña: «4 de 5 completaron la tarea» es un 80 %, pero el porcentaje real en la población podría estar bastante más abajo. Sauro y Lewis (2016) recomiendan:\n\nTasa de éxito con intervalo de confianza de Wald ajustado: indica entre qué valores está probablemente la tasa real.\nMedia geométrica para los tiempos: con pocas personas y alguna muy lenta, representa mejor el tiempo típico que la media aritmética.\nSUS (System Usability Scale) para la satisfacción: diez afirmaciones con respuesta de 1 a 5 que dan una puntuación de 0 a 100. No es un porcentaje. Bangor et al. (2008) consideran «aceptable» una puntuación desde 70, «marginal» entre 50 y 70, y «no aceptable» por debajo de 50.\n\n\n\n\n\n\n\nFigura 1: Intervalo de confianza al 95 % de una tasa de éxito del 80 % según el número de participantes (Wald ajustado). Con 5 personas, la tasa real podría estar entre el 36 % y el 98 %.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
@@ -750,7 +750,7 @@
     "href": "04-metricas.html#autoevaluación",
     "title": "Tema 4. Hitos, objetivos y métricas",
     "section": "Autoevaluación",
-    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\n«Mejorar la usabilidad de la web» es un objetivo SMART. VERDADEROFALSO\nEn el marco HEART, la letra T corresponde a tiempoéxito en la tarea (task success)tráfico\n«Trabajar en los esquemas» es un hito verificable. VERDADEROFALSO\nUna puntuación SUS de 75 significa que el 75 % de los participantes está satisfecho. VERDADEROFALSO\nSegún Bangor et al. (2008), una puntuación SUS de 62,5 es no aceptablemarginalaceptable\nCon tiempos de 32, 41, 38, 45 y 120 segundos, ¿qué resumen representa mejor el tiempo típico?\n\n La media aritmética (55 s) La media geométrica (49 s) El máximo (120 s)\n\nEn el proceso del marco HEART, ¿qué se define primero? Los objetivosLas señalesLas métricas\n\n\n\nVer explicaciones\n\nNo dice qué, para quién, cómo se mide ni para cuándo.\nTask success: eficacia y eficiencia en las tareas.\nUn hito se define por un resultado comprobable, no por una actividad.\nEl SUS es una puntuación de 0 a 100, no un porcentaje.\nEntre 50 y 70 es «marginal».\nLa media geométrica reduce el peso del participante muy lento.\nObjetivos, después señales y, al final, métricas.",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\n«Mejorar la usabilidad de la web» es un objetivo SMART. VERDADEROFALSO\nEn el marco HEART, la letra T corresponde a tiempoéxito en la tarea (task success)tráfico\n«Trabajar en los esquemas» es un hito verificable. VERDADEROFALSO\nUna puntuación SUS de 75 significa que el 75 % de los participantes está satisfecho. VERDADEROFALSO\nSegún Bangor et al. (2008), una puntuación SUS de 62,5 es no aceptablemarginalaceptable\nCon tiempos de 32, 41, 38, 45 y 120 segundos, ¿qué resumen representa mejor el tiempo típico?\n\n La media aritmética (55 s) La media geométrica (49 s) El máximo (120 s)\n\nEn el proceso del marco HEART, ¿qué se define primero? Los objetivosLas señalesLas métricas\n\n\n\nVer explicaciones\n\nNo dice qué, para quién, cómo se mide ni para cuándo.\nTask success: eficacia y eficiencia en las tareas.\nUn hito se define por un resultado comprobable, no por una actividad.\nEl SUS es una puntuación de 0 a 100, no un porcentaje.\nEntre 50 y 70 es «marginal».\nLa media geométrica reduce el peso del participante muy lento.\nObjetivos, después señales y, al final, métricas.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
@@ -761,7 +761,7 @@
     "href": "04-metricas.html#recursos-complementarios",
     "title": "Tema 4. Hitos, objetivos y métricas",
     "section": "Recursos complementarios",
-    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nMeasuringU – Calculadoras de Jeff Sauro\nIntervalos y comparaciones para muestras pequeñas\n\n\nNielsen Norman Group – Success rate: the simplest usability metric\nCómo medir el éxito en la tarea\n\n\nUsability.gov – System Usability Scale\nEl cuestionario SUS y su cálculo",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nMeasuringU – Calculadoras de Jeff Sauro\nIntervalos y comparaciones para muestras pequeñas\n\n\nNielsen Norman Group – Success rate: the simplest usability metric\nCómo medir el éxito en la tarea\n\n\nUsability.gov – System Usability Scale\nEl cuestionario SUS y su cálculo\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBangor, A., Kortum, P. T., y Miller, J. T. (2008). An empirical evaluation of the System Usability Scale. International Journal of Human-Computer Interaction, 24(6), 574-594. https://doi.org/10.1080/10447310802205776\n\n\nDoran, G. T. (1981). There’s a S.M.A.R.T. way to write management’s goals and objectives. Management Review, 70(11), 35-36.\n\n\nSauro, J., y Lewis, J. R. (2016). Quantifying the user experience: Practical statistics for user research (2.ª ed.). Morgan Kaufmann.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tema 4. Hitos, objetivos y métricas</span>"
@@ -783,7 +783,7 @@
     "href": "05-flujos.html#lectura-obligatoria",
     "title": "Tema 5. Flujos de usuario: modelado y representación",
     "section": "",
-    "text": "Kalbach, J. (2021). Mapping experiences: A complete guide to customer alignment through journeys, blueprints, and diagrams (2.ª ed.). O’Reilly. Capítulos sobre los diagramas de alineamiento y los mapas de tareas.\n\n\nLecturas complementarias\n\nNielsen Norman Group. User journeys vs. user flows. Diferencia entre el viaje completo y el flujo de una tarea.\nNielsen Norman Group. Wireflows: A UX deliverable for workflows and apps. Flujos dibujados con esquemas de página.\nNielsen Norman Group. Task analysis: Support users in achieving their goals. Cómo descomponer una tarea.",
+    "text": "Kalbach, J. (2021). Mapping experiences: A complete guide to customer alignment through journeys, blueprints, and diagrams (2.ª ed.). O’Reilly. Capítulos sobre los diagramas de alineamiento y los mapas de tareas.\n\n\nLecturas complementarias\n\nNielsen Norman Group (s. f.-b) — Diferencia entre el viaje completo y el flujo de una tarea.\nNielsen Norman Group (s. f.-c) — Flujos dibujados con esquemas de página.\nNielsen Norman Group (s. f.-a)",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
@@ -937,7 +937,7 @@
     "href": "05-flujos.html#recursos-complementarios",
     "title": "Tema 5. Flujos de usuario: modelado y representación",
     "section": "Recursos complementarios",
-    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – User journeys vs. user flows\nDiferencias entre artefactos\n\n\nNielsen Norman Group – Wireflows\nFlujos con esquemas de página\n\n\nNielsen Norman Group – Task analysis\nDescomponer tareas\n\n\nFigma Community\nPlantillas de diagramas de flujo",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – User journeys vs. user flows\nDiferencias entre artefactos\n\n\nNielsen Norman Group – Wireflows\nFlujos con esquemas de página\n\n\nNielsen Norman Group – Task analysis\nDescomponer tareas\n\n\nFigma Community\nPlantillas de diagramas de flujo\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNielsen Norman Group. (s. f.-a). Task analysis: Support users in achieving their goals. Cómo descomponer una tarea. Recuperado https://www.nngroup.com/articles/task-analysis/\n\n\nNielsen Norman Group. (s. f.-b). User journeys vs. user flows. Recuperado https://www.nngroup.com/articles/user-journeys-vs-user-flows/\n\n\nNielsen Norman Group. (s. f.-c). Wireflows: A UX deliverable for workflows and apps. Recuperado https://www.nngroup.com/articles/wireflows/",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tema 5. Flujos de usuario: modelado y representación</span>"
@@ -959,7 +959,7 @@
     "href": "06-storyboards.html#lectura-obligatoria",
     "title": "Tema 6. Storyboards en el diseño de interacción",
     "section": "",
-    "text": "Truong, K. N.; Hayes, G. R.; Abowd, G. D. (2006). Storyboarding: An empirical determination of best practices and effective guidelines. En Proceedings of the 6th Conference on Designing Interactive Systems (DIS ’06) (pp. 12-21). ACM.\n\n\nLecturas complementarias\n\nBuxton, W. (2007). Sketching user experiences. Elsevier. Capítulos sobre los bocetos en secuencia y los guiones visuales.\nNielsen Norman Group. Storyboards help visualize UX ideas. Guía práctica con ejemplos.",
+    "text": "Truong, K. N.; Hayes, G. R.; Abowd, G. D. (2006). Storyboarding: An empirical determination of best practices and effective guidelines. En Proceedings of the 6th Conference on Designing Interactive Systems (DIS ’06) (pp. 12-21). ACM.\n\n\nLecturas complementarias\n\nBuxton (2007) — Capítulos sobre los bocetos en secuencia y los guiones visuales.\nNielsen Norman Group (s. f.)",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
@@ -1091,7 +1091,7 @@
     "href": "06-storyboards.html#recursos-complementarios",
     "title": "Tema 6. Storyboards en el diseño de interacción",
     "section": "Recursos complementarios",
-    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – Storyboards help visualize UX ideas\nPasos y ejemplos\n\n\nInteraction Design Foundation – Storyboards\nIntroducción y técnicas",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – Storyboards help visualize UX ideas\nPasos y ejemplos\n\n\nInteraction Design Foundation – Storyboards\nIntroducción y técnicas\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBuxton, W. (2007). Sketching user experiences. Elsevier.\n\n\nNielsen Norman Group. (s. f.). Storyboards help visualize UX ideas. Guía práctica con ejemplos. Recuperado https://www.nngroup.com/articles/storyboards-visualize-ideas/",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tema 6. *Storyboards* en el diseño de interacción</span>"
@@ -1113,7 +1113,7 @@
     "href": "07-wireframes.html#lectura-obligatoria",
     "title": "Tema 7. Esquemas de página en papel y en pantalla",
     "section": "",
-    "text": "Garrett, J. J. (2011). The elements of user experience: User-centered design for the web and beyond (2.ª ed.). New Riders. Capítulo dedicado al plano del esqueleto (skeleton plane): diseño de la interfaz, de la navegación y de la información.\n\n\nLecturas complementarias\n\nKrug, S. (2006). Don’t make me think!. New Riders. Por qué las convenciones y la jerarquía visual hacen que una página se entienda de un vistazo.\nNielsen Norman Group. F-shaped pattern for reading web content. Cómo recorren la vista las páginas con mucho texto.\nNielsen Norman Group. Using grids in interface designs. Rejillas de columnas en interfaces.",
+    "text": "Garrett, J. J. (2011). The elements of user experience: User-centered design for the web and beyond (2.ª ed.). New Riders. Capítulo dedicado al plano del esqueleto (skeleton plane): diseño de la interfaz, de la navegación y de la información.\n\n\nLecturas complementarias\n\nKrug (2006) — Por qué las convenciones y la jerarquía visual hacen que una página se entienda de un vistazo.\nNielsen Norman Group (s. f.-a) — Cómo recorren la vista las páginas con mucho texto.\nNielsen Norman Group (s. f.-b) — Rejillas de columnas en interfaces.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
@@ -1311,7 +1311,7 @@
     "href": "07-wireframes.html#recursos-complementarios",
     "title": "Tema 7. Esquemas de página en papel y en pantalla",
     "section": "Recursos complementarios",
-    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – Using grids in interface designs\nRejillas en interfaces\n\n\nNielsen Norman Group – F-shaped pattern\nPatrones de lectura en pantalla\n\n\nFigma Community\nKits de esquemas de página\n\n\nInteraction Design Foundation – Wireframes\nIntroducción y ejemplos",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – Using grids in interface designs\nRejillas en interfaces\n\n\nNielsen Norman Group – F-shaped pattern\nPatrones de lectura en pantalla\n\n\nFigma Community\nKits de esquemas de página\n\n\nInteraction Design Foundation – Wireframes\nIntroducción y ejemplos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGarrett, J. J. (2011). The elements of user experience: User-centered design for the web and beyond (2.ª ed.). New Riders.\n\n\nKrug, S. (2006). Don’t make me think! New Riders.\n\n\nNielsen Norman Group. (s. f.-a). F-shaped pattern for reading web content. Recuperado https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/\n\n\nNielsen Norman Group. (s. f.-b). Using grids in interface designs. Recuperado https://www.nngroup.com/articles/using-grids-in-interface-designs/",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tema 7. Esquemas de página en papel y en pantalla</span>"
@@ -1333,7 +1333,7 @@
     "href": "08-estados.html#lectura-obligatoria",
     "title": "Tema 8. Estados y transiciones en los esquemas",
     "section": "",
-    "text": "Harel, D. (1987). Statecharts: A visual formalism for complex systems. Science of Computer Programming, 8(3), 231-274. Lee la introducción y los primeros ejemplos: son el origen de la notación de estados que se usa hoy en diseño de interacción.\n\n\nLecturas complementarias\n\nCooper, A. (2014). About face: The essentials of interaction design. Wiley. Capítulos sobre el comportamiento de los controles y la retroalimentación.\nNielsen Norman Group. Wireflows. Representar estados y transiciones con esquemas.",
+    "text": "Harel, D. (1987). Statecharts: A visual formalism for complex systems. Science of Computer Programming, 8(3), 231-274. Lee la introducción y los primeros ejemplos: son el origen de la notación de estados que se usa hoy en diseño de interacción.\n\n\nLecturas complementarias\n\nCooper (2014) — Capítulos sobre el comportamiento de los controles y la retroalimentación.\nNielsen Norman Group (s. f.) — Representar estados y transiciones con esquemas.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
@@ -1465,7 +1465,7 @@
     "href": "08-estados.html#recursos-complementarios",
     "title": "Tema 8. Estados y transiciones en los esquemas",
     "section": "Recursos complementarios",
-    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – Wireflows\nEstados y transiciones con esquemas\n\n\nW3C – Understanding SC 2.4.7: Focus visible\nPor qué el foco debe verse\n\n\nFigma – Guide to prototyping\nEnlazar pantallas y estados",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – Wireflows\nEstados y transiciones con esquemas\n\n\nW3C – Understanding SC 2.4.7: Focus visible\nPor qué el foco debe verse\n\n\nFigma – Guide to prototyping\nEnlazar pantallas y estados\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCooper, A. (2014). About face: The essentials of interaction design. Wiley.\n\n\nHarel, D. (1987). Statecharts: A visual formalism for complex systems. https://doi.org/10.1016/0167-6423(87\n\n\nNielsen Norman Group. (s. f.). Wireflows. Recuperado https://www.nngroup.com/articles/wireflows/",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tema 8. Estados y transiciones en los esquemas</span>"
@@ -1487,7 +1487,7 @@
     "href": "09-prototipos-papel.html#lectura-obligatoria",
     "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
     "section": "",
-    "text": "Rettig, M. (1994). Prototyping for tiny fingers. Communications of the ACM, 37(4), 21-27.\n\n\nLecturas complementarias\n\nVirzi, R. A.; Sokolov, J. L.; Karis, D. (1996). Usability problem identification using both low- and high-fidelity prototypes. En CHI ’96 (pp. 236-243). ACM. Los prototipos en papel detectan problemas similares a los de alta fidelidad.\nNielsen, J.; Landauer, T. K. (1993). A mathematical model of the finding of usability problems. En CHI ’93 (pp. 206-213). ACM. El modelo detrás de la recomendación de probar con pocas personas y repetir.\nNielsen Norman Group. Paper prototyping: Getting user data before you code. Guía práctica.",
+    "text": "Rettig, M. (1994). Prototyping for tiny fingers. Communications of the ACM, 37(4), 21-27.\n\n\nLecturas complementarias\n\nVirzi et al. (1996) — Los prototipos en papel detectan problemas similares a los de alta fidelidad.\nNielsen y Landauer (1993) — El modelo detrás de la recomendación de probar con pocas personas y repetir.\nNielsen Norman Group (s. f.)",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
@@ -1498,7 +1498,7 @@
     "href": "09-prototipos-papel.html#por-qué-probar-en-papel",
     "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
     "section": "1. Por qué probar en papel",
-    "text": "1. Por qué probar en papel\nRettig (1994) defendía en «Prototyping for tiny fingers» que construir prototipos en papel permite probar un diseño antes de escribir una línea de código, con un coste tan bajo que se pueden hacer varias rondas en un día. Al ver que el prototipo es provisional, las personas critican con más libertad, y el equipo, al no haber invertido mucho, acepta mejor los cambios. Virzi et al. (1996) mostraron que los problemas de usabilidad detectados con prototipos de baja fidelidad son en gran parte los mismos que con alta fidelidad.",
+    "text": "1. Por qué probar en papel\nRettig (1994) defendía en «Prototyping for tiny fingers» que construir prototipos en papel permite probar un diseño antes de escribir una línea de código, con un coste tan bajo que se pueden hacer varias rondas en un día. Al ver que el prototipo es provisional, las personas critican con más libertad, y el equipo, al no haber invertido mucho, acepta mejor los cambios. Virzi et al. (1996) mostraron que los problemas de usabilidad detectados con prototipos de baja fidelidad son en gran parte los mismos que con alta fidelidad.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
@@ -1619,7 +1619,7 @@
     "href": "09-prototipos-papel.html#recursos-complementarios",
     "title": "Tema 9. Prototipos en papel: técnicas y validación temprana",
     "section": "Recursos complementarios",
-    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – Paper prototyping\nGuía y vídeo\n\n\nNielsen Norman Group – Thinking aloud\nLa técnica del pensamiento en voz alta\n\n\nNielsen Norman Group – Why you only need to test with 5 users\nEl argumento de las rondas pequeñas",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nNielsen Norman Group – Paper prototyping\nGuía y vídeo\n\n\nNielsen Norman Group – Thinking aloud\nLa técnica del pensamiento en voz alta\n\n\nNielsen Norman Group – Why you only need to test with 5 users\nEl argumento de las rondas pequeñas\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNielsen, J., y Landauer, T. K. (1993). A mathematical model of the finding of usability problems. En CHI ’93 (pp. 206-213). ACM. https://doi.org/10.1145/169059.169166\n\n\nNielsen Norman Group. (s. f.). Paper prototyping: Getting user data before you code. Guía práctica. Recuperado https://www.nngroup.com/articles/paper-prototyping/\n\n\nRettig, M. (1994). Prototyping for tiny fingers. Communications of the ACM, 37(4), 21-27. https://doi.org/10.1145/175276.175288\n\n\nVirzi, R. A., Sokolov, J. L., y Karis, D. (1996). Usability problem identification using both low- and high-fidelity prototypes. En CHI ’96 (pp. 236-243). ACM. https://doi.org/10.1145/238386.238516",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tema 9. Prototipos en papel: técnicas y validación temprana</span>"
@@ -1641,7 +1641,7 @@
     "href": "10-sesgos.html#lectura-obligatoria",
     "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
     "section": "",
-    "text": "Gray, C. M.; Kou, Y.; Battles, B.; Hoggatt, J.; Toombs, A. L. (2018). The dark (patterns) side of UX design. En Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (pp. 1-14). ACM.\n\n\nLecturas complementarias\n\nMathur, A.; Acar, G.; Friedman, M. J.; Lucherini, E.; Mayer, J.; Chetty, M.; Narayanan, A. (2019). Dark patterns at scale: Findings from a crawl of 11K shopping websites. Proceedings of the ACM on Human-Computer Interaction, 3(CSCW), 1-32. Una medición sistemática en comercio electrónico.\nTversky, A.; Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. Science, 185(4157), 1124-1131. El artículo que fundó el estudio de los sesgos.\nComité Europeo de Protección de Datos (2023). Directrices 03/2022 sobre patrones de diseño engañosos en interfaces de redes sociales. Cómo los patrones engañosos afectan al consentimiento.",
+    "text": "Gray, C. M.; Kou, Y.; Battles, B.; Hoggatt, J.; Toombs, A. L. (2018). The dark (patterns) side of UX design. En Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (pp. 1-14). ACM.\n\n\nLecturas complementarias\n\nMathur et al. (2019) — Una medición sistemática en comercio electrónico.\nTversky y Kahneman (1974) — El artículo que fundó el estudio de los sesgos.\nComité Europeo de Protección de Datos (2023) — Cómo los patrones engañosos afectan al consentimiento.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
@@ -1674,7 +1674,7 @@
     "href": "10-sesgos.html#patrones-engañosos",
     "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
     "section": "3. Patrones engañosos",
-    "text": "3. Patrones engañosos\nEl término dark patterns lo acuñó Harry Brignull en 2010; hoy él mismo y buena parte de la literatura prefieren hablar de diseño engañoso (deceptive design). Son soluciones de interfaz que engañan, presionan o dificultan decidir libremente.\nGray et al. (2018) analizaron ejemplos recogidos por profesionales y propusieron cinco estrategias:\n\n\n\n\n\n\n\nEstrategia\nQué hace\n\n\n\n\nInsistencia (nagging)\nInterrumpe una y otra vez la tarea para pedir algo\n\n\nObstrucción\nPone difícil una acción que interesa a la persona (darse de baja, rechazar)\n\n\nOcultación (sneaking)\nEsconde o retrasa información relevante (costes, condiciones)\n\n\nInterferencia en la interfaz\nManipula la presentación para favorecer una opción\n\n\nAcción forzada\nExige hacer algo que no se busca para poder continuar\n\n\n\nMathur et al. (2019) rastrearon unas 11.000 webs de comercio y encontraron patrones de urgencia (contadores), escasez («quedan dos»), prueba social, desvío (misdirection), además de ocultación, obstrucción y acción forzada. Hallaron algunos de esos mensajes generados de forma engañosa, sin relación con datos reales.",
+    "text": "3. Patrones engañosos\nEl término dark patterns lo acuñó Harry Brignull en 2010; hoy él mismo y buena parte de la literatura prefieren hablar de diseño engañoso (deceptive design). Son soluciones de interfaz que engañan, presionan o dificultan decidir libremente.\nGray et al. (2018) analizaron ejemplos recogidos por profesionales y propusieron cinco estrategias:\n\n\n\n\n\n\n\nEstrategia\nQué hace\n\n\n\n\nInsistencia (nagging)\nInterrumpe una y otra vez la tarea para pedir algo\n\n\nObstrucción\nPone difícil una acción que interesa a la persona (darse de baja, rechazar)\n\n\nOcultación (sneaking)\nEsconde o retrasa información relevante (costes, condiciones)\n\n\nInterferencia en la interfaz\nManipula la presentación para favorecer una opción\n\n\nAcción forzada\nExige hacer algo que no se busca para poder continuar\n\n\n\nMathur et al. (2019) rastrearon unas 11.000 webs de comercio y encontraron patrones de urgencia (contadores), escasez («quedan dos»), prueba social, desvío (misdirection), además de ocultación, obstrucción y acción forzada. Hallaron algunos de esos mensajes generados de forma engañosa, sin relación con datos reales.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
@@ -1696,7 +1696,7 @@
     "href": "10-sesgos.html#práctica-en-r-dos-taxonomías",
     "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
     "section": "Práctica en R: dos taxonomías",
-    "text": "Práctica en R: dos taxonomías\npatrones_enganosos reúne las categorías de Gray et al. (2018) y Mathur et al. (2019), con un ejemplo inventado de cada una.\n\n\n\n\n\n\n\nEjercicio 10.1\n¿Qué categorías aparecen en las dos taxonomías? intersect() devuelve los elementos comunes a dos vectores.\n\n\n\n\n\n\n\n\nCopia el valor exacto de la columna fuente para el segundo estudio, con el año entre paréntesis.\n\n\ngray   &lt;- g$categoria[g$fuente == \"Gray et al. (2018)\"]\nmathur &lt;- g$categoria[g$fuente == \"Mathur et al. (2019)\"]\nintersect(gray, mathur)\nOcultación, obstrucción y acción forzada. Son los patrones más estables en la literatura; los de urgencia, escasez y prueba social son más propios del comercio electrónico.",
+    "text": "Práctica en R: dos taxonomías\npatrones_enganosos reúne las categorías de Gray et al. (2018) y Mathur et al. (2019), con un ejemplo inventado de cada una.\n\n\n\n\n\n\n\nEjercicio 10.1\n¿Qué categorías aparecen en las dos taxonomías? intersect() devuelve los elementos comunes a dos vectores.\n\n\n\n\n\n\n\n\nCopia el valor exacto de la columna fuente para el segundo estudio, con el año entre paréntesis.\n\n\ngray   &lt;- g$categoria[g$fuente == \"Gray et al. (2018)\"]\nmathur &lt;- g$categoria[g$fuente == \"Mathur et al. (2019)\"]\nintersect(gray, mathur)\nOcultación, obstrucción y acción forzada. Son los patrones más estables en la literatura; los de urgencia, escasez y prueba social son más propios del comercio electrónico.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
@@ -1751,7 +1751,7 @@
     "href": "10-sesgos.html#autoevaluación",
     "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
     "section": "Autoevaluación",
-    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUna casilla de suscripción al boletín marcada de antemano aprovecha el sesgo de la prueba socialopción por defectoaversión a la pérdida\nQue darse de baja exija llamar por teléfono cuando el alta fue en línea es un ejemplo de insistenciaobstrucciónescasez\nUn contador que reinicia la «oferta» cada vez que se recarga la página es un patrón de \nSegún Gray et al., los patrones engañosos suelen deberse a la mala fe individual de quien diseña. VERDADEROFALSO\n¿Qué norma de la UE prohíbe a las plataformas en línea diseñar interfaces que engañen o manipulen?\n\n La Directiva de accesibilidad web El Reglamento de Servicios Digitales (Reglamento 2022/2065) La norma ISO 9241-210\n\nMostrar primero el plan más caro para que el intermedio parezca barato aprovecha el efecto de anclajeencuadreconfirmación\nBuscar solo datos que confirmen la idea propia es un sesgo que afecta también a quien diseña. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nTendemos a dejar lo que viene marcado.\nHacer difícil lo que interesa a la persona es obstrucción.\nEs urgencia falsa, documentada por Mathur et al. (2019).\nMás bien de la presión por métricas de negocio; por eso importa saber argumentar.\nEs el art. 25 del Reglamento de Servicios Digitales.\nLa primera cifra sirve de ancla para valorar las demás.\nEl sesgo de confirmación: la investigación y las pruebas lo contrarrestan.",
+    "text": "Autoevaluación\nResponde a todas las preguntas y pulsa Mostrar respuestas: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.\n\n\nUna casilla de suscripción al boletín marcada de antemano aprovecha el sesgo de la prueba socialopción por defectoaversión a la pérdida\nQue darse de baja exija llamar por teléfono cuando el alta fue en línea es un ejemplo de insistenciaobstrucciónescasez\nUn contador que reinicia la «oferta» cada vez que se recarga la página es un patrón de \nSegún Gray et al., los patrones engañosos suelen deberse a la mala fe individual de quien diseña. VERDADEROFALSO\n¿Qué norma de la UE prohíbe a las plataformas en línea diseñar interfaces que engañen o manipulen?\n\n La Directiva de accesibilidad web El Reglamento de Servicios Digitales (Reglamento 2022/2065) La norma ISO 9241-210\n\nMostrar primero el plan más caro para que el intermedio parezca barato aprovecha el efecto de anclajeencuadreconfirmación\nBuscar solo datos que confirmen la idea propia es un sesgo que afecta también a quien diseña. VERDADEROFALSO\n\n\n\nVer explicaciones\n\nTendemos a dejar lo que viene marcado.\nHacer difícil lo que interesa a la persona es obstrucción.\nEs urgencia falsa, documentada por Mathur et al. (2019).\nMás bien de la presión por métricas de negocio; por eso importa saber argumentar.\nEs el art. 25 del Reglamento de Servicios Digitales.\nLa primera cifra sirve de ancla para valorar las demás.\nEl sesgo de confirmación: la investigación y las pruebas lo contrarrestan.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
@@ -1762,7 +1762,7 @@
     "href": "10-sesgos.html#recursos-complementarios",
     "title": "Tema 10. Sesgos cognitivos y patrones engañosos",
     "section": "Recursos complementarios",
-    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nDeceptive Design\nCatálogo de tipos y casos (antes Dark Patterns)\n\n\nComité Europeo de Protección de Datos – Directrices 03/2022\nPatrones engañosos y consentimiento\n\n\nReglamento (UE) 2022/2065 de Servicios Digitales\nArt. 25: diseño de las interfaces",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nDeceptive Design\nCatálogo de tipos y casos (antes Dark Patterns)\n\n\nComité Europeo de Protección de Datos – Directrices 03/2022\nPatrones engañosos y consentimiento\n\n\nReglamento (UE) 2022/2065 de Servicios Digitales\nArt. 25: diseño de las interfaces\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComité Europeo de Protección de Datos. (2023). Directrices 03/2022 sobre patrones de diseño engañosos en interfaces de redes sociales. https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-032022-deceptive-design-patterns-social-media_en\n\n\nGray, C. M., Kou, Y., Battles, B., Hoggatt, J., y Toombs, A. L. (2018). The dark (patterns) side of UX design. En Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (pp. 1-14). ACM. https://doi.org/10.1145/3173574.3174108\n\n\nMathur, A., Acar, G., Friedman, M. J., Lucherini, E., Mayer, J., Chetty, M., y Narayanan, A. (2019). Dark patterns at scale: Findings from a crawl of 11K shopping websites. Proceedings of the ACM on Human-Computer Interaction, 3(CSCW), 1-32. https://doi.org/10.1145/3359183\n\n\nTversky, A., y Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. Science, 185(4157), 1124-1131. https://doi.org/10.1126/science.185.4157.1124",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tema 10. Sesgos cognitivos y patrones engañosos</span>"
@@ -1784,7 +1784,7 @@
     "href": "11-atencion.html#lectura-obligatoria",
     "title": "Tema 11. Economía de la atención y bienestar digital",
     "section": "",
-    "text": "Williams, J. (2018). Stand out of our light: Freedom and resistance in the attention economy. Cambridge University Press. Libro en acceso abierto: lee la primera parte.\n\n\nLecturas complementarias\n\nMathur, A. et al. (2019). Dark patterns at scale. Proceedings of the ACM on Human-Computer Interaction, 3(CSCW). Urgencia y escasez como técnicas para captar la atención y precipitar decisiones.\nCenter for Humane Technology. Recursos para tecnología humana. Materiales sobre diseño que respeta la atención.",
+    "text": "Williams, J. (2018). Stand out of our light: Freedom and resistance in the attention economy. Cambridge University Press. Libro en acceso abierto: lee la primera parte.\n\n\nLecturas complementarias\n\nMathur et al. (2019) — Urgencia y escasez como técnicas para captar la atención y precipitar decisiones.\nCenter for Humane Technology (s. f.) — Materiales sobre diseño que respeta la atención.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
@@ -1916,7 +1916,7 @@
     "href": "11-atencion.html#recursos-complementarios",
     "title": "Tema 11. Economía de la atención y bienestar digital",
     "section": "Recursos complementarios",
-    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nWilliams, J. (2018), en acceso abierto\nLa lectura obligatoria\n\n\nCenter for Humane Technology\nGuías de diseño que respeta la atención\n\n\nReglamento (UE) 2022/2065 de Servicios Digitales\nRiesgos sistémicos y protección de menores",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nWilliams, J. (2018), en acceso abierto\nLa lectura obligatoria\n\n\nCenter for Humane Technology\nGuías de diseño que respeta la atención\n\n\nReglamento (UE) 2022/2065 de Servicios Digitales\nRiesgos sistémicos y protección de menores\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCenter for Humane Technology. (s. f.). Recursos para tecnología humana. Recuperado https://www.humanetech.com/\n\n\nMathur, A. et al. (2019). Dark patterns at scale. Proceedings of the ACM on Human-Computer Interaction, 3(CSCW). https://doi.org/10.1145/3359183\n\n\nWilliams, J. (2018). Stand out of our light: Freedom and resistance in the attention economy. Cambridge University Press. https://doi.org/10.1017/9781108453004",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tema 11. Economía de la atención y bienestar digital</span>"
@@ -1938,7 +1938,7 @@
     "href": "12-inclusivo.html#lectura-obligatoria",
     "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
     "section": "",
-    "text": "Burnett, M.; Stumpf, S.; Macbeth, J.; Makri, S.; Beckwith, L.; Kwan, I.; Peters, A.; Jernigan, W. (2016). GenderMag: A method for evaluating software’s gender inclusiveness. Interacting with Computers, 28(6), 760-787.\n\n\nLecturas complementarias\n\nW3C (2023). Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2. La norma de referencia de la accesibilidad web.\nMicrosoft. Inclusive Design. El kit que popularizó el espectro de personas.\nUniversity of Cambridge. Inclusive Design Toolkit. Métodos y herramientas para estimar la exclusión.",
+    "text": "Burnett, M.; Stumpf, S.; Macbeth, J.; Makri, S.; Beckwith, L.; Kwan, I.; Peters, A.; Jernigan, W. (2016). GenderMag: A method for evaluating software’s gender inclusiveness. Interacting with Computers, 28(6), 760-787.\n\n\nLecturas complementarias\n\nW3C (2023) — La norma de referencia de la accesibilidad web.\nMicrosoft (s. f.) — El kit que popularizó el espectro de personas.\nUniversity of Cambridge (s. f.) — Métodos y herramientas para estimar la exclusión.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
@@ -1960,7 +1960,7 @@
     "href": "12-inclusivo.html#perspectiva-de-género",
     "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
     "section": "2. Perspectiva de género",
-    "text": "2. Perspectiva de género\nBurnett et al. (2016) desarrollaron GenderMag, un método de inspección (parecido a la revisión heurística del Tema 2) que usa personajes para detectar sesgos de género en el software. Se basa en cinco facetas cognitivas en las que la investigación ha encontrado diferencias estadísticas entre grupos de género: la motivación para usar la tecnología, el estilo de procesar la información (completo o selectivo), la autoeficacia con el ordenador, la actitud ante el riesgo y el estilo de aprendizaje (por proceso o probando). El objetivo no es diseñar «para mujeres» y «para hombres», sino que el software funcione bien para todo el espectro de estas facetas.\nEn las decisiones de baja fidelidad, la perspectiva de género aparece también en los formularios (pedir el género solo si hace falta, con opciones inclusivas y no obligatorio), las imágenes y los ejemplos (quién aparece y haciendo qué) y el lenguaje.",
+    "text": "2. Perspectiva de género\nBurnett et al. (2016) desarrollaron GenderMag, un método de inspección (parecido a la revisión heurística del Tema 2) que usa personajes para detectar sesgos de género en el software. Se basa en cinco facetas cognitivas en las que la investigación ha encontrado diferencias estadísticas entre grupos de género: la motivación para usar la tecnología, el estilo de procesar la información (completo o selectivo), la autoeficacia con el ordenador, la actitud ante el riesgo y el estilo de aprendizaje (por proceso o probando). El objetivo no es diseñar «para mujeres» y «para hombres», sino que el software funcione bien para todo el espectro de estas facetas.\nEn las decisiones de baja fidelidad, la perspectiva de género aparece también en los formularios (pedir el género solo si hace falta, con opciones inclusivas y no obligatorio), las imágenes y los ejemplos (quién aparece y haciendo qué) y el lenguaje.",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
@@ -2081,7 +2081,7 @@
     "href": "12-inclusivo.html#recursos-complementarios",
     "title": "Tema 12. Diseño equitativo, inclusivo y accesible",
     "section": "Recursos complementarios",
-    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nW3C – WCAG 2.2\nLa norma\n\n\nW3C WAI – Estándares y pautas\nIntroducción a las WCAG\n\n\nGenderMag\nMateriales del método\n\n\nMicrosoft Inclusive Design\nEspectro de personas y kit\n\n\nInclusive Design Toolkit (Cambridge)\nEstimar la exclusión\n\n\nReal Decreto 1112/2018\nAccesibilidad del sector público\n\n\nDirectiva (UE) 2019/882\nActa Europea de Accesibilidad",
+    "text": "Recursos complementarios\n\n\n\nRecurso\nPara qué sirve\n\n\n\n\nW3C – WCAG 2.2\nLa norma\n\n\nW3C WAI – Estándares y pautas\nIntroducción a las WCAG\n\n\nGenderMag\nMateriales del método\n\n\nMicrosoft Inclusive Design\nEspectro de personas y kit\n\n\nInclusive Design Toolkit (Cambridge)\nEstimar la exclusión\n\n\nReal Decreto 1112/2018\nAccesibilidad del sector público\n\n\nDirectiva (UE) 2019/882\nActa Europea de Accesibilidad\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBurnett, M., Stumpf, S., Macbeth, J., Makri, S., Beckwith, L., Kwan, I., Peters, A., y Jernigan, W. (2016). GenderMag: A method for evaluating software’s gender inclusiveness. Interacting with Computers, 28(6), 760-787. https://doi.org/10.1093/iwc/iwv046\n\n\nMicrosoft. (s. f.). Inclusive Design. Recuperado https://inclusive.microsoft.design/\n\n\nUniversity of Cambridge. (s. f.). Inclusive Design Toolkit. Recuperado https://www.inclusivedesigntoolkit.com/\n\n\nW3C. (2023). Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2. https://www.w3.org/TR/WCAG22/",
     "crumbs": [
       "Temas",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Tema 12. Diseño equitativo, inclusivo y accesible</span>"
@@ -2286,278 +2286,344 @@
     ]
   },
   {
+    "objectID": "96-analisis-real.html",
+    "href": "96-analisis-real.html",
+    "title": "Apéndice D — Análisis de servicios reales",
+    "section": "",
+    "text": "Ejercicio 1 · El flujo de una descarga de datos abiertos\nLos casos del apéndice anterior son inventados. Aquí trabajarás con servicios públicos reales, aplicando las técnicas del libro como ingeniería inversa: a partir de lo que ves, reconstruye el flujo, la arquitectura y los esquemas que hay detrás. Cada ejercicio dura entre una y dos horas y puede entregarse como práctica.\nServicio: datos.gob.es, el catálogo nacional de datos abiertos. Temas: 5 (flujos) y 4 (métricas).\nTarea. Encuentra un conjunto de datos sobre la calidad del aire de una ciudad española y descarga un fichero CSV. Anota cada pantalla y cada decisión.\nEntrega: diagrama del flujo, tabla de pasos con tiempos y la propuesta de métrica.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Análisis de servicios reales</span>"
+    ]
+  },
+  {
+    "objectID": "96-analisis-real.html#ejercicio-1-el-flujo-de-una-descarga-de-datos-abiertos",
+    "href": "96-analisis-real.html#ejercicio-1-el-flujo-de-una-descarga-de-datos-abiertos",
+    "title": "Apéndice D — Análisis de servicios reales",
+    "section": "",
+    "text": "Cronometra la tarea y cuenta los pasos (clics y pantallas).\nDibuja el flujo de usuario con la notación del Tema 5: pantallas, decisiones y puntos de salida.\nSeñala dónde podrías haberte perdido y qué te ayudó a orientarte (filtros, migas de pan, buscador).\nPropón una métrica de la tarea (tasa de éxito, tiempo, número de pasos) y cómo la mediría el equipo del servicio.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Análisis de servicios reales</span>"
+    ]
+  },
+  {
+    "objectID": "96-analisis-real.html#ejercicio-2-reconstruir-el-mapa-de-un-sitio",
+    "href": "96-analisis-real.html#ejercicio-2-reconstruir-el-mapa-de-un-sitio",
+    "title": "Apéndice D — Análisis de servicios reales",
+    "section": "Ejercicio 2 · Reconstruir el mapa de un sitio",
+    "text": "Ejercicio 2 · Reconstruir el mapa de un sitio\nServicio: Europeana, la plataforma del patrimonio cultural europeo. Tema: 5 (arquitectura de la información).\nTarea. Sin buscar ningún documento interno, reconstruye el mapa del sitio de los dos primeros niveles a partir de la navegación principal, el pie de página y las páginas de entrada.\n\nDibuja el árbol con la notación del Tema 5.\nMarca con otro color las secciones a las que solo se llega desde el buscador.\nClasifica las etiquetas de navegación: ¿organizan por tipo de contenido, por tema, por público o por tarea?\nDiseña un estudio de clasificación de tarjetas (card sorting) de 15 tarjetas para comprobar si esas etiquetas encajan con el modelo mental de un estudiante de grado.\n\nEntrega: mapa del sitio, clasificación de etiquetas y las 15 tarjetas del estudio.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Análisis de servicios reales</span>"
+    ]
+  },
+  {
+    "objectID": "96-analisis-real.html#ejercicio-3-de-una-página-real-a-su-esquema",
+    "href": "96-analisis-real.html#ejercicio-3-de-una-página-real-a-su-esquema",
+    "title": "Apéndice D — Análisis de servicios reales",
+    "section": "Ejercicio 3 · De una página real a su esquema",
+    "text": "Ejercicio 3 · De una página real a su esquema\nServicio: la ficha de una obra en la colección del Museo Nacional del Prado. Temas: 7 (esquemas) y 8 (estados).\nTarea. Elige una obra y dibuja el esquema de página de su ficha: solo cajas grises, etiquetas y los textos clave.\n\nNumera los bloques por orden de prioridad visual (qué ves primero, segundo, tercero).\nCompara ese orden con las tareas probables de tres perfiles: turista que planea la visita, estudiante de historia del arte y docente que prepara una clase.\nDibuja dos estados de la ficha que no veas en pantalla: la vista en móvil y la ficha de una obra sin imagen disponible.\nPropón un cambio de jerarquía para uno de los perfiles y justifica qué gana y qué pierde el resto.\n\nEntrega: esquema actual, dos estados y la propuesta.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Análisis de servicios reales</span>"
+    ]
+  },
+  {
+    "objectID": "96-analisis-real.html#ejercicio-4-evaluación-heurística-de-un-servicio-de-una-pregunta-por-página",
+    "href": "96-analisis-real.html#ejercicio-4-evaluación-heurística-de-un-servicio-de-una-pregunta-por-página",
+    "title": "Apéndice D — Análisis de servicios reales",
+    "section": "Ejercicio 4 · Evaluación heurística de un servicio de una pregunta por página",
+    "text": "Ejercicio 4 · Evaluación heurística de un servicio de una pregunta por página\nServicio: cualquier trámite de GOV.UK, el portal del Gobierno británico, por ejemplo Check if you need a UK visa. Temas: 2 (heurísticas) y 6 (storyboards).\nTarea. GOV.UK usa el patrón «una cosa por página». Recorre el servicio con dos perfiles inventados y aplica las diez heurísticas de Nielsen.\n\nPara cada pantalla, anota qué heurísticas se cumplen de forma visible (estado del sistema, prevención de errores, lenguaje del usuario…).\nDibuja un storyboard de seis viñetas con el contexto de uso de uno de los perfiles.\nCompara el patrón «una cosa por página» con un formulario largo en una sola pantalla: ¿qué ventajas tiene para la accesibilidad y para el móvil? ¿Y qué coste?\nContrasta tus conclusiones con la guía publicada por el propio equipo: Question pages.\n\nEntrega: tabla de heurísticas, storyboard y la comparación de patrones.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Análisis de servicios reales</span>"
+    ]
+  },
+  {
+    "objectID": "96-analisis-real.html#rúbrica",
+    "href": "96-analisis-real.html#rúbrica",
+    "title": "Apéndice D — Análisis de servicios reales",
+    "section": "Rúbrica",
+    "text": "Rúbrica\n\n\n\nTabla 1: Rúbrica común para los ejercicios de análisis\n\n\n\n\n\nCriterio\nInsuficiente (0-4)\nSuficiente (5-6)\nNotable (7-8)\nSobresaliente (9-10)\n\n\n\n\nEvidencia\nOpiniones sin pasos ni datos\nDescribe lo que hizo\nRegistra pasos, tiempos y pantallas redibujadas\nRegistro completo y reproducible por otra persona\n\n\nAnálisis\nLista de gustos\nIdentifica aspectos con nombre\nRelaciona cada hallazgo con un principio del libro\nDistingue hallazgos por gravedad y frecuencia\n\n\nPropuesta\nSin propuesta\nPropone cambios genéricos\nPropuesta concreta en baja fidelidad\nPropuesta concreta con forma de comprobar si mejora\n\n\nComunicación\nDesordenado\nSe entiende\nEstructurado y breve\nUn tercero podría actuar con el informe\n\n\n\n\n\n\n\n\n\n\n\n\nTipPara el proyecto final\n\n\n\nSi eliges uno de estos servicios como punto de partida de tu proyecto, el análisis te sirve como investigación de soluciones existentes (Tema 2). Cita la fecha en que lo hiciste.",
+    "crumbs": [
+      "Apéndices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Análisis de servicios reales</span>"
+    ]
+  },
+  {
     "objectID": "90-uxlearn.html",
     "href": "90-uxlearn.html",
-    "title": "Apéndice D — Las funciones del libro",
+    "title": "Apéndice E — Las funciones del libro",
     "section": "",
     "text": "Funciones\nEl fichero funciones_ux.R reúne las funciones y los datos simulados de este libro y de su continuación, Diseño e interacción en prototipos de alta fidelidad. Sirve para comprobar y medir lo que se diseña: no sustituye a las herramientas de diseño.\nDentro del libro se carga con source(\"datos/funciones_ux.R\"). Para usarlo en tu ordenador, con RStudio o Positron, descárgalo en la carpeta de tu proyecto y cárgalo igual; no hace falta instalar nada:\nDescargar funciones_ux.R",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Las funciones del libro</span>"
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "90-uxlearn.html#funciones",
     "href": "90-uxlearn.html#funciones",
-    "title": "Apéndice D — Las funciones del libro",
+    "title": "Apéndice E — Las funciones del libro",
     "section": "",
     "text": "Para…\nFunción\nTema\n\n\n\n\nRelación de contraste entre dos colores (WCAG)\ncontraste()\n12\n\n\n¿Cumple el contraste mínimo AA o AAA?\ncumple_wcag()\n12\n\n\nRevisar todos los colores de una paleta\nrevisar_paleta()\n12\n\n\nSimular protanopía, deuteranopía o tritanopía\nsimular_daltonismo()\n12\n\n\n¿Se distinguen dos colores por luminosidad?\ndistinguibles()\n12\n\n\nCalcular una rejilla de columnas\nrejilla(), ancho_bloque()\n7\n\n\nCaracteres por línea\ncaracteres_por_linea()\n7\n\n\nEscala tipográfica modular\nescala_tipografica()\nAlta fidelidad\n\n\nPuntuación SUS y su aceptabilidad\npuntuacion_sus(), aceptabilidad_sus()\n4\n\n\nTasa de éxito con intervalo de confianza\ntasa_exito()\n4, 9\n\n\nTiempo típico (media geométrica)\ntiempo_tipico()\n4, 9\n\n\nAbandono en cada paso de un flujo\nembudo()\n5\n\n\nPriorizar los hallazgos de una revisión heurística\npriorizar_hallazgos()\n2",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Las funciones del libro</span>"
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "90-uxlearn.html#datos-todos-simulados-salvo-las-taxonomías",
     "href": "90-uxlearn.html#datos-todos-simulados-salvo-las-taxonomías",
-    "title": "Apéndice D — Las funciones del libro",
+    "title": "Apéndice E — Las funciones del libro",
     "section": "Datos (todos simulados, salvo las taxonomías)",
-    "text": "Datos (todos simulados, salvo las taxonomías)\n\n\n\nObjeto\nContenido\n\n\n\n\nrespuestas_sus\nRespuestas al SUS de 12 participantes\n\n\nsesiones_prueba\n8 participantes × 3 tareas × prototipo en papel y digital\n\n\nflujo_registro\nUsuarios en cada paso de un registro\n\n\nhallazgos_heuristicos\n6 problemas valorados por 3 evaluadores\n\n\nheuristicas_nielsen\nLas diez heurísticas de Nielsen\n\n\npatrones_enganosos\nCategorías de Gray et al. (2018) y Mathur et al. (2019)\n\n\npaleta_ejemplo\nNueve colores de un sistema de diseño\n\n\n\nPrueba aquí cualquier función:",
+    "text": "Datos (todos simulados, salvo las taxonomías)\n\n\n\nObjeto\nContenido\n\n\n\n\nrespuestas_sus\nRespuestas al SUS de 12 participantes\n\n\nsesiones_prueba\n8 participantes × 3 tareas × prototipo en papel y digital\n\n\nflujo_registro\nUsuarios en cada paso de un registro\n\n\nhallazgos_heuristicos\n6 problemas valorados por 3 evaluadores\n\n\nheuristicas_nielsen\nLas diez heurísticas de Nielsen\n\n\npatrones_enganosos\nCategorías de Gray et al. (2018) y Mathur et al. (2019)\n\n\npaleta_ejemplo\nNueve colores de un sistema de diseño\n\n\n\nPrueba aquí cualquier función:",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Las funciones del libro</span>"
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "90-uxlearn.html#referencias-de-los-métodos",
     "href": "90-uxlearn.html#referencias-de-los-métodos",
-    "title": "Apéndice D — Las funciones del libro",
+    "title": "Apéndice E — Las funciones del libro",
     "section": "Referencias de los métodos",
-    "text": "Referencias de los métodos\n\nBangor, A.; Kortum, P. T.; Miller, J. T. (2008). An empirical evaluation of the System Usability Scale. International Journal of Human-Computer Interaction, 24(6), 574-594.\nBrooke, J. (1996). SUS: A «quick and dirty» usability scale. En P. W. Jordan et al. (eds.), Usability evaluation in industry (pp. 189-194). Taylor & Francis.\nMachado, G. M.; Oliveira, M. M.; Fernandes, L. A. F. (2009). A physiologically-based model for simulation of color vision deficiency. IEEE Transactions on Visualization and Computer Graphics, 15(6), 1291-1298.\nSauro, J.; Lewis, J. R. (2016). Quantifying the user experience (2.ª ed.). Morgan Kaufmann.\nW3C (2023). Web Content Accessibility Guidelines (WCAG) 2.2.",
+    "text": "Referencias de los métodos\n\nBangor, A.; Kortum, P. T.; Miller, J. T. (2008). An empirical evaluation of the System Usability Scale. International Journal of Human-Computer Interaction, 24(6), 574-594.\nBrooke, J. (1996). SUS: A «quick and dirty» usability scale. En P. W. Jordan et al. (eds.), Usability evaluation in industry (pp. 189-194). Taylor & Francis.\nMachado, G. M.; Oliveira, M. M.; Fernandes, L. A. F. (2009). A physiologically-based model for simulation of color vision deficiency. IEEE Transactions on Visualization and Computer Graphics, 15(6), 1291-1298.\nSauro, J.; Lewis, J. R. (2016). Quantifying the user experience (2.ª ed.). Morgan Kaufmann.\nW3C (2023) — Web Content Accessibility Guidelines (WCAG) 2.2.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGray, C. M., Kou, Y., Battles, B., Hoggatt, J., y Toombs, A. L. (2018). The dark (patterns) side of UX design. En Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (pp. 1-14). ACM. https://doi.org/10.1145/3173574.3174108\n\n\nMathur, A., Acar, G., Friedman, M. J., Lucherini, E., Mayer, J., Chetty, M., y Narayanan, A. (2019). Dark patterns at scale: Findings from a crawl of 11K shopping websites. Proceedings of the ACM on Human-Computer Interaction, 3(CSCW), 1-32. https://doi.org/10.1145/3359183\n\n\nW3C. (2023). Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2. https://www.w3.org/TR/WCAG22/",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Las funciones del libro</span>"
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Las funciones del libro</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html",
     "href": "91-guia-docente.html",
-    "title": "Apéndice E — Guía para el profesorado",
+    "title": "Apéndice F — Guía para el profesorado",
     "section": "",
     "text": "Correspondencia con la ficha de la asignatura\nEsta guía explica cómo está pensado el libro para la docencia de la asignatura y cómo mantenerlo.\nLos doce temas siguen, en el mismo orden, los contenidos de la ficha oficial de Esquemas de página y prototipos de baja fidelidad (19945). Los objetivos de cada tema concretan los objetivos específicos de la ficha.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#correspondencia-con-la-ficha-de-la-asignatura",
     "href": "91-guia-docente.html#correspondencia-con-la-ficha-de-la-asignatura",
-    "title": "Apéndice E — Guía para el profesorado",
+    "title": "Apéndice F — Guía para el profesorado",
     "section": "",
     "text": "Actividad de evaluación (ficha)\nPeso\nApoyo en el libro\n\n\n\n\nExamen final\n50 %\nContenidos y lecturas obligatorias de los doce temas; las autoevaluaciones sirven de práctica\n\n\nActividades en Aula Global\n25 %\nRetos evaluables (uno por tema) y banco de preguntas en Moodle XML\n\n\nProyecto final en equipo\n25 %\nLos retos 3 a 9 son los pasos del proyecto: brief, métricas, flujos, storyboards, esquemas, prototipo navegable y prueba",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#retos-evaluables",
     "href": "91-guia-docente.html#retos-evaluables",
-    "title": "Apéndice E — Guía para el profesorado",
+    "title": "Apéndice F — Guía para el profesorado",
     "section": "Retos evaluables",
     "text": "Retos evaluables\nCada tema termina con un reto sin pista, solución ni corrección automática. Cada estudiante trabaja con un servicio o un proyecto elegido por él, lo que dificulta copiar. Se entrega con la plantilla entrega_reto.qmd, que lleva una rúbrica común: comprensión del tema (20 %), calidad del trabajo de diseño (30 %), justificación de las decisiones (20 %), ética, inclusión y accesibilidad (15 %) y presentación (15 %). La plantilla genera un HTML con las imágenes dentro, de modo que la entrega es un único fichero. No hace falta saber R para usarla.\nLas soluciones de referencia y los criterios de corrección de los retos no están en el repositorio público.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#autoevaluación-en-aula-global",
     "href": "91-guia-docente.html#autoevaluación-en-aula-global",
-    "title": "Apéndice E — Guía para el profesorado",
+    "title": "Apéndice F — Guía para el profesorado",
     "section": "Autoevaluación en Aula Global",
-    "text": "Autoevaluación en Aula Global\nLas preguntas de autoevaluación de cada tema están exportadas a Moodle XML en la carpeta moodle/ del repositorio: un fichero por tema y uno con todo el banco. Se importan desde Banco de preguntas → Importar → Formato Moodle XML. Cada pregunta conserva su explicación como retroalimentación general.",
+    "text": "Autoevaluación en Aula Global\nLas preguntas de autoevaluación de cada tema están exportadas a Moodle XML en la carpeta moodle/ del repositorio: un fichero por tema y uno con todo el banco. Se importan desde Banco de preguntas → Importar → Formato Moodle XML. Cada pregunta conserva su explicación como retroalimentación general.\nDescarga el banco de preguntas: todo el libro (Moodle XML) · por capítulo: 00 · 01 · 02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#el-papel-de-r",
     "href": "91-guia-docente.html#el-papel-de-r",
-    "title": "Apéndice E — Guía para el profesorado",
+    "title": "Apéndice F — Guía para el profesorado",
     "section": "El papel de R",
     "text": "El papel de R\nEl libro usa R lo imprescindible: cinco temas tienen ejercicios breves de completar huecos con funciones del libro (métricas, embudos, priorización de hallazgos, rejillas y color). El capítulo Usar R en este libro basta como preparación. Ningún reto exige programar.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
     "href": "91-guia-docente.html#actividades-interactivas-y-laboratorios",
-    "title": "Apéndice E — Guía para el profesorado",
+    "title": "Apéndice F — Guía para el profesorado",
     "section": "Actividades interactivas y laboratorios",
     "text": "Actividades interactivas y laboratorios\nAdemás de los ejercicios de R y la autoevaluación, cada tema tiene actividades de corrección inmediata (ordenar, clasificar, señalar zonas sobre una pantalla y escenarios con decisiones) y varios laboratorios que se usan sin programar: ordenación de tarjetas con una matriz de similitud, escala SUS, intervalo de confianza de una tasa de éxito, embudo de un flujo, calculadora de rejilla, prueba de los cinco segundos, prueba de árbol, mapa de calor simulado y comprobador de contraste con simulación de daltonismo. Todo se ejecuta en el navegador del estudiante, sin conexión a servicios externos, y los datos de los laboratorios son simulados. En el PDF y el EPUB las actividades aparecen en papel, con su solución.\nLas actividades están escritas en Markdown con la extensión interactivos (_extensions/interactivos/interactivos.lua), así que se pueden añadir o cambiar sin programar.\n\nDiapositivas de clase: cada tema tiene unas diapositivas con los objetivos, las figuras, las tablas principales, la lectura, preguntas para debatir y el reto, en diapositivas/ (F, pantalla completa; S, notas).",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#funciones-del-libro",
     "href": "91-guia-docente.html#funciones-del-libro",
-    "title": "Apéndice E — Guía para el profesorado",
+    "title": "Apéndice F — Guía para el profesorado",
     "section": "Funciones del libro",
     "text": "Funciones del libro\n\nProgreso del estudiante: cada capítulo muestra los ejercicios resueltos y las preguntas acertadas; la presentación resume todos. Se guarda solo en el navegador del estudiante (localStorage): el profesorado no lo ve. Sirve para la autorregulación, no para evaluar.\nUso sin conexión: un service worker (sw.js) guarda las páginas, webR y sus paquetes tras la primera visita.\nModo claro y oscuro, con auditoría de accesibilidad (WCAG 2.1 AA) en los dos.\nPDF y EPUB generados con python3 herramientas/pdf.py.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "91-guia-docente.html#mantenimiento",
     "href": "91-guia-docente.html#mantenimiento",
-    "title": "Apéndice E — Guía para el profesorado",
+    "title": "Apéndice F — Guía para el profesorado",
     "section": "Mantenimiento",
     "text": "Mantenimiento\nDesde la raíz del repositorio:\npython3 herramientas/preparar.py        # sw.js y flujo de integración continua\npython3 herramientas/extraer_r.py       # scripts .R de cada capítulo\npython3 herramientas/moodle.py          # banco de preguntas\npython3 herramientas/figuras.py         # figuras y plantillas en PDF\npython3 herramientas/pdf.py             # PDF y EPUB\nquarto render\npython3 herramientas/diapositivas.py    # diapositivas de clase\nEl flujo .github/workflows/comprobar.yml renderiza el libro y comprueba en un navegador real todos los ejercicios, las preguntas y la accesibilidad en modo claro y oscuro. Al publicar una versión nueva, actualiza version en CITATION.cff y vuelve a ejecutar preparar.py para que los navegadores renueven su copia.\nLos datos de todos los ejercicios son simulados; no hay datos de personas reales.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Guía para el profesorado</span>"
+      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Guía para el profesorado</span>"
     ]
   },
   {
     "objectID": "92-glosario.html",
     "href": "92-glosario.html",
-    "title": "Apéndice F — Glosario",
+    "title": "Apéndice G — Glosario",
     "section": "",
     "text": "Tema 1. Fundamentos\nTérminos del libro ordenados por tema. Cada entrada enlaza con el tema donde se explica.",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>G</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-1.-fundamentos",
     "href": "92-glosario.html#tema-1.-fundamentos",
-    "title": "Apéndice F — Glosario",
+    "title": "Apéndice G — Glosario",
     "section": "",
     "text": "Prototipo\nRepresentación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo. → Tema 1\n\n\nFidelidad\nGrado en que un prototipo se parece al producto final. Tiene varias dimensiones independientes: apariencia, datos, funcionalidad, interactividad y estructura espacial. → Tema 1\n\n\nBoceto\nDibujo rápido, barato y ambiguo que sirve para explorar y generar alternativas, no para especificar. → Tema 1\n\n\nEsquema de página\nWireframe. Representación de la estructura de una pantalla: qué elementos contiene, dónde están y qué importancia tienen, sin estilo visual. → Tema 7\n\n\nDiseño centrado en las personas\nEnfoque, descrito en la norma ISO 9241-210, que repite un ciclo de cuatro actividades: entender el contexto de uso, especificar requisitos, producir soluciones y evaluarlas. → Tema 1\n\n\nIteración\nCada vuelta del ciclo de diseño y evaluación. → Tema 1",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>G</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-2.-investigación",
     "href": "92-glosario.html#tema-2.-investigación",
-    "title": "Apéndice F — Glosario",
+    "title": "Apéndice G — Glosario",
     "section": "Tema 2. Investigación",
     "text": "Tema 2. Investigación\n\nInvestigación con usuarios\nConjunto de métodos para entender quién usará un producto, qué intenta conseguir, en qué contexto y qué se lo impide. → Tema 2\n\n\nMétodo actitudinal\nMétodo que recoge lo que las personas dicen: opiniones, intenciones, preferencias. → Tema 2\n\n\nMétodo comportamental\nMétodo que observa lo que las personas hacen. → Tema 2\n\n\nEvaluación heurística\nInspección de una interfaz por varios evaluadores con una lista breve de principios (heurísticas), sin participación de usuarios. → Tema 2\n\n\nSeveridad\nGravedad de un problema de usabilidad, de 0 (no es un problema) a 4 (catástrofe) en la escala de Nielsen. → Tema 2\n\n\nDiagrama de afinidad\nTécnica de análisis que agrupa observaciones escritas en notas según su similitud hasta que emergen temas. → Tema 2\n\n\nHallazgo\nObservación de la investigación con su evidencia. Se distingue de la conclusión (insight), que la interpreta. → Tema 2\n\n\n«¿Cómo podríamos…?»\nHow might we. Forma de convertir una conclusión de la investigación en una oportunidad de diseño abierta a varias soluciones. → Tema 2",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>G</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-3.-definir-el-problema",
     "href": "92-glosario.html#tema-3.-definir-el-problema",
-    "title": "Apéndice F — Glosario",
+    "title": "Apéndice G — Glosario",
     "section": "Tema 3. Definir el problema",
     "text": "Tema 3. Definir el problema\n\nEnunciado del problema\nFrase que describe a quién afecta el problema, qué necesita y por qué, sin incluir una solución. → Tema 3\n\n\nHipótesis de diseño\nAfirmación comprobable sobre el efecto de un cambio de diseño, con la señal que permitirá saber si se cumple. → Tema 3\n\n\nAlcance\nLo que entra y, sobre todo, lo que no entra en un proyecto. → Tema 3\n\n\nProblema retorcido\nWicked problem. Problema sin formulación definitiva en el que entenderlo y resolverlo ocurren a la vez (Rittel y Webber, 1973). → Tema 3\n\n\nEncuadre\nManera de mirar una situación que abre soluciones nuevas; según Dorst (2011), el núcleo del pensamiento de diseño. → Tema 3\n\n\nBrief de diseño\nDocumento breve que reúne el problema, las personas usuarias, las hipótesis, el alcance, las restricciones y los criterios de éxito. → Tema 3",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>G</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-4.-métricas",
     "href": "92-glosario.html#tema-4.-métricas",
-    "title": "Apéndice F — Glosario",
+    "title": "Apéndice G — Glosario",
     "section": "Tema 4. Métricas",
-    "text": "Tema 4. Métricas\n\nObjetivo SMART\nObjetivo específico, medible, alcanzable, relevante y con plazo. → Tema 4\n\n\nHito\nPunto del proyecto definido por un resultado comprobable. → Tema 4\n\n\nMarco HEART\nAgrupación de métricas de experiencia en satisfacción, implicación, adopción, retención y éxito en la tarea (Rodden et al., 2010). → Tema 4\n\n\nTasa de éxito\nProporción de participantes que completan una tarea. → Tema 4\n\n\nIntervalo de confianza\nRango de valores entre los que está probablemente el valor real de una métrica. Con muestras pequeñas es ancho. → Tema 4\n\n\nMedia geométrica\nMedia de los logaritmos devuelta a la escala original; representa mejor el tiempo típico cuando hay valores muy altos. → Tema 4\n\n\nSUS\nSystem Usability Scale. Cuestionario de diez afirmaciones que da una puntuación de usabilidad percibida de 0 a 100, que no es un porcentaje. → Tema 4",
+    "text": "Tema 4. Métricas\n\nObjetivo SMART\nObjetivo específico, medible, alcanzable, relevante y con plazo. → Tema 4\n\n\nHito\nPunto del proyecto definido por un resultado comprobable. → Tema 4\n\n\nMarco HEART\nAgrupación de métricas de experiencia en satisfacción, implicación, adopción, retención y éxito en la tarea (Rodden et al., 2010). → Tema 4\n\n\nTasa de éxito\nProporción de participantes que completan una tarea. → Tema 4\n\n\nIntervalo de confianza\nRango de valores entre los que está probablemente el valor real de una métrica. Con muestras pequeñas es ancho. → Tema 4\n\n\nMedia geométrica\nMedia de los logaritmos devuelta a la escala original; representa mejor el tiempo típico cuando hay valores muy altos. → Tema 4\n\n\nSUS\nSystem Usability Scale. Cuestionario de diez afirmaciones que da una puntuación de usabilidad percibida de 0 a 100, que no es un porcentaje. → Tema 4",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>G</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-5.-flujos",
     "href": "92-glosario.html#tema-5.-flujos",
-    "title": "Apéndice F — Glosario",
+    "title": "Apéndice G — Glosario",
     "section": "Tema 5. Flujos",
     "text": "Tema 5. Flujos\n\nFlujo de usuario\nRecorrido por el sistema para completar una tarea, con sus pantallas y decisiones. → Tema 5\n\n\nAnálisis de tareas\nDescomposición de un objetivo en subtareas y pasos. → Tema 5\n\n\nMapa de tareas\nRepresentación ordenada de todas las tareas de un servicio, sin entrar en pantallas. → Tema 5\n\n\nWireflow\nFlujo dibujado con miniaturas de los esquemas de cada pantalla. → Tema 5\n\n\nFlujo de error\nCamino que sigue la persona cuando algo falla. → Tema 5\n\n\nCallejón sin salida\nPunto de un flujo desde el que no se puede continuar, volver ni salir. → Tema 5\n\n\nEmbudo\nRecuento de las personas que llegan a cada paso de un flujo, que muestra dónde se pierden. → Tema 5",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>G</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-6.-storyboards",
     "href": "92-glosario.html#tema-6.-storyboards",
-    "title": "Apéndice F — Glosario",
+    "title": "Apéndice G — Glosario",
     "section": "Tema 6. Storyboards",
     "text": "Tema 6. Storyboards\n\nStoryboard\nSecuencia de viñetas que cuenta cómo una persona usa un producto en una situación concreta. → Tema 6\n\n\nEscenario\nHistoria escrita de una persona concreta que persigue un objetivo en un contexto; sirve de guion al storyboard. → Tema 6\n\n\nContexto de uso\nEntorno físico, social y técnico en el que se usa un producto. → Tema 6\n\n\nMomento clave\nInstante de la historia en el que el producto marca la diferencia. → Tema 6\n\n\nViñeta\nCada uno de los cuadros de un storyboard. → Tema 6",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>G</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-7.-esquemas-de-página",
     "href": "92-glosario.html#tema-7.-esquemas-de-página",
-    "title": "Apéndice F — Glosario",
+    "title": "Apéndice G — Glosario",
     "section": "Tema 7. Esquemas de página",
     "text": "Tema 7. Esquemas de página\n\nJerarquía visual\nOrden de importancia de los elementos, comunicado con el tamaño, la posición, la agrupación y el contraste. → Tema 7\n\n\nRejilla\nDivisión del ancho de la pantalla en columnas, medianiles y márgenes para alinear los elementos. → Tema 7\n\n\nMedianil\nGutter. Separación entre las columnas de una rejilla. → Tema 7\n\n\nÁrea de contenido\nZona de la pantalla que se repite en todas las páginas: cabecera, navegación, contenido, lateral, pie. → Tema 7\n\n\nConvención\nSolución de interfaz que la mayoría de los sitios resuelve igual y que las personas ya esperan. → Tema 7\n\n\nAnotación\nNota numerada en un esquema que explica un comportamiento que el dibujo no muestra. → Tema 7",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>G</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-8.-estados-y-transiciones",
     "href": "92-glosario.html#tema-8.-estados-y-transiciones",
-    "title": "Apéndice F — Glosario",
+    "title": "Apéndice G — Glosario",
     "section": "Tema 8. Estados y transiciones",
     "text": "Tema 8. Estados y transiciones\n\nEstado\nCada situación distinta en la que puede estar un componente o una pantalla. → Tema 8\n\n\nTransición\nPaso de un estado a otro, provocado por un evento. → Tema 8\n\n\nDiagrama de estados\nRepresentación de los estados de un sistema y de las transiciones entre ellos, basada en los statecharts de Harel (1987). → Tema 8\n\n\nEstado vacío\nEstado de una pantalla cuando no hay contenido que mostrar. → Tema 8\n\n\nFoco\nEstado del elemento al que se ha llegado con el teclado; debe ser siempre visible. → Tema 8\n\n\nPrototipo navegable\nConjunto de pantallas enlazadas que se puede recorrer como si fuera el producto. → Tema 8",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>G</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-9.-prototipos-en-papel",
     "href": "92-glosario.html#tema-9.-prototipos-en-papel",
-    "title": "Apéndice F — Glosario",
+    "title": "Apéndice G — Glosario",
     "section": "Tema 9. Prototipos en papel",
     "text": "Tema 9. Prototipos en papel\n\nPrototipo en papel\nPrototipo hecho con hojas y piezas de papel que se manipulan durante una prueba. → Tema 9\n\n\nFacilitador\nPersona que dirige una sesión de prueba, lee las tareas y mantiene la neutralidad. → Tema 9\n\n\n«Ordenador humano»\nPersona que, en una prueba en papel, cambia las hojas según lo que hace el participante, como lo haría el sistema. → Tema 9\n\n\nPensamiento en voz alta\nTécnica en la que el participante dice lo que busca, espera y le sorprende mientras usa el prototipo. → Tema 9\n\n\nEscenario de tarea\nSituación realista que da un objetivo al participante sin decirle cómo conseguirlo. → Tema 9\n\n\nPrueba de usabilidad\nSesión en la que personas representativas realizan tareas con un producto o prototipo mientras se observa qué ocurre. → Tema 9",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>G</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-10.-sesgos-y-patrones-engañosos",
     "href": "92-glosario.html#tema-10.-sesgos-y-patrones-engañosos",
-    "title": "Apéndice F — Glosario",
+    "title": "Apéndice G — Glosario",
     "section": "Tema 10. Sesgos y patrones engañosos",
     "text": "Tema 10. Sesgos y patrones engañosos\n\nSesgo cognitivo\nError sistemático en el juicio que se produce al usar atajos mentales. → Tema 10\n\n\nHeurístico\nAtajo mental para decidir con incertidumbre (Tversky y Kahneman, 1974). No confundir con las heurísticas de usabilidad. → Tema 10\n\n\nEfecto de anclaje\nTendencia a que la primera cifra vista condicione la valoración de las siguientes. → Tema 10\n\n\nOpción por defecto\nLa opción que viene marcada; tendemos a no cambiarla. → Tema 10\n\n\nPatrón engañoso\nDark pattern o diseño engañoso. Solución de interfaz que engaña, presiona o dificulta decidir libremente. → Tema 10\n\n\nSesgo de confirmación\nTendencia a buscar y valorar más los datos que confirman la idea propia. → Tema 10\n\n\nArquitectura de la decisión\nForma en que se presentan las opciones, que influye en lo que se elige. → Tema 10",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>G</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-11.-economía-de-la-atención",
     "href": "92-glosario.html#tema-11.-economía-de-la-atención",
-    "title": "Apéndice F — Glosario",
+    "title": "Apéndice G — Glosario",
     "section": "Tema 11. Economía de la atención",
     "text": "Tema 11. Economía de la atención\n\nEconomía de la atención\nModelo económico en el que la atención de las personas es el recurso que se capta y se vende, sobre todo a anunciantes. → Tema 11\n\n\nMétrica de implicación\nMedida de la intensidad de uso (tiempo, sesiones, desplazamiento) que no indica por sí sola si el producto ayuda a la persona. → Tema 11\n\n\nRefuerzo intermitente\nRecompensa que llega de forma impredecible; es el patrón que más cuesta abandonar. → Tema 11\n\n\nDesplazamiento infinito\nLista que carga contenido sin fin al llegar abajo, sin un punto natural para parar. → Tema 11\n\n\nSeñal de parada\nElemento de diseño que marca un final natural (un final de lista, un resumen). → Tema 11\n\n\nBienestar digital\nRelación con la tecnología alineada con los objetivos y la salud de las personas. → Tema 11",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>G</span>  <span class='chapter-title'>Glosario</span>"
     ]
   },
   {
     "objectID": "92-glosario.html#tema-12.-diseño-inclusivo-y-accesible",
     "href": "92-glosario.html#tema-12.-diseño-inclusivo-y-accesible",
-    "title": "Apéndice F — Glosario",
+    "title": "Apéndice G — Glosario",
     "section": "Tema 12. Diseño inclusivo y accesible",
-    "text": "Tema 12. Diseño inclusivo y accesible\n\nDiseño inclusivo\nDiseño que tiene en cuenta toda la diversidad humana en lugar de un usuario medio. → Tema 12\n\n\nAccesibilidad\nCondición de un producto que pueden percibir, entender, navegar y usar las personas con discapacidad. → Tema 12\n\n\nWCAG\nPautas de Accesibilidad para el Contenido Web del W3C; la versión actual es la 2.2 (2023). → Tema 12\n\n\nEspectro de personas\nIdea de que una limitación puede ser permanente, temporal o situacional. → Tema 12\n\n\nGenderMag\nMétodo de inspección que detecta sesgos de género con personajes que varían en cinco facetas cognitivas (Burnett et al., 2016). → Tema 12\n\n\nContraste\nRelación entre la luminancia de dos colores, de 1:1 a 21:1. → Tema 12\n\n\nDaltonismo\nDeficiencia en la visión de los colores; la más frecuente afecta al eje rojo-verde. → Tema 12\n\n\nOrden de foco\nSecuencia en la que el teclado recorre los elementos interactivos de una pantalla. → Tema 12",
+    "text": "Tema 12. Diseño inclusivo y accesible\n\nDiseño inclusivo\nDiseño que tiene en cuenta toda la diversidad humana en lugar de un usuario medio. → Tema 12\n\n\nAccesibilidad\nCondición de un producto que pueden percibir, entender, navegar y usar las personas con discapacidad. → Tema 12\n\n\nWCAG\nPautas de Accesibilidad para el Contenido Web del W3C; la versión actual es la 2.2 (2023). → Tema 12\n\n\nEspectro de personas\nIdea de que una limitación puede ser permanente, temporal o situacional. → Tema 12\n\n\nGenderMag\nMétodo de inspección que detecta sesgos de género con personajes que varían en cinco facetas cognitivas (Burnett et al., 2016). → Tema 12\n\n\nContraste\nRelación entre la luminancia de dos colores, de 1:1 a 21:1. → Tema 12\n\n\nDaltonismo\nDeficiencia en la visión de los colores; la más frecuente afecta al eje rojo-verde. → Tema 12\n\n\nOrden de foco\nSecuencia en la que el teclado recorre los elementos interactivos de una pantalla. → Tema 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBurnett, M., Stumpf, S., Macbeth, J., Makri, S., Beckwith, L., Kwan, I., Peters, A., y Jernigan, W. (2016). GenderMag: A method for evaluating software’s gender inclusiveness. Interacting with Computers, 28(6), 760-787. https://doi.org/10.1093/iwc/iwv046\n\n\nDorst, K. (2011). The core of ’design thinking’ and its application. Design Studies, 32(6), 521-532. https://doi.org/10.1016/j.destud.2011.07.006\n\n\nHarel, D. (1987). Statecharts: A visual formalism for complex systems. https://doi.org/10.1016/0167-6423(87\n\n\nRittel, H. W. J., y Webber, M. M. (1973). Dilemmas in a general theory of planning. Policy Sciences, 4(2), 155-169. https://doi.org/10.1007/BF01405730\n\n\nRodden, K., Hutchinson, H., y Fu, X. (2010). Measuring the user experience on a large scale: User-centered metrics for web applications. En Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’10) (pp. 2395-2398). ACM. https://doi.org/10.1145/1753326.1753687\n\n\nTversky, A., y Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. Science, 185(4157), 1124-1131. https://doi.org/10.1126/science.185.4157.1124",
     "crumbs": [
       "Apéndices",
-      "<span class='chapter-number'>F</span>  <span class='chapter-title'>Glosario</span>"
+      "<span class='chapter-number'>G</span>  <span class='chapter-title'>Glosario</span>"
     ]
   }
 ]

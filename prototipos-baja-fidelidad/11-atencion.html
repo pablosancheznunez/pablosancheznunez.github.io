@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -457,6 +477,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./96-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -575,15 +600,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Mathur, A. et al.&nbsp;(2019). <a href="https://doi.org/10.1145/3359183">Dark patterns at scale</a>. <em>Proceedings of the ACM on Human-Computer Interaction</em>, 3(CSCW). Urgencia y escasez como técnicas para captar la atención y precipitar decisiones.</li>
-<li>Center for Humane Technology. <a href="https://www.humanetech.com/">Recursos para tecnología humana</a>. Materiales sobre diseño que respeta la atención.</li>
+<li><span class="citation" data-cites="mathur2019a">Mathur et&nbsp;al. (<a href="#ref-mathur2019a" role="doc-biblioref">2019</a>)</span> — Urgencia y escasez como técnicas para captar la atención y precipitar decisiones.</li>
+<li><span class="citation" data-cites="centerforhumanetechnsf">Center for Humane Technology (<a href="#ref-centerforhumanetechnsf" role="doc-biblioref">s.&nbsp;f.</a>)</span> — Materiales sobre diseño que respeta la atención.</li>
 </ul>
 </section>
 </section>
 <section id="la-atención-como-recurso-escaso" class="level2">
 <h2 class="anchored" data-anchor-id="la-atención-como-recurso-escaso">1. La atención como recurso escaso</h2>
 <p>Herbert Simon advirtió en 1971 que la abundancia de información crea pobreza de atención: cuanta más información compite por nosotros, más valiosa se vuelve la atención que podemos darle. Muchos servicios digitales gratuitos se financian con publicidad, y la publicidad se vende por la atención que se consigue: cuanto más tiempo y más a menudo se usa el servicio, más ingresos. Ese es el núcleo de la <a href="92-glosario.html#gl-economia-atencion" class="glos" data-def="Modelo económico en el que la atención de las personas es el recurso que se capta y se vende, sobre todo a anunciantes."><strong>economía de la atención</strong></a>.</p>
-<p>Williams (2018), que trabajó en publicidad en Google antes de dedicarse a la filosofía, sostiene que el problema no es solo de productividad. Las tecnologías optimizadas para captar la atención pueden apartar a las personas de sus propios objetivos, de lo que ellas mismas querrían hacer con su tiempo.</p>
+<p><span class="citation" data-cites="williams2018">Williams (<a href="#ref-williams2018" role="doc-biblioref">2018</a>)</span>, que trabajó en publicidad en Google antes de dedicarse a la filosofía, sostiene que el problema no es solo de productividad. Las tecnologías optimizadas para captar la atención pueden apartar a las personas de sus propios objetivos, de lo que ellas mismas querrían hacer con su tiempo.</p>
 </section>
 <section id="las-métricas-que-dirigen-el-diseño" class="level2">
 <h2 class="anchored" data-anchor-id="las-métricas-que-dirigen-el-diseño">2. Las métricas que dirigen el diseño</h2>
@@ -859,6 +884,17 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-centerforhumanetechnsf" class="csl-entry" role="listitem">
+Center for Humane Technology. (s.&nbsp;f.). <em><span>Recursos para tecnología humana</span></em>. Recuperado <a href="https://www.humanetech.com/">https://www.humanetech.com/</a>
+</div>
+<div id="ref-mathur2019a" class="csl-entry" role="listitem">
+Mathur, A. et&nbsp;al. (2019). <span>Dark patterns at scale</span>. <em>Proceedings of the ACM on Human-Computer Interaction</em>, <em>3</em>(CSCW). <a href="https://doi.org/10.1145/3359183">https://doi.org/10.1145/3359183</a>
+</div>
+<div id="ref-williams2018" class="csl-entry" role="listitem">
+Williams, J. (2018). <em><span><em>Stand out of our light: Freedom and resistance in the attention economy</em></span></em>. Cambridge University Press. <a href="https://doi.org/10.1017/9781108453004">https://doi.org/10.1017/9781108453004</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

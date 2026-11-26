@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -457,6 +477,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./96-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -580,15 +605,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Bangor, A.; Kortum, P. T.; Miller, J. T. (2008). <a href="https://doi.org/10.1080/10447310802205776">An empirical evaluation of the System Usability Scale</a>. <em>International Journal of Human-Computer Interaction</em>, 24(6), 574-594. Cómo interpretar las puntuaciones SUS.</li>
-<li>Doran, G. T. (1981). There’s a S.M.A.R.T. way to write management’s goals and objectives. <em>Management Review</em>, 70(11), 35-36. El origen del acrónimo SMART.</li>
-<li>Sauro, J.; Lewis, J. R. (2016). <em>Quantifying the user experience: Practical statistics for user research</em> (2.ª ed.). Morgan Kaufmann. La referencia para calcular métricas con muestras pequeñas.</li>
+<li><span class="citation" data-cites="bangor2008">Bangor et&nbsp;al. (<a href="#ref-bangor2008" role="doc-biblioref">2008</a>)</span> — Cómo interpretar las puntuaciones SUS.</li>
+<li><span class="citation" data-cites="doran1981">Doran (<a href="#ref-doran1981" role="doc-biblioref">1981</a>)</span> — El origen del acrónimo SMART.</li>
+<li><span class="citation" data-cites="sauro2016">Sauro y Lewis (<a href="#ref-sauro2016" role="doc-biblioref">2016</a>)</span> — La referencia para calcular métricas con muestras pequeñas.</li>
 </ul>
 </section>
 </section>
 <section id="objetivos-smart" class="level2">
 <h2 class="anchored" data-anchor-id="objetivos-smart">1. Objetivos SMART</h2>
-<p>Un objetivo vago («que la web sea más fácil de usar») no permite saber si se ha cumplido. El acrónimo <strong>SMART</strong>, propuesto por Doran (1981) para la gestión y adoptado en el diseño, pide que un objetivo sea:</p>
+<p>Un objetivo vago («que la web sea más fácil de usar») no permite saber si se ha cumplido. El acrónimo <strong>SMART</strong>, propuesto por <span class="citation" data-cites="doran1981">Doran (<a href="#ref-doran1981" role="doc-biblioref">1981</a>)</span> para la gestión y adoptado en el diseño, pide que un objetivo sea:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -686,11 +711,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="medir-con-pocas-personas" class="level2">
 <h2 class="anchored" data-anchor-id="medir-con-pocas-personas">4. Medir con pocas personas</h2>
-<p>Las pruebas de prototipos se hacen con pocas personas, a menudo cinco. Con muestras así, una cifra sola engaña: «4 de 5 completaron la tarea» es un 80 %, pero el porcentaje real en la población podría estar bastante más abajo. Sauro y Lewis (2016) recomiendan:</p>
+<p>Las pruebas de prototipos se hacen con pocas personas, a menudo cinco. Con muestras así, una cifra sola engaña: «4 de 5 completaron la tarea» es un 80 %, pero el porcentaje real en la población podría estar bastante más abajo. <span class="citation" data-cites="sauro2016">Sauro y Lewis (<a href="#ref-sauro2016" role="doc-biblioref">2016</a>)</span> recomiendan:</p>
 <ul>
 <li><strong>Tasa de éxito con intervalo de confianza</strong> de Wald ajustado: indica entre qué valores está probablemente la tasa real.</li>
 <li><a href="92-glosario.html#gl-media-geometrica" class="glos" data-def="Media de los logaritmos devuelta a la escala original; representa mejor el tiempo típico cuando hay valores muy altos."><strong>Media geométrica</strong></a> para los tiempos: con pocas personas y alguna muy lenta, representa mejor el tiempo típico que la media aritmética.</li>
-<li><strong>SUS</strong> (<em>System Usability Scale</em>) para la satisfacción: diez afirmaciones con respuesta de 1 a 5 que dan una puntuación de 0 a 100. No es un porcentaje. Bangor et al.&nbsp;(2008) consideran «aceptable» una puntuación desde 70, «marginal» entre 50 y 70, y «no aceptable» por debajo de 50.</li>
+<li><strong>SUS</strong> (<em>System Usability Scale</em>) para la satisfacción: diez afirmaciones con respuesta de 1 a 5 que dan una puntuación de 0 a 100. No es un porcentaje. <span class="citation" data-cites="bangor2008">Bangor et&nbsp;al. (<a href="#ref-bangor2008" role="doc-biblioref">2008</a>)</span> consideran «aceptable» una puntuación desde 70, «marginal» entre 50 y 70, y «no aceptable» por debajo de 50.</li>
 </ul>
 <div id="fig-intervalos" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de puntos con barras de error. En el eje horizontal, el número de participantes: 5, 10, 20, 40 y 80. Para todos el punto está en el 80 %, pero la barra de error se estrecha: con 5 va del 36 % al 98 %; con 80, del 70 % al 87 %.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -771,7 +796,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQ0
 <a href="figuras/t4_heart.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: El marco HEART (Rodden, Hutchinson y Fu, 2010): cinco categorías para elegir las métricas de una experiencia."><img src="figuras/t4_heart.svg" class="img-fluid figure-img" alt="Cinco tarjetas: H, felicidad (satisfacción, SUS, NPS); E, implicación (frecuencia e intensidad de uso); A, adopción (personas nuevas que lo empiezan a usar); R, retención (personas que vuelven); T, éxito en la tarea (tasa de éxito, tiempo, errores)."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-t4-heart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2: El <a href="92-glosario.html#gl-heart" class="glos" data-def="Agrupación de métricas de experiencia en satisfacción, implicación, adopción, retención y éxito en la tarea (Rodden et al., 2010).">marco HEART</a> (Rodden, Hutchinson y Fu, 2010): cinco categorías para elegir las métricas de una experiencia.
+Figura&nbsp;2: El <a href="92-glosario.html#gl-heart" class="glos" data-def="Agrupación de métricas de experiencia en satisfacción, implicación, adopción, retención y éxito en la tarea [@rodden2010].">marco HEART</a> (Rodden, Hutchinson y Fu, 2010): cinco categorías para elegir las métricas de una experiencia.
 </figcaption>
 </figure>
 </div>
@@ -998,7 +1023,7 @@ Figura&nbsp;2: El <a href="92-glosario.html#gl-heart" class="glos" data-def="Agr
 <li>En el marco HEART, la letra T corresponde a <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">tiempo</option><option value="answer">éxito en la tarea (task success)</option><option value="x">tráfico</option></select></li>
 <li>«Trabajar en los esquemas» es un hito verificable. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>Una puntuación SUS de 75 significa que el 75 % de los participantes está satisfecho. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
-<li>Según Bangor et al.&nbsp;(2008), una puntuación SUS de 62,5 es <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">no aceptable</option><option value="answer">marginal</option><option value="x">aceptable</option></select></li>
+<li>Según <span class="citation" data-cites="bangor2008">Bangor et&nbsp;al. (<a href="#ref-bangor2008" role="doc-biblioref">2008</a>)</span>, una puntuación SUS de 62,5 es <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">no aceptable</option><option value="answer">marginal</option><option value="x">aceptable</option></select></li>
 <li>Con tiempos de 32, 41, 38, 45 y 120 segundos, ¿qué resumen representa mejor el tiempo típico?</li>
 </ol>
 <p></p><div class="webex-radiogroup" role="radiogroup" aria-label="Opciones de respuesta" id="radio_libro_1"><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>La media aritmética (55 s)</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="answer"> <span>La media geométrica (49 s)</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>El máximo (120 s)</span></label></div><p></p>
@@ -1062,6 +1087,17 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC02IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-bangor2008" class="csl-entry" role="listitem">
+Bangor, A., Kortum, P. T., y Miller, J. T. (2008). <span>An empirical evaluation of the System Usability Scale</span>. <em>International Journal of Human-Computer Interaction</em>, <em>24</em>(6), 574-594. <a href="https://doi.org/10.1080/10447310802205776">https://doi.org/10.1080/10447310802205776</a>
+</div>
+<div id="ref-doran1981" class="csl-entry" role="listitem">
+Doran, G. T. (1981). <span>There’s a S.M.A.R.T. way to write management’s goals and objectives</span>. <em>Management Review</em>, <em>70</em>(11), 35-36.
+</div>
+<div id="ref-sauro2016" class="csl-entry" role="listitem">
+Sauro, J., y Lewis, J. R. (2016). <em><span>Quantifying the user experience: Practical statistics for user research</span></em> (2.ª ed.). Morgan Kaufmann.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

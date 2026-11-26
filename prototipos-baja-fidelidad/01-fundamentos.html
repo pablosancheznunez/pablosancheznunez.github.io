@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -422,6 +442,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./96-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -540,16 +565,16 @@ ul.task-list li input[type="checkbox"] {
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Houde, S.; Hill, C. (1997). <a href="https://doi.org/10.1016/B978-044481862-1.50082-0">What do prototypes prototype?</a> En <em>Handbook of Human-Computer Interaction</em> (pp.&nbsp;367-381). Elsevier. El modelo de los tres aspectos que puede explorar un prototipo.</li>
-<li>Lim, Y.-K.; Stolterman, E.; Tenenberg, J. (2008). <a href="https://doi.org/10.1145/1375761.1375762">The anatomy of prototypes</a>. <em>ACM Transactions on Computer-Human Interaction</em>, 15(2), 1-27. Los prototipos como filtros que dejan ver unas cualidades del diseño y ocultan otras.</li>
-<li>Walker, M.; Takayama, L.; Landay, J. A. (2002). <a href="https://doi.org/10.1177/154193120204600513">High-fidelity or low-fidelity, paper or computer?</a> <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, 46(5), 661-665. Un experimento que compara qué problemas detecta cada tipo de prototipo.</li>
+<li><span class="citation" data-cites="houde1997">Houde y Hill (<a href="#ref-houde1997" role="doc-biblioref">1997</a>)</span> — El modelo de los tres aspectos que puede explorar un prototipo.</li>
+<li><span class="citation" data-cites="lim2008">Lim et&nbsp;al. (<a href="#ref-lim2008" role="doc-biblioref">2008</a>)</span> — Los prototipos como filtros que dejan ver unas cualidades del diseño y ocultan otras.</li>
+<li><span class="citation" data-cites="walker2002">Walker et&nbsp;al. (<a href="#ref-walker2002" role="doc-biblioref">2002</a>)</span> — Un experimento que compara qué problemas detecta cada tipo de prototipo.</li>
 </ul>
 </section>
 </section>
 <section id="qué-es-un-prototipo" class="level2">
 <h2 class="anchored" data-anchor-id="qué-es-un-prototipo">1. Qué es un prototipo</h2>
 <p>Un <strong>prototipo</strong> es una representación de un diseño que se construye para aprender algo sobre él antes de construirlo de verdad. No es una versión pequeña del producto final: es una pregunta hecha objeto. Un prototipo bien planteado sabe qué quiere averiguar.</p>
-<p>Houde y Hill (1997) proponen pensar en <strong>tres aspectos</strong> que un prototipo puede explorar:</p>
+<p><span class="citation" data-cites="houde1997">Houde y Hill (<a href="#ref-houde1997" role="doc-biblioref">1997</a>)</span> proponen pensar en <strong>tres aspectos</strong> que un prototipo puede explorar:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -597,25 +622,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-fidelidad" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Matriz con tres columnas (boceto en papel, esquema digital, prototipo de alta fidelidad) y cinco filas (apariencia, datos, funcionalidad, interactividad, estructura espacial). Cada celda indica el nivel de fidelidad con uno, dos o tres puntos. El boceto tiene un punto en casi todo; el esquema digital tiene tres puntos en estructura espacial y datos; el prototipo de alta fidelidad tiene tres en apariencia.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fidelidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figuras/tema1_fidelidad.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Las cinco dimensiones de fidelidad de Lim et al.&nbsp;(2008) en tres artefactos habituales. La fidelidad no es una sola escala: un esquema puede ser tosco en apariencia y fiel en estructura y datos."><img src="figuras/tema1_fidelidad.svg" class="img-fluid figure-img" alt="Matriz con tres columnas (boceto en papel, esquema digital, prototipo de alta fidelidad) y cinco filas (apariencia, datos, funcionalidad, interactividad, estructura espacial). Cada celda indica el nivel de fidelidad con uno, dos o tres puntos. El boceto tiene un punto en casi todo; el esquema digital tiene tres puntos en estructura espacial y datos; el prototipo de alta fidelidad tiene tres en apariencia."></a>
+<a href="figuras/tema1_fidelidad.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Las cinco dimensiones de fidelidad de @lim2008 en tres artefactos habituales. La fidelidad no es una sola escala: un esquema puede ser tosco en apariencia y fiel en estructura y datos."><img src="figuras/tema1_fidelidad.svg" class="img-fluid figure-img" alt="Matriz con tres columnas (boceto en papel, esquema digital, prototipo de alta fidelidad) y cinco filas (apariencia, datos, funcionalidad, interactividad, estructura espacial). Cada celda indica el nivel de fidelidad con uno, dos o tres puntos. El boceto tiene un punto en casi todo; el esquema digital tiene tres puntos en estructura espacial y datos; el prototipo de alta fidelidad tiene tres en apariencia."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fidelidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Las cinco dimensiones de fidelidad de Lim et al.&nbsp;(2008) en tres artefactos habituales. La fidelidad no es una sola escala: un esquema puede ser tosco en apariencia y fiel en estructura y datos.
+Figura&nbsp;1: Las cinco dimensiones de fidelidad de <span class="citation" data-cites="lim2008">Lim et&nbsp;al. (<a href="#ref-lim2008" role="doc-biblioref">2008</a>)</span> en tres artefactos habituales. La fidelidad no es una sola escala: un esquema puede ser tosco en apariencia y fiel en estructura y datos.
 </figcaption>
 </figure>
 </div>
 </section>
 <section id="para-qué-sirve-la-baja-fidelidad" class="level2">
 <h2 class="anchored" data-anchor-id="para-qué-sirve-la-baja-fidelidad">3. Para qué sirve la baja fidelidad</h2>
-<p>Buxton (2007) distingue entre <strong>bocetar</strong> y <strong>prototipar</strong>. El <a href="92-glosario.html#gl-boceto" class="glos" data-def="Dibujo rápido, barato y ambiguo que sirve para explorar y generar alternativas, no para especificar.">boceto</a> sirve para explorar y generar alternativas: es rápido, barato, desechable, abundante y ambiguo, y por eso invita a la discusión. El prototipo sirve para comprobar y refinar una idea concreta. Los esquemas y prototipos de baja fidelidad están a medio camino: conservan la rapidez del boceto y ya permiten probar.</p>
+<p><span class="citation" data-cites="buxton2007">Buxton (<a href="#ref-buxton2007" role="doc-biblioref">2007</a>)</span> distingue entre <strong>bocetar</strong> y <strong>prototipar</strong>. El <a href="92-glosario.html#gl-boceto" class="glos" data-def="Dibujo rápido, barato y ambiguo que sirve para explorar y generar alternativas, no para especificar.">boceto</a> sirve para explorar y generar alternativas: es rápido, barato, desechable, abundante y ambiguo, y por eso invita a la discusión. El prototipo sirve para comprobar y refinar una idea concreta. Los esquemas y prototipos de baja fidelidad están a medio camino: conservan la rapidez del boceto y ya permiten probar.</p>
 <p>Sus ventajas principales son:</p>
 <ul>
 <li><strong>Coste y velocidad.</strong> Se hacen en minutos y se cambian en segundos. Se pueden explorar varias alternativas en lugar de defender la primera.</li>
 <li><strong>Atención en lo importante.</strong> Sin colores ni tipografías, la conversación con el equipo y con los usuarios se centra en la estructura, el contenido y el flujo, y no en si el azul es el adecuado.</li>
 <li><strong>Críticas más sinceras.</strong> Un diseño que parece terminado intimida: la gente opina menos sobre algo que parece costoso de cambiar.</li>
-<li><strong>Detección temprana de problemas.</strong> Varios estudios han comparado prototipos de baja y alta fidelidad y encontraron que detectan un número similar de problemas de usabilidad (Virzi et al., 1996; Walker et al., 2002).</li>
+<li><strong>Detección temprana de problemas.</strong> Varios estudios han comparado prototipos de baja y alta fidelidad y encontraron que detectan un número similar de problemas de usabilidad [<span class="citation" data-cites="virzi1996">Virzi et&nbsp;al. (<a href="#ref-virzi1996" role="doc-biblioref">1996</a>)</span>; Walker et al., 2002).</li>
 </ul>
-<p>Y sus límites, que Rudd et al.&nbsp;(1996) resumen en su debate:</p>
+<p>Y sus límites, que <span class="citation" data-cites="rudd1996">Rudd et&nbsp;al. (<a href="#ref-rudd1996" role="doc-biblioref">1996</a>)</span> resumen en su debate:</p>
 <ul>
 <li>No sirven para evaluar el aspecto visual, la legibilidad final ni los tiempos de respuesta.</li>
 <li>Requieren un <a href="92-glosario.html#gl-facilitador" class="glos" data-def="Persona que dirige una sesión de prueba, lee las tareas y mantiene la neutralidad."><strong>facilitador</strong></a> que «haga de ordenador», lo que puede introducir sesgos.</li>
@@ -776,7 +801,7 @@ Figura&nbsp;2: Coste relativo de cambiar una decisión de diseño según la fase
 <li>La legibilidad final depende de decisiones visuales que la baja fidelidad deja fuera a propósito.</li>
 <li>El papel es qué hace el producto en la vida de la persona: justo lo que cuenta un <em>storyboard</em>.</li>
 <li>Los textos reales dan fidelidad de datos aunque el aspecto sea tosco.</li>
-<li>Es la conclusión de Virzi et al.&nbsp;(1996) y Walker et al.&nbsp;(2002).</li>
+<li>Es la conclusión de <span class="citation" data-cites="virzi1996">Virzi et&nbsp;al. (<a href="#ref-virzi1996" role="doc-biblioref">1996</a>)</span> y <span class="citation" data-cites="walker2002">Walker et&nbsp;al. (<a href="#ref-walker2002" role="doc-biblioref">2002</a>)</span>.</li>
 <li>La ambigüedad del boceto invita a discutir y a generar alternativas.</li>
 <li>Es un ciclo: se repite en cada iteración.</li>
 </ul>
@@ -826,6 +851,26 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-buxton2007" class="csl-entry" role="listitem">
+Buxton, W. (2007). <em><span>Sketching user experiences</span></em>. Elsevier.
+</div>
+<div id="ref-houde1997" class="csl-entry" role="listitem">
+Houde, S., y Hill, C. (1997). <span>What do prototypes prototype?</span> En <em><span>Handbook of Human-Computer Interaction</span></em> (pp. 367-381). Elsevier. <a href="https://doi.org/10.1016/B978-044481862-1.50082-0">https://doi.org/10.1016/B978-044481862-1.50082-0</a>
+</div>
+<div id="ref-lim2008" class="csl-entry" role="listitem">
+Lim, Y.-K., Stolterman, E., y Tenenberg, J. (2008). <span>The anatomy of prototypes</span>. <em>ACM Transactions on Computer-Human Interaction</em>, <em>15</em>(2), 1-27. <a href="https://doi.org/10.1145/1375761.1375762">https://doi.org/10.1145/1375761.1375762</a>
+</div>
+<div id="ref-rudd1996" class="csl-entry" role="listitem">
+Rudd, J., Stern, K., y Isensee, S. (1996). <span>Low vs. high-fidelity prototyping debate</span>. <em>Interactions</em>, <em>3</em>(1), 76-85. <a href="https://doi.org/10.1145/223500.223514">https://doi.org/10.1145/223500.223514</a>
+</div>
+<div id="ref-virzi1996" class="csl-entry" role="listitem">
+Virzi, R. A., Sokolov, J. L., y Karis, D. (1996). <span>Usability problem identification using both low- and high-fidelity prototypes</span>. En <em><span>CHI ’96</span></em> (pp. 236-243). ACM. <a href="https://doi.org/10.1145/238386.238516">https://doi.org/10.1145/238386.238516</a>
+</div>
+<div id="ref-walker2002" class="csl-entry" role="listitem">
+Walker, M., Takayama, L., y Landay, J. A. (2002). <span>High-fidelity or low-fidelity, paper or computer?</span> <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, <em>46</em>(5), 661-665. <a href="https://doi.org/10.1177/154193120204600513">https://doi.org/10.1177/154193120204600513</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

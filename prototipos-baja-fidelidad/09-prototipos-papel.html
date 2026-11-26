@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -457,6 +477,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./96-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -579,15 +604,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Virzi, R. A.; Sokolov, J. L.; Karis, D. (1996). <a href="https://doi.org/10.1145/238386.238516">Usability problem identification using both low- and high-fidelity prototypes</a>. En <em>CHI ’96</em> (pp.&nbsp;236-243). ACM. Los <a href="92-glosario.html#gl-prototipo" class="glos" data-def="Representación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo.">prototipos</a> en papel detectan problemas similares a los de alta <a href="92-glosario.html#gl-fidelidad" class="glos" data-def="Grado en que un prototipo se parece al producto final. Tiene varias dimensiones independientes: apariencia, datos, funcionalidad, interactividad y estructura espacial.">fidelidad</a>.</li>
-<li>Nielsen, J.; Landauer, T. K. (1993). <a href="https://doi.org/10.1145/169059.169166">A mathematical model of the finding of usability problems</a>. En <em>CHI ’93</em> (pp.&nbsp;206-213). ACM. El modelo detrás de la recomendación de probar con pocas personas y repetir.</li>
-<li>Nielsen Norman Group. <a href="https://www.nngroup.com/articles/paper-prototyping/">Paper prototyping: Getting user data before you code</a>. Guía práctica.</li>
+<li><span class="citation" data-cites="virzi1996">Virzi et&nbsp;al. (<a href="#ref-virzi1996" role="doc-biblioref">1996</a>)</span> — Los <a href="92-glosario.html#gl-prototipo" class="glos" data-def="Representación de un diseño que se construye para aprender algo sobre él antes de desarrollarlo.">prototipos</a> en papel detectan problemas similares a los de alta <a href="92-glosario.html#gl-fidelidad" class="glos" data-def="Grado en que un prototipo se parece al producto final. Tiene varias dimensiones independientes: apariencia, datos, funcionalidad, interactividad y estructura espacial.">fidelidad</a>.</li>
+<li><span class="citation" data-cites="nielsen1993">Nielsen y Landauer (<a href="#ref-nielsen1993" role="doc-biblioref">1993</a>)</span> — El modelo detrás de la recomendación de probar con pocas personas y repetir.</li>
+<li><span class="citation" data-cites="nielsennormangroupsfg">Nielsen Norman Group (<a href="#ref-nielsennormangroupsfg" role="doc-biblioref">s.&nbsp;f.</a>)</span></li>
 </ul>
 </section>
 </section>
 <section id="por-qué-probar-en-papel" class="level2">
 <h2 class="anchored" data-anchor-id="por-qué-probar-en-papel">1. Por qué probar en papel</h2>
-<p>Rettig (1994) defendía en «Prototyping for tiny fingers» que construir prototipos en papel permite probar un diseño <strong>antes de escribir una línea de código</strong>, con un coste tan bajo que se pueden hacer varias rondas en un día. Al ver que el prototipo es provisional, las personas critican con más libertad, y el equipo, al no haber invertido mucho, acepta mejor los cambios. Virzi et al.&nbsp;(1996) mostraron que los problemas de usabilidad detectados con prototipos de baja fidelidad son en gran parte los mismos que con alta fidelidad.</p>
+<p><span class="citation" data-cites="rettig1994">Rettig (<a href="#ref-rettig1994" role="doc-biblioref">1994</a>)</span> defendía en «Prototyping for tiny fingers» que construir prototipos en papel permite probar un diseño <strong>antes de escribir una línea de código</strong>, con un coste tan bajo que se pueden hacer varias rondas en un día. Al ver que el prototipo es provisional, las personas critican con más libertad, y el equipo, al no haber invertido mucho, acepta mejor los cambios. <span class="citation" data-cites="virzi1996">Virzi et&nbsp;al. (<a href="#ref-virzi1996" role="doc-biblioref">1996</a>)</span> mostraron que los problemas de usabilidad detectados con prototipos de baja fidelidad son en gran parte los mismos que con alta fidelidad.</p>
 </section>
 <section id="construir-el-prototipo" class="level2">
 <h2 class="anchored" data-anchor-id="construir-el-prototipo">2. Construir el prototipo</h2>
@@ -629,7 +654,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="planificar-la-sesión">4. Planificar la sesión</h2>
 <ol type="1">
 <li><strong>Objetivo</strong>: qué queremos averiguar (las hipótesis del Tema 3).</li>
-<li><strong>Participantes</strong>: personas que se parezcan a las usuarias reales. Nielsen y Landauer (1993) mostraron que con unas <strong>cinco</strong> personas aparecen la mayoría de los problemas más frecuentes, y que es más rentable hacer varias rondas pequeñas que una grande.</li>
+<li><strong>Participantes</strong>: personas que se parezcan a las usuarias reales. <span class="citation" data-cites="nielsen1993">Nielsen y Landauer (<a href="#ref-nielsen1993" role="doc-biblioref">1993</a>)</span> mostraron que con unas <strong>cinco</strong> personas aparecen la mayoría de los problemas más frecuentes, y que es más rentable hacer varias rondas pequeñas que una grande.</li>
 <li><a href="92-glosario.html#gl-escenario-tarea" class="glos" data-def="Situación realista que da un objetivo al participante sin decirle cómo conseguirlo."><strong>Escenarios de tarea</strong></a>: situaciones realistas que dan un objetivo sin decir cómo conseguirlo. Mal: «Pulsa en Reservas y elige la sala 3». Bien: «Mañana tienes que preparar un trabajo con dos compañeros por la tarde. Busca un sitio donde podáis hablar».</li>
 <li><strong>Guion</strong>: bienvenida y consentimiento, explicación de que se prueba el diseño y no a la persona, tareas, preguntas finales.</li>
 <li><strong>Registro</strong>: para cada tarea, si se completa, cuánto tarda (aproximado), errores y comentarios.</li>
@@ -864,6 +889,20 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC02IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-nielsen1993" class="csl-entry" role="listitem">
+Nielsen, J., y Landauer, T. K. (1993). <span>A mathematical model of the finding of usability problems</span>. En <em><span>CHI ’93</span></em> (pp. 206-213). ACM. <a href="https://doi.org/10.1145/169059.169166">https://doi.org/10.1145/169059.169166</a>
+</div>
+<div id="ref-nielsennormangroupsfg" class="csl-entry" role="listitem">
+Nielsen Norman Group. (s.&nbsp;f.). <em><span>Paper prototyping: Getting user data before you code</span></em>. Guía práctica. Recuperado <a href="https://www.nngroup.com/articles/paper-prototyping/">https://www.nngroup.com/articles/paper-prototyping/</a>
+</div>
+<div id="ref-rettig1994" class="csl-entry" role="listitem">
+Rettig, M. (1994). <span>Prototyping for tiny fingers</span>. <em>Communications of the ACM</em>, <em>37</em>(4), 21-27. <a href="https://doi.org/10.1145/175276.175288">https://doi.org/10.1145/175276.175288</a>
+</div>
+<div id="ref-virzi1996" class="csl-entry" role="listitem">
+Virzi, R. A., Sokolov, J. L., y Karis, D. (1996). <span>Usability problem identification using both low- and high-fidelity prototypes</span>. En <em><span>CHI ’96</span></em> (pp. 236-243). ACM. <a href="https://doi.org/10.1145/238386.238516">https://doi.org/10.1145/238386.238516</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

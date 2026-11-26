@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -419,6 +439,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./96-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -537,19 +562,19 @@ ul.task-list li input[type="checkbox"] {
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Rittel, H. W. J.; Webber, M. M. (1973). <a href="https://doi.org/10.1007/BF01405730">Dilemmas in a general theory of planning</a>. <em>Policy Sciences</em>, 4(2), 155-169. El texto que introdujo los «<a href="92-glosario.html#gl-retorcido" class="glos" data-def="Wicked problem. Problema sin formulación definitiva en el que entenderlo y resolverlo ocurren a la vez (Rittel y Webber, 1973).">problemas retorcidos</a>» (<em>wicked problems</em>).</li>
-<li>Goodwin, K. (2009). <em>Designing for the digital age</em>. Wiley. Capítulos sobre la definición de requisitos y objetivos (bibliografía complementaria de la asignatura).</li>
+<li><span class="citation" data-cites="rittel1973">Rittel y Webber (<a href="#ref-rittel1973" role="doc-biblioref">1973</a>)</span> — El texto que introdujo los «<a href="92-glosario.html#gl-retorcido" class="glos" data-def="Wicked problem. Problema sin formulación definitiva en el que entenderlo y resolverlo ocurren a la vez [@rittel1973].">problemas retorcidos</a>» (<em>wicked problems</em>).</li>
+<li><span class="citation" data-cites="goodwin2009">Goodwin (<a href="#ref-goodwin2009" role="doc-biblioref">2009</a>)</span> — Capítulos sobre la definición de requisitos y objetivos (bibliografía complementaria de la asignatura).</li>
 </ul>
 </section>
 </section>
 <section id="por-qué-definir-el-problema" class="level2">
 <h2 class="anchored" data-anchor-id="por-qué-definir-el-problema">1. Por qué definir el problema</h2>
 <p>Los equipos tienden a saltar a la solución: «hagamos una aplicación». Pero una solución solo es buena respecto a un problema, y la mayoría de los proyectos que fracasan resolvieron bien un problema equivocado. Definir el problema es convertir lo aprendido en la investigación (Tema 2) en un enunciado que todo el equipo comparta y que permita decidir qué entra y qué no.</p>
-<p>Rittel y Webber (1973) llamaron <strong>problemas retorcidos</strong> (<em>wicked problems</em>) a los que no tienen una formulación definitiva: entender el problema y diseñar la solución ocurren a la vez, y cada solución cambia el problema. Muchos problemas de diseño de interacción son así. Por eso el enunciado del problema es <strong>provisional</strong>: se revisa cuando la evidencia lo pide.</p>
+<p><span class="citation" data-cites="rittel1973">Rittel y Webber (<a href="#ref-rittel1973" role="doc-biblioref">1973</a>)</span> llamaron <strong>problemas retorcidos</strong> (<em>wicked problems</em>) a los que no tienen una formulación definitiva: entender el problema y diseñar la solución ocurren a la vez, y cada solución cambia el problema. Muchos problemas de diseño de interacción son así. Por eso el enunciado del problema es <strong>provisional</strong>: se revisa cuando la evidencia lo pide.</p>
 </section>
 <section id="encuadrar-el-problema" class="level2">
 <h2 class="anchored" data-anchor-id="encuadrar-el-problema">2. Encuadrar el problema</h2>
-<p>Dorst (2011) describe el núcleo del pensamiento de diseño como la creación de <a href="92-glosario.html#gl-encuadre" class="glos" data-def="Manera de mirar una situación que abre soluciones nuevas; según Dorst (2011), el núcleo del pensamiento de diseño."><strong>encuadres</strong></a> (<em>frames</em>): maneras nuevas de mirar una situación que abren soluciones que antes no se veían. En lugar de preguntar «¿cómo hacemos más rápida la reserva de salas?», un encuadre distinto pregunta «¿cómo hacemos que la gente sepa qué salas están libres sin tener que reservar?». El encuadre no sale de la nada: nace de entender los valores y las prácticas de las personas implicadas.</p>
+<p><span class="citation" data-cites="dorst2011">Dorst (<a href="#ref-dorst2011" role="doc-biblioref">2011</a>)</span> describe el núcleo del pensamiento de diseño como la creación de <a href="92-glosario.html#gl-encuadre" class="glos" data-def="Manera de mirar una situación que abre soluciones nuevas; según @dorst2011, el núcleo del pensamiento de diseño."><strong>encuadres</strong></a> (<em>frames</em>): maneras nuevas de mirar una situación que abren soluciones que antes no se veían. En lugar de preguntar «¿cómo hacemos más rápida la reserva de salas?», un encuadre distinto pregunta «¿cómo hacemos que la gente sepa qué salas están libres sin tener que reservar?». El encuadre no sale de la nada: nace de entender los valores y las prácticas de las personas implicadas.</p>
 </section>
 <section id="el-enunciado-del-problema" class="level2">
 <h2 class="anchored" data-anchor-id="el-enunciado-del-problema">3. El enunciado del problema</h2>
@@ -770,6 +795,17 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-dorst2011" class="csl-entry" role="listitem">
+Dorst, K. (2011). <span>The core of ’design thinking’ and its application</span>. <em>Design Studies</em>, <em>32</em>(6), 521-532. <a href="https://doi.org/10.1016/j.destud.2011.07.006">https://doi.org/10.1016/j.destud.2011.07.006</a>
+</div>
+<div id="ref-goodwin2009" class="csl-entry" role="listitem">
+Goodwin, K. (2009). <em><span>Designing for the digital age</span></em>. Wiley.
+</div>
+<div id="ref-rittel1973" class="csl-entry" role="listitem">
+Rittel, H. W. J., y Webber, M. M. (1973). <span>Dilemmas in a general theory of planning</span>. <em>Policy Sciences</em>, <em>4</em>(2), 155-169. <a href="https://doi.org/10.1007/BF01405730">https://doi.org/10.1007/BF01405730</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

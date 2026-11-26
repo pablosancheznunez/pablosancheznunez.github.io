@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -422,6 +442,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./96-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -540,8 +565,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Buxton, W. (2007). <em>Sketching user experiences</em>. Elsevier. Capítulos sobre los <a href="92-glosario.html#gl-boceto" class="glos" data-def="Dibujo rápido, barato y ambiguo que sirve para explorar y generar alternativas, no para especificar.">bocetos</a> en secuencia y los guiones visuales.</li>
-<li>Nielsen Norman Group. <a href="https://www.nngroup.com/articles/storyboards-visualize-ideas/">Storyboards help visualize UX ideas</a>. Guía práctica con ejemplos.</li>
+<li><span class="citation" data-cites="buxton2007">Buxton (<a href="#ref-buxton2007" role="doc-biblioref">2007</a>)</span> — Capítulos sobre los <a href="92-glosario.html#gl-boceto" class="glos" data-def="Dibujo rápido, barato y ambiguo que sirve para explorar y generar alternativas, no para especificar.">bocetos</a> en secuencia y los guiones visuales.</li>
+<li><span class="citation" data-cites="nielsennormangroupsfc">Nielsen Norman Group (<a href="#ref-nielsennormangroupsfc" role="doc-biblioref">s.&nbsp;f.</a>)</span></li>
 </ul>
 </section>
 </section>
@@ -623,7 +648,7 @@ Figura&nbsp;1: Un <em>storyboard</em> narrativo de cuatro viñetas: detonante, b
 <li><strong>Personas</strong>: un círculo y unas líneas; la emoción se dibuja con la boca y las cejas.</li>
 <li><strong>Pantallas</strong>: un rectángulo con los elementos clave, sin detalle.</li>
 <li><strong>Entornos</strong>: un par de objetos que lo sitúen (una mesa y una estantería son una biblioteca).</li>
-<li><a href="92-glosario.html#gl-encuadre" class="glos" data-def="Manera de mirar una situación que abre soluciones nuevas; según Dorst (2011), el núcleo del pensamiento de diseño."><strong>Encuadres</strong></a>: alternar planos generales (contexto) y primeros planos (la pantalla o la cara).</li>
+<li><a href="92-glosario.html#gl-encuadre" class="glos" data-def="Manera de mirar una situación que abre soluciones nuevas; según @dorst2011, el núcleo del pensamiento de diseño."><strong>Encuadres</strong></a>: alternar planos generales (contexto) y primeros planos (la pantalla o la cara).</li>
 </ul>
 </section>
 <section id="práctica" class="level2">
@@ -771,6 +796,14 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-buxton2007" class="csl-entry" role="listitem">
+Buxton, W. (2007). <em><span>Sketching user experiences</span></em>. Elsevier.
+</div>
+<div id="ref-nielsennormangroupsfc" class="csl-entry" role="listitem">
+Nielsen Norman Group. (s.&nbsp;f.). <em><span>Storyboards help visualize UX ideas</span></em>. Guía práctica con ejemplos. Recuperado <a href="https://www.nngroup.com/articles/storyboards-visualize-ideas/">https://www.nngroup.com/articles/storyboards-visualize-ideas/</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

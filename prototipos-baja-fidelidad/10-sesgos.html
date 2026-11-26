@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -454,6 +474,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./96-analisis-real.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Análisis de servicios reales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./90-uxlearn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Las funciones del libro</span></a>
   </div>
 </li>
@@ -574,15 +599,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Mathur, A.; Acar, G.; Friedman, M. J.; Lucherini, E.; Mayer, J.; Chetty, M.; Narayanan, A. (2019). <a href="https://doi.org/10.1145/3359183">Dark patterns at scale: Findings from a crawl of 11K shopping websites</a>. <em>Proceedings of the ACM on Human-Computer Interaction</em>, 3(CSCW), 1-32. Una medición sistemática en comercio electrónico.</li>
-<li>Tversky, A.; Kahneman, D. (1974). <a href="https://doi.org/10.1126/science.185.4157.1124">Judgment under uncertainty: Heuristics and biases</a>. <em>Science</em>, 185(4157), 1124-1131. El artículo que fundó el estudio de los sesgos.</li>
-<li>Comité Europeo de Protección de Datos (2023). <a href="https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-032022-deceptive-design-patterns-social-media_en">Directrices 03/2022 sobre patrones de diseño engañosos en interfaces de redes sociales</a>. Cómo los patrones engañosos afectan al consentimiento.</li>
+<li><span class="citation" data-cites="mathur2019">Mathur et&nbsp;al. (<a href="#ref-mathur2019" role="doc-biblioref">2019</a>)</span> — Una medición sistemática en comercio electrónico.</li>
+<li><span class="citation" data-cites="tversky1974">Tversky y Kahneman (<a href="#ref-tversky1974" role="doc-biblioref">1974</a>)</span> — El artículo que fundó el estudio de los sesgos.</li>
+<li><span class="citation" data-cites="comiteeuropeodeprote2023">Comité Europeo de Protección de Datos (<a href="#ref-comiteeuropeodeprote2023" role="doc-biblioref">2023</a>)</span> — Cómo los patrones engañosos afectan al consentimiento.</li>
 </ul>
 </section>
 </section>
 <section id="sesgos-cognitivos" class="level2">
 <h2 class="anchored" data-anchor-id="sesgos-cognitivos">1. Sesgos cognitivos</h2>
-<p>Tversky y Kahneman (1974) mostraron que, cuando decidimos con incertidumbre, usamos <a href="92-glosario.html#gl-heuristico" class="glos" data-def="Atajo mental para decidir con incertidumbre (Tversky y Kahneman, 1974). No confundir con las heurísticas de usabilidad."><strong>heurísticos</strong></a>: atajos mentales que suelen funcionar pero que producen errores sistemáticos, los <strong>sesgos</strong>. El diseño de interfaces influye en las decisiones aunque no lo pretenda. Algunos sesgos especialmente relevantes:</p>
+<p><span class="citation" data-cites="tversky1974">Tversky y Kahneman (<a href="#ref-tversky1974" role="doc-biblioref">1974</a>)</span> mostraron que, cuando decidimos con incertidumbre, usamos <a href="92-glosario.html#gl-heuristico" class="glos" data-def="Atajo mental para decidir con incertidumbre [@tversky1974]. No confundir con las heurísticas de usabilidad."><strong>heurísticos</strong></a>: atajos mentales que suelen funcionar pero que producen errores sistemáticos, los <strong>sesgos</strong>. El diseño de interfaces influye en las decisiones aunque no lo pretenda. Algunos sesgos especialmente relevantes:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -603,7 +628,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>Casilla del boletín premarcada</td>
 </tr>
 <tr class="odd">
-<td><a href="92-glosario.html#gl-encuadre" class="glos" data-def="Manera de mirar una situación que abre soluciones nuevas; según Dorst (2011), el núcleo del pensamiento de diseño."><strong>Encuadre</strong></a></td>
+<td><a href="92-glosario.html#gl-encuadre" class="glos" data-def="Manera de mirar una situación que abre soluciones nuevas; según @dorst2011, el núcleo del pensamiento de diseño."><strong>Encuadre</strong></a></td>
 <td>La misma información se valora distinto según cómo se presente</td>
 <td>«95 % de éxito» frente a «5 % de fracaso»</td>
 </tr>
@@ -628,7 +653,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="patrones-engañosos" class="level2">
 <h2 class="anchored" data-anchor-id="patrones-engañosos">3. Patrones engañosos</h2>
 <p>El término <strong><em>dark patterns</em></strong> lo acuñó Harry Brignull en 2010; hoy él mismo y buena parte de la literatura prefieren hablar de <strong>diseño engañoso</strong> (<em>deceptive design</em>). Son soluciones de interfaz que engañan, presionan o dificultan decidir libremente.</p>
-<p>Gray et al.&nbsp;(2018) analizaron ejemplos recogidos por profesionales y propusieron cinco <strong>estrategias</strong>:</p>
+<p><span class="citation" data-cites="gray2018">Gray et&nbsp;al. (<a href="#ref-gray2018" role="doc-biblioref">2018</a>)</span> analizaron ejemplos recogidos por profesionales y propusieron cinco <strong>estrategias</strong>:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -663,7 +688,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>Mathur et al.&nbsp;(2019) rastrearon unas 11.000 webs de comercio y encontraron patrones de <strong>urgencia</strong> (contadores), <strong>escasez</strong> («quedan dos»), <strong>prueba social</strong>, <strong>desvío</strong> (<em>misdirection</em>), además de ocultación, obstrucción y acción forzada. Hallaron algunos de esos mensajes generados de forma engañosa, sin relación con datos reales.</p>
+<p><span class="citation" data-cites="mathur2019">Mathur et&nbsp;al. (<a href="#ref-mathur2019" role="doc-biblioref">2019</a>)</span> rastrearon unas 11.000 webs de comercio y encontraron patrones de <strong>urgencia</strong> (contadores), <strong>escasez</strong> («quedan dos»), <strong>prueba social</strong>, <strong>desvío</strong> (<em>misdirection</em>), además de ocultación, obstrucción y acción forzada. Hallaron algunos de esos mensajes generados de forma engañosa, sin relación con datos reales.</p>
 </section>
 <section id="responsabilidad-y-marco-legal" class="level2">
 <h2 class="anchored" data-anchor-id="responsabilidad-y-marco-legal">4. Responsabilidad y marco legal</h2>
@@ -677,7 +702,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="práctica-en-r-dos-taxonomías" class="level2">
 <h2 class="anchored" data-anchor-id="práctica-en-r-dos-taxonomías">Práctica en R: dos taxonomías</h2>
-<p><code>patrones_enganosos</code> reúne las categorías de Gray et al.&nbsp;(2018) y Mathur et al.&nbsp;(2019), con un ejemplo inventado de cada una.</p>
+<p><code>patrones_enganosos</code> reúne las categorías de <span class="citation" data-cites="gray2018">Gray et&nbsp;al. (<a href="#ref-gray2018" role="doc-biblioref">2018</a>)</span> y <span class="citation" data-cites="mathur2019">Mathur et&nbsp;al. (<a href="#ref-mathur2019" role="doc-biblioref">2019</a>)</span>, con un ejemplo inventado de cada una.</p>
 <div>
 <div id="webr-1" class="exercise-cell">
 
@@ -749,7 +774,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQx
 <h2 class="anchored" data-anchor-id="actividades">Actividades</h2>
 <div class="ia ia-zonas" id="ia-t10-pago"><script type="application/json" class="ia-datos">{"alt":"Pantalla «Finalizar compra» de una tienda: dirección de envío, una casilla marcada para añadir un seguro de envío de 4,99 euros, un aviso amarillo de que la oferta termina en 04:59, un resumen del pedido con un total de 29,99 euros, un aviso rojo de que solo quedan 2 unidades, un botón verde «Pagar 29,99 €» y, debajo, un enlace pequeño «No, gracias, prefiero pagar más».","enunciado":"<p>Esta pantalla esconde <strong>cinco<\/strong> patrones engañosos.\nSeñálalos y comprueba.<\/p>","explicacion":"","imagen":"figuras/t10_pago.svg","tipo":"zonas","titulo":"Encuentra los patrones engañosos","zonas":[{"correcta":false,"descripcion":"Dirección de envío","explicacion":"Información necesaria y editable.","h":20,"w":52,"x":5,"y":23},{"correcta":true,"descripcion":"Casilla «Añadir seguro de envío»","explicacion":"Casilla premarcada: añade un coste sin una decisión activa\n(<em>sneaking<\/em>).","h":8,"w":52,"x":5,"y":47},{"correcta":true,"descripcion":"Cuenta atrás de la oferta","explicacion":"Urgencia artificial si el contador se reinicia o no corresponde a una\noferta real.","h":8,"w":52,"x":5,"y":59},{"correcta":true,"descripcion":"Resumen del pedido","explicacion":"Coste oculto: el total suma 4,99 € del seguro, que no aparece\ndesglosado.","h":32,"w":33,"x":62,"y":23},{"correcta":true,"descripcion":"«¡Solo quedan 2 unidades!»","explicacion":"Escasez fabricada si no refleja el inventario real.","h":8,"w":33,"x":62,"y":59},{"correcta":false,"descripcion":"Botón «Pagar 29,99 €»","explicacion":"Acción principal clara.","h":10,"w":40,"x":30,"y":74},{"correcta":true,"descripcion":"Enlace «No, gracias, prefiero pagar más»","explicacion":"<em>Confirmshaming<\/em>: avergüenza a quien rechaza la oferta.","h":6,"w":40,"x":30,"y":88}]}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 <div class="ia ia-clasificar" id="ia-t10-sesgos"><script type="application/json" class="ia-datos">{"categorias":["Anclaje","Efecto de los valores por defecto","Aversión a la pérdida","Prueba social","Efecto señuelo"],"enunciado":"","explicacion":"","items":[{"categoria":"Anclaje","explicacion":"","texto":"Mostrar primero un precio tachado de 99 € junto al real de 49 €"},{"categoria":"Efecto de los valores por defecto","explicacion":"","texto":"Dejar marcada la suscripción al boletín"},{"categoria":"Aversión a la pérdida","explicacion":"","texto":"«Si te vas ahora, perderás tus puntos»"},{"categoria":"Prueba social","explicacion":"","texto":"«1200 personas han reservado esta semana»"},{"categoria":"Efecto señuelo","explicacion":"","texto":"Ofrecer un plan intermedio poco atractivo para que el más caro\nparezca razonable"}],"tipo":"clasificar","titulo":"¿Qué sesgo cognitivo se aprovecha?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
-<div class="ia ia-clasificar" id="ia-t10-gray"><script type="application/json" class="ia-datos">{"categorias":["Insistencia","Obstrucción","Ocultación","Interferencia en la interfaz","Acción forzada"],"enunciado":"","explicacion":"","items":[{"categoria":"Insistencia","explicacion":"","texto":"Una ventana pide activar las notificaciones cada vez que abres la\naplicación"},{"categoria":"Obstrucción","explicacion":"","texto":"Darse de alta cuesta un clic; darse de baja exige llamar por\nteléfono"},{"categoria":"Ocultación","explicacion":"","texto":"Se añade un producto a la cesta sin que lo pidas"},{"categoria":"Interferencia en la interfaz","explicacion":"","texto":"El botón «Aceptar todo» es grande y verde; «Rechazar», un enlace\ngris"},{"categoria":"Acción forzada","explicacion":"","texto":"Para descargar un documento te obligan a crear una cuenta"}],"tipo":"clasificar","titulo":"¿Qué estrategia de Gray et al. (2018) es?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-t10-gray"><script type="application/json" class="ia-datos">{"categorias":["Insistencia","Obstrucción","Ocultación","Interferencia en la interfaz","Acción forzada"],"enunciado":"","explicacion":"","items":[{"categoria":"Insistencia","explicacion":"","texto":"Una ventana pide activar las notificaciones cada vez que abres la\naplicación"},{"categoria":"Obstrucción","explicacion":"","texto":"Darse de alta cuesta un clic; darse de baja exige llamar por\nteléfono"},{"categoria":"Ocultación","explicacion":"","texto":"Se añade un producto a la cesta sin que lo pidas"},{"categoria":"Interferencia en la interfaz","explicacion":"","texto":"El botón «Aceptar todo» es grande y verde; «Rechazar», un enlace\ngris"},{"categoria":"Acción forzada","explicacion":"","texto":"Para descargar un documento te obligan a crear una cuenta"}],"tipo":"clasificar","titulo":"¿Qué estrategia de @gray2018 es?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
 </section>
 <section id="reto-t10" class="level2">
 <h2 class="anchored" data-anchor-id="reto-t10">Reto evaluable</h2>
@@ -796,7 +821,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6InQx
 <ul>
 <li>Tendemos a dejar lo que viene marcado.</li>
 <li>Hacer difícil lo que interesa a la persona es obstrucción.</li>
-<li>Es urgencia falsa, documentada por Mathur et al.&nbsp;(2019).</li>
+<li>Es urgencia falsa, documentada por <span class="citation" data-cites="mathur2019">Mathur et&nbsp;al. (<a href="#ref-mathur2019" role="doc-biblioref">2019</a>)</span>.</li>
 <li>Más bien de la presión por métricas de negocio; por eso importa saber argumentar.</li>
 <li>Es el art. 25 del Reglamento de Servicios Digitales.</li>
 <li>La primera cifra sirve de ancla para valorar las demás.</li>
@@ -847,6 +872,20 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0zIiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9mdW5jaW9uZXNfdXguUiJd
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-comiteeuropeodeprote2023" class="csl-entry" role="listitem">
+Comité Europeo de Protección de Datos. (2023). <em><span>Directrices 03/2022 sobre patrones de diseño engañosos en interfaces de redes sociales</span></em>. <a href="https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-032022-deceptive-design-patterns-social-media_en">https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-032022-deceptive-design-patterns-social-media_en</a>
+</div>
+<div id="ref-gray2018" class="csl-entry" role="listitem">
+Gray, C. M., Kou, Y., Battles, B., Hoggatt, J., y Toombs, A. L. (2018). <span>The dark (patterns) side of UX design</span>. En <em><span>Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems</span></em> (pp. 1-14). ACM. <a href="https://doi.org/10.1145/3173574.3174108">https://doi.org/10.1145/3173574.3174108</a>
+</div>
+<div id="ref-mathur2019" class="csl-entry" role="listitem">
+Mathur, A., Acar, G., Friedman, M. J., Lucherini, E., Mayer, J., Chetty, M., y Narayanan, A. (2019). <span>Dark patterns at scale: Findings from a crawl of 11K shopping websites</span>. <em>Proceedings of the ACM on Human-Computer Interaction</em>, <em>3</em>(CSCW), 1-32. <a href="https://doi.org/10.1145/3359183">https://doi.org/10.1145/3359183</a>
+</div>
+<div id="ref-tversky1974" class="csl-entry" role="listitem">
+Tversky, A., y Kahneman, D. (1974). <span>Judgment under uncertainty: Heuristics and biases</span>. <em>Science</em>, <em>185</em>(4157), 1124-1131. <a href="https://doi.org/10.1126/science.185.4157.1124">https://doi.org/10.1126/science.185.4157.1124</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
