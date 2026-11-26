@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -456,15 +476,22 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="recommendations">Recommendations</h2>
 <ul>
 <li>Work with the students’ own texts as early as possible.</li>
-<li>Normalise the difficulty: most researchers are non-native speakers (Amano et al., 2023), and clarity matters more than accent.</li>
+<li>Normalise the difficulty: most researchers are non-native speakers <span class="citation" data-cites="amano2023">(<a href="#ref-amano2023" role="doc-biblioref">Amano et al., 2023</a>)</span>, and clarity matters more than accent.</li>
 <li>Discuss the responsible use of language tools and AI assistants, and the journals’ disclosure policies.</li>
 </ul>
 </section>
 <section id="moodle-and-slides" class="level2">
 <h2 class="anchored" data-anchor-id="moodle-and-slides">Moodle and slides</h2>
-<p>The questions are exported to <strong>Moodle XML</strong> in <code>moodle/</code>. Slides for each chapter are in <a href="diapositivas/index.html" target="_blank">diapositivas/</a>.</p>
+<p>The questions are exported to <strong>Moodle XML</strong> (<em>Question bank → Import → Moodle XML format</em>); each question keeps its explanation as general feedback.</p>
+<p><strong>Download the question bank:</strong> <a href="moodle/autoevaluacion_todo.xml">whole book</a> · by chapter: <a href="moodle/autoevaluacion_01_structure.xml">01</a> · <a href="moodle/autoevaluacion_02_clarity.xml">02</a> · <a href="moodle/autoevaluacion_03_stance.xml">03</a> · <a href="moodle/autoevaluacion_04_errors.xml">04</a> · <a href="moodle/autoevaluacion_05_review.xml">05</a> · <a href="moodle/autoevaluacion_06_presenting.xml">06</a></p>
+<p>Slides for each chapter are in <a href="diapositivas/index.html" target="_blank">diapositivas/</a>.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-amano2023" class="csl-entry" role="listitem">
+Amano, T., Ramírez-Castañeda, V., Berdejo-Espinola, V., Borokini, I., Chowdhury, S., Golivets, M., et al. (2023). <span class="nocase">The manifold costs of being a non-native English speaker in science</span>. <em>PLOS Biology</em>, <em>21</em>(7), e3002184. <a href="https://doi.org/10.1371/journal.pbio.3002184">https://doi.org/10.1371/journal.pbio.3002184</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

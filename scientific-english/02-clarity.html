@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -518,7 +538,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="scientific-texts-are-getting-harder-to-read" class="level2">
 <h2 class="anchored" data-anchor-id="scientific-texts-are-getting-harder-to-read">1. Scientific texts are getting harder to read</h2>
-<p>Plavén-Sigray et al.&nbsp;(2017) analysed more than 700,000 abstracts from biomedical and life-science journals published between 1881 and 2015. Readability, measured with standard formulas, <strong>decreased steadily</strong>, partly because of more general scientific jargon (“robust”, “underlying”, “novel”) and longer sentences. Hard-to-read texts reduce the reach and the reproducibility of research: a method that cannot be understood cannot be repeated.</p>
+<p><span class="citation" data-cites="plavensigray2017">Plavén-Sigray et al. (<a href="#ref-plavensigray2017" role="doc-biblioref">2017</a>)</span> analysed more than 700,000 abstracts from biomedical and life-science journals published between 1881 and 2015. Readability, measured with standard formulas, <strong>decreased steadily</strong>, partly because of more general scientific jargon (“robust”, “underlying”, “novel”) and longer sentences. Hard-to-read texts reduce the reach and the reproducibility of research: a method that cannot be understood cannot be repeated.</p>
 </section>
 <section id="readers-expectations" class="level2">
 <h2 class="anchored" data-anchor-id="readers-expectations">2. Readers’ expectations</h2>
@@ -692,7 +712,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Answer all the questions and press <strong>Show answers</strong>. It does not count towards your grade.</p>
 <div class="webex-check webex-box">
 <ol type="1">
-<li>Plavén-Sigray et al.&nbsp;(2017) found that the readability of scientific abstracts has <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">increased</option><option value="answer">decreased</option><option value="x">not changed</option></select> over time</li>
+<li><span class="citation" data-cites="plavensigray2017">Plavén-Sigray et al. (<a href="#ref-plavensigray2017" role="doc-biblioref">2017</a>)</span> found that the readability of scientific abstracts has <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">increased</option><option value="answer">decreased</option><option value="x">not changed</option></select> over time</li>
 <li>New, important information should go in the <input class="webex-solveme nospaces ignorecase" size="8" aria-label="Type your answer" data-answer="[&quot;stress&quot;]"> position at the end of the sentence</li>
 <li>“We performed an analysis of the data” contains a nominalisation. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="answer">TRUE</option><option value="x">FALSE</option></select></li>
 <li>The <a href="92-glosario.html#gl-passive" class="glos" data-def="Construction in which the subject receives the action (samples were stored).">passive voice</a> should never be used in scientific writing. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">TRUE</option><option value="answer">FALSE</option></select></li>
@@ -718,6 +738,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-plavensigray2017" class="csl-entry" role="listitem">
+Plavén-Sigray, P., Matheson, G. J., Schiffler, B. C., &amp; Thompson, W. H. (2017). <span class="nocase">The readability of scientific texts is decreasing over time</span>. <em>eLife</em>, <em>6</em>, e27725. <a href="https://doi.org/10.7554/eLife.27725">https://doi.org/10.7554/eLife.27725</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -484,7 +504,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="one-paper-one-message" class="level2">
 <h2 class="anchored" data-anchor-id="one-paper-one-message">1. One paper, one message</h2>
-<p>Mensh and Kording (2017) start with the most important rule: <strong>focus your paper on a single central contribution</strong>, which you can state in the title. Everything else serves that message. If you cannot write it in one sentence, the paper is not ready to be written.</p>
+<p><span class="citation" data-cites="mensh2017">Mensh &amp; Kording (<a href="#ref-mensh2017" role="doc-biblioref">2017</a>)</span> start with the most important rule: <strong>focus your paper on a single central contribution</strong>, which you can state in the title. Everything else serves that message. If you cannot write it in one sentence, the paper is not ready to be written.</p>
 <p>They also recommend writing for the <strong>naive human reader</strong>: someone intelligent but outside your sub-field, who reads quickly and remembers little. Short sentences, defined terms and a logical flow help experts too.</p>
 </section>
 <section id="imrad" class="level2">
@@ -525,7 +545,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Mensh and Kording suggest a <a href="92-glosario.html#gl-ccc" class="glos" data-def="Scheme for papers, sections and paragraphs recommended by Mensh and Kording (2017)."><strong>context-content-conclusion</strong></a> scheme at every level: the paper, each section and each paragraph start by giving context, present the content and end with a conclusion. The first sentence of a paragraph should announce its message; the last should close it.</p>
+<p>Mensh and Kording suggest a <a href="92-glosario.html#gl-ccc" class="glos" data-def="Scheme for papers, sections and paragraphs recommended by @mensh2017."><strong>context-content-conclusion</strong></a> scheme at every level: the paper, each section and each paragraph start by giving context, present the content and end with a conclusion. The first sentence of a paragraph should announce its message; the last should close it.</p>
 <div id="fig-e1-hourglass" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Hourglass diagram. The top is wide: the introduction moves from the general field to a specific gap and aim. The narrow middle contains methods and results. The bottom widens again: the discussion moves from the specific findings to their implications for the field.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-e1-hourglass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -617,7 +637,7 @@ Figure&nbsp;1: The hourglass shape of a research article: broad context, a narro
 <p>Answer all the questions and press <strong>Show answers</strong>. It does not count towards your grade.</p>
 <div class="webex-check webex-box">
 <ol type="1">
-<li>According to Mensh and Kording (2017), a paper should focus on <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">as many contributions as possible</option><option value="answer">a single central contribution</option><option value="x">the methods</option></select></li>
+<li>According to <span class="citation" data-cites="mensh2017">Mensh &amp; Kording (<a href="#ref-mensh2017" role="doc-biblioref">2017</a>)</span>, a paper should focus on <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">as many contributions as possible</option><option value="answer">a single central contribution</option><option value="x">the methods</option></select></li>
 <li>In the <a href="92-glosario.html#gl-cars" class="glos" data-def="Swales's Create a Research Space model of introductions: territory, niche, occupation.">CARS model</a>, showing a gap in the literature is “establishing a <input class="webex-solveme nospaces ignorecase" size="7" aria-label="Type your answer" data-answer="[&quot;niche&quot;]">”</li>
 <li>The Methods section is usually written in the past tense. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="answer">TRUE</option><option value="x">FALSE</option></select></li>
 <li>A good abstract should include the main results with numbers. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="answer">TRUE</option><option value="x">FALSE</option></select></li>
@@ -643,6 +663,11 @@ Figure&nbsp;1: The hourglass shape of a research article: broad context, a narro
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-mensh2017" class="csl-entry" role="listitem">
+Mensh, B., &amp; Kording, K. (2017). <span class="nocase">Ten simple rules for structuring papers</span>. <em>PLOS Computational Biology</em>, <em>13</em>(9), e1005619. <a href="https://doi.org/10.1371/journal.pcbi.1005619">https://doi.org/10.1371/journal.pcbi.1005619</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
