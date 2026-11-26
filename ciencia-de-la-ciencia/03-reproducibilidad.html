@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -566,13 +586,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lectura-obligatoria" class="level2">
 <h2 class="anchored" data-anchor-id="lectura-obligatoria">Lectura obligatoria</h2>
 <div class="lectura">
-<p>Open Science Collaboration (2015). <a href="https://doi.org/10.1126/science.aac4716">Estimating the reproducibility of psychological science</a>. <em>Science</em>, 349(6251), aac4716.</p>
+<ol class="example" type="1">
+<li><a href="https://doi.org/10.1126/science.aac4716">Estimating the reproducibility of psychological science</a>. <em>Science</em>, 349(6251), aac4716.</li>
+</ol>
 </div>
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Ioannidis, J. P. A. (2005). <a href="https://doi.org/10.1371/journal.pmed.0020124">Why most published research findings are false</a>. <em>PLoS Medicine</em>, 2(8), e124.</li>
-<li>Button, K. S.; Ioannidis, J. P. A.; Mokrysz, C.; Nosek, B. A.; Flint, J.; Robinson, E. S. J.; Munafò, M. R. (2013). <a href="https://doi.org/10.1038/nrn3475">Power failure: Why small sample size undermines the reliability of neuroscience</a>. <em>Nature Reviews Neuroscience</em>, 14(5), 365-376.</li>
+<li><span class="citation" data-cites="ioannidis2005">Ioannidis (<a href="#ref-ioannidis2005" role="doc-biblioref">2005</a>)</span></li>
+<li><span class="citation" data-cites="button2013">Button et&nbsp;al. (<a href="#ref-button2013" role="doc-biblioref">2013</a>)</span></li>
 </ul>
 </section>
 </section>
@@ -631,7 +653,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="por-qué-tantos-resultados-no-se-replican" class="level2">
 <h2 class="anchored" data-anchor-id="por-qué-tantos-resultados-no-se-replican">3. Por qué tantos resultados no se replican</h2>
-<p>Ioannidis (2005) mostró con un modelo sencillo que la probabilidad de que un resultado significativo sea verdadero, el <a href="92-glosario.html#gl-vpp" class="glos" data-def="Probabilidad de que un resultado significativo corresponda a un efecto real."><strong>valor predictivo positivo</strong></a> (VPP), depende de tres cosas:</p>
+<p><span class="citation" data-cites="ioannidis2005">Ioannidis (<a href="#ref-ioannidis2005" role="doc-biblioref">2005</a>)</span> mostró con un modelo sencillo que la probabilidad de que un resultado significativo sea verdadero, el <a href="92-glosario.html#gl-vpp" class="glos" data-def="Probabilidad de que un resultado significativo corresponda a un efecto real."><strong>valor predictivo positivo</strong></a> (VPP), depende de tres cosas:</p>
 <ul>
 <li>La <strong>probabilidad previa</strong> de que la hipótesis sea cierta (expresada como razón <em>R</em> entre hipótesis verdaderas y falsas que se ponen a prueba).</li>
 <li>La <strong>potencia</strong> del estudio (1 − β): la probabilidad de detectar el efecto si existe.</li>
@@ -641,7 +663,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>VPP = (1 − β) · R / [ (1 − β) · R + α ]</p>
 </div>
 <p>Con hipótesis arriesgadas (R bajo) y estudios con poca potencia, la mayoría de los «hallazgos» significativos pueden ser falsos aunque nadie haga trampas. Si además hay <strong>sesgo</strong> (prácticas que convierten resultados nulos en significativos, capítulo 4), el VPP baja todavía más.</p>
-<p>Button et al.&nbsp;(2013) estimaron que la potencia mediana de los estudios de neurociencia rondaba el <strong>21 %</strong>. La poca potencia tiene un segundo efecto, la <a href="92-glosario.html#gl-ganador" class="glos" data-def="Tendencia de los estudios pequeños que resultan significativos a sobrestimar el tamaño del efecto."><strong>maldición del ganador</strong></a>: cuando un estudio pequeño sale significativo, lo hace casi siempre porque sobrestimó el efecto; por eso las replicaciones encuentran efectos más pequeños.</p>
+<p><span class="citation" data-cites="button2013">Button et&nbsp;al. (<a href="#ref-button2013" role="doc-biblioref">2013</a>)</span> estimaron que la potencia mediana de los estudios de neurociencia rondaba el <strong>21 %</strong>. La poca potencia tiene un segundo efecto, la <a href="92-glosario.html#gl-ganador" class="glos" data-def="Tendencia de los estudios pequeños que resultan significativos a sobrestimar el tamaño del efecto."><strong>maldición del ganador</strong></a>: cuando un estudio pequeño sale significativo, lo hace casi siempre porque sobrestimó el efecto; por eso las replicaciones encuentran efectos más pequeños.</p>
 </section>
 <section id="lab-c3-vpp" class="level2">
 <h2 class="anchored" data-anchor-id="lab-c3-vpp">4. Laboratorio: ¿cuánto te fías de un resultado significativo?</h2>
@@ -851,11 +873,11 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImMz
 <div class="webex-check webex-box">
 <ol type="1">
 <li>Obtener los mismos resultados con los mismos datos y el mismo código es <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">replicabilidad</option><option value="answer">reproducibilidad computacional</option><option value="x">robustez</option></select></li>
-<li>¿Qué porcentaje aproximado de replicaciones fue significativo en el proyecto de la Open Science Collaboration (2015)? <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">10 %</option><option value="answer">36 %</option><option value="x">70 %</option><option value="x">97 %</option></select></li>
+<li>¿Qué porcentaje aproximado de replicaciones fue significativo en el proyecto de la 1? <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">10 %</option><option value="answer">36 %</option><option value="x">70 %</option><option value="x">97 %</option></select></li>
 <li>Una sola replicación fallida demuestra que el estudio original era fraudulento. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>Si la potencia baja, el valor predictivo positivo de un resultado significativo <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">sube</option><option value="answer">baja</option><option value="x">no cambia</option></select></li>
 <li>Que los estudios pequeños significativos sobrestimen el efecto se conoce como la maldición del <input class="webex-solveme nospaces ignorecase" size="9" aria-label="Escribe tu respuesta" data-answer="[&quot;ganador&quot;]"></li>
-<li>Según Button et al.&nbsp;(2013), la potencia mediana en neurociencia rondaba el <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">5 %</option><option value="answer">21 %</option><option value="x">50 %</option><option value="x">80 %</option></select></li>
+<li>Según <span class="citation" data-cites="button2013">Button et&nbsp;al. (<a href="#ref-button2013" role="doc-biblioref">2013</a>)</span>, la potencia mediana en neurociencia rondaba el <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">5 %</option><option value="answer">21 %</option><option value="x">50 %</option><option value="x">80 %</option></select></li>
 <li>El VPP depende de la probabilidad previa de que la hipótesis sea cierta. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>¿Por qué los tamaños del efecto de las replicaciones suelen ser menores?</li>
 </ol>
@@ -918,6 +940,14 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC02IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9tZXRhY2llbmNpYV9vcGVuYWxleC5qc29uIl0=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-button2013" class="csl-entry" role="listitem">
+Button, K. S., Ioannidis, J. P. A., Mokrysz, C., Nosek, B. A., Flint, J., Robinson, E. S. J., y Munafò, M. R. (2013). <span>Power failure: Why small sample size undermines the reliability of neuroscience</span>. <em>Nature Reviews Neuroscience</em>, <em>14</em>(5), 365-376. <a href="https://doi.org/10.1038/nrn3475">https://doi.org/10.1038/nrn3475</a>
+</div>
+<div id="ref-ioannidis2005" class="csl-entry" role="listitem">
+Ioannidis, J. P. A. (2005). <span>Why most published research findings are false</span>. <em>PLoS Medicine</em>, <em>2</em>(8), e124. <a href="https://doi.org/10.1371/journal.pmed.0020124">https://doi.org/10.1371/journal.pmed.0020124</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

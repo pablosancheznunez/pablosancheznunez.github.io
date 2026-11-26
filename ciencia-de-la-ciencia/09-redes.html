@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -571,7 +591,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lectura-complementaria" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lectura-complementaria">Lectura complementaria</h3>
 <ul>
-<li>van Eck, N. J.; Waltman, L. (2010). <a href="https://doi.org/10.1007/s11192-009-0146-3">Software survey: VOSviewer, a computer program for bibliometric mapping</a>. <em>Scientometrics</em>, 84(2), 523-538.</li>
+<li>1</li>
 </ul>
 </section>
 </section>
@@ -629,7 +649,7 @@ Figura&nbsp;1: La cocitación une documentos citados juntos; el acoplamiento une
 </figcaption>
 </figure>
 </div>
-<p>Boyack y Klavans (2010) compararon los tres enfoques basados en citas con más de dos millones de artículos biomédicos. Encontraron que el <strong>acoplamiento bibliográfico</strong> delimitaba los frentes de investigación con algo más de <a href="92-glosario.html#gl-precision" class="glos" data-def="Proporción de aciertos entre lo marcado (precisión) y entre lo existente (exhaustividad).">precisión</a> que la cocitación, y que la citación directa era la menos precisa en ventanas cortas; los enfoques híbridos que combinan citas y texto mejoraban los resultados.</p>
+<p><span class="citation" data-cites="boyack2010">Boyack y Klavans (<a href="#ref-boyack2010" role="doc-biblioref">2010</a>)</span> compararon los tres enfoques basados en citas con más de dos millones de artículos biomédicos. Encontraron que el <strong>acoplamiento bibliográfico</strong> delimitaba los frentes de investigación con algo más de <a href="92-glosario.html#gl-precision" class="glos" data-def="Proporción de aciertos entre lo marcado (precisión) y entre lo existente (exhaustividad).">precisión</a> que la cocitación, y que la citación directa era la menos precisa en ventanas cortas; los enfoques híbridos que combinan citas y texto mejoraban los resultados.</p>
 </section>
 <section id="medidas-básicas" class="level2">
 <h2 class="anchored" data-anchor-id="medidas-básicas">2. Medidas básicas</h2>
@@ -644,7 +664,7 @@ Figura&nbsp;1: La cocitación une documentos citados juntos; el acoplamiento une
 </section>
 <section id="mapas-de-la-ciencia" class="level2">
 <h2 class="anchored" data-anchor-id="mapas-de-la-ciencia">3. Mapas de la ciencia</h2>
-<p>Herramientas como <strong>VOSviewer</strong> (van Eck y Waltman, 2010), CiteSpace, bibliometrix (R) o Gephi convierten las redes en mapas. Al leerlos, recuerda que:</p>
+<p>Herramientas como <strong>VOSviewer</strong> <span class="citation" data-cites="vaneck2010">(<a href="#ref-vaneck2010" role="doc-biblioref">Eck y Waltman, 2010</a>)</span>, CiteSpace, bibliometrix (R) o Gephi convierten las redes en mapas. Al leerlos, recuerda que:</p>
 <ul>
 <li>La <strong>posición</strong> refleja similitud, pero la distancia exacta depende del algoritmo y de sus parámetros.</li>
 <li>Los <strong>umbrales</strong> (mínimo de citas o de coocurrencias) cambian qué aparece; documenta y prueba varios.</li>
@@ -754,7 +774,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM5
 <ol type="1">
 <li>Dos documentos están acoplados bibliográficamente cuando <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">uno cita al otro</option><option value="answer">comparten referencias</option><option value="x">son citados juntos por un tercero</option></select></li>
 <li>Dos documentos citados juntos en la bibliografía de un tercero están <input class="webex-solveme nospaces ignorecase" size="11" aria-label="Escribe tu respuesta" data-answer="[&quot;cocitados&quot;]"></li>
-<li>Según Boyack y Klavans (2010), la citación directa fue el enfoque más preciso para delimitar frentes de investigación. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
+<li>Según <span class="citation" data-cites="boyack2010">Boyack y Klavans (<a href="#ref-boyack2010" role="doc-biblioref">2010</a>)</span>, la citación directa fue el enfoque más preciso para delimitar frentes de investigación. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>El número de vínculos de un nodo es su <input class="webex-solveme nospaces ignorecase" size="7" aria-label="Escribe tu respuesta" data-answer="[&quot;grado&quot;]"></li>
 <li>Los nombres de los grupos de un mapa son interpretaciones del analista. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>VOSviewer es una herramienta para <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">gestionar referencias</option><option value="answer">construir y visualizar mapas bibliométricos</option><option value="x">preregistrar estudios</option></select></li>
@@ -771,7 +791,9 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM5
 <li>Fue la menos precisa en ventanas cortas.</li>
 <li><em>Degree</em>.</li>
 <li>Valídalos con lecturas o expertos.</li>
-<li>van Eck y Waltman (2010).</li>
+<li><ol class="example" type="1">
+<li></li>
+</ol></li>
 <li>Documenta los parámetros.</li>
 <li><em>Betweenness centrality</em>.</li>
 </ul>
@@ -795,6 +817,14 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC01IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9tZXRhY2llbmNpYV9vcGVuYWxleC5qc29uIl0=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-boyack2010" class="csl-entry" role="listitem">
+Boyack, K. W., y Klavans, R. (2010). <span>Co-citation analysis, bibliographic coupling, and direct citation: Which citation approach represents the research front most accurately?</span> <em>Journal of the American Society for Information Science and Technology</em>, <em>61</em>(12), 2389-2404. <a href="https://doi.org/10.1002/asi.21419">https://doi.org/10.1002/asi.21419</a>
+</div>
+<div id="ref-vaneck2010" class="csl-entry" role="listitem">
+Eck, N. J. van, y Waltman, L. (2010). <span>Software survey: VOSviewer, a computer program for bibliometric mapping</span>. <em>Scientometrics</em>, <em>84</em>(2), 523-538. <a href="https://doi.org/10.1007/s11192-009-0146-3">https://doi.org/10.1007/s11192-009-0146-3</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

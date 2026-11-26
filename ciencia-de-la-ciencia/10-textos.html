@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -569,7 +589,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="el-texto-como-dato" class="level2">
 <h2 class="anchored" data-anchor-id="el-texto-como-dato">1. El texto como dato</h2>
 <p>Títulos, resúmenes, textos completos, informes de revisión, convocatorias o políticas científicas son fuentes masivas para la <a href="92-glosario.html#gl-metaciencia" class="glos" data-def="Investigación sobre la fiabilidad de los métodos y resultados científicos y sobre las reformas que la mejoran. También, metainvestigación.">metaciencia</a>: permiten estudiar la evolución de los temas, la novedad, el lenguaje promocional («sin precedentes», «novedoso»), la descripción de métodos o la presencia de declaraciones de datos abiertos.</p>
-<p>Grimmer y Stewart (2013) proponen cuatro principios que siguen vigentes:</p>
+<p><span class="citation" data-cites="grimmer2013">Grimmer y Stewart (<a href="#ref-grimmer2013" role="doc-biblioref">2013</a>)</span> proponen cuatro principios que siguen vigentes:</p>
 <ol type="1">
 <li><strong>Todos los modelos cuantitativos del lenguaje son erróneos, pero algunos son útiles</strong>: simplifican el texto (por ejemplo, ignorando el orden de las palabras).</li>
 <li><strong>Los métodos automáticos amplían, no sustituyen, la lectura humana.</strong></li>
@@ -734,7 +754,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImMx
 <p>Responde a todas las preguntas y pulsa <strong>Mostrar respuestas</strong>. No cuenta para la nota.</p>
 <div class="webex-check webex-box">
 <ol type="1">
-<li>Según Grimmer y Stewart (2013), los métodos automáticos sustituyen a la lectura humana. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
+<li>Según <span class="citation" data-cites="grimmer2013">Grimmer y Stewart (<a href="#ref-grimmer2013" role="doc-biblioref">2013</a>)</span>, los métodos automáticos sustituyen a la lectura humana. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>Dividir un texto en unidades es la <input class="webex-solveme nospaces ignorecase" size="15" aria-label="Escribe tu respuesta" data-answer="[&quot;tokenización&quot;,&quot;tokenizacion&quot;]"></li>
 <li>Un término presente en todos los documentos tiene un idf de <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">0</option><option value="x">1</option><option value="x">infinito</option></select></li>
 <li>De lo que el modelo marca, la proporción correcta es la <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">exhaustividad</option><option value="answer">precisión</option><option value="x">densidad</option></select></li>
@@ -777,6 +797,11 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC00IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9tZXRhY2llbmNpYV9vcGVuYWxleC5qc29uIl0=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-grimmer2013" class="csl-entry" role="listitem">
+Grimmer, J., y Stewart, B. M. (2013). <span>Text as data: The promise and pitfalls of automatic content analysis methods for political texts</span>. <em>Political Analysis</em>, <em>21</em>(3), 267-297. <a href="https://doi.org/10.1093/pan/mps028">https://doi.org/10.1093/pan/mps028</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

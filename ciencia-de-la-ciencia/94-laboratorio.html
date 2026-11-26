@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -589,7 +609,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="laboratorio-etiqueta">
 <p>Laboratorio · se ejecuta en tu navegador</p>
 </div>
-<p>Toda <a href="92-glosario.html#gl-sistematica" class="glos" data-def="Revisión con protocolo, búsqueda exhaustiva y criterios explícitos.">revisión sistemática</a> debe informar del recorrido de los registros, desde la búsqueda hasta los estudios incluidos, con el diagrama de <strong>PRISMA 2020</strong> (Page et al., 2021). Introduce tus números: el laboratorio comprueba que cuadran y dibuja el diagrama, que puedes descargar en SVG.</p>
+<p>Toda <a href="92-glosario.html#gl-sistematica" class="glos" data-def="Revisión con protocolo, búsqueda exhaustiva y criterios explícitos.">revisión sistemática</a> debe informar del recorrido de los registros, desde la búsqueda hasta los estudios incluidos, con el diagrama de <strong>PRISMA 2020</strong> <span class="citation" data-cites="page2021">(<a href="#ref-page2021" role="doc-biblioref">Page et&nbsp;al., 2021</a>)</span>. Introduce tus números: el laboratorio comprueba que cuadran y dibuja el diagrama, que puedes descargar en SVG.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="85" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 84;"><span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>{</span>
 <span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> campos <span class="op">=</span> [[<span class="st">"bd"</span><span class="op">,</span> <span class="st">"Registros identificados en bases de datos"</span><span class="op">,</span> <span class="dv">1240</span>]<span class="op">,</span> [<span class="st">"reg"</span><span class="op">,</span> <span class="st">"Registros de registros de ensayos u otras fuentes"</span><span class="op">,</span> <span class="dv">36</span>]<span class="op">,</span> [<span class="st">"dup"</span><span class="op">,</span> <span class="st">"Duplicados eliminados"</span><span class="op">,</span> <span class="dv">310</span>]<span class="op">,</span> [<span class="st">"auto"</span><span class="op">,</span> <span class="st">"Eliminados por otras razones antes del cribado"</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">,</span> [<span class="st">"excl1"</span><span class="op">,</span> <span class="st">"Excluidos por título y resumen"</span><span class="op">,</span> <span class="dv">820</span>]<span class="op">,</span> [<span class="st">"norec"</span><span class="op">,</span> <span class="st">"Informes no recuperados"</span><span class="op">,</span> <span class="dv">6</span>]<span class="op">,</span> [<span class="st">"excl2"</span><span class="op">,</span> <span class="st">"Informes excluidos tras lectura completa"</span><span class="op">,</span> <span class="dv">98</span>]<span class="op">,</span> [<span class="st">"incl"</span><span class="op">,</span> <span class="st">"Estudios incluidos en la revisión"</span><span class="op">,</span> <span class="dv">42</span>]]<span class="op">;</span></span>
@@ -638,7 +658,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="para-ver-y-seguir-aprendiendo">Para ver y seguir aprendiendo</h2>
 <p>Son enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.</p>
 <ul>
-<li><strong><a href="https://www.youtube.com/watch?v=42QuXLucH3Q">Is Most Published Research Wrong?</a></strong> — Veritasium (2016). Unos 12 minutos sobre valores p, p-hacking y la crisis de replicación, a partir del artículo de Ioannidis (2005).</li>
+<li><strong><a href="https://www.youtube.com/watch?v=42QuXLucH3Q">Is Most Published Research Wrong?</a></strong> — Veritasium (2016). Unos 12 minutos sobre valores p, p-hacking y la crisis de replicación, a partir del artículo de <span class="citation" data-cites="ioannidis2005">Ioannidis (<a href="#ref-ioannidis2005" role="doc-biblioref">2005</a>)</span>.</li>
 </ul>
 
 
@@ -656,6 +676,14 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-ioannidis2005" class="csl-entry" role="listitem">
+Ioannidis, J. P. A. (2005). <span>Why most published research findings are false</span>. <em>PLoS Medicine</em>, <em>2</em>(8), e124. <a href="https://doi.org/10.1371/journal.pmed.0020124">https://doi.org/10.1371/journal.pmed.0020124</a>
+</div>
+<div id="ref-page2021" class="csl-entry" role="listitem">
+Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., et&nbsp;al. (2021). <span>The PRISMA 2020 statement: An updated guideline for reporting systematic reviews</span>. <em>BMJ</em>, <em>372</em>, n71. <a href="https://doi.org/10.1136/bmj.n71">https://doi.org/10.1136/bmj.n71</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

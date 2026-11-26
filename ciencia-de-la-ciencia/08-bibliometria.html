@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -535,7 +555,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Calcular e interpretar indicadores de producción y de impacto con <a href="92-glosario.html#gl-completo" class="glos" data-def="Cada unidad que participa en un trabajo suma una publicación completa.">recuento completo</a> y fraccionario.</li>
 <li>Normalizar las <a href="92-glosario.html#gl-cita" class="glos" data-def="Referencia de un documento a otro. Mide uso o visibilidad, no calidad.">citas</a> por campo, año y tipo de documento, y usar <a href="92-glosario.html#gl-percentil" class="glos" data-def="Proporción de trabajos de una unidad que están entre los más citados de su campo y año, como PP(top 10 %).">indicadores de percentiles</a>.</li>
-<li>Aplicar los principios del <a href="92-glosario.html#gl-leiden" class="glos" data-def="Diez principios para el uso responsable de los indicadores en la evaluación (Hicks et al., 2015).">Manifiesto de Leiden</a> al uso responsable de los indicadores.</li>
+<li>Aplicar los principios del <a href="92-glosario.html#gl-leiden" class="glos" data-def="Diez principios para el uso responsable de los indicadores en la evaluación [@hicks2015].">Manifiesto de Leiden</a> al uso responsable de los indicadores.</li>
 </ul>
 </div>
 </div>
@@ -573,7 +593,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lectura-complementaria" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lectura-complementaria">Lectura complementaria</h3>
 <ul>
-<li>Hicks, D.; Wouters, P.; Waltman, L.; de Rijcke, S.; Rafols, I. (2015). <a href="https://doi.org/10.1038/520429a">Bibliometrics: The Leiden Manifesto for research metrics</a>. <em>Nature</em>, 520(7548), 429-431.</li>
+<li><span class="citation" data-cites="hicks2015">Hicks et&nbsp;al. (<a href="#ref-hicks2015" role="doc-biblioref">2015</a>)</span></li>
 </ul>
 </section>
 </section>
@@ -626,7 +646,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>El recuento completo premia la colaboración amplia; el fraccionario es más adecuado para comparar productividad entre unidades con prácticas de colaboración distintas (Waltman, 2016).</p>
+<p>El recuento completo premia la colaboración amplia; el fraccionario es más adecuado para comparar productividad entre unidades con prácticas de colaboración distintas <span class="citation" data-cites="waltman2016">(<a href="#ref-waltman2016" role="doc-biblioref">Waltman, 2016</a>)</span>.</p>
 </section>
 <section id="medir-el-impacto-de-citación" class="level2">
 <h2 class="anchored" data-anchor-id="medir-el-impacto-de-citación">2. Medir el impacto de citación</h2>
@@ -637,7 +657,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Indicadores de percentiles</strong>: la proporción de trabajos de una unidad que están en el 10 % (o el 1 %) más citado de su campo y año, <strong>PP(top 10 %)</strong>. Son más robustos que las medias, porque una sola publicación muy citada no los dispara.</li>
 <li><a href="92-glosario.html#gl-ventana" class="glos" data-def="Periodo fijo tras la publicación en el que se cuentan las citas."><strong>Ventana de citación</strong></a>: contar las citas en un periodo fijo (por ejemplo, tres años tras la publicación) para comparar cohortes.</li>
 </ul>
-<p>Waltman (2016) repasa además los problemas de los indicadores populares: el <a href="92-glosario.html#gl-fi" class="glos" data-def="Media de citas recibidas en un año por los artículos que una revista publicó en los dos años anteriores. Es un indicador de revista."><strong>factor de impacto</strong></a> describe revistas, no artículos, y el <a href="92-glosario.html#gl-indiceh" class="glos" data-def="Mayor número h tal que h trabajos tienen al menos h citas cada uno (Hirsch, 2005)."><strong>índice h</strong></a> mezcla producción e impacto, depende de la edad académica y del campo, y no se puede normalizar bien.</p>
+<p><span class="citation" data-cites="waltman2016">Waltman (<a href="#ref-waltman2016" role="doc-biblioref">2016</a>)</span> repasa además los problemas de los indicadores populares: el <a href="92-glosario.html#gl-fi" class="glos" data-def="Media de citas recibidas en un año por los artículos que una revista publicó en los dos años anteriores. Es un indicador de revista."><strong>factor de impacto</strong></a> describe revistas, no artículos, y el <a href="92-glosario.html#gl-indiceh" class="glos" data-def="Mayor número h tal que h trabajos tienen al menos h citas cada uno [@hirsch2005]."><strong>índice h</strong></a> mezcla producción e impacto, depende de la edad académica y del campo, y no se puede normalizar bien.</p>
 <div id="fig-c8-asim" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Histograma de citas muy sesgado a la derecha, con la mayoría de trabajos con pocas citas y una cola larga. Líneas verticales marcan la mediana, la media y el umbral del 10 % más citado.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-c8-asim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -651,7 +671,7 @@ Figura&nbsp;1: Las citas siguen una distribución muy asimétrica: la media qued
 </section>
 <section id="uso-responsable-el-manifiesto-de-leiden" class="level2">
 <h2 class="anchored" data-anchor-id="uso-responsable-el-manifiesto-de-leiden">3. Uso responsable: el Manifiesto de Leiden</h2>
-<p>Hicks et al.&nbsp;(2015) propusieron diez principios para evaluar con indicadores. Entre ellos: la evaluación cuantitativa debe <strong>apoyar</strong> el juicio experto, no sustituirlo; hay que medir el desempeño en relación con la <strong>misión</strong> de la unidad; proteger la investigación <strong>relevante localmente</strong>; mantener los datos y el análisis <strong>abiertos y transparentes</strong>; permitir que los evaluados <strong>verifiquen</strong> los datos; tener en cuenta las <strong>diferencias entre campos</strong>; evaluar a las personas con un juicio cualitativo de su trayectoria; evitar la <strong>falsa precisión</strong>; reconocer los <strong>efectos sistémicos</strong> de los indicadores (incentivos y adaptación); y <strong>revisar</strong> los indicadores periódicamente.</p>
+<p><span class="citation" data-cites="hicks2015">Hicks et&nbsp;al. (<a href="#ref-hicks2015" role="doc-biblioref">2015</a>)</span> propusieron diez principios para evaluar con indicadores. Entre ellos: la evaluación cuantitativa debe <strong>apoyar</strong> el juicio experto, no sustituirlo; hay que medir el desempeño en relación con la <strong>misión</strong> de la unidad; proteger la investigación <strong>relevante localmente</strong>; mantener los datos y el análisis <strong>abiertos y transparentes</strong>; permitir que los evaluados <strong>verifiquen</strong> los datos; tener en cuenta las <strong>diferencias entre campos</strong>; evaluar a las personas con un juicio cualitativo de su trayectoria; evitar la <strong>falsa precisión</strong>; reconocer los <strong>efectos sistémicos</strong> de los indicadores (incentivos y adaptación); y <strong>revisar</strong> los indicadores periódicamente.</p>
 </section>
 <section id="ejemplo-resuelto-recuento-fraccionario-por-país" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplo-resuelto-recuento-fraccionario-por-país">Ejemplo resuelto: recuento fraccionario por país</h2>
@@ -863,6 +883,14 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC03IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9tZXRhY2llbmNpYV9vcGVuYWxleC5qc29uIl0=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-hicks2015" class="csl-entry" role="listitem">
+Hicks, D. et&nbsp;al. (2015). <span>Bibliometrics: The Leiden Manifesto for research metrics</span>. <em>Nature</em>, <em>520</em>, 429-431. <a href="https://doi.org/10.1038/520429a">https://doi.org/10.1038/520429a</a>
+</div>
+<div id="ref-waltman2016" class="csl-entry" role="listitem">
+Waltman, L. (2016). <span>A review of the literature on citation impact indicators</span>. <em>Journal of Informetrics</em>, <em>10</em>(2), 365-391. <a href="https://doi.org/10.1016/j.joi.2016.02.007">https://doi.org/10.1016/j.joi.2016.02.007</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

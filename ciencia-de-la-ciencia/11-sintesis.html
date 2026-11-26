@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -568,9 +588,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Egger, M.; Davey Smith, G.; Schneider, M.; Minder, C. (1997). <a href="https://doi.org/10.1136/bmj.315.7109.629">Bias in meta-analysis detected by a simple, graphical test</a>. <em>BMJ</em>, 315(7109), 629-634.</li>
-<li>Simonsohn, U.; Nelson, L. D.; Simmons, J. P. (2014). <a href="https://doi.org/10.1037/a0033242">P-curve: A key to the file-drawer</a>. <em>Journal of Experimental Psychology: General</em>, 143(2), 534-547.</li>
-<li>Brown, N. J. L.; Heathers, J. A. J. (2017). <a href="https://doi.org/10.1177/1948550616673876">The GRIM test: A simple technique detects numerous anomalies in the reporting of results in psychology</a>. <em>Social Psychological and Personality Science</em>, 8(4), 363-369.</li>
+<li><span class="citation" data-cites="egger1997">Egger et&nbsp;al. (<a href="#ref-egger1997" role="doc-biblioref">1997</a>)</span></li>
+<li><span class="citation" data-cites="simonsohn2014">Simonsohn et&nbsp;al. (<a href="#ref-simonsohn2014" role="doc-biblioref">2014</a>)</span></li>
+<li><span class="citation" data-cites="brown2017">Brown y Heathers (<a href="#ref-brown2017" role="doc-biblioref">2017</a>)</span></li>
 </ul>
 </section>
 </section>
@@ -612,7 +632,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p><strong>PRISMA 2020</strong> (Page et al., 2021) es la guía para <strong>informar</strong> de una revisión sistemática: una lista de comprobación de 27 ítems y un diagrama de flujo que muestra cuántos registros se identifican, criban, excluyen (con motivos) e incluyen. Conviene registrar el protocolo antes de empezar (PROSPERO para salud; OSF para otros campos).</p>
+<p><strong>PRISMA 2020</strong> <span class="citation" data-cites="page2021">(<a href="#ref-page2021" role="doc-biblioref">Page et&nbsp;al., 2021</a>)</span> es la guía para <strong>informar</strong> de una revisión sistemática: una lista de comprobación de 27 ítems y un diagrama de flujo que muestra cuántos registros se identifican, criban, excluyen (con motivos) e incluyen. Conviene registrar el protocolo antes de empezar (PROSPERO para salud; OSF para otros campos).</p>
 </section>
 <section id="combinar-resultados-el-metaanálisis" class="level2">
 <h2 class="anchored" data-anchor-id="combinar-resultados-el-metaanálisis">2. Combinar resultados: el metaanálisis</h2>
@@ -625,9 +645,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Si los estudios con resultados significativos se publican más, el metaanálisis <strong>sobrestima</strong> el efecto. La metaciencia ha desarrollado varias herramientas:</p>
 <ul>
 <li><a href="92-glosario.html#gl-embudo" class="glos" data-def="Gráfico del efecto de cada estudio frente a su precisión, para detectar asimetrías."><strong>Gráfico de embudo</strong></a>: el efecto de cada estudio frente a su <a href="92-glosario.html#gl-precision" class="glos" data-def="Proporción de aciertos entre lo marcado (precisión) y entre lo existente (exhaustividad).">precisión</a>. Sin sesgo, los estudios se reparten de forma simétrica; si faltan estudios pequeños con efectos nulos, aparece <strong>asimetría</strong>.</li>
-<li><strong>Prueba de Egger</strong> (Egger et al., 1997): una regresión que contrasta esa asimetría. Variantes como <strong>PET-PEESE</strong> estiman el efecto corregido.</li>
-<li><strong>p-curve</strong> (Simonsohn et al., 2014): analiza la distribución de los valores p significativos. Si hay un efecto real, abundan los p muy pequeños (curva sesgada a la derecha); si la curva es plana o se acumula cerca de 0,05, sugiere ausencia de efecto o <a href="92-glosario.html#gl-qrp" class="glos" data-def="Decisiones que no son fraude pero aumentan la probabilidad de resultados falsos, como informar solo de lo significativo.">prácticas cuestionables</a>. <strong>z-curve</strong> extiende la idea para estimar la tasa de <a href="92-glosario.html#gl-replicabilidad" class="glos" data-def="Obtener resultados coherentes con datos nuevos recogidos con el mismo método.">replicabilidad</a> esperada.</li>
-<li><strong>GRIM</strong> (Brown y Heathers, 2017): comprueba si una media de datos enteros (por ejemplo, de una escala Likert) es matemáticamente posible con el tamaño muestral declarado.</li>
+<li><strong>Prueba de Egger</strong> <span class="citation" data-cites="egger1997">(<a href="#ref-egger1997" role="doc-biblioref">Egger et&nbsp;al., 1997</a>)</span>: una regresión que contrasta esa asimetría. Variantes como <strong>PET-PEESE</strong> estiman el efecto corregido.</li>
+<li><strong>p-curve</strong> <span class="citation" data-cites="simonsohn2014">(<a href="#ref-simonsohn2014" role="doc-biblioref">Simonsohn et&nbsp;al., 2014</a>)</span>: analiza la distribución de los valores p significativos. Si hay un efecto real, abundan los p muy pequeños (curva sesgada a la derecha); si la curva es plana o se acumula cerca de 0,05, sugiere ausencia de efecto o <a href="92-glosario.html#gl-qrp" class="glos" data-def="Decisiones que no son fraude pero aumentan la probabilidad de resultados falsos, como informar solo de lo significativo.">prácticas cuestionables</a>. <strong>z-curve</strong> extiende la idea para estimar la tasa de <a href="92-glosario.html#gl-replicabilidad" class="glos" data-def="Obtener resultados coherentes con datos nuevos recogidos con el mismo método.">replicabilidad</a> esperada.</li>
+<li><strong>GRIM</strong> <span class="citation" data-cites="brown2017">(<a href="#ref-brown2017" role="doc-biblioref">Brown y Heathers, 2017</a>)</span>: comprueba si una media de datos enteros (por ejemplo, de una escala Likert) es matemáticamente posible con el tamaño muestral declarado.</li>
 <li><strong>statcheck</strong>: recalcula los valores p a partir de los estadísticos publicados (<em>t</em>, <em>F</em>, χ²) y detecta incoherencias.</li>
 </ul>
 </section>
@@ -823,6 +843,20 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0zIiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9tZXRhY2llbmNpYV9vcGVuYWxleC5qc29uIl0=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-brown2017" class="csl-entry" role="listitem">
+Brown, N. J. L., y Heathers, J. A. J. (2017). <span>The GRIM test: A simple technique detects numerous anomalies in the reporting of results in psychology</span>. <em>Social Psychological and Personality Science</em>, <em>8</em>(4), 363-369. <a href="https://doi.org/10.1177/1948550616673876">https://doi.org/10.1177/1948550616673876</a>
+</div>
+<div id="ref-egger1997" class="csl-entry" role="listitem">
+Egger, M., Davey Smith, G., Schneider, M., y Minder, C. (1997). <span>Bias in meta-analysis detected by a simple, graphical test</span>. <em>BMJ</em>, <em>315</em>(7109), 629-634. <a href="https://doi.org/10.1136/bmj.315.7109.629">https://doi.org/10.1136/bmj.315.7109.629</a>
+</div>
+<div id="ref-page2021" class="csl-entry" role="listitem">
+Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., et&nbsp;al. (2021). <span>The PRISMA 2020 statement: An updated guideline for reporting systematic reviews</span>. <em>BMJ</em>, <em>372</em>, n71. <a href="https://doi.org/10.1136/bmj.n71">https://doi.org/10.1136/bmj.n71</a>
+</div>
+<div id="ref-simonsohn2014" class="csl-entry" role="listitem">
+Simonsohn, U., Nelson, L. D., y Simmons, J. P. (2014). <span>P-curve: A key to the file-drawer</span>. <em>Journal of Experimental Psychology: General</em>, <em>143</em>(2), 534-547. <a href="https://doi.org/10.1037/a0033242">https://doi.org/10.1037/a0033242</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

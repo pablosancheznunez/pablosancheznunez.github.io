@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -535,8 +555,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <ul>
 <li>Entender qué representan las <a href="92-glosario.html#gl-cita" class="glos" data-def="Referencia de un documento a otro. Mide uso o visibilidad, no calidad.">citas</a> y cómo se distribuyen.</li>
-<li>Calcular e interpretar indicadores como el <a href="92-glosario.html#gl-indiceh" class="glos" data-def="Mayor número h tal que h trabajos tienen al menos h citas cada uno (Hirsch, 2005).">índice h</a> y los indicadores normalizados.</li>
-<li>Aplicar los principios del <a href="92-glosario.html#gl-leiden" class="glos" data-def="Diez principios para el uso responsable de los indicadores en la evaluación (Hicks et al., 2015).">Manifiesto de Leiden</a> para usar las métricas con responsabilidad.</li>
+<li>Calcular e interpretar indicadores como el <a href="92-glosario.html#gl-indiceh" class="glos" data-def="Mayor número h tal que h trabajos tienen al menos h citas cada uno [@hirsch2005].">índice h</a> y los indicadores normalizados.</li>
+<li>Aplicar los principios del <a href="92-glosario.html#gl-leiden" class="glos" data-def="Diez principios para el uso responsable de los indicadores en la evaluación [@hicks2015].">Manifiesto de Leiden</a> para usar las métricas con responsabilidad.</li>
 </ul>
 </div>
 </div>
@@ -574,8 +594,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Hirsch, J. E. (2005). <a href="https://doi.org/10.1073/pnas.0507655102">An index to quantify an individual’s scientific research output</a>. <em>PNAS</em>, 102(46), 16569-16572.</li>
-<li>Wang, D.; Song, C.; Barabási, A.-L. (2013). <a href="https://doi.org/10.1126/science.1237825">Quantifying long-term scientific impact</a>. <em>Science</em>, 342(6154), 127-132.</li>
+<li><span class="citation" data-cites="hirsch2005">Hirsch (<a href="#ref-hirsch2005" role="doc-biblioref">2005</a>)</span></li>
+<li><span class="citation" data-cites="wang2013">Wang et&nbsp;al. (<a href="#ref-wang2013" role="doc-biblioref">2013</a>)</span></li>
 <li><a href="https://sfdora.org/read/es/">Declaración de San Francisco sobre la Evaluación de la Investigación (DORA)</a>, 2012.</li>
 </ul>
 </section>
@@ -622,7 +642,7 @@ Figura&nbsp;1: Distribución típica de las citas: muchos artículos con pocas c
 <td>Es de la <strong>revista</strong>, no del artículo; media de una <a href="92-glosario.html#gl-asimetrica" class="glos" data-def="Distribución en la que pocos casos acumulan valores muy altos; la media no representa lo típico.">distribución asimétrica</a>; manipulable</td>
 </tr>
 <tr class="odd">
-<td><strong>Índice h</strong> (Hirsch, 2005)</td>
+<td><strong>Índice h</strong> <span class="citation" data-cites="hirsch2005">(<a href="#ref-hirsch2005" role="doc-biblioref">Hirsch, 2005</a>)</span></td>
 <td>El mayor <em>h</em> tal que <em>h</em> trabajos tienen al menos <em>h</em> citas</td>
 <td>Crece con la edad académica; ignora las citas de los muy citados; no comparable entre campos</td>
 </tr>
@@ -756,7 +776,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImMy
 </section>
 <section id="usar-las-métricas-con-responsabilidad" class="level2">
 <h2 class="anchored" data-anchor-id="usar-las-métricas-con-responsabilidad">5. Usar las métricas con responsabilidad</h2>
-<p>El <strong>Manifiesto de Leiden</strong> (Hicks et al., 2015) propone diez principios. Los más citados:</p>
+<p>El <strong>Manifiesto de Leiden</strong> <span class="citation" data-cites="hicks2015">(<a href="#ref-hicks2015" role="doc-biblioref">Hicks et&nbsp;al., 2015</a>)</span> propone diez principios. Los más citados:</p>
 <ol type="1">
 <li>La evaluación cuantitativa debe <strong>apoyar</strong> el juicio experto cualitativo, no sustituirlo.</li>
 <li>Medir el desempeño en relación con la <strong>misión</strong> de la institución, el grupo o la persona.</li>
@@ -924,6 +944,17 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC01IiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9tZXRhY2llbmNpYV9vcGVuYWxleC5qc29uIl0=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-hicks2015" class="csl-entry" role="listitem">
+Hicks, D. et&nbsp;al. (2015). <span>Bibliometrics: The Leiden Manifesto for research metrics</span>. <em>Nature</em>, <em>520</em>, 429-431. <a href="https://doi.org/10.1038/520429a">https://doi.org/10.1038/520429a</a>
+</div>
+<div id="ref-hirsch2005" class="csl-entry" role="listitem">
+Hirsch, J. E. (2005). <span>An index to quantify an individual’s scientific research output</span>. <em>PNAS</em>, <em>102</em>(46), 16569-16572. <a href="https://doi.org/10.1073/pnas.0507655102">https://doi.org/10.1073/pnas.0507655102</a>
+</div>
+<div id="ref-wang2013" class="csl-entry" role="listitem">
+Wang, D., Song, C., y Barabási, A.-L. (2013). <span>Quantifying long-term scientific impact</span>. <em>Science</em>, <em>342</em>(6154), 127-132. <a href="https://doi.org/10.1126/science.1237825">https://doi.org/10.1126/science.1237825</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

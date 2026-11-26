@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -571,7 +591,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lectura-complementaria" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lectura-complementaria">Lectura complementaria</h3>
 <ul>
-<li>Steegen, S.; Tuerlinckx, F.; Gelman, A.; Vanpaemel, W. (2016). <a href="https://doi.org/10.1177/1745691616658637">Increasing transparency through a multiverse analysis</a>. <em>Perspectives on Psychological Science</em>, 11(5), 702-712.</li>
+<li>1</li>
 </ul>
 </section>
 </section>
@@ -625,8 +645,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="diseños-propios-de-la-metaciencia">2. Diseños propios de la metaciencia</h2>
 <ul>
 <li><strong>Replicaciones a gran escala</strong>: muchos equipos repiten estudios publicados con protocolos preregistrados (proyectos de la Open Science Collaboration, Many Labs, el proyecto de <a href="92-glosario.html#gl-reproducibilidad" class="glos" data-def="Obtener los mismos resultados con los mismos datos y el mismo código.">reproducibilidad</a> en biología del cáncer). Miden la <a href="92-glosario.html#gl-replicabilidad" class="glos" data-def="Obtener resultados coherentes con datos nuevos recogidos con el mismo método.">replicabilidad</a> de un campo, no la de un estudio aislado.</li>
-<li><strong>Muchos analistas</strong>: Silberzahn et al.&nbsp;(2018) dieron los mismos datos (¿reciben más tarjetas rojas los futbolistas de piel más oscura?) a 29 equipos. Los efectos estimados variaron mucho (de nulos a claramente positivos) por decisiones analíticas razonables, sin que la experiencia de los equipos explicara las diferencias. La conclusión: <strong>la incertidumbre analítica</strong> es una fuente de variación tan real como la muestral.</li>
-<li><strong>Análisis multiverso</strong> (Steegen et al., 2016): en lugar de un único análisis, se ejecutan todas las combinaciones razonables de decisiones (exclusiones, codificaciones, covariables) y se informa de la distribución de resultados. Su versión gráfica es la <strong>curva de especificaciones</strong>.</li>
+<li><strong>Muchos analistas</strong>: <span class="citation" data-cites="silberzahn2018">Silberzahn et&nbsp;al. (<a href="#ref-silberzahn2018" role="doc-biblioref">2018</a>)</span> dieron los mismos datos (¿reciben más tarjetas rojas los futbolistas de piel más oscura?) a 29 equipos. Los efectos estimados variaron mucho (de nulos a claramente positivos) por decisiones analíticas razonables, sin que la experiencia de los equipos explicara las diferencias. La conclusión: <strong>la incertidumbre analítica</strong> es una fuente de variación tan real como la muestral.</li>
+<li><strong>Análisis multiverso</strong> <span class="citation" data-cites="steegen2016">(<a href="#ref-steegen2016" role="doc-biblioref">Steegen et&nbsp;al., 2016</a>)</span>: en lugar de un único análisis, se ejecutan todas las combinaciones razonables de decisiones (exclusiones, codificaciones, covariables) y se informa de la distribución de resultados. Su versión gráfica es la <strong>curva de especificaciones</strong>.</li>
 <li><strong>Estudios de auditoría de la literatura</strong>: codificar sistemáticamente una muestra de artículos (por ejemplo, disponibilidad de datos, <a href="92-glosario.html#gl-preregistro" class="glos" data-def="Plan del estudio registrado con fecha antes de analizar los datos.">preregistro</a>, potencia) para estimar la prevalencia de prácticas.</li>
 </ul>
 </section>
@@ -805,7 +825,7 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImMx
 <p>Responde a todas las preguntas y pulsa <strong>Mostrar respuestas</strong>. No cuenta para la nota.</p>
 <div class="webex-check webex-box">
 <ol type="1">
-<li>En Silberzahn et al.&nbsp;(2018), los 29 equipos obtuvieron prácticamente el mismo efecto. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
+<li>En <span class="citation" data-cites="silberzahn2018">Silberzahn et&nbsp;al. (<a href="#ref-silberzahn2018" role="doc-biblioref">2018</a>)</span>, los 29 equipos obtuvieron prácticamente el mismo efecto. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>El supuesto clave de diferencias en diferencias son las tendencias <input class="webex-solveme nospaces ignorecase" size="11" aria-label="Escribe tu respuesta" data-answer="[&quot;paralelas&quot;]"></li>
 <li>Comparar casos justo por encima y por debajo de un umbral es una regresión <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">lineal</option><option value="answer">discontinua</option><option value="x">logística</option></select></li>
 <li>Un análisis multiverso informa de los resultados de todas las combinaciones razonables de decisiones. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
@@ -822,7 +842,9 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImMx
 <li>Variaron mucho.</li>
 <li>Sin intervención, ambos grupos habrían cambiado igual.</li>
 <li><em>Regression discontinuity</em>.</li>
-<li>Steegen et al.&nbsp;(2016).</li>
+<li><ol class="example" type="1">
+<li></li>
+</ol></li>
 <li><em>Specification curve</em>.</li>
 <li>Respuestas socialmente aceptables.</li>
 <li><em>Mixed methods</em>.</li>
@@ -848,6 +870,14 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0zIiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9tZXRhY2llbmNpYV9vcGVuYWxleC5qc29uIl0=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-silberzahn2018" class="csl-entry" role="listitem">
+Silberzahn, R., Uhlmann, E. L., Martin, D. P., Anselmi, P., Aust, F., et&nbsp;al. (2018). <span>Many analysts, one data set: Making transparent how variations in analytic choices affect results</span>. <em>Advances in Methods and Practices in Psychological Science</em>, <em>1</em>(3), 337-356. <a href="https://doi.org/10.1177/2515245917747646">https://doi.org/10.1177/2515245917747646</a>
+</div>
+<div id="ref-steegen2016" class="csl-entry" role="listitem">
+Steegen, S., Tuerlinckx, F., Gelman, A., y Vanpaemel, W. (2016). <span>Increasing transparency through a multiverse analysis</span>. <em>Perspectives on Psychological Science</em>, <em>11</em>(5), 702-712. <a href="https://doi.org/10.1177/1745691616658637">https://doi.org/10.1177/1745691616658637</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

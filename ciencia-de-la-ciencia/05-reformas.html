@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -535,17 +555,17 @@ ul.task-list li input[type="checkbox"] {
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>Nosek, B. A.; Ebersole, C. R.; DeHaven, A. C.; Mellor, D. T. (2018). <a href="https://doi.org/10.1073/pnas.1708274114">The preregistration revolution</a>. <em>PNAS</em>, 115(11), 2600-2606.</li>
-<li>Chambers, C. D. (2013). <a href="https://doi.org/10.1016/j.cortex.2012.12.016">Registered Reports: A new publishing initiative at <em>Cortex</em></a>. <em>Cortex</em>, 49(3), 609-610.</li>
-<li>Kaplan, R. M.; Irvin, V. L. (2015). <a href="https://doi.org/10.1371/journal.pone.0132382">Likelihood of null effects of large NHLBI clinical trials has increased over time</a>. <em>PLoS ONE</em>, 10(8), e0132382.</li>
-<li>Scheel, A. M.; Schijen, M. R. M. J.; Lakens, D. (2021). <a href="https://doi.org/10.1177/25152459211007467">An excess of positive results: Comparing the standard psychology literature with Registered Reports</a>. <em>Advances in Methods and Practices in Psychological Science</em>, 4(2).</li>
-<li>Kidwell, M. C. et al.&nbsp;(2016). <a href="https://doi.org/10.1371/journal.pbio.1002456">Badges to acknowledge open practices: A simple, low-cost, effective method for increasing transparency</a>. <em>PLOS Biology</em>, 14(5), e1002456.</li>
+<li><span class="citation" data-cites="nosek2018">Nosek et&nbsp;al. (<a href="#ref-nosek2018" role="doc-biblioref">2018</a>)</span></li>
+<li><span class="citation" data-cites="chambers2013">Chambers (<a href="#ref-chambers2013" role="doc-biblioref">2013</a>)</span></li>
+<li><span class="citation" data-cites="kaplan2015">Kaplan y Irvin (<a href="#ref-kaplan2015" role="doc-biblioref">2015</a>)</span></li>
+<li><span class="citation" data-cites="scheel2021">Scheel et&nbsp;al. (<a href="#ref-scheel2021" role="doc-biblioref">2021</a>)</span></li>
+<li><span class="citation" data-cites="kidwell2016">Kidwell et&nbsp;al. (<a href="#ref-kidwell2016" role="doc-biblioref">2016</a>)</span></li>
 </ul>
 </section>
 </section>
 <section id="un-manifiesto-en-cinco-frentes" class="level2">
 <h2 class="anchored" data-anchor-id="un-manifiesto-en-cinco-frentes">1. Un manifiesto en cinco frentes</h2>
-<p>Munafò et al.&nbsp;(2017) agrupan las medidas para una ciencia más reproducible en cinco ámbitos:</p>
+<p><span class="citation" data-cites="munafo2017">Munafò et&nbsp;al. (<a href="#ref-munafo2017" role="doc-biblioref">2017</a>)</span> agrupan las medidas para una ciencia más reproducible en cinco ámbitos:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -579,8 +599,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="preregistro-e-informes-registrados" class="level2">
 <h2 class="anchored" data-anchor-id="preregistro-e-informes-registrados">2. Preregistro e informes registrados</h2>
-<p>Un <strong>preregistro</strong> es un plan del estudio (hipótesis, diseño, muestra, variables, análisis) registrado con fecha antes de ver los datos, en un repositorio público como <a href="https://osf.io/registries">OSF Registries</a> o <a href="https://aspredicted.org/">AsPredicted</a>. Su función no es prohibir la exploración, sino <strong>distinguir</strong> lo confirmatorio de lo exploratorio (Nosek et al., 2018). Desviarse del plan es legítimo si se declara y se justifica.</p>
-<p>Un <strong>informe registrado</strong> (<em>Registered Report</em>) va un paso más allá: la revista revisa la introducción, los métodos y el plan de análisis <strong>antes</strong> de recoger los datos y, si los acepta, se compromete a publicar el artículo <strong>sea cual sea el resultado</strong> (Chambers, 2013). Así desaparecen a la vez el incentivo para el <em>p-hacking</em> y el <a href="92-glosario.html#gl-sesgopub" class="glos" data-def="Dependencia de la publicación respecto del resultado: se publican más los resultados positivos.">sesgo de publicación</a>. Hoy los ofrecen cientos de revistas.</p>
+<p>Un <strong>preregistro</strong> es un plan del estudio (hipótesis, diseño, muestra, variables, análisis) registrado con fecha antes de ver los datos, en un repositorio público como <a href="https://osf.io/registries">OSF Registries</a> o <a href="https://aspredicted.org/">AsPredicted</a>. Su función no es prohibir la exploración, sino <strong>distinguir</strong> lo confirmatorio de lo exploratorio <span class="citation" data-cites="nosek2018">(<a href="#ref-nosek2018" role="doc-biblioref">Nosek et&nbsp;al., 2018</a>)</span>. Desviarse del plan es legítimo si se declara y se justifica.</p>
+<p>Un <strong>informe registrado</strong> (<em>Registered Report</em>) va un paso más allá: la revista revisa la introducción, los métodos y el plan de análisis <strong>antes</strong> de recoger los datos y, si los acepta, se compromete a publicar el artículo <strong>sea cual sea el resultado</strong> <span class="citation" data-cites="chambers2013">(<a href="#ref-chambers2013" role="doc-biblioref">Chambers, 2013</a>)</span>. Así desaparecen a la vez el incentivo para el <em>p-hacking</em> y el <a href="92-glosario.html#gl-sesgopub" class="glos" data-def="Dependencia de la publicación respecto del resultado: se publican más los resultados positivos.">sesgo de publicación</a>. Hoy los ofrecen cientos de revistas.</p>
 <div id="fig-c5-informe" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Dos flujos. Tradicional: idea, diseño, recogida de datos, análisis, redacción y revisión por pares; la decisión depende del resultado. Informe registrado: idea, diseño, revisión de la fase 1 y aceptación en principio, recogida de datos, análisis y revisión de la fase 2, que solo comprueba que se siguió el plan; el resultado no influye en la publicación.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-c5-informe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -606,9 +626,9 @@ Figura&nbsp;1: Del estudio tradicional al informe registrado: la revisión y la 
 <h2 class="anchored" data-anchor-id="funcionan-las-reformas">4. ¿Funcionan las reformas?</h2>
 <p>La metaciencia también se evalúa a sí misma. Algunas pruebas:</p>
 <ul>
-<li>Tras introducir <strong>insignias</strong> por compartir datos en <em>Psychological Science</em>, la proporción de artículos con datos abiertos aumentó mucho más que en revistas comparables (Kidwell et al., 2016).</li>
+<li>Tras introducir <strong>insignias</strong> por compartir datos en <em>Psychological Science</em>, la proporción de artículos con datos abiertos aumentó mucho más que en revistas comparables <span class="citation" data-cites="kidwell2016">(<a href="#ref-kidwell2016" role="doc-biblioref">Kidwell et&nbsp;al., 2016</a>)</span>.</li>
 <li>En los grandes ensayos clínicos financiados por el NHLBI estadounidense sobre fármacos o suplementos para enfermedades cardiovasculares, la proporción de ensayos con resultado positivo cayó notablemente tras exigirse el <strong>registro previo</strong> del resultado principal en 2000 (Kaplan e Irvin, 2015).</li>
-<li>Los <strong>informes registrados</strong> publican una proporción mucho mayor de resultados que no apoyan la hipótesis que los artículos tradicionales (Scheel et al., 2021).</li>
+<li>Los <strong>informes registrados</strong> publican una proporción mucho mayor de resultados que no apoyan la hipótesis que los artículos tradicionales <span class="citation" data-cites="scheel2021">(<a href="#ref-scheel2021" role="doc-biblioref">Scheel et&nbsp;al., 2021</a>)</span>.</li>
 </ul>
 <p>Son pruebas observacionales en su mayoría, y la investigación sobre qué intervenciones funcionan, en qué disciplinas y con qué costes, sigue abierta. La reforma también tiene riesgos: burocracia, «lavado de <a href="92-glosario.html#gl-cienciaabierta" class="glos" data-def="Conjunto de prácticas que hacen accesibles y transparentes las publicaciones, los datos, el código, los métodos y la evaluación.">ciencia abierta</a>» (<em>open washing</em>) o desigualdades entre quienes tienen recursos para cumplir y quienes no.</p>
 </section>
@@ -689,7 +709,7 @@ Figura&nbsp;1: Del estudio tradicional al informe registrado: la revisión y la 
 <li>En un informe registrado, la revista acepta el artículo en principio <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">después de ver los resultados</option><option value="answer">antes de que se recojan los datos</option><option value="x">solo si el resultado es significativo</option></select></li>
 <li>Los <a href="92-glosario.html#gl-fair" class="glos" data-def="Datos localizables, accesibles, interoperables y reutilizables.">datos FAIR</a> siempre tienen que ser abiertos. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>La guía de comunicación para <a href="92-glosario.html#gl-sistematica" class="glos" data-def="Revisión con protocolo, búsqueda exhaustiva y criterios explícitos.">revisiones sistemáticas</a> es <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">CONSORT</option><option value="answer">PRISMA</option><option value="x">ARRIVE</option></select></li>
-<li>Según Kidwell et al.&nbsp;(2016), las insignias por compartir datos <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">no tuvieron efecto</option><option value="answer">se asociaron a un gran aumento de artículos con datos abiertos</option><option value="x">redujeron la calidad de los datos</option></select></li>
+<li>Según <span class="citation" data-cites="kidwell2016">Kidwell et&nbsp;al. (<a href="#ref-kidwell2016" role="doc-biblioref">2016</a>)</span>, las insignias por compartir datos <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">no tuvieron efecto</option><option value="answer">se asociaron a un gran aumento de artículos con datos abiertos</option><option value="x">redujeron la calidad de los datos</option></select></li>
 <li>Un plan de estudio registrado con fecha antes de ver los datos es un <input class="webex-solveme nospaces ignorecase" size="13" aria-label="Escribe tu respuesta" data-answer="[&quot;preregistro&quot;]"></li>
 <li>Desviarse del preregistro es legítimo si se declara y se justifica. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="answer">VERDADERO</option><option value="x">FALSO</option></select></li>
 <li>¿Qué dos problemas elimina a la vez un informe registrado?</li>
@@ -754,6 +774,26 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-chambers2013" class="csl-entry" role="listitem">
+Chambers, C. D. (2013). <span>Registered Reports: A new publishing initiative at <em>Cortex</em></span>. <em>Cortex</em>, <em>49</em>(3), 609-610. <a href="https://doi.org/10.1016/j.cortex.2012.12.016">https://doi.org/10.1016/j.cortex.2012.12.016</a>
+</div>
+<div id="ref-kaplan2015" class="csl-entry" role="listitem">
+Kaplan, R. M., y Irvin, V. L. (2015). <span>Likelihood of null effects of large NHLBI clinical trials has increased over time</span>. <em>PLoS ONE</em>, <em>10</em>(8), e0132382. <a href="https://doi.org/10.1371/journal.pone.0132382">https://doi.org/10.1371/journal.pone.0132382</a>
+</div>
+<div id="ref-kidwell2016" class="csl-entry" role="listitem">
+Kidwell, M. C. et&nbsp;al. (2016). <span>Badges to acknowledge open practices: A simple, low-cost, effective method for increasing transparency</span>. <em>PLOS Biology</em>, <em>14</em>(5), e1002456. <a href="https://doi.org/10.1371/journal.pbio.1002456">https://doi.org/10.1371/journal.pbio.1002456</a>
+</div>
+<div id="ref-munafo2017" class="csl-entry" role="listitem">
+Munafò, M. R., Nosek, B. A., Bishop, D. V. M., Button, K. S., Chambers, C. D., Percie du Sert, N., et&nbsp;al. (2017). <span>A manifesto for reproducible science</span>. <em>Nature Human Behaviour</em>, <em>1</em>(1), 0021. <a href="https://doi.org/10.1038/s41562-016-0021">https://doi.org/10.1038/s41562-016-0021</a>
+</div>
+<div id="ref-nosek2018" class="csl-entry" role="listitem">
+Nosek, B. A., Ebersole, C. R., DeHaven, A. C., y Mellor, D. T. (2018). <span>The preregistration revolution</span>. <em>PNAS</em>, <em>115</em>(11), 2600-2606. <a href="https://doi.org/10.1073/pnas.1708274114">https://doi.org/10.1073/pnas.1708274114</a>
+</div>
+<div id="ref-scheel2021" class="csl-entry" role="listitem">
+Scheel, A. M., Schijen, M. R. M. J., y Lakens, D. (2021). <span>An excess of positive results: Comparing the standard psychology literature with Registered Reports</span>. <em>Advances in Methods and Practices in Psychological Science</em>, <em>4</em>(2). <a href="https://doi.org/10.1177/25152459211007467">https://doi.org/10.1177/25152459211007467</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

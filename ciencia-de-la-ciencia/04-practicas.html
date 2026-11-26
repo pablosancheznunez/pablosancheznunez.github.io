@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -574,9 +594,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lecturas-complementarias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="lecturas-complementarias">Lecturas complementarias</h3>
 <ul>
-<li>John, L. K.; Loewenstein, G.; Prelec, D. (2012). <a href="https://doi.org/10.1177/0956797611430953">Measuring the prevalence of questionable research practices with incentives for truth telling</a>. <em>Psychological Science</em>, 23(5), 524-532.</li>
-<li>Fanelli, D. (2010). <a href="https://doi.org/10.1371/journal.pone.0010068">«Positive» results increase down the hierarchy of the sciences</a>. <em>PLoS ONE</em>, 5(4), e10068.</li>
-<li>Smaldino, P. E.; McElreath, R. (2016). <a href="https://doi.org/10.1098/rsos.160384">The natural selection of bad science</a>. <em>Royal Society Open Science</em>, 3(9), 160384.</li>
+<li><span class="citation" data-cites="john2012">John et&nbsp;al. (<a href="#ref-john2012" role="doc-biblioref">2012</a>)</span></li>
+<li><span class="citation" data-cites="fanelli2010">Fanelli (<a href="#ref-fanelli2010" role="doc-biblioref">2010</a>)</span></li>
+<li><span class="citation" data-cites="smaldino2016">Smaldino y McElreath (<a href="#ref-smaldino2016" role="doc-biblioref">2016</a>)</span></li>
 </ul>
 </section>
 </section>
@@ -621,11 +641,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>John et al.&nbsp;(2012) encuestaron a más de 2000 psicólogos con incentivos para responder con sinceridad: muchas de estas prácticas eran admitidas por una proporción considerable, en algunos casos por la mayoría.</p>
+<p><span class="citation" data-cites="john2012">John et&nbsp;al. (<a href="#ref-john2012" role="doc-biblioref">2012</a>)</span> encuestaron a más de 2000 psicólogos con incentivos para responder con sinceridad: muchas de estas prácticas eran admitidas por una proporción considerable, en algunos casos por la mayoría.</p>
 </section>
 <section id="el-jardín-de-los-senderos-que-se-bifurcan" class="level2">
 <h2 class="anchored" data-anchor-id="el-jardín-de-los-senderos-que-se-bifurcan">2. El jardín de los senderos que se bifurcan</h2>
-<p>Simmons et al.&nbsp;(2011) demostraron con simulaciones que combinar unas pocas decisiones flexibles, cada una defendible por sí sola, puede elevar la tasa de falsos positivos del 5 % nominal a <strong>más del 60 %</strong>. Gelman y Loken llamaron a este problema el «jardín de los senderos que se bifurcan»: aunque solo se haga un análisis, la elección depende de los datos, y otros datos habrían llevado a otro camino.</p>
+<p><span class="citation" data-cites="simmons2011">Simmons et&nbsp;al. (<a href="#ref-simmons2011" role="doc-biblioref">2011</a>)</span> demostraron con simulaciones que combinar unas pocas decisiones flexibles, cada una defendible por sí sola, puede elevar la tasa de falsos positivos del 5 % nominal a <strong>más del 60 %</strong>. Gelman y Loken llamaron a este problema el «jardín de los senderos que se bifurcan»: aunque solo se haga un análisis, la elección depende de los datos, y otros datos habrían llevado a otro camino.</p>
 <div id="fig-c4-jardin" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Diagrama en árbol. Desde «Datos» salen dos ramas (excluir atípicos: sí o no), cada una se divide según la variable dependiente (VD1 o VD2) y cada una otra vez según la covariable (sí o no). De los ocho caminos finales, dos dan p menor que 0,05 y seis p mayor que 0,05.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-c4-jardin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -747,7 +767,7 @@ Figura&nbsp;1: El jardín de los senderos que se bifurcan: tres decisiones binar
 </section>
 <section id="sesgo-de-publicación" class="level2">
 <h2 class="anchored" data-anchor-id="sesgo-de-publicación">4. Sesgo de publicación</h2>
-<p>El <strong>sesgo de publicación</strong> aparece cuando la probabilidad de publicar un estudio depende de su resultado. Fanelli (2010) encontró que la proporción de artículos que confirman su hipótesis es altísima en muchas disciplinas y mayor en las ciencias sociales que en las físicas. Si los resultados nulos se quedan en el cajón, la literatura publicada es una muestra sesgada de lo investigado: los <a href="92-glosario.html#gl-metaanalisis" class="glos" data-def="Combinación estadística de los resultados de varios estudios.">metaanálisis</a> heredan el sesgo y sobrestiman los efectos.</p>
+<p>El <strong>sesgo de publicación</strong> aparece cuando la probabilidad de publicar un estudio depende de su resultado. <span class="citation" data-cites="fanelli2010">Fanelli (<a href="#ref-fanelli2010" role="doc-biblioref">2010</a>)</span> encontró que la proporción de artículos que confirman su hipótesis es altísima en muchas disciplinas y mayor en las ciencias sociales que en las físicas. Si los resultados nulos se quedan en el cajón, la literatura publicada es una muestra sesgada de lo investigado: los <a href="92-glosario.html#gl-metaanalisis" class="glos" data-def="Combinación estadística de los resultados de varios estudios.">metaanálisis</a> heredan el sesgo y sobrestiman los efectos.</p>
 <p>Algunas señales de alarma en una literatura:</p>
 <ul>
 <li>Demasiados resultados positivos para la potencia de los estudios.</li>
@@ -757,7 +777,7 @@ Figura&nbsp;1: El jardín de los senderos que se bifurcan: tres decisiones binar
 </section>
 <section id="incentivos-la-selección-natural-de-la-mala-ciencia" class="level2">
 <h2 class="anchored" data-anchor-id="incentivos-la-selección-natural-de-la-mala-ciencia">5. Incentivos: la selección natural de la mala ciencia</h2>
-<p>¿Por qué persisten estas prácticas si casi nadie quiere engañar? Smaldino y McElreath (2016) mostraron con un modelo evolutivo que, si se premia sobre todo el <strong>número de publicaciones positivas</strong>, los laboratorios que usan métodos de menor potencia y más flexibles producen más «éxitos», reciben más recursos y forman a más investigadores que copian esos métodos. Sin cambiar los incentivos, la mala ciencia se selecciona sola, aunque las personas actúen de buena fe. Es el puente hacia los capítulos 5 y 6.</p>
+<p>¿Por qué persisten estas prácticas si casi nadie quiere engañar? <span class="citation" data-cites="smaldino2016">Smaldino y McElreath (<a href="#ref-smaldino2016" role="doc-biblioref">2016</a>)</span> mostraron con un modelo evolutivo que, si se premia sobre todo el <strong>número de publicaciones positivas</strong>, los laboratorios que usan métodos de menor potencia y más flexibles producen más «éxitos», reciben más recursos y forman a más investigadores que copian esos métodos. Sin cambiar los incentivos, la mala ciencia se selecciona sola, aunque las personas actúen de buena fe. Es el puente hacia los capítulos 5 y 6.</p>
 </section>
 <section id="calcular-con-r" class="level2">
 <h2 class="anchored" data-anchor-id="calcular-con-r">6. Calcular con R</h2>
@@ -858,11 +878,11 @@ eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImM0
 <ol type="1">
 <li>Las prácticas de investigación cuestionables son siempre fraude intencionado. <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">VERDADERO</option><option value="answer">FALSO</option></select></li>
 <li>Presentar como hipótesis previa lo descubierto tras analizar los datos se llama <input class="webex-solveme nospaces ignorecase" size="9" aria-label="Escribe tu respuesta" data-answer="[&quot;HARKing&quot;]"></li>
-<li>Según Simmons et al.&nbsp;(2011), combinar varias decisiones flexibles puede elevar la tasa de falsos positivos por encima del <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">6 %</option><option value="x">15 %</option><option value="answer">60 %</option><option value="x">95 %</option></select></li>
+<li>Según <span class="citation" data-cites="simmons2011">Simmons et&nbsp;al. (<a href="#ref-simmons2011" role="doc-biblioref">2011</a>)</span>, combinar varias decisiones flexibles puede elevar la tasa de falsos positivos por encima del <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">6 %</option><option value="x">15 %</option><option value="answer">60 %</option><option value="x">95 %</option></select></li>
 <li>Mirar los datos a medida que llegan y parar cuando <em>p</em> &lt; 0,05 se llama parada <input class="webex-solveme nospaces ignorecase" size="10" aria-label="Escribe tu respuesta" data-answer="[&quot;opcional&quot;]"></li>
 <li>Con dos variables independientes y α = 0,05, la probabilidad de al menos un falso positivo es aproximadamente <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">5 %</option><option value="answer">10 %</option><option value="x">25 %</option></select></li>
 <li>El sesgo de publicación hace que los metaanálisis tiendan a <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">subestimar los efectos</option><option value="answer">sobrestimar los efectos</option><option value="x">no verse afectados</option></select></li>
-<li>Smaldino y McElreath (2016) explican la persistencia de la mala ciencia sobre todo por <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">la falta de inteligencia de los investigadores</option><option value="answer">los incentivos que premian publicar muchos resultados positivos</option><option value="x">el coste de los ordenadores</option></select></li>
+<li><span class="citation" data-cites="smaldino2016">Smaldino y McElreath (<a href="#ref-smaldino2016" role="doc-biblioref">2016</a>)</span> explican la persistencia de la mala ciencia sobre todo por <select class="webex-select" aria-label="Elige una respuesta"><option value="blank"></option><option value="x">la falta de inteligencia de los investigadores</option><option value="answer">los incentivos que premian publicar muchos resultados positivos</option><option value="x">el coste de los ordenadores</option></select></li>
 <li>¿Qué tienen en común FFP?</li>
 </ol>
 <p></p><div class="webex-radiogroup" role="radiogroup" aria-label="Opciones de respuesta" id="radio_libro_1"><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>Son prácticas aceptables en algunas disciplinas</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="answer"> <span>Son las tres formas de mala conducta en sentido estricto: fabricación, falsificación y plagio</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>Son tipos de sesgo de publicación</span></label></div><p></p>
@@ -924,6 +944,20 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0yIiwiaW5saW5lIjpmYWxzZSwibWV0
 <script type="vfs-file">
 WyJkYXRvcy9MRUVNRS50eHQiLCJkYXRvcy9tZXRhY2llbmNpYV9vcGVuYWxleC5qc29uIl0=
 </script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-fanelli2010" class="csl-entry" role="listitem">
+Fanelli, D. (2010). <span>«Positive» results increase down the hierarchy of the sciences</span>. <em>PLoS ONE</em>, <em>5</em>(4), e10068. <a href="https://doi.org/10.1371/journal.pone.0010068">https://doi.org/10.1371/journal.pone.0010068</a>
+</div>
+<div id="ref-john2012" class="csl-entry" role="listitem">
+John, L. K., Loewenstein, G., y Prelec, D. (2012). <span>Measuring the prevalence of questionable research practices with incentives for truth telling</span>. <em>Psychological Science</em>, <em>23</em>(5), 524-532. <a href="https://doi.org/10.1177/0956797611430953">https://doi.org/10.1177/0956797611430953</a>
+</div>
+<div id="ref-simmons2011" class="csl-entry" role="listitem">
+Simmons, J. P., Nelson, L. D., y Simonsohn, U. (2011). <span>False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant</span>. <em>Psychological Science</em>, <em>22</em>(11), 1359-1366. <a href="https://doi.org/10.1177/0956797611417632">https://doi.org/10.1177/0956797611417632</a>
+</div>
+<div id="ref-smaldino2016" class="csl-entry" role="listitem">
+Smaldino, P. E., y McElreath, R. (2016). <span>The natural selection of bad science</span>. <em>Royal Society Open Science</em>, <em>3</em>(9), 160384. <a href="https://doi.org/10.1098/rsos.160384">https://doi.org/10.1098/rsos.160384</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
