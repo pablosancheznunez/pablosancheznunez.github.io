@@ -1,0 +1,63 @@
+---
+title: "Challenge for unit [N]: [title]"
+subtitle: "Digital Skills for Information Use · Bachelor's degree (Transversal Training) (UC3M)"
+author: "[First name and surname]"
+date: today
+date-format: "D MMMM YYYY"
+lang: en
+format:
+  html:
+    theme: [cosmo, informe.scss]
+    toc: true
+    toc-title: "Contents"
+    number-sections: true
+    embed-resources: true
+---
+
+<!--
+Submission template for the challenges in the book "Digital Skills for
+Information Use" (Pablo Sánchez-Núñez, UC3M). Licence CC BY 4.0.
+
+How to use it:
+1. Save this file and informe.scss in the same folder.
+2. Open it in RStudio or Positron and click "Render" (or `quarto render entrega_reto.qmd`).
+   You do not need to know R: you can write just text, tables and images.
+3. Replace the text in square brackets and delete what you do not need.
+4. Submit the generated HTML file.
+-->
+
+::: {.callout-tip collapse="true"}
+## Assessment rubric for the challenges (delete it before submitting)
+
+| Criterion | Weight | Excellent | Acceptable | Insufficient |
+|---|---|---|---|---|
+| **Searching and selecting sources** | 25% | Documented, reproducible strategy; relevant and varied sources | Simple strategy; suitable sources | No strategy or poorly relevant sources |
+| **Critical evaluation** | 25% | Each source is evaluated with explicit criteria and the claims are checked | Generic evaluation | Sources accepted without evaluation |
+| **Ethical use and citation** | 20% | All borrowed ideas cited; complete references in a consistent style | Minor citation errors | Borrowed ideas not cited or incomplete references |
+| **Argumentation** | 20% | Conclusions supported by the sources; limitations acknowledged | Reasonable conclusions | Unsupported conclusions |
+| **Presentation** | 10% | Clear, well-organised text without typos | Some formal errors | Disorganised |
+:::
+
+::: {.callout-note appearance="minimal"}
+**Unit:** [1-6] · **Chosen topic:** [topic] · **Use of generative AI:** [none / what for and with which tool, according to the course rules]
+:::
+
+# Question or information need
+
+[What you want to find out or solve, in two or three sentences.]
+
+# Work done
+
+[Develop each point of the challenge here, with one section per point.]
+
+| Source | Type | Why it is (or is not) reliable |
+|---|---|---|
+| [Short reference] | [Article, website, database…] | [Criteria applied] |
+
+# Conclusions
+
+[What you have learned and what limitations your work has.]
+
+# References
+
+[Full references in the style you have chosen (APA 7 recommended), in alphabetical order.]

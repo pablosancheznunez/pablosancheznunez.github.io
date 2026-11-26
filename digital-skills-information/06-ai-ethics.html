@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Units 8 and 9. Generative artificial intelligence: ethics, authorship and regulation – Digital Skills for Information Use</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./90-citations.html" rel="next">
+<link href="./05-ai-foundations.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-936d61d65ed07d4dbf86db28268e5c99.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8e3a6b6343bfdfe1ff8258f437cba24c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-53833bc5b35067eba47ba8ce7f3b7b58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-13f2b1ef5666e9677370826827e4cef0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/webex-1.2.0/webex.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.js"></script>
+<link href="site_libs/quarto-contrib/interactivos-1.0.0/interactivos.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="laboratorio.js"></script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="fuentes/fuentes.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-sources.html">Units</a></li><li class="breadcrumb-item"><a href="./06-ai-ethics.html"><span class="chapter-title">Units 8 and 9. Generative artificial intelligence: ethics, authorship and regulation</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Digital Skills for Information Use</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/digital-skills-information.pdf">
+            Book (PDF)
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./pdf/digital-skills-information.epub">
+            Book (EPUB, for e-readers)
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-r-in-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using R in this book</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Units</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-sources.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unit 1. Introduction. Information sources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-retrieval.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unit 2. Information retrieval</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-ethics-plagiarism.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unit 3. Ethical use of information and plagiarism</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Units 4 and 5. References</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-ai-foundations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Units 6 and 7. Generative artificial intelligence: foundations and applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-ai-ethics.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Units 8 and 9. Generative artificial intelligence: ethics, authorship and regulation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./90-citations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Quick guide to APA 7 citations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./93-checklists.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Checklists</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./94-verification.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Verification lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./91-teaching-guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Guide for teaching staff</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./92-glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glossary</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#required-reading" id="toc-required-reading" class="nav-link active" data-scroll-target="#required-reading">Required reading</a>
+  <ul class="collapse">
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
+  </ul></li>
+  <li><a href="#ethical-principles-of-ai" id="toc-ethical-principles-of-ai" class="nav-link" data-scroll-target="#ethical-principles-of-ai">1. Ethical principles of AI</a></li>
+  <li><a href="#ethical-risks-in-everyday-use" id="toc-ethical-risks-in-everyday-use" class="nav-link" data-scroll-target="#ethical-risks-in-everyday-use">2. Ethical risks in everyday use</a></li>
+  <li><a href="#responsibility-authorship-and-transparency" id="toc-responsibility-authorship-and-transparency" class="nav-link" data-scroll-target="#responsibility-authorship-and-transparency">3. Responsibility, authorship and transparency</a></li>
+  <li><a href="#the-european-regulatory-framework" id="toc-the-european-regulatory-framework" class="nav-link" data-scroll-target="#the-european-regulatory-framework">4. The European regulatory framework</a></li>
+  <li><a href="#worked-examples" id="toc-worked-examples" class="nav-link" data-scroll-target="#worked-examples">Worked examples</a></li>
+  <li><a href="#graded-exercises" id="toc-graded-exercises" class="nav-link" data-scroll-target="#graded-exercises">Graded exercises</a></li>
+  <li><a href="#activities" id="toc-activities" class="nav-link" data-scroll-target="#activities">Activities</a></li>
+  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">Practice</a></li>
+  <li><a href="#reto-u6" id="toc-reto-u6" class="nav-link" data-scroll-target="#reto-u6">Assessed challenge</a></li>
+  <li><a href="#self-assessment" id="toc-self-assessment" class="nav-link" data-scroll-target="#self-assessment">Self-assessment</a></li>
+  <li><a href="#further-resources" id="toc-further-resources" class="nav-link" data-scroll-target="#further-resources">Further resources</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-sources.html">Units</a></li><li class="breadcrumb-item"><a href="./06-ai-ethics.html"><span class="chapter-title">Units 8 and 9. Generative artificial intelligence: ethics, authorship and regulation</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-u6" class="quarto-section-identifier"><span class="chapter-title">Units 8 and 9. Generative artificial intelligence: ethics, authorship and regulation</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Analyse the ethical principles of generative AI: consent, privacy and <a href="92-glossary.html#gl-autodeterminacion" class="glos" data-def="Each person's right to decide on the use of their personal data.">informational self-determination</a>.</li>
+<li>Understand responsibility and authorship in the use of AI.</li>
+<li>Declare the use of AI transparently in academic work.</li>
+<li>Know the European regulatory framework and the ethical principles of AI.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Unit glossary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="./92-glossary.html#gl-sesgo">Algorithmic bias</a> · <a href="./92-glossary.html#gl-declaracion">AI use statement</a> · <a href="./92-glossary.html#gl-aiact">AI Act</a> · <a href="./92-glossary.html#gl-alfia">AI literacy</a> · <a href="./92-glossary.html#gl-explicabilidad">Explainability</a> · <a href="./92-glossary.html#gl-personales">Personal data</a> · <a href="./92-glossary.html#gl-autodeterminacion">Informational self-determination</a></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Downloads
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="plantillas/entrega_reto.qmd" class="btn btn-outline-primary btn-sm" download="entrega_reto.qmd">Challenge submission template (.qmd)</a> <a href="plantillas/informe.scss" class="btn btn-outline-primary btn-sm" download="informe.scss">Style theme (.scss)</a></p>
+</div>
+</div>
+<section id="required-reading" class="level2">
+<h2 class="anchored" data-anchor-id="required-reading">Required reading</h2>
+<div class="lectura">
+<p>Floridi, L.; Cowls, J. (2019). <a href="https://doi.org/10.1162/99608f92.8cd550d1">A unified framework of five principles for AI in society</a>. <em>Harvard Data Science Review</em>, 1(1).</p>
+</div>
+<section id="further-reading" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="further-reading">Further reading</h3>
+<ul>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence</a>. <em>Official Journal of the European Union</em>.</li>
+<li><span class="citation" data-cites="bender2021a">Bender et al. (<a href="#ref-bender2021a" role="doc-biblioref">2021</a>)</span> — Environmental costs and biases of large models.</li>
+</ul>
+</section>
+</section>
+<section id="ethical-principles-of-ai" class="level2">
+<h2 class="anchored" data-anchor-id="ethical-principles-of-ai">1. Ethical principles of AI</h2>
+<p><span class="citation" data-cites="floridi2019">Floridi &amp; Cowls (<a href="#ref-floridi2019" role="doc-biblioref">2019</a>)</span> compared the main international statements on AI ethics and summarised them in <strong>five principles</strong>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Principle</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Beneficence</strong></td>
+<td>Promoting the well-being of people and the planet</td>
+</tr>
+<tr class="even">
+<td><strong>Non-maleficence</strong></td>
+<td>Avoiding harm: privacy, security, misuse</td>
+</tr>
+<tr class="odd">
+<td><strong>Autonomy</strong></td>
+<td>People keep the power to decide</td>
+</tr>
+<tr class="even">
+<td><strong>Justice</strong></td>
+<td>Sharing benefits, avoiding discrimination</td>
+</tr>
+<tr class="odd">
+<td><a href="92-glossary.html#gl-explicabilidad" class="glos" data-def="An ethical principle according to which it must be possible to understand how an AI system works and who is accountable for it."><strong>Explicability</strong></a></td>
+<td>Being able to understand how it works and who is accountable</td>
+</tr>
+</tbody>
+</table>
+<p>The first four come from bioethics; the fifth is specific to AI and makes the others possible.</p>
+</section>
+<section id="ethical-risks-in-everyday-use" class="level2">
+<h2 class="anchored" data-anchor-id="ethical-risks-in-everyday-use">2. Ethical risks in everyday use</h2>
+<ul>
+<li><strong>Bias</strong>: models reproduce the biases in their <a href="92-glossary.html#gl-entrenamiento" class="glos" data-def="The collection of data with which a model is trained; it determines what the model knows and the biases it reproduces.">training data</a> (gender, origin, language). An answer can look neutral and be biased underneath.</li>
+<li><strong>Consent, privacy and informational self-determination</strong>: <strong>informational self-determination</strong> is each person’s right to decide what is done with their <a href="92-glossary.html#gl-personales" class="glos" data-def="Any information about an identified or identifiable natural person.">personal data</a>; in Spain, the Constitutional Court recognises it as the fundamental right to data protection. Models are often trained on data collected from the internet without their authors’ consent, and what you write into an assistant may be stored and, depending on the service, used to train models. Do not enter your own or other people’s personal data, or confidential documents, and check the service’s privacy settings.</li>
+<li><strong>Authorship and intellectual property</strong>: a generated text is not yours; moreover, models are trained on protected works, an open legal debate.</li>
+<li><strong>Dependence and learning</strong>: delegating to AI what the course wants you to learn prevents you from learning it.</li>
+<li><strong>Environmental cost</strong>: training and using large models consumes a lot of energy and water <span class="citation" data-cites="bender2021">(<a href="#ref-bender2021" role="doc-biblioref">Bender, Gebru, et al., 2021</a>)</span>.</li>
+</ul>
+</section>
+<section id="responsibility-authorship-and-transparency" class="level2">
+<h2 class="anchored" data-anchor-id="responsibility-authorship-and-transparency">3. Responsibility, authorship and transparency</h2>
+<p>In academic work, the general rule is <strong>transparency</strong>: if you use AI, say so, explain what for and take responsibility for the result. Scientific publishers and COPE (Committee on Publication Ethics) agree that an AI <strong>cannot be an author</strong>, because it cannot take responsibility for the work.</p>
+<p>A useful statement says <strong>which tool</strong> (and version), <strong>what for</strong> it was used, <strong>in which parts</strong> and <strong>how</strong> the result was checked. For example:</p>
+<blockquote class="blockquote">
+<p><a href="92-glossary.html#gl-declaracion" class="glos" data-def="A text stating which AI tool was used in a piece of work, what for, in which parts and how the result was checked.">AI use statement</a>: I used [tool, version] to check the spelling and clarity of sections 2 and 3, and to suggest synonyms in the table of search terms. I reviewed and accepted or rejected each suggestion. The searches, the selection of documents and the conclusions are my own. I did not enter any personal data.</p>
+</blockquote>
+<p>If the AI influences the content, APA also recommends citing it in the text and in the <a href="92-glossary.html#gl-referencia" class="glos" data-def="The full description of a source in the final list of a piece of work.">references</a>, giving the <a href="92-glossary.html#gl-prompt" class="glos" data-def="The text with which you ask a generative AI system for something.">prompt</a> used in an appendix or in the text.</p>
+<div id="fig-declaracion" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Four cards in a row with the questions of an AI use statement: which tool and version, what it was used for, in which parts of the work and how the result was checked. Below, a note: responsibility for the work always lies with whoever signs it.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-declaracion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/u6_declaracion.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: From use to statement: which tool, what for, in which parts and how it was checked."><img src="figuras/u6_declaracion.svg" class="img-fluid figure-img" alt="Four cards in a row with the questions of an AI use statement: which tool and version, what it was used for, in which parts of the work and how the result was checked. Below, a note: responsibility for the work always lies with whoever signs it."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-declaracion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: From use to statement: which tool, what for, in which parts and how it was checked.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="the-european-regulatory-framework" class="level2">
+<h2 class="anchored" data-anchor-id="the-european-regulatory-framework">4. The European regulatory framework</h2>
+<p><strong>Regulation (EU) 2024/1689</strong> on Artificial Intelligence (<a href="92-glossary.html#gl-aiact" class="glos" data-def="Regulation (EU) 2024/1689, which regulates AI in the European Union with a risk-based approach."><em>AI Act</em></a>) is the first comprehensive law on AI. It follows a <strong>risk-based approach</strong>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Risk level</th>
+<th>Examples</th>
+<th>Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Unacceptable</strong></td>
+<td>Social scoring, manipulation causing harm</td>
+<td>Prohibited</td>
+</tr>
+<tr class="even">
+<td><strong>High</strong></td>
+<td>AI in education to assess or admit students, in employment, in essential services</td>
+<td>Strict requirements: risk management, quality data, human oversight</td>
+</tr>
+<tr class="odd">
+<td><strong>Transparency</strong></td>
+<td>Conversational assistants, generated content (<em>deepfakes</em>)</td>
+<td>Informing people that they are interacting with an AI or that the content is artificial</td>
+</tr>
+<tr class="even">
+<td><strong>Minimal</strong></td>
+<td>Spam filters, video games</td>
+<td>No specific obligations</td>
+</tr>
+</tbody>
+</table>
+<div id="fig-riesgos" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Four-level pyramid, from top to bottom: unacceptable (prohibited: social scoring, harmful manipulation), high (strict requirements: education, employment, essential services), transparency (inform: conversational assistants, deepfakes) and minimal (no specific obligations: spam filters, video games).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-riesgos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figuras/u6_riesgos.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: The four risk levels of the EU AI Act."><img src="figuras/u6_riesgos.svg" class="img-fluid figure-img" alt="Four-level pyramid, from top to bottom: unacceptable (prohibited: social scoring, harmful manipulation), high (strict requirements: education, employment, essential services), transparency (inform: conversational assistants, deepfakes) and minimal (no specific obligations: spam filters, video games)."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-riesgos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The four risk levels of the EU AI Act.
+</figcaption>
+</figure>
+</div>
+<p>The regulation also covers <strong>general-purpose AI models</strong> (the ones behind assistants) and requires those who deploy AI systems to ensure that their staff have a sufficient level of <a href="92-glossary.html#gl-alfia" class="glos" data-def="The knowledge and skills needed to use AI in an informed way and understand its opportunities, risks and possible harms."><strong>AI literacy</strong></a>. Its obligations apply in stages from 2025. Other rules, such as the General Data Protection Regulation, continue to apply to AI.</p>
+</section>
+<section id="worked-examples" class="level2">
+<h2 class="anchored" data-anchor-id="worked-examples">Worked examples</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Example 1 · Writing an AI use statement
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In your bachelor’s thesis you used an AI assistant to check spelling and to suggest an initial structure for the table of contents. A suitable statement:</p>
+<blockquote class="blockquote">
+<p>During the preparation of this work, [name of the tool, version] was used to check the spelling and grammar of the text and to obtain an initial proposal for the structure of the table of contents, which was modified by the author. All content was written, reviewed and verified by the author, who takes responsibility for the work. AI was not used to generate results, analyses or references.</p>
+</blockquote>
+<p>Key elements: <strong>which tool</strong>, <strong>for which tasks</strong>, <strong>what you did</strong> and <strong>responsibility</strong>. Always check your university’s and your course’s rules.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Example 2 · Personal data in a chatbot
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To analyse the open-ended answers of a survey, you plan to paste them into a commercial chatbot. They contain names and comments about the participants’ health. Problems: they are <strong>personal data</strong>, some of them in a <strong>special category</strong> (health), and the GDPR requires a legal basis, information to participants and guarantees about where and how the data are processed. Alternatives: <strong>anonymise</strong> first (remove names and identifiable information), use tools approved by the university with contractual guarantees or do the analysis locally. When in doubt, ask the data protection officer.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Example 3 · Which risk category? (EU AI Act)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Regulation (EU) 2024/1689 classifies uses of AI by their risk:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Examples</th>
+<th>Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Unacceptable risk</strong></td>
+<td>Social scoring of people; manipulation that causes harm</td>
+<td>Prohibited</td>
+</tr>
+<tr class="even">
+<td><strong>High risk</strong></td>
+<td>AI to decide access to education or to assess students; recruitment</td>
+<td>Strict requirements: risk management, data, human oversight, transparency</td>
+</tr>
+<tr class="odd">
+<td><strong>Transparency risk</strong></td>
+<td>Chatbots; generated or manipulated content (deepfakes)</td>
+<td>Informing people that they are interacting with an AI or that the content is artificial</td>
+</tr>
+<tr class="even">
+<td><strong>Minimal risk</strong></td>
+<td>Spam filters, video games</td>
+<td>No specific obligations</td>
+</tr>
+</tbody>
+</table>
+<p>A system that automatically marks exams and decides the grade would be in the <strong>high-risk</strong> category.</p>
+</div>
+</div>
+</section>
+<section id="graded-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="graded-exercises">Graded exercises</h2>
+<p><strong>Basic.</strong> Who is responsible for the content of work done with the help of an AI?</p>
+<div class="webex-solution">
+<button>See solution</button>
+<p>The author. The AI cannot be an author or take responsibility; whoever signs the work answers for its accuracy and originality.</p>
+</div>
+<p><strong>Intermediate.</strong> Classify according to the categories of the Regulation: (a) a student support chatbot; (b) a system that decides admission to a master’s programme; (c) a spell checker.</p>
+<div class="webex-solution">
+<button>See solution</button>
+<ol type="a">
+<li>Transparency risk: it must say that it is an AI. (b) High risk: it affects access to education. (c) Minimal risk.</li>
+</ol>
+</div>
+<p><strong>Advanced.</strong> Analyse a real or realistic case of AI use in your academic environment with the chapter’s ethical principles and propose a short policy for your course or group.</p>
+<div class="webex-solution">
+<button>See guidance</button>
+<p>A good policy says which uses are allowed and which are not, how they are declared, what happens to personal data and how the work is verified. It must be consistent with the university’s rules.</p>
+</div>
+</section>
+<section id="activities" class="level2">
+<h2 class="anchored" data-anchor-id="activities">Activities</h2>
+<div class="ia ia-clasificar" id="ia-u6-riesgo"><script type="application/json" class="ia-datos">{"categorias":["Unacceptable (prohibited)","High","Transparency","Minimal"],"enunciado":"","explicacion":"","items":[{"categoria":"Unacceptable (prohibited)","explicacion":"","texto":"A system that scores citizens on their social behaviour to grant or\ndeny them services"},{"categoria":"High","explicacion":"","texto":"A system that decides student admission to a master’s programme"},{"categoria":"High","explicacion":"","texto":"A system that marks and grades university exams"},{"categoria":"Transparency","explicacion":"It must say that you are talking to an AI.","texto":"A conversational assistant on a city council website"},{"categoria":"Transparency","explicacion":"It must be labelled as artificial.","texto":"An AI-generated video imitating a real person (<em>deepfake<\/em>)"},{"categoria":"Minimal","explicacion":"","texto":"A spam filter"},{"categoria":"High","explicacion":"","texto":"A system that screens CVs in a recruitment process"},{"categoria":"Unacceptable (prohibited)","explicacion":"","texto":"A system that subliminally manipulates people and causes them\nharm"}],"tipo":"clasificar","titulo":"What risk level does the AI Act assign?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-clasificar" id="ia-u6-principios"><script type="application/json" class="ia-datos">{"categorias":["Beneficence","Non-maleficence","Autonomy","Justice","Explicability"],"enunciado":"","explicacion":"","items":[{"categoria":"Explicability","explicacion":"","texto":"A grant system rejects a student and nobody can explain why"},{"categoria":"Justice","explicacion":"","texto":"A recruitment model penalises women’s CVs"},{"categoria":"Non-maleficence","explicacion":"","texto":"An assistant leaks users’ personal data in its answers"},{"categoria":"Autonomy","explicacion":"","texto":"An app decides which courses you take without you being able to\nchange it"},{"categoria":"Beneficence","explicacion":"","texto":"A system helps detect early school drop-out in time to offer\nsupport"}],"tipo":"clasificar","titulo":"Which of Floridi and Cowls' principles is at stake?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="ia ia-escenario" id="ia-u6-declarar"><script type="application/json" class="ia-datos">{"enunciado":"<p>You are finishing the final assignment for a course. The course guide\nasks you to declare any use of generative AI.<\/p>","inicio":"u6d-inicio","nodos":{"u6d-buena":{"final":true,"opciones":[],"texto":"<p>Transparent, specific and taking responsibility for the result:\nexactly what scientific publishers and COPE ask for.<\/p>","titulo":"Complete statement","valor":"bien"},"u6d-declara":{"final":false,"opciones":[{"destino":"u6d-vaga","texto":"“I used AI.”"},{"destino":"u6d-buena","texto":"“I used (tool and version) to check spelling and suggest synonyms in the\ntable in section 2. I reviewed each change; the search, the selection\nand the conclusions are my own.”"}],"texto":"<p>How do you write it?<\/p>","titulo":"The statement","valor":""},"u6d-inicio":{"final":false,"opciones":[{"destino":"u6d-nodeclara","texto":"I do not declare it: it was only spelling"},{"destino":"u6d-declara","texto":"I declare it, stating the tool, what for and in which parts"}],"texto":"<p>You used an assistant to correct your spelling and suggest synonyms\nin the table of search terms. You did everything else yourself.<\/p>","titulo":"What you have done","valor":""},"u6d-nodeclara":{"final":true,"opciones":[],"texto":"<p>The guide asks you to declare <strong>any<\/strong> use. Even if the\nuse is minor and legitimate, hiding it breaks the course rules and may\nbe treated as a breach of integrity.<\/p>","titulo":"Not declared","valor":"mal"},"u6d-vaga":{"final":true,"opciones":[],"texto":"<p>Readers do not know which part is yours. State which tool, what for,\nin which parts and how you checked the result.<\/p>","titulo":"Too vague","valor":"regular"}},"tipo":"escenario","titulo":"Does it need to be declared?"}</script><p class="ia-sinjs">Esta actividad necesita JavaScript.</p></div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Common mistakes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Thinking that “declaring” means “confessing”.</strong> Declaring a permitted use is good practice, not misconduct.</li>
+<li><strong>Believing the statement shifts responsibility to the tool.</strong> Whoever signs answers for the whole work.</li>
+<li><strong>Entering personal or confidential data</strong> into services that may use it to train models.</li>
+<li><strong>Assuming the AI Act only affects technology companies</strong>: it also places obligations on those who use (deploy) high-risk systems, such as a university.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="practice" class="level2">
+<h2 class="anchored" data-anchor-id="practice">Practice</h2>
+<p>Find UC3M’s or your course’s AI use policy and the AI policy of a journal in your field. Compare them: what do they allow, what do they prohibit and what do they ask you to declare?</p>
+</section>
+<section id="reto-u6" class="level2">
+<h2 class="anchored" data-anchor-id="reto-u6">Assessed challenge</h2>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Units 8 and 9 challenge · An ethical case and a use statement
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Choose a <strong>real case</strong> of generative AI use with ethical problems (in education, journalism, science or culture), documented in at least two reliable sources.</li>
+<li>Analyse it with Floridi and Cowls’ <strong>five principles</strong>.</li>
+<li>Place it in the <strong>risk levels</strong> of the EU AI Act and explain which obligations would apply.</li>
+<li>Write the <strong>AI use statement</strong> for your own report (even if you have not used any, say so explicitly).</li>
+</ol>
+<p><strong>Submission:</strong> a report made with the <a href="plantillas/entrega_reto.qmd">submission template</a>. It is assessed with the rubric included in the template. This challenge <strong>has no solution in the book</strong>: each student analyses a different case and the teaching staff mark it.</p>
+</div>
+</div>
+</section>
+<section id="self-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="self-assessment">Self-assessment</h2>
+<p>Answer all the questions and press <strong>Show answers</strong>: correct answers turn green, wrong ones red, and you will see your score. You can change your answers and check again. It does not count towards your mark.</p>
+<div class="webex-check webex-box">
+<ol type="1">
+<li>The principle that Floridi and Cowls add to the four from bioethics is <input class="webex-solveme nospaces ignorecase" size="15" aria-label="Type your answer" data-answer="[&quot;explicability&quot;]"></li>
+<li>An AI can be listed as co-author of a scientific article if it has written much of the text. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">TRUE</option><option value="answer">FALSE</option></select></li>
+<li>Under the EU AI Act, an AI system used to assess students is <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">minimal</option><option value="x">transparency</option><option value="answer">high</option><option value="x">unacceptable</option></select> risk</li>
+<li>Social scoring of people is <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">allowed with oversight</option><option value="answer">prohibited</option><option value="x">subject only to transparency</option></select></li>
+<li>It is good practice to enter classmates’ personal data into an AI assistant so it can write a group assignment. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">TRUE</option><option value="answer">FALSE</option></select></li>
+<li>The EU AI Act follows an approach based on <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">model size</option><option value="answer">risk</option><option value="x">economic sector</option></select></li>
+<li>What should an AI use statement include?</li>
+</ol>
+<p></p><div class="webex-radiogroup" role="radiogroup" aria-label="Answer options" id="radio_libro_1"><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>Only the name of the tool</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="answer"> <span>Which tool, what for, in which parts and how the result was checked</span></label><label><input type="radio" autocomplete="off" name="radio_libro_1" value="x"> <span>The full conversation with the AI in every case</span></label></div><p></p>
+<ol start="8" type="1">
+<li>Each person’s right to decide on the use of their personal data is called informational <input class="webex-solveme nospaces ignorecase" size="20" aria-label="Type your answer" data-answer="[&quot;self-determination&quot;,&quot;self determination&quot;]"></li>
+<li>Informing people that content has been generated by AI is an obligation of the <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">minimal</option><option value="answer">transparency</option><option value="x">unacceptable</option></select> risk level</li>
+<li>If you declare your use of AI, you are no longer responsible for any errors in the work. <select class="webex-select" aria-label="Choose an answer"><option value="blank"></option><option value="x">TRUE</option><option value="answer">FALSE</option></select></li>
+</ol>
+</div>
+<div class="webex-solution">
+<button>See explanations</button>
+<ul>
+<li>It makes the other four principles possible.</li>
+<li>Authorship requires responsibility, and an AI cannot take it on.</li>
+<li>Education and the assessment of students are high-risk areas.</li>
+<li>It is a prohibited practice.</li>
+<li>It puts other people’s privacy at risk.</li>
+<li>Obligations grow with the risk.</li>
+<li>This way readers know what is yours and what is not.</li>
+<li>The basis of the right to data protection.</li>
+<li>It affects assistants and synthetic content.</li>
+<li>Responsibility remains with whoever signs.</li>
+</ul>
+</div>
+</section>
+<section id="further-resources" class="level2">
+<h2 class="anchored" data-anchor-id="further-resources">Further resources</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Resource</th>
+<th>What it is for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689</a></td>
+<td>Official text of the AI Act</td>
+</tr>
+<tr class="even">
+<td><a href="https://publicationethics.org/cope-position-statements/ai-author">COPE – Authorship and AI tools</a></td>
+<td>Position on AI and authorship</td>
+</tr>
+<tr class="odd">
+<td><a href="https://apastyle.apa.org/blog/how-to-cite-chatgpt">APA Style – How to cite ChatGPT</a></td>
+<td>Citing AI-generated content</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.unesco.org/en/artificial-intelligence/recommendation-ethics">UNESCO – Recommendation on the Ethics of AI</a></td>
+<td>International ethical framework</td>
+</tr>
+</tbody>
+</table>
+
+
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-bender2021a" class="csl-entry" role="listitem">
+Bender, E. M. et al. (2021). <em><span class="nocase">On the dangers of stochastic parrots</span></em>. <a href="https://doi.org/10.1145/3442188.3445922">https://doi.org/10.1145/3442188.3445922</a>
+</div>
+<div id="ref-bender2021" class="csl-entry" role="listitem">
+Bender, E. M., Gebru, T., McMillan-Major, A., &amp; Shmitchell, S. (2021). <span class="nocase">On the dangers of stochastic parrots: Can language models be too big?</span> In <em><span class="nocase">Proceedings of FAccT ’21</span></em> (pp. 610–623). ACM. <a href="https://doi.org/10.1145/3442188.3445922">https://doi.org/10.1145/3442188.3445922</a>
+</div>
+<div id="ref-floridi2019" class="csl-entry" role="listitem">
+Floridi, L., &amp; Cowls, J. (2019). <span class="nocase">A unified framework of five principles for AI in society</span>. <em>Harvard Data Science Review</em>, <em>1</em>(1). <a href="https://doi.org/10.1162/99608f92.8cd550d1">https://doi.org/10.1162/99608f92.8cd550d1</a>
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Mejoras de accesibilidad del libro:
+   - nombre accesible para los editores de código de quarto-live (CodeMirror),
+   - foco de teclado en sus áreas desplazables,
+   - texto alternativo para el icono de ORCID de la portada. */
+(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+  function arreglar(raiz) {
+    raiz.querySelectorAll('.cm-content:not([aria-label])').forEach(function (el) {
+      el.setAttribute('aria-label', tr('Editor de código R', 'Code editor'));
+    });
+    raiz.querySelectorAll('.cm-scroller').forEach(function (el) {
+      if (el.getAttribute('tabindex') !== '0') el.setAttribute('tabindex', '0');
+      if (!el.hasAttribute('aria-label')) el.setAttribute('aria-label', tr('Código R', 'Code'));
+    });
+    // controles de Observable (deslizadores y casillas) sin nombre accesible
+    raiz.querySelectorAll('form input:not([aria-label]), form select:not([aria-label])').forEach(function (el) {
+      var form = el.closest('form');
+      var lab = form && form.querySelector('label');
+      if (lab && !(el.id && form.querySelector('label[for="' + el.id + '"]'))) {
+        el.setAttribute('aria-label', lab.textContent.trim() + (el.type === 'number' ? tr(' (valor)', ' (value)') : ''));
+      }
+    });
+    // menú de descarga de la barra lateral (solo icono)
+    raiz.querySelectorAll('.quarto-navigation-tool.dropdown-toggle').forEach(function (a) {
+      if (a.getAttribute('aria-label')) return;
+      a.setAttribute('aria-label', tr('Descargar el libro en PDF o EPUB', 'Download the book as PDF or EPUB'));
+      a.setAttribute('title', tr('Descargar el libro en PDF o EPUB', 'Download the book as PDF or EPUB'));
+    });
+    raiz.querySelectorAll('.quarto-title-author-orcid').forEach(function (a) {
+      a.setAttribute('aria-label', tr('Perfil ORCID de Pablo Sánchez-Núñez', 'ORCID profile of Pablo Sánchez-Núñez'));
+      var img = a.querySelector('img');
+      if (img && !img.hasAttribute('alt')) img.setAttribute('alt', 'ORCID');
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () { arreglar(document); });
+  new MutationObserver(function () { arreglar(document); })
+    .observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
+<script src="./consent.js" defer=""></script>
+<style>
+.progreso-capitulo { border: 1px solid var(--bs-border-color, #dee2e6); border-left: 4px solid var(--bs-primary, #000e78);
+  border-radius: .35rem; padding: .6rem .9rem; margin: 0 0 1.4rem; font-size: .92rem; background: rgba(127, 127, 127, .08); color: inherit; }
+.progreso-capitulo progress { width: 100%; height: .6rem; margin: .35rem 0 .2rem; accent-color: var(--bs-primary, #000e78); }
+.progreso-capitulo .progreso-nota { font-size: .82rem; opacity: .85; }
+.progreso-capitulo button, #progreso-resumen button { font-size: .82rem; padding: .05rem .5rem; margin-left: .4rem;
+  border: 1px solid var(--bs-border-color, #ced4da); border-radius: .3rem; background: transparent; color: inherit; }
+#progreso-resumen table { width: 100%; }
+#progreso-resumen { margin-bottom: 1.2rem; }
+#progreso-resumen progress { width: 8rem; height: .55rem; accent-color: var(--bs-primary, #000e78); vertical-align: middle; }
+.sin-conexion-estado { font-size: .85rem; }
+</style>
+<script>
+/* Progreso del estudiante: cuenta los ejercicios de código resueltos y las
+   preguntas de autoevaluación acertadas en cada capítulo. Se guarda solo en
+   el almacenamiento local de este navegador; no se envía a ningún servidor. */
+(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+  var CLAVE = 'progreso-' + (location.pathname.split('/').filter(Boolean)[0] || 'libro') + '-v1';
+  function leer() { try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch (e) { return {}; } }
+  function guardar(d) { try { localStorage.setItem(CLAVE, JSON.stringify(d)); } catch (e) {} }
+  var pagina = location.pathname.split('/').pop() || 'index.html';
+
+  function nombresEjercicios() {
+    var m = {};
+    document.querySelectorAll('script[type^="webr-"][type$="-contents"]').forEach(function (s) {
+      try {
+        var bin = atob(s.textContent.trim());
+        var d = JSON.parse(new TextDecoder().decode(Uint8Array.from(bin, function (c) { return c.charCodeAt(0); })));
+        if (d.attr && d.attr.exercise && !d.attr.setup && !d.attr.check) m[s.type.replace('-contents', '')] = d.attr.exercise;
+      } catch (e) {}
+    });
+    return m;
+  }
+  function preguntas() {
+    return Array.prototype.slice.call(document.querySelectorAll('.webex-check .webex-solveme, .webex-check .webex-select, .webex-check .webex-radiogroup'));
+  }
+
+  function registro(datos) {
+    var r = datos[pagina] || { ej: [], pr: [] };
+    r.ia = r.ia || []; r.totalIa = r.totalIa || 0;
+    r.titulo = (document.querySelector('h1.title, h1') || {}).textContent || pagina;
+    r.titulo = r.titulo.replace(/\s+/g, ' ').trim();
+    return r;
+  }
+
+  function pintar(caja, totalEj, totalPr, totalIa) {
+    var r = registro(leer());
+    totalIa = totalIa || 0;
+    var hechos = r.ej.length + r.pr.length + r.ia.length, total = totalEj + totalPr + totalIa;
+    var partes = [];
+    if (totalEj) partes.push(r.ej.length + tr(' de ', ' of ') + totalEj + tr(' ejercicios de código', ' code exercises'));
+    if (totalIa) partes.push(r.ia.length + tr(' de ', ' of ') + totalIa + tr(' actividades', ' activities'));
+    if (totalPr) partes.push(r.pr.length + tr(' de ', ' of ') + totalPr + tr(' preguntas acertadas', ' correct answers'));
+    caja.innerHTML = tr('<strong>Tu progreso en este capítulo:</strong> ', '<strong>Your progress in this chapter:</strong> ') + partes.join(' · ') +
+      '<progress max="' + total + '" value="' + hechos + tr('" aria-label="Progreso del capítulo: ', '" aria-label="Chapter progress: ') + hechos + tr(' de ', ' of ') + total + '"></progress>' +
+      tr('<span class="progreso-nota">Se guarda solo en este navegador.</span>', '<span class="progreso-nota">Saved only in this browser.</span>') +
+      tr('<button type="button">Borrar el progreso del capítulo</button>', '<button type="button">Clear chapter progress</button>');
+    caja.querySelector('button').addEventListener('click', function () {
+      var d = leer(); delete d[pagina]; guardar(d); pintar(caja, totalEj, totalPr, totalIa);
+    });
+  }
+
+  function capitulo() {
+    var mapa = nombresEjercicios();
+    var nombres = Object.keys(mapa).map(function (k) { return mapa[k]; })
+      .filter(function (v, i, a) { return a.indexOf(v) === i; });
+    var lista = preguntas();
+    var actividades = Array.prototype.map.call(document.querySelectorAll('.ia[id]'), function (x) { return x.id; });
+    var nIa = actividades.length;
+    if (!nombres.length && !lista.length && !nIa) return;
+
+    var d = leer(); var r = registro(d);
+    r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa; d[pagina] = r; guardar(d);
+
+    var caja = document.createElement('div');
+    caja.className = 'progreso-capitulo';
+    caja.setAttribute('role', 'status');
+    var cabecera = document.querySelector('#title-block-header') || document.querySelector('main h1');
+    if (!cabecera) return;
+    cabecera.parentNode.insertBefore(caja, cabecera.nextSibling);
+    pintar(caja, nombres.length, lista.length, nIa);
+
+    function anotar(tipo, valor) {
+      var d = leer(); var r = registro(d);
+      if (r[tipo].indexOf(valor) === -1) {
+        r[tipo].push(valor); r.totalEj = nombres.length; r.totalPr = lista.length; r.totalIa = nIa;
+        d[pagina] = r; guardar(d); pintar(caja, nombres.length, lista.length, nIa);
+      }
+    }
+
+    // Ejercicios de webR: un aviso verde de quarto-live dentro de la celda del ejercicio
+    new MutationObserver(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+      document.querySelectorAll('.exercise-grade.alert-success:not([data-progreso])').forEach(function (a) {
+        a.setAttribute('data-progreso', '1');
+        var el = a;
+        while (el && !(el.id && mapa[el.id])) el = el.parentElement;
+        if (el) anotar('ej', mapa[el.id]);
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+
+    // Actividades interactivas (ordenar, clasificar, zonas, escenarios, laboratorios)
+    document.addEventListener('ia-resuelto', function (e) { if (actividades.indexOf(e.detail) !== -1) anotar('ia', e.detail); });
+
+    // Preguntas: se anotan al pulsar «Mostrar respuestas»
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('.webex-check-button');
+      if (!b) return;
+      setTimeout(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+        lista.forEach(function (q, i) {
+          if (q.classList.contains('webex-correct') || q.querySelector('.webex-correct')) anotar('pr', i);
+        });
+      }, 0);
+    });
+  }
+
+  function resumen() {
+    var destino = document.getElementById('progreso-resumen');
+    if (!destino) return;
+    var d = leer();
+    var filas = [];
+    document.querySelectorAll('#quarto-sidebar a.sidebar-link').forEach(function (a) {
+      var f = (a.getAttribute('href') || '').split('/').pop().split('#')[0];
+      if (!f || f === 'index.html' || /^9\d-/.test(f) || filas.some(function (x) { return x.f === f; })) return;
+      filas.push({ f: f, t: a.textContent.replace(/\s+/g, ' ').trim(), r: d[f] });
+    });
+    var html = '<' + 'table class="table table-sm"><thead><tr><th scope="col">' + tr('Capítulo', 'Chapter') + '</th><th scope="col">' + tr('Progreso', 'Progress') + '</th></tr></thead><tbody>';
+    filas.forEach(function (x) {
+      var celda = tr('Sin empezar', 'Not started');
+      if (x.r && (x.r.totalEj || x.r.totalPr || x.r.totalIa)) {
+        var ia = x.r.ia || [], tIa = x.r.totalIa || 0;
+        var h = x.r.ej.length + x.r.pr.length + ia.length, t = x.r.totalEj + x.r.totalPr + tIa;
+        var trozos = [];
+        if (x.r.totalEj) trozos.push(x.r.ej.length + '/' + x.r.totalEj + tr(' ejercicios', ' exercises'));
+        if (tIa) trozos.push(ia.length + '/' + tIa + tr(' actividades', ' activities'));
+        if (x.r.totalPr) trozos.push(x.r.pr.length + '/' + x.r.totalPr + tr(' preguntas', ' questions'));
+        celda = '<progress max="' + t + '" value="' + h + '" aria-label="' + h + tr(' de ', ' of ') + t + '"></progress> ' + trozos.join(' · ');
+      }
+      html += '<tr><td><a href="' + x.f + '">' + x.t + '</a></td><td>' + celda + '</td></tr>';
+    });
+    html += '</tbody></' + 'table><button type="button">' + tr('Borrar todo mi progreso', 'Clear all my progress') + '</button>';
+    destino.innerHTML = html;
+    destino.querySelector('button').addEventListener('click', function () {
+      try { localStorage.removeItem(CLAVE); } catch (e) {}
+      resumen();
+    });
+  }
+
+  function iniciar() { capitulo(); resumen(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar); else iniciar();
+})();
+
+/* Uso sin conexión: un service worker guarda el libro, webR y sus paquetes
+   la primera vez que se visitan. */
+(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+  if (!('serviceWorker' in navigator)) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').then(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }
+      var estado = document.getElementById('sin-conexion-estado');
+      if (estado) estado.textContent = tr('Este navegador ya guarda el libro para usarlo sin conexión.', 'This browser now stores the book for offline use.');
+    }).catch(function () {
+  var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  function tr(es, en) { return EN ? en : es; }});
+  });
+})();
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pablosancheznunez\.com\/digital-skills-information\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./05-ai-foundations.html" class="pagination-link" aria-label="Units 6 and 7. Generative artificial intelligence: foundations and applications">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Units 6 and 7. Generative artificial intelligence: foundations and applications</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./90-citations.html" class="pagination-link" aria-label="Quick guide to APA 7 citations">
+        <span class="nav-page-text"><span class="chapter-title">Quick guide to APA 7 citations</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 <a href="https://pablosancheznunez.com">Pablo Sánchez-Núñez</a> · <a href="https://orcid.org/0000-0001-7845-9506">ORCID 0000-0001-7845-9506</a> · Text licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Universidad Carlos III de Madrid · Made with <a href="https://quarto.org">Quarto</a> y <a href="https://docs.r-wasm.org/webr/latest/">webR</a></p>
+</div>
+  </div>
+</footer>
+<style>a.glos{text-decoration:underline dotted;text-underline-offset:3px;color:inherit}a.glos:hover,a.glos:focus{color:var(--bs-link-color)}</style>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+<script src="site_libs/quarto-contrib/webex-1.2.0/webex.js"></script>
+</body></html>
